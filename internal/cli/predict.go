@@ -36,6 +36,9 @@ func Serve(ctx context.Context, input io.Reader, output io.Writer, predictor Pre
 		decoder := json.NewDecoder(bytes.NewReader(scanner.Bytes()))
 		decoder.DisallowUnknownFields()
 		err := decoder.Decode(&request)
+		if err == nil && bytes.TrimSpace(scanner.Bytes())[0] != '{' {
+			err = errors.New("expected a JSON request object")
+		}
 		if err == nil {
 			var extra any
 			if trailing := decoder.Decode(&extra); trailing != io.EOF {

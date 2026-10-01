@@ -23,13 +23,13 @@ func TestJSONLinesErrorsDoNotLoseFollowingRequests(t *testing.T) {
 		}
 		return &layago.Response{Contract: layago.PredictionContract, ID: r.ID}, nil
 	})
-	input := "{broken\n{\"id\":\"extra\",\"unsupported\":true}\n{} {}\n{\"id\":\"long\"}\n{\"id\":\"good\"}\n"
+	input := "null\n{broken\n{\"id\":\"extra\",\"unsupported\":true}\n{} {}\n{\"id\":\"long\"}\n{\"id\":\"good\"}\n"
 	var out strings.Builder
 	if err := Serve(context.Background(), strings.NewReader(input), &out, p, time.Second); err != nil {
 		t.Fatal(err)
 	}
 	lines := strings.Split(strings.TrimSpace(out.String()), "\n")
-	if len(lines) != 5 {
+	if len(lines) != 6 {
 		t.Fatal(out.String())
 	}
 	for i, line := range lines {
@@ -37,10 +37,10 @@ func TestJSONLinesErrorsDoNotLoseFollowingRequests(t *testing.T) {
 		if err := json.Unmarshal([]byte(line), &row); err != nil {
 			t.Fatal(err)
 		}
-		if i < 4 && row["error"] == nil {
+		if i < 5 && row["error"] == nil {
 			t.Fatal(row)
 		}
-		if i == 4 && row["id"] != "good" {
+		if i == 5 && row["id"] != "good" {
 			t.Fatal(row)
 		}
 	}
