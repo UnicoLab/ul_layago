@@ -1,0 +1,1 @@
+{"max_epochs":3,"act_epochs":2,"min_cell":8,"seed":7,"export_int8":false}

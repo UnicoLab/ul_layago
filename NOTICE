@@ -1,0 +1,11 @@
+UL LayaGo is extracted from UnicoLab's user-supplied Hive Go engine.
+The original source fingerprints are recorded in docs/ORIGIN.json.
+
+The implementation replicates the Laya architecture and sequence contract:
+https://github.com/NandhaKishorM/laya
+Upstream Laya is developed by Convai Innovations and licensed Apache-2.0.
+The original engine's parity references pin Laya 0.3.5 (commit 573e5b62).
+Upstream model weights are obtained separately and retain their own terms.
+
+CLM research informs the training roadmap; no CLM code or weights are bundled:
+https://github.com/Contrastive-LM/CLM

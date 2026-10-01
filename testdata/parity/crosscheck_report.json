@@ -1,0 +1,32 @@
+{
+ "reference": "layago_reference.py goldens",
+ "tokenizers": {
+  "library": "tokenizers 0.22.2",
+  "synthetic": {
+   "cases": 30,
+   "exact": 30,
+   "mismatches": []
+  },
+  "gemma_style": {
+   "cases": 30,
+   "exact": 30,
+   "mismatches": []
+  }
+ },
+ "encoder": {
+  "library": "torch 2.10.0, transformers 4.57.6 (ModernBertModel, sdpa, float32, cpu)",
+  "cases": 4,
+  "max_abs_diff_any_hidden_state": 1.5735626220703125e-05,
+  "max_abs_diff_last_hidden_state": 5.7220458984375e-06
+ },
+ "laya": {
+  "library": "laya 0.3.5 (Agent and DecisionModel from source), torch 2.10.0, cpu float32",
+  "cases": 3,
+  "questions": 7,
+  "sequence_mismatches": [],
+  "choice_mismatches": [],
+  "max_abs_diff_raw_logit": 5.794333738151636e-06,
+  "max_abs_diff_act_probability": 1.1981015643480752e-06,
+  "max_abs_diff_probability_after_laya_rounding": 4.889179419170775e-05
+ }
+}

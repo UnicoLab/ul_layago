@@ -1,0 +1,404 @@
+{
+  "kind": "m0-laya-real-weights-latency",
+  "scope": "this-machine evidence: the trunk forward pass on the real weights, single process, closed loop; not the pre-registered M0-LAYA gate (8 vCPU AVX2 on Cloud Run, open-loop Poisson load)",
+  "note": "GOARCH=amd64 binary under Rosetta 2 with ROSETTA_ADVERTISE_AVX=1 on an Apple M3 Max: exercises the AVX2 kernel path; translated timings do not predict native AVX2 speed",
+  "date": "2026-09-27T21:09:11Z",
+  "host": {
+    "goos": "darwin",
+    "goarch": "amd64",
+    "cpu": "Apple M3 Max",
+    "num_cpu": 16,
+    "gomaxprocs": 16,
+    "go_version": "go1.27.0",
+    "gemm_kernel": "amd64_avx2",
+    "rosetta_translated": true,
+    "load_average_at_start": "21.10 36.42 61.77",
+    "load_average_at_end": "19.25 32.74 58.51"
+  },
+  "trunk": {
+    "model_id": "jhu-clsp/mmBERT-base",
+    "revision": "c5955035435e2bf121cde7f3c8863ef52ff35d82",
+    "layout": "hf-modernbert",
+    "weights_sha256": "3b0559b9140291a732ec7163aadb33532fbf1ed03c71a75389b39d17cbfd79fd",
+    "config_sha256": "47b40fd2e1df8299426dd5f4bb18c28f028cfafcb51b73645f83e596d187eb37",
+    "tokenizer_sha256": "197d4cc5406ee12cc50c8b5511f2393cc32d9db321545979ce041c1199178356",
+    "layers_total": 22,
+    "layers_used": 22,
+    "hidden_size": 768,
+    "numeric_path": "fp32",
+    "max_len": 256,
+    "head_max_len": 192,
+    "truncate_left": false
+  },
+  "spec": {
+    "batch": 8,
+    "depths": [
+      22,
+      6
+    ],
+    "kernel": "amd64_avx2",
+    "paths": [
+      "fp32",
+      "int8"
+    ],
+    "runs": 8,
+    "tokens": [
+      32,
+      64
+    ],
+    "warmup": 1,
+    "workers": [
+      8
+    ]
+  },
+  "rows": [
+    {
+      "tokens": 32,
+      "layers": 22,
+      "path": "fp32",
+      "mode": "single",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 1,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 108.437,
+        "p95_ms": 153.673,
+        "mean_ms": 114.333,
+        "min_ms": 76.521,
+        "max_ms": 153.673
+      },
+      "per_sequence_p50_ms": 108.437,
+      "per_sequence_p95_ms": 153.673,
+      "process_cpu_ms_per_pass": 679.746,
+      "gflop_per_pass": 7.128,
+      "load_average_at_start": "21.10 36.42 61.77"
+    },
+    {
+      "tokens": 32,
+      "layers": 22,
+      "path": "fp32",
+      "mode": "batched",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 8,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 785.009,
+        "p95_ms": 852.206,
+        "mean_ms": 793.469,
+        "min_ms": 724.602,
+        "max_ms": 852.206
+      },
+      "per_sequence_p50_ms": 98.126,
+      "per_sequence_p95_ms": 106.526,
+      "process_cpu_ms_per_pass": 5993.559,
+      "gflop_per_pass": 57.026,
+      "load_average_at_start": "21.10 36.42 61.77"
+    },
+    {
+      "tokens": 64,
+      "layers": 22,
+      "path": "fp32",
+      "mode": "single",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 1,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 214.656,
+        "p95_ms": 240.948,
+        "mean_ms": 220.822,
+        "min_ms": 208.57,
+        "max_ms": 240.948
+      },
+      "per_sequence_p50_ms": 214.656,
+      "per_sequence_p95_ms": 240.948,
+      "process_cpu_ms_per_pass": 1513.311,
+      "gflop_per_pass": 14.395,
+      "load_average_at_start": "21.01 36.15 61.52"
+    },
+    {
+      "tokens": 64,
+      "layers": 22,
+      "path": "fp32",
+      "mode": "batched",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 8,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 1685.479,
+        "p95_ms": 1754.237,
+        "mean_ms": 1695.905,
+        "min_ms": 1664.431,
+        "max_ms": 1754.237
+      },
+      "per_sequence_p50_ms": 210.685,
+      "per_sequence_p95_ms": 219.28,
+      "process_cpu_ms_per_pass": 12910.534,
+      "gflop_per_pass": 115.159,
+      "load_average_at_start": "20.13 35.72 61.22"
+    },
+    {
+      "tokens": 32,
+      "layers": 6,
+      "path": "fp32",
+      "mode": "single",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 1,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 36.548,
+        "p95_ms": 55.713,
+        "mean_ms": 40.035,
+        "min_ms": 34.183,
+        "max_ms": 55.713
+      },
+      "per_sequence_p50_ms": 36.548,
+      "per_sequence_p95_ms": 55.713,
+      "process_cpu_ms_per_pass": 220.481,
+      "gflop_per_pass": 1.944,
+      "load_average_at_start": "19.60 34.83 60.46"
+    },
+    {
+      "tokens": 32,
+      "layers": 6,
+      "path": "fp32",
+      "mode": "batched",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 8,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 233.586,
+        "p95_ms": 271.681,
+        "mean_ms": 239.714,
+        "min_ms": 203.082,
+        "max_ms": 271.681
+      },
+      "per_sequence_p50_ms": 29.198,
+      "per_sequence_p95_ms": 33.96,
+      "process_cpu_ms_per_pass": 1743.134,
+      "gflop_per_pass": 15.552,
+      "load_average_at_start": "19.60 34.83 60.46"
+    },
+    {
+      "tokens": 64,
+      "layers": 6,
+      "path": "fp32",
+      "mode": "single",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 1,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 56.213,
+        "p95_ms": 60.476,
+        "mean_ms": 57.312,
+        "min_ms": 55.888,
+        "max_ms": 60.476
+      },
+      "per_sequence_p50_ms": 56.213,
+      "per_sequence_p95_ms": 60.476,
+      "process_cpu_ms_per_pass": 400.334,
+      "gflop_per_pass": 3.926,
+      "load_average_at_start": "19.60 34.83 60.46"
+    },
+    {
+      "tokens": 64,
+      "layers": 6,
+      "path": "fp32",
+      "mode": "batched",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 8,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 457.302,
+        "p95_ms": 523.295,
+        "mean_ms": 469.196,
+        "min_ms": 413.611,
+        "max_ms": 523.295
+      },
+      "per_sequence_p50_ms": 57.163,
+      "per_sequence_p95_ms": 65.412,
+      "process_cpu_ms_per_pass": 3497.376,
+      "gflop_per_pass": 31.407,
+      "load_average_at_start": "19.60 34.83 60.46"
+    },
+    {
+      "tokens": 32,
+      "layers": 22,
+      "path": "int8",
+      "mode": "single",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 1,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 122.993,
+        "p95_ms": 155.853,
+        "mean_ms": 129.916,
+        "min_ms": 115.203,
+        "max_ms": 155.853
+      },
+      "per_sequence_p50_ms": 122.993,
+      "per_sequence_p95_ms": 155.853,
+      "process_cpu_ms_per_pass": 799.436,
+      "gflop_per_pass": 7.128,
+      "load_average_at_start": "19.15 34.49 60.18"
+    },
+    {
+      "tokens": 32,
+      "layers": 22,
+      "path": "int8",
+      "mode": "batched",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 8,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 888.731,
+        "p95_ms": 949.125,
+        "mean_ms": 879.65,
+        "min_ms": 811.348,
+        "max_ms": 949.125
+      },
+      "per_sequence_p50_ms": 111.091,
+      "per_sequence_p95_ms": 118.641,
+      "process_cpu_ms_per_pass": 6692.122,
+      "gflop_per_pass": 57.026,
+      "load_average_at_start": "18.18 34.03 59.87"
+    },
+    {
+      "tokens": 64,
+      "layers": 22,
+      "path": "int8",
+      "mode": "single",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 1,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 237.397,
+        "p95_ms": 253.987,
+        "mean_ms": 242.778,
+        "min_ms": 235.855,
+        "max_ms": 253.987
+      },
+      "per_sequence_p50_ms": 237.397,
+      "per_sequence_p95_ms": 253.987,
+      "process_cpu_ms_per_pass": 1692.057,
+      "gflop_per_pass": 14.395,
+      "load_average_at_start": "18.48 33.83 59.65"
+    },
+    {
+      "tokens": 64,
+      "layers": 22,
+      "path": "int8",
+      "mode": "batched",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 8,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 1714.604,
+        "p95_ms": 1903.667,
+        "mean_ms": 1759.424,
+        "min_ms": 1706.654,
+        "max_ms": 1903.667
+      },
+      "per_sequence_p50_ms": 214.326,
+      "per_sequence_p95_ms": 237.958,
+      "process_cpu_ms_per_pass": 13720.049,
+      "gflop_per_pass": 115.159,
+      "load_average_at_start": "18.21 33.52 59.39"
+    },
+    {
+      "tokens": 32,
+      "layers": 6,
+      "path": "int8",
+      "mode": "single",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 1,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 37.439,
+        "p95_ms": 46.251,
+        "mean_ms": 38.146,
+        "min_ms": 34.429,
+        "max_ms": 46.251
+      },
+      "per_sequence_p50_ms": 37.439,
+      "per_sequence_p95_ms": 46.251,
+      "process_cpu_ms_per_pass": 238.102,
+      "gflop_per_pass": 1.944,
+      "load_average_at_start": "18.66 32.86 58.70"
+    },
+    {
+      "tokens": 32,
+      "layers": 6,
+      "path": "int8",
+      "mode": "batched",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 8,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 233.507,
+        "p95_ms": 290.454,
+        "mean_ms": 243.907,
+        "min_ms": 223.703,
+        "max_ms": 290.454
+      },
+      "per_sequence_p50_ms": 29.188,
+      "per_sequence_p95_ms": 36.307,
+      "process_cpu_ms_per_pass": 1822.577,
+      "gflop_per_pass": 15.552,
+      "load_average_at_start": "18.66 32.86 58.70"
+    },
+    {
+      "tokens": 64,
+      "layers": 6,
+      "path": "int8",
+      "mode": "single",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 1,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 71.12,
+        "p95_ms": 77.518,
+        "mean_ms": 71.964,
+        "min_ms": 69.485,
+        "max_ms": 77.518
+      },
+      "per_sequence_p50_ms": 71.12,
+      "per_sequence_p95_ms": 77.518,
+      "process_cpu_ms_per_pass": 502.422,
+      "gflop_per_pass": 3.926,
+      "load_average_at_start": "18.66 32.86 58.70"
+    },
+    {
+      "tokens": 64,
+      "layers": 6,
+      "path": "int8",
+      "mode": "batched",
+      "intra_op_workers": 8,
+      "sequences_per_pass": 8,
+      "latency_per_pass": {
+        "runs": 8,
+        "p50_ms": 536.965,
+        "p95_ms": 774.692,
+        "mean_ms": 564.623,
+        "min_ms": 517.512,
+        "max_ms": 774.692
+      },
+      "per_sequence_p50_ms": 67.121,
+      "per_sequence_p95_ms": 96.837,
+      "process_cpu_ms_per_pass": 4035.007,
+      "gflop_per_pass": 31.407,
+      "load_average_at_start": "18.66 32.86 58.70"
+    }
+  ],
+  "decision": {
+    "rule": "ship the full-depth trunk if the fast-lane single-request fp32 p95 is at most 120 ms, else a fewer-layer student of the same engine",
+    "budget_ms": 120,
+    "fast_lane_tokens": 64,
+    "evaluated_tokens": 64,
+    "intra_op_workers": 8,
+    "full_layers": 22,
+    "full_depth_p95_ms": 240.948,
+    "verdict": "fail",
+    "recommendation": "a 6-layer student of the same engine (p95 60.5 ms here)",
+    "scope": "this-machine evidence only; the pre-registered M0-LAYA gate is 8 vCPU AVX2 on Cloud Run under open-loop Poisson load (README)"
+  }
+}

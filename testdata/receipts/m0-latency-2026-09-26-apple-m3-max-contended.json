@@ -1,0 +1,810 @@
+{
+ "concurrency": [
+  {
+   "tokens": 32,
+   "path": "fp32",
+   "concurrent_requests": 8,
+   "intra_op_workers_per_request": 1,
+   "per_request_latency": {
+    "runs": 32,
+    "p50_ms": 5003.818,
+    "p95_ms": 5821.465,
+    "mean_ms": 4983.306,
+    "min_ms": 3727.412,
+    "max_ms": 6143.252,
+    "process_cpu_ms_per_run": 475.706
+   },
+   "passes_per_second": 1.51,
+   "load_average_at_start": "193.89 205.94 203.70"
+  },
+  {
+   "tokens": 64,
+   "path": "fp32",
+   "concurrent_requests": 8,
+   "intra_op_workers_per_request": 1,
+   "per_request_latency": {
+    "runs": 32,
+    "p50_ms": 10746.448,
+    "p95_ms": 13056.648,
+    "mean_ms": 11152.08,
+    "min_ms": 9234.055,
+    "max_ms": 14413.055,
+    "process_cpu_ms_per_run": 996.79
+   },
+   "passes_per_second": 0.69,
+   "load_average_at_start": "209.41 208.46 204.65"
+  }
+ ],
+ "contract": "hive.layago-m0-latency-receipt/v1",
+ "generated_at": "2026-09-26T12:34:43Z",
+ "host": {
+  "cpu": "Apple M3 Max",
+  "go_heap_after_build_mb": 1523,
+  "go_version": "go1.27.0",
+  "goarch": "arm64",
+  "gomaxprocs": 16,
+  "goos": "darwin",
+  "kernel_class": "generic (portable Go, no assembly or SIMD intrinsics; the compiler fuses multiply-add on arm64)",
+  "load_average_end": "207.64 208.56 204.90",
+  "load_average_start": "173.64 155.34 133.62",
+  "logical_cpus": 16,
+  "model_build_seconds": 35.46,
+  "shared_host": "other build and test workloads ran concurrently; wall time includes that contention, process CPU time per run is the less contended signal"
+ },
+ "label": "First M0-LAYA latency numbers for the pure-Go layago encoder on this development machine. This is NOT the production gate, which is p50/p95 at 32/64/128/256 tokens on 8 vCPU AVX2 (Cloud Run) under open-loop load and has not been measured.",
+ "model": {
+  "flops_convention": "2 FLOPs per multiply-add; dense layers plus windowed attention products",
+  "laya_head": "2 norm-first transformer layers (d=768, 12 heads, ReLU FF 3072), marker scorer and act head, random weights",
+  "shape": "mmBERT-base: 22 layers, hidden 768, 12 heads, GeGLU intermediate 1152, vocab 256000, global attention every 3rd layer, sliding window 128 (|i-j|<=64) elsewhere, RoPE theta 160000",
+  "weights": "deterministic random N(0, 1/in) (latency depends on shape, not values); int8 path quantizes embeddings and all encoder linears per row"
+ },
+ "not_measured": [
+  "8 vCPU AVX2 Cloud Run shape and open-loop Poisson load at 5/10/20 rps",
+  "cold start to ready, cgroup memory.current",
+  "an AVX2 or NEON assembly microkernel (only the portable Go kernel exists)",
+  "the 6-layer and 4-layer student shapes"
+ ],
+ "protocol": {
+  "concurrency": "8 goroutines each running single-worker passes back to back (request-level parallelism)",
+  "intra_op_workers": "goroutines per GEMM/attention call; 8 mirrors the 8 vCPU production shape only in thread count",
+  "single_request": "one sequence per pass, 2 warm-up passes, then N timed passes; wall clock around Encoder.Forward; nearest-rank percentiles"
+ },
+ "results": [
+  {
+   "tokens": 32,
+   "path": "fp32",
+   "intra_op_workers": 1,
+   "scope": "encoder",
+   "gflop_per_pass": 7.128,
+   "gflop_per_second_at_p50": 3.1,
+   "latency": {
+    "runs": 8,
+    "p50_ms": 2307.436,
+    "p95_ms": 2759.307,
+    "mean_ms": 2105.76,
+    "min_ms": 826.408,
+    "max_ms": 2759.307,
+    "process_cpu_ms_per_run": 470.305
+   },
+   "phase_ms_mean": {
+    "attn_out": 244.434,
+    "embed": 0.129,
+    "geglu": 63.147,
+    "mlp_in": 711.22,
+    "mlp_out": 282.872,
+    "norm": 28.594,
+    "qkv": 676.787,
+    "rope_attention": 98.551
+   },
+   "load_average_at_start": "149.96 151.24 133.09"
+  },
+  {
+   "tokens": 32,
+   "path": "fp32",
+   "intra_op_workers": 8,
+   "scope": "encoder",
+   "gflop_per_pass": 7.128,
+   "gflop_per_second_at_p50": 5.2,
+   "latency": {
+    "runs": 30,
+    "p50_ms": 1361.758,
+    "p95_ms": 2179.094,
+    "mean_ms": 1501.385,
+    "min_ms": 848.929,
+    "max_ms": 2528.337,
+    "process_cpu_ms_per_run": 519.898
+   },
+   "phase_ms_mean": {
+    "attn_out": 199.696,
+    "embed": 1.694,
+    "geglu": 137.645,
+    "mlp_in": 359.589,
+    "mlp_out": 253.468,
+    "norm": 43.922,
+    "qkv": 349.891,
+    "rope_attention": 155.046
+   },
+   "load_average_at_start": "135.84 147.84 132.29"
+  },
+  {
+   "tokens": 32,
+   "path": "fp32",
+   "intra_op_workers": 16,
+   "scope": "encoder",
+   "gflop_per_pass": 7.128,
+   "gflop_per_second_at_p50": 5.2,
+   "latency": {
+    "runs": 30,
+    "p50_ms": 1359.976,
+    "p95_ms": 2259.047,
+    "mean_ms": 1417.782,
+    "min_ms": 646.798,
+    "max_ms": 2361.293,
+    "process_cpu_ms_per_run": 501.487
+   },
+   "phase_ms_mean": {
+    "attn_out": 188.699,
+    "embed": 1.603,
+    "geglu": 131.539,
+    "mlp_in": 343.555,
+    "mlp_out": 238.473,
+    "norm": 35.557,
+    "qkv": 320.559,
+    "rope_attention": 156.974
+   },
+   "load_average_at_start": "129.84 143.76 131.63"
+  },
+  {
+   "tokens": 32,
+   "path": "int8",
+   "intra_op_workers": 1,
+   "scope": "encoder",
+   "gflop_per_pass": 7.128,
+   "gflop_per_second_at_p50": 2.4,
+   "latency": {
+    "runs": 8,
+    "p50_ms": 2959.908,
+    "p95_ms": 3946.389,
+    "mean_ms": 3200.581,
+    "min_ms": 2133.394,
+    "max_ms": 3946.389,
+    "process_cpu_ms_per_run": 488.628
+   },
+   "phase_ms_mean": {
+    "attn_out": 331.505,
+    "embed": 0.116,
+    "geglu": 99.937,
+    "mlp_in": 989.641,
+    "mlp_out": 627.371,
+    "norm": 30.108,
+    "qkv": 959.197,
+    "rope_attention": 162.687
+   },
+   "load_average_at_start": "139.20 144.12 132.38"
+  },
+  {
+   "tokens": 32,
+   "path": "int8",
+   "intra_op_workers": 8,
+   "scope": "encoder",
+   "gflop_per_pass": 7.128,
+   "gflop_per_second_at_p50": 4.1,
+   "latency": {
+    "runs": 30,
+    "p50_ms": 1747.816,
+    "p95_ms": 2941.744,
+    "mean_ms": 1805.202,
+    "min_ms": 861.029,
+    "max_ms": 3341.211,
+    "process_cpu_ms_per_run": 535.049
+   },
+   "phase_ms_mean": {
+    "attn_out": 229.965,
+    "embed": 1.94,
+    "geglu": 168.352,
+    "mlp_in": 420.503,
+    "mlp_out": 341.872,
+    "norm": 49.055,
+    "qkv": 408.767,
+    "rope_attention": 184.714
+   },
+   "load_average_at_start": "152.93 146.70 133.71"
+  },
+  {
+   "tokens": 32,
+   "path": "int8",
+   "intra_op_workers": 16,
+   "scope": "encoder",
+   "gflop_per_pass": 7.128,
+   "gflop_per_second_at_p50": 3.4,
+   "latency": {
+    "runs": 30,
+    "p50_ms": 2089.361,
+    "p95_ms": 2553.516,
+    "mean_ms": 2049.201,
+    "min_ms": 1449.761,
+    "max_ms": 2647.855,
+    "process_cpu_ms_per_run": 542.937
+   },
+   "phase_ms_mean": {
+    "attn_out": 287.87,
+    "embed": 1.628,
+    "geglu": 191.079,
+    "mlp_in": 467.296,
+    "mlp_out": 347.58,
+    "norm": 58.741,
+    "qkv": 467.091,
+    "rope_attention": 227.641
+   },
+   "load_average_at_start": "167.71 151.31 136.27"
+  },
+  {
+   "tokens": 32,
+   "path": "fp32",
+   "intra_op_workers": 8,
+   "scope": "encoder+laya_head(1 question, 4 options)",
+   "latency": {
+    "runs": 30,
+    "p50_ms": 1824.747,
+    "p95_ms": 2349.644,
+    "mean_ms": 1857.367,
+    "min_ms": 1092.234,
+    "max_ms": 2489.98,
+    "process_cpu_ms_per_run": 536.606
+   },
+   "load_average_at_start": "185.99 159.57 140.38"
+  },
+  {
+   "tokens": 64,
+   "path": "fp32",
+   "intra_op_workers": 1,
+   "scope": "encoder",
+   "gflop_per_pass": 14.395,
+   "gflop_per_second_at_p50": 2.7,
+   "latency": {
+    "runs": 6,
+    "p50_ms": 5363.49,
+    "p95_ms": 6689.967,
+    "mean_ms": 5571.318,
+    "min_ms": 4811.806,
+    "max_ms": 6689.967,
+    "process_cpu_ms_per_run": 871.717
+   },
+   "phase_ms_mean": {
+    "attn_out": 439.486,
+    "embed": 4.133,
+    "geglu": 234.789,
+    "mlp_in": 1661.35,
+    "mlp_out": 828.66,
+    "norm": 35.087,
+    "qkv": 1721.136,
+    "rope_attention": 646.625
+   },
+   "load_average_at_start": "171.74 160.55 142.25"
+  },
+  {
+   "tokens": 64,
+   "path": "fp32",
+   "intra_op_workers": 8,
+   "scope": "encoder",
+   "gflop_per_pass": 14.395,
+   "gflop_per_second_at_p50": 4.6,
+   "latency": {
+    "runs": 30,
+    "p50_ms": 3104.528,
+    "p95_ms": 4943.998,
+    "mean_ms": 3348.705,
+    "min_ms": 2121.374,
+    "max_ms": 5037.883,
+    "process_cpu_ms_per_run": 1003.343
+   },
+   "phase_ms_mean": {
+    "attn_out": 436.035,
+    "embed": 4.904,
+    "geglu": 275.571,
+    "mlp_in": 709.521,
+    "mlp_out": 534.145,
+    "norm": 94.727,
+    "qkv": 722.652,
+    "rope_attention": 571.101
+   },
+   "load_average_at_start": "157.40 157.86 142.08"
+  },
+  {
+   "tokens": 64,
+   "path": "fp32",
+   "intra_op_workers": 16,
+   "scope": "encoder",
+   "gflop_per_pass": 14.395,
+   "gflop_per_second_at_p50": 4.3,
+   "latency": {
+    "runs": 30,
+    "p50_ms": 3371.592,
+    "p95_ms": 5133.367,
+    "mean_ms": 3660.056,
+    "min_ms": 2376.467,
+    "max_ms": 5228.93,
+    "process_cpu_ms_per_run": 1035.092
+   },
+   "phase_ms_mean": {
+    "attn_out": 466.042,
+    "embed": 3.026,
+    "geglu": 308.279,
+    "mlp_in": 747.462,
+    "mlp_out": 605.723,
+    "norm": 113.475,
+    "qkv": 789.273,
+    "rope_attention": 625.034
+   },
+   "load_average_at_start": "244.38 188.34 155.84"
+  },
+  {
+   "tokens": 64,
+   "path": "int8",
+   "intra_op_workers": 1,
+   "scope": "encoder",
+   "gflop_per_pass": 14.395,
+   "gflop_per_second_at_p50": 1.6,
+   "latency": {
+    "runs": 6,
+    "p50_ms": 8884.659,
+    "p95_ms": 9842.23,
+    "mean_ms": 8936.099,
+    "min_ms": 7640.741,
+    "max_ms": 9842.23,
+    "process_cpu_ms_per_run": 1079.807
+   },
+   "phase_ms_mean": {
+    "attn_out": 1023.821,
+    "embed": 5.812,
+    "geglu": 186.426,
+    "mlp_in": 2617.013,
+    "mlp_out": 1225.093,
+    "norm": 67.466,
+    "qkv": 2799.057,
+    "rope_attention": 1011.353
+   },
+   "load_average_at_start": "220.29 198.88 164.77"
+  },
+  {
+   "tokens": 64,
+   "path": "int8",
+   "intra_op_workers": 8,
+   "scope": "encoder",
+   "gflop_per_pass": 14.395,
+   "gflop_per_second_at_p50": 4,
+   "latency": {
+    "runs": 30,
+    "p50_ms": 3640.828,
+    "p95_ms": 6035.173,
+    "mean_ms": 4098.484,
+    "min_ms": 2584.931,
+    "max_ms": 6208.02,
+    "process_cpu_ms_per_run": 1151.621
+   },
+   "phase_ms_mean": {
+    "attn_out": 544.383,
+    "embed": 1.137,
+    "geglu": 345.21,
+    "mlp_in": 925.845,
+    "mlp_out": 650.981,
+    "norm": 122.186,
+    "qkv": 871.248,
+    "rope_attention": 637.433
+   },
+   "load_average_at_start": "185.62 194.10 165.38"
+  },
+  {
+   "tokens": 64,
+   "path": "int8",
+   "intra_op_workers": 16,
+   "scope": "encoder",
+   "gflop_per_pass": 14.395,
+   "gflop_per_second_at_p50": 3.3,
+   "latency": {
+    "runs": 30,
+    "p50_ms": 4367.847,
+    "p95_ms": 5301.031,
+    "mean_ms": 4398.334,
+    "min_ms": 3540.227,
+    "max_ms": 5644.212,
+    "process_cpu_ms_per_run": 1118.028
+   },
+   "phase_ms_mean": {
+    "attn_out": 589.555,
+    "embed": 7.612,
+    "geglu": 349.37,
+    "mlp_in": 931.997,
+    "mlp_out": 751.967,
+    "norm": 134.402,
+    "qkv": 944.112,
+    "rope_attention": 688.439
+   },
+   "load_average_at_start": "178.65 190.21 168.16"
+  },
+  {
+   "tokens": 64,
+   "path": "fp32",
+   "intra_op_workers": 8,
+   "scope": "encoder+laya_head(1 question, 4 options)",
+   "latency": {
+    "runs": 30,
+    "p50_ms": 5071.089,
+    "p95_ms": 6693.397,
+    "mean_ms": 5224.663,
+    "min_ms": 3826.344,
+    "max_ms": 6906.911,
+    "process_cpu_ms_per_run": 1199.911
+   },
+   "load_average_at_start": "174.74 185.31 169.36"
+  },
+  {
+   "tokens": 128,
+   "path": "fp32",
+   "intra_op_workers": 1,
+   "scope": "encoder",
+   "gflop_per_pass": 29.17,
+   "gflop_per_second_at_p50": 1.3,
+   "latency": {
+    "runs": 4,
+    "p50_ms": 23278.294,
+    "p95_ms": 27161.354,
+    "mean_ms": 24731.304,
+    "min_ms": 21999.091,
+    "max_ms": 27161.354,
+    "process_cpu_ms_per_run": 2051.694
+   },
+   "phase_ms_mean": {
+    "attn_out": 1846.001,
+    "embed": 0.453,
+    "geglu": 590.382,
+    "mlp_in": 7408.307,
+    "mlp_out": 3210.795,
+    "norm": 198.189,
+    "qkv": 7132.323,
+    "rope_attention": 4344.784
+   },
+   "load_average_at_start": "221.44 194.73 176.20"
+  },
+  {
+   "tokens": 128,
+   "path": "fp32",
+   "intra_op_workers": 8,
+   "scope": "encoder",
+   "gflop_per_pass": 29.17,
+   "gflop_per_second_at_p50": 3,
+   "latency": {
+    "runs": 16,
+    "p50_ms": 9634.897,
+    "p95_ms": 10950.326,
+    "mean_ms": 9560.822,
+    "min_ms": 7933.982,
+    "max_ms": 10950.326,
+    "process_cpu_ms_per_run": 2200.608
+   },
+   "phase_ms_mean": {
+    "attn_out": 1162.912,
+    "embed": 14.949,
+    "geglu": 729.55,
+    "mlp_in": 1789.672,
+    "mlp_out": 1424.524,
+    "norm": 321.539,
+    "qkv": 1765.103,
+    "rope_attention": 2351.411
+   },
+   "load_average_at_start": "260.40 214.54 186.27"
+  },
+  {
+   "tokens": 128,
+   "path": "fp32",
+   "intra_op_workers": 16,
+   "scope": "encoder",
+   "gflop_per_pass": 29.17,
+   "gflop_per_second_at_p50": 3.2,
+   "latency": {
+    "runs": 16,
+    "p50_ms": 9116.142,
+    "p95_ms": 10127.754,
+    "mean_ms": 9152.249,
+    "min_ms": 8167.523,
+    "max_ms": 10127.754,
+    "process_cpu_ms_per_run": 2198.621
+   },
+   "phase_ms_mean": {
+    "attn_out": 1053.556,
+    "embed": 6.335,
+    "geglu": 807.208,
+    "mlp_in": 1644.814,
+    "mlp_out": 1429.518,
+    "norm": 344.953,
+    "qkv": 1681.958,
+    "rope_attention": 2182.438
+   },
+   "load_average_at_start": "213.01 212.47 190.69"
+  },
+  {
+   "tokens": 128,
+   "path": "int8",
+   "intra_op_workers": 1,
+   "scope": "encoder",
+   "gflop_per_pass": 29.17,
+   "gflop_per_second_at_p50": 1.2,
+   "latency": {
+    "runs": 4,
+    "p50_ms": 24271.119,
+    "p95_ms": 25820.218,
+    "mean_ms": 24920.044,
+    "min_ms": 23842.194,
+    "max_ms": 25820.218,
+    "process_cpu_ms_per_run": 2246.012
+   },
+   "phase_ms_mean": {
+    "attn_out": 2889.045,
+    "embed": 0.533,
+    "geglu": 639.997,
+    "mlp_in": 7040.676,
+    "mlp_out": 3321.361,
+    "norm": 184.351,
+    "qkv": 7209.241,
+    "rope_attention": 3634.758
+   },
+   "load_average_at_start": "207.99 204.58 191.33"
+  },
+  {
+   "tokens": 128,
+   "path": "int8",
+   "intra_op_workers": 8,
+   "scope": "encoder",
+   "gflop_per_pass": 29.17,
+   "gflop_per_second_at_p50": 3.8,
+   "latency": {
+    "runs": 16,
+    "p50_ms": 7657.571,
+    "p95_ms": 10008.826,
+    "mean_ms": 7896.312,
+    "min_ms": 6816.091,
+    "max_ms": 10008.826,
+    "process_cpu_ms_per_run": 2389.641
+   },
+   "phase_ms_mean": {
+    "attn_out": 944.817,
+    "embed": 9.101,
+    "geglu": 606.597,
+    "mlp_in": 1499.641,
+    "mlp_out": 1149.088,
+    "norm": 278.444,
+    "qkv": 1543.03,
+    "rope_attention": 1856.508
+   },
+   "load_average_at_start": "196.45 202.79 192.38"
+  },
+  {
+   "tokens": 128,
+   "path": "int8",
+   "intra_op_workers": 16,
+   "scope": "encoder",
+   "gflop_per_pass": 29.17,
+   "gflop_per_second_at_p50": 5.1,
+   "latency": {
+    "runs": 16,
+    "p50_ms": 5762.288,
+    "p95_ms": 7247.164,
+    "mean_ms": 5771.874,
+    "min_ms": 4333.823,
+    "max_ms": 7247.164,
+    "process_cpu_ms_per_run": 2303.513
+   },
+   "phase_ms_mean": {
+    "attn_out": 720.56,
+    "embed": 6.863,
+    "geglu": 445.136,
+    "mlp_in": 1117.147,
+    "mlp_out": 892.837,
+    "norm": 183.571,
+    "qkv": 1092.12,
+    "rope_attention": 1312.991
+   },
+   "load_average_at_start": "192.33 198.92 192.42"
+  },
+  {
+   "tokens": 128,
+   "path": "fp32",
+   "intra_op_workers": 8,
+   "scope": "encoder+laya_head(1 question, 4 options)",
+   "latency": {
+    "runs": 16,
+    "p50_ms": 5650.695,
+    "p95_ms": 7858.972,
+    "mean_ms": 5702.045,
+    "min_ms": 4303.556,
+    "max_ms": 7858.972,
+    "process_cpu_ms_per_run": 2479.97
+   },
+   "load_average_at_start": "200.24 200.50 193.73"
+  },
+  {
+   "tokens": 256,
+   "path": "fp32",
+   "intra_op_workers": 1,
+   "scope": "encoder",
+   "gflop_per_pass": 59.324,
+   "gflop_per_second_at_p50": 1.6,
+   "latency": {
+    "runs": 3,
+    "p50_ms": 37762.046,
+    "p95_ms": 46846.07,
+    "mean_ms": 38734.394,
+    "min_ms": 31595.066,
+    "max_ms": 46846.07,
+    "process_cpu_ms_per_run": 4917.155
+   },
+   "phase_ms_mean": {
+    "attn_out": 3350.337,
+    "embed": 4.181,
+    "geglu": 959.263,
+    "mlp_in": 8689.902,
+    "mlp_out": 5482.69,
+    "norm": 484.331,
+    "qkv": 10219.244,
+    "rope_attention": 9544.332
+   },
+   "load_average_at_start": "194.16 195.24 192.56"
+  },
+  {
+   "tokens": 256,
+   "path": "fp32",
+   "intra_op_workers": 8,
+   "scope": "encoder",
+   "gflop_per_pass": 59.324,
+   "gflop_per_second_at_p50": 6.1,
+   "latency": {
+    "runs": 10,
+    "p50_ms": 9724.077,
+    "p95_ms": 16222.585,
+    "mean_ms": 10803.542,
+    "min_ms": 8724.877,
+    "max_ms": 16222.585,
+    "process_cpu_ms_per_run": 4885.036
+   },
+   "phase_ms_mean": {
+    "attn_out": 1089.223,
+    "embed": 11.904,
+    "geglu": 741.122,
+    "mlp_in": 1865.842,
+    "mlp_out": 1390.321,
+    "norm": 346.819,
+    "qkv": 2063.75,
+    "rope_attention": 3294.42
+   },
+   "load_average_at_start": "200.34 199.85 194.98"
+  },
+  {
+   "tokens": 256,
+   "path": "fp32",
+   "intra_op_workers": 16,
+   "scope": "encoder",
+   "gflop_per_pass": 59.324,
+   "gflop_per_second_at_p50": 6.2,
+   "latency": {
+    "runs": 10,
+    "p50_ms": 9602.601,
+    "p95_ms": 11265.971,
+    "mean_ms": 9592.407,
+    "min_ms": 8348.513,
+    "max_ms": 11265.971,
+    "process_cpu_ms_per_run": 4712.462
+   },
+   "phase_ms_mean": {
+    "attn_out": 1087.695,
+    "embed": 1.63,
+    "geglu": 760.237,
+    "mlp_in": 1722.793,
+    "mlp_out": 1335.546,
+    "norm": 310.132,
+    "qkv": 1624.846,
+    "rope_attention": 2748.136
+   },
+   "load_average_at_start": "223.49 208.45 198.99"
+  },
+  {
+   "tokens": 256,
+   "path": "int8",
+   "intra_op_workers": 1,
+   "scope": "encoder",
+   "gflop_per_pass": 59.324,
+   "gflop_per_second_at_p50": 1.3,
+   "latency": {
+    "runs": 3,
+    "p50_ms": 45249.95,
+    "p95_ms": 49431.081,
+    "mean_ms": 45043.129,
+    "min_ms": 40448.357,
+    "max_ms": 49431.081,
+    "process_cpu_ms_per_run": 4628.059
+   },
+   "phase_ms_mean": {
+    "attn_out": 3703.965,
+    "embed": 1.012,
+    "geglu": 1149.294,
+    "mlp_in": 12002.209,
+    "mlp_out": 4656.905,
+    "norm": 293.588,
+    "qkv": 13043.887,
+    "rope_attention": 10192.151
+   },
+   "load_average_at_start": "190.12 202.94 198.70"
+  },
+  {
+   "tokens": 256,
+   "path": "int8",
+   "intra_op_workers": 8,
+   "scope": "encoder",
+   "gflop_per_pass": 59.324,
+   "gflop_per_second_at_p50": 5.2,
+   "latency": {
+    "runs": 10,
+    "p50_ms": 11515.918,
+    "p95_ms": 14726.733,
+    "mean_ms": 12300.576,
+    "min_ms": 11029.924,
+    "max_ms": 14726.733,
+    "process_cpu_ms_per_run": 4809.866
+   },
+   "phase_ms_mean": {
+    "attn_out": 1365.631,
+    "embed": 3.978,
+    "geglu": 839.537,
+    "mlp_in": 2240.911,
+    "mlp_out": 1603.157,
+    "norm": 381.275,
+    "qkv": 2308.959,
+    "rope_attention": 3556.682
+   },
+   "load_average_at_start": "205.72 206.66 201.14"
+  },
+  {
+   "tokens": 256,
+   "path": "int8",
+   "intra_op_workers": 16,
+   "scope": "encoder",
+   "gflop_per_pass": 59.324,
+   "gflop_per_second_at_p50": 4.4,
+   "latency": {
+    "runs": 10,
+    "p50_ms": 13399.294,
+    "p95_ms": 14364.24,
+    "mean_ms": 13165.053,
+    "min_ms": 11024.72,
+    "max_ms": 14364.24,
+    "process_cpu_ms_per_run": 4822.472
+   },
+   "phase_ms_mean": {
+    "attn_out": 1455.438,
+    "embed": 3.578,
+    "geglu": 936.716,
+    "mlp_in": 2294.145,
+    "mlp_out": 1870.41,
+    "norm": 449.538,
+    "qkv": 2228.013,
+    "rope_attention": 3927.108
+   },
+   "load_average_at_start": "212.59 206.39 201.71"
+  },
+  {
+   "tokens": 256,
+   "path": "fp32",
+   "intra_op_workers": 8,
+   "scope": "encoder+laya_head(1 question, 4 options)",
+   "latency": {
+    "runs": 10,
+    "p50_ms": 13438.525,
+    "p95_ms": 16540.125,
+    "mean_ms": 14057.146,
+    "min_ms": 11660.133,
+    "max_ms": 16540.125,
+    "process_cpu_ms_per_run": 5149.737
+   },
+   "load_average_at_start": "205.61 209.83 204.04"
+  }
+ ]
+}
