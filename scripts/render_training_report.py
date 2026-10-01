@@ -7,13 +7,18 @@ from pathlib import Path
 
 
 def plot(history, keys):
+    def recorded(row, key):
+        return isinstance(row.get(key), (int, float)) and math.isfinite(float(row[key]))
     width, height = 720, 220
-    finite = [float(row[key]) for row in history for key in keys if math.isfinite(float(row[key]))]
+    finite = [float(row[key]) for row in history for key in keys if recorded(row, key)]
     maximum = max(finite + [0.01])
     colors = ("#2563eb", "#dc2626", "#059669")
     lines = []
     for color, key in zip(colors, keys):
-        points = " ".join(f"{40+i*640/max(1,len(history)-1):.1f},{190-float(row[key])*160/maximum:.1f}" for i, row in enumerate(history) if math.isfinite(float(row[key])))
+        points = " ".join(f"{40+i*640/max(1,len(history)-1):.1f},{190-float(row[key])*160/maximum:.1f}" for i, row in enumerate(history) if recorded(row, key))
+        if not any(recorded(row, key) for row in history):
+            lines.append(f'<text x="40" y="{70+keys.index(key)*20}" fill="#64748b">{html.escape(key)}: not recorded in this artifact</text>')
+            continue
         lines.append(f'<polyline points="{points}" fill="none" stroke="{color}" stroke-width="2.5"/><text x="40" y="{18+keys.index(key)*18}" fill="{color}">{html.escape(key)}</text>')
     return f'<svg viewBox="0 0 {width} {height}" role="img" aria-label="{html.escape(", ".join(keys))} by epoch"><path d="M40 40 V190 H690" fill="none" stroke="#94a3b8"/>{"".join(lines)}<text x="40" y="215">Epoch 1</text><text x="630" y="215">Epoch {len(history)}</text></svg>'
 
