@@ -1,0 +1,3 @@
+# Optional Apple Silicon training dependency; the Go runtime remains stdlib-only.
+# Validated locally on 0.31.2; do not silently use CPU on an unsupported host.
+mlx>=0.31.2,<0.33

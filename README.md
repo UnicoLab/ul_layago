@@ -16,7 +16,7 @@ After configuring Git access to this private repository:
 
 ```sh
 go env -w GOPRIVATE=github.com/UnicoLab/*
-go get github.com/UnicoLab/ul_layago@v0.1.0
+go get github.com/UnicoLab/ul_layago@v0.2.0
 ```
 
 Existing `GOPRIVATE` entries should be retained when adding this pattern. Import the root package as `layago`. `Open(OpenOptions{Checkpoint: path, Workers: 4})` loads once; `Predict(ctx, Request{State: text, Questions: questions})` returns typed nominations, distributions, token usage and model metadata. Calls serialize safely and queued calls respect cancellation. Lower-level packages remain available for custom pipelines.
@@ -59,8 +59,56 @@ python3 scripts/render_training_report.py --artifact .local/demo/model/float32 -
 
 The fixture demonstrates mechanics, not deployment quality. Existing output directories are never overwritten. Cache shards are atomic, content-addressed and resumable. `--init-artifact` warm-starts a compatible previous head, pins its weights digest and fits fresh calibration; it is not optimizer-resume. Complete public two-transformer-layer heads remain usable through inference, but cannot be silently substituted into the zero-layer trainer.
 
-`--max-duration` bounds each run. `--memory-limit` is a **soft Go GC budget**, not an OS RSS cap; mmap/prepacked weights also consume memory. Cache concurrency, batch size, shard size and head workers have separate bounds. Stderr emits cache progress, 5-second process heartbeats, epoch losses and calibration outcomes. Manifests store training history, dataset/base digests, code identity and split metrics. See [monitoring follow-up](docs/training.md#operations-and-acceleration) for the stronger supervisor/GPU path still to implement.
+`--max-duration` bounds each run. `--memory-limit` is a **soft Go GC budget**, not an OS RSS cap; mmap/prepacked weights also consume memory. Cache concurrency, batch size, shard size and head workers have separate bounds. Stderr emits cache progress, 5-second process heartbeats, epoch losses and calibration outcomes. Manifests store training history, dataset/base digests, code identity and split metrics. See [operations and acceleration](docs/training.md#operations-and-acceleration) and the optional supervisor/GPU commands below.
 
 ## Compatibility and provenance
 
 The `hive.laya-dataset/v1`, `hive.laya-prompt/v1`, `hive.laya-artifact/v1` and cache contracts retain their names to load existing artifacts. They do not imply Hive is a dependency. [Origin manifest](docs/ORIGIN.json) records digests of the user-supplied source before import migration. [Archived Hive engineering notes](docs/hive-engine-notes.md) preserve historical receipts; those results are not new package or domain-quality benchmarks. [NOTICE](NOTICE) identifies the upstream architecture/reference.
+
+## Optional Apple GPU training and run supervision (0.2)
+
+The Go runtime stays dependency-free. On Apple Silicon, install the optional
+Python requirements in a suitable environment (`scripts/requirements-mlx.txt`).
+`--backend mlx` accelerates **cached marker scorer training**; encoder caching,
+act fitting, calibration and serving remain Go. GPU availability is mandatory;
+there is no silent CPU fallback. GPU forward/gradient tests are opt-in:
+
+```sh
+LAYAGO_MLX_PYTHON=python3 go test ./train -run TestMLX -count=1
+```
+
+Use the external supervisor to retain telemetry when the trainer dies:
+
+```sh
+python3 scripts/supervise_training.py --run-dir .local/runs/experiment-1 \
+  --rss-limit-mib 6144 --stall-seconds 180 --max-seconds 1800 -- \
+  bin/laya-train train --dataset /data/train.jsonl --instance R \
+  --base /models/laya-multilingual --cache .local/cache --out .local/artifact-1 \
+  --instructions /data/instructions.json --config /data/config.json --workers 4 \
+  --backend mlx --mlx-script scripts/mlx_head.py --mlx-memory-limit 1073741824 \
+  --mlx-work-dir .local/optimizer-work
+```
+
+The supervisor sets `LAYAGO_PROGRESS_FILE`, which the trainer uses for atomic
+stage counters and an append-only progress journal. Heartbeats/log output do not
+reset the stall deadline. Size the stall deadline above the slowest expected
+cache shard or validation stage. `status.json`, bounded stdout/stderr, `telemetry.jsonl`
+and `health-report.html` remain in the new run directory. RSS includes descendants;
+macOS host pressure comes from `memory_pressure -Q`, Linux from `MemAvailable`.
+Sampling can miss brief spikes; this is a sentinel, not an OS-enforced allocation
+cap or an assurance that the supervisor itself can survive system-wide OOM.
+
+After an interruption, use a **new** run/output directory with the same cache and
+`--mlx-work-dir`. MLX restores completed-epoch parameters, AdamW moments, step,
+shuffle schedule, history and best scorer. Data/config/implementation and tensor
+hashes must match; memory budgets may change. Atomic checkpoint state pins immutable
+weights, so a death between tensor writes and state commit resumes the previous
+complete epoch. A file lock prevents concurrent writers and releases on exit.
+Encoder cache shards resume independently; Go act/calibration stages rerun.
+There are no unbounded automatic retries. Supervisor process-group cleanup is
+currently macOS/Linux only.
+
+Set `schedule_epochs` in training config to size cosine decay independently of
+`max_epochs`; zero retains the original behavior. See the
+[Hive report assessment](docs/hive-report-insights.md) for motivation and
+architecture experiments still to qualify.

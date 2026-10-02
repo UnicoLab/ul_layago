@@ -17,7 +17,7 @@ import (
 	"github.com/UnicoLab/ul_layago/tensor"
 )
 
-const Version = "0.1.0"
+const Version = "0.2.0"
 const PredictionContract = "ul.layago-predict/v1"
 
 var ErrTruncation = errors.New("layago: input exceeds model budgets; shorten or segment it, or explicitly allow truncation")

@@ -19,6 +19,7 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/UnicoLab/ul_layago/internal/progress"
 	"github.com/UnicoLab/ul_layago/train"
 )
 
@@ -40,6 +41,12 @@ func run(ctx context.Context, args []string, output io.Writer) error {
 		return fmt.Errorf("unknown action %q", action)
 	}
 	fs := flag.NewFlagSet(action, flag.ContinueOnError)
+	progressPath := fs.String("progress-file", os.Getenv("LAYAGO_PROGRESS_FILE"), "Atomic stage/progress status for an external supervisor")
+	backend := fs.String("backend", "go", "Scorer training backend: go or mlx (encoder, act and calibration remain Go)")
+	mlxPython := fs.String("mlx-python", "python3", "Python interpreter with optional MLX installed")
+	mlxScript := fs.String("mlx-script", "", "Path to scripts/mlx_head.py; required for mlx backend")
+	mlxWork := fs.String("mlx-work-dir", "", "Optional persistent MLX epoch/AdamW workspace; identical data/config resume safely")
+	mlxLimit := fs.Int64("mlx-memory-limit", 1<<30, "MLX allocation budget in bytes")
 	dataset := fs.String("dataset", "", "JSONL dataset in the compatible hive.laya-dataset/v1 format")
 	instance := fs.String("instance", "", "Q (question), R (evidence), A (draft); required except validate")
 	base := fs.String("base", "", "Local frozen ModernBERT/mmBERT or Laya encoder")
@@ -72,10 +79,31 @@ func run(ctx context.Context, args []string, output io.Writer) error {
 	if *memoryLimit <= 0 || *duration <= 0 || *cacheBatch <= 0 || *cacheWorkers <= 0 || *shardSize <= 0 {
 		return errors.New("memory limit, duration and cache sizes must be positive")
 	}
+	if *backend != "go" && *backend != "mlx" {
+		return errors.New("backend must be go or mlx")
+	}
+	if *backend == "mlx" && (action != "train" || *mlxScript == "" || *mlxLimit <= 0) {
+		return errors.New("mlx requires train, mlx-script and a positive mlx-memory-limit")
+	}
 	previousLimit := debug.SetMemoryLimit(*memoryLimit)
 	defer debug.SetMemoryLimit(previousLimit)
 	ctx, cancel := context.WithTimeout(ctx, *duration)
 	defer cancel()
+	journal := progress.New(*progressPath)
+	var progressErr error
+	advance := func(stage string, step int) {
+		if progressErr != nil {
+			return
+		}
+		if err := journal.Advance(stage, step); err != nil {
+			progressErr = err
+			cancel()
+		}
+	}
+	advance("prepare", 0)
+	if progressErr != nil {
+		return progressErr
+	}
 	heartbeatDone := make(chan struct{})
 	defer close(heartbeatDone)
 	if action == "train" || action == "evaluate" {
@@ -176,6 +204,7 @@ func run(ctx context.Context, args []string, output io.Writer) error {
 		}
 	}
 	cache, err := train.BuildCache(ctx, trunk, prepared, train.CacheSpec{Root: *cacheRoot, Workers: *cacheWorkers, IntraOp: *workers, Batch: *cacheBatch, ShardSize: *shardSize, Progress: func(p train.CacheProgress) {
+		advance("cache", p.ExamplesDone)
 		fmt.Fprintf(os.Stderr, "cache examples=%d/%d encoded=%d/%d elapsed=%s\n", p.ExamplesDone, p.Total, p.Encoded, p.Encode, p.Elapsed)
 	}})
 	if err != nil {
@@ -223,6 +252,11 @@ func run(ctx context.Context, args []string, output io.Writer) error {
 		cfg.InitWeightsSHA256 = init.Manifest.Weights.SHA256
 	}
 	cfg.Workers = *workers
+	cfg.Progress = advance
+	cfg.Backend = *backend
+	if *backend == "mlx" {
+		cfg.FitScorer = train.MLXScorer(train.MLXOptions{Python: *mlxPython, Script: *mlxScript, WorkDir: *mlxWork, MemoryLimit: *mlxLimit})
+	}
 	cfg.Log = func(format string, args ...any) { fmt.Fprintf(os.Stderr, format+"\n", args...) }
 	result, err := train.Train(ctx, prepared, records, trunk.Identity.HiddenSize, cfg)
 	if err != nil {
@@ -234,9 +268,14 @@ func run(ctx context.Context, args []string, output io.Writer) error {
 	if err := os.Mkdir(*out, 0755); err != nil {
 		return fmt.Errorf("reserve new artifact output: %w", err)
 	}
+	advance("export", 0)
 	paths, err := train.Export(*out, result, train.ExportMeta{Code: train.CodeVersion{Trainer: train.TrainerVersion, GitCommit: buildRevision(), GitDirty: buildDirty(), GoVersion: runtime.Version()}, Trunk: trunk, Cache: cache})
 	if err != nil {
 		return err
+	}
+	advance("complete", 1)
+	if progressErr != nil {
+		return progressErr
 	}
 	return encode(map[string]any{"artifacts": paths, "best_epoch": result.BestEpoch, "seconds": result.Seconds, "roles": result.Roles, "sequence_report": sequence, "requires_domain_validation": true})
 }

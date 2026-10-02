@@ -13,7 +13,6 @@ jobs:
           go-version-file: go.mod
           cache: false
       - run: make check
-      - run: make race
       - run: make build
       - name: Verify generated assembly
         run: go generate ./tensor && git diff --exit-code
@@ -23,3 +22,14 @@ jobs:
             GOOS=${target%/*} GOARCH=${target#*/} CGO_ENABLED=0 go build -o /tmp/layago-${target%/*} ./cmd/layago
             GOOS=${target%/*} GOARCH=${target#*/} CGO_ENABLED=0 go build -o /tmp/laya-train-${target%/*} ./cmd/laya-train
           done
+
+  race:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: false
+      - run: make race

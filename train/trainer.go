@@ -16,6 +16,11 @@ import (
 // included (a zero weight decay is no decay); start from DefaultConfig and
 // change what differs.
 type Config struct {
+	// FitScorer is an optional accelerated scorer stage. Calibration/export remain Go.
+	FitScorer   ScorerFitFunc                `json:"-"`
+	Backend     string                       `json:"scorer_backend,omitempty"`
+	BackendInfo map[string]any               `json:"backend_info,omitempty"`
+	Progress    func(stage string, step int) `json:"-"`
 	// InitHead optionally warm-starts a compatible zero-transformer-layer head.
 	// The caller must verify base identity; Train clones it and refits calibration.
 	InitHead          *Head  `json:"-"`
@@ -25,8 +30,10 @@ type Config struct {
 	Seed uint64 `json:"seed"`
 	// Epochs is the maximum number of passes; Patience stops after that many
 	// epochs without a better dev_cal NLL.
-	Epochs   int `json:"max_epochs"`
-	Patience int `json:"patience"`
+	Epochs int `json:"max_epochs"`
+	// ScheduleEpochs decouples cosine decay from the maximum/early-stop cap (0 uses Epochs).
+	ScheduleEpochs int `json:"schedule_epochs,omitempty"`
+	Patience       int `json:"patience"`
 	// BatchSize, LR (peak), WeightDecay (matrices only) and WarmupFrac shape
 	// AdamW with warmup and cosine decay to 10 %.
 	BatchSize   int     `json:"batch_size"`
@@ -80,10 +87,17 @@ func DefaultConfig() Config {
 }
 
 func (c Config) validate() error {
+	for _, v := range []float64{c.LR, c.ActLR, c.WeightDecay, c.WarmupFrac, c.ScoreRegWeight, c.Alpha, c.Delta} {
+		if math.IsNaN(v) || math.IsInf(v, 0) {
+			return fmt.Errorf("train: configuration values must be finite")
+		}
+	}
 	switch {
 	case c.Epochs < 1, c.Patience < 1, c.BatchSize < 1, c.ActEpochs < 0:
 		return fmt.Errorf("train: epochs %d, patience %d and batch size %d must be positive, act epochs %d not negative",
 			c.Epochs, c.Patience, c.BatchSize, c.ActEpochs)
+	case c.ScheduleEpochs < 0 || c.ScheduleEpochs > c.Epochs:
+		return fmt.Errorf("train: schedule epochs must be 0 or at most max_epochs")
 	case !(c.LR > 0) || !(c.ActLR > 0):
 		return fmt.Errorf("train: learning rates %v and %v must be positive", c.LR, c.ActLR)
 	case c.WeightDecay < 0 || c.WarmupFrac < 0 || c.WarmupFrac >= 1 || c.ScoreRegWeight < 0:
@@ -387,57 +401,86 @@ func Train(ctx context.Context, p *Prepared, recs map[string]*Record, d int, cfg
 		}
 		head = cfg.InitHead.Clone()
 	}
-	tr := newTrainer(head, Objective{RegWeight: cfg.ScoreRegWeight}, cfg.Workers)
-
-	// Stage 1: the scorer and type embedding on train, early-stopped on the
-	// dev_cal NLL.
-	params := head.Params()
-	opt := NewAdamW(params[:scorerParams], cfg.WeightDecay)
-	steps := (len(trainSet) + cfg.BatchSize - 1) / cfg.BatchSize
-	sched := LRSchedule{Peak: cfg.LR, Floor: 0.1, Warmup: int(cfg.WarmupFrac * float64(steps*cfg.Epochs)), Total: steps * cfg.Epochs}
-	rng := rand.New(rand.NewPCG(cfg.Seed, cfg.Seed^0xda942042e4dd58b5)) //nolint:gosec // G404: reproducible shuffling, not a security use
-	best, bad, step := math.Inf(1), 0, 0
-	bestHead := head.Clone()
-	for epoch := 1; epoch <= cfg.Epochs; epoch++ {
+	var tr *trainer
+	if cfg.Backend != "" && cfg.Backend != "go" && cfg.FitScorer == nil {
+		return nil, fmt.Errorf("train: scorer backend %q requires its fitter", cfg.Backend)
+	}
+	if cfg.FitScorer != nil {
+		fit, err := cfg.FitScorer(ctx, head.Clone(), fitSamples(trainSet), fitSamples(devCalNLL), cfg)
+		if err != nil {
+			return nil, err
+		}
+		if err := validateScorerFit(head, fit); err != nil {
+			return nil, err
+		}
+		for i, param := range fit.Head.Params()[:scorerParams] {
+			copy(head.Params()[i].Data, param.Data)
+		}
+		if len(fit.History) > cfg.Epochs {
+			return nil, fmt.Errorf("train: accelerated backend exceeded epoch cap")
+		}
+		res.History, res.BestEpoch = fit.History, fit.BestEpoch
+		res.Config.BackendInfo = fit.Info
 		if err := ctx.Err(); err != nil {
 			return nil, err
 		}
-		t0 := time.Now()
-		perm := rng.Perm(len(trainSet))
-		var trainLoss float64
-		batch := make([]*sample, 0, cfg.BatchSize)
-		for b := 0; b < len(perm); b += cfg.BatchSize {
+		tr = newTrainer(head, Objective{RegWeight: cfg.ScoreRegWeight}, cfg.Workers)
+	} else {
+		tr = newTrainer(head, Objective{RegWeight: cfg.ScoreRegWeight}, cfg.Workers)
+
+		// Stage 1: the scorer and type embedding on train, early-stopped on the
+		// dev_cal NLL.
+		params := head.Params()
+		opt := NewAdamW(params[:scorerParams], cfg.WeightDecay)
+		steps := (len(trainSet) + cfg.BatchSize - 1) / cfg.BatchSize
+		sched := LRSchedule{Peak: cfg.LR, Floor: 0.1, Warmup: int(cfg.WarmupFrac * float64(steps*cfg.scorerScheduleEpochs())), Total: steps * cfg.scorerScheduleEpochs()}
+		rng := rand.New(rand.NewPCG(cfg.Seed, cfg.Seed^0xda942042e4dd58b5)) //nolint:gosec // G404: reproducible shuffling, not a security use
+		best, bad, step := math.Inf(1), 0, 0
+		bestHead := head.Clone()
+		for epoch := 1; epoch <= cfg.Epochs; epoch++ {
 			if err := ctx.Err(); err != nil {
 				return nil, err
 			}
-			batch = batch[:0]
-			for _, i := range perm[b:min(len(perm), b+cfg.BatchSize)] {
-				batch = append(batch, trainSet[i])
+			t0 := time.Now()
+			perm := rng.Perm(len(trainSet))
+			var trainLoss float64
+			batch := make([]*sample, 0, cfg.BatchSize)
+			for b := 0; b < len(perm); b += cfg.BatchSize {
+				if err := ctx.Err(); err != nil {
+					return nil, err
+				}
+				batch = batch[:0]
+				for _, i := range perm[b:min(len(perm), b+cfg.BatchSize)] {
+					batch = append(batch, trainSet[i])
+				}
+				trainLoss += tr.scorerStep(batch)
+				step++
+				opt.Step(tr.total.slices()[:scorerParams], sched.At(step))
+				advance(cfg, "scorer", step)
 			}
-			trainLoss += tr.scorerStep(batch)
-			step++
-			opt.Step(tr.total.slices()[:scorerParams], sched.At(step))
+			devNLL, devAcc := tr.devNLL(devCalNLL)
+			secs := time.Since(t0).Seconds()
+			st := EpochStats{Epoch: epoch, TrainLoss: trainLoss / float64(len(trainSet)), DevCalNLL: devNLL, DevCalAccuracy: devAcc,
+				LR: sched.At(step), Seconds: secs, ExamplesPerSecond: float64(len(trainSet)) / math.Max(secs, 1e-9)}
+			res.History = append(res.History, st)
+			logf("epoch %d: train loss %.4f, dev_cal NLL %.4f, dev_cal accuracy %.4f (%.0f examples/s)", epoch, st.TrainLoss, devNLL,
+				devAcc, st.ExamplesPerSecond)
+			if devNLL < best-1e-9 {
+				best, bad, res.BestEpoch = devNLL, 0, epoch
+				bestHead = head.Clone()
+				continue
+			}
+			if bad++; bad >= cfg.Patience {
+				break
+			}
 		}
-		devNLL, devAcc := tr.devNLL(devCalNLL)
-		secs := time.Since(t0).Seconds()
-		st := EpochStats{Epoch: epoch, TrainLoss: trainLoss / float64(len(trainSet)), DevCalNLL: devNLL, DevCalAccuracy: devAcc,
-			LR: sched.At(step), Seconds: secs, ExamplesPerSecond: float64(len(trainSet)) / math.Max(secs, 1e-9)}
-		res.History = append(res.History, st)
-		logf("epoch %d: train loss %.4f, dev_cal NLL %.4f, dev_cal accuracy %.4f (%.0f examples/s)", epoch, st.TrainLoss, devNLL,
-			devAcc, st.ExamplesPerSecond)
-		if devNLL < best-1e-9 {
-			best, bad, res.BestEpoch = devNLL, 0, epoch
-			bestHead = head.Clone()
-			continue
+		for i, p := range bestHead.Params()[:scorerParams] {
+			copy(params[i].Data, p.Data)
 		}
-		if bad++; bad >= cfg.Patience {
-			break
-		}
-	}
-	for i, p := range bestHead.Params()[:scorerParams] {
-		copy(params[i].Data, p.Data)
+
 	}
 
+	advance(cfg, "act", 0)
 	// Stage 2: the act head on dev_cal, as a predictor of whether the
 	// scorer's answer is right.
 	logits := tr.servedLogits(all)
@@ -450,7 +493,12 @@ func Train(ctx context.Context, p *Prepared, recs map[string]*Record, d int, cfg
 		return nil, err
 	}
 
+	advance(cfg, "calibration", 0)
 	res.Float32 = calibrate(p, head, "float32", all, cfg)
+	if err := ctx.Err(); err != nil {
+		return nil, err
+	}
+	advance(cfg, "calibration", 1)
 	logThresholds(logf, res.Float32)
 	if cfg.Int8 {
 		res.Int8 = calibrate(p, QuantizedHead(head), "int8", all, cfg)
@@ -740,6 +788,7 @@ func (tr *trainer) trainAct(ctx context.Context, group []*sample, logitsOf map[*
 			}
 			step++
 			opt.Step(tr.actTot.slices()[scorerParams:], sched.At(step))
+			advance(cfg, "act", step)
 		}
 	}
 	rep.Trained, rep.FinalLoss = true, last/float64(n)
