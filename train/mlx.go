@@ -177,7 +177,7 @@ func MLXScorer(opts MLXOptions) ScorerFitFunc {
 			BestEpoch int            `json:"best_epoch"`
 			Info      map[string]any `json:"info"`
 		}
-		raw, err := os.ReadFile(filepath.Join(dir, "result.json"))
+		raw, err = os.ReadFile(filepath.Join(dir, "result.json"))
 		if err != nil {
 			return nil, err
 		}
