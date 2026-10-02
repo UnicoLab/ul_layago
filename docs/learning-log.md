@@ -369,6 +369,37 @@ Keep rejected raw model proposals out of training gold unless adjudicated, and
 retain malformed evidence as a distinct negative/failure label rather than
 turning it into a semantic contradiction automatically.
 
+### L21 — Analysis navigation and semantic relation evidence are different layers
+
+**Observed:** DelayLama's [saved analysis map](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-02-analysis-map.md)
+projects 25 saved Aster findings into a readable catalog. Its 30 links comprise
+25 navigation links, four explicit assessment/event references and one explicit
+amendment/event reference. The original source graph separately contains 70
+facts and 36 proximity/keyword suggestions. Its suggestions remain hidden by
+default. No new extraction, semantic graph storage or Laya training occurred.
+
+The exact finding opens its evidence review with all quotations and prior field
+checks intact. Pending reviewer concerns and model disagreements stay visible in
+the map, including disagreements on fields that all have candidate supporting
+quotes. Duplicate event IDs, inferred matches, missing endpoints and explicitly
+foreign project scope do not produce event links.
+
+**Implication:** use graph structure to organize candidate analysis while retaining
+the provenance and uncertainty of each link. An explicit reference can navigate
+to an event without proving cause or entitlement. Do not label navigation edges,
+co-occurrence suggestions or accepted UI decisions as positive relation-training
+gold. Build relation examples from independently adjudicated endpoint roles,
+source spans and the specific predicate's premises; preserve source versions,
+target scope and amendment ordering.
+
+Compound conclusions need several atomic associations: timely notice depends on
+the trigger, date, rule, recipient and delivery method. Clause retrieval evaluation
+must score retention of all necessary passages, not just the easiest matching
+quote. Laya shortlist/field-verifier experiments should report association errors,
+false support, necessary-clause recall and end-to-end latency on independent
+contract families. Model disagreement remains a review signal; this interface
+change is not evidence that the existing advisory contract head improved.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
