@@ -302,6 +302,39 @@ output contract again after each revision. A better value or matching final span
 does not establish all fields in the finding. Model suggestions and accepted
 historical candidates remain review evidence, not automatic training gold.
 
+### L19 — Completeness needs separate targets and independently judged evidence
+
+**Observed:** DelayLama's [contract coverage audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-02-contract-coverage.md)
+used eight real agents on an invented French contract. A single claim pass omitted
+cost conclusions; improving one event with a prompt-only revision lost another
+cost conclusion. Separate time/cost passes retained all four discussed targets,
+and 22 targeted criteria passed. Partial failure remains visible instead of
+turning retained rows into an apparently complete analysis.
+
+Unknown formal-notice requirements were biased by a false schema default. An
+amendment's completion change was copied into risk rewrite by normalization and
+merging. The interface also hid all but the first supporting quote. These are
+schema, application and presentation errors, not necessarily head quality failures.
+Their fixes preserve null facts, distinct amendment effects and all evidence.
+
+**Implication:** model-training examples should separate event occurrence, observed
+delay, extension entitlement, incurred cost, requested/awarded compensation, future
+rights, notice record and notice applicability. Include hard negatives where an
+unrequested payment is mistaken for exclusion or zero actual cost. Record every
+target, even negative conclusions, and score omissions separately from false
+support. Preserve source versions, field-specific citations, IDs and explicit
+scope; failed passes are incomplete examples, not gold negatives.
+
+All 34 quotes matched source spans, but E1's notice-compliance assertion still
+lacked the notice passage in that assessment's own citations. All 36 graph edges
+were proximity/keyword suggestions; scoped endpoints do not prove semantic
+relations. Name lookup proves only literal name presence. Evaluate clause-to-event
+and field-to-span associations independently, including missing quote components
+and amendment chains. Use independent held-out contracts after prompt or model
+selection; this tuned short fixture is not a production recall estimate. No Laya
+training or weight improvement occurred in this audit, and the optional verifier
+remains advisory in light of the cost-field failures in L18.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
