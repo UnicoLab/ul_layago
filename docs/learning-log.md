@@ -267,6 +267,41 @@ check are not semantic gold labels. These are data/evaluation requirements and
 application findings, not evidence of improved Laya weights, architecture, MLX
 acceleration or independent contract accuracy.
 
+### L18 — A second opinion needs field-specific certification, not confidence
+
+**Observed:** DelayLama's [field-review receipt](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-02-field-review.md)
+follows an unsupported zero actual-cost finding through live evidence recovery
+and two assistant/draft iterations. The LLM repeatedly called excluded
+compensation support for zero actual cost. A conservative source guard now keeps
+that case insufficient and preserves the raw model verdict; explicit incurred-zero
+evidence and excluded compensation entitlement still pass their separate checks.
+
+The optional Laya artifact `559cbfbd…` returned `contradicts` on all three focused
+cost-field rechecks: missing actual cost (expected insufficient), explicitly zero
+incurred cost (expected supports), and no compensation entitlement (expected
+supports). The two supported cases received contradiction probabilities above
+0.99. In a larger whole-event finding the head instead nominated the quote as
+supporting despite the unsupported actual-cost field. This is a concrete failure
+on these inputs, not an estimate of general accuracy. The application exposes
+disagreement and keeps the head advisory. No retraining occurred in this receipt.
+
+**Implication:** test the exact deployed claim serialization and source association
+before promotion. Compare terse field/value claims with explicit natural-language
+assertions on identical fixed evidence; isolate field-specific questions from
+whole-event bundles. Include negative/zero/unknown quantities and distinguish
+unsupported from explicitly contradicted claims. Align train, evaluation and
+production formatting, but do not explain away a failure as formatting without
+a controlled comparison. Measure false support and false contradiction separately;
+high confidence is not certification. New adjudicated examples should distinguish
+incurred cost from compensation, preserve unknown facts, and independently retain
+exact citations for notices, duration and entitlements.
+
+The real prompt revisions improved costs and source quotations, but an intermediate
+draft introduced new citation errors. Save every draft and evaluate the full
+output contract again after each revision. A better value or matching final span
+does not establish all fields in the finding. Model suggestions and accepted
+historical candidates remain review evidence, not automatic training gold.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
