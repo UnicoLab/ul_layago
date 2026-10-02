@@ -441,6 +441,44 @@ and full-pipeline latency. Hashes describe supplied input under its existing
 limits, not completeness of the original corpus. The short tuned fixture and
 seeded failure tests are regression evidence, not production model certification.
 
+### L23 — A supported entitlement sentence can still be wrong for a cost field
+
+**Observed:** DelayLama's [financial review follow-up](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-financial-dimensions.md)
+adds narrow financial-dimension and closure-consistency warnings to current and
+historical outputs. Saved model values and files are preserved; path-specific
+delivery annotations carry warnings into evidence review and prompt feedback
+without discarding earlier notes. An import-selection bug also surfaced: matching
+only an analysis label reused an older prompt-lab snapshot. Exact facts/source
+comparison now creates a new snapshot when either changes, while identical
+facts/source refresh their current warnings.
+
+One real GUI recheck of the saved E2 weather event returned 12 field checks.
+The LLM proposed support for **Non compensable** as cost impact using the matching
+contractual compensation exclusion. A deterministic dimension warning kept that
+field insufficient; the other 11 checks remained model candidate support, not
+independent gold. Laya nominated support for the finding, and the disagreement
+remained visible. Reload preserved the recheck and its exact feedback reached
+the owning agent. No model training, improved-weight result or prompt activation
+is claimed. The 355 Python/167 frontend tests and eight runtime API checks validate
+application behavior, not held-out contract accuracy.
+
+**Implication:** field support needs the requested dimension and association,
+not just semantic compatibility with a statement somewhere in the document.
+Label actual incurred cost, compensation eligibility, payment requested, payment
+awarded and settlement/waiver separately. Include a genuine exclusion quote as
+a hard negative for an incurred-cost amount. A source-matched model “supports”
+verdict can be wrong even when it is well-formed and uses an authentic passage.
+Laya must be tested on such close dimension negatives before governing final
+conclusions. Preserve its disagreements rather than treating repeated model
+agreement as new evidence.
+
+The wording warnings are finite triage checks, not a semantic verifier. Other
+phrasings, role assignments, citation references and composite conclusions still
+need independent adjudication. Retain original assertions, source spans, proposed
+and checked verdicts, input version, target dimension and all review attempts in
+future training/evaluation records. UI labels or compact fingerprints must not
+serve as snapshot identity for selecting those records.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
