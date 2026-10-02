@@ -210,6 +210,32 @@ before exporting training examples. Keep evaluation contracts/templates separate
 from prompt-development and training feedback. Recheck historical suggestions
 against the current output contract rather than treating history as authority.
 
+### L16 — Preserve date precision and separate assessment targets
+
+**Observed:** DelayLama's [Lumen regression receipt](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-02-claim-conclusions.md)
+uses a second synthetic contract and deliberately seeded assessment outputs to
+test merging and review. A granted time extension and an excluded cost assessment
+for the same event both survive; neither conclusion replaces the other. Complete
+English dates start the expected clock, while a month-only trigger stays unknown.
+These seeded cases do not measure Laya or LLM extraction accuracy.
+
+Actual Chronograph model analysis of the original contract stored `2026-06-01`
+and marked it exact even though its own `date_text` and quotation say only
+`June 2026`. DelayLama now flags that conflict and displays no established exact
+day. The original graph record remains erroneous and needs upstream correction;
+valid graph topology and a matching quote did not validate its date semantics.
+
+**Implication:** synthetic examples and feedback exports should retain date
+precision, original spans and the assessment target. Time, cost, notification and
+party responsibility are distinct questions, even for the same event. Different
+answers are not automatically contradictory. Never use generated graph timestamps,
+model-declared precision or a last-write merged conclusion as gold labels. Add
+hard negatives for month-only dates, plausible invented first days, sent notices
+versus legally timely notices, and time entitlement versus cost entitlement.
+Evaluate each target and source association independently; treat ambiguous or
+missing evidence as insufficient and retain human review. This is a proposed
+training/evaluation policy, not an implemented architecture or measured quality gain.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
