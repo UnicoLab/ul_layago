@@ -24,6 +24,7 @@ do not confer accuracy or calibration on another application's tasks.
 | [Contract pilot, 2026-10-02](validation/contract-pilot-20261002.json) | Dataset splits, model pins, calibration shortfall, held-out/locked results and baseline comparison |
 | [Acceleration comparison, 2026-10-02](validation/acceleration-20261002.json) | Paired warm-cache CPU/GPU timings, quality, resume and supervisor failure tests |
 | [Final 0.2.0 export, 2026-10-02](validation/release-0.2.0-20261002.json) | Clean release-code GPU export, actual devices, additional run timing and challenge errors |
+| [DelayLama live evidence recovery, 2026-10-02](validation/delaylama-evidence-recovery-20261002.json) | Eight targeted LLM checks and five agreements among seven available Laya second opinions; one synthetic contract, not certification |
 
 The first two records are preserved copies of DelayLama's checked-in synthetic
 evaluation records. Original paths, source revision and SHA-256 digests appear in

@@ -174,6 +174,42 @@ failed check fall through to publication. Verify the private module from a clean
 external consumer as well as the checkout. Source-report approval/queue rules
 belong to that report's context and are not package operating instructions.
 
+### L14 — Exact source spans do not establish entailment
+
+**Observed:** DelayLama's [live recovery receipt](validation/delaylama-evidence-recovery-20261002.json)
+records eight targeted checks on one synthetic French contract using English
+claim labels. The LLM recovery verdicts passed all eight checks with exact source
+offsets and mandatory human review. The deployed float32 contract pilot agreed
+with five of seven available second opinions. It classified the correct contract
+price as insufficient and a retention-release clause as contradicting a claimed
+reservation-removal deadline, where the expected policy is insufficient. One
+missing-role-evidence case had no candidate quote and no Laya verdict.
+
+**Implication:** keep the model advisory. This single integration fixture is not
+independent certification and may overlap task development. Add independently
+split hard negatives for retention release versus defect-removal deadlines,
+contractor identity versus assigned defect duties, original versus amended dates,
+and near-miss amounts/currencies. Measure false contradiction separately from
+false support and insufficient recall. Log missing-quote coverage separately from
+classification agreement; do not count an unavailable model as correct.
+
+### L15 — Review feedback needs provenance before becoming training data
+
+**Observed:** live prompt iteration produced an incompatible recommendation that
+split an original and amended deadline across two application aliases. Providing
+the actual target schema, field meanings and explicit reviewer correction yielded
+a compatible additive refinement. Earlier incorrect proposals remained in the
+session history. DelayLama now retires proposals when their review context changes
+and requires new approval when evidence re-search replaces an accepted candidate.
+
+**Implication:** preserve original documents, exact prompts, output snapshots,
+review revisions, candidate spans and model identities. A matching span, generated
+summary, accepted historical candidate or assistant suggestion is not automatically
+a gold semantic label. Adjudicate feedback and bind approval to the exact candidate
+before exporting training examples. Keep evaluation contracts/templates separate
+from prompt-development and training feedback. Recheck historical suggestions
+against the current output contract rather than treating history as authority.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

@@ -1,0 +1,137 @@
+{
+  "recorded_at_utc": "2026-10-02T17:38:11.607595+00:00",
+  "task": "DelayLama original-source evidence recovery, synthetic single-contract integration check",
+  "source_revision_before_changes": "9eacb3a2710c8f39f4026ae708849639dcb21339",
+  "source_report_sha256": "b7f77fcc9fd09b13850d758fa996bd73a8636932b046e1a5a2cd1aa77ae51f2e",
+  "fixture": "data/synthetic/review_lab.md",
+  "fixture_sha256": "0af4a0fe63f1df3aef67481dba8f4e8af9d1cd170aadd04c0ff5bfac681e3559",
+  "llm": "Gemini 3.1 Flash Lite (active remote stack)",
+  "model_sha256": "559cbfbd1346c1375dce70c3cd281b1170fc1d3b5d0eae5adcbc150f390049c1",
+  "laya_artifact": "contract-balanced-v1/float32",
+  "base_encoder": "laya-multilingual",
+  "llm_checks_passed": 8,
+  "llm_checks_total": 8,
+  "laya_agreement_count": 5,
+  "laya_available_count": 7,
+  "cases": [
+    {
+      "case": "contract_price",
+      "expected": "supports",
+      "llm_verdict": "supports",
+      "checks": {
+        "semantic_verdict": true,
+        "all_quotes_are_exact_original_spans": true,
+        "human_review_required": true,
+        "support_and_contradiction_have_evidence": true
+      },
+      "laya_status": "available",
+      "laya_verdict": "insufficient",
+      "laya_agrees": false
+    },
+    {
+      "case": "wrong_contract_price",
+      "expected": "contradicts",
+      "llm_verdict": "contradicts",
+      "checks": {
+        "semantic_verdict": true,
+        "all_quotes_are_exact_original_spans": true,
+        "human_review_required": true,
+        "support_and_contradiction_have_evidence": true
+      },
+      "laya_status": "available",
+      "laya_verdict": "contradicts",
+      "laya_agrees": true
+    },
+    {
+      "case": "retention_is_not_reservation_deadline",
+      "expected": "insufficient",
+      "llm_verdict": "insufficient",
+      "checks": {
+        "semantic_verdict": true,
+        "all_quotes_are_exact_original_spans": true,
+        "human_review_required": true,
+        "support_and_contradiction_have_evidence": true
+      },
+      "laya_status": "available",
+      "laya_verdict": "contradicts",
+      "laya_agrees": false
+    },
+    {
+      "case": "role_is_not_defect_responsibility",
+      "expected": "insufficient",
+      "llm_verdict": "insufficient",
+      "checks": {
+        "semantic_verdict": true,
+        "all_quotes_are_exact_original_spans": true,
+        "human_review_required": true,
+        "support_and_contradiction_have_evidence": true
+      },
+      "laya_status": "unavailable",
+      "laya_verdict": null,
+      "laya_agrees": null
+    },
+    {
+      "case": "superseded_completion",
+      "expected": "contradicts",
+      "llm_verdict": "contradicts",
+      "checks": {
+        "semantic_verdict": true,
+        "all_quotes_are_exact_original_spans": true,
+        "human_review_required": true,
+        "support_and_contradiction_have_evidence": true
+      },
+      "laya_status": "available",
+      "laya_verdict": "contradicts",
+      "laya_agrees": true
+    },
+    {
+      "case": "amended_completion",
+      "expected": "supports",
+      "llm_verdict": "supports",
+      "checks": {
+        "semantic_verdict": true,
+        "all_quotes_are_exact_original_spans": true,
+        "human_review_required": true,
+        "support_and_contradiction_have_evidence": true
+      },
+      "laya_status": "available",
+      "laya_verdict": "supports",
+      "laya_agrees": true
+    },
+    {
+      "case": "notice_period",
+      "expected": "supports",
+      "llm_verdict": "supports",
+      "checks": {
+        "semantic_verdict": true,
+        "all_quotes_are_exact_original_spans": true,
+        "human_review_required": true,
+        "support_and_contradiction_have_evidence": true
+      },
+      "laya_status": "available",
+      "laya_verdict": "supports",
+      "laya_agrees": true
+    },
+    {
+      "case": "ordinary_weather_entitlement",
+      "expected": "contradicts",
+      "llm_verdict": "contradicts",
+      "checks": {
+        "semantic_verdict": true,
+        "all_quotes_are_exact_original_spans": true,
+        "human_review_required": true,
+        "support_and_contradiction_have_evidence": true
+      },
+      "laya_status": "available",
+      "laya_verdict": "contradicts",
+      "laya_agrees": true
+    }
+  ],
+  "limits": [
+    "One synthetic French contract with English claim labels; not independent certification.",
+    "This fixture may overlap earlier task development; no held-out accuracy claim.",
+    "Missing supporting clauses and contradiction are separate label policies.",
+    "Exact source offsets establish text matching, not entailment.",
+    "Laya verdicts remain nonauthoritative shadow output; human review is required."
+  ]
+}
