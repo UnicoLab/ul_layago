@@ -236,6 +236,37 @@ Evaluate each target and source association independently; treat ambiguous or
 missing evidence as insufficient and retain human review. This is a proposed
 training/evaluation policy, not an implemented architecture or measured quality gain.
 
+### L17 — Verify original-source semantics across the full extraction path
+
+**Observed:** DelayLama's [original-source follow-up receipt](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-02-source-date-precision.md)
+uses actual graph and four downstream model calls on the synthetic Lumen contract,
+followed by event/claim reruns. The upstream date-storage fix preserves `June 2026`
+as a month with period bounds and no exact occurrence. Scoped topology and
+mid-month/out-of-period timeline checks pass; this does not migrate historical
+graph data or establish the semantics of every model-inferred relation.
+
+Two independent integration bugs mattered more than model choice: claim viability
+was missing the original source, and output-format cleanup discarded later
+behavioral instructions. After both fixes, reruns separated E1 time entitlement
+from excluded compensation, preserved E2's one-day observed interruption and kept
+undocumented notice status unknown. Passing quote matching still did not establish
+actual costs: the model returned zero for both events without sufficient support.
+The application now retains those raw values with a field-level source-review
+warning across claim, analysis, review and timeline views. Nineteen focused
+integration checks pass while those two semantic review issues remain explicit.
+
+**Implication:** capture the effective composed prompt and original source, not
+only a stored prompt version or derived graph summary, when creating training
+examples. Separate observed duration, extension entitlement, incurred cost,
+compensation entitlement and notice-record presence into distinct targets. Add
+hard negatives for an excluded payment being misread as zero spend, an excluded
+extension being misread as zero delay, and missing records being misread as proven
+absence. Preserve precision and review warnings through downstream views and
+feedback exports. A period sorting anchor, a matching quote and a passing topology
+check are not semantic gold labels. These are data/evaluation requirements and
+application findings, not evidence of improved Laya weights, architecture, MLX
+acceleration or independent contract accuracy.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
