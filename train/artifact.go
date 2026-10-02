@@ -489,6 +489,21 @@ func trainingRecord(res *Result, cache *Cache) TrainingInfo {
 		headSecs += h.Seconds
 	}
 	th := cache.Info.Throughput
+	device := "cpu (" + runtime.GOARCH + ")"
+	scorerBackend := res.Config.Backend
+	if scorerBackend == "" {
+		scorerBackend = "go"
+	}
+	scorerDevice := device
+	drift := map[string]any{"same_path": true, "note": "features, training, calibration and served inference share the Go float32 trunk path; with a float32 cache the served logits equal the trained ones bit for bit on the feature kernel"}
+	if scorerBackend != "go" {
+		scorerDevice = "external backend"
+		if actual, ok := res.Config.BackendInfo["device"].(string); ok {
+			scorerDevice = actual
+		}
+		drift = map[string]any{"same_path": false, "note": "encoder features are cached in Go; scorer fitting uses " + scorerBackend + " arithmetic. Final calibration/evaluation/serving use the same Go forward path; the MLX fitter additionally verifies exported development NLL in Go. Training is not bit-identical across backends."}
+		device = "hybrid: scorer " + scorerDevice + "; encoder/act/calibration " + device
+	}
 	return TrainingInfo{
 		DatasetContract: DatasetContract, DataDigest: ds.Digest(), Files: ds.Files, Splits: splits, DevHalves: res.DevHalves,
 		SoftLabelled: soft, Unscorable: res.Unscorable, GeneratorVersions: sortedKeys(gens), LLMProvenance: provenance, Duplicates: p.Duplicates,
@@ -496,13 +511,13 @@ func trainingRecord(res *Result, cache *Cache) TrainingInfo {
 			"checked":    []string{"one split per story", "heldout_domain domains not in train/dev", "heldout_language languages not in train/dev"},
 			"violations": nonNil(ds.SplitViolations), "overridden": len(ds.SplitViolations) > 0,
 		},
-		Drift: map[string]any{"same_path": true, "note": "features, training, calibration and served inference share the Go " +
-			"float32 trunk path; with a float32 cache the served logits equal the trained ones bit for bit on the feature kernel"},
+		Drift:      drift,
 		LockedTest: p.LockedTestEvaluated, Config: res.Config, History: res.History, BestEpoch: res.BestEpoch, ActHead: res.Act,
 		Timing: map[string]any{
 			"trunk_cache_seconds": th.Seconds, "trunk_sequences_computed": th.Examples, "trunk_sequences_per_second": th.ExamplesPerSecond,
 			"trunk_tokens_per_cpu_second": th.TokensPerCPUSecond, "head_epochs": len(res.History), "head_seconds": headSecs,
-			"train_and_calibrate_seconds": res.Seconds, "device": "cpu (" + runtime.GOARCH + ")",
+			"train_and_calibrate_seconds": res.Seconds, "device": device,
+			"scorer_backend": scorerBackend, "scorer_device": scorerDevice, "encoder_act_calibration_device": "cpu (" + runtime.GOARCH + ")",
 		},
 		FeatureCache: CacheSummary{Key: cache.Info.Key, Contract: CacheContract, SequenceDigest: cache.Info.SequenceDigest,
 			DType: cache.Info.DType, Examples: cache.Info.Examples, Sequences: cache.Info.Sequences, Skipped: len(cache.Info.Skipped),

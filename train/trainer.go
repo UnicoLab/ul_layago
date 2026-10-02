@@ -324,6 +324,10 @@ func Train(ctx context.Context, p *Prepared, recs map[string]*Record, d int, cfg
 	if err := cfg.validate(); err != nil {
 		return nil, err
 	}
+	cfg.BackendInfo = nil // Provenance is produced by the fitter, never accepted from input config.
+	if cfg.FitScorer != nil && (cfg.Backend == "" || cfg.Backend == "go") {
+		cfg.Backend = "external"
+	}
 	logf := cfg.Log
 	if logf == nil {
 		logf = func(string, ...any) {}

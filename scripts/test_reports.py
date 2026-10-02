@@ -33,3 +33,11 @@ class ReportTests(unittest.TestCase):
             with patch('evaluate_requests.subprocess.run', return_value=SimpleNamespace(stdout=output)):
                 with self.assertRaises(ValueError):
                     evaluate('binary', [], cases)
+
+    def test_gpu_device_visible_and_backend_identity_escaped(self):
+        manifest = json.loads((Path(__file__).resolve().parents[1]/'testdata/artifact/tiny-q/float32/manifest.json').read_text())
+        manifest['training']['config']={'scorer_backend':'mlx','backend_info':{'device':'Device(gpu, 0)<script>'}}
+        result=render(manifest)
+        self.assertIn('MLX GPU',result)
+        self.assertIn('Device(gpu, 0)&lt;script&gt;',result)
+        self.assertNotIn('<script>',result)

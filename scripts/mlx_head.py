@@ -85,7 +85,7 @@ def fit(directory):
     best_file = None
     # Memory budgets may change on resume; fitting data, optimizer config and
     # implementation must not. The encoder/base identity is in the cached tensors.
-    binding = hashlib.sha256(json.dumps(dict(config=cfg,permutations=request['permutations']),sort_keys=True).encode()
+    binding = hashlib.sha256(json.dumps(dict(config=cfg,permutations=request['permutations'],mlx_version=mx.__version__,python_version=list(sys.version_info[:2])),sort_keys=True).encode()
                              + (directory/'input.safetensors').read_bytes()
                              + Path(__file__).read_bytes()).hexdigest()
     resume_epoch = 0

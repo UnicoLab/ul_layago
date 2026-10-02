@@ -156,6 +156,7 @@ func TestMLXFitCalibrateExportAndResume(t *testing.T) {
 	}
 	cfg := loopConfig(1)
 	cfg.Epochs = 2
+	cfg.ScheduleEpochs = 1
 	cfg.ActEpochs = 2
 	cfg.Int8 = false
 	cfg.Backend = "mlx"
@@ -172,6 +173,12 @@ func TestMLXFitCalibrateExportAndResume(t *testing.T) {
 	artifact, err := LoadArtifact(dirs[0])
 	if err != nil {
 		t.Fatal(err)
+	}
+	if artifact.Manifest.Training.Drift["same_path"] != false {
+		t.Fatal("GPU artifact falsely claims bit-identical training path")
+	}
+	if artifact.Manifest.Training.Timing["scorer_device"] != "Device(gpu, 0)" {
+		t.Fatal("GPU artifact does not record the GPU device")
 	}
 	scored, err := artifact.ScoreCached(l.p, l.recs, 1)
 	if err != nil {

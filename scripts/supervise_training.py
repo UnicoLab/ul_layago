@@ -84,7 +84,7 @@ def stop_group(proc, grace):
 
 def make_report(run, state, samples):
     esc = lambda value: html.escape(str(value))
-    peak = max((s.get('rss_bytes', 0) for s in samples), default=0) / 2**20
+    peak = state.get('peak_rss_bytes',0) / 2**20
     points = ' '.join(f'{30 + i * 740/max(1,len(samples)-1):.1f},{210-170*s.get("rss_bytes",0)/max(1,peak*2**20):.1f}'
                       for i, s in enumerate(samples))
     rows = ''.join(f'<tr><td>{esc(k.replace("_"," "))}</td><td>{esc(v)}</td></tr>'

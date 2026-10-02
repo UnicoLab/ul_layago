@@ -100,7 +100,7 @@ cap or an assurance that the supervisor itself can survive system-wide OOM.
 
 After an interruption, use a **new** run/output directory with the same cache and
 `--mlx-work-dir`. MLX restores completed-epoch parameters, AdamW moments, step,
-shuffle schedule, history and best scorer. Data/config/implementation and tensor
+shuffle schedule, history and best scorer. Data/config/implementation, MLX/Python versions and tensor
 hashes must match; memory budgets may change. Atomic checkpoint state pins immutable
 weights, so a death between tensor writes and state commit resumes the previous
 complete epoch. A file lock prevents concurrent writers and releases on exit.
