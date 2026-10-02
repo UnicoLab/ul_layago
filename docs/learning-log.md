@@ -335,6 +335,40 @@ selection; this tuned short fixture is not a production recall estimate. No Laya
 training or weight improvement occurred in this audit, and the optional verifier
 remains advisory in light of the cost-field failures in L18.
 
+### L20 — Association judgments and malformed evidence need separate failure paths
+
+**Observed:** DelayLama's [field coverage follow-up](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-02-field-coverage.md)
+rechecked each material field separately on invented source documents. Initial
+responses lost a valid field contradiction in the overall summary and invented
+an extension quote. Field candidates now preserve original asserted values and
+independent source quotes; omitted/duplicate checks and nonmatching spans cannot
+establish support. Display titles and assessment scope labels are excluded from
+source-assertion coverage. A model can organize a finding without those labels
+being literal source text.
+
+One bounded corrective pass addresses malformed evidence, retains the earlier
+checked and raw unverified response, and stops after another invalid response or
+provider failure. Genuine semantic insufficiency does not trigger repeated
+persuasion. Four final focused association tests and three cost regressions passed;
+the wrong notice-date case needed the corrective pass. This is application behavior
+on these inputs, not independent production accuracy or a Laya training gain.
+
+**Implication:** distinguish model meaning errors, invalid span generation,
+missing fields, application aggregation errors and display metadata in evaluation
+and failure logs. Preserve each original claim/value, its candidate source spans,
+all attempts, and whether correction changed a verdict. Score first-pass quality
+and final quality separately with extra-call latency; avoid treating repeated
+attempts as independent examples. Explicit source association is needed for
+notice vs extension and incurred-cost vs entitlement distinctions.
+
+Composite fields such as timely-notice compliance still need separately judged
+rule, event, date, form and role premises. A matching field quotation is not a
+certificate for every sub-assertion. The optional Laya head still disagreed on
+supported and missing-evidence cases in this follow-up; it remains advisory.
+Keep rejected raw model proposals out of training gold unless adjudicated, and
+retain malformed evidence as a distinct negative/failure label rather than
+turning it into a semantic contradiction automatically.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
