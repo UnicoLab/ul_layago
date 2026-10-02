@@ -26,3 +26,22 @@ The external supervisor monitors progress, process-group RSS, host memory pressu
 3. A lightweight contrastive clause shortlist using reusable candidate embeddings, plus a lexical baseline and an independent cross-reference reader. Its selection order must not become a hidden gold-label shortcut, and cached/live embedding parity is a release gate.
 
 Do not stack these paths without measured complementary errors. Current DelayLama evidence review remains experimental; acceleration is not a legal-quality improvement or an automatic-acceptance policy.
+
+## Current engineering receipt
+
+[The 2026-10-02 acceleration receipt](validation/acceleration-20261002.json) pins
+code revision, clean build, base/dataset/weights hashes, fitting config, all epoch
+metrics, supervision outcomes and the contract challenge.
+
+On one final sequential warm-cache comparison of the existing 600-example pilot,
+the scorer epoch loops took **2.48 s in Go vs 0.31 s in MLX**; supervised total run
+time was **4.91 s vs 3.54 s**. These are one-machine observations, not a general
+8x training claim: GPU transfer/checkpoint/setup overhead counts outside the epoch
+timer, and an earlier first GPU run took 10.23 s vs Go's 5.03 s. MLX accelerates the
+head, not the frozen encoder's initial cache pass or serving.
+
+The exported GPU head retained **64/72 held-out-domain**, **60/72 held-out-language**
+and **9/12 French challenge** results, with no false-support predictions on that
+small challenge. Full-run resume reproduced its exported weights hash. Go serving
+still requires review; no fresh locked test was consumed for acceleration tuning,
+and no extraction quality gain is asserted.
