@@ -2,6 +2,11 @@
 
 Read before building data or running training. The initial contract pilot lives in DelayLama's `delaylama/scripts/generate_laya_contract_data.py`; the generic warehouse fixture is only a pipeline smoke test.
 
+See the [shared learning log](learning-log.md) for the measured motivation and
+failure cases behind this recipe. Record new comparisons using the
+[experiment template](experiments/TEMPLATE.md), then add receipts and findings to
+the [documentation index](README.md).
+
 ## What the manuals establish
 
 Reviewed on 2026-10-02:

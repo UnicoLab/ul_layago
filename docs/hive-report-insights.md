@@ -2,10 +2,15 @@
 
 Source: the user's `hive-models/reports/laya/laya-report.html`, titled **Laya Training Report, W10 round 3, 2026-10-02**. This is synthetic Hive evidence, not a contract-extraction benchmark. Earlier summary/recommendation paragraphs still describe pending or killed runs that later sections resolve; the round-3 tables and §§7.7–7.8 are the relevant final decoder results. Instructions about founder approvals, queues or other resident services belong to that report's original context, not this package's operating instructions.
 
+This is the report-specific assessment. The [shared learning log](learning-log.md)
+combines it with the contract pilot, implementation checks and operational
+lessons; [the index](README.md) links receipts and the reusable experiment format.
+
 ## What changes our priorities
 
 - **Do not equate architecture with quality.** The frozen marker head lost to the lexical floor on Hive's locked tasks. The trained small-decoder J1 arm reached roughly 92.7% EN / 91.0% FR, while its larger zero-shot J0 competitor failed the overall gate. This makes a trained small reader worth a future *contract-specific* comparison; those accuracies cannot transfer to DelayLama.
 - **Contrastive retrieval is a candidate generator, not proof.** The small embeddinggemma contrastive arm had attractive retrieval latency, but still missed the locked accuracy gate and showed offline/live decision flips. Keep exact source-span checks and an independently qualified semantic judgment behind any future ranker.
+- **GLiNER smoke tests are not extraction qualification.** Section 12 tests loading and latency on one EN and one FR example. Decide variants had different span behavior, including no entities for some variants at the default threshold. This does not evaluate GLiNER2.5-Extract on contracts; measure exact spans and role/value association before integration.
 - **More template data is not necessarily the remedy.** Saturating learning curves, shared templates, name/label shifts and confident cross-reference errors call for better splits, hard negatives, paraphrases and human-adjudicated contracts. Our own head confused missing information with contradiction and rejected valid price/notice wording. Mine new training examples from adjudicated corrections; do not mine the frozen challenge or locked test.
 - **Calibration cannot repair a class-collapse or missing context.** Temperature alone cannot fix a label prior or distinguish contract completion from actual reception. Evaluate confusion matrices and false-support rates per language/task; any additive class-bias fit needs fresh independent certification and comparison before serving.
 - **Ordering/retention are experiments, not invisible preprocessing.** The report's shortlist changed order, option count and length together. Keep input layout identical between cached training and live inference; fail on clipping by default. Isolate reorder-only and quote-window experiments and test compound claims/amendments.

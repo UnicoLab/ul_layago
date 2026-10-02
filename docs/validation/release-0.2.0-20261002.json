@@ -1,0 +1,345 @@
+{
+  "contract": "ul.layago-release-evaluation/v1",
+  "date": "2026-10-02",
+  "release": "v0.2.0",
+  "purpose": "Historical final-code export validation on the existing synthetic contract pilot; not a new model selection or legal-quality certificate",
+  "source_files": [
+    {
+      "kind": "manifest",
+      "sha256": "da55a3941db292a401f2d50ed599603e5abc99db4ebb62915b226bf07b4ae725"
+    },
+    {
+      "kind": "challenge",
+      "sha256": "dd2b1f8184ae1954563c2e61c13f2d466c5233468ae6854515e9b297e06e0a50"
+    },
+    {
+      "kind": "supervisor_status",
+      "sha256": "b7a6ceaf69186512d8a8c7ae3500a3533005cb40dd5d2c46042ffe696d15d1a7"
+    }
+  ],
+  "code_version": {
+    "trainer": "laya-go-train/2",
+    "git_commit": "5a3a48f80c34339cdb0d57c3a5cef14d4f77875c",
+    "git_dirty": false,
+    "go_version": "go1.27.0"
+  },
+  "base": {
+    "model_id": "convaiinnovations/laya (multilingual subfolder)",
+    "config_file": "encoder/config.json",
+    "config_sha256": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4",
+    "weights_file": "model.safetensors",
+    "weights_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+    "tensor_prefix": "encoder.",
+    "layers_total": 22,
+    "layers_used": 22,
+    "layer_types": [
+      "full_attention",
+      "sliding_attention",
+      "sliding_attention",
+      "full_attention",
+      "sliding_attention",
+      "sliding_attention",
+      "full_attention",
+      "sliding_attention",
+      "sliding_attention",
+      "full_attention",
+      "sliding_attention",
+      "sliding_attention",
+      "full_attention",
+      "sliding_attention",
+      "sliding_attention",
+      "full_attention",
+      "sliding_attention",
+      "sliding_attention",
+      "full_attention",
+      "sliding_attention",
+      "sliding_attention",
+      "full_attention"
+    ],
+    "hidden_size": 768,
+    "conversion": null
+  },
+  "weights": {
+    "file": "model.safetensors",
+    "sha256": "aabcdf9e1ea2739dfe09e390a967bdbd492023d385f54c5e8a836e7bb1f5e44c",
+    "format": "float32",
+    "tensors": {
+      "act_head.0.bias": {
+        "dtype": "float32",
+        "shape": [
+          256
+        ]
+      },
+      "act_head.0.weight": {
+        "dtype": "float32",
+        "shape": [
+          256,
+          772
+        ]
+      },
+      "act_head.2.bias": {
+        "dtype": "float32",
+        "shape": [
+          2
+        ]
+      },
+      "act_head.2.weight": {
+        "dtype": "float32",
+        "shape": [
+          2,
+          256
+        ]
+      },
+      "scorer.0.bias": {
+        "dtype": "float32",
+        "shape": [
+          768
+        ]
+      },
+      "scorer.0.weight": {
+        "dtype": "float32",
+        "shape": [
+          768
+        ]
+      },
+      "scorer.1.bias": {
+        "dtype": "float32",
+        "shape": [
+          768
+        ]
+      },
+      "scorer.1.weight": {
+        "dtype": "float32",
+        "shape": [
+          768,
+          768
+        ]
+      },
+      "scorer.3.bias": {
+        "dtype": "float32",
+        "shape": [
+          1
+        ]
+      },
+      "scorer.3.weight": {
+        "dtype": "float32",
+        "shape": [
+          1,
+          768
+        ]
+      },
+      "type_emb.weight": {
+        "dtype": "float32",
+        "shape": [
+          3,
+          768
+        ]
+      }
+    }
+  },
+  "dataset_digest": "96d79bb19b6c5856dc45f6e9d53331e635a7a16957857ca90eaeb05bf1f622ee",
+  "config": {
+    "scorer_backend": "mlx",
+    "backend_info": {
+      "act_calibration_backend": "go",
+      "backend": "mlx",
+      "checkpoint_binding": "c4f6db7e4be1a145067b6fd3f35b6362e7dea06c4ead07fe6e326b534c88e71e",
+      "device": "Device(gpu, 0)",
+      "encoder_backend": "go_frozen_cache",
+      "go_export_dev_cal_accuracy": 0.96875,
+      "go_export_dev_cal_nll": 0.18843860285093159,
+      "limitation": "Go uses float64 accumulators/master moments; trajectory is not bit-identical",
+      "memory_limit": 1073741824,
+      "mlx_version": "0.31.2",
+      "optimizer": "AdamW float32 GPU moments",
+      "peak_mlx_bytes": 39978168,
+      "precision": "float32",
+      "resumed_from_epoch": 0,
+      "scorer_seconds": 0.6040511669998523
+    },
+    "seed": 7,
+    "max_epochs": 12,
+    "patience": 4,
+    "batch_size": 32,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.01,
+    "warmup_fraction": 0.06,
+    "score_regression_weight": 0.5,
+    "act_epochs": 8,
+    "act_learning_rate": 0.001,
+    "min_cell": 20,
+    "alpha": 0.05,
+    "delta": 0.1,
+    "n_min": 20,
+    "export_int8": false,
+    "yes_no_class_balanced": false,
+    "ltt_start_errors": 0
+  },
+  "dev_halves": {
+    "dev_cal": {
+      "stories": 32,
+      "examples": 96,
+      "scorable": 96,
+      "by_task": {
+        "r_contract_support": 96
+      }
+    },
+    "dev_conf": {
+      "stories": 32,
+      "examples": 96,
+      "scorable": 96,
+      "by_task": {
+        "r_contract_support": 96
+      }
+    },
+    "stories": 64,
+    "certification_start": 176,
+    "shortfalls": [
+      "r_contract_support: 96 dev_conf examples, under the 176 a threshold needs (n_min 20, alpha 0.05, delta 0.1); it cannot be certified and always escalates"
+    ],
+    "errors": []
+  },
+  "training_timing": {
+    "device": "hybrid: scorer Device(gpu, 0); encoder/act/calibration cpu (arm64)",
+    "encoder_act_calibration_device": "cpu (arm64)",
+    "head_epochs": 12,
+    "head_seconds": 0.3136250840325374,
+    "scorer_backend": "mlx",
+    "scorer_device": "Device(gpu, 0)",
+    "train_and_calibrate_seconds": 1.949369625,
+    "trunk_cache_seconds": 82.709536,
+    "trunk_sequences_computed": 228,
+    "trunk_sequences_per_second": 2.756634978583364,
+    "trunk_tokens_per_cpu_second": 113.82132993137246
+  },
+  "arithmetic_provenance": {
+    "note": "encoder features are cached in Go; scorer fitting uses mlx arithmetic. Final calibration/evaluation/serving use the same Go forward path; the MLX fitter additionally verifies exported development NLL in Go. Training is not bit-identical across backends.",
+    "same_path": false
+  },
+  "evaluation": {
+    "dev_cal": {
+      "n": 96,
+      "unscorable_rate": 0,
+      "coverage": 0,
+      "abstention_rate": 1,
+      "selective_accuracy": null,
+      "accuracy": 0.96875,
+      "macro_f1": 0.970098911727176,
+      "ece": 0.028521199013589568,
+      "nll": 0.14628846811837326,
+      "brier": 0.06715941205067029
+    },
+    "dev_conf": {
+      "n": 96,
+      "unscorable_rate": 0,
+      "coverage": 0,
+      "abstention_rate": 1,
+      "selective_accuracy": null,
+      "accuracy": 0.9791666666666666,
+      "macro_f1": 0.9794462629569013,
+      "ece": 0.021546938911117173,
+      "nll": 0.04268426025831526,
+      "brier": 0.024397719320546213
+    },
+    "heldout_domain": {
+      "n": 72,
+      "unscorable_rate": 0,
+      "coverage": 0,
+      "abstention_rate": 1,
+      "selective_accuracy": null,
+      "accuracy": 0.8888888888888888,
+      "macro_f1": 0.8916303821964199,
+      "ece": 0.0652240176782171,
+      "nll": 0.34677945119665105,
+      "brier": 0.15571896661065757
+    },
+    "heldout_language": {
+      "n": 72,
+      "unscorable_rate": 0,
+      "coverage": 0,
+      "abstention_rate": 1,
+      "selective_accuracy": null,
+      "accuracy": 0.8333333333333334,
+      "macro_f1": 0.7777777777777778,
+      "ece": 0.12476496426259374,
+      "nll": 0.544866991517249,
+      "brier": 0.2515402605321038
+    },
+    "train": {
+      "n": 192,
+      "unscorable_rate": 0,
+      "coverage": 0,
+      "abstention_rate": 1,
+      "selective_accuracy": null,
+      "accuracy": 0.9635416666666666,
+      "macro_f1": 0.967237092291941,
+      "ece": 0.025087930536660964,
+      "nll": 0.09168431219791212,
+      "brier": 0.054489584356359
+    }
+  },
+  "challenge": {
+    "correct": 9,
+    "total": 12,
+    "false_supports": 0,
+    "median_ms": 86.13,
+    "purpose": "Exploratory French contract evidence judgment probe, not a production benchmark",
+    "notes": [
+      "12 manually specified synthetic contrasts (4 per class); too small to establish reliability.",
+      "Timings include each inference; no production load, p95 or speedup claim.",
+      "Hive query-routing heads have different tasks and are not tested by this probe.",
+      "Labels and states are synthetic; no private contracts or external API were used."
+    ],
+    "errors": [
+      {
+        "id": "price-good",
+        "expected": "supports",
+        "predicted": "insufficient"
+      },
+      {
+        "id": "date-unknown",
+        "expected": "insufficient",
+        "predicted": "contradicts"
+      },
+      {
+        "id": "notice-good",
+        "expected": "supports",
+        "predicted": "insufficient"
+      }
+    ]
+  },
+  "supervision": {
+    "outcome": "success",
+    "elapsed_seconds": 10.142394042020896,
+    "peak_rss_bytes": 2586755072,
+    "rss_limit_bytes": 6442450944,
+    "min_host_free_percent": 5,
+    "stall_seconds": 180.0,
+    "max_seconds": 1200.0,
+    "returncode": 0,
+    "child_signal": null,
+    "stage": "complete",
+    "step": 1,
+    "progress_sequence": 130,
+    "discarded_log_bytes": {
+      "stdout": 0,
+      "stderr": 0
+    }
+  },
+  "release_verification": {
+    "ci_run": "https://github.com/UnicoLab/ul_layago/actions/runs/36974535610",
+    "checks": "success",
+    "full_linux_race": "success",
+    "external_private_go_consumer": "v0.2.0 imported successfully"
+  },
+  "limitations": [
+    "Existing small templated synthetic pilot and known 12-case challenge; no independently adjudicated real-contract gain demonstrated.",
+    "No additional locked-test access for this release export or acceleration tuning.",
+    "This is a separate shared-machine run, not the CPU/GPU paired timing comparison.",
+    "Historical cache timing describes its previous cache construction, not the duration of this warm-cache run.",
+    "GPU scorer training does not accelerate frozen Go encoder caching or served inference; timings do not establish a serving speedup.",
+    "GPU float32 training is not bit-identical across backends; act/calibration and final serving remain Go.",
+    "The small dev_conf cannot certify automatic act coverage; all nominations require review.",
+    "RSS is sampled; the sentinel is not an OS memory limit or a guarantee against system-wide OOM."
+  ]
+}

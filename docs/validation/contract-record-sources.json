@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-02",
+  "records": [
+    {
+      "copy": "contract-pilot-20261002.json",
+      "source_repository": "https://github.com/UnicoLab/delaylama",
+      "source_revision": "72f9a29e656906c32c75bfc4257c698c3ea6ed5b",
+      "source_path": "docs/model-evaluation/contract-head-receipt.json",
+      "source_sha256": "bdecce2d7d55b195d24902c7fbd87de10a685684e8361d458064238a2f30c6cd",
+      "copy_policy": "Preserved byte-for-byte historical synthetic evaluation; not a new run"
+    },
+    {
+      "copy": "laya-pretrained-probe-20261001.json",
+      "source_repository": "https://github.com/UnicoLab/delaylama",
+      "source_revision": "72f9a29e656906c32c75bfc4257c698c3ea6ed5b",
+      "source_path": "docs/model-evaluation/laya-contract-probe.json",
+      "source_sha256": "46ac53c6647068c78bce5603136fedfe054982859938962b3b1135fd234b1035",
+      "copy_policy": "Preserved byte-for-byte historical synthetic evaluation; not a new run"
+    }
+  ]
+}

@@ -1,5 +1,11 @@
 # layago: M0-LAYA spike, M1 GEMM kernels and Go-side training
 
+> Historical source notes retained from the supplied Hive engine. Paths,
+> integration rules, commands and pending work describe that original snapshot;
+> they are not the current standalone package instructions. Start with the
+> [documentation index](README.md), [current usage](../README.md),
+> [training guide](training.md) and [cross-project learning log](learning-log.md).
+
 `internal/layago` is a cgo-free (`CGO_ENABLED=0`) Go replication, with Go
 assembly only in the GEMM microkernels, of the
 [Laya](https://github.com/NandhaKishorM/laya) typed-decision architecture

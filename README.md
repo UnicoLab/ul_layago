@@ -1,8 +1,16 @@
 # UL LayaGo
 
-A reusable, pure-Go Laya runtime and frozen-encoder head trainer extracted from UnicoLab's Hive engine. Module: `github.com/UnicoLab/ul_layago`. Go **1.27**, standard library only, cgo-free inference/training. Native ARM64 NEON and AMD64 AVX2 kernels have a portable `purego` fallback.
+A reusable, pure-Go Laya runtime and frozen-encoder head trainer extracted from UnicoLab's Hive engine. Module: `github.com/UnicoLab/ul_layago`. Go components require **1.27**, use only the standard library, and provide cgo-free inference and CPU training. The optional MLX scorer trainer uses Python on Apple GPUs. Native ARM64 NEON and AMD64 AVX2 kernels have a portable `purego` fallback.
 
 This is a private **0.x engineering package**. Real model weights and training caches stay outside Git. The included tiny checkpoints are synthetic numerical/parity fixtures, not useful domain models.
+
+## Shared documentation and findings
+
+Start with the [documentation index](docs/README.md). The [learning log](docs/learning-log.md)
+collects measured results, unsuccessful approaches, integration lessons and open
+questions from Hive and DelayLama. Its evidence links distinguish implementation
+checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
+to record new investigations and add their findings to the log.
 
 ## Build and use
 

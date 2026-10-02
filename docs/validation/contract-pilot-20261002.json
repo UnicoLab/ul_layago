@@ -1,0 +1,925 @@
+{
+  "purpose": "Synthetic contract evidence pilot; shadow/review only; not a legal-quality certificate",
+  "package": "github.com/UnicoLab/ul_layago",
+  "code_version": {
+    "trainer": "laya-go-train/2",
+    "git_commit": "cdcdac28e3ab167b22545ee51a21ed6977fc1cc6",
+    "git_dirty": false,
+    "go_version": "go1.27.0"
+  },
+  "generator_version": "delaylama-contract/2",
+  "generator_sha256": "e2fa265ccc7d947d45197b12b79578a653dfd4c85da5479fa356aea65d1587ff",
+  "model_manifest_sha256": "559cbfbd1346c1375dce70c3cd281b1170fc1d3b5d0eae5adcbc150f390049c1",
+  "head_weights_sha256": "a7a12de569527211ef202526e142db2b1427ab3a6974be34ed69b63e25a2cd17",
+  "base": {
+    "model_id": "convaiinnovations/laya (multilingual subfolder)",
+    "config_file": "encoder/config.json",
+    "config_sha256": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4",
+    "weights_file": "model.safetensors",
+    "weights_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+    "tensor_prefix": "encoder.",
+    "layers_total": 22,
+    "layers_used": 22,
+    "layer_types": [
+      "full_attention",
+      "sliding_attention",
+      "sliding_attention",
+      "full_attention",
+      "sliding_attention",
+      "sliding_attention",
+      "full_attention",
+      "sliding_attention",
+      "sliding_attention",
+      "full_attention",
+      "sliding_attention",
+      "sliding_attention",
+      "full_attention",
+      "sliding_attention",
+      "sliding_attention",
+      "full_attention",
+      "sliding_attention",
+      "sliding_attention",
+      "full_attention",
+      "sliding_attention",
+      "sliding_attention",
+      "full_attention"
+    ],
+    "hidden_size": 768,
+    "conversion": null
+  },
+  "training": {
+    "dataset_contract": "hive.laya-dataset/v1",
+    "data_digest": "96d79bb19b6c5856dc45f6e9d53331e635a7a16957857ca90eaeb05bf1f622ee",
+    "files": [
+      {
+        "name": "dataset.jsonl",
+        "sha256": "1a31862623b30ee267b564391573848f94fd223462eabf6ab55f110800bda55b",
+        "examples": 600
+      }
+    ],
+    "splits": {
+      "dev": {
+        "examples": 192,
+        "ids_sha256": "9dc330e4b928d5366010b07c525436417385c96cce72ae5b008597369bf55f03",
+        "languages": {
+          "en": 96,
+          "fr": 96
+        },
+        "domains": {
+          "construction": 192
+        },
+        "tasks": {
+          "r_contract_support": 192
+        },
+        "label_sources": {
+          "template": 192
+        }
+      },
+      "heldout_domain": {
+        "examples": 72,
+        "ids_sha256": "81fae7cd2d256e7e99dd767827f5afcddf8e9332eed9c3b7582b79738a847542",
+        "languages": {
+          "en": 36,
+          "fr": 36
+        },
+        "domains": {
+          "procurement": 72
+        },
+        "tasks": {
+          "r_contract_support": 72
+        },
+        "label_sources": {
+          "template": 72
+        }
+      },
+      "heldout_language": {
+        "examples": 72,
+        "ids_sha256": "54c75e7a3a8e963ad5eca359530828925df08975b4cea50ec40797d79cedb3a3",
+        "languages": {
+          "es": 72
+        },
+        "domains": {
+          "construction": 72
+        },
+        "tasks": {
+          "r_contract_support": 72
+        },
+        "label_sources": {
+          "template": 72
+        }
+      },
+      "locked_test": {
+        "examples": 72,
+        "files": [
+          {
+            "name": "dataset.jsonl",
+            "sha256": "1a31862623b30ee267b564391573848f94fd223462eabf6ab55f110800bda55b"
+          }
+        ],
+        "sealed": true
+      },
+      "train": {
+        "examples": 192,
+        "ids_sha256": "76f154439d1ac9ac128f539ff0657305ae9d2f78ca9fe4a565670219acfce77f",
+        "languages": {
+          "en": 96,
+          "fr": 96
+        },
+        "domains": {
+          "construction": 192
+        },
+        "tasks": {
+          "r_contract_support": 192
+        },
+        "label_sources": {
+          "template": 192
+        }
+      }
+    },
+    "dev_halves": {
+      "dev_cal": {
+        "stories": 32,
+        "examples": 96,
+        "scorable": 96,
+        "by_task": {
+          "r_contract_support": 96
+        }
+      },
+      "dev_conf": {
+        "stories": 32,
+        "examples": 96,
+        "scorable": 96,
+        "by_task": {
+          "r_contract_support": 96
+        }
+      },
+      "stories": 64,
+      "certification_start": 176,
+      "shortfalls": [
+        "r_contract_support: 96 dev_conf examples, under the 176 a threshold needs (n_min 20, alpha 0.05, delta 0.1); it cannot be certified and always escalates"
+      ],
+      "errors": []
+    },
+    "soft_labelled_examples": 0,
+    "unscorable": {},
+    "generator_versions": [
+      "delaylama-contract/2"
+    ],
+    "llm_provenance": {
+      "examples": 0,
+      "interaction_ids": 0,
+      "interaction_ids_sha256": null
+    },
+    "rendered_duplicates_train_vs_eval": {},
+    "split_invariants": {
+      "checked": [
+        "one split per story",
+        "heldout_domain domains not in train/dev",
+        "heldout_language languages not in train/dev"
+      ],
+      "overridden": false,
+      "violations": []
+    },
+    "calibration_drift_dev_conf": {
+      "note": "features, training, calibration and served inference share the Go float32 trunk path; with a float32 cache the served logits equal the trained ones bit for bit on the feature kernel",
+      "same_path": true
+    },
+    "locked_test_evaluated": false,
+    "config": {
+      "seed": 7,
+      "max_epochs": 12,
+      "patience": 4,
+      "batch_size": 32,
+      "learning_rate": 0.0005,
+      "weight_decay": 0.01,
+      "warmup_fraction": 0.06,
+      "score_regression_weight": 0.5,
+      "act_epochs": 8,
+      "act_learning_rate": 0.001,
+      "min_cell": 20,
+      "alpha": 0.05,
+      "delta": 0.1,
+      "n_min": 20,
+      "export_int8": false,
+      "yes_no_class_balanced": false,
+      "ltt_start_errors": 0
+    },
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.8815533417259264,
+        "dev_cal_nll": 0.8631223672484181,
+        "dev_cal_accuracy": 0.6979166666666666,
+        "learning_rate_at_end": 0.0004990401896663828,
+        "seconds": 0.645592625,
+        "examples_per_second": 297.4011668736147
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.5020334214689437,
+        "dev_cal_nll": 0.5278583976726112,
+        "dev_cal_accuracy": 0.7708333333333334,
+        "learning_rate_at_end": 0.00048480625161598007,
+        "seconds": 0.794193875,
+        "examples_per_second": 241.75457157737458
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.4262073625098779,
+        "dev_cal_nll": 0.3904035256926634,
+        "dev_cal_accuracy": 0.8125,
+        "learning_rate_at_end": 0.00045455387613805394,
+        "seconds": 0.705235417,
+        "examples_per_second": 272.2495146610029
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.29338547183453273,
+        "dev_cal_nll": 0.345176182851995,
+        "dev_cal_accuracy": 0.8645833333333334,
+        "learning_rate_at_end": 0.0004105927931853327,
+        "seconds": 0.713981709,
+        "examples_per_second": 268.91445198072995
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.23365411858302518,
+        "dev_cal_nll": 0.2741103081453586,
+        "dev_cal_accuracy": 0.8854166666666666,
+        "learning_rate_at_end": 0.00035627937489210947,
+        "seconds": 0.70981025,
+        "examples_per_second": 270.49482590593755
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.19836439091993874,
+        "dev_cal_nll": 0.2755394869904925,
+        "dev_cal_accuracy": 0.90625,
+        "learning_rate_at_end": 0.00029576038087924297,
+        "seconds": 0.698443083,
+        "examples_per_second": 274.89713145315807
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.18354778198921737,
+        "dev_cal_nll": 0.22403032370267686,
+        "dev_cal_accuracy": 0.9375,
+        "learning_rate_at_end": 0.00023365635849127163,
+        "seconds": 0.59511375,
+        "examples_per_second": 322.62739686320475
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.16081725186786125,
+        "dev_cal_nll": 0.20974489805220964,
+        "dev_cal_accuracy": 0.9375,
+        "learning_rate_at_end": 0.0001747088699502789,
+        "seconds": 1.570666167,
+        "examples_per_second": 122.24112547526467
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.1509553627324373,
+        "dev_cal_nll": 0.20063550769613836,
+        "dev_cal_accuracy": 0.9583333333333334,
+        "learning_rate_at_end": 0.00012341848017952462,
+        "seconds": 0.794380792,
+        "examples_per_second": 241.69768697025594
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.14040112564957963,
+        "dev_cal_nll": 0.19550960717745394,
+        "dev_cal_accuracy": 0.9583333333333334,
+        "learning_rate_at_end": 8.370114446083686e-05,
+        "seconds": 0.863321875,
+        "examples_per_second": 222.39677408845918
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.13525289224864373,
+        "dev_cal_nll": 0.1913304283481123,
+        "dev_cal_accuracy": 0.96875,
+        "learning_rate_at_end": 5.858923028611572e-05,
+        "seconds": 0.757844458,
+        "examples_per_second": 253.3501406168494
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.13188880795108202,
+        "dev_cal_nll": 0.1884385568037171,
+        "dev_cal_accuracy": 0.96875,
+        "learning_rate_at_end": 5e-05,
+        "seconds": 0.75005975,
+        "examples_per_second": 255.979606957979
+      }
+    ],
+    "best_epoch": 12,
+    "act_head": {
+      "trained": true,
+      "n": 96,
+      "positives": 93,
+      "final_loss": 0.7116247040086269,
+      "epochs": 8,
+      "objective": "class-balanced cross-entropy: act when the scorer's argmax is the label"
+    },
+    "timing": {
+      "device": "cpu (arm64)",
+      "head_epochs": 12,
+      "head_seconds": 9.598643751,
+      "train_and_calibrate_seconds": 10.732946916,
+      "trunk_cache_seconds": 82.709536,
+      "trunk_sequences_computed": 228,
+      "trunk_sequences_per_second": 2.756634978583364,
+      "trunk_tokens_per_cpu_second": 113.82132993137246
+    },
+    "feature_cache": {
+      "cache_id": "d684cf93cf469a1018523abb",
+      "contract": "hive.laya-feature-cache/v3",
+      "sequence_digest": "825db43d345758a56e0adac12b4e474caad2df184a500c3a1a4577a48243859f",
+      "dtype": "f32",
+      "examples": 528,
+      "distinct_sequences": 528,
+      "skipped": 0,
+      "sequence_tokens_p50": 125,
+      "sequence_tokens_p95": 133,
+      "sequence_tokens_mean": 125.21,
+      "sequence_tokens_max": 136,
+      "last_build_throughput": {
+        "examples_encoded": 228,
+        "tokens_encoded": 28661,
+        "wall_seconds": 82.709536,
+        "examples_per_second": 2.756634978583364,
+        "tokens_per_second": 346.52594351393776,
+        "workers": 1,
+        "intra_op_workers": 4,
+        "sequences_per_forward": 2,
+        "resumed_shards": 3,
+        "reused_sequences": 300,
+        "kernel": "arm64/arm64_neon",
+        "gomaxprocs": 16,
+        "process_cpu_seconds": 251.806933,
+        "tokens_per_cpu_second": 113.82132993137246,
+        "load_average_at_start": "13.71 13.46 12.65",
+        "load_average_at_end": "16.97 14.39 13.07"
+      }
+    },
+    "loss": "choice and score: softmax cross-entropy against the label or its label_dist (listwise softmax ranking loss over graded items); score adds 0.50 x normalised expected-level squared error; yes_no: logistic loss on the margin; act head: class-balanced cross-entropy"
+  },
+  "calibration": {
+    "method": "temperature_per_task_option_bucket",
+    "fit_split": "dev_cal",
+    "fitted_on": "the float32 head",
+    "states": "float32 trunk states of the Go encoder (internal/layago/model), the numbers laya.LoadArtifact serves",
+    "clamp": [
+      0.5,
+      5
+    ],
+    "min_cell": 20,
+    "lookup_order": [
+      "<task>:<bucket>",
+      "<task>",
+      "*",
+      "1.0"
+    ],
+    "buckets": [
+      "2",
+      "3-5",
+      "6-10",
+      "11+"
+    ],
+    "temperatures": {
+      "*": {
+        "t": 0.522198,
+        "n": 96,
+        "nll_t1": 0.1884385556180306,
+        "nll": 0.14628841115384514
+      },
+      "r_contract_support": {
+        "t": 0.522198,
+        "n": 96,
+        "nll_t1": 0.1884385556180306,
+        "nll": 0.14628841115384514
+      },
+      "r_contract_support:3-5": {
+        "t": 0.522198,
+        "n": 96,
+        "nll_t1": 0.1884385556180306,
+        "nll": 0.14628841115384514
+      }
+    }
+  },
+  "act": {
+    "method": "learn_then_test_fixed_sequence_binomial",
+    "fit_split": "dev_conf",
+    "fitted_on": "the float32 head",
+    "states": "float32 trunk states of the Go encoder (internal/layago/model), the numbers laya.LoadArtifact serves",
+    "risk": "error rate among acted examples",
+    "probability_quantum": 0.0001,
+    "quantize": "floor(p * 10000 + 0.5) / 10000",
+    "alpha": 0.05,
+    "delta": 0.1,
+    "n_min": 20,
+    "thresholds": {
+      "r_contract_support": {
+        "score": "max_probability",
+        "lambda": null,
+        "certified": false,
+        "alpha": 0.05,
+        "delta": 0.05,
+        "delta_family": 0.1,
+        "n_min": 20,
+        "n_start": 176,
+        "n": 96,
+        "tested": 0,
+        "acted": 0,
+        "errors": 0,
+        "coverage": 0,
+        "auroc": {
+          "act_probability": 0.9893617021276596,
+          "max_probability": 0.9893617021276596
+        },
+        "selection_rule": "act_probability if its dev_conf AUROC for correctness is >= 0.80 and above max_probability's, else max_probability; delta split between both score families (Bonferroni)"
+      }
+    },
+    "uncertified": "escalate",
+    "start_rule": "max(n_min, ceil(3 ln(delta/2) / ln(1 - alpha))) = 176 acted items"
+  },
+  "exported_metrics_including_locked_test": {
+    "dev_cal": {
+      "all": {
+        "n": 96,
+        "unscorable_rate": 0,
+        "coverage": 0,
+        "abstention_rate": 1,
+        "selective_accuracy": null,
+        "accuracy": 0.96875,
+        "macro_f1": 0.970098911727176,
+        "ece": 0.028521176530975918,
+        "nll": 0.14628841115384525,
+        "brier": 0.06715938145572588
+      },
+      "by_lang": {
+        "en": {
+          "n": 54,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9629629629629629,
+          "macro_f1": 0.9658994032395567,
+          "ece": 0.042358958420261716,
+          "nll": 0.10395112404732904,
+          "brier": 0.06345404646802584
+        },
+        "fr": {
+          "n": 42,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9761904761904762,
+          "macro_f1": 0.9746031746031746,
+          "ece": 0.041332664722663275,
+          "nll": 0.20072206600508036,
+          "brier": 0.07192338358276867
+        }
+      },
+      "by_task": {
+        "r_contract_support": {
+          "n": 96,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.96875,
+          "macro_f1": 0.970098911727176,
+          "ece": 0.028521176530975918,
+          "nll": 0.14628841115384525,
+          "brier": 0.06715938145572588
+        }
+      },
+      "by_lang_task": {
+        "en/r_contract_support": {
+          "n": 54,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9629629629629629,
+          "macro_f1": 0.9658994032395567,
+          "ece": 0.042358958420261716,
+          "nll": 0.10395112404732904,
+          "brier": 0.06345404646802584
+        },
+        "fr/r_contract_support": {
+          "n": 42,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9761904761904762,
+          "macro_f1": 0.9746031746031746,
+          "ece": 0.041332664722663275,
+          "nll": 0.20072206600508036,
+          "brier": 0.07192338358276867
+        }
+      }
+    },
+    "dev_conf": {
+      "all": {
+        "n": 96,
+        "unscorable_rate": 0,
+        "coverage": 0,
+        "abstention_rate": 1,
+        "selective_accuracy": null,
+        "accuracy": 0.9791666666666666,
+        "macro_f1": 0.9794462629569013,
+        "ece": 0.02154692018395796,
+        "nll": 0.042684199607369966,
+        "brier": 0.024397665395531423
+      },
+      "by_lang": {
+        "en": {
+          "n": 42,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 1,
+          "macro_f1": 1,
+          "ece": 0.010849843282299175,
+          "nll": 0.011311179406318428,
+          "brier": 0.0016384560640053977
+        },
+        "fr": {
+          "n": 54,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9629629629629629,
+          "macro_f1": 0.9634937968271302,
+          "ece": 0.029866868885248483,
+          "nll": 0.06708543754152119,
+          "brier": 0.04209927265338497
+        }
+      },
+      "by_task": {
+        "r_contract_support": {
+          "n": 96,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9791666666666666,
+          "macro_f1": 0.9794462629569013,
+          "ece": 0.02154692018395796,
+          "nll": 0.042684199607369966,
+          "brier": 0.024397665395531423
+        }
+      },
+      "by_lang_task": {
+        "en/r_contract_support": {
+          "n": 42,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 1,
+          "macro_f1": 1,
+          "ece": 0.010849843282299175,
+          "nll": 0.011311179406318428,
+          "brier": 0.0016384560640053977
+        },
+        "fr/r_contract_support": {
+          "n": 54,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9629629629629629,
+          "macro_f1": 0.9634937968271302,
+          "ece": 0.029866868885248483,
+          "nll": 0.06708543754152119,
+          "brier": 0.04209927265338497
+        }
+      }
+    },
+    "heldout_domain": {
+      "all": {
+        "n": 72,
+        "unscorable_rate": 0,
+        "coverage": 0,
+        "abstention_rate": 1,
+        "selective_accuracy": null,
+        "accuracy": 0.8888888888888888,
+        "macro_f1": 0.8916303821964199,
+        "ece": 0.06522400684357026,
+        "nll": 0.3467793682784859,
+        "brier": 0.15571894036755363
+      },
+      "by_lang": {
+        "en": {
+          "n": 36,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9722222222222222,
+          "macro_f1": 0.9751724137931035,
+          "ece": 0.02999991304509143,
+          "nll": 0.06939321494304224,
+          "brier": 0.03709932234160882
+        },
+        "fr": {
+          "n": 36,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.8055555555555556,
+          "macro_f1": 0.8033126293995859,
+          "ece": 0.12690551063061303,
+          "nll": 0.6241655216139297,
+          "brier": 0.2743385583934985
+        }
+      },
+      "by_task": {
+        "r_contract_support": {
+          "n": 72,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.8888888888888888,
+          "macro_f1": 0.8916303821964199,
+          "ece": 0.06522400684357026,
+          "nll": 0.3467793682784859,
+          "brier": 0.15571894036755363
+        }
+      },
+      "by_lang_task": {
+        "en/r_contract_support": {
+          "n": 36,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9722222222222222,
+          "macro_f1": 0.9751724137931035,
+          "ece": 0.02999991304509143,
+          "nll": 0.06939321494304224,
+          "brier": 0.03709932234160882
+        },
+        "fr/r_contract_support": {
+          "n": 36,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.8055555555555556,
+          "macro_f1": 0.8033126293995859,
+          "ece": 0.12690551063061303,
+          "nll": 0.6241655216139297,
+          "brier": 0.2743385583934985
+        }
+      }
+    },
+    "heldout_language": {
+      "all": {
+        "n": 72,
+        "unscorable_rate": 0,
+        "coverage": 0,
+        "abstention_rate": 1,
+        "selective_accuracy": null,
+        "accuracy": 0.8333333333333334,
+        "macro_f1": 0.7777777777777778,
+        "ece": 0.12476498576663757,
+        "nll": 0.544867012880976,
+        "brier": 0.25154031191063453
+      },
+      "by_lang": {
+        "es": {
+          "n": 72,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.8333333333333334,
+          "macro_f1": 0.7777777777777778,
+          "ece": 0.12476498576663757,
+          "nll": 0.544867012880976,
+          "brier": 0.25154031191063453
+        }
+      },
+      "by_task": {
+        "r_contract_support": {
+          "n": 72,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.8333333333333334,
+          "macro_f1": 0.7777777777777778,
+          "ece": 0.12476498576663757,
+          "nll": 0.544867012880976,
+          "brier": 0.25154031191063453
+        }
+      },
+      "by_lang_task": {
+        "es/r_contract_support": {
+          "n": 72,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.8333333333333334,
+          "macro_f1": 0.7777777777777778,
+          "ece": 0.12476498576663757,
+          "nll": 0.544867012880976,
+          "brier": 0.25154031191063453
+        }
+      }
+    },
+    "locked_test": {
+      "all": {
+        "n": 72,
+        "unscorable_rate": 0,
+        "coverage": 0,
+        "abstention_rate": 1,
+        "selective_accuracy": null,
+        "accuracy": 0.9305555555555556,
+        "macro_f1": 0.9328082110036998,
+        "ece": 0.03319331628707968,
+        "nll": 0.14087744169907365,
+        "brier": 0.09070525636468414
+      },
+      "by_lang": {
+        "en": {
+          "n": 36,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9166666666666666,
+          "macro_f1": 0.9255172413793104,
+          "ece": 0.0671589803527438,
+          "nll": 0.12939442953527902,
+          "brier": 0.08216252574661227
+        },
+        "fr": {
+          "n": 36,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9444444444444444,
+          "macro_f1": 0.942857142857143,
+          "ece": 0.04081094512099458,
+          "nll": 0.15236045386286837,
+          "brier": 0.09924798698275611
+        }
+      },
+      "by_task": {
+        "r_contract_support": {
+          "n": 72,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9305555555555556,
+          "macro_f1": 0.9328082110036998,
+          "ece": 0.03319331628707968,
+          "nll": 0.14087744169907365,
+          "brier": 0.09070525636468414
+        }
+      },
+      "by_lang_task": {
+        "en/r_contract_support": {
+          "n": 36,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9166666666666666,
+          "macro_f1": 0.9255172413793104,
+          "ece": 0.0671589803527438,
+          "nll": 0.12939442953527902,
+          "brier": 0.08216252574661227
+        },
+        "fr/r_contract_support": {
+          "n": 36,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9444444444444444,
+          "macro_f1": 0.942857142857143,
+          "ece": 0.04081094512099458,
+          "nll": 0.15236045386286837,
+          "brier": 0.09924798698275611
+        }
+      }
+    },
+    "train": {
+      "all": {
+        "n": 192,
+        "unscorable_rate": 0,
+        "coverage": 0,
+        "abstention_rate": 1,
+        "selective_accuracy": null,
+        "accuracy": 0.9635416666666666,
+        "macro_f1": 0.967237092291941,
+        "ece": 0.025087922540221824,
+        "nll": 0.0916842611130005,
+        "brier": 0.054489551290240516
+      },
+      "by_lang": {
+        "en": {
+          "n": 96,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.96875,
+          "macro_f1": 0.9715583646059649,
+          "ece": 0.02555130630303923,
+          "nll": 0.09777392997656716,
+          "brier": 0.055190791192188456
+        },
+        "fr": {
+          "n": 96,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9583333333333334,
+          "macro_f1": 0.9628482972136222,
+          "ece": 0.038544190680609304,
+          "nll": 0.08559459224943387,
+          "brier": 0.05378831138829246
+        }
+      },
+      "by_task": {
+        "r_contract_support": {
+          "n": 192,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9635416666666666,
+          "macro_f1": 0.967237092291941,
+          "ece": 0.025087922540221824,
+          "nll": 0.0916842611130005,
+          "brier": 0.054489551290240516
+        }
+      },
+      "by_lang_task": {
+        "en/r_contract_support": {
+          "n": 96,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.96875,
+          "macro_f1": 0.9715583646059649,
+          "ece": 0.02555130630303923,
+          "nll": 0.09777392997656716,
+          "brier": 0.055190791192188456
+        },
+        "fr/r_contract_support": {
+          "n": 96,
+          "unscorable_rate": 0,
+          "coverage": 0,
+          "abstention_rate": 1,
+          "selective_accuracy": null,
+          "accuracy": 0.9583333333333334,
+          "macro_f1": 0.9628482972136222,
+          "ece": 0.038544190680609304,
+          "nll": 0.08559459224943387,
+          "brier": 0.05378831138829246
+        }
+      }
+    }
+  },
+  "challenge": {
+    "correct": 9,
+    "total": 12,
+    "false_supports": 0,
+    "median_ms": 330.43
+  },
+  "full_pretrained_baseline": {
+    "correct": 9,
+    "total": 12,
+    "false_supports": 0,
+    "median_ms": 229.59
+  },
+  "limitations": [
+    "Small templated synthetic data; independently human-labelled real-contract evaluation is still required.",
+    "No automatic act coverage is certified; all nominations remain review-only.",
+    "Overall 12-case challenge quality equals baseline; no speed improvement established.",
+    "Locked-test opened after candidate selection; never included in fitting.",
+    "Complete public two-layer head remains the baseline; this trains a zero-layer scorer over its existing pretrained multilingual encoder."
+  ]
+}

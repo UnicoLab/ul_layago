@@ -1,0 +1,201 @@
+{
+  "mode": "float32",
+  "model_max_len": 1024,
+  "requires_domain_validation": true,
+  "rows": [
+    {
+      "claim": "Le prix du marché est de 200 000 EUR HT.",
+      "correct": true,
+      "elapsed_ms": 88.522,
+      "expected": "supports",
+      "id": "price-good",
+      "input_tokens": 94,
+      "predicted": "supports",
+      "probabilities": [
+        0.8895801645622459,
+        0.020531804373881735,
+        0.08988803106387244
+      ],
+      "source": "Le prix global et forfaitaire est de 200 000 EUR HT."
+    },
+    {
+      "claim": "Le prix du marché est de 250 000 EUR HT.",
+      "correct": true,
+      "elapsed_ms": 130.699,
+      "expected": "contradicts",
+      "id": "price-wrong",
+      "input_tokens": 94,
+      "predicted": "contradicts",
+      "probabilities": [
+        0.16697523562929348,
+        0.7034613704922307,
+        0.12956339387847582
+      ],
+      "source": "Le prix global et forfaitaire est de 200 000 EUR HT."
+    },
+    {
+      "claim": "Le paiement doit être viré sur un compte bancaire chez BNP Paribas.",
+      "correct": true,
+      "elapsed_ms": 157.188,
+      "expected": "insufficient",
+      "id": "bank-unknown",
+      "input_tokens": 92,
+      "predicted": "insufficient",
+      "probabilities": [
+        0.04973519565934216,
+        0.0987473308327829,
+        0.851517473507875
+      ],
+      "source": "Le prix global et forfaitaire est de 200 000 EUR HT."
+    },
+    {
+      "claim": "La date d’achèvement révisée est le 3 juillet 2026.",
+      "correct": false,
+      "elapsed_ms": 280.473,
+      "expected": "supports",
+      "id": "date-good",
+      "input_tokens": 125,
+      "predicted": "insufficient",
+      "probabilities": [
+        0.10214293311269132,
+        0.09904050677752525,
+        0.7988165601097834
+      ],
+      "source": "La date contractuelle initiale d’achèvement est le 30 juin 2026. L’avenant n°1 fixe la date d’achèvement révisée au 3 juillet 2026."
+    },
+    {
+      "claim": "La date d’achèvement révisée est le 30 juin 2026.",
+      "correct": false,
+      "elapsed_ms": 223.108,
+      "expected": "contradicts",
+      "id": "date-wrong",
+      "input_tokens": 126,
+      "predicted": "insufficient",
+      "probabilities": [
+        0.12611981416399173,
+        0.17497575825456996,
+        0.6989044275814383
+      ],
+      "source": "La date contractuelle initiale d’achèvement est le 30 juin 2026. L’avenant n°1 fixe la date d’achèvement révisée au 3 juillet 2026."
+    },
+    {
+      "claim": "La date de réception effective du chantier est le 3 juillet 2026.",
+      "correct": true,
+      "elapsed_ms": 363.714,
+      "expected": "insufficient",
+      "id": "date-unknown",
+      "input_tokens": 123,
+      "predicted": "insufficient",
+      "probabilities": [
+        0.09244558836628533,
+        0.34888076532423007,
+        0.5586736463094847
+      ],
+      "source": "La date contractuelle initiale d’achèvement est le 30 juin 2026. L’avenant n°1 fixe la date d’achèvement révisée au 3 juillet 2026."
+    },
+    {
+      "claim": "Le délai de notification est de 8 jours calendaires.",
+      "correct": true,
+      "elapsed_ms": 508.416,
+      "expected": "supports",
+      "id": "notice-good",
+      "input_tokens": 95,
+      "predicted": "supports",
+      "probabilities": [
+        0.7252050581267905,
+        0.016686117318905652,
+        0.2581088245543038
+      ],
+      "source": "L’entrepreneur doit notifier chaque retard au maître d’ouvrage par lettre recommandée dans un délai de 8 jours calendaires."
+    },
+    {
+      "claim": "Le délai de notification est de 12 jours calendaires.",
+      "correct": false,
+      "elapsed_ms": 324.074,
+      "expected": "contradicts",
+      "id": "notice-wrong",
+      "input_tokens": 96,
+      "predicted": "insufficient",
+      "probabilities": [
+        0.05293227964075871,
+        0.45032563204239595,
+        0.4967420883168454
+      ],
+      "source": "L’entrepreneur doit notifier chaque retard au maître d’ouvrage par lettre recommandée dans un délai de 8 jours calendaires."
+    },
+    {
+      "claim": "Les pénalités doivent être payées dans les deux jours.",
+      "correct": true,
+      "elapsed_ms": 261.195,
+      "expected": "insufficient",
+      "id": "penalty-unknown",
+      "input_tokens": 96,
+      "predicted": "insufficient",
+      "probabilities": [
+        0.2696886491145181,
+        0.10928113144518971,
+        0.6210302194402921
+      ],
+      "source": "Les pénalités de retard sont de 150 EUR par jour, plafonnées à 5 % du montant total du marché."
+    },
+    {
+      "claim": "Rivage Immobilier SAS est le maître d’ouvrage.",
+      "correct": true,
+      "elapsed_ms": 229.551,
+      "expected": "supports",
+      "id": "party-good",
+      "input_tokens": 91,
+      "predicted": "supports",
+      "probabilities": [
+        0.8739847365763148,
+        0.0699778780700016,
+        0.05603738535368357
+      ],
+      "source": "Le maître d’ouvrage est Rivage Immobilier SAS. L’entrepreneur est Bâtir Rhône SARL."
+    },
+    {
+      "claim": "Les intempéries ordinaires ouvrent droit à une prolongation du délai.",
+      "correct": true,
+      "elapsed_ms": 211.73,
+      "expected": "contradicts",
+      "id": "weather-wrong",
+      "input_tokens": 99,
+      "predicted": "contradicts",
+      "probabilities": [
+        0.0007642319430003866,
+        0.9954742143959638,
+        0.003761553661035798
+      ],
+      "source": "Les intempéries ordinaires restent à la charge de l’entrepreneur et n’ouvrent droit à aucune prolongation ni indemnisation."
+    },
+    {
+      "claim": "L’assurance de responsabilité décennale est souscrite auprès d’AXA.",
+      "correct": true,
+      "elapsed_ms": 167.871,
+      "expected": "insufficient",
+      "id": "insurance-unknown",
+      "input_tokens": 87,
+      "predicted": "insufficient",
+      "probabilities": [
+        0.3793714318645426,
+        0.09958068457416765,
+        0.5210478835612898
+      ],
+      "source": "L’entrepreneur doit disposer d’une assurance de responsabilité décennale."
+    }
+  ],
+  "purpose": "Exploratory French contract evidence judgment probe, not a production benchmark",
+  "checkpoint": "Laya multilingual pretrained checkpoint; no DelayLama fine-tuning",
+  "date": "2026-10-01",
+  "correct": 9,
+  "total": 12,
+  "median_ms": 226.33,
+  "false_supports": 0,
+  "notes": [
+    "12 manually specified synthetic contrasts (4 per class); too small to establish reliability.",
+    "Timings include each inference; no production load, p95 or speedup claim.",
+    "Hive query-routing heads have different tasks and are not tested by this probe.",
+    "Labels and states are synthetic; no private contracts or external API were used."
+  ],
+  "weights_sha256": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204"
+}
