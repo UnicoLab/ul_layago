@@ -400,6 +400,47 @@ false support, necessary-clause recall and end-to-end latency on independent
 contract families. Model disagreement remains a review signal; this interface
 change is not evidence that the existing advisory contract head improved.
 
+### L22 — Saved output, matching spans and supported conclusions need separate checks
+
+**Observed:** DelayLama's [analysis availability audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-analysis-coverage.md)
+ran eight real agents on the invented Aster source and passed 24 targeted
+regression checks. An explicitly seeded failure simulation separately passed 11
+application checks. Exact agent selection and immutable run timestamps prevent
+a base-agent output or touched older file from becoming the latest public-agent
+result. Unreadable latest runs remain visible rather than silently restoring an
+older success. Atomic writes avoid publishing incomplete results.
+
+Actual analysis-input hashes detect changed input even when a historical quote
+still matches. Legacy input versions remain unknown. Availability/provenance
+metadata is excluded from review identity; finding facts, source and scope are
+retained. This preserved prior field rechecks and model disagreements. An initial
+false partial-analysis warning came from the validator assuming a parties list;
+the canonical identity schema uses a map. Derive validators from real schemas.
+
+The live outputs still included two uncited identity findings. An E1 cost action
+claimed closure from unchanged price and no payment requested or awarded; its
+quotes did not explicitly establish closure or waiver. E2 used “Non compensable”
+as cost impact, conflating entitlement with quantified incurred cost. Both were
+flagged, and the E2 correction reached its owning-agent prompt workspace. No
+default prompt was activated, no raw saved output was rewritten, and no Laya
+training or weight improvement occurred. The verifier remains advisory.
+
+**Implication:** keep availability, input freshness, span match, field association
+and semantic entailment as distinct states and evaluation metrics. A passed
+literal-zero cost check does not rule out other cost/entitlement dimension errors.
+Support every closure, waiver or notice-compliance premise independently. Treat
+uncited absence assertions separately from positively extracted source facts.
+Do not turn saved outputs, matching quotes or browser flags directly into gold.
+Adjudicate field/value/span examples and preserve disagreement and unknown labels.
+
+For retrieval or verifier training, include unchanged-price passages as close
+negatives for waiver/closure and compensation exclusions as close negatives for
+incurred-cost amount. Split by independent contract/template families and source
+versions; score omitted necessary clauses, wrong field associations, false support
+and full-pipeline latency. Hashes describe supplied input under its existing
+limits, not completeness of the original corpus. The short tuned fixture and
+seeded failure tests are regression evidence, not production model certification.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
