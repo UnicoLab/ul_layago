@@ -479,6 +479,50 @@ and checked verdicts, input version, target dimension and all review attempts in
 future training/evaluation records. UI labels or compact fingerprints must not
 serve as snapshot identity for selecting those records.
 
+### L24 — Passing selected checks can still hide a prompt regression
+
+**Observed:** DelayLama's [multi-case benchmark](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-prompt-benchmarks.md)
+records exact intent overrides, original sources, field expectations, model
+outputs, failures and review notes. Four English/French event cases were run
+with two drafts; both met 14/14 selected checks, with 8/8 and 6/6 source quote
+matches respectively. Two contract-identity cases met 7/7 checks, including a
+revised completion date, with 15/15 quote matches. These are six invented
+regression cases, not independent final evaluation data. No extraction accuracy
+improvement or general speed gain was measured, and no Laya weights were trained.
+
+The full-result diff revealed a change outside the configured checks: the event
+candidate changed an explicitly unknown notice status to empty text. Review
+feedback about that field and unknown costs followed the original benchmark
+case into the prompt assistant. The assistant reported nine history entries and
+returned a model proposal without heuristic fallback. Results/reviews survived
+reload; the proposed prompt was not activated.
+
+**Implication:** a green aggregate requires a defined coverage policy. Selected
+field checks do not measure complete recall, semantic quote support or unchanged
+behavior in other fields. Preserve the full output alongside each scalar check,
+and keep unknown wording, missing fields, explicit zero, compensation exclusion,
+actual costs, granted time extensions and role associations distinguishable.
+Treat incomplete/failed/cancelled model attempts as operational outcomes, not
+negative training gold. Human notes and assistant recommendations require
+adjudication before becoming training labels.
+
+Build project/template/document-family splits before generating adaptive data.
+Keep an independent final evaluation set outside both training and prompt
+revision history. Record requested dimension, source/claim association and exact
+span, along with model/prompt/schema/input versions and all attempts. For Laya
+retrieval or verification arms, measure necessary-clause recall, false support,
+contradictions, abstention and downstream extraction/graph quality against the
+same LLM-only baseline. Matching quotes and agreeing model verdicts do not
+replace independent labels. Keep Laya advisory until that comparison succeeds.
+
+The GUI's current records do not pin model/schema versions or persist jobs on
+the server. Sequential case timing includes application processing and has only
+one observation per draft. The benchmark deliberately avoids project graph
+writes; the earlier graph audits remain separate evidence. MLX and supervisor
+work are unchanged by this application learning. See the [benchmark guide and
+priorities](https://github.com/UnicoLab/delaylama/blob/main/docs/prompt-benchmarks.md)
+for the reusable evaluation workflow and remaining engineering work.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
