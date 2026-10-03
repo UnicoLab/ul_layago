@@ -1278,6 +1278,38 @@ checks, 552 backend tests and 414 frontend tests were recorded. No Laya training
 weights or architecture changed. See the
 [source-identity audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-source-identity.md).
 
+### L49 — Selecting original passages avoids transcription errors, not interpretation errors
+
+DelayLama's Cedar claim test still omitted occurrence premises after stronger
+instructions. Free quotation recovery then returned proposals rejected by exact
+original matching. Selecting an index from bounded original passages instead
+yielded seven source-matched occurrence candidates in the paired run and five in
+a saved claim rerun. The selected text is copied from the original; the model
+cannot replace it with a paraphrase, altered date or joined spans. Conclusions,
+actions and original citations remain unchanged, and association warnings persist.
+
+This supplies a useful comparator for Laya clause/occurrence shortlisting. Preserve
+the original option text, provenance, identity and rendering; train/rank selection
+separately from semantic support. Candidate reference/date matches cannot label
+role association, applicability, entitlement or causation as true. Include a
+decline option and missing-premise cases, and evaluate necessary-premise recall
+across independent contract families before restricting full-source analysis.
+
+The shipped lexical retrieval uses eight options per request and overlapping
+2000-character long-line windows. These caps and recognized date/reference formats
+do not establish exhaustive recall. Two final saved model quotes still contained
+ellipses and stayed unverified. Actual expense was also incorrectly set to zero
+in one fresh detector result and remained a review concern. A field's literal
+match and an error-free job are not positive semantic labels.
+
+Thirty recorded model calls retain failed attempts as well as successful option
+selection. The paired final request took 5.78 seconds versus 4.78 seconds baseline;
+two extra evidence calls were added. Neither speed nor independent semantic gains
+are established. All 582 backend and 423 frontend tests/build passed. A live review
+note and candidate concern reached the prompt lab; no prompt activation or Laya
+training/architecture change occurred. See the
+[claim-occurrence audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-claim-occurrence.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
