@@ -859,6 +859,30 @@ fulfillment and applicability separately. Keep failures and family-level splits;
 do not turn assistant verdicts or matched spans into automatic truth labels.
 No new Laya training or measured quality/speed improvement occurred in this batch.
 
+### L35 — Reproducible reviews need durable history, not automatic truth labels
+
+Evidence: [DelayLama Studio backup audit, 2026-10-03](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-studio-backups.md).
+Project-backed revisions preserved six original runs and 13 history entries
+through browser migration, two-client conflict, restore, import and reload. Each
+recorded source, prompt, result, finding-scoped review and runtime observation was
+retained. Historical preview is separate from the active draft and acceptance.
+The initial real-process SQLite initialization lock failure remains documented;
+transactional schema creation fixed it without weakening the concurrency test.
+
+For reusable training/evaluation pipelines, retain the exact source revision,
+run prompt/config, output, reviewer decision and amendment/correction provenance.
+Archive divergent reviewer copies before replacement; never silently select the
+latest browser write as the authoritative label. Export/import should round-trip
+unknown metadata and full histories. Explicit unsupported/conflicting/unknown
+states must survive storage and later dataset preparation.
+
+These are reproducibility capabilities, not training labels or measured model
+benefits. User acceptance, source matches and assistant verdicts still require
+independent adjudication and family-level splits before inclusion as truth.
+Non-Studio reviews remain partly browser-local and snapshot backups do not resume
+interrupted jobs. No new Laya training, accuracy or latency improvement was
+measured in this batch.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
