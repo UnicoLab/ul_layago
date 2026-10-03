@@ -1445,6 +1445,44 @@ files and the original user Studio session were unchanged. No new extraction,
 Laya training, acceleration or semantic-quality experiment occurred. See the
 [scope and hierarchy audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-graph-hierarchy.md).
 
+### L54 — Source-backed relations still need roles, premises and occurrence preservation
+
+DelayLama's live synthetic graph evaluations found correct extracted events
+merged into their companies during graph storage. Organisation cues in an event
+title (including “insurance”) could trigger that demotion; the related-party
+fallback then silently lost the occurrence. The compatibility fix preserves a
+dated, uniquely original-backed model event candidate with actor/action support,
+while bare party identities still demote. This preserves a candidate rather than
+certifying its semantics. Test extraction, storage and presentation separately.
+
+The engine also promoted event-to-concept associations to causal edges using
+delay/impact keywords, mixing affected and responsible parties. Those links now
+remain associations. A separate bounded LLM pass uses explicit endpoint references,
+role/type guards and unique original quotations for directed proposals. The graph
+inspector compares the relationship assertion and both endpoint passages; source
+presence does not establish that all necessary premises are present.
+
+Four development cases cover English access restriction, French crane omission,
+a notice explicitly causing no delay, and a stop-work order. The final candidate
+preserved the notice and recorded its recipient without a causal edge; each delay
+case retained a cause-to-effect candidate. Responsible/affected role coverage is
+still incomplete, one stop-order proposal was withheld, and earlier attempts
+failed to preserve the insurance notice. Short causal quotes can omit endpoint
+identities; the Aster notice quote omits its recipient, requiring additional
+premises. Duplicate ID/description event nodes also remain. These are targeted
+synthetic development checks, not independent held-out accuracy estimates.
+
+For Laya examples, label occurrence identity, endpoint roles, causal direction,
+source-span presence and necessary-premise sufficiency separately. Include
+negated causation, report-versus-cause notices, action titles with company/insurance
+words, partial aliases, duplicate occurrences and missing role links. A successful
+job or quote lookup is not a positive support label. Keep full source-bound inputs
+and contract-family splits; compare any clause shortlist or validation head against
+the complete LLM workflow on omissions, false support, abstention and latency.
+No Laya training, architecture or acceleration change occurred in this pass.
+See the [relationship audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-event-relationships.md)
+and [quality priorities](https://github.com/UnicoLab/delaylama/blob/main/docs/contract-quality-roadmap.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
