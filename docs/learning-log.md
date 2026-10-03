@@ -1644,6 +1644,31 @@ priority layer, measuring necessary-premise recall, abstention, full-source fall
 and complete workflow latency. No training, MLX or architecture change occurred
 in this pass. See the [narrative review evaluation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-narrative-review.md).
 
+## L60 — Readable stage separation without stronger model claims (2026-10-03)
+
+DelayLama's overview now separates observed time impact, contract dates, assessed
+entitlement and recorded extension grants; incurred costs, contract price,
+retention, payment requests and awards remain separate. Empty output is displayed
+as not returned, rather than inferred zero/absence. Overview navigation uses actual
+result paths, and financial/time focus exposes the relevant fields before
+secondary details. Flagged summaries and reasoning join the review queue without
+being promoted to graph facts. Live retained event and contract-identity checks
+verified navigation and display; 577 frontend tests/build passed. A passive
+389-CSS-pixel resize preserved the financial view without horizontal overflow.
+One active click during a viewport override reached an unexpected view; its cause
+was not established, and full mobile-interaction certification is not claimed.
+
+This is a usability pass, not improved model accuracy or a training experiment.
+Original results, drafts, protected sessions and graph fingerprints stayed
+unchanged; no source-search, extraction or assistant call was made. Training
+examples should retain unknown, not-returned, explicit absence and contradictory
+status/value records as distinct annotations. Do not turn easier navigation,
+completed review counts or quiet source guards into positive semantic labels.
+Continue measuring necessary-premise recall, stage/role association and false
+support on independent contract families before introducing shortlist models.
+No Laya training, MLX or architecture change occurred. See the
+[results-overview evaluation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-results-overview.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
