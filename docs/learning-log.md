@@ -883,6 +883,29 @@ Non-Studio reviews remain partly browser-local and snapshot backups do not resum
 interrupted jobs. No new Laya training, accuracy or latency improvement was
 measured in this batch.
 
+### L36 — Original evidence and annotation identity must survive recovery
+
+Evidence: [DelayLama project review audit, 2026-10-03](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-project-reviews.md).
+Project/Extract/Claim Desk reviews now retain exact-source revisions, explicit
+conflict resolution and source-recheck runtime. A fresh browser restored an exact
+snapshot. Claim Desk feedback transferred its merged context to Studio without
+pretending an imported agent analysis had the same output or historical prompt.
+
+A grounding bug allowed generated summaries/legacy extractor context to act as
+citation evidence. Registered originals are now separate from summaries and input
+budgets; unavailable source cannot establish grounding by self-quotation. The live
+insurance recheck found insufficient support for named roles despite a generic
+quote match. Preserve that failure with its actual model/config/runtime before
+preparing training examples.
+
+Datasets need exact source revision, field/role association, full result and review
+scope. Compact cache hashes are not authoritative annotation identities: collision
+or source changes must not inherit accepted labels. Archive disagreements before
+replacement. Notes, matched quotes, candidates and assistant verdicts are not
+truth labels without independent adjudication and family-level splits. This batch
+measured no new Laya training, quality or speed gain. Interrupted-job recovery,
+cross-device hosting and retention remain separate work.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
