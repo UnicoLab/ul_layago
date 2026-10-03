@@ -1656,7 +1656,9 @@ being promoted to graph facts. Live retained event and contract-identity checks
 verified navigation and display; 577 frontend tests/build passed. A passive
 389-CSS-pixel resize preserved the financial view without horizontal overflow.
 One active click during a viewport override reached an unexpected view; its cause
-was not established, and full mobile-interaction certification is not claimed.
+was not established. Narrow screenshot capture returned blank pixels, and a second
+documented capture returned a clipped view inconsistent with the DOM width. Only
+DOM geometry is verified; visual/mobile-interaction certification remains open.
 
 This is a usability pass, not improved model accuracy or a training experiment.
 Original results, drafts, protected sessions and graph fingerprints stayed
