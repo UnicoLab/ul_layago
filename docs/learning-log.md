@@ -1089,6 +1089,41 @@ browser override yielded only 582 px of effective DOM width, so mobile certifica
 remains incomplete. No Laya training or model quality/speed result was measured.
 See the [reading-layout audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-reading-layout.md).
 
+### L44 — Own-finding source coverage and the danger of overbroad labels
+
+DelayLama added optional original-passage requirements to selected field checks.
+Only quotations of the configured finding count, after source matching. A correct
+value and a perfect aggregate citation-match count can coexist with missing own
+premises. Three new self-authored English/French cases measured 8/10 selected
+values and 6/14 required passages; an experimental prompt rerun measured 10/10
+values and 8/14 passages. Both used fifteen recorded Gemini section invocations.
+These are development observations, not independent model quality or speed gains.
+
+Inspection distinguished an actually omitted role-to-name premise from broad
+anchors that demanded unrelated neighboring text. A correct signed replacement
+quote failed an anchor that also required an unchanged-price sentence; separate
+valid obligation/absence quotes failed a combined single-quote requirement. The
+original expectations and unsuccessful coverage results were retained. Define
+minimal self-contained premise labels before model calls, then adjudicate meaning,
+required-role association, absence and amendment applicability separately. Passing
+literal coverage still cannot certify interpretation or complete recall.
+
+For Laya retrieval/triage experiments, evaluate necessary-premise recall and role
+association instead of rewarding arbitrary paragraph overlap. Preserve original
+spans and retrieval omissions; a good semantic candidate can have different span
+boundaries. Separate field correctness, span coverage, semantic support, reviewer
+acceptance and operational timing. Review notes and these synthetic development
+cases are not automatically independent training labels. Keep unseen contract
+families outside candidate refinement and benchmark against the unchanged LLM arm.
+
+The new GUI routes source gaps to the exact owner and restores requirement scores
+from recorded output/source. A portable JSON fallback retained both complete runs
+when native download/clipboard capture was unavailable; an isolated server-store
+round-trip also preserved them. All 393 frontend tests and build passed. No Laya
+weights, training recipe, default prompt or project graph pipeline changed here.
+See the [source-expectations audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-source-expectations.md)
+for full records, strict-label failures and scope limits.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
