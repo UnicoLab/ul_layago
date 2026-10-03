@@ -751,6 +751,32 @@ checks must not become gold training labels without review. Persist the exact
 source, prompt, runtime contract and returned model, and retain failed reruns.
 No new Laya training or measured acceleration benefit occurred in this batch.
 
+### L31 — Insurance roles need separate labels and their own evidence chain
+
+Evidence: [DelayLama insurance-role audit, 2026-10-03](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-insurance-roles.md).
+A generic insurance requirement had been expanded into named contracting parties
+without source role support. Clarifying the legacy field as the party required
+to arrange insurance, separately from carrier and beneficiary, improved six fixed
+English/French development smoke cases: generic requirements, explicit roles,
+reversed roles with a carrier, a role alias, and a negative obligation. All six
+passed; they are not independent accuracy evidence. The repeated Aster rerun
+retained its insurance type and left the two unsupported roles empty.
+
+For Laya examples, label policyholder/obligated party, carrier, beneficiary and
+unknown independently. Include nearby names without role assignment, reversed
+parties, negative duties and role aliases needing a second identifying passage.
+Name presence is a narrow review check, not entailment: both names can occur in
+the wrong relationship. Do not train support labels from quotation matches or
+assistant verdicts without independent role review.
+
+A failed existing-field recheck must reach the correction draft even without a
+human-authored note; otherwise the feedback loop silently loses its diagnosis.
+Keep model suggestions, source warnings, user notes and original values distinct.
+The same rerun changed generated milestone IDs while retaining dates/statuses.
+Evaluate semantic preservation separately from record pairing; uncertain identity
+should stay unpaired rather than becoming a guessed link or a claimed value loss.
+No Laya training or measured accelerator improvement occurred in this batch.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
