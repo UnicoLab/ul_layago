@@ -1550,6 +1550,38 @@ prompt edit, graph correction or training example. 634 backend and 518 frontend
 tests plus the production build passed. No Laya training, MLX or architecture
 change occurred. See the [graph-recheck audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-graph-rechecks.md).
 
+### L57 — Prompt feedback can improve one field while regressing explicit negatives
+
+DelayLama now imports a scoped graph search, exact checked originals and bounded
+search history into the chosen prompt session without replacing its draft or
+pretending a graph check is an extraction run. On the ORCHID-96 development case,
+one live baseline retained O1/O2/O3 but inferred zero actual notice cost. One
+assistant proposal incorrectly called graph omissions extraction failures despite
+baseline responsible-party values, and requested affected_party outside the target
+schema. An advisory UI warning exposed the unknown field. The proposal was retained
+and manually reviewed to use existing output fields before candidate evaluation.
+
+The same-source candidate withdrew unsupported zero cost but also withdrew
+explicit no-interruption and no-extension/payment-request consequences/time impact.
+It retained an inferred administrative-notice cause, and shortened O2's citation
+so its responsible/affected-role premises were absent from that quote. The
+comparison exposed withdrawals; a correction note was saved on the candidate.
+Both runs, the original proposal and the failed aspects survive reload. These
+are selected development observations, not independent accuracy/latency evidence
+or grounds for default prompt promotion.
+
+For Laya data and validation, separate unknown, explicitly negative, zero actual
+impact, no request/award, and absent graph connections. Measure negative-assertion
+recall and necessary role-premise sufficiency as well as span presence and field
+precision. Track the target output ontology: a graph role label is not automatically
+an available extraction field or proof of a failed extraction. Assistant proposals
+and model support verdicts require review before becoming labels; retain successful
+and unsuccessful aspects of each candidate. The tested workflow now preserves
+explicit source/finding provenance, baseline/candidate outputs and full Studio
+review history, with no graph writes or default activation. 636 backend and 524
+frontend tests/build passed. No Laya training, MLX or architecture changes occurred.
+See the [handoff evaluation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-graph-prompt-handoff.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
