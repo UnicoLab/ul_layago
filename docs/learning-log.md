@@ -564,6 +564,53 @@ The 362 Python/208 frontend application tests verify the provenance workflow;
 they are not held-out extraction or model-quality certification. Historical L24
 accurately describes the earlier benchmark before this new runtime guard.
 
+### L26 — Preserve every premise through chronology corrections
+
+DelayLama's [2026-10-03 chronology audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-contract-chronology.md)
+ran eight agents on one invented French contract, then one identity and two
+amendment rechecks. The same expanded checks scored 26/29, 27/29, 28/29 and
+28/29. Explicit original/current milestones and an amendment's own dated heading
+improved, but correcting one missing quote could omit another premise. The final
+raw amendment still lacked the original-deadline quotation despite 41 returned
+quotes matching source text across the outputs. Source matching is not support
+coverage, date-role association or recall.
+
+A separate browser evidence search recovered the original dated provision. Its
+field checks suggested seven supported fields and two gaps (`claims_waiver` and
+`clause_refs`); overall evidence remained insufficient and no finding was
+accepted. The synthetic-trained Laya advisory flagged a possible contradiction.
+This disagreement is a review signal, not a measured Laya gain. Keep raw runs,
+recovered passages and human decisions separately. Do not turn source absence,
+model agreement or an inferred amendment reference into gold labels.
+
+Practical training/evaluation consequences:
+
+- Label span and role independently: original deadline, revised deadline,
+  amendment signature and event occurrence are distinct even when every date
+  appears somewhere in the source. Superseded status also needs the replacement
+  premise, not just the original dated provision.
+- Add paired multi-premise cases: original date plus replacement plus unchanged
+  price; explicitly absent/unknown waiver language; implicit base-provision
+  linkage versus explicit amendment reference. Measure coverage before and after
+  a correction, with unrelated premises as preservation checks.
+- Synthetic retrieval/entailment examples should include wrong-role exact spans,
+  unsupported absence claims, partial support and conflicting amendments. Keep
+  unknown fields unknown; successful passage retrieval must not raise the raw
+  extraction score retrospectively.
+- Evaluate graph effects separately. The light source graph in this pass had
+  40 nodes/22 edges, 26 Date nodes and no typed Event nodes, while the saved
+  analysis map had explicit event findings. Keyword weather/causal suggestions
+  and duplicate per-episode dates do not establish event identity or causation.
+  Graph supervision needs independently reviewed typed entities, direction,
+  scope and evidence, rather than proximity-based pseudo-labels.
+
+The application tests passed (374 Python, 218 frontend, production build), and
+live notes/recovery persisted after reload. Those are application regressions on
+one invented contract, not held-out model quality. No Laya training, architecture
+or default-prompt activation occurred in this audit. Next run a fixed reviewed
+field/span/role suite comparing LLM-only with Laya-assisted retrieval under the
+same runtime, then report completeness, false-support rate, latency and memory.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
