@@ -523,6 +523,47 @@ work are unchanged by this application learning. See the [benchmark guide and
 priorities](https://github.com/UnicoLab/delaylama/blob/main/docs/prompt-benchmarks.md)
 for the reusable evaluation workflow and remaining engineering work.
 
+### L25 — Observe the actual invocation before attributing prompt gains
+
+**Observed:** DelayLama's [call-level provenance validation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-runtime-provenance.md)
+records the LLM binding selected by each JSON-document agent invocation, rather
+than inferring it from the health panel's default model. It retains configured
+and reported model identity, selected generation settings, driver versions,
+output-contract hash, application prompt/input hashes and JSON repairs/errors.
+Records live in request-local state so concurrent runs and parallel claim passes
+do not share attempt history. Exports allowlist metadata and exclude credentials,
+headers, arbitrary provider objects and endpoint paths/query.
+
+Two invented English/French identity cases were run with baseline and candidate
+drafts. Both met 7/7 selected checks with 15/15 quote matches. Each case request
+used five LLM invocations for identity sections: four case requests represent
+twenty logical invocations, not necessarily twenty billable transport requests.
+The reported model was Gemini 3.1 Flash Lite. A metadata-free baseline correctly
+withheld gained/lost prompt checks; the recorded baseline allowed them because
+execution observations matched, despite intentionally different prompt hashes.
+The English full-result diff still showed four changed sections outside/in excess
+of the configured checks. No accuracy or speed gain was measured, no Laya weights
+were trained and no agent default prompt was activated.
+
+**Implication:** distinguish case requests, logical invocations, JSON repair and
+internal transport retries. Keep all attempts and failures; do not mix them with
+semantic training gold. Record the actual model role/binding used for each arm.
+Require identical evaluation case definitions and compatible runtime observations
+before attributing gained/lost selected checks to a prompt or auxiliary model.
+Retain full outputs and human review even when attribution is withheld. For Laya
+arms, additionally record checkpoint/tokenizer/calibration, retrieval policy,
+training-data provenance and preprocessing versions; those are not supplied by
+this LLM-only provenance feature.
+
+Observed metadata is not immutable provider weights or a fully pinned environment.
+Unreported defaults, routes on the same endpoint origin, backend revisions and
+preprocessing can still differ. Repeat controlled trials with independent labels,
+false-support/contradiction/necessary-clause recall, field/role/span association,
+full graph quality and resource/latency measurements before promoting a Laya arm.
+The 362 Python/208 frontend application tests verify the provenance workflow;
+they are not held-out extraction or model-quality certification. Historical L24
+accurately describes the earlier benchmark before this new runtime guard.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
