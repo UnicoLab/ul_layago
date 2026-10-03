@@ -906,6 +906,25 @@ truth labels without independent adjudication and family-level splits. This batc
 measured no new Laya training, quality or speed gain. Interrupted-job recovery,
 cross-device hosting and retention remain separate work.
 
+### L37 — Recovery records and exact spans do not establish field semantics
+
+Evidence: [DelayLama workflow recovery audit, 2026-10-03](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-job-recovery.md).
+A durable journal retained a live extraction and simulated interruption through
+API restart. Identical submission identity/body returned one execution; changed
+body was rejected. Lost-response lookup is distinct from model rerun. Preserve
+partial output, actual process state and errors; observation timeout or quiet
+progress does not prove death. Process tracking currently uses local PID checks,
+not a distributed lease, checkpoint resume or OS memory limit.
+
+Cèdre's synthetic development example passed checks for core fields and 12 exact
+quote offsets, while `extension_causes` incorrectly contained a notice procedure.
+Retain the unchanged error and flagged review. Training/evaluation should separate
+entitlement grounds, notice obligation/procedure, evidence of actual notification,
+late consequences and uncertainty even when they share clauses. Span presence and
+correct adjacent dates do not make that field association a support label. These
+are development findings, not independently adjudicated gains or Laya evaluation.
+No new Laya training, quality or speed improvement was measured in this batch.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
