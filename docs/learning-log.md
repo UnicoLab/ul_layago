@@ -1342,6 +1342,43 @@ still need captured detector inputs to reproduce saved claim-event joins. All
 change occurred. See the
 [recorded-outcomes audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-recorded-outcomes.md).
 
+### L51 — Freeze upstream inputs before evaluating a downstream prompt or head
+
+DelayLama's claim Studio previously supplied original text without the event
+register used by saved analysis. A prompt comparison could therefore also be an
+input-path change. Experiments now bind events and optional contract analysis to
+the exact original, retain each run's actual inputs and snapshot fresh detector
+intent. Benchmarks freeze those inputs; stale/missing registers block claim
+calls. Different inputs cannot be credited as prompt improvement. Duplicate IDs
+remain ambiguous rather than selecting one occurrence.
+
+The live saved-review rerun linked six time/cost assessments explicitly to three
+events. Editing to an invented single-event case required fresh detection. Its
+benchmark passed two request/award value checks and both own required passages,
+with 14/14 literal quotation matches. The model nevertheless described a two-day
+interruption as time entitlement despite no documented extension decision. That
+flag reached an assistant revision with 11 full history entries. The candidate
+remained inactive and unevaluated. Matching spans, explicit IDs and passing two
+checks do not establish semantic correctness or complete recall.
+
+For future Laya training/evaluation, snapshot source, task intent, upstream event
+register, schema, language and runtime identity per example. Hold upstream
+inputs fixed when isolating a prompt/head change; evaluate detector+reader arms
+separately when changing the whole pipeline. Include missing/misclassified events,
+ambiguous IDs and stale source bindings in orchestration tests, not automatic
+positive training labels. Entitlement, interruption duration and granted
+extension need independent labels and necessary original premises.
+
+Clause shortlisting and review triage remain promising *experiments*. Their
+acceptance needs independently reviewed necessary-premise recall, false support,
+amendment retention, per-language calibration and complete pipeline latency
+against the source-bound LLM baseline. A better input path is not evidence that
+Laya or an architecture is more accurate or faster. Fourteen extraction-model
+call records plus one assistant request were retained; 605 backend and 467
+frontend tests and production build passed. No Laya model/training/acceleration
+change occurred. See the
+[claim experiment audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-claim-experiment-inputs.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
