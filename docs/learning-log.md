@@ -1379,6 +1379,45 @@ frontend tests and production build passed. No Laya model/training/acceleration
 change occurred. See the
 [claim experiment audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-claim-experiment-inputs.md).
 
+### L52 — A correct quotation can still carry the wrong status or association
+
+DelayLama now defines regression checks through readable result fields and each
+finding's own original passages. Model values remain observations; a reviewer
+enters expected answers independently. Checks combine event ID, assessment target
+and fact kind rather than relying on global labels or array positions. Repeated
+settlement/waiver types also need parent-qualified identities in run comparisons;
+shared quotes must never merge facts from different events or targets. Duplicate
+parents and child kinds remain unresolved rather than choosing by order.
+
+The initial live request/award checks passed 4/4 values and required passages, but
+a refused payment was separately represented as a recorded zero-valued award.
+Adding an independently chosen absence-status development check exposed a 4/5
+value result despite 5/5 original-passage coverage. The exact failed finding and
+note reached an assistant with 17 full history entries. Its proposed draft passed
+5/5 values and required passages on the unchanged suite, but retained a non-matching
+quotation and other field concerns. No default was activated. This selected
+single observation is not independent generalization or semantic certification.
+
+For Laya data, keep source occurrence, financial/temporal stage, status and field
+association as distinct labels. Include refusal, silence, explicit zero, partial
+award, non-payment refusal, duration versus grant and repeated-event negatives.
+Reviewer notes and model outputs are candidate examples, not automatic gold
+labels. Preserve all necessary premises and the original-bound upstream inputs;
+split contract families/templates before training or prompt selection. Measure
+both quotation retrieval and interpretation, plus omissions outside configured
+checks. Parent context is part of a training/evaluation example's identity.
+
+Clause shortlisting and status/support triage remain promising experiments, to be
+compared with the source-bound LLM baseline on necessary-premise recall, wrong
+associations, false support, abstention, per-language calibration and complete
+workflow latency. The pipeline still needs independent held-out contracts and
+scoped graph precision/recall. Twenty-four extraction-model call records and one
+assistant request were retained; 605 backend and 502 frontend tests/build passed.
+The attempted narrow browser override did not reach its requested width and was
+not counted as responsive verification. No Laya training, architecture or
+acceleration changes occurred. See the
+[readable-check audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-readable-checks.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
