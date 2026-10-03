@@ -656,6 +656,46 @@ or architecture change occurred. Next compare LLM-only against Laya-assisted
 clause retrieval/role validation on an independently reviewed, fixed suite, with
 false-support rate, premise recall, causal direction, latency and memory reported.
 
+### L28 — Compare missing fields and stable source anchors, not just wording
+
+Evidence: [DelayLama's finding comparison audit, 2026-10-03](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-finding-comparison.md).
+A live contract-identity experiment on the same invented Aster original returned
+19 matching quotations but withdrew `scope.scope_of_works`, while retaining the
+nearby project description. Two other sections had no supporting quote. Exact
+span presence therefore cannot establish field completeness, an absence claim,
+or correct field/value association. Unchanged evidence gaps must remain visible
+when reviewing iterations, rather than disappearing from a changed-values view.
+
+The penalty label also changed from French prose to `late_delivery` while its
+quoted provision, rate and cap stayed the same. Exact-label-only pairing showed
+it as absent plus new. The application now allows a transparent pairing by a
+unique identical quotation/reference set within the same list section. Explicit
+IDs still take precedence; duplicated anchors, other sections, changed references
+and conflicting IDs remain separate. Such UI pairing is not an independently
+reviewed entity-equivalence label and must not become training gold.
+
+The recorded model/settings matched, but the imported baseline did not retain
+its original prompt. That comparison cannot attribute differences to a prompt
+revision. Keep complete source, prompt, invocation record and review decisions
+for every new arm. An accepted baseline recovery is not a new run's acceptance.
+
+For Laya data, include paired cases where an exact relevant quotation exists but
+a required field is missing, an old unsupported value is correctly withdrawn,
+or a schema label changes without a new provision. Evaluate field completeness,
+source absence and stable identity separately. These cases need independent
+review; matching quotes, assistant revision rationales and UI change counts are
+not quality certificates. No Laya training or measured accelerator gain occurred
+in this interface audit.
+
+The full live feedback loop sent four recorded entries to the assistant, whose
+proposal was manually made conditional on explicit original evidence before
+testing. The follow-up still omitted the works-scope field while preserving three
+dated milestones. That failed refinement is retained; an assistant rationale or
+successful request does not establish extraction improvement. The comparison
+keeps a flagged baseline's note visible as a recheck concern, without transferring
+its human decision to the new run. Follow-up evaluation should score whether the
+specific reviewed defect was resolved, alongside preservation of unrelated facts.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
