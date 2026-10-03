@@ -1671,6 +1671,50 @@ support on independent contract families before introducing shortlist models.
 No Laya training, MLX or architecture change occurred. See the
 [results-overview evaluation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-results-overview.md).
 
+## L61 — Endpoint-shaped evaluation and source recovery reveal different gaps (2026-10-03)
+
+DelayLama's event inspector now shows recorded actor/performer, affected party,
+cause, effect and notice recipient with direct original-evidence navigation.
+An absent slot describes the loaded graph, not the source document. A live role
+search recovered the explicitly responsible client and affected contractor while
+leaving graph facts and prompt drafts unchanged. A source-only candidate can be
+useful even when graph extraction omitted the role; it is not an accepted label.
+
+Five declared English/French development originals compared the existing
+relationship request with optional direct prompt execution plus a per-event role
+audit. Gemini's Summarize wrapper prepends a request to summarize concisely. With
+readable references, two baseline runs matched 10/19 and 9/19 expected edges;
+both candidate runs matched 14/19. A baseline quotation and fact named the correct
+contractor but selected the client's valid reference: literal matching and typed
+endpoints did not detect the wrong identity. The candidate avoided that binding
+in these samples, but retained actor/affected omissions. The two changes were
+tested together, so neither individual effect is established.
+
+Replacing reference labels with production-shaped opaque node numbers, on the
+same originals, yielded 10/19 baseline versus 11/19 candidate matches. This is a
+format diagnostic, not additional held-out data. An isolated real-engine HTTP
+pipeline still stored only two of three Orchid events: the paraphrased actor-free
+foundation title bypassed the existing occurrence safeguard and was merged away.
+Responsibility and the expected causal edge remained absent. The weather case
+also retained a date-named Event duplicate. These pipeline runs were not paired
+end-to-end comparisons. The experimental patch is explicit opt-in, excluded from
+default builds and was not activated on the user's running engine. Failed and
+mixed results are retained in the
+[role evaluation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-graph-role-review.md).
+
+For Laya/contrastive examples, include same-quote/fact pairs with swapped valid
+actor references, reordered opaque registers, paraphrased occurrence titles,
+actor-free passages, known actor aliases, date-anchor duplicates and notice
+performer versus delay responsibility. Evaluate occurrence preservation, endpoint
+association, role completeness, legal interpretation and necessary-premise recall
+separately. A supplied gold endpoint register can hide upstream losses; compare
+against actual extracted/stored registers and full workflow latency. Split by
+contract/story/template before expansion and do not turn graph source matches,
+model-supported roles or quiet guards into training positives. Human-reviewed
+span/association labels remain necessary. 581 frontend tests/build, full clean Go
+tests and patch compatibility checks passed; these are operational evidence.
+No Laya training, MLX, GLiNER or architecture change occurred in this pass.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
