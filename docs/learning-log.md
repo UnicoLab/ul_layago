@@ -1,6 +1,6 @@
 # Shared learning log
 
-Updated 2026-10-02. Scope: the supplied Hive engine, the W10 round-3 Hive report,
+Updated 2026-10-03. Scope: the supplied Hive engine, the W10 round-3 Hive report,
 the DelayLama contract pilot, and LayaGo 0.2.0. This log is an interpretation of
 the linked evidence. Proposed explanations and experiments are explicitly
 separate from observed results. The [documentation index](README.md) identifies
@@ -1417,6 +1417,33 @@ The attempted narrow browser override did not reach its requested width and was
 not counted as responsive verification. No Laya training, architecture or
 acceleration changes occurred. See the
 [readable-check audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-readable-checks.md).
+
+### L53 — Operational readiness and graph structure are separate from model quality
+
+A DelayLama live probe reported a nonexistent project's graph as ready using
+1,426 database-wide nodes and 318 episodes, although its scoped statistics were
+zero. Readiness now requires successful project statistics; failed or malformed
+scope checks fall back to original documents. A populated service, completed job
+or nonempty retrieval cache cannot establish usable context for a selected
+contract, much less correct extraction or model accuracy.
+
+The analysis map also treated nested settlement/payment facts as assessments and
+attached them all to the overview. It now preserves their actual structural
+parent, event/target context, own original quotes and exact review path. Shared
+outcome names are not global identities. Inherited foreign scopes are excluded.
+This containment is recorded analysis structure, not a newly established causal
+or legal relation. Keep those relation classes distinct in training examples,
+retrieval metadata, evaluators and reviewer interfaces.
+
+Browser checks on the existing Birch case reached E12's EUR 400 award, its cost
+assessment and its original highlighted passage, preserving the existing note
+distinguishing incurred/requested/awarded amounts. The Aster source graph still
+has five questionable causal edges and one date concern. These remain negative
+development examples requiring independent source review, not automatic labels.
+617 backend and 505 frontend tests/build passed; project/graph reads, 32 protected
+files and the original user Studio session were unchanged. No new extraction,
+Laya training, acceleration or semantic-quality experiment occurred. See the
+[scope and hierarchy audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-graph-hierarchy.md).
 
 ## Open experiment priorities
 
