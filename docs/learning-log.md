@@ -1038,6 +1038,34 @@ source/output/code hashes matched. No new model calls, Laya training, architectu
 acceleration, quality or speed gain were measured in this batch. The independent
 contract-family evaluation remains the prerequisite for promoting a Laya arm.
 
+### L42 — Full workflow performance includes loading, state and failure recovery
+
+DelayLama's 2026-10-03 frontend pass reduced the main production JavaScript chunk
+from 599.72 to 454.80 kB by separating pure evidence helpers from secondary UI
+panels. That is approximately 24% less main-chunk code, not a measured latency or
+model-quality gain. Opening optional views still fetches their chunks. Benchmark
+cold/warm end-to-end task time separately from model service latency and cache hits.
+
+A real failed graph download stayed local to the panel, but retry did not recover
+after restoring the file: the browser retained the failed native import. Fresh
+React lazy state recovered a mocked loader in tests, which was insufficient proof
+for the production failure. A deliberate test-tab reload recovered it; the product
+now explains save/export-before-reload and never automatically discards the parent
+workspace. Test actual failure mechanisms, including cached artifacts and stale
+deployment versions, rather than inferring recovery from component tests.
+
+Apply that distinction to model services: separate worker restart, checkpoint
+availability, artifact cache state, request replay and current user selection.
+Recovery must preserve the correct input/revision and avoid silently starting work
+twice. A supervisor heartbeat alone does not prove checkpoint recovery or bounded
+memory. These are evaluation requirements, not newly implemented Laya features.
+
+All 379 frontend tests and the production build passed; 32 protected hashes and
+the existing Érable Studio revision 10 were unchanged. No Laya training, model
+calls, graph writes, new accuracy result or model-speed improvement was measured.
+The [DelayLama audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-deferred-panels.md)
+retains the native-import failure and limits alongside the successful UI checks.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
