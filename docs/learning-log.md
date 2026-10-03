@@ -1066,6 +1066,29 @@ calls, graph writes, new accuracy result or model-speed improvement was measured
 The [DelayLama audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-deferred-panels.md)
 retains the native-import failure and limits alongside the successful UI checks.
 
+### L43 — Compact review surfaces without hiding uncertainty or changing ownership
+
+DelayLama's 2026-10-03 reading-layout pass removed competing height caps from
+timeline/claim/document reading and compacted backup controls. In the same desktop
+contract view, the review-conflict surface decreased from about 230 to 88 px.
+Conflict choices, storage/backup failures and the prohibition on merging acceptance
+remain visible; routine recovery explanations are available on demand. Explicit
+timeline selection focuses the exact source inspector, with return to the original
+entry. A controlled inspector retains its owner's navigation behavior.
+
+UI density, evidence matching and task completion are distinct measurements.
+Reducing a panel's height does not establish faster review, lower false acceptance,
+better labels or extraction accuracy. Month-only dates and entitlement/cost warnings
+remained visible in light/dark checks. Preserve uncertainty and source/revision
+ownership when testing an auxiliary Laya triage or retrieval arm; a tidier screen
+must not silently turn an assistant candidate into an accepted training label.
+
+All 380 frontend tests and the production build passed; protected source/output
+hashes and the existing Érable revision remained unchanged. The requested 390 px
+browser override yielded only 582 px of effective DOM width, so mobile certification
+remains incomplete. No Laya training or model quality/speed result was measured.
+See the [reading-layout audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-reading-layout.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
