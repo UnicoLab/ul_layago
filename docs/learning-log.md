@@ -1523,6 +1523,33 @@ clean-release regressions, 631 backend and 514 frontend tests/build passed.
 No Laya training, MLX or architecture change occurred in this pass. See the
 [evidence-workspace audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-evidence-workspace.md).
 
+### L56 — Source recovery is separate from graph completeness and semantic support
+
+Three live DelayLama source rechecks used the existing ORCHID-96 development
+case. A targeted role search recovered Willow as responsible and Granite as
+affected with exact original quotes, although the responsible-for graph edge was
+absent. A notice search left cause/effect values unresolved while retaining a
+negative interruption quote. A causal connection search checked the relationship,
+both endpoint facts and its assertion separately. No graph rows changed.
+These selected synthetic searches are not independent quality certification.
+
+The notice's milestone category received model support from an event/date quote
+that does not establish that category. Exact text presence is insufficient for
+classification entailment. Also, an unresolved effect value coexisted with an
+explicit negative-effect quote. Label source presence, role/value association,
+category policy, negative assertions and necessary-premise sufficiency separately;
+do not train directly on model verdicts or treat unresolved searches as absence.
+For evaluation, retain this mistaken category judgment alongside successful role
+recovery and assess taxonomy-guided inference against literal fact grounding.
+
+Each search now has a durable job and stable request identity, with scope guards,
+source/finding hashes, reload recovery and a selectable human-readable prompt-lab
+handoff. Lost response recovery must read/reuse the existing handle rather than
+silently launch another search. Review feedback does not automatically become a
+prompt edit, graph correction or training example. 634 backend and 518 frontend
+tests plus the production build passed. No Laya training, MLX or architecture
+change occurred. See the [graph-recheck audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-graph-rechecks.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
