@@ -1310,6 +1310,38 @@ note and candidate concern reached the prompt lab; no prompt activation or Laya
 training/architecture change occurred. See the
 [claim-occurrence audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-claim-occurrence.md).
 
+### L50 — Stage-specific facts expose errors hidden by a combined claim label
+
+DelayLama now separates incurred cost, payment request, payment award, extension
+grant, final settlement and claims waiver, with each record's own quotation and
+fact date. Unknown, explicit absence and numeric zero are different labels.
+Legacy results do not acquire inferred stages, and duplicate or missing types
+stay review concerns. Requested payment cannot be a label for actual expense;
+an extension or partial award cannot establish settlement or waiver.
+
+An initial English run returned only 8/24 required stage records; a French run
+returned 6/8. Stronger per-pass instructions returned all records, but the final
+English run met only 21/24 configured status/value/date combinations. The saved
+pipeline met 22/24; two no-settlement statements remained incorrectly unknown.
+French status/value checks passed 8/8 while only five date checks passed. Matching
+source quotes did not prevent an inferred zero award, undated facts acquiring a
+grant/occurrence date or incomplete interpretation. Retain these as development
+failures, not independent accuracy or automatic contrastive training labels.
+
+For future Laya datasets, annotate financial/temporal stages and the role of each
+date separately. Include requested-but-refused, partial awards, unquantified
+expenses, explicit zero actual cost, unknown waiver and grant-without-settlement
+examples. Rank/retrieve each fact's own necessary premise, with explicit decline,
+contradiction and missing-type cases. Original matching does not label semantic
+support; distinguish absence from a model's failure to return a record.
+
+Twenty-six extraction-model call records and one assistant refinement request
+were retained. The proposal remained inactive and unevaluated; Studio reruns
+still need captured detector inputs to reproduce saved claim-event joins. All
+604 backend and 430 frontend tests/build passed. No Laya training or architecture
+change occurred. See the
+[recorded-outcomes audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-recorded-outcomes.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
