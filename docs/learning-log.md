@@ -1793,6 +1793,50 @@ development UX follow-up. No Laya training, MLX acceleration, GLiNER integration
 or architecture change occurred. See the
 [source chronology validation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-graph-chronology.md).
 
+## L64 — Complete role cards improve coverage, not semantic certification (2026-10-04)
+
+DelayLama's free-form relationship pass omitted explicit performers. A separate
+opt-in experiment requests one card for every stored event, with performer,
+affected, causal and recipient outcomes, exact registered names/references,
+original quotes and explicit unresolved/not-applicable responses. Redundant
+name/reference agreement rejects inconsistent joins; a consistently wrong role
+can still pass it. Original matching does not certify an endpoint's meaning.
+
+Six invented English/French stories were declared before model calls, with each
+opaque register also reversed/renumbered. The baseline matched 18/30 declared
+links; the first candidate matched 29/30 and the final candidate 28/30, each with
+zero unexpected declared-set links. Two final proposals failed original quotation
+matching. The variants differ slightly in prompt/type guards and diagnostics;
+these are not isolated model-variance estimates. A paired full original → engine
+extraction → storage → scoped REST trial matched 9/15 baseline links and 15/15
+candidate links across the six stories, retaining each dated occurrence. Neither
+register permutations nor paired runs add independent contract families.
+
+For Laya training/evaluation, model cardinality and explicit unknown responses
+should expose omitted roles; they must not become correctness labels. Include
+wrong-but-valid refs, swapped party roles, register permutations, weather risk
+versus physical causation, notice recipient versus sender, negation and unknown
+roles. Evaluate exact event identity and necessary role premises separately from
+literal quote presence. Indexed original spans are a useful next experiment for
+transcription reliability; measure semantic false support independently.
+
+The shipped GUI now selects one role's original-source search, including notice
+recipient, keeps keyboard focus during submission and distinguishes a selected
+saved search from the next draft's fields. One live recipient search returned an
+original-matched candidate; an affected-party search stayed unresolved. Their graph
+snapshots were unchanged, and reading older evidence did not submit another job.
+600 frontend tests, 698 backend/SDK tests, the production build, full Go suite and
+intelligence/agents race checks passed. The existing macOS temporary-path assertion
+required a canonical TMPDIR for the full Go run; resolver behavior was unchanged.
+
+The engine experiment remains excluded from default builds and the running engine.
+Broader independent contract tests, long inputs, aliases, duplicate/false events
+and consistent-but-wrong semantic associations remain open. User graph tables,
+source files, protected sessions/artifacts were preserved; only the API was
+refreshed for the new source-check field. No Laya training, MLX/GLiNER integration,
+architecture change or automatic positive labels followed. See the
+[role-register audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-role-register.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
