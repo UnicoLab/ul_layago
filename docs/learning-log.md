@@ -1582,6 +1582,37 @@ review history, with no graph writes or default activation. 636 backend and 524
 frontend tests/build passed. No Laya training, MLX or architecture changes occurred.
 See the [handoff evaluation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-graph-prompt-handoff.md).
 
+### L58 — Structured correction can leave unsupported assertions in narrative output
+
+A third ORCHID-96 DelayLama development run kept the same original and editable
+intent, with strengthened automatic field guidance. It restored explicit
+no-interruption time/consequences and no extension/payment request/award outcomes,
+retained unknown actual cost, and included O2's responsible/affected role passage.
+However, the notice cause still described its content/purpose; reasoning and the
+summary asserted no financial impact without an incurred-cost premise. These
+issues were manually flagged and preserved. O1's one-day time impact was withdrawn
+while O2 retained its stated one-day delay. One selected synthetic rerun does not
+establish independent accuracy, causal effect of guidance, or speed improvement.
+
+The application now surfaces quoted-negative omissions on fresh and historical
+results without replacing facts. Shared English/French cases distinguish unknown,
+numeric zero, explicit absence, conditional/future statements, PDF line breaks,
+and broad cross-event quotations. This narrow wording guard is review triage;
+it does not certify meaning or discover all omitted negatives. 670 backend and
+548 frontend tests plus the production build passed. Earlier runs/feedback,
+original graph fingerprints and protected artifacts remained unchanged.
+
+For Laya datasets, label structured values, rationale and summary assertions
+separately. A correct empty cost field cannot make an unsupported “no financial
+impact” sentence a positive label. Include cause-versus-purpose negatives,
+necessary role premises, cross-event duration propagation and explicit absence
+versus unrecorded/unknown information. Measure assertion-level false support and
+negative recall, retaining mixed outcomes rather than declaring whole runs good
+or bad. Human-reviewed spans/associations are prerequisites for training labels;
+automatic guard silence and model verdicts are not substitutes. No new Laya
+training, MLX or architecture change occurred in this pass. See the
+[negative-outcomes evaluation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-negative-outcomes.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
