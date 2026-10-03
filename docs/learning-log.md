@@ -979,6 +979,34 @@ benefit. This batch added no Laya training, architectural change, accuracy or sp
 gain. MLX encoder training, full CLM objectives and stronger OS isolation remain
 separate unproven engineering work.
 
+### L40 — Structure repair can succeed while field interpretation regresses
+
+Evidence: [DelayLama omitted-section audit, 2026-10-03](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-review-omissions.md).
+A deliberately seeded incomplete output exposed omitted core sections. Real source
+searches and a correction draft returned five target values with matching passages
+and two scheduled milestones. This establishes a software review workflow, not
+extraction recall or independent accuracy: the omissions were seeded, and the
+contract was a development fixture.
+
+The same reruns added an unstated contract classification and put an ordinary
+delay-notice obligation in the extension-request slot. Further prompt feedback
+and tighter shared guidance did not eliminate those failures. Another rerun
+filled a positive payment-schedule field with an explicit absence statement.
+A source recheck proposed support for that statement; a limited wording guard
+kept the field uncertain and retained the model verdict. Separate an installment
+schedule, invoice deadline, source absence, generic notice duty and an extension
+request. Matching quotation text and repaired structure do not establish the
+field association or the correctness of other outputs.
+
+Keep wrong-slot and absence-as-positive examples as hard negatives after separate
+adjudication. Do not train from source-search support, user notes, repaired fields,
+review acceptance or lexical warning absence automatically. A useful Laya triage
+arm should measure these errors alongside necessary-clause recall, multilingual
+quality and full-pipeline latency on independent contract families. Retain all
+failed reruns and collateral changes; evaluate whether a candidate fixes the
+target while harming another field. No new Laya training, architecture, speed or
+quality gain was measured in this batch.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
