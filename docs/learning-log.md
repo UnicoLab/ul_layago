@@ -611,6 +611,51 @@ or default-prompt activation occurred in this audit. Next run a fixed reviewed
 field/span/role suite comparing LLM-only with Laya-assisted retrieval under the
 same runtime, then report completeness, false-support rate, latency and memory.
 
+### L27 — Typed events and matching quotes do not establish causal roles
+
+Evidence: [DelayLama's live deep-source graph audit, 2026-10-03](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-source-graph-analysis.md).
+One original invented French contract was submitted once to a real Chronograph
+background job. The graph went from 40 nodes/22 edges and no Event nodes to
+46 nodes/35 edges and five Event nodes. All five event quotations matched the
+source text, but semantic errors remained: notice-to-party cause-of-delay links,
+ambiguous responsible/affected party direction, and an amendment date absent from
+the Event's own quotation. No typed milestone supersession chain was established.
+
+The inspected engine promotes an event's related-concept links to `CAUSED_DELAY`
+when its description/type/impact contains delay/impact words. Generated
+justifications carry LLM provenance even though the relation type comes from
+that keyword rule. A source-backed event plus a matching quote is insufficient
+to label these directed edges as gold. DelayLama retains the raw graph, annotates
+one date concern and five causal concerns, and hides known uncertain links until
+requested for review. This qualifies delivery; it does not fix upstream graph
+semantics or prove Laya improves them.
+
+Training and evaluation consequences:
+
+- Separate association, actor responsibility, affected party, notice compliance,
+  temporal succession and causation. Label both endpoint roles and supporting
+  premises. Include exact-source wrong-role edges as independently reviewed hard
+  negatives, rather than copying model/keyword graph edges into training labels.
+- Preserve month-only precision and uncertainty. Period boundaries are not
+  observed event days, and an occurrence duration is not an established end date.
+  Each exact-date field needs its own supporting date passage; nearby context
+  cannot silently become the supplied evidence.
+- Measure graph recall and relation/direction correctness separately from event
+  quote match. Compare saved analysis, light source ingestion and deep-source
+  output; they have different coverage and derivation methods.
+- Keep original source hashes, submission intents, job handles and raw before/
+  after snapshots. A timed-out write or missing status is unknown, not permission
+  to resubmit or evidence of failed extraction. Operational receipts are distinct
+  from model quality labels.
+
+Application checks passed (392 Python, 224 frontend, production build), and reload
+and an API restart retained the same completed run/job. Chronograph worker status
+remains in memory; the saved receipt cannot restore a lost worker. This is one
+synthetic case, not held-out accuracy, speed or memory evidence. No Laya training
+or architecture change occurred. Next compare LLM-only against Laya-assisted
+clause retrieval/role validation on an independently reviewed, fixed suite, with
+false-support rate, premise recall, causal direction, latency and memory reported.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
