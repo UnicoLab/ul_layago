@@ -1239,6 +1239,45 @@ browser verification also fixed a citation card hidden behind the sticky header.
 No Laya training, weights, architecture or default-prompt change was made.
 See the [claim-context audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-claim-context.md).
 
+### L48 — Source identity and missing premises need separate labels
+
+A paired DelayLama Pine test exposed source event E4 being displayed as E1 and
+the event's dated occurrence being omitted from its quotations. New output
+guidance separates an exact original source reference from the analysis ID and
+requests the dated identifier premise. With identical input and recorded
+model/parameters, the candidate retained E4 and quoted that premise. This is one
+synthetic regression, not an independent quality or latency result.
+
+A fresh Cedar saved-project workflow returned four occurrences with E4, E12,
+RX-9 and an unlabeled rain event. Eight time/cost assessments linked to their
+current analysis IDs; source references remained separate facts, not guessed
+aliases. Cross-row display/source conflicts stay ambiguous even after assigning
+unique display IDs. A repeated original reference must not become a positive
+identity/link label merely because one row is renamed. Source-reference absence
+from an event's own quotes raises lexical review, not semantic certification.
+
+The same run still cited rules without some assessments' own occurrence premises,
+suggested no further action after a grant despite no-final-settlement wording,
+and introduced a late-notice exception not established by the contract. Deep
+source graph jobs completed but produced three causal edges targeting event
+identifiers and five targeting parties with questionable role/direction. The
+interface treats these as uncertain suggestions. Quote presence, empty review
+diagnostics and operational completion cannot supply trustworthy support labels.
+
+For Laya data, label original identity, unique analysis reference, actor/rule/
+occurrence support, edge type/direction and grant/settlement status separately.
+Include missing-premise and counterfactual examples across independent contract
+families; group translations and paraphrases before splitting. Keep these known
+development failures outside claims of held-out performance. Clause shortlisting
+must retain every required premise and conflicting amendment, and escalate when
+uncertain. Compare against the cleaned LLM-only baseline before attributing any
+workflow improvement to retrieval or contrastive training.
+
+Six extraction calls, two separate deep graph jobs, nineteen targeted receipt
+checks, 552 backend tests and 414 frontend tests were recorded. No Laya training,
+weights or architecture changed. See the
+[source-identity audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-source-identity.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
