@@ -925,6 +925,33 @@ correct adjacent dates do not make that field association a support label. These
 are development findings, not independently adjudicated gains or Laya evaluation.
 No new Laya training, quality or speed improvement was measured in this batch.
 
+### L38 — Give negative/procedural facts their own slots; keep quotation policy explicit
+
+Evidence: [DelayLama extension-ground audit, 2026-10-03](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-extension-grounds.md).
+The notice-only failure was repaired by separating permitted extension grounds
+from request deadlines/recipients/forms. A live counterexample then placed an
+explicitly excluded weather ground in the positive slot. Providing a separate
+exclusion field repaired placement in six short French/English development cases.
+Preserve entitlement conditions, exclusions, request requirements, actual notice
+and granted extensions as distinct labels; an exclusion or a duty to describe a
+cause is not positive entitlement. These hand-written cases share a shell and do
+not establish independent model accuracy or a Laya gain.
+
+The same pass exposed accent/translation changes in quotations. Navigation can
+locate similar text without making a valid support label. Strict verification now
+accepts exact or whitespace-only matches, displays the actual original span, and
+records its policy. One translated scope quotation remained rejected; a separate
+reviewed source recheck supplied a verbatim English passage without rewriting the
+saved failure. Keep raw output, reviewer decision, candidate, source identity and
+policy separate. Never train on fuzzy matching, lexical warning absence, model
+verdicts or reviewer acceptance alone as automatic entailment truth.
+
+A Laya shortlist/reader arm should retain both positive and excluded clauses plus
+procedural/actual-notice hard negatives. Measure span association and false support
+alongside recall, latency and memory on independent families. Model selection,
+per-language calibration and repeated-run variability remain necessary. This batch
+measured no new Laya training, architecture, quality or speed improvement.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
