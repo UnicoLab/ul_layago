@@ -1483,6 +1483,46 @@ No Laya training, architecture or acceleration change occurred in this pass.
 See the [relationship audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-event-relationships.md)
 and [quality priorities](https://github.com/UnicoLab/delaylama/blob/main/docs/contract-quality-roadmap.md).
 
+### L55 — Actor-free occurrences can disappear after correct extraction
+
+A further live DelayLama development case extracted three dated events correctly,
+but graph storage merged “Foundation work started one day late” into its related
+contractor. The organization-word guard treated “foundation” as an organization,
+and the quoted passage did not name an actor. The date was transferred to the
+party, removing the endpoint needed for the causal link. Assess extraction,
+identity/storage and retrieval separately: a correct model output can still be
+lost before review.
+
+A failing deterministic pipeline regression reproduces that party-date transfer.
+The storage safeguard retains a dated, uniquely source-matched model candidate
+with a verbatim title of at least four words after excluding registered actor
+identities. This heuristic preserves a reviewable candidate; it does not certify
+an occurrence or generalize to every short/paraphrased title. One post-fix
+synthetic replay retained all three events, left the companies undated, and
+retained permit-failure → late-start causation without treating the unrelated
+notice as a delay cause. The responsible-for relationship remained absent.
+The unsuccessful first graph and both outputs were retained. This is selected
+development evidence, not an independent accuracy estimate.
+
+For Laya evaluation, include actor-free occurrences, generic organization words
+used for activities, bare long party names, paraphrased/short action titles,
+related-party date contamination and required role links. Separate candidate
+retention from truth/entailment and required-premise recall. A causal span that
+mentions an event identifier can need a separate endpoint passage to resolve
+its actor. Missing graph edges must not automatically become negative labels,
+and matched quotes must not automatically become positive support labels.
+
+Operational follow-up also fixed exact project/tenant job scoping and queued
+cancellation before capacity becomes available, with queue-inclusive expiry and
+race tests. Service-wide health counts support safe activation without exposing
+job results. Cancellation can leave partial graph writes. These are lifecycle
+properties, not extraction accuracy or speed improvements. The evidence-first
+UI now compares a relationship and both endpoint passages before showing its
+connection list; the diagram is optional. Full Go tests, focused race tests,
+clean-release regressions, 631 backend and 514 frontend tests/build passed.
+No Laya training, MLX or architecture change occurred in this pass. See the
+[evidence-workspace audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-evidence-workspace.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
