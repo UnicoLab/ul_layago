@@ -1715,6 +1715,53 @@ span/association labels remain necessary. 581 frontend tests/build, full clean G
 tests and patch compatibility checks passed; these are operational evidence.
 No Laya training, MLX, GLiNER or architecture change occurred in this pass.
 
+## L62 — Storage identity must be evaluated independently of extraction (2026-10-03)
+
+DelayLama's paraphrased foundation event was lost after extraction because the
+type guard and merge helper treated a related contractor as the event's identity.
+A controlled original-source replay reproduced the failure before the change:
+the contractor inherited the foundation date, and a bare actor in `events[]`
+could inherit another event date. Merging now requires an unambiguous normalized
+full identity rather than a related mention or substring. Actor mentions stay
+undated; historical records were not rewritten. An original-linked dated
+paraphrase can survive a conflicting actor keyword as a classification-review
+candidate. This lexical heuristic is not semantic verification and can retain
+false events; alias and date-anchor duplicates remain separate concerns.
+
+The default fifth compatibility patch was reproduced on clean Chronograph v1.3.0,
+then activated after idle checks and binary/database backups. Existing graph rows
+and protected sources/sessions remained unchanged. Isolated real configured model
+runs retained all three Orchid event passages with their dates and timeline
+entries; Fir's notice-only control retained its recipient without causal edges.
+One fresh synthetic Poplar variation was analyzed once through the running GUI:
+all three dated events survived, actors stayed undated, and permit → foundation
+had both original endpoint passages. Its job report showed three proposed/stored
+events, two classification reviews and no storage failures. The GUI exposes these
+operational counts separately from completeness, with highlighted original context.
+Explicit client responsibility was still omitted, and a malformed `OPLAR-74`
+document candidate appeared beside `POPLAR-74`. These are retained failures.
+The real calls were integration acceptance, not paired independent accuracy trials.
+
+For reusable training/evaluation, annotate occurrence identity, actor mention,
+date role, span match, endpoint binding and semantic support separately. Include
+paraphrased actor-free occurrences, a bare actor returned as an event, wrong
+related-party order, ambiguous normalized identities, aliases, malformed IDs,
+date-anchor duplicates and unrelated notice controls. A correct model event list
+can still fail storage/retrieval, so measure end-to-end preservation alongside
+false candidate retention and necessary-premise recall. Lexical source matches,
+stored-event counts and review warnings are not automatic positive Laya labels.
+Use human-reviewed spans/associations and independent contract/story/template
+splits. Establish clause-shortlist recall and total workflow latency benefit
+before narrowing the full-source LLM's input.
+
+Full Go tests, agents/API race tests, 697 backend tests, 583 frontend tests and the
+production build passed. Normal desktop screenshots were inspected; inconsistent
+full-page capture geometry was discarded. No mobile certification, new Gantt view,
+Laya training, MLX acceleration, GLiNER integration or architecture change occurred
+in this pass. See the
+[occurrence identity validation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-occurrence-identity.md)
+for operational receipts, failed-regression evidence and remaining limitations.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
