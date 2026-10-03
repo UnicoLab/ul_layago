@@ -725,6 +725,32 @@ preserves unrelated facts. The Aster extraction still lacks its scope field; thi
 batch only recovered a review candidate and sent it into feedback. No Laya
 training or measured speed/memory improvement occurred.
 
+### L30 — A recovered candidate must survive a real rerun without hiding losses
+
+Evidence: [DelayLama correction audit, 2026-10-03](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-review-correction.md).
+The next Aster development rerun returned the missing broad works scope, with
+its original quotation, after shared field guidance and a recorded correction
+draft were introduced. This updates L29's earlier failed extraction observation;
+the earlier failed runs and recovery attempts remain evidence. It is one reused
+synthetic specimen, and both runtime guidance and prompt changed, so it proves
+neither held-out improvement nor isolated prompt causality.
+
+The same rerun changed five other findings and no longer returned a previously
+reported penalized-milestone value. The UI now surfaces those changes beside the
+targeted return and leaves their meaning for review. Never automatically restore
+baseline values: some may be wrong. Preserve originals and independently assess
+both the corrected target and collateral additions, withdrawals, wording and
+clause association. Quote presence, candidate adoption and semantic correctness
+are distinct measurements. In particular, a generic insurance requirement does
+not establish the names of its insurer/beneficiary solely from nearby party names.
+
+For Laya evaluation, use separate labels for candidate retrieval, explicit role
+support, missing/contradicted facts, amendment precedence and preservation of
+independently supported facts. Feedback-generated candidates and successful UI
+checks must not become gold training labels without review. Persist the exact
+source, prompt, runtime contract and returned model, and retain failed reruns.
+No new Laya training or measured acceleration benefit occurred in this batch.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
