@@ -1762,6 +1762,37 @@ in this pass. See the
 [occurrence identity validation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-occurrence-identity.md)
 for operational receipts, failed-regression evidence and remaining limitations.
 
+## L63 — Chronology position must retain date uncertainty (2026-10-04)
+
+DelayLama now presents the active contract's loaded source event candidates as
+recorded-day markers, labelled periods and an unresolved-date review list. Live
+Poplar checks retained three original-backed day markers; Lumen's month-only rain
+became a June 2026 period rather than an invented first-day occurrence or a
+month-long interruption. Original excerpts, role gaps and both causal endpoint
+passages remain one selection away. An actual CSV export matched the live graph's
+three Poplar IDs/titles/dates. The browser's download observation timed out; the
+fresh file itself confirmed completion, so the operation was not resubmitted.
+
+For training/evaluation, distinguish a recorded day, calendar period, estimated
+anchor, disputed date, ingestion timestamp and event duration. A period boundary
+can organize a chart without establishing occurrence, chronological precedence,
+notice trigger or a causal relationship. Include contradictory source date text,
+reversed range bounds, missing/absent event quotes, date-only Event labels and
+party dates as negatives. Exact text presence and plot position are not accepted
+date-role labels. Unrecognized period expressions remain unresolved rather than
+being guessed; evaluate date parsing by language and input format independently.
+
+The UI separates source graph chronology from saved-analysis timelines and shows
+pagination limits. Export retains unresolved entries and review metadata. All
+graph tables and protected sessions/artifacts stayed unchanged during this pass;
+no new analysis, source recheck or model promotion was submitted. 597 frontend
+tests in 49 files and the production build passed. Keyboard selection, return
+focus and actual original evidence were checked live. Mobile certification remains
+open, and mixed-export Fast Refresh remounts during frontend code edits remain a
+development UX follow-up. No Laya training, MLX acceleration, GLiNER integration
+or architecture change occurred. See the
+[source chronology validation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-graph-chronology.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
