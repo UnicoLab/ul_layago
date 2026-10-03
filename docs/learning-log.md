@@ -952,6 +952,33 @@ alongside recall, latency and memory on independent families. Model selection,
 per-language calibration and repeated-run variability remain necessary. This batch
 measured no new Laya training, architecture, quality or speed improvement.
 
+### L39 — Review completion and reviewer absence judgments are not training truth
+
+Evidence: [DelayLama review-priority audit, 2026-10-03](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-review-priorities.md).
+Acceptance records a decision; it does not erase quotation gaps, interpretation
+warnings or missing fields. Missing outputs need separate reviewer states for
+not-stated, not-applicable and extraction-missed. Cèdre distinguished an extension
+request procedure from absent permitted grounds, and an explicit payment deadline
+from an absent staged schedule. The original model outputs and failed reviews
+remain separate from these judgments and immutable review histories.
+
+Field determinations reach prompt experiments as untrusted review context, not
+forced replacement values. Exact source/result identity is necessary for restoring
+annotation context. It is insufficient to establish an absence or entailment label.
+Do not train on acceptance, closed task queues, matching spans, empty searches or
+reviewer not-stated judgments automatically. Independently adjudicate the field,
+relevant passages, document coverage and contract family before assigning a label.
+
+Useful failure labels include missing/invented facts, wrong role or field, date
+precision, negation, amendment precedence, unsupported edges, incomplete coverage
+and invalid quotations. Laya shortlisting and triage arms must compare against the
+unchanged LLM and pretrained Laya on independently separated families; report false
+support, necessary-clause recall, per-language quality, served latency and memory.
+An optional GLiNER span/record arm needs the same benchmark and explicit incremental
+benefit. This batch added no Laya training, architectural change, accuracy or speed
+gain. MLX encoder training, full CLM objectives and stronger OS isolation remain
+separate unproven engineering work.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
