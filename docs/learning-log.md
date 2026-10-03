@@ -1613,6 +1613,37 @@ automatic guard silence and model verdicts are not substitutes. No new Laya
 training, MLX or architecture change occurred in this pass. See the
 [negative-outcomes evaluation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-negative-outcomes.md).
 
+## L59 — Narrative judgments need separate evidence and retained failures (2026-10-03)
+
+DelayLama now reviews actual summary/rationale strings at independent result paths,
+without adding those projections to graph facts. A correct unknown-cost field was
+accompanied by a rationale asserting no financial impact. The source established
+no interruption and no payment requested/awarded, not absence of incurred costs.
+The first live narrative checker nevertheless returned supports. After narrative
+guidance plus a narrow financial-premise safeguard, a deliberate recheck repeated
+the model's supports judgment; the safeguard retained it as model_verdict while
+marking the final result insufficient. The original failed response and human
+correction remain available. A separate summary check was insufficient for the
+wrong reason, illustrating that negative verdicts also need explanation review.
+
+Notes for all three flagged findings reached the prompt-feedback panel and
+survived reload with both rationale searches. No assistant call, new extraction,
+default prompt activation or graph rewrite occurred. 690 backend tests, 569
+frontend tests and the production build passed; these are application regressions,
+not independent model accuracy evidence. Fourteen shared English/French examples
+cover recognized financial wording; this is a narrow review aid, not a general
+semantic validator. Protected artifacts and graph fingerprints remained unchanged.
+
+For training, separate exact-span presence, actor/event association, each material
+assertion, whole-paragraph sufficiency and explanation correctness. Preserve
+failed positive and failed negative judgments as human-review candidates, not
+automatic labels. Split by contract/template/story before synthetic expansion;
+use held-out amendments, conditionals, absence/unknown, payment/cost and
+cause/purpose counterexamples. First evaluate Laya as a clause shortlist or review
+priority layer, measuring necessary-premise recall, abstention, full-source fallback
+and complete workflow latency. No training, MLX or architecture change occurred
+in this pass. See the [narrative review evaluation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-narrative-review.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
