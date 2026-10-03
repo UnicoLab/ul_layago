@@ -1202,6 +1202,43 @@ All 532 backend tests, 409 frontend tests and production build passed. No Laya
 training, weight, architecture or default-prompt change was made in this pass.
 See the [event-reference full-stack audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-event-references.md).
 
+### L47 — Remove duplicated diagnostics before adding a retrieval accelerator
+
+DelayLama's claim flow sent prior saved analyses twice: as contract analysis and
+reused graph context. Those structures also contained runtime/provenance counters
+and evidence aggregates. A lossless projection of relevant analysis data now
+removes known operational diagnostics/vectors, keeps exact quotations, original
+ID ambiguity, field concerns and failures, and sends identical context once.
+Original text and saved outputs remain unchanged; distinct graph suggestions
+remain available and explicitly unverified.
+
+A live paired Hazel sample used identical original inputs and recorded model
+configuration. Each time/cost input decreased from 75,238 to 31,180 characters
+(58.6%). Both runs returned the same four event/target/status tuples and six
+original-matching quotes. One pair is not independent accuracy/recall evidence
+or a demonstrated latency benefit. The combined requested/awarded financial label
+remained semantically questionable even though the tuples matched.
+
+The claim-preparation pipeline also passed generated event output into its
+document slot. It now preserves the original execution text alongside contract
+clauses. With no original, quotations cannot verify against generated detector
+JSON and an analysis gap is displayed. A fresh pipeline and separate saved-project
+run verified quotes from both kinds of originals. The latter still renamed source
+event E4 to display E1, omitted the event date premise from its own quote and
+called an extension finalized without an explicit settlement statement.
+
+Before attributing gains to Laya retrieval, compare against this cleaned LLM-only
+baseline. Optimize context duplication and diagnostic noise independently of
+clause selection. Necessary premise recall, source/display identity, temporal
+precision, financial stages and unsupported finality remain separate evaluation
+targets. Quote presence and unchanged model labels cannot certify these meanings
+or safely produce positive training labels.
+
+All 539 backend tests, 410 frontend tests and production build passed; live
+browser verification also fixed a citation card hidden behind the sticky header.
+No Laya training, weights, architecture or default-prompt change was made.
+See the [claim-context audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-claim-context.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
