@@ -1163,6 +1163,45 @@ was fixed after lazy panel loading. No Laya training, weights, architecture,
 acceleration, new extraction runs or graph writes were performed in this pass.
 See the [benchmark-review audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-benchmark-review.md).
 
+### L46 — Preserve ambiguous event identity and financial dimensions end to end
+
+A DelayLama full-stack audit exposed a join error: normalization made duplicate
+original event IDs unique for display, then a reference to the duplicate original
+could be treated as explicit and borrow the first event's date. The fix retains
+original ambiguity across normalization/finalization/reload, leaves affected
+assessments unlinked and prevents inferred notice clocks, risk/amendment chains
+and analysis-map event edges. Raw findings and independent explicit trigger dates
+remain available. Missing original-identity metadata in older normalized records
+cannot be reconstructed from unique display IDs alone.
+
+Eight agents ran on three new English synthetic contract documents, plus two on
+a control contract. Thirty targeted workflow/source checks passed, including
+source hashes, quote presence, amended deadlines, month-only event precision and
+cross-contract graph isolation. Four original-source graph jobs completed. These
+are development checks, not independently labeled extraction/graph accuracy.
+One insurance finding still omitted its role-to-name premise, and six stored
+Chronograph cause links remained suspect and hidden for review by default.
+
+The model also put requested compensation into actual cost impact. A lexical
+review guard now flags recognized requested/awarded numeric amounts, preserving
+raw output and unresolved actual expenses. A requested amount, an award, incurred
+cost, entitlement and closure/waiver are separate labels. The combined returned
+cost status and recommendations still need semantic adjudication. Backend tests
+and visible source warnings do not establish model correctness.
+
+For Laya training and downstream evaluation, preserve original event identifiers,
+normalization decisions and ambiguity labels; never generate a positive join
+solely from a rewritten ID or title similarity. Keep event existence, reference
+resolution, temporal precision, causal direction and financial stage as separate
+targets. Synthetic data should include duplicate IDs, wrong references, separate
+notice dates and requested-but-unawarded amounts. Reject ambiguous automatic
+labels, reserve independently reviewed contract families and compare complete
+LLM-only versus Laya-assisted workflows before promoting an accelerator.
+
+All 532 backend tests, 409 frontend tests and production build passed. No Laya
+training, weight, architecture or default-prompt change was made in this pass.
+See the [event-reference full-stack audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-event-references.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
