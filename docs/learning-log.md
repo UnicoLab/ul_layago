@@ -1007,6 +1007,37 @@ failed reruns and collateral changes; evaluate whether a candidate fixes the
 target while harming another field. No new Laya training, architecture, speed or
 quality gain was measured in this batch.
 
+### L41 — Evidence checks need an exact field/value owner and visible uncertainty
+
+2026-10-03. DelayLama's [field-evidence audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-field-evidence-links.md)
+found that individual insufficient/contradictory source checks could disappear
+from result cards, graph navigation, timeline and Claim Desk when a separate
+warning map was missing. Section acceptance did not justify that loss. A matching
+section quotation also did not establish support for every displayed value.
+
+The frontend now projects recorded checks onto one exact current field/value,
+exposes own quotations beside that value and retains gaps after acceptance.
+Duplicate checks, stale values, unmatched/missing quotations and unresolved
+amendment premises or activation conditions remain concerns. A negative schedule
+passage can match the original while still being inappropriate as a positive
+payment schedule. Unrequested checks do not supply a neighboring field's verdict.
+These are display and review fixes; the saved model outputs stay unchanged.
+
+For future auxiliary models, keep field ownership, span presence, semantic
+support, applicability and human adjudication as separate labels/observations.
+Use wrong-slot, obsolete-value and unmet-condition examples only after independent
+label review. A candidate classifier can propose a review priority or retrieve a
+necessary clause, but must not erase uncertainty or create a factual graph edge.
+Benchmark it against the unchanged LLM pipeline, including collateral errors,
+necessary-clause recall, latency and memory. Do not train automatically from notes,
+source-search support, text matches or reviewer acceptance.
+
+The existing server-backed Érable Run 4 was inspected with its actual recorded
+checks. All 374 frontend tests and the production build passed; 32 protected
+source/output/code hashes matched. No new model calls, Laya training, architecture,
+acceleration, quality or speed gain were measured in this batch. The independent
+contract-family evaluation remains the prerequisite for promoting a Laya arm.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
