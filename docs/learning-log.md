@@ -696,6 +696,35 @@ keeps a flagged baseline's note visible as a recheck concern, without transferri
 its human decision to the new run. Follow-up evaluation should score whether the
 specific reviewed defect was resolved, alongside preservation of unrelated facts.
 
+### L29 — Missing values need field definitions, own spans and uncertainty checks
+
+Evidence: [DelayLama missing-field recovery audit, 2026-10-03](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-missing-fields.md).
+Checking only returned assertions missed an omitted works-scope field despite a
+matching project-description quotation. The application now shows core scalar
+gaps and searches them independently, retaining candidates outside the extraction.
+An initial source pass required detailed specifications before recognizing a
+broad renovation scope; an explicit task definition recovered the stated scope.
+Both attempts remain visible. Definition quality is part of task quality, not a
+model-size problem by default.
+
+Four fixed development smoke cases exposed an omitted response entry and an
+absence statement offered as a value. A bounded response repair now requires
+every requested key; literal values need their own exact matched source spans,
+and recognized English/French unknown/future-definition wording stays unresolved.
+The final four cases passed, but they were used to develop the corrections and
+are not independent accuracy evidence. General semantic association and silence
+remain unproven; lexical guards do not certify those properties.
+
+For Laya tasks, distinguish an explicit broad scope, a project title alone, a
+deferred scope, and a matching passage with the wrong field role. Include price
+vs penalty and invoice deadline vs installment schedule examples. Gold labels
+need independently reviewed field definitions and spans, not UI-generated gaps,
+assistant candidates or literal matching alone. Evaluate candidate recovery
+separately from whether a later extraction actually adopts the correct value and
+preserves unrelated facts. The Aster extraction still lacks its scope field; this
+batch only recovered a review candidate and sent it into feedback. No Laya
+training or measured speed/memory improvement occurred.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
