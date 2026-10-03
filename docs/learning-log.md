@@ -798,6 +798,36 @@ labels are derived. No new Laya data, training or measured quality/speed benefit
 was produced in this interface batch. Stable cross-run milestone identities and
 durable server-backed review exports remain unfinished work.
 
+### L33 — Separate source alignment from premise support
+
+Evidence: [DelayLama milestone comparison audit, 2026-10-03](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-milestone-comparison.md)
+and [prioritized contract improvement plan](https://github.com/UnicoLab/delaylama/blob/main/docs/contract-analysis-improvement-plan.md).
+Two recorded Aster runs retained three scheduled dates/kinds but renamed all
+generated milestone IDs. A source-aware comparison now aligns unique complete
+date occurrences in uniquely located original passages, within the same milestone
+kind and unchanged source. Repeated passages/anchors, ambiguous same-date
+mentions, unsupported dates and conflicting known source identifiers remain
+unpaired. Same-day obligations at different source positions remain distinct.
+All 271 frontend tests and the production-browser review/navigation checks passed.
+
+The aligned superseded deadline lost its replacement-amendment quote on the
+rerun. Date identity was retained, but its status lost a supporting premise.
+Quote-count reductions now remain visible in comparisons and correction checks,
+even without a value change. A combined quote can legitimately replace two;
+the count warning is not a semantic verdict. Source graph edges, canonical IDs,
+old outputs and human review decisions were not rewritten or inferred.
+
+For training/evaluation data, label dated span association separately from
+contractual role, amendment applicability and supersession. Do not label two
+findings semantically equivalent because a source alignment paired them. Include
+reassigned generated IDs, reordered rows, changing quote windows, repeated
+clauses, multiple obligations on one day and removed-premise negatives. Preserve
+each run's original source, fields, exact passages and review provenance. A
+retained value or quotation match is not a support label. Independently reviewed
+contract families and server-backed versioned reviews remain priorities before
+claiming improvements from Laya. No new Laya training or measured quality/speed
+gain occurred in this batch.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
