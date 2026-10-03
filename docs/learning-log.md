@@ -777,6 +777,27 @@ Evaluate semantic preservation separately from record pairing; uncertain identit
 should stay unpaired rather than becoming a guessed link or a claimed value loss.
 No Laya training or measured accelerator improvement occurred in this batch.
 
+### L32 — Make review findings distinct before curating model feedback
+
+Evidence: [DelayLama results-first audit, 2026-10-03](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-results-first.md).
+The contract desk repeated an assessment in linked and standalone lists, while
+coverage and an expanded timeline displaced the actual contract results. A
+compact source-aware summary, section shortcuts and a contextual inspector now
+make each saved finding easier to inspect. Linked assessments retain all their
+premises in one place; unresolved or ambiguous event references remain separate.
+Repeated event IDs cannot establish a unique join. All 259 frontend tests and a
+production-browser check passed, including an observed 389-pixel layout.
+
+For training-data export, count the underlying versioned finding once, regardless
+of how many views display it. Preserve the original document, array index/review
+path, prompt/run identity, all relevant passages and uncertainty. A summary card,
+source highlight, expanded reasoning panel or user navigation is not a support
+label. A missing primary value means extraction omission/unknown, not proved
+absence in the source. Ambiguous event links need adjudication before relational
+labels are derived. No new Laya data, training or measured quality/speed benefit
+was produced in this interface batch. Stable cross-run milestone identities and
+durable server-backed review exports remain unfinished work.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
