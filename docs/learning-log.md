@@ -1124,6 +1124,45 @@ weights, training recipe, default prompt or project graph pipeline changed here.
 See the [source-expectations audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-source-expectations.md)
 for full records, strict-label failures and scope limits.
 
+### L45 — Make review gaps durable; inspect assistant proposals for example leakage
+
+DelayLama now puts configured field expectations in the exact finding inspector,
+separating returned values, required original text and the agent's own quotations.
+Unmet literal expectations can be filtered and explicitly appended to a flagged
+review note. Existing reviewer text is retained, repeated appends do not duplicate
+the block, and acceptance does not erase a source-coverage gap. Context is
+recovered after reload only for the exact original agent/case/prompt/source/output
+and review scope. Ambiguous owners are withheld rather than guessed.
+
+A live production prompt-improve API call received four prior history entries,
+including both synthetic benchmark records, the selected case and feedback. It
+reported success, no fallback and no saved/default prompt change. Its proposal
+repeated a source-premise instruction already present and introduced the synthetic
+party name `Delta Maintenance Ltd.` despite feedback explicitly prohibiting
+case-specific names. Its self-reported confidence was 0.9; that is not evidence
+of improvement. A universal two-quotation rule also needs adjudication when one
+original clause already contains both necessary premises.
+
+An advisory GUI check now reports newly introduced recorded party names, contract
+references, prices and ISO dates that also occur in the original source. It survives
+reload and distinguishes copied values from generic instructions. This is a small
+literal review aid, not a comprehensive leakage detector or an activation gate.
+Unknown/extraction-omitted values, paraphrases, semantic leakage, inappropriate
+universal rules and regressions still need human review and independent evaluation.
+
+For Laya data generation or prompt-assisted labeling, do not treat returned
+assistant changes, confidence scores, accepted notes or synthetic benchmark gains
+as correct training targets. Inspect source support and label boundaries; retain
+failed proposals, avoid example-specific reusable rules and reserve independent
+contract families. Treat prompt refinement as a hypothesis and evaluate it before
+using generated labels or promoting a model. The unchanged LLM-only arm remains
+the comparator for a future Laya-assisted retrieval/triage experiment.
+
+All 405 frontend tests and build passed. A live selected-finding focus/scroll bug
+was fixed after lazy panel loading. No Laya training, weights, architecture,
+acceleration, new extraction runs or graph writes were performed in this pass.
+See the [benchmark-review audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-benchmark-review.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
