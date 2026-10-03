@@ -1837,6 +1837,60 @@ refreshed for the new source-check field. No Laya training, MLX/GLiNER integrati
 architecture change or automatic positive labels followed. See the
 [role-register audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-role-register.md).
 
+## L65 — Indexed evidence can still support the wrong direction (2026-10-04)
+
+DelayLama tested an optional original-passage selection arm after L64. The model
+chooses bounded consecutive IDs from the whole indexed nonblank original; exact
+text and UTF-8 byte offsets are reconstructed locally. Invented, absent, reordered,
+skipped, duplicate and oversized selections are rejected without quotation
+fallback. Repeated wording can be located at a particular position. That position
+still needs to be associated with the correct occurrence and role.
+
+Eleven invented English/French originals, each with normal and reversed/renumbered
+registers, produced 22 supplied-register development cases. Expectations were
+frozen before model calls and not included in input. One sequential comparison
+retained 51/60 declared links for quoted roles and 53/60 for indexed roles; both
+matched 19/22 exact sets. Indexed selection accepted one reversed French causal
+relationship despite real source text and consistent endpoint names/references.
+It also withheld six repeated-notice proposals for nonconsecutive passage IDs.
+The quoted variant withheld eight ambiguous repeated quotes and one mismatched
+quote. Both exact-set quality gates failed; no production promotion followed.
+
+Five additional full original → extraction → storage → scoped REST stories
+retained 15/15 quoted links and 11/15 indexed links. These trials used the same
+configured Gemini model with noop embeddings and separate upstream generations.
+One French indexed run stored concept Event aliases `F1`/`F2` beside the fuller
+occurrence nodes on the same dates/source passages. Its expected edge set matched,
+but event cardinality failed. The role register covered two events while four
+dated Event nodes existed. This duplication preceded passage selection and cannot
+be attributed causally to the indexed arm from independent stochastic runs.
+
+For Laya data and scoring, separate source location, occurrence identity, entity
+binding, relation direction, whole-assertion support and human acceptance. A
+source-matched model proposal is not an automatic positive label. Include sender
+corrections, withdrawn statements, subsequent reporting without causation,
+standing obligations without occurrences, repeated text and cross-paragraph
+qualifications. Necessary-premise recall must include the identifying date/heading
+and any negation or amendment, even when a local sentence looks sufficient.
+Use independent contract-family splits; permutations add robustness checks, not
+independent families. Preserve failed arms and raw suitable synthetic outputs.
+
+Next register a bounded start/end-window or multiple source-located-span arm;
+measure semantic false support separately from citation validity. Resolve
+concept/occurrence identity with same-day distinct-event negatives before training
+on graph-derived labels. Compare full extraction/review latency rather than
+assuming token reductions improve the workflow. No Laya model training, MLX,
+GLiNER or architecture changes occurred in this pass.
+
+The graph GUI now preserves its selected contract, event and open connection
+review during source edits to its two refactored components. Live corrected-notice
+review displayed the reconstructed original paragraph with sender/recipient
+context and retained model-suggestion status. 600 frontend tests, 704 backend/SDK
+tests, the build, full Go suite, race checks and clean patch reproduction passed;
+the experiment quality failures remain visible. User graph/session/source hashes
+stayed unchanged. See the
+[indexed-source audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-passages.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
