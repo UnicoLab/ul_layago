@@ -828,6 +828,37 @@ contract families and server-backed versioned reviews remain priorities before
 claiming improvements from Laya. No new Laya training or measured quality/speed
 gain occurred in this batch.
 
+### L34 — A matched amendment is not evidence that its conditions took effect
+
+Evidence: [DelayLama milestone premise audit, 2026-10-03](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-03-milestone-premises.md)
+and its preserved initial/final live responses. The initial development pass was
+5/6: an LLM reported a completion date as superseded because a potential new date
+was quoted, despite acknowledging an unmet permit condition. Both quotations
+matched the source. Span presence and even an apparently correct explanation
+therefore cannot stand in for a sound applicability verdict.
+
+The application now requests separate original-date and replacement-applicability
+premises, plus condition states and independent fulfillment passages when
+recognized contingencies occur. A cropped replacement quote is checked against
+its original sentence. Reported unmet/unknown or source-unverified fulfillment
+cannot preserve unqualified support. The UI and correction loop retain these
+checks as candidates, with actual response-model observations and bounded repair
+history. Generated milestone record IDs are context, not source assertions.
+Old outputs/default prompts/review identities were preserved. A full browser
+correction rerun restored the missing amendment quote but changed a guarantee
+beneficiary and other wording, illustrating why collateral changes need review.
+
+The final 7/7 live development pass includes a fulfilled-condition control; it is
+not independently held-out evidence. All 431 backend and 278 frontend tests
+passed. Lexical cues do not certify semantic entailment, all-condition coverage,
+negation scope, obligation identity or legal effect. Include paired fulfilled,
+unmet and unknown conditions, cropped clauses, unrelated permit issuance,
+multiple necessary conditions and contradictory provisions in future training.
+Label source-span presence, field association, premise completeness, condition
+fulfillment and applicability separately. Keep failures and family-level splits;
+do not turn assistant verdicts or matched spans into automatic truth labels.
+No new Laya training or measured quality/speed improvement occurred in this batch.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
