@@ -21,6 +21,7 @@ do not confer accuracy or calibration on another application's tasks.
 | Record | What it establishes |
 | --- | --- |
 | [DelayLama inventory → Prompt Lab (L96)](validation/delaylama-inventory-prompt-lab-20261004.json) | Source/versioned history handoff, baseline isolation, failed frozen action-separation comparison; no new training |
+| [DelayLama action-first and comparison review (L97)](validation/delaylama-action-first-comparison-review-20261004.json) | Separate action calls, failed causal/impact support, inventory recall limits and exact-run human judgments; no new training |
 | [DelayLama original inventory (L95)](validation/delaylama-source-inventory-20261004.json) | Separate omission-review workflow, retained actor/date and non-occurrence failures, graph preservation; no new training |
 | [DelayLama source action coverage (L94)](validation/delaylama-source-action-coverage-20261004.json) | Two rejected prompt revisions, 32 fresh draws, missed-action/deadline retention and correct quote/wrong premise; no new training |
 | [DelayLama prompt evidence scope (L93)](validation/delaylama-prompt-evidence-scope-20261004.json) | Relevant experiment inventory, selected-output binding, retained assistant attribution errors and browser persistence; no new training |

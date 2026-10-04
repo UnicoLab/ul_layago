@@ -3003,6 +3003,48 @@ No new Laya/GLiNER weights, training, architecture or MLX result was produced.
 See the [inventory-to-prompt audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-inventory-prompt-lab.md)
 and [shared receipt](validation/delaylama-inventory-prompt-lab-20261004.json).
 
+### L97 — Separate action calls improve granularity without certifying field support
+
+**Observed (DelayLama, 2026-10-04):** four previously inspected invented EN/FR
+fixtures supplied four fresh normal extraction baselines and eleven focused
+per-candidate calls. The focused arm replayed source inventory V2; it made no
+fresh inventory calls. Manual review found 10/12 selected actions as distinct
+records versus 8/12 for the baseline. This is a development binding count, not an
+independent accuracy or whole-document completeness score. Repeated full originals
+and extra calls do not establish a latency or cost benefit.
+
+The quality gate failed: closure was inferred as the suspension cause, the owner
+closure inherited the contractor suspension's one-day impact, and adjacent acts
+still appeared as consequences. Charme report delivery/receipt were withheld by
+the replayed inventory and were never analyzed downstream. Thus inventory recall
+limits focused extraction, and an exact quote does not certify a field's meaning
+or its association with the correct action. The experimental arm remains outside
+the active extraction agent and does not update graph facts or default prompts.
+
+Prompt Lab now preserves failed/passed/inconclusive human comparison judgments
+with explanations and SHA-256 bindings to both recorded runs, prompts, original
+and criteria. The browser confirmed persistence, stale-output warnings and
+restoration with both conflicting copies retained. One fresh assistant request
+received all 13 preceding entries and acknowledged failure, but still described
+its next prompt suggestion overconfidently. It was not applied or activated.
+These judgments are client-supplied scoped reviews, not authenticated executions,
+automatic promotion gates or approved training gold.
+
+**Implication for Laya:** evaluate a sufficient-context shortlist and a calibrated
+support judge separately. Include false causal support, neighboring-actor impact
+leakage, pronoun/shared-date chains, negation and missing-inventory actions. Keep
+all stages' omissions in the pipeline denominator. Use adjudicated corrections
+with independent contract/story/template splits; synthetic model nominations or
+reported passes alone must not become positive support labels. Preserve failed
+suggestions and report per-stage calls, resource use and end-to-end quality.
+
+The suites passed 937 backend and 758 frontend tests; browser workflow and user
+graph/artifact preservation checks passed. No new Laya/GLiNER weights, training,
+architecture or MLX acceleration result was produced.
+
+See the [action-first and review audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-action-first-comparison-review.md)
+and [shared receipt](validation/delaylama-action-first-comparison-review-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
