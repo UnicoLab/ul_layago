@@ -2375,6 +2375,39 @@ using classification scores as quality claims. No new model training or timings.
 See the [party integration audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-domain-actors.md)
 and [shared receipt](validation/delaylama-domain-actors-20261004.json).
 
+## L79 — Occurrence identity and source grounding need independent gates (2026-10-04)
+
+The Planning revision failure retained in L78 was reproduced with the exact
+recorded Gemini extraction and synthetic original. A downstream entity-word guard
+had demoted a completed, source-dated schedule revision. A bounded new default
+exception retains a marked Event when a unique original quote, explicit date,
+allowed category, specific title overlap and supported affirmative past wording
+agree in the same dated clause. Actors, scalar identities, inferred dates,
+obligations, negated/future acts and ambiguous quotes remain outside this exception.
+Sentence/paragraph scope and bounded date-text matching prevent adjacent acts and
+“4 April”/“14 April” substring errors from supplying the premise.
+
+Identical recorded output now stores two Events rather than one Event/one standing
+mention; this SQLite replay makes no provider call. A fresh original-only full
+stack/model/browser run exercises the new branch, shows both correct days and exact
+source quotes, and still omits both performers. Twenty-five new storage cases,
+direct guards, all Go/focused race, 802 backend/671 frontend, production build and
+fourteen-default/four-optional reproduction checks pass. Existing graph/config,
+protected edits and user histories remain intact. Optional role-meaning stays
+opt-in. This is synthetic development evidence, not independent certification.
+
+An exact quote can support a subject mention without proving action occurrence,
+date role or performer association. Keep these as separate labels, alongside
+entity/category and human acceptance. A lexical storage exception is not a
+semantic classifier; unknown verbs/languages and older actor-word exceptions still
+need evaluation. Train or shortlist with Laya only after downstream integration
+checks, necessary-clause/amendment recall and calibrated fallback gates. Prioritize
+role recovery and version-bound reviewed correction/undo before treating counts
+as completeness. No new Laya/GLiNER training, speed or acceleration measurement.
+
+See the [observed-action audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-observed-actions.md)
+and [shared receipt](validation/delaylama-observed-actions-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
