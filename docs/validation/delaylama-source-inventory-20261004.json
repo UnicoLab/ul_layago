@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-04",
+  "scope": "Dedicated manual source inventory and full-stack workflow checks, not general contract completeness or semantic certification",
+  "root_audit": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-inventory.md",
+  "protocol": "source-inventory-v2",
+  "development_draws": 16,
+  "browser_inventory_jobs": 2,
+  "full_stack_graph_jobs": 2,
+  "selected_observed_action_own_premise": {
+    "retained": 20,
+    "denominator": 24
+  },
+  "selected_nonobserved_assertions": {
+    "retained": 8,
+    "denominator": 14
+  },
+  "full_quality_gate_passed": false,
+  "manual_review_panel_activated": true,
+  "automatic_graph_write": false,
+  "independent_real_contract_quality_claim": false,
+  "laya_training_or_weights_changed": false,
+  "gliner_changed": false,
+  "lessons": [
+    "Missing-action discovery is separate from support classification of existing candidates",
+    "Original presence does not establish interpretation or event identity; adjacent actions can acquire combined actor links",
+    "Keep omitted and withheld findings in denominators and feedback; source indexing reconstructed own passages but actor/date resolution still failed",
+    "Never-sent reminders and cancelled meetings need explicit negative/plan coverage tests",
+    "A shortlist must preserve necessary premise clauses; do not turn inventory candidates into approved labels"
+  ],
+  "verification": {
+    "backend_tests": 908,
+    "frontend_tests": 746,
+    "new_backend_tests": 19,
+    "new_frontend_tests": 7,
+    "production_build": "passed",
+    "build_warning": "Existing 510.39 KB main chunk; not resolved by this change"
+  }
+}

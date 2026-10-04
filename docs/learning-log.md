@@ -2920,6 +2920,47 @@ is claimed. Engineering tests passed without changing the live application.
 See the [source action audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-action-coverage.md)
 and [shared receipt](validation/delaylama-source-action-coverage-20261004.json).
 
+## L95 — A separate source inventory can find omissions without validating meaning
+
+DelayLama now provides an explicit one-original review inventory, independent of
+stored extraction and graph output. Indexed original passages reconstruct each
+candidate's own action, actor and calendar context. Stable saved requests, reload
+observation, captured-source history and changed-original warnings keep model
+work bounded. It does not add graph facts or automatically rewrite prompts.
+
+Sixteen development calls compared two protocol revisions on previously inspected
+synthetic English/French sources. The selected indexed protocol retained 20/24
+selected observed actions with their own actor/calendar passages and 8/14 selected
+plans/deadlines, based on coding-agent manual review. It recovered the separate
+contractor suspension and separated submission/review/return, but withheld the
+French completion deadline and report delivery/receipt for actor/date premises.
+A never-sent reminder and cancelled meeting were not proposed. Original-language
+instructions were also violated. The full completeness gate failed; different
+provider settings/tasks prevent a paired improvement claim against prior graph
+extraction. No independent real-contract evaluation was added.
+
+A fresh two-original graph run and two browser inventory jobs demonstrated the
+workflow. The stored closure combines a contractor suspension in its quotation
+and assigns owner plus contractor actor links; the inventory separates the
+suspension. Overlapping text therefore remains a comparison lead, not matching
+identity or proof of a particular prompt failure. All graph-table fingerprints
+were unchanged by inventory scans and saved-job reuse. The full suites passed
+908 backend/746 frontend tests; final feedback-content checks and build passed.
+These engineering checks do not prove extraction quality.
+
+For training, preserve omitted/withheld assertions in the denominator. Include
+pronouns, shared dates, cancelled actions and semantic pairs such as delivery/
+receipt, instruction/suspension and review/approval. A true action paired with an
+incomplete supporting passage is insufficient support; a source match paired
+with the wrong action label is not approval. Do not train from unreviewed inventory
+proposals or assistant recommendations. Laya can prioritize review and route
+clauses only after measuring necessary-premise recall, false support and calibrated
+abstention. No Laya/GLiNER weight, architecture, training or acceleration result
+was produced in this experiment.
+
+See the [source inventory audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-inventory.md)
+and [shared receipt](validation/delaylama-source-inventory-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

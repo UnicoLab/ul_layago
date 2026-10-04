@@ -20,6 +20,7 @@ do not confer accuracy or calibration on another application's tasks.
 
 | Record | What it establishes |
 | --- | --- |
+| [DelayLama original inventory (L95)](validation/delaylama-source-inventory-20261004.json) | Separate omission-review workflow, retained actor/date and non-occurrence failures, graph preservation; no new training |
 | [DelayLama source action coverage (L94)](validation/delaylama-source-action-coverage-20261004.json) | Two rejected prompt revisions, 32 fresh draws, missed-action/deadline retention and correct quote/wrong premise; no new training |
 | [DelayLama prompt evidence scope (L93)](validation/delaylama-prompt-evidence-scope-20261004.json) | Relevant experiment inventory, selected-output binding, retained assistant attribution errors and browser persistence; no new training |
 | [DelayLama scalar associations, 2026-10-04](validation/delaylama-source-associations-20261004.json) | Original-premise date/value binding, exact Unicode offsets, frozen wrong-deadline regression, fresh chronology and retained export/recall limits; L90 |
