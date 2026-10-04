@@ -3162,3 +3162,51 @@ architecture or supervisor qualification changed. See the
 [action-frame audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-action-frame.md),
 [measured graphs](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/source-action-frame/final-synthetic-graph.json)
 and [shared receipt](validation/delaylama-source-action-frame-20261004.json).
+
+### L100 — Indexed evidence is not an association quality gate
+
+**Observed (DelayLama, 2026-10-04):** a second calendar fallback existed even
+without explicit extracted calendar text. A model-generated action label containing
+a neighbouring date populated a Date pointer before source validation. Reproduced
+source-context and generated-label failures now clear canonical occurrence/valid-from
+and calendar metadata for model-assessed blank calendar fields. Explicit calendar
+text remains usable; historical graphs are not repaired automatically.
+
+An isolated source-first experiment selected original line ranges for actor,
+calendar, context and impact premises. The engine reconstructs exact contiguous
+UTF-8 source text, retains antecedents and withholds invalid selections. This
+avoids invented abbreviated supporting quotes. It still cannot establish actor,
+date, causal or legal meaning from source location alone.
+
+Six new SQLite projects completed full-original jobs; four reused development
+stories and two English/French stories were frozen before first indexed-model
+draws. Final checks retained 20/22 separate actions, 2/22 expected performer links,
+20/20 explicit dates and 0/2 unknown-calendar actions. Both unknown-date actions
+were proposed without the required date role and withheld. One own-action impact
+passed, two declared forbidden causal pairs were absent with resolved endpoints,
+and two located unperformed-plan candidates had no observed occurrence.
+**Qualification failed** and the optional pass stays off. This is not a controlled
+comparison with L99's different fixtures/model draws. Six terminal stage receipts
+and six reported inventory calls are archived; provider HTTP/retries are uncounted.
+The independent actor relationship stage remains the primary bottleneck. A noisy
+heading absorbed into an organization name also remains unresolved.
+
+**Implication for training:** preserve positively reported actions even when their
+calendar is unknown, and measure action recall separately from calendar accuracy.
+Use original-range selection as a location protocol, then train/rank sufficient
+premises and actor association against adjudicated labels. Include generated-label
+calendar contamination, recipient/performer swaps, pronouns, negative performance
+and unknown-date returns as hard negatives. A candidate omission cannot count as
+correct abstention on a required action. Neither copied text nor model judgment
+should become a supervised support label without adjudication.
+
+Backend 1,018 and frontend 774 tests pass; default/optional full Go suites and
+focused default race checks pass. An initial concurrent frontend timeout/cascade
+was retained; the affected file and complete one-worker suite passed. Parallel Go sweeps also timed out in the large API malformed-body sweep; its
+standalone replay passed in 98.718 seconds, then final full suites ran serially.
+A premature activation log check was corrected before committing. Structural
+passes do not override semantic failure. No Laya/GLiNER weights, MLX, architecture,
+training or supervisor qualification changed. See the
+[indexed-premise audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-indexed-action-premises.md),
+[captured graph](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/indexed-action-premises/final-synthetic-graph.json)
+and [shared receipt](validation/delaylama-indexed-action-premises-20261004.json).

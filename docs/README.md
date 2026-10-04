@@ -21,6 +21,7 @@ do not confer accuracy or calibration on another application's tasks.
 | Record | What it establishes |
 | --- | --- |
 | [DelayLama inventory → Prompt Lab (L96)](validation/delaylama-inventory-prompt-lab-20261004.json) | Source/versioned history handoff, baseline isolation, failed frozen action-separation comparison; no new training |
+| [DelayLama indexed premise selection (L100)](validation/delaylama-indexed-action-premises-20261004.json) | Calendar fallback from generated labels, failed action/actor gate despite located premises; no new training |
 | [DelayLama individual action attribution (L99)](validation/delaylama-source-action-frame-20261004.json) | Full-original durable graph jobs, action/actor/date/impact gates and failed extra-inventory qualification; no new training |
 | [DelayLama graph context and source support (L98)](validation/delaylama-graph-neighborhood-support-20261004.json) | Entire-component graph browsing, whole topic context, source metadata, false event associations and unresolved amendment applicability; no new training |
 | [DelayLama action-first and comparison review (L97)](validation/delaylama-action-first-comparison-review-20261004.json) | Separate action calls, failed causal/impact support, inventory recall limits and exact-run human judgments; no new training |
