@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-04",
+  "finding": "L93",
+  "source_receipt": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-prompt-evidence-scope.json",
+  "source_receipt_sha256": "20ea1fa7d7171691ed40e4d0f4c3d6623bd42841ea9271572340b7424fd61abb",
+  "scope": "Recorded experiment availability and Prompt Lab workflow, not authenticated execution, pipeline cause or independent contract quality certification",
+  "model_findings": {
+    "before_baseline": "Assistant still blamed extraction prompt without a relevant baseline. Proposal discarded; no change adopted.",
+    "after_baseline": "Assistant recognizes explicit performer and acknowledges human undo, but its stronger graph-cause claim remains unproven. No revision applied or activated."
+  },
+  "proposals": [
+    {
+      "id": "bcb00825-8911-4674-9d30-b34cf2713b6a",
+      "used_fallback": false,
+      "history_count": 3,
+      "scope_inventory": {
+        "basis": "Client-supplied session records; availability does not authenticate execution or prove meaning, completeness, or causality.",
+        "excluded_experiments": [
+          {
+            "id": "other-original",
+            "kind": "run",
+            "label": "Imported Willow graph result — unrelated original",
+            "reason": "Different or unavailable original"
+          }
+        ],
+        "failure_stage": "unestablished",
+        "graph_reviews": [
+          {
+            "actions": {
+              "undone": 1
+            },
+            "history_partial": false,
+            "id": "8e47f3fc-da65-4276-9f8a-37d14ac29445",
+            "label": "Révision du planning",
+            "same_original_and_agent": true
+          }
+        ],
+        "human_actions_on_current_original": {
+          "undone": 1
+        },
+        "human_history_partial": false,
+        "next_checks": [
+          "Run and retain the target agent's baseline on this exact original; graph searches and review notes alone cannot diagnose its prompt.",
+          "Inspect the same original in the raw extraction, stored facts, connections and displayed result before assigning a failure stage.",
+          "Compare baseline and candidate on frozen inputs, then evaluate separate contract families and languages before promoting the draft.",
+          "Treat preview, apply and undo as separate human graph actions; undo removes the reviewed link, not the source event."
+        ],
+        "original_available": true,
+        "policy": "recorded-prompt-evidence-v1",
+        "recorded_experiments": [],
+        "selected_result": {
+          "description": "Selected output belongs to a different or unrecorded original/agent scope.",
+          "id": "other-original",
+          "status": "different_scope"
+        },
+        "semantic_quality": "not_evaluated_by_this_inventory",
+        "target_agent": "event_detector"
+      },
+      "rationale": "The current prompt lacks explicit instructions on how to handle actor-to-action linking, leading to the omission of the 'performer' (responsible_party) in the extraction. By explicitly instructing the model to link the performer to the specific action described in the text, we improve the likelihood of capturing the responsible party while maintaining the requirement for verbatim evidence.",
+      "recommendations": [
+        "Run the updated prompt against the 'original-rable-execution-record' to verify if 'Horizon OPC SAS' is correctly captured as the responsible_party for the 'Révision du planning' event.",
+        "Compare the baseline output of the updated prompt with the previous extraction to ensure no regression in event detection.",
+        "Review the 'responsible_party' field for all events to ensure it contains only explicitly named performers, not inferred parties."
+      ],
+      "draft_sha256": "138ec1011882cc2fbd8205a075c49d8b63a99f24cbf47518a22ef12a8e03ac5d"
+    },
+    {
+      "id": "6e71cc91-ff40-4d65-a059-a316d9042b4a",
+      "used_fallback": false,
+      "history_count": 7,
+      "scope_inventory": {
+        "basis": "Client-supplied session records; availability does not authenticate execution or prove meaning, completeness, or causality.",
+        "excluded_experiments": [
+          {
+            "id": "other-original",
+            "kind": "run",
+            "label": "Imported Willow graph result — unrelated original",
+            "reason": "Different or unavailable original"
+          }
+        ],
+        "failure_stage": "unestablished",
+        "graph_reviews": [
+          {
+            "actions": {
+              "undone": 1
+            },
+            "history_partial": false,
+            "id": "8e47f3fc-da65-4276-9f8a-37d14ac29445",
+            "label": "Révision du planning",
+            "same_original_and_agent": true
+          }
+        ],
+        "human_actions_on_current_original": {
+          "undone": 1
+        },
+        "human_history_partial": false,
+        "next_checks": [
+          "Inspect the same original in the raw extraction, stored facts, connections and displayed result before assigning a failure stage.",
+          "Compare baseline and candidate on frozen inputs, then evaluate separate contract families and languages before promoting the draft.",
+          "Treat preview, apply and undo as separate human graph actions; undo removes the reviewed link, not the source event."
+        ],
+        "original_available": true,
+        "policy": "recorded-prompt-evidence-v1",
+        "recorded_experiments": [
+          {
+            "id": "ef7fbd21-4470-4c19-aef7-10e57380e469",
+            "kind": "run",
+            "label": "Run 2"
+          }
+        ],
+        "selected_result": {
+          "description": "Selected output matches a recorded run on this original and agent; prompt availability is inventoried separately.",
+          "id": "ef7fbd21-4470-4c19-aef7-10e57380e469",
+          "status": "recorded"
+        },
+        "semantic_quality": "not_evaluated_by_this_inventory",
+        "target_agent": "event_detector"
+      },
+      "rationale": "The baseline extraction correctly identified 'Horizon OPC SAS' as the responsible party for E2, demonstrating that the model is capable of extracting the performer when the text is explicit. The graph omission was a separate human-reviewed action (undone link), not an extraction failure. The improved prompt reinforces the requirement to prioritize explicit evidence over general role-based inference, ensuring the model remains grounded in the document's specific statements about responsibility.",
+      "recommendations": [
+        "Verify the 'responsible_party' field in the baseline output against the source text to confirm it matches the explicit performer.",
+        "Treat the graph's missing link as a separate human-review artifact; the extraction agent's output is already correctly identifying the performer.",
+        "Compare the current baseline output with future runs to ensure that the added instructions do not introduce hallucinations regarding responsibility."
+      ],
+      "draft_sha256": "ac7f8ea23a310c195fc24d9a5a06e4dacabf4176e637b78e16a924c462745b05"
+    }
+  ],
+  "checks": {
+    "backend": "884 passed (full application tests, final code)",
+    "backend_focused": "32 passed",
+    "frontend": "739 passed across 60 files before final presentation-copy/source-name refinements",
+    "frontend_final_focused": "54 passed across 2 affected files",
+    "production_build": "Passed; existing >500 kB main-chunk warning remains",
+    "go": "No Go/engine source changes in this pass; prior Go proof is not a new result."
+  },
+  "limits": [
+    "Client-supplied session records are not authenticated engine traces or independently reviewed labels.",
+    "Exact original/agent/prompt/output availability is not evidence that the prompt caused a problem. Graph registration, relationships and rendering still need their own comparable traces.",
+    "Review counts describe imported record states, not all state transitions or live graph state; partial/foreign histories remain visible.",
+    "Full independent real-contract, multilingual/OCR/amendment semantic evaluation remains unfinished. Known French raw extraction omission and English deadline omission remain.",
+    "No Laya/GLiNER training or acceleration evaluation; model misattribution is retained, not called solved.",
+    "Earlier API race timeout, bundle warning and download-delivery limit remain."
+  ],
+  "new_training": false,
+  "delaylama_revision": "0e09b1a9ae6cb6afe590142a2fddb3a0933f51c1"
+}

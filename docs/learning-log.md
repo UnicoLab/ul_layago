@@ -2862,6 +2862,33 @@ No new Laya/GLiNER training or acceleration evidence was produced.
 See the [repeated occurrence audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-repeated-occurrences.md)
 and [shared receipt](validation/delaylama-repeated-occurrences-20261004.json).
 
+## L93 — A graph omission is not an extraction-prompt diagnosis
+
+DelayLama's prior warning treated any experiment in a session as a relevant
+baseline. The new inventory requires an exact original, explicit target agent,
+recorded prompt and readable completed output; imported/legacy/foreign/fallback
+records and ambiguous benchmark identities cannot establish that baseline. The
+selected result is separately bound to its run, including strict JSON type
+comparison. The endpoint computes this inventory independently of model output.
+
+An actual assistant still blamed the prompt before a relevant baseline existed.
+A fresh unchanged-prompt run returned the declared performer; the next assistant
+recognized it and acknowledged human undo, while overclaiming graph causality.
+Keep both failures and corrected observations. Neither proposal was applied or
+activated. Available records and matched quotations do not authenticate execution,
+prove semantic accuracy or locate a pipeline failure. Human review-state snapshots
+also do not represent every transition or current live graph state.
+
+For training/prompt optimization, localize loss at extraction, merge, registration,
+association, retrieval or rendering before constructing improvement labels. A
+missing graph link is not automatically a negative extraction label. Preserve the
+original/run/output association and unknown/partial history; evaluate candidate
+changes separately rather than treating assistant recommendations as truth.
+No new Laya/GLiNER training or acceleration evidence was produced.
+
+See the [Prompt Lab audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-prompt-evidence-scope.md)
+and [shared receipt](validation/delaylama-prompt-evidence-scope-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
