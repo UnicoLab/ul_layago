@@ -1,0 +1,283 @@
+{
+  "date": "2026-10-04",
+  "finding": "L92",
+  "source_receipt": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-repeated-occurrences.json",
+  "source_receipt_sha256": "9db73a51e280d895f8794cb5386d23e6e3931ca7781637bdea908af2a74998c0",
+  "scope": "Repeated-candidate engineering repair, deterministic extraction/storage regression and one fresh synthetic source-graph browser run; not independent contract quality certification",
+  "regressions": {
+    "baseline_repeated_candidate_and_chunk_events": 1,
+    "candidate_distinct_repeated_events": 3,
+    "backends": [
+      "sqlite",
+      "filedb"
+    ],
+    "matching_overlap_deduplicated": true,
+    "literal_month_day_time_and_range_precision_retained": true
+  },
+  "fresh_run": {
+    "model": "gemini-3.1-flash-lite",
+    "candidate_passes": 2,
+    "critic_passes": 0,
+    "inputs": {
+      "project_id": "repeated-occurrences-qa-willow-20261004-125706-5589d7",
+      "source_id": "original-willow-notice-register",
+      "sha256": "c45a2b53df55f042d642fb62ff9b6185f340b8d6de70f721f388f9b57cd59339",
+      "fixture": "/private/tmp/delaylama-repeated-occurrences/contract.md",
+      "scope": "Fresh source model extraction with two candidate passes; no seeded graph or expected outputs supplied"
+    },
+    "job_id": "74c08f42-832f-4b42-a6fc-6ec123ac1d2a",
+    "status": "done",
+    "schema_snapshot": {
+      "version": 1,
+      "name": "construction_claims",
+      "sha256": "f35e319cd7b678b59f547f247920708672186f7f2e681a497b2ec6cd5bb56ceb",
+      "event_types": [
+        "milestone",
+        "delay",
+        "completion",
+        "reception",
+        "handover",
+        "reserve_lifting",
+        "phase_start",
+        "phase_end",
+        "decision",
+        "change_order",
+        "modification",
+        "suspension",
+        "termination",
+        "approval",
+        "rejection",
+        "notice_served",
+        "notice_deadline_expired",
+        "claim_event",
+        "force_majeure",
+        "penalty_triggered",
+        "site_condition",
+        "pollution_discovery",
+        "permit_delay",
+        "authority_delay",
+        "concessionaire_delay",
+        "payment",
+        "non_payment",
+        "price_revision",
+        "cost_overrun",
+        "additional_works"
+      ],
+      "captured_at": "2026-10-04T12:58:37.385408Z",
+      "source": "preset"
+    },
+    "event_storage": {
+      "proposed": 4,
+      "stored": 4,
+      "standing_mentions": 0,
+      "classification_reviews": 4,
+      "failed": 0
+    },
+    "event_relations": {
+      "status": "completed",
+      "proposed": 6,
+      "rejected": 0,
+      "stored": 6,
+      "performers": {
+        "status": "completed",
+        "expected": 4,
+        "checked": 4,
+        "missing": 0,
+        "with_candidates": 3,
+        "unresolved": 0,
+        "not_applicable": 1,
+        "withheld": 0,
+        "invalid_cards": 0
+      }
+    },
+    "source_checks": {
+      "events": [
+        {
+          "id": "73278c10-0fe3-4d63-94f1-f2657af1609d",
+          "name": "Planned reminder by Pine OPC Ltd",
+          "date": "2051-04-05",
+          "role": "planned",
+          "source_text": "Pine OPC Ltd planned a reminder for 5 April 2051, but that reminder was never sent.",
+          "unique_original_match": true
+        },
+        {
+          "id": "8271f2ed-38f3-43e5-918a-97b2b04648b6",
+          "name": "N-3 administrative insurance notice sent",
+          "date": "2051-04-04",
+          "role": "observed",
+          "source_text": "N-3 — On 4 April 2051, Cedar Construction Ltd sent Willow Council a third administrative insurance notice.",
+          "unique_original_match": true
+        },
+        {
+          "id": "7c3e9f99-f5b5-46dc-8d69-94802e14d859",
+          "name": "N-2 administrative insurance notice sent",
+          "date": "2051-04-04",
+          "role": "observed",
+          "source_text": "N-2 — On 4 April 2051, Cedar Construction Ltd sent Willow Council a second administrative insurance notice.",
+          "unique_original_match": true
+        },
+        {
+          "id": "c15d5fca-c216-4ae2-aaf5-3a28fa41e904",
+          "name": "N-1 administrative insurance notice sent",
+          "date": "2051-04-03",
+          "role": "observed",
+          "source_text": "N-1 — On 3 April 2051, Cedar Construction Ltd sent Willow Council an administrative insurance notice.",
+          "unique_original_match": true
+        }
+      ],
+      "directed_roles": [
+        {
+          "source": "Cedar Construction Ltd",
+          "target": "N-3 administrative insurance notice sent",
+          "relation": "RESPONSIBLE_FOR",
+          "source_text": "On 4 April 2051, Cedar Construction Ltd sent Willow Council a third administrative insurance notice.",
+          "unique_original_bytes": true,
+          "quote_within_target_occurrence": true
+        },
+        {
+          "source": "Cedar Construction Ltd",
+          "target": "N-2 administrative insurance notice sent",
+          "relation": "RESPONSIBLE_FOR",
+          "source_text": "On 4 April 2051, Cedar Construction Ltd sent Willow Council a second administrative insurance notice.",
+          "unique_original_bytes": true,
+          "quote_within_target_occurrence": true
+        },
+        {
+          "source": "Cedar Construction Ltd",
+          "target": "N-1 administrative insurance notice sent",
+          "relation": "RESPONSIBLE_FOR",
+          "source_text": "On 3 April 2051, Cedar Construction Ltd sent Willow Council an administrative insurance notice.",
+          "unique_original_bytes": true,
+          "quote_within_target_occurrence": true
+        },
+        {
+          "source": "N-3 administrative insurance notice sent",
+          "target": "Willow Council",
+          "relation": "NOTIFIED",
+          "source_text": "On 4 April 2051, Cedar Construction Ltd sent Willow Council a third administrative insurance notice.",
+          "unique_original_bytes": true,
+          "quote_within_target_occurrence": true
+        },
+        {
+          "source": "N-2 administrative insurance notice sent",
+          "target": "Willow Council",
+          "relation": "NOTIFIED",
+          "source_text": "On 4 April 2051, Cedar Construction Ltd sent Willow Council a second administrative insurance notice.",
+          "unique_original_bytes": true,
+          "quote_within_target_occurrence": true
+        },
+        {
+          "source": "N-1 administrative insurance notice sent",
+          "target": "Willow Council",
+          "relation": "NOTIFIED",
+          "source_text": "On 3 April 2051, Cedar Construction Ltd sent Willow Council an administrative insurance notice.",
+          "unique_original_bytes": true,
+          "quote_within_target_occurrence": true
+        }
+      ],
+      "source_sha256": "c45a2b53df55f042d642fb62ff9b6185f340b8d6de70f721f388f9b57cd59339",
+      "expected_directed_role_subset_retained": 6,
+      "semantic_scope": "Declared synthetic notice role subset; not all graph associations or extraction completeness"
+    },
+    "live_output_scope": "Titles already include N-1/N-2/N-3; live draw does not isolate the repeated-label merge improvement",
+    "raw_result_sha256": "d6a7ae0f9f3aad3a06bae814ea4624bf07a56755cbad37d62a5659aa3c8705e2",
+    "browser": {
+      "tabId": "93",
+      "submittedOriginalOnce": true,
+      "profile": "construction_claims",
+      "separateN2N3Passages": true,
+      "n3SelectionRetainedAfterReload": true,
+      "performerConnectionShowsThirdNotice": true,
+      "observedFilterVisibleRows": 3,
+      "copiedCsvLength": 1277,
+      "clipboardRestored": true,
+      "capturedConsoleErrorsAndWarnings": []
+    }
+  },
+  "verification": {
+    "full_go": true,
+    "go_passed_packages": 24,
+    "agents_intelligence_race": true,
+    "patch_stack_tests": 29,
+    "clean_patch_arms": [
+      {
+        "mode": "default",
+        "clean_release": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+        "apply": "Chronograph source date precision: applied\nChronograph event relationships: applied\nChronograph analysis job control: applied\nChronograph quoted occurrences: applied\nChronograph occurrence identity: applied\nChronograph occurrence alias: applied\nChronograph organization boundaries: applied\nChronograph event direct completion: applied\nChronograph date value types: applied\nChronograph path test portability: applied\nChronograph analysis job schema: applied\nChronograph profile occurrence: applied\nChronograph domain actors: applied\nChronograph observed actions: applied\nChronograph reviewed performers: applied\nChronograph document identifiers: applied\nChronograph startup schema config: applied\nChronograph dated dispatch: applied\nChronograph event date roles: applied\nChronograph event performers: applied\nChronograph issued dispatch: applied\nChronograph source scalar associations: applied\nChronograph repeated event merging: applied\n",
+        "idempotent": true,
+        "test_command": [
+          "go",
+          "test",
+          "./pkg/agents",
+          "./pkg/intelligence",
+          "-count=1"
+        ],
+        "test_output": "ok  \tgithub.com/UnicoLab/chronograph/pkg/agents\t1.542s\nok  \tgithub.com/UnicoLab/chronograph/pkg/intelligence\t0.594s\n"
+      },
+      {
+        "mode": "audit",
+        "clean_release": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+        "apply": "Chronograph source date precision: applied\nChronograph event relationships: applied\nChronograph analysis job control: applied\nChronograph quoted occurrences: applied\nChronograph occurrence identity: applied\nChronograph occurrence alias: applied\nChronograph organization boundaries: applied\nChronograph event direct completion: applied\nChronograph date value types: applied\nChronograph path test portability: applied\nChronograph analysis job schema: applied\nChronograph profile occurrence: applied\nChronograph domain actors: applied\nChronograph observed actions: applied\nChronograph reviewed performers: applied\nChronograph document identifiers: applied\nChronograph startup schema config: applied\nChronograph dated dispatch: applied\nChronograph event date roles: applied\nChronograph event performers: applied\nChronograph issued dispatch: applied\nChronograph source scalar associations: applied\nChronograph repeated event merging: applied\nChronograph event role coverage: applied\n",
+        "idempotent": true,
+        "test_command": [
+          "go",
+          "test",
+          "./pkg/agents",
+          "./pkg/intelligence"
+        ],
+        "test_output": "ok  \tgithub.com/UnicoLab/chronograph/pkg/agents\t1.010s\nok  \tgithub.com/UnicoLab/chronograph/pkg/intelligence\t1.131s\n"
+      },
+      {
+        "mode": "register",
+        "clean_release": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+        "apply": "Chronograph source date precision: applied\nChronograph event relationships: applied\nChronograph analysis job control: applied\nChronograph quoted occurrences: applied\nChronograph occurrence identity: applied\nChronograph occurrence alias: applied\nChronograph organization boundaries: applied\nChronograph event direct completion: applied\nChronograph date value types: applied\nChronograph path test portability: applied\nChronograph analysis job schema: applied\nChronograph profile occurrence: applied\nChronograph domain actors: applied\nChronograph observed actions: applied\nChronograph reviewed performers: applied\nChronograph document identifiers: applied\nChronograph startup schema config: applied\nChronograph dated dispatch: applied\nChronograph event date roles: applied\nChronograph event performers: applied\nChronograph issued dispatch: applied\nChronograph source scalar associations: applied\nChronograph repeated event merging: applied\nChronograph event role register: applied\n",
+        "idempotent": true,
+        "test_command": [
+          "go",
+          "test",
+          "./pkg/agents",
+          "./pkg/intelligence"
+        ],
+        "test_output": "ok  \tgithub.com/UnicoLab/chronograph/pkg/agents\t1.478s\nok  \tgithub.com/UnicoLab/chronograph/pkg/intelligence\t0.566s\n"
+      },
+      {
+        "mode": "passages",
+        "clean_release": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+        "apply": "Chronograph source date precision: applied\nChronograph event relationships: applied\nChronograph analysis job control: applied\nChronograph quoted occurrences: applied\nChronograph occurrence identity: applied\nChronograph occurrence alias: applied\nChronograph organization boundaries: applied\nChronograph event direct completion: applied\nChronograph date value types: applied\nChronograph path test portability: applied\nChronograph analysis job schema: applied\nChronograph profile occurrence: applied\nChronograph domain actors: applied\nChronograph observed actions: applied\nChronograph reviewed performers: applied\nChronograph document identifiers: applied\nChronograph startup schema config: applied\nChronograph dated dispatch: applied\nChronograph event date roles: applied\nChronograph event performers: applied\nChronograph issued dispatch: applied\nChronograph source scalar associations: applied\nChronograph repeated event merging: applied\nChronograph event role register: applied\nChronograph event role passages: applied\n",
+        "idempotent": true,
+        "test_command": [
+          "go",
+          "test",
+          "./pkg/agents",
+          "./pkg/intelligence"
+        ],
+        "test_output": "ok  \tgithub.com/UnicoLab/chronograph/pkg/agents\t1.125s\nok  \tgithub.com/UnicoLab/chronograph/pkg/intelligence\t1.178s\n"
+      },
+      {
+        "mode": "meaning",
+        "clean_release": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+        "apply": "Chronograph source date precision: applied\nChronograph event relationships: applied\nChronograph analysis job control: applied\nChronograph quoted occurrences: applied\nChronograph occurrence identity: applied\nChronograph occurrence alias: applied\nChronograph organization boundaries: applied\nChronograph event direct completion: applied\nChronograph date value types: applied\nChronograph path test portability: applied\nChronograph analysis job schema: applied\nChronograph profile occurrence: applied\nChronograph domain actors: applied\nChronograph observed actions: applied\nChronograph reviewed performers: applied\nChronograph document identifiers: applied\nChronograph startup schema config: applied\nChronograph dated dispatch: applied\nChronograph event date roles: applied\nChronograph event performers: applied\nChronograph issued dispatch: applied\nChronograph source scalar associations: applied\nChronograph repeated event merging: applied\nChronograph event role register: applied\nChronograph event role meaning: applied\n",
+        "idempotent": true,
+        "test_command": [
+          "go",
+          "test",
+          "./pkg/agents",
+          "./pkg/intelligence"
+        ],
+        "test_output": "ok  \tgithub.com/UnicoLab/chronograph/pkg/agents\t0.978s\nok  \tgithub.com/UnicoLab/chronograph/pkg/intelligence\t1.090s\n"
+      }
+    ],
+    "frontend": "Unchanged; preceding 735 tests/59 files and production build evidence retained, not rerun in this backend pass",
+    "backend_python": "Patch/stack tests only this pass; API production source unchanged",
+    "no_new_training_or_acceleration_benchmark": true
+  },
+  "limits": [
+    "French contractor suspension already absent from prior raw extraction; merge repair cannot invent it. English completion deadline omission remains.",
+    "Candidate merge keys are not adjudicated semantic event identities. Different paraphrases/date formats/quote extents can retain duplicates; identical ambiguous passages require original-span review.",
+    "Matching key retains first impact metadata; conflict resolution remains separate work.",
+    "Live declared role subset does not certify all 13 graph connections, classification or extraction completeness. All four live candidates retain classification review warnings.",
+    "Earlier bundle warning, API race timeout and browser download delivery limit remain; this pass observes clipboard copy only."
+  ],
+  "new_training": false,
+  "delaylama_revision": "f3bbfdab06de02d45ba7a8fc18b749a9a42d6bcb"
+}

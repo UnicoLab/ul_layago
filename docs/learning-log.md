@@ -2833,6 +2833,35 @@ quality work; reviewed candidate exports make that work reproducible, not solved
 See the [export audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-chronology-export.md)
 and [shared receipt](validation/delaylama-chronology-export-20261004.json).
 
+## L92 — Repeated event labels are not occurrence identities (2026-10-04)
+
+DelayLama traced a known omitted French suspension to raw model extraction, then
+found an independent transport loss: title-only candidate/chunk merging retained
+one of three repeated notices. Conservative merge keys now include literal date
+precision, original/role passages, participants and category/date-role assessment.
+The controlled pipeline retains all three on SQLite/filedb; matching chunk overlap
+still deduplicates. Time/range/month wording is not collapsed to a first date.
+
+A fresh synthetic two-pass source/browser run retains three notices, six declared
+sender/recipient links and a planned never-sent reminder without actual performance.
+The two same-day notices open their own passages; reload and observed clipboard
+export work. Its titles already differ, so it does not measure the repair's accuracy
+gain. Location checks bind unique original bytes and occurrence passages, without
+requiring a source label the quote does not actually contain. All four candidates
+retain classification warnings; thirteen total connections are not all certified.
+
+For training/evaluation, preserve actor/action/date/occurrence bindings and split
+repeated actions, same-day different actions, plans and duplicate overlap examples.
+Do not use title-based deduplication to create labels or count recall. A missing
+model action needs a recall experiment; a lost returned action needs a transport
+repair. Candidate assertion keys still cannot adjudicate ambiguous identical text,
+paraphrases or impact conflicts. Full Go/focused race, 29 patch checks and five
+clean patch arms pass; tested runtime is active with user data/settings preserved.
+No new Laya/GLiNER training or acceleration evidence was produced.
+
+See the [repeated occurrence audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-repeated-occurrences.md)
+and [shared receipt](validation/delaylama-repeated-occurrences-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
