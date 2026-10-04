@@ -2462,6 +2462,46 @@ MLX scorer acceleration and supervision do not establish full-encoder accelerati
 or new extraction performance. No training, model promotion or live graph change
 was made for this planning update.
 
+## L82 — Keep reviewed graph actions separate from extraction and training labels (2026-10-04)
+
+DelayLama now connects its source-bound performer review prototype to the
+application and browser: select an existing matching party and exact original
+passage, explain the association, preview, explicitly confirm, apply, reload and
+undo. The engine atomically writes an actor→Event link, journal and timeline under
+a SQLite `BEGIN IMMEDIATE` lock. The initial deferred read-to-write prototype
+failed concurrent apply; the final concurrency, rollback and race checks pass.
+Exact project/tenant, source and endpoint fingerprints guard the write. A retry
+after undo returns undone history instead of recreating the edge. Other storage
+adapters refuse unsupported writes. User graph data and protected work were
+preserved during activation.
+
+An isolated recorded-model-output replay plus one new Gemini source search and
+the live browser qualified the workflow. All 835 backend and 688 frontend tests,
+the production build, Go packages and five patch variants pass. This establishes
+review operation behavior, not independent extraction accuracy. Human action
+history is readable in Prompt Lab and accompanies original search history.
+
+Two actual assistant proposals nevertheless misattributed a graph omission to
+the event-detector prompt without an evaluated target-agent run; neither clearly
+acknowledged the undone link in its rationale. Additional explicit origin/action
+guidance did not demonstrate a reasoning improvement. Both proposals were
+rejected and retained, with no draft/default activation or benchmark run.
+`responsible_party` is a defined extraction field: this was causal misattribution,
+not an unsupported-field error.
+
+For reusable training data, preserve model proposals, original source versions,
+role direction, reviewer explanation, applied/undone state and actual target
+input/output as different labels. Undo is an operation outcome, not automatically
+a false extraction label. Source quote presence is not semantic entailment, and
+a reviewed performer link is not legal liability. Only adjudicated task-specific
+labels should enter training; keep the failed assistant draws as evaluation
+examples. No new Laya/GLiNER training, architecture, speed or MLX measurement was
+made here. Prioritize independently evaluated baseline/candidate comparisons
+before promoting prompt or model changes.
+
+See the [reviewed-correction audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-reviewed-performers.md)
+and [shared receipt](validation/delaylama-reviewed-performers-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

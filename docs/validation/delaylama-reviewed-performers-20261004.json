@@ -1,0 +1,178 @@
+{
+  "date": "2026-10-04",
+  "scope": "Isolated recorded actual model-output storage replay, one new Gemini original-source recheck, browser apply/reload/undo and Prompt Lab import; not independent contract-quality certification.",
+  "tests": {
+    "backend": {
+      "command": "PYTHONPATH=delaylama .venv/bin/python -m pytest",
+      "passed": 835,
+      "duration_seconds": 20.83
+    },
+    "frontend": {
+      "command": "npm test -- --run",
+      "working_directory": "frontend",
+      "passed": 688,
+      "files": 56
+    },
+    "production_build": {
+      "command": "npm run build",
+      "working_directory": "frontend",
+      "passed": true
+    },
+    "go_all": {
+      "command": "go test ./...",
+      "isolated_tested_engine": true,
+      "passed": true
+    },
+    "go_race": {
+      "command": "go test -race ./pkg/storage/sqlite ./pkg/api -run Performer -count=1",
+      "passed": true
+    },
+    "initial_failure_retained": "Deferred SQLite read-to-write upgrade failed concurrent apply. Replaced with a dedicated connection and BEGIN IMMEDIATE before reads; final concurrent and race checks pass."
+  },
+  "prompt_assistant": {
+    "requests": 2,
+    "proposals": [
+      {
+        "id": "c6ad9438-23bb-476d-a19d-3a21b5a76842",
+        "at": "2026-10-04T07:34:30.857Z",
+        "agent": "event_detector",
+        "history_count": 2,
+        "rationale": "The previous prompt failed to explicitly guide the model on how to handle the distinction between factual performance and liability, leading to the omission of 'responsible_party'. By explicitly instructing the model to extract the actor performing the action as the responsible_party, we align the extraction with the document's factual content while respecting the user's requirement to avoid liability-based assumptions.",
+        "changes": [
+          "Added explicit instruction to extract the factual performer as the responsible_party.",
+          "Clarified that human review history is context, not a replacement for document evidence.",
+          "Reinforced the requirement to leave fields empty if evidence is missing rather than inferring.",
+          "Explicitly separated the concept of 'factual performance' from 'legal liability'."
+        ],
+        "recommendations": [
+          "Verify if the 'responsible_party' field is consistently populated in future runs where the document explicitly names an actor.",
+          "Implement a post-processing check to ensure that 'responsible_party' is not being conflated with 'contractual liability' by comparing extracted names against the document's explicit action-performer phrasing.",
+          "Use the 'rationale' field to explicitly state why a specific party was identified as the performer."
+        ],
+        "confidence": 0.9
+      },
+      {
+        "id": "5e1c4390-8551-4f42-9554-8303130c1b04",
+        "at": "2026-10-04T07:41:01.195Z",
+        "agent": "event_detector",
+        "history_count": 5,
+        "rationale": "The previous failure to extract 'responsible_party' stemmed from a lack of explicit instruction on how to handle actor-action links versus liability. The improved prompt clarifies that the agent should extract explicit performers while ignoring contractual liability, ensuring the agent remains grounded in the document text rather than external review history.",
+        "changes": [
+          "Added explicit instruction to extract the factual performer as 'responsible_party'.",
+          "Clarified that 'responsible_party' must be based on explicit document evidence, not inferred liability.",
+          "Explicitly instructed the agent to treat human review history as context rather than a source of truth for extraction."
+        ],
+        "recommendations": [
+          "Perform a baseline comparison by running the agent on the document without the graph-review history to see if the 'responsible_party' is captured correctly.",
+          "Verify that the agent does not hallucinate 'responsible_party' when the document only mentions affected parties.",
+          "Ensure the 'rationale' field explicitly cites the sentence linking the actor to the action."
+        ],
+        "confidence": 0.95
+      }
+    ],
+    "rejected": 2,
+    "target_agent_runs": 0,
+    "benchmark_runs": 0,
+    "draft_changed": false,
+    "prompt_activated": false,
+    "observed_failure": "Both attributed a Chronograph relationship omission to the event-detector prompt without an evaluated event-detector run; neither clearly acknowledged undo in its rationale. The second recommended a baseline comparison but retained misattribution. responsible_party is a defined target output field. Correct history transport does not prove improved model reasoning.",
+    "saved_session_entries": [
+      {
+        "kind": "graph_review",
+        "id": "8e47f3fc-da65-4276-9f8a-37d14ac29445",
+        "at": "2026-10-04T07:32:57.204Z"
+      },
+      {
+        "kind": "feedback",
+        "id": "438d361a-596b-42c2-be55-0cb75fd85cb0",
+        "at": "2026-10-04T07:34:26.935Z"
+      },
+      {
+        "kind": "proposal",
+        "id": "c6ad9438-23bb-476d-a19d-3a21b5a76842",
+        "at": "2026-10-04T07:34:30.857Z"
+      },
+      {
+        "kind": "reject",
+        "id": "89e7d64b-9a2c-4331-8ae3-14b3db9e00e5",
+        "at": "2026-10-04T07:40:57.520Z"
+      },
+      {
+        "kind": "feedback",
+        "id": "79470b3d-861d-47e1-81a0-76b94bcd508e",
+        "at": "2026-10-04T07:40:57.973Z"
+      },
+      {
+        "kind": "proposal",
+        "id": "5e1c4390-8551-4f42-9554-8303130c1b04",
+        "at": "2026-10-04T07:41:01.195Z"
+      },
+      {
+        "kind": "reject",
+        "id": "b5ba38f7-452b-4e13-b163-085f59c0998f",
+        "at": "2026-10-04T07:47:17.933Z"
+      }
+    ]
+  },
+  "limitations": [
+    "Only performer correction, using an existing exactly matching party, is released here.",
+    "Missing, ambiguous or changed original/endpoint bindings refuse apply.",
+    "Other-role correction, actor creation/alias resolution and changing existing links remain separate work.",
+    "No new Laya/GLiNER training, speed, full-encoder MLX acceleration, independent contract-quality, mobile or Docker measurement.",
+    "Undo restores the added graph edge state, retaining journal and timeline; the user graph tables remained unchanged during activation."
+  ],
+  "feature": "Source-bound human performer preview, atomic apply, saved history and guarded undo",
+  "audit": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-reviewed-performers.md",
+  "workflow": {
+    "scope": "Recorded actual model-output storage replay + one fresh Gemini source recheck + live human apply/reload/undo/import. Not a fresh original-analysis accuracy evaluation.",
+    "project_id": "performer-correction-qa-erable-20261004-072414-005162",
+    "source_sha256": "8e250e5995538ad7874e6fbe5ca95743ae67631411661f36b4ab97a1530e5575",
+    "event_id": "4761c4b4-f980-4f5d-8c6a-ca406562adad",
+    "actor_id": "2929d51a-40cc-47c9-9088-80383b0adee1",
+    "source_recheck_job_id": "6f7a7536ddaf49d2b8f3dab507edf055",
+    "source_recheck_status": "done",
+    "source_recheck_count": 1,
+    "review_id": "00bb527e-afd7-4e9e-a669-7b61c2dcff93",
+    "performers_before": 0,
+    "applied_edge_count": 1,
+    "nodes_edges_restored_by_undo": true,
+    "review_journal_retained": true,
+    "original_quote_utf8_span_verified": true,
+    "new_model_confidence_invented": false,
+    "scope_search_event_guards_verified": true,
+    "repeat_apply_after_undo_does_not_recreate": true,
+    "studio_import_count": 1,
+    "studio_entries": 7,
+    "studio_run_count": 0,
+    "studio_proposal_count": 2
+  },
+  "preservation": {
+    "protected_engine_source_files_unchanged": true,
+    "protected_app_artifacts_unchanged": true,
+    "user_studio_unchanged": true,
+    "orchid_studio_unchanged": true,
+    "user_graph_all_tables_unchanged": true
+  },
+  "patch_modes": [
+    {
+      "mode": "default",
+      "idempotent": true
+    },
+    {
+      "mode": "audit",
+      "idempotent": true
+    },
+    {
+      "mode": "register",
+      "idempotent": true
+    },
+    {
+      "mode": "passages",
+      "idempotent": true
+    },
+    {
+      "mode": "meaning",
+      "idempotent": true
+    }
+  ]
+}
