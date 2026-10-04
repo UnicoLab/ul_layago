@@ -2090,6 +2090,47 @@ both were repaired. Final suites passed 742 backend/SDK and 618 frontend tests.
 No Laya training, GLiNER, MLX, supervisor or architecture change occurred. See the
 [review propagation audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-review-projection.md).
 
+## L71 — Correct task transport does not establish extraction completeness (2026-10-04)
+
+DelayLama isolated a provider transport change from prompt/schema changes. Its
+relation pass previously sent JSON extraction instructions through Gemini's
+`Summarize`, which prepended a concise-summary instruction. Optional direct
+`Complete` now preserves the task with the legacy interface fallback, the same
+45-second bound, exact original matching and no second request after failure.
+A wire-level provider test verifies the extraction prompt without a summary prefix.
+
+On 18 frozen English/French development cases with supplied opaque endpoint
+registers, baseline/direct retained 28/46 and 29/46 declared links respectively,
+with zero unexpected links and 8/18 exact sets each. Both strict gates failed.
+Four fresh full-source extraction/storage/REST pipelines per variant retained
+5/9 links and 2/4 exact sets each. These are single paired observations with
+correlated register permutations, not independent certification or a measured
+completeness/speed gain. The running user engine was preserved; the transport
+patch is in future default build preparation. Experimental role prompts remain
+opt-in with their prior failed gates retained.
+
+Raw responses exposed a specific French causal quotation failure: the model
+inserted `[...]` into a required contiguous original quote. Exact matching
+correctly withheld it. Actor/performance omissions were mostly unproposed,
+not lost at storage. Training/evaluation should distinguish unproposed roles,
+invalid quotations, wrong endpoint associations, storage failures and legitimate
+unknowns. Never promote a copied span, empty output or successful job into a
+semantic ground-truth label; event performance also differs from legal liability.
+
+The GUI pass fixed Open Graph opening Claim Desk and source-analysis availability
+remaining stale when originals became readable. Scoped navigation is consumed
+once, refresh respects manual view selection, and changing source text observes
+existing status without resubmission. Actual new F1/F2 graph evidence still shows
+missing roles. All QA node/edge rows stayed unchanged through browser review.
+622 frontend tests, build, Go/race and patch-reproduction checks passed. No Laya
+training, GLiNER, MLX, supervisor or architectural change occurred here.
+
+Next compare complete per-event role coverage on independent contract families,
+then evaluate auxiliary clause/role triage with necessary-premise/amendment recall,
+false support, latency and full-source fallback. Transport correctness and better
+navigation are useful engineering fixes, but neither proves model quality. See
+the [direct-execution audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-direct-relations.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
