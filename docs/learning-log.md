@@ -2189,6 +2189,35 @@ changing runtime confinement; missing model keys now fail before replacing an
 environment. See the [source audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-role-meaning.md)
 and [shared receipt](validation/delaylama-role-meaning-20261004.json).
 
+## L73 — Preserve navigation without transferring evidence decisions (2026-10-04)
+
+DelayLama's graph reopened the claim desk after reload and carried graph layout
+between contracts. Project/workspace/agent navigation now has separate scopes.
+Graph layer, layout, finding and connection identifiers are remembered; source
+and saved-analysis selections are independent. Delayed data never overwrites a
+manual preference. A missing anchor cannot attach its saved connection to the
+fallback finding. Navigation restoration neither accepts evidence nor launches
+a new model job.
+
+This matters for Laya-assisted review too: a shortlist, high score or restored
+selection is not an adjudicated finding. Keep original spans, task semantics,
+role association, model candidates and review decisions distinct. Store only UI
+identifiers in navigation preferences; exact source/result identities govern
+review notes and verdicts. The EvidenceBoard's exact selected finding/citation
+position remains a separate, unimplemented resume improvement in this pass.
+
+636 frontend tests and the build pass. Actual browser reloads used a copied
+previously generated source graph and identical original, retaining the delivery
+event, actor connection and highlighted source sentence. No model jobs were
+submitted; node/edge hashes and saved terminal history were unchanged. User
+state was preserved. Desktop layout was checked at 1910 × 1075. The viewport
+provider scaled a requested 390 width to 582 CSS pixels; no phone-width
+certification is claimed. No model quality, Laya training, MLX or supervisor
+change was measured here. Existing event-class concerns remain unresolved.
+
+See the [navigation audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-review-navigation.md)
+and [shared receipt](validation/delaylama-review-navigation-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
