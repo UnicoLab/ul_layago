@@ -2279,6 +2279,43 @@ and [shared receipt](validation/delaylama-event-vocabulary-20261004.json).
 No new Laya training, GLiNER comparison, MLX measurement or accuracy certification
 occurred in this pass.
 
+## L76 — Correct model labels can still become the wrong graph objects (2026-10-04)
+
+DelayLama now captures the domain schema and provider references before each
+source-analysis worker waits for capacity. Startup profiles reach the actual
+intelligence component, provider replacement preserves the schema, and durable
+job receipts remain distinct from today's vocabulary observations. Legacy jobs
+remain unknown; private prompt bodies stay out of metadata. Deep-copy, queued
+worker, actual model-input, concurrent setter and race tests pass. 802 backend,
+665 frontend tests, the production build and clean patch reproduction pass.
+
+A fresh full-source Gemini trial on a synthetic French contract returned correct
+`suspension` and `notice_served` labels, exact source spans and the standing duty
+as a separate clause. Storage nevertheless classified the sent notice as a dated
+`Suspension` node rather than an Event. The suspension performer and notice
+performer/recipient directed links were missing. One AFFECTED link was retained;
+INVOLVES associations do not fill the omitted roles. Source matching and correct
+upstream labels cannot certify end-to-end identity, role completeness or meaning.
+
+Changing the isolated engine to general after completion and reloading preserved
+the captured Construction Claims receipt and graph; no second job was submitted.
+The tested default engine was activated without changing the user's profile,
+source edits, graph rows, artifacts or Studio sessions. Optional role prompts
+remain evaluation candidates. The snapshot covers domain schema, not every
+provider setting or hook; documents are captured separately and may use mixed
+schemas. Engine handles remain in memory.
+
+Before retraining Laya, define labels independently for occurrence, category,
+standing duty, span, actor role and graph identity. Preserve this storage failure
+as a regression fixture. Compare fixed full-source outputs before regenerating;
+then score independent contract families and downstream completeness. Laya may
+shortlist clauses or provide a second opinion only after necessary-clause and
+amendment recall gates; keep full-source fallback. No new training, GLiNER
+comparison, MLX timing or real-contract accuracy certification occurred here.
+
+See the [schema audit and priorities](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-analysis-schema.md)
+and [shared receipt](validation/delaylama-analysis-schema-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

@@ -1,0 +1,188 @@
+{
+  "date": "2026-10-04",
+  "finding": "L76",
+  "delaylama_validation": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-analysis-schema.md",
+  "tests": {
+    "backend": 802,
+    "frontend": 665,
+    "frontend_files": 53,
+    "go_full": true,
+    "go_race_packages": [
+      "pkg/api",
+      "pkg/agents",
+      "pkg/intelligence",
+      "."
+    ],
+    "production_build": true,
+    "patch_reproduction": [
+      {
+        "mode": "default",
+        "clean_release": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+        "apply": "Chronograph source date precision: applied\nChronograph event relationships: applied\nChronograph analysis job control: applied\nChronograph quoted occurrences: applied\nChronograph occurrence identity: applied\nChronograph occurrence alias: applied\nChronograph organization boundaries: applied\nChronograph event direct completion: applied\nChronograph date value types: applied\nChronograph path test portability: applied\nChronograph analysis job schema: applied\n",
+        "idempotent": true,
+        "test_command": [
+          "go",
+          "test",
+          "./pkg/api",
+          "-run",
+          "Test(QueuedWorkers|SelectedStartup|SchemaCapture|UnknownTask|ConcurrentSchema)",
+          "-count=1"
+        ],
+        "test_output": "ok  \tgithub.com/UnicoLab/chronograph/pkg/api\t0.547s\n"
+      },
+      {
+        "mode": "audit",
+        "clean_release": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+        "apply": "Chronograph source date precision: applied\nChronograph event relationships: applied\nChronograph analysis job control: applied\nChronograph quoted occurrences: applied\nChronograph occurrence identity: applied\nChronograph occurrence alias: applied\nChronograph organization boundaries: applied\nChronograph event direct completion: applied\nChronograph date value types: applied\nChronograph path test portability: applied\nChronograph analysis job schema: applied\nChronograph event role coverage: applied\n",
+        "idempotent": true,
+        "test_command": [
+          "go",
+          "test",
+          "./pkg/agents",
+          "./pkg/intelligence"
+        ],
+        "test_output": "ok  \tgithub.com/UnicoLab/chronograph/pkg/agents\t0.413s\nok  \tgithub.com/UnicoLab/chronograph/pkg/intelligence\t0.680s\n"
+      },
+      {
+        "mode": "register",
+        "clean_release": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+        "apply": "Chronograph source date precision: applied\nChronograph event relationships: applied\nChronograph analysis job control: applied\nChronograph quoted occurrences: applied\nChronograph occurrence identity: applied\nChronograph occurrence alias: applied\nChronograph organization boundaries: applied\nChronograph event direct completion: applied\nChronograph date value types: applied\nChronograph path test portability: applied\nChronograph analysis job schema: applied\nChronograph event role register: applied\n",
+        "idempotent": true,
+        "test_command": [
+          "go",
+          "test",
+          "./pkg/agents",
+          "./pkg/intelligence"
+        ],
+        "test_output": "ok  \tgithub.com/UnicoLab/chronograph/pkg/agents\t1.241s\nok  \tgithub.com/UnicoLab/chronograph/pkg/intelligence\t0.890s\n"
+      },
+      {
+        "mode": "passages",
+        "clean_release": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+        "apply": "Chronograph source date precision: applied\nChronograph event relationships: applied\nChronograph analysis job control: applied\nChronograph quoted occurrences: applied\nChronograph occurrence identity: applied\nChronograph occurrence alias: applied\nChronograph organization boundaries: applied\nChronograph event direct completion: applied\nChronograph date value types: applied\nChronograph path test portability: applied\nChronograph analysis job schema: applied\nChronograph event role register: applied\nChronograph event role passages: applied\n",
+        "idempotent": true,
+        "test_command": [
+          "go",
+          "test",
+          "./pkg/agents",
+          "./pkg/intelligence"
+        ],
+        "test_output": "ok  \tgithub.com/UnicoLab/chronograph/pkg/agents\t0.713s\nok  \tgithub.com/UnicoLab/chronograph/pkg/intelligence\t0.361s\n"
+      },
+      {
+        "mode": "meaning",
+        "clean_release": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+        "apply": "Chronograph source date precision: applied\nChronograph event relationships: applied\nChronograph analysis job control: applied\nChronograph quoted occurrences: applied\nChronograph occurrence identity: applied\nChronograph occurrence alias: applied\nChronograph organization boundaries: applied\nChronograph event direct completion: applied\nChronograph date value types: applied\nChronograph path test portability: applied\nChronograph analysis job schema: applied\nChronograph event role register: applied\nChronograph event role meaning: applied\n",
+        "idempotent": true,
+        "test_command": [
+          "go",
+          "test",
+          "./pkg/agents",
+          "./pkg/intelligence"
+        ],
+        "test_output": "ok  \tgithub.com/UnicoLab/chronograph/pkg/agents\t0.400s\nok  \tgithub.com/UnicoLab/chronograph/pkg/intelligence\t0.668s\n"
+      }
+    ]
+  },
+  "actual_model_trial": {
+    "model": "gemini-3.1-flash-lite",
+    "embedding": "noop (isolated QA only)",
+    "fixture": "scripts/fixtures/analysis-schema-source-fr.md",
+    "source_sha256": "e592f78058f0d735e3406816b5a1e46c6ce158e79bdd409de466dfc2cadbd92b",
+    "project_id": "schema-isolation-qa-lys-20261004-045837-8c6b3f",
+    "run_id": "ece2baef2d244edd97aafbf8e89975f2",
+    "job_id": "e0c494e8-e82a-47d6-ab4e-3732ace79b31",
+    "schema_snapshot": {
+      "version": 1,
+      "name": "construction_claims",
+      "sha256": "f35e319cd7b678b59f547f247920708672186f7f2e681a497b2ec6cd5bb56ceb",
+      "captured_at": "2026-10-04T05:03:01.808689Z",
+      "source": "engine",
+      "event_types": [
+        "milestone",
+        "delay",
+        "completion",
+        "reception",
+        "handover",
+        "reserve_lifting",
+        "phase_start",
+        "phase_end",
+        "decision",
+        "change_order",
+        "modification",
+        "suspension",
+        "termination",
+        "approval",
+        "rejection",
+        "notice_served",
+        "notice_deadline_expired",
+        "claim_event",
+        "force_majeure",
+        "penalty_triggered",
+        "site_condition",
+        "pollution_discovery",
+        "permit_delay",
+        "authority_delay",
+        "concessionaire_delay",
+        "payment",
+        "non_payment",
+        "price_revision",
+        "cost_overrun",
+        "additional_works"
+      ]
+    },
+    "event_storage": {
+      "proposed": 2,
+      "stored": 1,
+      "standing_mentions": 1,
+      "classification_reviews": 1,
+      "failed": 0
+    },
+    "event_relations": {
+      "status": "completed",
+      "proposed": 2,
+      "rejected": 1,
+      "stored": 1
+    },
+    "occurrences": [
+      {
+        "node_id": "7ac683d5-5487-4b41-9e52-dce2b838e035",
+        "name": "Envoi de la notification écrite de suspension",
+        "node_type": "Suspension",
+        "event_type": "notice_served",
+        "date": "2041-09-07",
+        "source_id": "source:original-lys-execution-record",
+        "byte_span_exact": true
+      },
+      {
+        "node_id": "d8d43f51-0024-419c-a0dc-de2f6e487af3",
+        "name": "Suspension des travaux par Lys Patrimoine SAS",
+        "node_type": "Event",
+        "event_type": "suspension",
+        "date": "2041-09-06",
+        "source_id": "source:original-lys-execution-record",
+        "byte_span_exact": true
+      }
+    ],
+    "checks": {
+      "one_job_only": true,
+      "foreign_job_scope_404": true,
+      "graph_unchanged_after_config_change_reload": true,
+      "captured_schema_unchanged_after_reload": true
+    },
+    "remaining_failures": [
+      "Sent notice retained as a dated Suspension node despite model event_type notice_served",
+      "Suspension performer missing from directed stored roles",
+      "Notice performer and recipient not stored as directed roles"
+    ],
+    "interpretation": "One synthetic full-source trial verifies wiring and exposes quality failures; it is not an extraction completeness or accuracy comparison."
+  },
+  "limits": [
+    "Domain schema snapshot only; not every provider option, environment or hook",
+    "Each sequentially submitted document captures independently; a run may contain mixed schemas",
+    "Provider/store references remain shared and must stay alive and thread safe",
+    "Engine job handles remain in memory; durable application metadata does not restore a lost worker",
+    "No new Laya training, GLiNER comparison, MLX acceleration measurement or real-contract certification"
+  ],
+  "model_transfer": "Freeze domain schema and task identity before label comparisons; exact spans and correct model categories do not establish correct graph typing or complete role extraction."
+}
