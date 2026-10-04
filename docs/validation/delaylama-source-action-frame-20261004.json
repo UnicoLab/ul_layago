@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-04",
+  "protocol": "source-action-frame-v1",
+  "quality_gate": "failed",
+  "independent_contract_accuracy_evaluation": false,
+  "optional_source_inventory_enabled_in_normal_runtime": false,
+  "default_engine_patch_count": 24,
+  "final_synthetic_checks": {
+    "actions": 22,
+    "distinct_action": 22,
+    "performer_correct": 20,
+    "date_correct": 14,
+    "impacts_expected": 2,
+    "impacts_passed": 1,
+    "forbidden_causal_pairs_checked": 1,
+    "forbidden_causal_pair_violations": 0,
+    "forbidden_approval_edges": 0
+  },
+  "accepted_original_analysis_jobs": 36,
+  "job_statuses": {
+    "done": 36
+  },
+  "attempts_with_zero_accepted_jobs": {
+    "v2a": "Schema preflight before QA engine readiness",
+    "v8a": "Wrong processed-root environment, failed before source submission; own status-only directories removed after inspecting empty sources/extractions"
+  },
+  "reported_source_inventory_calls_in_archived_engine_receipts": 22,
+  "provider_call_accounting": "36 accepted originals; broad extraction and directed relationship passes used real configured Gemini. Source inventory enabled from v4. Two first-seen v4 terminal remote snapshots were not captured before engine restart; durable histories and actual SQLite graphs retained. No total provider HTTP call/retry claim is made. Application does not automatically retry uncertain submissions or source-inventory model work.",
+  "first_seen_scope": "Cedar/Tilleul gold fields prepared before initial v4 draws; final v8 reused them and four development fixtures. Final results are development results, not held-out certification.",
+  "measurement_limits": [
+    "Checks score declared source-byte action identity, exact expected actor name and calendar day, two impact phrases, one forbidden causal pair and forbidden APPROVED edges.",
+    "They do not score all output precision, causal/temporal entailment, planned/negated work, entity resolution, amendment precedence, legal effectiveness or arbitrary long multilingual contracts.",
+    "Located source text is not semantic validation. Full original graph contexts still may contain wrong model relationships.",
+    "Earlier v6 apparent date score included context-date fallback; it is not temporal qualification.",
+    "Generic concept relationships and deep-dive reasoning remain model suggestions. Missing recorded approval cannot establish refusal or legal ineffectiveness."
+  ],
+  "checks": {
+    "backend_full": 1005,
+    "backend_final_focused": 190,
+    "backend_recovery_after_test_addition": 151,
+    "frontend_full_final": 774,
+    "frontend_action_evidence_focused": 91,
+    "go_default_full": "passed",
+    "go_inventory_full": "passed",
+    "go_default_race_agents_intelligence": "passed",
+    "clean_patch_arms_idempotent": 12,
+    "clean_patch_arms_affected_go_suites": 12,
+    "python_new_modules_ruff": "passed",
+    "frontend_build": "passed with existing >500 KB chunk warning",
+    "browser": "Selected contract, separate notices/receipt, short exact action highlight, unresolved date, actor premise and incomplete-stage badge inspected; no warning/error console messages"
+  },
+  "activation": {
+    "engine_pid": 10290,
+    "engine_sha256": "664bca1cb89e1cd68e864bbd0a350f3b55d34c183d6127cdc229d3112e346c6f",
+    "new_api_launcher": 14309,
+    "normal_config_change": "Replace only explicit light sync with deep sync; update its explanatory comment",
+    "config_backed_up_private": true,
+    "user_graph_all_tables_unchanged": true,
+    "protected_engine_source_files_unchanged": 14,
+    "protected_application_artifacts_unchanged": 32,
+    "protected_studio_sessions_unchanged": 2,
+    "user_job_journal_sha256": "018b5f5504058d53c5f218870d5196b6f1ec74cd1dafa5ff18c67d20497401b0",
+    "user_job_rows_unchanged": 24,
+    "existing_contract_reanalysis_submitted": false,
+    "engine_config_unchanged": true
+  },
+  "assets": {
+    "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/source-action-frame/action-calendar-review.jpg": "b8a3dfd12a5b4f82753153879c55effedf58fd54e4f480a5decd88ecd8fdcb4c",
+    "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/source-action-frame/evaluation-inputs.json": "14ce50465d8028af2ec741d7f4c877864fe0b0dafb0dc4076b2016b4ce864fca",
+    "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/source-action-frame/final-synthetic-graph.json": "2562053c01e88f0fec0d00a7a1e108e6cc8f4b0d92c28286b7c0fcbc34bff3f9",
+    "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/source-action-frame/first-seen-graph.json": "2c22245e49d3914deaaf0af6b1a56d2170a9ed32894145d7f223c867e370fb09",
+    "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/source-action-frame/model-stage-receipts.json": "b2720110c05af2b4e0dfdf3af0271557980bd72fe46cf38c0af9a268548dc4aa"
+  },
+  "laya_changes": "No new training, weights, architecture, MLX benchmark, supervisor qualification or GLiNER result; shared learning documentation only.",
+  "learning": "L99",
+  "source_audit": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-action-frame.md",
+  "qa_cleanup": {
+    "owned_api_engine_frontend_closed": true,
+    "latest_six_remote_jobs_terminal_and_archived": true,
+    "all_36_durable_original_jobs_done": true,
+    "isolated_sqlite_backups_created": true,
+    "owned_qa_tab_closed_user_tab_preserved": true,
+    "final_user_preservation_audit": "passed"
+  }
+}

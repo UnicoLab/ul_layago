@@ -3110,3 +3110,55 @@ Full-head RLCD, CLM InfoNCE, GPU encoder training, Go optimizer-resume, stronger
 OS isolation and a native decoder port remain separate engineering work. Use the
 [experiment template](experiments/TEMPLATE.md) for each arm, report unsuccessful
 results, and update the relevant finding with its dated evidence.
+
+
+### L99 — Source action identity and field binding need separate quality gates
+
+**Observed (DelayLama, 2026-10-04):** automatic graph sync previously used
+`LearnStandard` indexing (deterministic regex/date nodes) while presenting completion
+as full graph readiness. Full original analysis now uses durable per-source async
+jobs and a captured construction-claims schema. Unknown outcomes keep existing
+handles; startup and UI recovery observe them without replacement submissions.
+Execution, source location and semantic accuracy are distinct measurements.
+
+An individual action frame retains verbatim action/context/actor/impact premises,
+original SHA-256 and original UTF-8 byte spans. Conservative merge keys preserve
+conflicting frames. Same-paragraph or same-date actions must remain distinct.
+Framed performer links require their own action and named-actor premise, rather
+than selecting the paragraph's other actor or recipient. Impact attribution must
+include the own action. Removing uncertain DateText exposed a further bug: the
+legacy time helper still inferred the first surrounding date. A separate unresolved
+association flag now suppresses that fallback. Keeping a located action with an
+unresolved date is better than dropping the action or filling a guessed date.
+
+Thirty-six original-analysis jobs completed in isolated SQLite projects, with no
+seeded graph facts. The optional full-original source-first pass retained 22/22
+declared actions on the final six synthetic fixtures, 20/22 expected performer links
+and 14/22 expected dates. Only one of two declared impact phrases survived; the
+other was omitted by the model, not rejected by the attribution guard. One declared
+forbidden causal pair and forbidden approval edges were absent. **Semantic
+qualification failed**; this extra pass remains off in normal builds/runtime.
+Twenty-two extra inventory calls are reported in retained engine receipts; two
+first-seen v4 terminal remote snapshots were missed before restart. Their durable
+histories and scoped graphs remain. No total provider HTTP/retry count is claimed.
+Final fixtures were reused during development, not independent certification.
+
+**Implication for Laya:** learn/rank sufficient premise windows and classify
+association uncertainty separately from action recall. Hard negatives should
+include same-date compound verbs, pronoun/shared-subject antecedents, both named
+actors in one paragraph, sender/recipient reversals, neighbour durations, fabricated
+ellipsis quotations, planned/negated work and missing approvals. Keep full original
+qualifiers and contiguous exact source spans. Source matching and positive model
+judgment cannot become support labels without adjudication. Report incomplete
+fields and stages; don't substitute a previous or nearby date as a successful
+prediction. Story/template/language separation and real long-contract adjudication
+remain required. Generic graph relationships still need semantic qualification.
+
+The full backend suite passed 1,005 tests; the final frontend suite passed 774.
+Default/optional Go suites, focused race checks, twelve clean idempotent patch arms,
+browser evidence review and protected-data audits passed. Structural/UI passes do
+not override the semantic failure. No Laya/GLiNER weights, training, MLX,
+architecture or supervisor qualification changed. See the
+[action-frame audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-action-frame.md),
+[measured graphs](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/source-action-frame/final-synthetic-graph.json)
+and [shared receipt](validation/delaylama-source-action-frame-20261004.json).
