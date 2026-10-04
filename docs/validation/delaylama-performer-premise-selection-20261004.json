@@ -1,0 +1,222 @@
+{
+  "scope": "Structural fixes and real full-original synthetic analysis. Source presence is not semantic, legal or completeness certification.",
+  "default_performer_fix": {
+    "premise_reference_checked_against_original": true,
+    "foreign_selection_no_quote_fallback": true,
+    "missing_calendar_preserves_located_action": true,
+    "model_card_reason_used_only_for_matched_selection": true,
+    "no_invented_assertion_or_explanation": true,
+    "unanswered_not_applicable_cards_distinguished": true,
+    "raw_model_cards_and_register_retained_as_unverified": true,
+    "API_and_GUI_keep_only_bounded_operational_counts": true
+  },
+  "first_draw_batch": {
+    "cases": 8,
+    "previous_development_cases": 6,
+    "new_frozen_joint_cases": 2,
+    "declared_actions": 32,
+    "distinct_actions": 32,
+    "correct_performer_checks": 29,
+    "performer_checks_with_source_located_evidence": 29,
+    "required_performer_links": 34,
+    "correct_performer_links": 31,
+    "explicit_dates_correct": 28,
+    "explicit_dates_declared": 28,
+    "unknown_calendar_actions_retained": 4,
+    "unknown_calendar_actions_declared": 4,
+    "own_impact_checks_passed": 1,
+    "forbidden_causal_pairs_absent_with_resolved_endpoints": 4,
+    "unperformed_plans_without_occurrence_or_performer": 4,
+    "gate_passed": false,
+    "fresh_cases_repeated_or_tuned": false
+  },
+  "captured_decoder_replay": {
+    "before_accepted_performers": 0,
+    "after_accepted_performers": 5,
+    "after_checked": 7,
+    "after_not_applicable": 3,
+    "model_calls": 0,
+    "graph_writes": 0,
+    "raw_omitted_candidate_justifications_preserved": true
+  },
+  "fixed_inventory_known_case_live_confirmation": {
+    "actions_correct": 3,
+    "actors_and_original_evidence_correct": 3,
+    "dates_correct": 3,
+    "performer_proposals_stored": 5,
+    "unanswered_checks": 0,
+    "known_case_not_independent": true
+  },
+  "default_engine_known_case": {
+    "individual_actions_correct": 2,
+    "declared_actions": 3,
+    "actors_and_original_evidence_correct": 2,
+    "merged_closure_and_suspension_remains": true,
+    "gate_passed": false,
+    "source_inventory_disabled": true
+  },
+  "new_context_holdout": {
+    "cases": 2,
+    "frozen_sha256": "3cadad71f6c1f9d68c4c2d79527536839ed4e34cbc3e6d33f86caf3ce0b325fd",
+    "new_model_requests_after_freeze": 2,
+    "prompt_revision_from_outcomes": false,
+    "declared_actions": 12,
+    "distinct_actions": 12,
+    "correct_performers_and_evidence": 12,
+    "required_actor_links": 14,
+    "correct_actor_links": 14,
+    "explicit_dates_correct": 10,
+    "unknown_calendar_actions_retained": 2,
+    "required_causal_links_present": 0,
+    "required_causal_links_declared": 2,
+    "forbidden_causal_pairs_absent_with_resolved_endpoints": 6,
+    "own_impact_checks_passed": 2,
+    "unperformed_plans_without_occurrence_or_performer": 2,
+    "forbidden_APPROVED_edges": 0,
+    "gate_passed": false
+  },
+  "evaluator_correction": {
+    "actual_CAUSED_and_CAUSED_DELAY_types_in_negative_checks": true,
+    "original_performer_bytes_and_source_identity_checked": true,
+    "required_positive_causal_links_checked": true,
+    "old_snapshots_rechecked_without_new_model_calls": true
+  },
+  "accepted_remote_jobs": 13,
+  "terminal_jobs_archived": 13,
+  "reported_extra_inventory_calls": 12,
+  "provider_HTTP_attempts_or_retries_instrumented": false,
+  "normal_source_inventory_enabled": false,
+  "normal_engine_default_patch": 25,
+  "validation": {
+    "backend": 1057,
+    "frontend": 775,
+    "frontend_files": 66,
+    "frontend_build": true,
+    "full_engine_suites_terminal_exit_zero": 2,
+    "focused_default_race": true,
+    "clean_patch_arm_apply_and_idempotence": 12,
+    "other_variant_intelligence_and_agent_suites": 10
+  },
+  "GUI": {
+    "relationship_explanation_disclosure": true,
+    "undated_action_keeps_performer": true,
+    "joint_action_shows_both_actors": true,
+    "connected_context_facts": 6,
+    "connected_context_links": 5,
+    "registered_originals": 1,
+    "console_errors": 0,
+    "owned_browser_tab_closed": true
+  },
+  "retained_failures": {
+    "initial_test_syntax_error_corrected": true,
+    "outdated_default_patch_list_expectations_corrected": true,
+    "initial_patch_register_context_conflicts_rebased": true,
+    "positive_joint_evaluator_fixture_metadata_corrected": true,
+    "initial_QA_binary_restart_preflight_failed_and_recovered_after_build_exit": true,
+    "subsequent_QA_receipt_shape_preflight_failed_before_restart": true,
+    "two_QA_store_scope_attempts_rejected_before_model_submission": true,
+    "owned_failed_artifact_archived_outside_user_project_root": true
+  },
+  "limitations": [
+    "Default extraction still merges the closure and suspension in one known fixture.",
+    "Optional inventory fails broader qualification by missing two required explicit causal links.",
+    "Small synthetic cases do not certify long contracts, legal effect, alias resolution or arbitrary graph completeness.",
+    "Repeated identical quoted actions remain ambiguous.",
+    "Existing graph records and user contracts were not migrated or reanalyzed.",
+    "No Laya/GLiNER weights, training, MLX, architectural or supervisor qualification changed."
+  ],
+  "asset_sha256": {
+    "undated-performer.png": "f61e83127182f3891e6ab2ee13e972d911fe14e0376f4f5824a056fae94f4ff0",
+    "joint-performer-context.png": "37b0d871ff168f14f6370ef7034a68ed338437dea1472a8820caaf99ffab0dc4",
+    "evaluation-inputs.json": "342fc230ce0eb0ab9c6652f9b8949993ce1b6e4cab7a95a8d84b24112a66cd88",
+    "release-checks.json": "377412cddd36a1f127152ac6619c82a40ba26c000475204af52b4f75926b50fd",
+    "context-holdout-model-stages.json": "d9a890d129dce765f63ca9767aa6e545d561273e9314840ca14af08baf90eeb9",
+    "fixed-decoder-graph.json": "a3ed639bb0dd3f42a5191ede2bbff0616cfec6aa0f00359c5c4ba7df3a93236c",
+    "missing-explanation-model-stage.json": "92c65e125904398272ea65cfe0e53c9d1f76d3f32008f7faecef55fb438d02ab",
+    "first-draw-graph.json": "85ffc0e933228e0883bcaa324c3d0f91fa21790de6aafab34a520036787469bd",
+    "default-engine-model-stage.json": "e09b923cf74512345ced87b6011a89666a960ffbd89fd122e4eef8043fc88c3d",
+    "fixed-decoder-model-stage.json": "b93cb40b368c23a12cf5859df87619bbe5ed945e8d06c2ead6d6590ebc915fb7",
+    "default-engine-graph.json": "be3b295931bdb22b1cee38469d555d894405ac3ced9e654d7a14b6fa35d333bc",
+    "captured-decoder-before.json": "beac0a68ab1b66652b20a8572215a3134d7911cfefc48c54321280a04fe1f6de",
+    "performer-evidence.png": "cc296a75e3f53acc67079d984ecc5aa031a7ce866be1ed515511035446176e40",
+    "context-holdout-freeze.json": "1d6d2612feebc692602857b935028a50969b7c77dff02358911a34a014a0d006",
+    "context-holdout-graph.json": "eed9743e94a953b021f15d4bfedc4fb6f92eda724f234b8441eb3d984874037a",
+    "missing-explanation-graph.json": "11e322f4c315d2c0142275530cb8d33915a8dd784341612affb4766cfa785e1f",
+    "context-holdout-inputs.json": "36b031a8e2be1a456024dc1e3f5a060c8b7f86b2e2e14308c90562d2e133b891",
+    "joint-case-freeze.json": "6359cb39e05ddaf5c5279e4e99056687192fdd9251c3512ddbc6b4ff8b4a2fd6",
+    "first-draw-strict-recheck.json": "c78d4ff8c38201b578cfde36c187eb65469d58e064e112b4dbe752a00dc8e7ae",
+    "first-draw-model-stages.json": "68037066932498c6804fbd4088522a3b031cf8a1b13135b2a284cb4144a965af",
+    "captured-decoder-after.log": "e5668b3264a57bdf625e0e15612e8bc440dd2ab690d9518fe1afef7dd770988a"
+  },
+  "activation": {
+    "normal_default_only": true,
+    "engine_pid": 97150,
+    "engine_sha256": "6a63077e4439114601c01e470c14a574b470a1412b6826732336e63c21734e3f",
+    "source_commit": "99489a2d070a4d95c5538a1caa27f3353d72cf8c",
+    "engine_config_unchanged": true,
+    "graph_tables_unchanged": true,
+    "table_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    },
+    "api_launcher": 98300,
+    "api_config_unchanged": true,
+    "user_job_journal_sha256": "018b5f5504058d53c5f218870d5196b6f1ec74cd1dafa5ff18c67d20497401b0",
+    "user_job_journal_unchanged": true,
+    "no_existing_contract_reanalysis_submitted": true
+  },
+  "preservation": {
+    "protected_engine_source_files_unchanged": true,
+    "protected_app_artifacts_unchanged": true,
+    "user_studio_unchanged": true,
+    "orchid_studio_unchanged": true,
+    "user_graph_all_tables_unchanged": true
+  },
+  "cleanup": {
+    "owned_services_stopped": [
+      {
+        "service": "engine",
+        "pid": 90236,
+        "port": 8097
+      },
+      {
+        "service": "api",
+        "pid": 81081,
+        "port": 8081
+      },
+      {
+        "service": "frontend",
+        "pid": 33676,
+        "port": 5175
+      }
+    ],
+    "terminal_jobs_archived": 13,
+    "user_tabs_not_closed": true,
+    "owned_tab_closed": true,
+    "no_accepted_job_resubmitted": true
+  },
+  "normal_stack_listening": {
+    "5173": true,
+    "5174": true,
+    "8080": true,
+    "8095": true
+  }
+}

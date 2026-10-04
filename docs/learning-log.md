@@ -3210,3 +3210,74 @@ training or supervisor qualification changed. See the
 [indexed-premise audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-indexed-action-premises.md),
 [captured graph](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/indexed-action-premises/final-synthetic-graph.json)
 and [shared receipt](validation/delaylama-indexed-action-premises-20261004.json).
+
+
+## L101 — Original performer selection, decoder reasons and positive graph recall (2026-10-04)
+
+**Measured and adopted structurally; full semantic gate still failed.** DelayLama
+now allows the actor stage to select a unique, bounded original performer passage
+instead of retyping it. References are issued only after source/context/action
+checks. Invalid selections cannot fall back to other supplied text. Unknown-date
+candidates retain their original action/actor premises without inheriting dates.
+A selected passage is a location protocol, not proof of the actor's semantic role.
+
+Eight full-original synthetic jobs retained 32/32 separate actions, 29/32 correct
+actor checks with located evidence, 28/28 explicit calendars and 4/4 unknown-date
+actions. Six reused stories and two new frozen joint-actor stories were kept
+separate. Both joint-actor stories passed their declared checks; one reused French
+story lost all required actors. A subsequent diagnostic response exposed a
+protocol mismatch: its action-card reason and candidate assertion were supplied,
+but each candidate's duplicate explanation was empty. A captured-response replay
+failed before the decoder repair (0 accepted), then retained five source-bound
+proposals with the model's original card reason. Explicit not-applicable cards
+without candidates also became answered rather than invalid. No assertion or
+explanation was synthesized; raw omitted fields remain unchanged in diagnostics.
+A later known-case live inventory confirmation passed 3/3 declared actions,
+actors and calendars. It is not an independent holdout result.
+
+The default engine still merged a separately reported closure and suspension:
+2/3 declared distinct actions on that known case. Two more English/French cases
+were therefore frozen before inference, with topics dispersed across contract
+procedures, access logs, drawing records and correspondence. They retained 12/12
+actions, actors and original supporting passages, including two joint actions and
+two unknown-calendar returns. Both own durations and six forbidden causal pairs
+passed; two unperformed demolition proposals acquired neither observed occurrences
+nor performer links. However **0/2 required explicit causal links were stored**.
+Qualification failed; the source-first inventory remains excluded from normal
+builds/runtime. No prompt revision or replacement draw followed these new failures.
+Raw general relationship proposals were not captured, so the particular missing
+causal premise/parser rejection remains undiagnosed.
+
+**Evaluation correction:** a previous negative-cause checker covered aliases but
+missed actual `CAUSED`/`CAUSED_DELAY` edge types. The evaluator now covers both,
+requires original actor-relationship byte citations and source identity, and tests
+positive causal recall with correct direction and a sufficient original passage.
+Saved snapshots were rechecked without inference; original actor success/failure
+partitions stayed the same. A clean absence of bad edges cannot establish a
+complete graph. Predicate/type coverage is itself a regression target.
+
+**Training implication:** separate action recall, calendar assignment, performer
+identity, supporting-premise sufficiency, causal direction and legal effect in
+labels and evaluation. Preserve model omissions separately from parser failures.
+Synthetic hard negatives should include shared paragraphs, unknown return dates,
+joint actors, notice-versus-cause swaps, acknowledged-but-not-approved documents,
+and unperformed plans. Include positive explicit causation so a model that simply
+omits all causal links cannot pass. Use adjudicated labels for Laya retrieval,
+classification/ranking and premise selection; quoted text or an LLM card reason
+must not become an automatic semantic support target.
+
+The GUI now shows readable performer withholding diagnostics and a collapsed
+model explanation beside the relationship citation and endpoint evidence. Browser
+checks preserved undated performers, showed both joint actors and retrieved six
+surrounding facts/five links from the registered original. No console errors were
+recorded. Structural checks pass: 1,057 backend/775 frontend tests, both complete
+Go suites, default focused race tests, 12 apply/idempotence combinations and ten
+other variant intelligence/agent suites. Thirteen accepted jobs are terminal and
+archived; twelve extra inventory calls were reported, not provider HTTP/retries.
+Failed harness preflights and failed semantic gates are retained. User graph,
+source files, job journal and Studio records were preserved. No Laya/GLiNER
+weights, training, MLX, architecture or supervisor qualification changed.
+
+See the [performer and context audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-performer-premise-selection.md),
+[strict holdout graph](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/performer-premise-selection/context-holdout-graph.json)
+and [shared receipt](validation/delaylama-performer-premise-selection-20261004.json).
