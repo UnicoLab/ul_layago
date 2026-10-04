@@ -2575,6 +2575,49 @@ or MLX measurement occurred in this pass.
 See the [results-first audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-results-first.md)
 and [shared receipt](validation/delaylama-results-first-20261004.json).
 
+## L85 — Separate analysis findings, graph registration and source truth (2026-10-04)
+
+DelayLama's new live trial reuses L84's two frozen saved model outputs and the same
+original, then independently exercises quote ingestion and one fresh original-source
+Gemini graph job. Quote indexing initially gives two saved event findings but zero
+typed source Event nodes. Switching representations starts no model work; an
+explicit source action owns one confirmed durable handle. A completed graph job
+is an operational observation, not an extraction completeness label.
+
+Whole-reference parsing is a concrete source identity prerequisite: the old ASCII
+matcher made RABLE-2044 from QA-ÉRABLE-2044. The new bounded Unicode matcher retains
+accents/decomposed marks and exact original UTF-8 offsets, withholding embedded or
+oversized fragments. Eight positive and eleven negative convention cases pass in
+two extraction modes; full Go, default/optional clean patch reproduction and live
+quote ingestion qualify the change. No historical alias migration is claimed.
+
+The source draw returns three Events (signature, work start, access closure) and
+keeps the April 4 planning transmission as Planning. Only the closure has a quoted
+Ville performer link. The transmission therefore remains absent from source-event
+chronology and its Horizon performer is missing. Signature entry-into-force impact,
+scheduled versus observed start and a nearby Article 3 clause association require
+separate semantic adjudication. Three source Events versus two saved events is not
+better recall: these representations contain different findings.
+
+For Laya datasets/evaluation, label field extraction, source span presence,
+occurrence identity, observed/planned date role, typed-node registration, actor vs
+affected-party direction and clause association separately. Never turn a graph
+storage/type omission into a negative extraction example, or a nearby heading into
+positive clause entailment. Keep missing/ambiguous outcomes and original Unicode
+identities. Split templates/contracts/languages before calibration or promotion;
+this pass includes no new Laya/GLiNER training, MLX benchmark or classifier gain.
+
+Configuration must also be observed: this CLI automatic path ignored the startup
+schema preset and the REST preset inventory omitted supported profiles. The
+isolated engine was explicitly set to construction_claims via REST and its worker
+receipt confirmed that schema. User configuration stayed general. Full Go and
+713 frontend tests pass; a full API race sweep timed out at ten minutes in the
+malformed-body route/payload test, while changed-package and short API race checks
+pass. Keep the unsuccessful check rather than silently widening its budget.
+
+See the [implementation audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-event-representations.md)
+and [shared receipt](validation/delaylama-event-representations-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
