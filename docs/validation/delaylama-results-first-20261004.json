@@ -1,0 +1,952 @@
+{
+  "scope": "Results-first identity/event overview, exact saved-result review navigation, event timeline association, document-only Project preview and agent-specific mode restoration; two fresh workflow model jobs on one synthetic French contract.",
+  "date": "2026-10-04",
+  "project": {
+    "project_id": "results-first-contract-qa-erable-20261004-083506-3ca26d",
+    "source_id": "original-rable-execution-record",
+    "sha256": "878602dd1e9b9009c829df872660dc58da2ff285e7ce0012a11228ed48c0ee08",
+    "fixture": "/Users/piotrlaczkowski/Desktop/PROJECT/UnicoLab/Repositories/DeleyLama/scripts/fixtures/results-first-contract-fr.md"
+  },
+  "accepted_jobs": [
+    {
+      "agent": "contract_identity",
+      "request": {
+        "action": "submit_extract",
+        "request_id": "8b55227f-d8cd-4216-aa50-b4dfb5e4ba0a",
+        "project_id": "results-first-contract-qa-erable-20261004-083506-3ca26d",
+        "agent": "contract_identity",
+        "language": "fr",
+        "no_llm": false
+      },
+      "job_id": "74a467688ade40a689accce0dfa5339a"
+    },
+    {
+      "agent": "event_detector",
+      "request": {
+        "action": "submit_extract",
+        "request_id": "08ed6c8b-d709-4a30-a6b6-8c96d48f6bfc",
+        "project_id": "results-first-contract-qa-erable-20261004-083506-3ca26d",
+        "agent": "event_detector",
+        "language": "fr",
+        "no_llm": false
+      },
+      "job_id": "5893a78ce8e145f8a8404557af22c05b"
+    }
+  ],
+  "results": {
+    "contract_identity": {
+      "ok": true,
+      "project_id": "results-first-contract-qa-erable-20261004-083506-3ca26d",
+      "pipeline": "extract_batch",
+      "saved_agents": [
+        "contract_identity"
+      ],
+      "per_agent": {
+        "contract_identity": {
+          "path": "/private/tmp/delaylama-results-first/runtime/processed/results-first-contract-qa-erable-20261004-083506-3ca26d/extractions/contract_identity_20261004_083537_373352.json",
+          "llm_ms": 4170,
+          "via": "direct"
+        }
+      },
+      "timings_ms": {
+        "total": 4188,
+        "pipeline": null
+      },
+      "graph_sync": {
+        "mode": "doc_only",
+        "ready": false,
+        "syncing": false,
+        "status": "unknown",
+        "detail": {},
+        "reason": "never_synced"
+      },
+      "no_llm": false,
+      "extraction_path": "/private/tmp/delaylama-results-first/runtime/processed/results-first-contract-qa-erable-20261004-083506-3ca26d/extractions/contract_identity_20261004_083537_373352.json",
+      "output": {
+        "general": {
+          "contract_name": "Passerelle des Érables",
+          "contract_number": "QA-ÉRABLE-2044",
+          "project_name": "Passerelle des Érables",
+          "location": "Riveclaire",
+          "contract_date": "2 janvier 2044",
+          "contract_type": "marché de travaux",
+          "citations": [
+            {
+              "quote": "Le marché de travaux « Passerelle des Érables », référence QA-ÉRABLE-2044, est signé le 2 janvier 2044",
+              "clause_ref": "Article 1",
+              "section": "",
+              "char_start": 121,
+              "char_end": 223,
+              "source_id": "project:results-first-contract-qa-erable-20261004-083506-3ca26d",
+              "verified": true,
+              "match_kind": "exact",
+              "confidence": 1.0
+            }
+          ],
+          "rationale": "Le document identifie explicitement le nom du marché, sa référence, sa date de signature et sa nature juridique.",
+          "name": "contract_number",
+          "value": "QA-ÉRABLE-2044",
+          "_citations_verified": true
+        },
+        "parties": {},
+        "party_details": [
+          {
+            "name": "Ville de Riveclaire",
+            "legal_form": "",
+            "role": "maître d'ouvrage",
+            "registration": "",
+            "address": "",
+            "clause_ref": "Article 1",
+            "citations": [
+              {
+                "quote": "la Ville de Riveclaire, maître d'ouvrage",
+                "clause_ref": "Article 1",
+                "section": "",
+                "char_start": 230,
+                "char_end": 270,
+                "source_id": "project:results-first-contract-qa-erable-20261004-083506-3ca26d",
+                "verified": true,
+                "match_kind": "exact",
+                "confidence": 1.0
+              }
+            ],
+            "rationale": "La Ville de Riveclaire est désignée comme le maître d'ouvrage dans l'article 1.",
+            "_citations_verified": true
+          },
+          {
+            "name": "Érable Construction SAS",
+            "legal_form": "SAS",
+            "role": "entrepreneur",
+            "registration": "",
+            "address": "",
+            "clause_ref": "Article 1",
+            "citations": [
+              {
+                "quote": "Érable Construction SAS, entrepreneur",
+                "clause_ref": "Article 1",
+                "section": "",
+                "char_start": 275,
+                "char_end": 312,
+                "source_id": "project:results-first-contract-qa-erable-20261004-083506-3ca26d",
+                "verified": true,
+                "match_kind": "exact",
+                "confidence": 1.0
+              }
+            ],
+            "rationale": "Érable Construction SAS est identifiée comme l'entrepreneur dans l'article 1.",
+            "_citations_verified": true
+          }
+        ],
+        "stakeholders": {
+          "OPC": "Horizon OPC SAS"
+        },
+        "scope": {
+          "project_description": "Le projet consiste en la réalisation de la « Passerelle des Érables » située à Riveclaire.",
+          "scope_of_works": "Le marché porte sur des travaux de construction pour la « Passerelle des Érables ».",
+          "citations": [
+            {
+              "quote": "Le marché de travaux « Passerelle des Érables », référence QA-ÉRABLE-2044, est signé le 2 janvier 2044 entre la Ville de Riveclaire, maître d'ouvrage, et Érable Construction SAS, entrepreneur. Le projet est situé à Riveclaire.",
+              "clause_ref": "Article 1",
+              "section": "Identité et parties",
+              "source_id": "project:results-first-contract-qa-erable-20261004-083506-3ca26d",
+              "verified": true,
+              "char_start": 121,
+              "char_end": 347,
+              "match_kind": "exact",
+              "confidence": 1.0
+            }
+          ],
+          "rationale": "L'article 1 identifie l'objet du marché comme étant la réalisation de la Passerelle des Érables à Riveclaire.",
+          "_citations_verified": true
+        },
+        "authorizations": [],
+        "suspensive_conditions": [],
+        "price": {
+          "contract_price": "420 000 EUR HT",
+          "price_type": "forfaitaire",
+          "price_character": "non révisable",
+          "payment_deadline": "30 jours suivant la réception de la facture",
+          "retention": "5 % du prix",
+          "citations": [
+            {
+              "quote": "Le prix forfaitaire non révisable est de 420 000 EUR HT.",
+              "clause_ref": "Article 2",
+              "section": "Prix et délai",
+              "source_id": "project:results-first-contract-qa-erable-20261004-083506-3ca26d",
+              "verified": true,
+              "char_start": 461,
+              "char_end": 517,
+              "match_kind": "exact",
+              "confidence": 1.0
+            },
+            {
+              "quote": "Le paiement intervient dans les 30 jours suivant la réception de la facture.",
+              "clause_ref": "Article 2",
+              "section": "Prix et délai",
+              "source_id": "project:results-first-contract-qa-erable-20261004-083506-3ca26d",
+              "verified": true,
+              "char_start": 518,
+              "char_end": 594,
+              "match_kind": "exact",
+              "confidence": 1.0
+            },
+            {
+              "quote": "La retenue de garantie est de 5 % du prix et sera restituée un an après réception, sous réserve de la levée des réserves.",
+              "clause_ref": "Article 3",
+              "section": "Réserves",
+              "source_id": "project:results-first-contract-qa-erable-20261004-083506-3ca26d",
+              "verified": true,
+              "char_start": 1165,
+              "char_end": 1286,
+              "match_kind": "exact",
+              "confidence": 1.0
+            }
+          ],
+          "rationale": "Le contrat définit un prix forfaitaire non révisable, un délai de paiement de 30 jours et une retenue de garantie de 5 %.",
+          "name": "contract_price",
+          "value": "420 000 EUR HT",
+          "_citations_verified": true
+        },
+        "time": {
+          "start_date": "1 mars 2044",
+          "completion": "30 juin 2044",
+          "completion_date": "30 juin 2044",
+          "citations": [
+            {
+              "quote": "Les travaux commencent le 1 mars 2044 et doivent être achevés le 30 juin 2044.",
+              "clause_ref": "Article 2",
+              "section": "Prix et délai",
+              "source_id": "project:results-first-contract-qa-erable-20261004-083506-3ca26d",
+              "verified": true,
+              "char_start": 595,
+              "char_end": 673,
+              "match_kind": "exact",
+              "confidence": 1.0
+            }
+          ],
+          "rationale": "Les dates de début et de fin des travaux sont explicitement fixées dans l'article 2 du contrat.",
+          "name": "completion",
+          "value": "30 juin 2044",
+          "_citations_verified": true
+        },
+        "milestones": [
+          {
+            "id": "M1",
+            "title": "Début des travaux",
+            "date": "1 mars 2044",
+            "kind": "start",
+            "status": "current",
+            "citations": [
+              {
+                "quote": "Les travaux commencent le 1 mars 2044",
+                "clause_ref": "Article 2",
+                "section": "Prix et délai",
+                "source_id": "project:results-first-contract-qa-erable-20261004-083506-3ca26d",
+                "verified": true,
+                "char_start": 595,
+                "char_end": 632,
+                "match_kind": "exact",
+                "confidence": 1.0
+              }
+            ],
+            "rationale": "La date de commencement des travaux est définie comme le 1 mars 2044.",
+            "_citations_verified": true
+          },
+          {
+            "id": "M2",
+            "title": "Achèvement des travaux",
+            "date": "30 juin 2044",
+            "kind": "completion",
+            "status": "current",
+            "citations": [
+              {
+                "quote": "doivent être achevés le 30 juin 2044.",
+                "clause_ref": "Article 2",
+                "section": "Prix et délai",
+                "source_id": "project:results-first-contract-qa-erable-20261004-083506-3ca26d",
+                "verified": true,
+                "char_start": 636,
+                "char_end": 673,
+                "match_kind": "exact",
+                "confidence": 1.0
+              }
+            ],
+            "rationale": "La date d'achèvement des travaux est fixée au 30 juin 2044.",
+            "_citations_verified": true
+          }
+        ],
+        "responsibilities": {
+          "citations": [],
+          "rationale": "Le document ne contient aucune disposition concernant la répartition des responsabilités liées à la connaissance du site, aux conditions existantes, aux études géotechniques ou à la pollution."
+        },
+        "guarantees": [
+          {
+            "type": "Retenue de garantie",
+            "provided_by": "Érable Construction SAS",
+            "beneficiary": "Ville de Riveclaire",
+            "amount": "5 % du prix",
+            "clause_ref": "Article 3",
+            "citations": [
+              {
+                "quote": "La retenue de garantie est de 5 % du prix et sera restituée un an après réception, sous réserve de la levée des réserves.",
+                "clause_ref": "Article 3",
+                "section": "Article 3 — Réserves",
+                "char_start": 1165,
+                "char_end": 1286,
+                "source_id": "project:results-first-contract-qa-erable-20261004-083506-3ca26d",
+                "verified": true,
+                "match_kind": "exact",
+                "confidence": 1.0
+              }
+            ],
+            "rationale": "Le contrat prévoit une retenue de garantie de 5 % du prix, restituée un an après réception sous condition de levée des réserves.",
+            "_citations_verified": true
+          }
+        ],
+        "penalties": [],
+        "insurances": [],
+        "reserves": {
+          "clause_ref": "Article 3",
+          "citations": [
+            {
+              "quote": "Le présent document ne fixe pas de délai pour lever les réserves.",
+              "clause_ref": "Article 3",
+              "section": "Article 3 — Réserves",
+              "char_start": 1287,
+              "char_end": 1352,
+              "source_id": "project:results-first-contract-qa-erable-20261004-083506-3ca26d",
+              "verified": true,
+              "match_kind": "exact",
+              "confidence": 1.0
+            }
+          ],
+          "rationale": "Le document stipule explicitement qu'aucun délai n'est fixé pour la levée des réserves.",
+          "_citations_verified": true
+        },
+        "main_risks": [
+          {
+            "risk": "Absence de délai contractuel pour la levée des réserves",
+            "allocation": "Non spécifié",
+            "severity": "Non spécifié",
+            "clause_ref": "Article 3",
+            "citations": [
+              {
+                "quote": "Le présent document ne fixe pas de délai pour lever les réserves.",
+                "clause_ref": "Article 3",
+                "section": "Article 3 — Réserves",
+                "char_start": 1287,
+                "char_end": 1352,
+                "source_id": "original-rable-execution-record",
+                "verified": true,
+                "match_kind": "exact",
+                "confidence": 1.0
+              }
+            ],
+            "rationale": "Le contrat indique explicitement qu'aucun délai n'est défini pour la levée des réserves après la réception.",
+            "_citations_verified": true
+          }
+        ],
+        "summary": "Le marché de travaux QA-ÉRABLE-2044, intitulé « Passerelle des Érables », est conclu le 2 janvier 2044 entre la Ville de Riveclaire (maître d'ouvrage) et Érable Construction SAS (entrepreneur) pour un montant forfaitaire non révisable de 420 000 EUR HT. Le chantier, situé à Riveclaire, doit débuter le 1 mars 2044 pour s'achever le 30 juin 2044. Le paiement est dû dans un délai de 30 jours après réception de la facture. Une retenue de garantie de 5 % est prévue, restituable un an après réception sous réserve de la levée des réserves.",
+        "warnings": [
+          "Le document ne précise pas de délai pour la levée des réserves.",
+          "Le document ne désigne pas de responsable pour la réparation des vices apparents.",
+          "Le document ne mentionne aucune clause relative aux conditions d'extension de délai.",
+          "Le document ne mentionne aucune garantie financière d'achèvement ou de bonne fin.",
+          "Le document ne mentionne aucune pénalité de retard ou technique.",
+          "Le document ne mentionne aucune assurance souscrite par les parties.",
+          "Le document ne mentionne aucune condition suspensive.",
+          "Le document ne mentionne aucune autorisation administrative.",
+          "Le document ne mentionne aucune répartition des responsabilités concernant la connaissance du site, les conditions géotechniques ou la pollution."
+        ],
+        "_analysis_reviews": {},
+        "agent": "contract_identity",
+        "used_fallback": false,
+        "language": "fr",
+        "reasoning_mode": "multi_step",
+        "generated_at": "2026-10-04T08:35:37.000Z",
+        "_analysis_runtime": {
+          "schema_version": 1,
+          "agent": "contract_identity",
+          "reasoning_mode": "multi_step",
+          "context_chars": 1000000,
+          "sectioned_extract": true,
+          "driver_versions": {
+            "agentomatic": "1.15.0",
+            "langchain-core": "1.4.9",
+            "langchain-openai": "1.3.5",
+            "langchain-google-genai": null
+          },
+          "language": "fr",
+          "calls": [
+            {
+              "phase": "extract",
+              "json_repair": false,
+              "llm": {
+                "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                "model": "gemini-3.1-flash-lite",
+                "endpoint_origin": "https://generativelanguage.googleapis.com",
+                "parameters": {
+                  "temperature": 0.1,
+                  "top_p": null,
+                  "top_k": null,
+                  "max_tokens": 4096,
+                  "max_completion_tokens": null,
+                  "seed": null,
+                  "reasoning_effort": null,
+                  "thinking_budget": null,
+                  "frequency_penalty": null,
+                  "presence_penalty": null,
+                  "stop": null,
+                  "enable_thinking": null
+                }
+              },
+              "system_sha256": "56823471e1e7116d1565c4d8fc78c452f78a0063c1ddc1cc2a2ca04c219257aa",
+              "input_sha256": "4fb11319761762e42c6e88435391df7680f3e44a4e1825825b6f5b7ee2510b3c",
+              "input_chars": 4616,
+              "status": "parsed",
+              "transport_retry_limit": 0,
+              "output_contract_sha256": "f5dcc4a80e3fce1ca00bd0d212a5d499ece1f8c60d2de00d35e34af84d548fa0",
+              "response_model": "gemini-3.1-flash-lite",
+              "system_fingerprint": null
+            },
+            {
+              "phase": "extract",
+              "json_repair": false,
+              "llm": {
+                "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                "model": "gemini-3.1-flash-lite",
+                "endpoint_origin": "https://generativelanguage.googleapis.com",
+                "parameters": {
+                  "temperature": 0.1,
+                  "top_p": null,
+                  "top_k": null,
+                  "max_tokens": 4096,
+                  "max_completion_tokens": null,
+                  "seed": null,
+                  "reasoning_effort": null,
+                  "thinking_budget": null,
+                  "frequency_penalty": null,
+                  "presence_penalty": null,
+                  "stop": null,
+                  "enable_thinking": null
+                }
+              },
+              "system_sha256": "56823471e1e7116d1565c4d8fc78c452f78a0063c1ddc1cc2a2ca04c219257aa",
+              "input_sha256": "205658d05181570ceb2f5b1d01a3a124cdd227f433297ed587fb49d5489630f5",
+              "input_chars": 4835,
+              "status": "parsed",
+              "transport_retry_limit": 0,
+              "output_contract_sha256": "f5dcc4a80e3fce1ca00bd0d212a5d499ece1f8c60d2de00d35e34af84d548fa0",
+              "response_model": "gemini-3.1-flash-lite",
+              "system_fingerprint": null
+            },
+            {
+              "phase": "extract",
+              "json_repair": false,
+              "llm": {
+                "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                "model": "gemini-3.1-flash-lite",
+                "endpoint_origin": "https://generativelanguage.googleapis.com",
+                "parameters": {
+                  "temperature": 0.1,
+                  "top_p": null,
+                  "top_k": null,
+                  "max_tokens": 4096,
+                  "max_completion_tokens": null,
+                  "seed": null,
+                  "reasoning_effort": null,
+                  "thinking_budget": null,
+                  "frequency_penalty": null,
+                  "presence_penalty": null,
+                  "stop": null,
+                  "enable_thinking": null
+                }
+              },
+              "system_sha256": "56823471e1e7116d1565c4d8fc78c452f78a0063c1ddc1cc2a2ca04c219257aa",
+              "input_sha256": "f5f38ba48558e708ad73720976951f9e72a55eecb3c859f6f8b93d6aad52a23d",
+              "input_chars": 5598,
+              "status": "parsed",
+              "transport_retry_limit": 0,
+              "output_contract_sha256": "f5dcc4a80e3fce1ca00bd0d212a5d499ece1f8c60d2de00d35e34af84d548fa0",
+              "response_model": "gemini-3.1-flash-lite",
+              "system_fingerprint": null
+            },
+            {
+              "phase": "extract",
+              "json_repair": false,
+              "llm": {
+                "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                "model": "gemini-3.1-flash-lite",
+                "endpoint_origin": "https://generativelanguage.googleapis.com",
+                "parameters": {
+                  "temperature": 0.1,
+                  "top_p": null,
+                  "top_k": null,
+                  "max_tokens": 4096,
+                  "max_completion_tokens": null,
+                  "seed": null,
+                  "reasoning_effort": null,
+                  "thinking_budget": null,
+                  "frequency_penalty": null,
+                  "presence_penalty": null,
+                  "stop": null,
+                  "enable_thinking": null
+                }
+              },
+              "system_sha256": "56823471e1e7116d1565c4d8fc78c452f78a0063c1ddc1cc2a2ca04c219257aa",
+              "input_sha256": "7e8648649f7cef141065133aefe97933762c7377b3f0f814026e3f3025aece90",
+              "input_chars": 5358,
+              "status": "parsed",
+              "transport_retry_limit": 0,
+              "output_contract_sha256": "f5dcc4a80e3fce1ca00bd0d212a5d499ece1f8c60d2de00d35e34af84d548fa0",
+              "response_model": "gemini-3.1-flash-lite",
+              "system_fingerprint": null
+            },
+            {
+              "phase": "extract",
+              "json_repair": false,
+              "llm": {
+                "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                "model": "gemini-3.1-flash-lite",
+                "endpoint_origin": "https://generativelanguage.googleapis.com",
+                "parameters": {
+                  "temperature": 0.1,
+                  "top_p": null,
+                  "top_k": null,
+                  "max_tokens": 4096,
+                  "max_completion_tokens": null,
+                  "seed": null,
+                  "reasoning_effort": null,
+                  "thinking_budget": null,
+                  "frequency_penalty": null,
+                  "presence_penalty": null,
+                  "stop": null,
+                  "enable_thinking": null
+                }
+              },
+              "system_sha256": "56823471e1e7116d1565c4d8fc78c452f78a0063c1ddc1cc2a2ca04c219257aa",
+              "input_sha256": "aacc43dcda11df41d630dd1d162a39e73c8e04e1abca10ce3b6921099cfb6cbe",
+              "input_chars": 4183,
+              "status": "parsed",
+              "transport_retry_limit": 0,
+              "output_contract_sha256": "f5dcc4a80e3fce1ca00bd0d212a5d499ece1f8c60d2de00d35e34af84d548fa0",
+              "response_model": "gemini-3.1-flash-lite",
+              "system_fingerprint": null
+            }
+          ]
+        },
+        "_evidence_stats": {
+          "verification_policy": "exact_or_whitespace_v1",
+          "total": 13,
+          "verified": 13,
+          "unverified": 0,
+          "quote_in_doc": 1.0,
+          "citation_coverage": 0.9167,
+          "groundedness": 0.975,
+          "findings_with_citations": 11,
+          "findings_total": 12,
+          "source_id": "project:results-first-contract-qa-erable-20261004-083506-3ca26d"
+        },
+        "_analysis_provenance": {
+          "schema_version": 1,
+          "project_id": "results-first-contract-qa-erable-20261004-083506-3ca26d",
+          "agent": "contract_identity",
+          "source_sha256": "e3d00dfce9269973a426e952e5d7ef78e6835081e185e6328508924c09811ef1",
+          "source_chars": 1419
+        }
+      }
+    },
+    "event_detector": {
+      "ok": true,
+      "project_id": "results-first-contract-qa-erable-20261004-083506-3ca26d",
+      "pipeline": "extract_batch",
+      "saved_agents": [
+        "event_detector"
+      ],
+      "per_agent": {
+        "event_detector": {
+          "path": "/private/tmp/delaylama-results-first/runtime/processed/results-first-contract-qa-erable-20261004-083506-3ca26d/extractions/event_detector_20261004_083536_976756.json",
+          "llm_ms": 3604,
+          "via": "direct"
+        }
+      },
+      "timings_ms": {
+        "total": 3627,
+        "pipeline": null
+      },
+      "graph_sync": {
+        "mode": "doc_only",
+        "ready": false,
+        "syncing": false,
+        "status": "unknown",
+        "detail": {},
+        "reason": "never_synced"
+      },
+      "no_llm": false,
+      "extraction_path": "/private/tmp/delaylama-results-first/runtime/processed/results-first-contract-qa-erable-20261004-083506-3ca26d/extractions/event_detector_20261004_083536_976756.json",
+      "output": {
+        "events": [
+          {
+            "id": "E1",
+            "source_event_id": "G-1",
+            "title": "Fermeture de l'accès au chantier",
+            "event_date": "2044-04-03",
+            "source_document": "original-rable-execution-record",
+            "event_type": "Suspension des travaux",
+            "cause": "La Ville de Riveclaire ordonne la fermeture de l'accès au chantier.",
+            "consequences": [
+              "Suspension des travaux pendant une journée"
+            ],
+            "responsible_party": "Ville de Riveclaire",
+            "affected_activities": [
+              "Travaux de la Passerelle des Érables"
+            ],
+            "cost_impact": "",
+            "time_impact": "1 jour",
+            "evidence_available": [
+              "Journal d'exécution"
+            ],
+            "missing_evidence": [],
+            "notice_status": "Non documenté",
+            "confidence": 1.0,
+            "citations": [
+              {
+                "quote": "Le 3 avril 2044, la Ville de Riveclaire ordonne la fermeture de l'accès au chantier. Érable Construction SAS suspend ses travaux pendant une journée.",
+                "clause_ref": "",
+                "section": "Journal d'exécution",
+                "char_start": 705,
+                "char_end": 854,
+                "source_id": "G-1",
+                "verified": true,
+                "match_kind": "exact",
+                "confidence": 1.0
+              }
+            ],
+            "rationale": "Le journal d'exécution confirme explicitement la date, l'auteur de l'ordre de fermeture et la conséquence directe sur l'activité de l'entrepreneur.",
+            "_citations_verified": true
+          },
+          {
+            "id": "E2",
+            "source_event_id": "G-2",
+            "title": "Transmission du planning révisé",
+            "event_date": "2044-04-04",
+            "source_document": "original-rable-execution-record",
+            "event_type": "Transmission documentaire",
+            "cause": "",
+            "consequences": [
+              "Aucune prolongation de délai",
+              "Aucun retard constaté"
+            ],
+            "responsible_party": "Horizon OPC SAS",
+            "affected_activities": [],
+            "cost_impact": "",
+            "time_impact": "0",
+            "evidence_available": [
+              "Journal d'exécution"
+            ],
+            "missing_evidence": [],
+            "notice_status": "Non applicable",
+            "confidence": 1.0,
+            "citations": [
+              {
+                "quote": "Le 4 avril 2044, Horizon OPC SAS transmet le planning révisé. Cette transmission ne constitue ni une demande ni un accord de prolongation du délai contractuel. Le journal ne constate aucun retard causé par cette transmission.",
+                "clause_ref": "",
+                "section": "Journal d'exécution",
+                "char_start": 913,
+                "char_end": 1138,
+                "source_id": "G-2",
+                "verified": true,
+                "match_kind": "exact",
+                "confidence": 1.0
+              }
+            ],
+            "rationale": "L'événement documente la transmission d'un planning par l'OPC tout en précisant explicitement l'absence d'impact sur le délai contractuel.",
+            "_citations_verified": true
+          }
+        ],
+        "summary": "Le projet « Passerelle des Érables » (QA-ÉRABLE-2044) a connu une interruption d'une journée le 3 avril 2044 suite à une décision du maître d'ouvrage. Une transmission de planning le 4 avril 2044 n'a entraîné aucun impact sur le calendrier contractuel.",
+        "_analysis_reviews": {
+          "events[0]": {
+            "source_event_id": "The source event reference does not appear in this event's supporting quotations. Find the original occurrence record naming the event; a generated analysis ID or a nearby reference cannot establish its identity."
+          },
+          "events[1]": {
+            "source_event_id": "The source event reference does not appear in this event's supporting quotations. Find the original occurrence record naming the event; a generated analysis ID or a nearby reference cannot establish its identity."
+          }
+        },
+        "agent": "event_detector",
+        "used_fallback": false,
+        "language": "fr",
+        "reasoning_mode": "multi_step",
+        "generated_at": "2026-10-04T08:35:36.000Z",
+        "_analysis_runtime": {
+          "schema_version": 1,
+          "agent": "event_detector",
+          "reasoning_mode": "multi_step",
+          "context_chars": 1000000,
+          "sectioned_extract": false,
+          "driver_versions": {
+            "agentomatic": "1.15.0",
+            "langchain-core": "1.4.9",
+            "langchain-openai": "1.3.5",
+            "langchain-google-genai": null
+          },
+          "language": "fr",
+          "calls": [
+            {
+              "phase": "extract",
+              "json_repair": false,
+              "llm": {
+                "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                "model": "gemini-3.1-flash-lite",
+                "endpoint_origin": "https://generativelanguage.googleapis.com",
+                "parameters": {
+                  "temperature": 0.1,
+                  "top_p": null,
+                  "top_k": null,
+                  "max_tokens": 4096,
+                  "max_completion_tokens": null,
+                  "seed": null,
+                  "reasoning_effort": null,
+                  "thinking_budget": null,
+                  "frequency_penalty": null,
+                  "presence_penalty": null,
+                  "stop": null,
+                  "enable_thinking": null
+                }
+              },
+              "system_sha256": "3200bc1bcde10f6d471a867fa9ab911de54e0eb4ab0693c40b6550509ebfa943",
+              "input_sha256": "b7021169ed52228081b9cdb036f26a0b9f39353cb21218ae3118350cf0c9a337",
+              "input_chars": 3996,
+              "status": "parsed",
+              "transport_retry_limit": 0,
+              "output_contract_sha256": "56d92d0a2db4cdd7798bf28c9550c5bd419d0a8963406f9f00b9737638eacd3e",
+              "response_model": "gemini-3.1-flash-lite",
+              "system_fingerprint": null
+            }
+          ]
+        },
+        "_evidence_stats": {
+          "verification_policy": "exact_or_whitespace_v1",
+          "total": 2,
+          "verified": 2,
+          "unverified": 0,
+          "quote_in_doc": 1.0,
+          "citation_coverage": 1.0,
+          "groundedness": 1.0,
+          "findings_with_citations": 2,
+          "findings_total": 2,
+          "source_id": "project:results-first-contract-qa-erable-20261004-083506-3ca26d"
+        },
+        "_analysis_provenance": {
+          "schema_version": 1,
+          "project_id": "results-first-contract-qa-erable-20261004-083506-3ca26d",
+          "agent": "event_detector",
+          "source_sha256": "e3d00dfce9269973a426e952e5d7ef78e6835081e185e6328508924c09811ef1",
+          "source_chars": 1419
+        }
+      }
+    }
+  },
+  "engine_health_before_cleanup": {
+    "analysis_jobs": {
+      "cancelled": 0,
+      "done": 0,
+      "failed": 0,
+      "queued": 0,
+      "running": 0
+    },
+    "analysis_jobs_scope": "service",
+    "edge_count": 2,
+    "episode_count": 3,
+    "node_count": 9,
+    "schema": "construction_claims",
+    "status": "ok"
+  },
+  "api_active_before_cleanup": 0,
+  "graph_tables_after_extract_and_final_browser": {
+    "nodes": {
+      "rows": 9,
+      "sha256": "e25f17ead7cde7d68d3e959068357790f69a668eb7579989fd6d4bc42a80c78d"
+    },
+    "edges": {
+      "rows": 2,
+      "sha256": "7d409700a303e228c1e5d77983df2e5606def8a003549315a6b4fe5bd37d45b9"
+    },
+    "episodes": {
+      "rows": 3,
+      "sha256": "13312b2836274027287ba22ac5051ff7d42f92925a10e44ebf1df3d851774ee3"
+    },
+    "schema_meta": {
+      "rows": 1,
+      "sha256": "597ceae6317b131fd5fbf6c734da6357a23c1f3f7f28223bd51e9ba8c5810735"
+    },
+    "timeline_events": {
+      "rows": 14,
+      "sha256": "a9da49e3959d17b730dbca22c8b43f467fd03ea8d8d11ae6bef63067b2579d6b"
+    }
+  },
+  "observations": {
+    "contract_facts": "Expected identity, contracting-party roles, price and completion extracted in this draw; no reservation-lifting deadline manufactured from retention release.",
+    "event_facts": "Two G-1/G-2 occurrences, dates and performers; unreturned costs remain unreturned.",
+    "evidence_gaps": "OPC field has no quote; G-1/G-2 labels omitted in their quotes; generated summaries unquoted. All remain review tasks.",
+    "semantic_limits": "Guarantee provider/beneficiary labels and construction scope paraphrases still require semantic review; section quote presence is not field entailment.",
+    "graph_limits": "Document-only sync status, generic regex/source graph with nine nodes/two HAS_DATE links; no typed Event nodes. Includes truncated RABLE-2044 identifier. This pass does not establish graph completeness, legal liability or correct Unicode entity linking.",
+    "graph_browser_scope": "Table snapshot taken after extraction and initial browser checks, before final reload/agent restoration; unchanged only over that latter interval.",
+    "model": "Runtime records in results retain actual model/settings; no prompt/default activation, new training or demonstrated prompt/model gain."
+  },
+  "tests": {
+    "frontend": {
+      "command": "npx vitest run --maxWorkers=1",
+      "passed": 710,
+      "files": 57,
+      "duration_seconds": 162.81,
+      "assertions_and_timeouts_unchanged": true
+    },
+    "focused": {
+      "command": "npm test -- tests/analysis-overview.test.tsx tests/agent-results.test.tsx tests/workspace-navigation.test.tsx",
+      "passed": 26,
+      "files": 3
+    },
+    "affected_followup": {
+      "command": "npx vitest run --maxWorkers=1 tests/workspace-selection.test.tsx tests/prompt-studio.test.tsx",
+      "passed": 65,
+      "files": 2,
+      "duration_seconds": 60.88
+    },
+    "production_build": {
+      "command": "npm run build",
+      "passed": true,
+      "vite_duration_seconds": 13.97,
+      "warning": "Existing >500 kB main chunk warning; no performance qualification claimed."
+    },
+    "backend_engine": "No implementation changes in this pass; no new backend/Go qualification claimed."
+  },
+  "retained_failures": [
+    {
+      "scope": "New Project regression first run",
+      "failure": "Navigation matched exact text despite sidebar descriptions; fixed selector."
+    },
+    {
+      "scope": "New Project regression second run",
+      "failure": "Assertion before lazy document import completed; existing settlePanels helper added."
+    },
+    {
+      "scope": "Intermediate full suite with four workers",
+      "failed": 32,
+      "passed": 678,
+      "files": 57,
+      "duration_seconds": 154.87,
+      "failure": "Existing five-second timeouts and cascading Prompt Studio failures on busy host; one stale workspace assertion before lazy document loaded.",
+      "resolution": "Added settlePanels only at that document assertion; affected suites and final serial full suite pass. No timeout/assertion relaxation."
+    },
+    {
+      "scope": "Attempted npm worker override",
+      "failure": "Vitest rejects duplicate maxWorkers=4/maxWorkers=1 options; no tests executed.",
+      "resolution": "Called npx vitest directly with one option."
+    },
+    {
+      "scope": "Browser observation",
+      "failure": "Expand-results locator did not match; used observed AX control. A post-reload observation deadline elapsed despite diagnostics showing the document heading visible.",
+      "resolution": "Fresh AX state confirmed the source document after reload; no model job resubmitted."
+    }
+  ],
+  "preservation": {
+    "protected_engine_source_files_unchanged": true,
+    "protected_app_artifacts_unchanged": true,
+    "user_studio_unchanged": true,
+    "orchid_studio_unchanged": true,
+    "user_graph_all_tables_unchanged": true,
+    "user_engine_health": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    },
+    "user_graph_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    }
+  },
+  "cleanup": {
+    "processes": [
+      {
+        "service": "engine",
+        "pid": 88010,
+        "port": 8097
+      },
+      {
+        "service": "api",
+        "pid": 88013,
+        "port": 8081
+      },
+      {
+        "service": "frontend",
+        "pid": 88016,
+        "port": 5175
+      }
+    ],
+    "owned_ports_closed": true,
+    "tabs_closed": [
+      84
+    ],
+    "api_active_operations_before_shutdown": 0,
+    "model_workflow_jobs_terminal": 2
+  },
+  "logs": {
+    "frontend-tests.log": "3dcf0f8a8d8267561735f7df2548df362a01b5acf3f1a2b78a3f804af9e31c22",
+    "frontend-tests-serial.log": "d1ae288794ab964fa6476f3929b0aa8d70ae7e6478fe35efd59c9461ed53bfca",
+    "focused-followup.log": "60a4f4ebea40d1fff4cfcb506e0413281f8d14686710bc722ad6718962f2405a",
+    "focused-serial.log": "ea8f6a0ac06bbdd9c20879a8b96c637890f49416a1859a2388392ab6a5bc9aaf",
+    "build.log": "738b6b0e0a7a9ba86a297890901fda3869543f52029b91bf2d469fdb5ebb69f5"
+  },
+  "screenshots": {
+    "2026-10-04-results-first-document.png": "ec705f6ff203fb6990eff94a6a992a7acb59b54f2acef50093249fe4fd72a8a3",
+    "2026-10-04-results-first-events.png": "2c71813897b3bb5f1ae25a27c918f2e254c2ee125ca6ad741d3ecb4f7e50c8e4",
+    "2026-10-04-results-first-identity.png": "28662c0ee4765e6589714d6847ee8192c195b23fc6f9bbbaddf9b37fcbbd59d7",
+    "2026-10-04-results-first-party-review.png": "2461cc3efdce381f2e8988ef853d88e2bc590db68be967c3dd483392da52c975"
+  },
+  "browser_observation_hashes": {
+    "timeline-dom.txt": "82fdd56e6f6cdc4e83a7293ffa624a080179d08f7fd0d4e19fae90a57fdfc5e9",
+    "project-dom.txt": "d8e4283978f9d7bfb80edade09d230d05d1baed756ad980ca8fe21484b110af4",
+    "restored-identity-dom.txt": "8b50df61d04db5ba3848a39899fb8866b8110f90465ab389a8cc3e8e00450f69",
+    "events-dom.txt": "dab6d6324f421b03d8bf39409fae4fb92423f07f880e379dc0efbe98851f4f4e",
+    "project-reloaded-dom.txt": "b252b760d37fd5353db322c2d988a2f77a1cf010561a9b3c3030e21069717a2f",
+    "project-after-event-dom.txt": "d26140f419e2b4733a74313ecc7cd5ceeef4e7fd2bef5aa554bf0c597b0988d3",
+    "identity-dom.txt": "18dcb48c515cbe2c16c43655f7785bef463d14a8d769b8ac887d4503eb26c3ae"
+  },
+  "untouched_user_work": [
+    "delaylama/agents/event_detector/prompts.json",
+    "layago/",
+    "14 ignored Chronograph source edits",
+    "32 protected artifacts",
+    "both user Studio sessions",
+    "all user graph tables"
+  ]
+}

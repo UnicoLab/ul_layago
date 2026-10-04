@@ -2538,6 +2538,43 @@ added in this pass.
 See the [frozen-comparison audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-frozen-comparison.md)
 and [shared receipt](validation/delaylama-frozen-comparison-20261004.json).
 
+## L84 — Keep result presentation, quote matching and graph completeness separate (2026-10-04)
+
+DelayLama now puts contract identity and named parties first for the identity
+agent, and pairs occurrence dates with reported performers for event extraction.
+Every overview item opens its original review path; duplicate titles/IDs cannot
+redirect review to a different array element. Entirely unreturned financial
+fields stay accessible in a collapsed group without being turned into zero.
+Project document previews no longer inherit analysis payloads, timeline flags or
+saved-run headings. Agent-specific modes remain separate across tab/reload checks.
+
+Two actual saved-workflow model jobs on one new synthetic French contract
+returned the expected contract reference, employer/contractor roles, price,
+completion and two event-date-performer triples. The browser confirmed party
+quotation navigation, event timeline association, Project isolation and reload.
+This qualifies presentation and binding on the case, not independent recall,
+semantic support, model speed or prompt optimization.
+
+The same draws retained uncited OPC/summary fields and event quotes lacking
+G-1/G-2 labels. Guarantee provider/beneficiary assignments and construction-scope
+paraphrases still require their own semantic support. The isolated source graph
+had nine generic nodes, two HAS_DATE links, no typed Event nodes and a truncated
+accented contract identifier. A saved analysis register, matching quotes and a
+running graph service cannot establish a complete or correctly linked graph.
+
+For reusable Laya training/evaluation, record exact Unicode source/reference
+identities, event/actor/affected-party direction, field-specific evidence,
+missing extraction, missing graph representation and human adjudication as
+separate observations. Do not train a correct scalar extraction as incorrect
+merely because graph registration failed, and do not call a generic same-line
+entity/date edge an adjudicated performer relation. Preserve unsuccessful draws
+and evaluate independent contracts/templates/languages before promoting a
+retrieval, classification or span head. No new Laya/GLiNER training, architecture
+or MLX measurement occurred in this pass.
+
+See the [results-first audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-results-first.md)
+and [shared receipt](validation/delaylama-results-first-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
