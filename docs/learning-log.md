@@ -3281,3 +3281,74 @@ weights, training, MLX, architecture or supervisor qualification changed.
 See the [performer and context audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-performer-premise-selection.md),
 [strict holdout graph](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/performer-premise-selection/context-holdout-graph.json)
 and [shared receipt](validation/delaylama-performer-premise-selection-20261004.json).
+
+
+## L102 — Causal antecedents, output schemas and quoted-context fidelity (2026-10-04)
+
+**Source protocol adopted structurally; semantic qualification remains failed.**
+DelayLama captured raw relationship proposals and rejection partitions to resolve
+L101's missing-cause diagnosis. In two known-case diagnostic jobs, the model
+supplied the correct causal assertion but its quote omitted the earlier closure
+antecedent. The strict own-action guard withheld both causes. Do not label this
+as a model omission: distinguish absent assertion, insufficient supplied premise,
+invalid selection, storage failure and retrieval/display failure.
+
+The engine can now select one uniquely located endpoint context, or two endpoint
+contexts and recover their enclosing **contiguous original span**, preserving
+intervening qualifications. Both own-action anchors must fit the bounded original
+span. References identify location, not semantic truth. Foreign/duplicate refs,
+ambiguous originals, budget excess and fabricated/joined snippets remain invalid.
+A captured parser replay adds a selection explicitly; it is not evidence that an
+actual model obeys the new schema. Planned/deadline occurrences remain barred
+from actual causal chains.
+
+Twelve full-original synthetic jobs retained 56/56 separate actions, actor checks
+with original citations and calendars; 62 performer links were present. Sixteen
+forbidden causal pairs and eight unperformed-action checks passed. Ten stories
+were reused and two cross-paragraph stories were frozen before inference. Only
+2/4 required causes and 4/5 own durations passed. The recovered known-case causes
+used fuller quotes: no relationship context selections were actually emitted.
+The two new causes still failed, so the optional source-first inventory stayed off.
+
+Inspection found that the final JSON template contradicted the new preceding
+instructions by omitting selection fields. Aligning that template led all four
+subsequent model causes to select the correct endpoint contexts. These jobs used
+two now-known stories and two new frozen structural variants with conditional
+restart and denied access between antecedent and effect. Three models nonetheless
+joined quotes with `...`/`[...]`, so their causes remained withheld. The fourth
+retained its cause, actual original envelope and an exact source fragment. Five
+relationship selections were accepted overall, including notice recipients.
+All 24 actions, actor checks and calendars passed, with 28 performer links and
+12/12 forbidden causal pairs absent, but only 1/4 required causes and 2/4 own
+durations passed. **No complete case passed the final gate.** French impact
+output described causation without the stated five-day duration; a located impact
+passage does not establish complete field extraction. No further prompt tuning
+or model draw followed those two fresh variant outcomes in this audit.
+
+**Training implications:** evaluate output-schema compliance separately from
+semantic recall and citation sufficiency. Selection-only outputs can avoid
+lossy model recopying; require adjudicated full original support for labels.
+Represent duration/magnitude, cause, actor, actual-versus-planned occurrence,
+conditional applicability and legal effect as separate targets. Include dispersed
+positive causal cases as well as negated, hypothetical, notice and reverse-direction
+hard negatives. A short anaphoric quote can be faithful text yet insufficient
+support; concatenating excerpts can erase a decisive intervening exception.
+For Laya, candidate retrieval/ranking should preserve each passage's identity and
+enclosing-context requirements, never promote quoted text alone into support or
+entitlement. Avoid training on these unreviewed LLM propositions as gold.
+
+The GUI exposes readable withholding reasons, source excerpts, the complete
+antecedent context and both endpoint originals. A real Hêtre browser review
+retained conditional access/restart and compensation clauses; no console errors
+were observed. Backend 1,063/frontend 777 tests, production build, final default/
+optional full Go suites, default race checks, twelve patch combinations and ten
+other variant suites are recorded in the linked receipt. Eighteen accepted remote
+jobs ended done and were archived; eighteen extra inventory calls are recorded,
+not provider HTTP/retries. Failed semantic gates and harness invocations remain
+available. Existing user graph, journals, prompts, engine edits and Studio state
+are preserved. No Laya/GLiNER weights, training, MLX, architecture or supervisor
+qualification changed.
+
+See the [causal context audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-causal-context-selection.md),
+[failed final template gate](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/causal-context-selection/template-synthetic-graph.json)
+and [shared receipt](validation/delaylama-causal-context-selection-20261004.json).

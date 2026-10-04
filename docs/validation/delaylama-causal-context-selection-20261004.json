@@ -1,0 +1,83 @@
+{
+  "learning_id": "L102",
+  "source_repository": "https://github.com/UnicoLab/delaylama",
+  "source_report": "docs/validation/2026-10-04-causal-context-selection.md",
+  "source_receipt": "docs/validation/2026-10-04-causal-context-selection.json",
+  "source_receipt_sha256": "21a5405e2a650596cd6588952565cb1507bc5176737c511acc392e6a66407fb3",
+  "qualification_failed": true,
+  "context_batch": {
+    "cases": 12,
+    "declared_actions": 56,
+    "distinct": 56,
+    "actors": 56,
+    "dates": 56,
+    "performer_links": 62,
+    "all_declared_checks_passed": false,
+    "cases_passed": 10,
+    "required_causation": {
+      "total": 4,
+      "passed": 2
+    },
+    "forbidden_causation": {
+      "total": 16,
+      "passed": 16
+    },
+    "declared_impacts": {
+      "total": 5,
+      "passed": 4
+    },
+    "forbidden_observed_actions": {
+      "total": 8,
+      "passed": 8
+    },
+    "remote_jobs": {
+      "accepted": 12,
+      "done": 12
+    },
+    "inventory_model_calls": 12,
+    "selected_premises": 0
+  },
+  "aligned_template_batch": {
+    "cases": 4,
+    "declared_actions": 24,
+    "distinct": 24,
+    "actors": 24,
+    "dates": 24,
+    "performer_links": 28,
+    "all_declared_checks_passed": false,
+    "cases_passed": 0,
+    "required_causation": {
+      "total": 4,
+      "passed": 1
+    },
+    "forbidden_causation": {
+      "total": 12,
+      "passed": 12
+    },
+    "declared_impacts": {
+      "total": 4,
+      "passed": 2
+    },
+    "forbidden_observed_actions": {
+      "total": 4,
+      "passed": 4
+    },
+    "selected_premises": 5
+  },
+  "remote_jobs_done_archived": 18,
+  "additional_inventory_model_calls": 18,
+  "training_weights_architecture_mlx_supervisor_changes": false,
+  "source_default_engine_commit": "62c4984db8efa95feaccbac5d4bbc4235ad0ccc1",
+  "checks_summary": {
+    "backend": 1063,
+    "frontend": 777,
+    "patch_cli": 28,
+    "frontend_build_exit": 0,
+    "full_engine_suites": 2,
+    "race_exit": 0,
+    "apply_idempotence_combinations": 12,
+    "variant_suites": 10
+  },
+  "user_state_preserved": true,
+  "documentation_only": true
+}
