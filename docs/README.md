@@ -20,6 +20,8 @@ do not confer accuracy or calibration on another application's tasks.
 
 | Record | What it establishes |
 | --- | --- |
+| [DelayLama exact evidence resume, 2026-10-04](validation/delaylama-review-resume-20261004.json) | Complete-context navigation, citation-list binding, async races and actual saved-analysis browser checks; L74 |
+| [DelayLama scoped navigation, 2026-10-04](validation/delaylama-review-navigation-20261004.json) | Contract/agent/layer isolation, graph reload and preservation checks; L73 |
 | [DelayLama role meaning, 2026-10-04](validation/delaylama-role-meaning-20261004.json) | Synthetic directed role sets, incoming-cause schema, corrected proposal labels, preserved duplicate-event failure and actual GUI coverage; L72 |
 | [Pretrained contract probe, 2026-10-01](validation/laya-pretrained-probe-20261001.json) | Twelve synthetic French clause/claim decisions from the full pretrained model |
 | [Contract pilot, 2026-10-02](validation/contract-pilot-20261002.json) | Dataset splits, model pins, calibration shortfall, held-out/locked results and baseline comparison |
@@ -27,8 +29,8 @@ do not confer accuracy or calibration on another application's tasks.
 | [Final 0.2.0 export, 2026-10-02](validation/release-0.2.0-20261002.json) | Clean release-code GPU export, actual devices, additional run timing and challenge errors |
 | [DelayLama live evidence recovery, 2026-10-02](validation/delaylama-evidence-recovery-20261002.json) | Eight targeted LLM checks and five agreements among seven available Laya second opinions; one synthetic contract, not certification |
 
-The first two records are preserved copies of DelayLama's checked-in synthetic
-evaluation records. Original paths, source revision and SHA-256 digests appear in
+The pretrained contract probe and contract pilot are preserved copies of
+DelayLama's checked-in synthetic evaluation records. Original paths, source revision and SHA-256 digests appear in
 [their provenance index](validation/contract-record-sources.json). They are
 historical evidence, not newly repeated experiments. The Hive report's identity
 is pinned in the acceleration receipt; its interpretation is attributed in the

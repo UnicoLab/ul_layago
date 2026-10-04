@@ -2218,6 +2218,36 @@ change was measured here. Existing event-class concerns remain unresolved.
 See the [navigation audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-review-navigation.md)
 and [shared receipt](validation/delaylama-review-navigation-20261004.json).
 
+## L74 — A restored quote index must bind to the same evidence (2026-10-04)
+
+The L73 EvidenceBoard resume item is now implemented. DelayLama binds the selected
+finding and quote position to native SHA-256 of the complete canonical result,
+source, review scope and agent. Preferences retain identifiers/digests only.
+Runtime metadata and review notes do not change result identity. A changed
+recovered citation list resets the index instead of showing a different quote
+under the remembered position. Narrative rows resume separately from factual rows.
+
+Explicit inspection requests are consumed after focus; later manual selection
+wins when reopening Review. The timeline retains a separate exact-context anchor.
+Late restore and digest-write races cannot replace a newer manual choice. Warm
+citation digests support synchronous writes before reload. Unsupported browser
+crypto/storage keeps review usable in the tab without a weak hash fallback.
+The initial fallback may briefly display a restoration hint; filters remain
+unpersisted. Position restoration does not accept evidence or send model jobs.
+
+653 frontend tests (including seventeen new resume/race cases) and the production
+build pass. Browser tests used copied original Aster synthetic-contract analyses:
+deadline/quote three survived reload; price/quote two survived reopening after an
+old explicit request, agent changes and final reload. Existing source/extraction
+bytes and graph hashes remained unchanged; no QA model jobs were submitted.
+No mobile, new extraction quality, Laya training or acceleration result is implied.
+The same distinction applies to Laya candidates: navigating back to a scored span
+must not turn it into a reviewed association or silently substitute different
+support. Treat data identity and human decisions independently.
+
+See the [resume audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-review-resume.md)
+and [shared receipt](validation/delaylama-review-resume-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
