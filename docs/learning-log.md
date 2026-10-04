@@ -2502,6 +2502,42 @@ before promoting prompt or model changes.
 See the [reviewed-correction audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-reviewed-performers.md)
 and [shared receipt](validation/delaylama-reviewed-performers-20261004.json).
 
+## L83 — Freeze analysis inputs and keep criteria separate from scores (2026-10-04)
+
+DelayLama's selected-run comparison now captures the baseline original, language
+and claim detector register together with a candidate prompt. Human criteria are
+recorded before execution; results retain the baseline/attempt identity and their
+own review scope. Failed or interrupted attempts remain in history without
+automatic resubmission. Restored metadata must agree with both actual run records
+before the GUI calls their inputs identical. Actual runtime differences remain
+visible rather than being hidden by the captured-input label.
+
+Two fresh event-detector and two fresh claim experiment runs qualified this path
+in an isolated browser/API/graph stack. Edited editor sources did not replace the
+baseline original or event inputs. Both event draws preserved dates and explicit
+performers; this candidate included the original occurrence labels inside exact
+citations. Both claim pairs retained E1/E2 time/cost associations with unknown
+entitlement when premises were missing. No graph write, default activation,
+semantic acceptance, prompt-assistant request or new training occurred. One
+synthetic contract/draw pair cannot demonstrate reliable prompt gains.
+
+All 706 frontend tests and the production build pass. The initial automatic-open
+implementation was caught closing the comparison when result selection changed
+and was fixed. An intermediate full run timed out on the busy host while edits
+also overlapped it; the final stable-source run passed with four workers and
+unchanged assertions/timeouts. Keep unsuccessful observations in the audit.
+
+For training/evaluation data, retain captured inputs, source versions, candidate
+and baseline prompts, criteria, unsuccessful attempts and actual execution
+records separately. Human criteria are not objective labels; exact quotations
+are not entailment, and equivalent raw date formats are not necessarily semantic
+regressions. Repeated draws and adjudicated independent contracts remain the
+gate for prompt/model promotion. No Laya/GLiNER or acceleration measurement was
+added in this pass.
+
+See the [frozen-comparison audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-frozen-comparison.md)
+and [shared receipt](validation/delaylama-frozen-comparison-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

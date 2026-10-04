@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-04",
+  "feature": "Selected-run frozen source/language/claim-input comparison with captured candidate and pre-run review criteria",
+  "tests": {
+    "frontend": {
+      "command": "npm test",
+      "test_script": "vitest run --maxWorkers=4",
+      "passed": 706,
+      "files": 57,
+      "duration_seconds": 100.0
+    },
+    "focused": {
+      "command": "npm test -- tests/prompt-studio.test.tsx tests/frozen-comparison.test.ts",
+      "passed": 61,
+      "files": 2
+    },
+    "production_build": {
+      "command": "npm run build",
+      "passed": true,
+      "duration_seconds": 6.06
+    },
+    "backend_engine": "Unchanged by this frontend pass; no new backend/Go qualification claimed. Prior reviewed-performer pass recorded 835 backend/full Go/race checks."
+  },
+  "retained_failures": [
+    {
+      "scope": "First frozen UI implementation",
+      "failure": "Result-selection effect reset automatic comparison open",
+      "resolution": "Selection effect uses the recorded comparison baseline; mounted regression and live workflow pass."
+    },
+    {
+      "scope": "Intermediate frontend full run",
+      "result": "87 failed, 619 passed across 57 files",
+      "failure": "Existing five-second test timeouts and subsequent cascading failures; host was heavily loaded and source edits overlapped this intermediate run.",
+      "resolution": "Final unchanged-source run with four workers: 706 passed. Assertions and test timeouts unchanged.",
+      "log_sha256": "fd55427641de529d9bdeaf09d071df9a8724659869b013f96157b0314e479b14"
+    }
+  ],
+  "limitations": [
+    "Criteria are human review context, not an automatic semantic score.",
+    "Capturing recorded input does not pin remote model revisions or all backend configuration; execution records are compared after the response.",
+    "Only one synthetic original was exercised; no independent repeated-draw contract-quality gain or default prompt promotion.",
+    "No new prompt-assistant request, Laya/GLiNER training, latency/throughput benchmark, mobile or Docker measurement.",
+    "Generated event summaries remain uncited; raw equivalent date formats remain visible as changed fields.",
+    "Document-only preview and summary prioritization usability observations remain open."
+  ],
+  "audit": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-frozen-comparison.md",
+  "scope": "Two fresh event-detector experiment runs and two fresh claim experiment runs, live frozen preview/execution, edited-editor-source binding, recorded comparison/reload, isolated project session persistence. One synthetic original; no independent model quality or legal analysis qualification.",
+  "workflow": {
+    "scope": "Two fresh event-detector experiment runs and two fresh claim experiment runs, live frozen preview/execution, edited-editor-source binding, recorded comparison/reload, isolated project session persistence. One synthetic original; no independent model quality or legal analysis qualification.",
+    "project_id": "frozen-prompt-comparison-qa-erable-20261004-080835-ecde4f",
+    "registered_original": {
+      "project_id": "frozen-prompt-comparison-qa-erable-20261004-080835-ecde4f",
+      "source_id": "original-rable-execution-record",
+      "sha256": "8e250e5995538ad7874e6fbe5ca95743ae67631411661f36b4ab97a1530e5575",
+      "fixture": "/Users/piotrlaczkowski/Desktop/PROJECT/UnicoLab/Repositories/DeleyLama/scripts/fixtures/domain-actor-source-fr.md"
+    },
+    "stream_requests": 4,
+    "all_attempts_completed": true,
+    "source_and_language_frozen": true,
+    "claim_inputs_identical": true,
+    "editor_source_preserved_separately": true,
+    "review_criteria_saved_before_call": true,
+    "user_prompt_not_activated": true,
+    "qa_graph_all_tables_unchanged": true,
+    "api_active_operations_before_cleanup": 0,
+    "observations": {
+      "event_baseline_performers": 2,
+      "event_candidate_performers": 2,
+      "candidate_source_references_inside_exact_quotes": true,
+      "event_date_format_changed": "ISO baseline dates vs French candidate dates; same April 3/4 dates in this draw, displayed as raw differences.",
+      "claim_assessments_each_run": 4,
+      "claim_statuses": "inconnu for separate E1/E2 time and cost rows. Semantic absence/unknown still needs review; no entitlement inferred.",
+      "summary_citations": "Generated event summaries still supply no direct supporting quotation.",
+      "reliability": "No prompt promotion or demonstrated cross-document/repeated-draw gain; no new prompt assistant request or Laya/GLiNER training."
+    }
+  },
+  "recorded_run_ids": {
+    "event_detector": [
+      "133deb4f-bb8f-4349-9426-238714841ab1",
+      "aee0ba9b-1141-487a-9762-c95e2486668e"
+    ],
+    "claim_viability": [
+      "62a0bf69-5640-4408-aa9d-c3bc52d0cc70",
+      "15bc7e20-2dba-48cc-a926-2754fe00d2e5"
+    ]
+  },
+  "protected_user_work_unchanged": true
+}
