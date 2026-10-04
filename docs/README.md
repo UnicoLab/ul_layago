@@ -20,6 +20,7 @@ do not confer accuracy or calibration on another application's tasks.
 
 | Record | What it establishes |
 | --- | --- |
+| [DelayLama role meaning, 2026-10-04](validation/delaylama-role-meaning-20261004.json) | Synthetic directed role sets, incoming-cause schema, corrected proposal labels, preserved duplicate-event failure and actual GUI coverage; L72 |
 | [Pretrained contract probe, 2026-10-01](validation/laya-pretrained-probe-20261001.json) | Twelve synthetic French clause/claim decisions from the full pretrained model |
 | [Contract pilot, 2026-10-02](validation/contract-pilot-20261002.json) | Dataset splits, model pins, calibration shortfall, held-out/locked results and baseline comparison |
 | [Acceleration comparison, 2026-10-02](validation/acceleration-20261002.json) | Paired warm-cache CPU/GPU timings, quality, resume and supervisor failure tests |

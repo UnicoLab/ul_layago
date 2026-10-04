@@ -2131,6 +2131,64 @@ false support, latency and full-source fallback. Transport correctness and bette
 navigation are useful engineering fixes, but neither proves model quality. See
 the [direct-execution audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-direct-relations.md).
 
+## L72 — Role schema direction, occurrence labels and truthful coverage (2026-10-04)
+
+DelayLama's event-role development experiment recovered all declared directed
+sets in 17 final synthetic full-source runs (33 + 18 links), with zero unexpected
+links. This does not certify extraction completeness or real contracts: the
+sources are short English/French inventions and one run still created a second
+Event whose entire name was “14 January 2032”. Its failed node-identity check is
+retained. A date-value guard, deterministic SQLite/file-storage regressions and
+a subsequent focused source replay address that specific failure. A new real
+browser/API job also preserved two independent same-day occurrences.
+
+Four separate contract-format sources were frozen before requests and excluded
+from prompt tuning, but were not externally adjudicated. The register experiment
+reverses/renumbers the same endpoints, so its permutations are correlated examples.
+The original gold missed the performer of an observed proposal. Initial scores
+and labels remain intact; final gold distinguishes the actual proposal from the
+never-sent notice. Training labels must identify which action is actually observed,
+including proposals/decisions, rather than equating “proposed to send” with a sent
+notice or suppressing the performer's real proposal action.
+
+A raw French response described L1 causing L2 but placed L2 in L1's ambiguous
+`causes` slot. The decoder interpreted that as an incoming cause and reversed it.
+An explicit `caused_by` schema and instruction fixed this particular direction
+contract. Raw flat-prompt output also linked a valid wrong party reference.
+Reference/name consistency and verbatim passages reduce mechanical errors;
+they cannot certify that the named parties satisfy the asserted semantic roles.
+
+The final proposal-aware read-only development pass retained 66/66 declared links
+and 28/28 exact sets. The direct baseline retained 39/64 with two unexpected links
+on the earlier 26 cases. These differing label versions are not a paired quality
+percentage. Full-source saved baseline rows can be transparently rescored on the
+33-link reference (17/33, one unexpected) without erasing the 32-link original.
+Keep annotation revisions, model outputs, cohort hashes and failed gates visible.
+
+Laya data should separate performance, legal liability, affected parties,
+conditional duties, actual decisions, unsent/negated notices and incoming causal
+identity. Hard negatives should swap actors, distinguish reports from causes,
+and retain independent same-day events. A calendar value is not itself an action.
+Score span support, endpoint association, direction, event class and completeness
+separately. This pass did not retrain Laya, implement another architecture, change
+MLX or the supervisor, or validate GLiNER. These are candidate data/benchmark
+improvements, not claims that the current contract head handles them.
+
+DelayLama now shows bounded coverage of registered candidates, combining
+unresolved/not-applicable responses honestly instead of declaring facts absent.
+Completed checks collapse; actor labels and contextual source highlights remain
+readable. The real browser job's six directed roles survived persistence and
+review without resubmission. Its closure was still classified as milestone and
+its notice as decision: positive role scores do not qualify event classification.
+The revised role prompt remains opt-in; the active user engine uses tested default
+transport/date fixes without the new role prompt. Existing graphs were preserved.
+
+753 backend tests, 626 frontend tests, build, full Go and extraction/storage race
+checks passed. The Mac path test's root assertion was canonicalized without
+changing runtime confinement; missing model keys now fail before replacing an
+environment. See the [source audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-role-meaning.md)
+and [shared receipt](validation/delaylama-role-meaning-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

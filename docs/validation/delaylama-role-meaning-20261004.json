@@ -1,0 +1,490 @@
+{
+  "source_repository": "https://github.com/UnicoLab/delaylama",
+  "source_receipt": "docs/validation/2026-10-04-role-meaning.json",
+  "source_receipt_sha256": "96b7e5325f31f04d9c4437d6237d8457f7935e8b5cc7df41f6226afc35280f3b",
+  "scope": "English/French synthetic development evaluation. Register permutations share stories; full-source gold joins use source dates/names and same-day original anchors. Not independent real-contract accuracy certification.",
+  "model": "gemini-3.1-flash-lite",
+  "arms": {
+    "default-direct": {
+      "cases": 26,
+      "expected": 64,
+      "matched": 39,
+      "unexpected": 2,
+      "exact": 11,
+      "fixture_sha256": "ba8ce2d26b55c8949f35167e9cb22d5e3673bfe8a1d701eb8c95ac20441ad886",
+      "raw_report_sha256": "b74d7d3551548160cdbcd75574a45919fbcad412ae90a97f00ef917291b894a0",
+      "failures": [
+        {
+          "case": "access-en-normal",
+          "missing": [
+            "node:2|node:0|RESPONSIBLE_FOR",
+            "node:3|node:1|RESPONSIBLE_FOR"
+          ],
+          "unexpected": []
+        },
+        {
+          "case": "access-en-permuted",
+          "missing": [
+            "node:0|node:2|RESPONSIBLE_FOR",
+            "node:1|node:3|RESPONSIBLE_FOR",
+            "node:2|node:0|AFFECTED",
+            "node:3|node:2|CAUSED"
+          ],
+          "unexpected": []
+        },
+        {
+          "case": "delivery-fr-normal",
+          "missing": [
+            "node:0|node:1|CAUSED",
+            "node:2|node:1|RESPONSIBLE_FOR",
+            "node:3|node:0|RESPONSIBLE_FOR"
+          ],
+          "unexpected": []
+        },
+        {
+          "case": "delivery-fr-permuted",
+          "missing": [
+            "node:0|node:3|RESPONSIBLE_FOR",
+            "node:1|node:2|RESPONSIBLE_FOR"
+          ],
+          "unexpected": []
+        },
+        {
+          "case": "notice-en-normal",
+          "missing": [
+            "node:2|node:0|RESPONSIBLE_FOR"
+          ],
+          "unexpected": []
+        },
+        {
+          "case": "notice-en-permuted",
+          "missing": [
+            "node:0|node:2|RESPONSIBLE_FOR"
+          ],
+          "unexpected": []
+        },
+        {
+          "case": "cross-line-cause-fr-normal",
+          "missing": [
+            "node:1|node:3|AFFECTED",
+            "node:2|node:0|RESPONSIBLE_FOR",
+            "node:3|node:1|RESPONSIBLE_FOR"
+          ],
+          "unexpected": []
+        },
+        {
+          "case": "cross-line-cause-fr-permuted",
+          "missing": [
+            "node:0|node:2|RESPONSIBLE_FOR",
+            "node:1|node:3|RESPONSIBLE_FOR"
+          ],
+          "unexpected": []
+        },
+        {
+          "case": "notice-reports-not-causes-fr-normal",
+          "missing": [
+            "node:3|node:1|RESPONSIBLE_FOR"
+          ],
+          "unexpected": []
+        },
+        {
+          "case": "notice-reports-not-causes-fr-permuted",
+          "missing": [
+            "node:0|node:2|RESPONSIBLE_FOR"
+          ],
+          "unexpected": []
+        },
+        {
+          "case": "action-without-fault-en-permuted",
+          "missing": [
+            "node:1|node:2|RESPONSIBLE_FOR"
+          ],
+          "unexpected": []
+        },
+        {
+          "case": "planned-not-sent-en-normal",
+          "missing": [],
+          "unexpected": [
+            "node:0|node:1|NOTIFIED"
+          ]
+        },
+        {
+          "case": "planned-not-sent-en-permuted",
+          "missing": [],
+          "unexpected": [
+            "node:2|node:1|NOTIFIED"
+          ]
+        },
+        {
+          "case": "three-stages-fr-normal",
+          "missing": [
+            "node:3|node:1|RESPONSIBLE_FOR",
+            "node:4|node:2|RESPONSIBLE_FOR"
+          ],
+          "unexpected": []
+        },
+        {
+          "case": "three-stages-fr-permuted",
+          "missing": [
+            "node:0|node:2|RESPONSIBLE_FOR",
+            "node:1|node:3|RESPONSIBLE_FOR"
+          ],
+          "unexpected": []
+        }
+      ]
+    },
+    "flat-clarified": {
+      "cases": 26,
+      "expected": 64,
+      "matched": 62,
+      "unexpected": 1,
+      "exact": 24,
+      "fixture_sha256": "ba8ce2d26b55c8949f35167e9cb22d5e3673bfe8a1d701eb8c95ac20441ad886",
+      "raw_report_sha256": "2de74daf86f1ed41ec9f9a25a251dbcd2ec9ed148f5d5c0de2025b282f194337",
+      "failures": [
+        {
+          "case": "access-en-permuted",
+          "missing": [
+            "node:3|node:0|AFFECTED"
+          ],
+          "unexpected": [
+            "node:3|node:1|AFFECTED"
+          ]
+        },
+        {
+          "case": "cross-line-cause-fr-normal",
+          "missing": [
+            "node:1|node:3|AFFECTED"
+          ],
+          "unexpected": []
+        }
+      ]
+    },
+    "register-original": {
+      "cases": 26,
+      "expected": 64,
+      "matched": 62,
+      "unexpected": 4,
+      "exact": 22,
+      "fixture_sha256": "ba8ce2d26b55c8949f35167e9cb22d5e3673bfe8a1d701eb8c95ac20441ad886",
+      "raw_report_sha256": "894d0d604ec46f89382215e234450fdf20374a9165b455ea163268beb63dfe24",
+      "failures": [
+        {
+          "case": "delivery-fr-normal",
+          "missing": [
+            "node:0|node:1|CAUSED"
+          ],
+          "unexpected": []
+        },
+        {
+          "case": "reversed-parties-en-permuted",
+          "missing": [
+            "node:2|node:1|AFFECTED"
+          ],
+          "unexpected": []
+        },
+        {
+          "case": "planned-not-sent-en-normal",
+          "missing": [],
+          "unexpected": [
+            "node:0|node:1|NOTIFIED",
+            "node:2|node:0|RESPONSIBLE_FOR"
+          ]
+        },
+        {
+          "case": "planned-not-sent-en-permuted",
+          "missing": [],
+          "unexpected": [
+            "node:0|node:2|RESPONSIBLE_FOR",
+            "node:2|node:1|NOTIFIED"
+          ]
+        }
+      ]
+    },
+    "register-clarified": {
+      "cases": 26,
+      "expected": 64,
+      "matched": 63,
+      "unexpected": 1,
+      "exact": 25,
+      "fixture_sha256": "ba8ce2d26b55c8949f35167e9cb22d5e3673bfe8a1d701eb8c95ac20441ad886",
+      "raw_report_sha256": "83611a11790af31149a793e730bbcf586705fb499df60bc40619df620d279473",
+      "failures": [
+        {
+          "case": "delivery-fr-normal",
+          "missing": [
+            "node:0|node:1|CAUSED"
+          ],
+          "unexpected": [
+            "node:1|node:0|CAUSED"
+          ]
+        }
+      ]
+    },
+    "register-caused-by": {
+      "cases": 26,
+      "expected": 64,
+      "matched": 64,
+      "unexpected": 0,
+      "exact": 26,
+      "fixture_sha256": "ba8ce2d26b55c8949f35167e9cb22d5e3673bfe8a1d701eb8c95ac20441ad886",
+      "raw_report_sha256": "475164ccdb3e3cef80059f1e6aa91873f9dc993249f86b5f78b6e7fcb3e60312",
+      "failures": []
+    },
+    "register-proposal": {
+      "cases": 28,
+      "expected": 66,
+      "matched": 66,
+      "unexpected": 0,
+      "exact": 28,
+      "fixture_sha256": "340bbebe5f2074a46115b1bf5ac9478bc9b3fff568eb2f7fa374c8321735ec00",
+      "raw_report_sha256": "ffb9b6f41c9237dc13331f04ae79e854d9147f2709c0c0f3319d5f4d5e98d777",
+      "failures": []
+    }
+  },
+  "initial_gold_summaries": {
+    "pipeline": {
+      "before": {
+        "cases": 13,
+        "expected": 32,
+        "matched": 17,
+        "unexpected": 1,
+        "exact": 5,
+        "all_operational_checks": true
+      },
+      "after": {
+        "cases": 13,
+        "expected": 32,
+        "matched": 32,
+        "unexpected": 0,
+        "exact": 13,
+        "all_operational_checks": true
+      }
+    },
+    "contracts-pipeline": {
+      "before": {
+        "cases": 4,
+        "expected": 18,
+        "matched": 9,
+        "unexpected": 0,
+        "exact": 1,
+        "all_operational_checks": true
+      },
+      "after": {
+        "cases": 4,
+        "expected": 18,
+        "matched": 18,
+        "unexpected": 0,
+        "exact": 4,
+        "all_operational_checks": true
+      }
+    }
+  },
+  "adjudicated_summaries": {
+    "pipeline-final": {
+      "after": {
+        "cases": 13,
+        "expected": 33,
+        "matched": 33,
+        "unexpected": 0,
+        "exact": 13,
+        "all_operational_checks": false
+      }
+    },
+    "pipeline-date-fixed": {
+      "after": {
+        "cases": 1,
+        "expected": 1,
+        "matched": 1,
+        "unexpected": 0,
+        "exact": 1,
+        "all_operational_checks": true
+      }
+    },
+    "browser-pipeline": {
+      "after": {
+        "cases": 1,
+        "expected": 6,
+        "matched": 6,
+        "unexpected": 0,
+        "exact": 1,
+        "all_operational_checks": true
+      }
+    },
+    "contracts-pipeline-final": {
+      "after": {
+        "cases": 4,
+        "expected": 18,
+        "matched": 18,
+        "unexpected": 0,
+        "exact": 4,
+        "all_operational_checks": true
+      }
+    },
+    "pipeline": {
+      "after": {
+        "cases": 13,
+        "expected": 33,
+        "matched": 32,
+        "unexpected": 0,
+        "exact": 12,
+        "all_operational_checks": true
+      },
+      "before": {
+        "cases": 13,
+        "expected": 33,
+        "matched": 17,
+        "unexpected": 1,
+        "exact": 5,
+        "all_operational_checks": true
+      }
+    },
+    "contracts-pipeline": {
+      "after": {
+        "cases": 4,
+        "expected": 18,
+        "matched": 18,
+        "unexpected": 0,
+        "exact": 4,
+        "all_operational_checks": true
+      },
+      "before": {
+        "cases": 4,
+        "expected": 18,
+        "matched": 9,
+        "unexpected": 0,
+        "exact": 1,
+        "all_operational_checks": true
+      }
+    }
+  },
+  "label_correction": {
+    "fixture_sha256": "340bbebe5f2074a46115b1bf5ac9478bc9b3fff568eb2f7fa374c8321735ec00",
+    "live_fixture_sha256": "5dc15fd7ce8fc7ad10a046f520efd55288e1f9b2522159950da7406b228352aa",
+    "scope": "Original 26-case labels retained in prior results. Clarify sending endpoint in ambiguous Proposed notice case and add separately observed proposal endpoint with a performer. Final full-pipeline gold adds the missed proposal performer based on manually inspected actual event identity. Frozen before final requests; development tuning, not independent certification.",
+    "cases": 28,
+    "expected_links": 66,
+    "full_source_expected_links": 33
+  },
+  "date_value_regression": {
+    "initial_extra_event": "14 January 2032 duplicated the observed proposal",
+    "stored_original_not_rewritten": true,
+    "later_live_job_passed": true,
+    "later_live_model_did_not_return_date_only_concept": true,
+    "deterministic_storage_backends": [
+      "filedb",
+      "sqlite"
+    ],
+    "guard_scope": "Only entire exact or month date names typed Event are demoted to Date; embedded dates, bare years/IDs and independently dated actual actions remain separate."
+  },
+  "checks": {
+    "backend": "753 passed",
+    "frontend": "626 passed in 51 files",
+    "frontend_build": "passed",
+    "go_full": "passed after Mac path assertion correction",
+    "go_race_intelligence_agents": "passed",
+    "clean_ten_default_and_all_optional_variants": [
+      {
+        "variant": "default",
+        "all_ten_defaults_and_optional": true,
+        "idempotent_and_check": true,
+        "path_tests_exit": 0
+      },
+      {
+        "variant": "meaning",
+        "all_ten_defaults_and_optional": true,
+        "idempotent_and_check": true,
+        "path_tests_exit": 0
+      },
+      {
+        "variant": "register",
+        "all_ten_defaults_and_optional": true,
+        "idempotent_and_check": true,
+        "path_tests_exit": 0
+      },
+      {
+        "variant": "passages",
+        "all_ten_defaults_and_optional": true,
+        "idempotent_and_check": true,
+        "path_tests_exit": 0
+      },
+      {
+        "variant": "audit",
+        "all_ten_defaults_and_optional": true,
+        "idempotent_and_check": true,
+        "path_tests_exit": 0
+      }
+    ],
+    "clean_date_role_variant_intelligence_agents": [
+      {
+        "variant": "default",
+        "tag": "v1.3.0",
+        "check_apply_idempotent": true,
+        "focused_tests_exit": 0
+      },
+      {
+        "variant": "meaning",
+        "tag": "v1.3.0",
+        "check_apply_idempotent": true,
+        "focused_tests_exit": 0
+      },
+      {
+        "variant": "register",
+        "tag": "v1.3.0",
+        "check_apply_idempotent": true,
+        "focused_tests_exit": 0
+      },
+      {
+        "variant": "passages",
+        "tag": "v1.3.0",
+        "check_apply_idempotent": true,
+        "focused_tests_exit": 0
+      },
+      {
+        "variant": "audit",
+        "tag": "v1.3.0",
+        "check_apply_idempotent": true,
+        "focused_tests_exit": 0
+      }
+    ]
+  },
+  "limitations": [
+    "Role prompt remains opt-in. The live user engine uses the ten default fixes without the new role prompt.",
+    "The 17 final role-set comparisons precede the date-only guard. One failed node-identity check is retained; the affected original and one new browser source passed after the guard.",
+    "Event categories remain model suggestions: the browser classified a gate closure as milestone and a notice as decision despite correct actors/recipients.",
+    "The four separate contract-format stories were frozen before requests and kept outside tuning, but are synthetic and not externally adjudicated.",
+    "No Laya/GLiNER training, MLX, supervisor or architecture changes in this pass."
+  ],
+  "laya_training_in_this_pass": false,
+  "qa_cleanup": {
+    "rows": [
+      {
+        "pid": 8857,
+        "port": 8096,
+        "stopped_owned_process": true,
+        "port_cleared": true
+      },
+      {
+        "pid": 63019,
+        "port": 8097,
+        "stopped_owned_process": true,
+        "port_cleared": true
+      },
+      {
+        "pid": 61958,
+        "port": 8081,
+        "stopped_owned_process": true,
+        "port_cleared": true
+      },
+      {
+        "pid": 61959,
+        "port": 5175,
+        "stopped_owned_process": true,
+        "port_cleared": true
+      }
+    ],
+    "temporary_browser_tab_closed": true,
+    "job_checkpoints_retained": true
+  },
+  "source_revision": "e0e9faa177ad4b3a162b0239fe8fe6ea843403c3"
+}
