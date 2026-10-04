@@ -2024,6 +2024,45 @@ The next auxiliary-model comparison still needs independent contract families,
 necessary-clause/amendment recall, false support and end-to-end latency, with a
 full-source fallback. See the [review audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-search-history.md).
 
+## L69 — Joint relationship labels need occurrence and direction checks (2026-10-04)
+
+DelayLama's source search now checks the source endpoint, target endpoint and
+exact directed relationship separately. Endpoint dates and source context join
+the finding hash; embeddings do not. A model that silently reverses/corrects the
+requested IDs cannot verify the reviewed connection, even when its explanation
+and quotations sound plausible. Missing/duplicate bindings remain unresolved
+with at most one existing format repair. Risk allocation is not event performance,
+a later reporting notice is not its reported cause, and endpoint existence does
+not establish a link.
+
+In a paired 12-case synthetic development comparison, baseline and initial
+candidate each returned 10/12 exact verdicts. The candidate removed the baseline's
+one false-support case and retained all six supported positives, but both confused
+unknown information with contradiction. Final aggregation and narrow EN/FR
+all-epistemic quotation guards replayed the checked candidate records at 12/12;
+this was not fresh model generation, raw-binding revalidation or independent
+certification. Baseline/candidate recorded 12/14 calls respectively. Retain failed
+judgments and distinguish model verdicts from source/binding checks and human
+acceptance; do not turn guarded suggestions into training ground truth.
+
+Two real saved searches on a copied extraction graph checked a correct causal
+edge and one controlled reverse. The correct edge received candidate support;
+the reverse remained insufficient because the model changed its requested
+binding even after one repair. Native GUI and live Prompt Studio handoff preserved
+the original document, both input history entries and the existing draft. The
+assistant proposed causal-direction instructions without activation or an
+extraction rerun. Saved review uncertainty still needs propagation into graph
+role/timeline cards, and missing actor/affected roles remain extraction work.
+
+For Laya data, annotate exact original spans, occurrence/date identity, role
+association, directed whole-assertion support, unknown versus explicit denial,
+and human acceptance separately. Evaluate on held-out contract/source families;
+positive/negative variants and repeated rechecks are correlated. Auxiliary clause
+shortlists need necessary-premise/amendment recall and a full-source fallback.
+No Laya training, GLiNER, MLX, supervisor or architecture change occurred here.
+See the [connection audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-connection-verification.md)
+for fixtures, scores, operational checks, GUI proof and remaining limits.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
