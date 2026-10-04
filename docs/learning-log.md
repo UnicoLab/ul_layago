@@ -2688,6 +2688,51 @@ historical evidence. No new Laya/GLiNER training or speed measurement occurs.
 See the [dispatch/UX audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-dated-dispatch.md)
 and [shared receipt](validation/delaylama-dated-dispatch-20261004.json).
 
+## L88 — Separate date-role labels, output compliance and quote location (2026-10-04)
+
+DelayLama's source graph stored a contractual completion deadline beside reported
+actions without a date-role field. A new additive protocol transports observed,
+planned, deadline or unknown plus a role quotation through model output,
+conversion, storage, chronology and source review. Planned/deadline and explicit
+unresolved assessments keep calendar metadata without actual-occurrence fields.
+Legacy no-field rows remain unassessed; there is no historical migration.
+
+The fallback extractor also treated JSON as plain lines, turning structured
+arrays/properties into event names and losing evidence. Fenced/ordinary arrays
+now retain fields; malformed structured output fails extraction. Baseline tests
+retain the erroneous full-array event name and a nil-parser panic. Provider
+transport, actual storage and original Unicode/ambiguity checks are separate
+from model interpretation tests.
+
+The first live Gemini draw omitted all five date roles despite an instruction.
+Explicit mandatory event fields and a concrete output template supplied them in
+a separate second draw: three reported candidates, one planned start and one
+completion deadline. This establishes protocol feasibility on one synthetic
+French original, not a measured quality improvement. Both actual outputs and
+unsuccessful probes are retained. Identical second-output SQLite replays isolate
+the storage repair: the older arm assigns occurrence fields to all five; the new
+arm withholds them for the plan/deadline while retaining their calendar dates.
+Both draws still omit performers, and directed relation proposals vary.
+
+For Laya training, keep output compliance, quote location/containment, role meaning
+and human adjudication as separate labels. A matching passage with a wrong role
+can pass the location gate; a precise date does not certify occurrence. Never use
+source-match flags or a source-recheck support verdict as gold semantic labels.
+Split contract families/templates before training, and qualify date-role/premise
+association and contradiction handling independently. No new Laya/GLiNER training,
+MLX benchmark or architecture promotion was performed.
+
+The GUI now filters roles and opens contextual exact role evidence in both themes.
+A targeted deadline recheck retains `requires_review` and does not change graph
+rows. Reload restores contract/graph/event/search. Production CSV generation on
+actual graph data passes; the browser download observation timed out, so browser
+file delivery remains unconfirmed. Full Go, focused agents/intelligence/provider
+races, 845 backend and 722 frontend tests/build, plus five clean patch arms pass.
+The earlier full API race timeout and bundle-size warning remain limitations.
+
+See the [date-role audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-event-date-roles.md)
+and [shared receipt](validation/delaylama-event-date-roles-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

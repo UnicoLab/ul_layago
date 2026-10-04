@@ -1,0 +1,475 @@
+{
+  "date": "2026-10-04",
+  "scope": "Nineteenth compatibility patch and event-date-role UX; synthetic contract validation, not held-out accuracy certification",
+  "base_root_commit": "a3655523e900ace3723d6247d4b463ddc4445e40",
+  "package_base_release": "Chronograph v1.3.0",
+  "patch_sha256": "5e1cd69edeeaf4e75b461b5bf5dfbcdcb63e212147db075591025ee8347aa236",
+  "source_sha256": "878602dd1e9b9009c829df872660dc58da2ff285e7ce0012a11228ed48c0ee08",
+  "live_trials": {
+    "initial_omitted_roles": {
+      "job_id": "afffa4af-0456-4281-9f06-db47e9d215dd",
+      "status": "done",
+      "project_id": "date-roles-qa-erable-20261004-102335-e0396d",
+      "schema_preset": "construction_claims",
+      "shared_engine_schema": "general",
+      "nodes": 15,
+      "edges": 12,
+      "events": [
+        {
+          "name": "Transmission planning révisé",
+          "date": "2044-04-04",
+          "category": "modification",
+          "date_role": "unknown",
+          "quote_status": "not_assessed",
+          "role_quote": null,
+          "occurred_at": "2044-04-04T00:00:00Z",
+          "valid_from": "2044-04-04T00:00:00Z"
+        },
+        {
+          "name": "Fermeture accès chantier",
+          "date": "2044-04-03",
+          "category": "suspension",
+          "date_role": "unknown",
+          "quote_status": "not_assessed",
+          "role_quote": null,
+          "occurred_at": "2044-04-03T00:00:00Z",
+          "valid_from": "2044-04-03T00:00:00Z"
+        },
+        {
+          "name": "Achèvement des travaux",
+          "date": "2044-06-30",
+          "category": "phase_end",
+          "date_role": "unknown",
+          "quote_status": "not_assessed",
+          "role_quote": null,
+          "occurred_at": "2044-06-30T00:00:00Z",
+          "valid_from": "2044-06-30T00:00:00Z"
+        },
+        {
+          "name": "Début des travaux",
+          "date": "2044-03-01",
+          "category": "phase_start",
+          "date_role": "unknown",
+          "quote_status": "not_assessed",
+          "role_quote": null,
+          "occurred_at": "2044-03-01T00:00:00Z",
+          "valid_from": "2044-03-01T00:00:00Z"
+        },
+        {
+          "name": "Signature du contrat",
+          "date": "2044-01-02",
+          "category": "decision",
+          "date_role": "unknown",
+          "quote_status": "not_assessed",
+          "role_quote": null,
+          "occurred_at": "2044-01-02T00:00:00Z",
+          "valid_from": "2044-01-02T00:00:00Z"
+        }
+      ],
+      "performer_edges": 0,
+      "event_relations": {
+        "status": "completed",
+        "proposed": 1,
+        "rejected": 0,
+        "stored": 1
+      }
+    },
+    "explicit_template": {
+      "job_id": "a8058b3e-79ac-48a8-800e-9c2555394c2b",
+      "status": "done",
+      "project_id": "date-roles-protocol-qa-erable-20261004-102850-cf3619",
+      "schema_preset": "construction_claims",
+      "shared_engine_schema": "general",
+      "nodes": 13,
+      "edges": 10,
+      "events": [
+        {
+          "name": "Transmission du planning révisé",
+          "date": "2044-04-04",
+          "category": "modification",
+          "date_role": "observed",
+          "quote_status": "unique_original_match",
+          "role_quote": "Le 4 avril 2044, Horizon OPC SAS transmet le planning révisé",
+          "occurred_at": "2044-04-04T00:00:00Z",
+          "valid_from": "2044-04-04T00:00:00Z"
+        },
+        {
+          "name": "Fermeture de l'accès au chantier",
+          "date": "2044-04-03",
+          "category": "suspension",
+          "date_role": "observed",
+          "quote_status": "unique_original_match",
+          "role_quote": "Le 3 avril 2044, la Ville de Riveclaire ordonne la fermeture",
+          "occurred_at": "2044-04-03T00:00:00Z",
+          "valid_from": "2044-04-03T00:00:00Z"
+        },
+        {
+          "name": "Achèvement des travaux",
+          "date": "2044-06-30",
+          "category": "phase_end",
+          "date_role": "deadline",
+          "quote_status": "unique_original_match",
+          "role_quote": "doivent être achevés le 30 juin 2044",
+          "occurred_at": null,
+          "valid_from": null
+        },
+        {
+          "name": "Début des travaux",
+          "date": "2044-03-01",
+          "category": "phase_start",
+          "date_role": "planned",
+          "quote_status": "unique_original_match",
+          "role_quote": "Les travaux commencent le 1 mars 2044",
+          "occurred_at": null,
+          "valid_from": null
+        },
+        {
+          "name": "Signature du contrat",
+          "date": "2044-01-02",
+          "category": "milestone",
+          "date_role": "observed",
+          "quote_status": "unique_original_match",
+          "role_quote": "est signé le 2 janvier 2044",
+          "occurred_at": "2044-01-02T00:00:00Z",
+          "valid_from": "2044-01-02T00:00:00Z"
+        }
+      ],
+      "performer_edges": 0,
+      "event_relations": {
+        "status": "completed",
+        "proposed": 0,
+        "rejected": 0,
+        "stored": 0
+      }
+    }
+  },
+  "replay": [
+    {
+      "mode": "baseline",
+      "event_storage": {
+        "proposed": 5,
+        "stored": 5,
+        "standing_mentions": 0,
+        "classification_reviews": 1,
+        "failed": 0
+      },
+      "events": [
+        {
+          "title": "Transmission du planning révisé",
+          "date": "2044-04-04",
+          "date_role": null,
+          "occurred_at": "2044-04-04T00:00:00Z"
+        },
+        {
+          "title": "Fermeture de l'accès au chantier",
+          "date": "2044-04-03",
+          "date_role": null,
+          "occurred_at": "2044-04-03T00:00:00Z"
+        },
+        {
+          "title": "Achèvement des travaux",
+          "date": "2044-06-30",
+          "date_role": null,
+          "occurred_at": "2044-06-30T00:00:00Z"
+        },
+        {
+          "title": "Début des travaux",
+          "date": "2044-03-01",
+          "date_role": null,
+          "occurred_at": "2044-03-01T00:00:00Z"
+        },
+        {
+          "title": "Signature du contrat",
+          "date": "2044-01-02",
+          "date_role": null,
+          "occurred_at": "2044-01-02T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "mode": "final",
+      "event_storage": {
+        "proposed": 5,
+        "stored": 5,
+        "standing_mentions": 0,
+        "classification_reviews": 1,
+        "failed": 0
+      },
+      "events": [
+        {
+          "title": "Transmission du planning révisé",
+          "date": "2044-04-04",
+          "date_role": "observed",
+          "occurred_at": "2044-04-04T00:00:00Z"
+        },
+        {
+          "title": "Fermeture de l'accès au chantier",
+          "date": "2044-04-03",
+          "date_role": "observed",
+          "occurred_at": "2044-04-03T00:00:00Z"
+        },
+        {
+          "title": "Achèvement des travaux",
+          "date": "2044-06-30",
+          "date_role": "deadline",
+          "occurred_at": null
+        },
+        {
+          "title": "Début des travaux",
+          "date": "2044-03-01",
+          "date_role": "planned",
+          "occurred_at": null
+        },
+        {
+          "title": "Signature du contrat",
+          "date": "2044-01-02",
+          "date_role": "observed",
+          "occurred_at": "2044-01-02T00:00:00Z"
+        }
+      ]
+    }
+  ],
+  "replay_fixture_sha256": "12cadba228c89d7892575c697955412b92919bf62edaec9ed19c7b02ad34c66d",
+  "checks": {
+    "go-all.log": {
+      "sha256": "1c4a90e83d65b8c005c2b5255bb3a648bbc183b816e80e898c0201c45e3fa15d",
+      "local_path": "/private/tmp/delaylama-date-roles/go-all.log"
+    },
+    "go-race-final.log": {
+      "sha256": "2a9454d352f8bba977ac0ef9807d9cae252c6c66db6f43167f92aa01a5aea2b2",
+      "local_path": "/private/tmp/delaylama-date-roles/go-race-final.log"
+    },
+    "patch-tests.log": {
+      "sha256": "871fc0d7c6b207861ef13d0884b35723e7a5f9a40bb14ae58414056ddd73678b",
+      "local_path": "/private/tmp/delaylama-date-roles/patch-tests.log"
+    },
+    "frontend-final.log": {
+      "sha256": "9bd8eb3075d157bd37809adc1050f8d92c280832bbd6d531bec0ee2e56dc034a",
+      "local_path": "/private/tmp/delaylama-date-roles/frontend-final.log"
+    },
+    "frontend-build.log": {
+      "sha256": "0f190b2fbbb108827abf04061de62e3adb86b07e94816ec7c601283333baf9ed",
+      "local_path": "/private/tmp/delaylama-date-roles/frontend-build.log"
+    },
+    "backend-final.log": {
+      "sha256": "162129b30c3c2586122ff25892660626bc6e88466e43bcdf956109a1f84b76ba",
+      "local_path": "/private/tmp/delaylama-date-roles/backend-final.log"
+    },
+    "baseline-failures.log": {
+      "sha256": "ca80413c8d77dba8ff6a698dce8a3ce9f3f95a639adf6a0f6b820afc1deba936",
+      "local_path": "/private/tmp/delaylama-date-roles/baseline-failures.log"
+    },
+    "baseline-structured-failures.log": {
+      "sha256": "aa6f1d54654daec3ab11ceb3fcfd1e80ae0e46b6d9f43f738012d6418df4bc3b",
+      "local_path": "/private/tmp/delaylama-date-roles/baseline-structured-failures.log"
+    },
+    "focused-go-final.log": {
+      "sha256": "3b59d9d6e6182c98608107a33735546e46af6888a04b7cd779ca227e589b9142",
+      "local_path": "/private/tmp/delaylama-date-roles/focused-go-final.log"
+    },
+    "reproduction-final.log": {
+      "sha256": "14eea756b6e7afbc6020e3a8d43fefc4bcedb92da509bd4f6312d787ff98eebe",
+      "local_path": "/private/tmp/delaylama-date-roles/reproduction-final.log"
+    }
+  },
+  "patch_arms": [
+    {
+      "mode": "default",
+      "idempotent": true,
+      "release_commit": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+      "agents_intelligence_tests_passed": true
+    },
+    {
+      "mode": "audit",
+      "idempotent": true,
+      "release_commit": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+      "agents_intelligence_tests_passed": true
+    },
+    {
+      "mode": "register",
+      "idempotent": true,
+      "release_commit": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+      "agents_intelligence_tests_passed": true
+    },
+    {
+      "mode": "passages",
+      "idempotent": true,
+      "release_commit": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+      "agents_intelligence_tests_passed": true
+    },
+    {
+      "mode": "meaning",
+      "idempotent": true,
+      "release_commit": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+      "agents_intelligence_tests_passed": true
+    }
+  ],
+  "backend_tests": 845,
+  "frontend_tests": 722,
+  "frontend_files": 57,
+  "source_recheck": {
+    "job_id": "e1791e0f1ea44727a2cbd98c25874649",
+    "status": "done",
+    "graph_updated": false,
+    "verdict": "supports",
+    "requires_review": true,
+    "finding_hash": "b13f9718ce4fdae0f2deca1dd7f3e226497dbbf2ba9f621c83135e4d3378665c",
+    "date_role_context_is_metadata_not_contract_fact": true
+  },
+  "browser": {
+    "tabs_closed": [
+      88,
+      89
+    ],
+    "both_themes_visually_inspected": true,
+    "deadline_filter_and_role_quotes_verified": true,
+    "selected_contract_event_layout_and_saved_search_survive_reload": true,
+    "role_filter_resets_on_remount": true,
+    "csv_content_verified_using_production_renderer_on_captured_graph": true,
+    "csv_browser_file_delivery_confirmed": false,
+    "csv_download_observation": "30 second browser-tool timeout; no repeated analysis submission",
+    "csv_sha256": "f6c8f04b3c5df42a4b6834298cb2ee84072ce6c31a1dd6f598130259d20bf99a"
+  },
+  "cleanup": [
+    {
+      "job_id": "afffa4af-0456-4281-9f06-db47e9d215dd",
+      "same_handle_terminal": true,
+      "graph_rows_unchanged_by_gui": true,
+      "zero_active_before_cleanup": true,
+      "owned_processes_stopped": [
+        {
+          "service": "engine",
+          "pid": 28073,
+          "port": 8097
+        },
+        {
+          "service": "api",
+          "pid": 28075,
+          "port": 8081
+        },
+        {
+          "service": "frontend",
+          "pid": 28078,
+          "port": 5175
+        }
+      ],
+      "ports_closed": true
+    },
+    {
+      "job_id": "a8058b3e-79ac-48a8-800e-9c2555394c2b",
+      "recheck_id": "e1791e0f1ea44727a2cbd98c25874649",
+      "same_handle_terminal": true,
+      "graph_rows_unchanged_by_gui": true,
+      "zero_active_before_cleanup": true,
+      "owned_processes_stopped": [
+        {
+          "service": "engine",
+          "pid": 35594,
+          "port": 8098
+        },
+        {
+          "service": "api",
+          "pid": 46041,
+          "port": 8082
+        },
+        {
+          "service": "frontend",
+          "pid": 35596,
+          "port": 5176
+        }
+      ],
+      "ports_closed": true
+    }
+  ],
+  "activation": {
+    "graph_rows_unchanged": true,
+    "config_unchanged": true,
+    "engine_binary_sha256": "3676380acad1a649a2fda8d8939f7f25456c89bb78170f649962e9a532e67440",
+    "table_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    },
+    "backup_retained": true,
+    "api_restarted_after_zero_active_work": true,
+    "api_job_journal_unchanged": true,
+    "api_configuration_unchanged": true
+  },
+  "preservation": {
+    "protected_engine_source_files_unchanged": true,
+    "protected_app_artifacts_unchanged": true,
+    "user_studio_unchanged": true,
+    "orchid_studio_unchanged": true,
+    "user_graph_all_tables_unchanged": true,
+    "user_engine_health": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    },
+    "user_graph_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    }
+  },
+  "limitations": [
+    "No historical role migration; no-role legacy fields retained and labelled unassessed.",
+    "Role quote presence/containment is not semantic verification; wrong role interpretations can pass this gate.",
+    "First draw omitted every role; explicit fields succeeded in a separate draw, not a controlled accuracy rate.",
+    "Both draws have no performer links; first affected-event meaning remains questionable.",
+    "No live Ollama fallback trial, held-out contract benchmark, new Laya/GLiNER training or speed measurement.",
+    "Existing production bundle >500 KB warning; earlier full API race timeout remains unresolved.",
+    "Browser export file delivery unconfirmed after download-observation timeout."
+  ],
+  "meaningful_unsuccessful_probes": [
+    "Eighteen-default JSON fallback loses structure; nil temporal parser panics.",
+    "Initial live model omitted all date-role fields.",
+    "Unsupported graph API action rejected before using graph.",
+    "Contract-switch test corrected to reopen chronology for the new contract layout.",
+    "Browser AX checkbox and heading-level locator corrected; export wait timed out."
+  ]
+}
