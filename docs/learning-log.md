@@ -1941,6 +1941,62 @@ training, MLX, GLiNER or architecture change occurred in this pass. See the
 [occurrence identity audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-occurrence-alias.md)
 for frozen fixtures, replay tooling, limits and operational evidence.
 
+## L67 — Preserve source layout separately from readable entity identity (2026-10-04)
+
+DelayLama's deterministic legal-form supplement could emit `F1.\nArdoise SARL`
+as an organization. The matcher treated a sentence-ending reference and the next
+line's company as one capitalized name. A derived recorded-generation replay
+removed exactly that previous supplement from model input so both engines could
+regenerate their own deterministic additions. Actual SQLite output changed from
+three organizations to the two source parties, retaining two event candidates.
+This isolates supplement behavior; it is not raw upstream or independent gold
+extraction. Filedb and SQLite SDK regression tests fail before and pass after.
+
+The repair scans bounded tokens backwards from company endings. Soft wraps stay
+inside company names; sentence/paragraph boundaries, another legal form and
+explicit reference/known heading lines stop prefix binding. Dotted French forms,
+initials, accents, apostrophes, ampersand companies and nonbreaking spaces are
+tested. Names normalize whitespace for readable identity/deduplication; original
+quotes and UTF-8 byte offsets remain unchanged. Ambiguous adjacent headings,
+broader international forms and general entity aliases remain open.
+
+For Laya span/identity data, save the raw document, raw span text/offsets and
+normalized display identity separately. Generate CRLF, soft-wrap, nonbreaking
+space, heading/reference, paragraph and page-break variants with transformation
+maps back to the original span labels. Keep layout variants of a contract in the
+same train/evaluation family. Include adjacent distinct companies, initials,
+dotted suffixes and repeated wrapped/unwrapped mentions. Never silently train
+on a display-normalized string as though its character positions were original.
+Go byte offsets and JavaScript string indices need an explicit conversion or
+original-text lookup policy; source presence still does not certify role meaning.
+
+Five frozen French/English originals produced ten fresh configured Gemini jobs
+with noop embeddings and full extraction/storage/scoped REST. Both arms returned
+the expected party sets; fresh runs did not reproduce the malformed organization.
+One baseline wrapped-name generation had an extra dated event. Four of five
+baseline runs and five of five candidate runs passed all declared party/day,
+scope, whitespace-normalized quote presence and self-link checks. Independent
+upstream generations do not attribute that event-count difference to this repair.
+Role omissions, semantic direction and real-contract recall remain unscored.
+
+The initial bounded-window implementation allocated about 37 MB per extraction
+on a synthetic 203 KB repeated-source workload. Direct token scanning reduced it
+to about 1.7–1.8 MB while preserving regex output on all five frozen originals;
+the prior baseline allocated about 1.1 MB. Timing was noisy on a shared host, so
+there is no model/workflow speed or resident-memory claim. Retain unsuccessful
+implementation measurements and distinguish allocations from peak memory.
+
+Live source review exposed a separate UI hover/focus defect. Fact-specific styles
+now keep readable text and visible keyboard focus in both themes; checked labels
+exceed 4.5:1 contrast. The final Go suite, agents/intelligence race checks, clean
+seven-default reproduction, optional patch compatibility, 13 CLI tests and the
+frontend build passed. All user graph rows/configuration, protected files and
+checked Studio sessions survived activation. QA graph comparisons after restart
+must compare node/edge records by ID: a list-order comparison failed despite
+unchanged records. No Laya training, MLX, GLiNER or architecture change occurred.
+See the [source boundary audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-organization-boundaries.md)
+for fixtures, measurements, GUI proof, remaining limits and activation evidence.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
