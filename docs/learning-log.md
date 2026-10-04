@@ -2316,6 +2316,35 @@ comparison, MLX timing or real-contract accuracy certification occurred here.
 See the [schema audit and priorities](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-analysis-schema.md)
 and [shared receipt](validation/delaylama-analysis-schema-20261004.json).
 
+## L77 — Profile words must not erase source-dated occurrence identity (2026-10-04)
+
+A retained correct `notice_served` label became a non-Event Suspension node through
+an entity-word guard. The same captured output now replays into two Events instead
+of one Event/one standing mention: explicit original date, unique quote, permitted
+category and sufficiently specific source overlap retain a marked candidate.
+Standing actors/values, unsupported categories, ambiguous quotes and inferred dates
+retain their guards. Month-only dates remain periods. This storage exception is
+not semantic proof that an action happened or a duty was fulfilled.
+
+Full Go tests, changed-package race checks, 802 backend and 668 frontend tests,
+a production build and clean twelve-patch reproduction pass. A fresh source-model
+run shows two correct days and exact citations, but has a different notice title
+using the older actor-word branch. It cannot establish the new branch's isolated
+benefit; the fixed-input SQLite replay does. Performers remain omitted in the graph.
+A targeted recheck recovers the notice performer separately and its history/source
+opens in Prompt Lab, without automatic graph writes, model revision or activation.
+
+“Unresolved details” now distinguishes pending review from evidence absence.
+Located additional values remain candidates even when every stored field has
+model support. Review status, source presence, candidate role values, graph identity
+and human acceptance must be separate training labels. For Laya, benchmark both
+upstream classification and downstream registration/role association; encoder
+scores cannot repair storage guards or establish full-source completeness.
+No Laya retraining, GLiNER comparison or acceleration measurement occurred here.
+
+See the [occurrence/review audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-profile-occurrence.md)
+and [shared receipt](validation/delaylama-profile-occurrence-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

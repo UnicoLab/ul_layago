@@ -20,6 +20,7 @@ do not confer accuracy or calibration on another application's tasks.
 
 | Record | What it establishes |
 | --- | --- |
+| [DelayLama profile occurrences, 2026-10-04](validation/delaylama-profile-occurrence-20261004.json) | Fixed-output event registration, real source rechecks and prompt-history transfer, with retained performer omissions; L77 |
 | [DelayLama captured job schema, 2026-10-04](validation/delaylama-analysis-schema-20261004.json) | Worker configuration isolation, actual-model notice typing/role failures and downstream evaluation priorities; L76 |
 | [DelayLama event vocabulary, 2026-10-04](validation/delaylama-event-vocabulary-20261004.json) | Observed schema categories, bounded run metadata, shared-setting limits and contract-quality priorities; L75 |
 | [DelayLama exact evidence resume, 2026-10-04](validation/delaylama-review-resume-20261004.json) | Complete-context navigation, citation-list binding, async races and actual saved-analysis browser checks; L74 |
