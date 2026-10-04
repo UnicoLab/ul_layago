@@ -2345,6 +2345,36 @@ No Laya retraining, GLiNER comparison or acceleration measurement occurred here.
 See the [occurrence/review audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-profile-occurrence.md)
 and [shared receipt](validation/delaylama-profile-occurrence-20261004.json).
 
+## L78 — Typed party integration must precede model-quality attribution (2026-10-04)
+
+Construction Claims used Contractor/Maître d’ouvrage and sixteen other party types,
+but the relation validator and GUI recognized only generic actors. Correct roles
+were discarded or hidden; a party could also pass a causal-target guard. The new
+explicit family preserves specialized types, enables performer/recipient links,
+keeps standing parties undated and rejects nonparty recipients. Unknown labels,
+clauses and risks remain excluded. No historical graph migration is automatic.
+
+Same recorded optional output retained 5/14 declared links before versus 14/14
+after this guard fix, with no model calls. Fresh default/optional Gemini passes
+retained 9/14 and 14/14 across four new synthetic supplied-register cases. Expected
+sets were not sent to the model; default omissions are retained. This is manually
+annotated development evidence, not independent unseen-contract certification.
+Optional meaning remains opt-in. Two different full-source/browser originals show
+working typed role evidence and a remaining Planning revision-registration failure;
+their counts cannot be presented as a paired prompt comparison.
+
+All Go/focused-race, 802 backend/671 frontend, build and thirteen-patch reproduction
+checks pass. The default runtime was updated while preserving graph/configuration,
+source edits and user artifacts. GUI candidates keep original quotations, endpoint
+passages and performance/legality distinctions. Source presence, party role, stored
+identity and human acceptance must be separate labels for Laya/GLiNER evaluations.
+An encoder cannot fix downstream type guards. Prioritize occurrence registration,
+independent role/false-link coverage and version-bound reviewed apply/undo before
+using classification scores as quality claims. No new model training or timings.
+
+See the [party integration audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-domain-actors.md)
+and [shared receipt](validation/delaylama-domain-actors-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

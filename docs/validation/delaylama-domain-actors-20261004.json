@@ -1,0 +1,2297 @@
+{
+  "date": "2026-10-04",
+  "scope": "Party endpoint/storage/GUI correction plus synthetic supplied-register and two distinct full-source QA trials; no general completeness or real-contract certification",
+  "base_release": "v1.3.0",
+  "default_patch_count": 13,
+  "domain_actor_patch_sha256": "10f83df4f1bb423fc011824fcbaa40cf2c96f1f5b1ac4b4eb4de9aa99812bcb2",
+  "fixture_sha256": "49d24d17fc6ca299d8cdb0cf383fb6a36326be78838c42d9282722e68a1a5dbf",
+  "schema_party_types_tested": 18,
+  "tests": {
+    "backend": 802,
+    "frontend": 671,
+    "frontend_files": 54,
+    "go_full": true,
+    "go_race_packages": [
+      "pkg/agents",
+      "pkg/intelligence",
+      "root"
+    ],
+    "production_build": true,
+    "replay_corruption_guards": [
+      {
+        "case": "fixture-changed",
+        "rejected_before_run": true,
+        "reason": "panic: Replay must have identical fixture bytes"
+      },
+      {
+        "case": "response-changed",
+        "rejected_before_run": true,
+        "reason": "panic: Replay response missing or changed"
+      },
+      {
+        "case": "case-missing",
+        "rejected_before_run": true,
+        "reason": "panic: Replay must contain every case exactly once"
+      }
+    ]
+  },
+  "patch_reproduction": [
+    {
+      "mode": "default",
+      "clean_release": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+      "apply": "Chronograph source date precision: applied\nChronograph event relationships: applied\nChronograph analysis job control: applied\nChronograph quoted occurrences: applied\nChronograph occurrence identity: applied\nChronograph occurrence alias: applied\nChronograph organization boundaries: applied\nChronograph event direct completion: applied\nChronograph date value types: applied\nChronograph path test portability: applied\nChronograph analysis job schema: applied\nChronograph profile occurrence: applied\nChronograph domain actors: applied\n",
+      "idempotent": true,
+      "test_command": [
+        "go",
+        "test",
+        "./pkg/agents",
+        "./pkg/intelligence",
+        "-count=1"
+      ],
+      "test_output": "ok  \tgithub.com/UnicoLab/chronograph/pkg/agents\t1.111s\nok  \tgithub.com/UnicoLab/chronograph/pkg/intelligence\t1.360s\n"
+    },
+    {
+      "mode": "audit",
+      "clean_release": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+      "apply": "Chronograph source date precision: applied\nChronograph event relationships: applied\nChronograph analysis job control: applied\nChronograph quoted occurrences: applied\nChronograph occurrence identity: applied\nChronograph occurrence alias: applied\nChronograph organization boundaries: applied\nChronograph event direct completion: applied\nChronograph date value types: applied\nChronograph path test portability: applied\nChronograph analysis job schema: applied\nChronograph profile occurrence: applied\nChronograph domain actors: applied\nChronograph event role coverage: applied\n",
+      "idempotent": true,
+      "test_command": [
+        "go",
+        "test",
+        "./pkg/agents",
+        "./pkg/intelligence"
+      ],
+      "test_output": "ok  \tgithub.com/UnicoLab/chronograph/pkg/agents\t0.920s\nok  \tgithub.com/UnicoLab/chronograph/pkg/intelligence\t0.552s\n"
+    },
+    {
+      "mode": "register",
+      "clean_release": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+      "apply": "Chronograph source date precision: applied\nChronograph event relationships: applied\nChronograph analysis job control: applied\nChronograph quoted occurrences: applied\nChronograph occurrence identity: applied\nChronograph occurrence alias: applied\nChronograph organization boundaries: applied\nChronograph event direct completion: applied\nChronograph date value types: applied\nChronograph path test portability: applied\nChronograph analysis job schema: applied\nChronograph profile occurrence: applied\nChronograph domain actors: applied\nChronograph event role register: applied\n",
+      "idempotent": true,
+      "test_command": [
+        "go",
+        "test",
+        "./pkg/agents",
+        "./pkg/intelligence"
+      ],
+      "test_output": "ok  \tgithub.com/UnicoLab/chronograph/pkg/agents\t0.491s\nok  \tgithub.com/UnicoLab/chronograph/pkg/intelligence\t0.812s\n"
+    },
+    {
+      "mode": "passages",
+      "clean_release": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+      "apply": "Chronograph source date precision: applied\nChronograph event relationships: applied\nChronograph analysis job control: applied\nChronograph quoted occurrences: applied\nChronograph occurrence identity: applied\nChronograph occurrence alias: applied\nChronograph organization boundaries: applied\nChronograph event direct completion: applied\nChronograph date value types: applied\nChronograph path test portability: applied\nChronograph analysis job schema: applied\nChronograph profile occurrence: applied\nChronograph domain actors: applied\nChronograph event role register: applied\nChronograph event role passages: applied\n",
+      "idempotent": true,
+      "test_command": [
+        "go",
+        "test",
+        "./pkg/agents",
+        "./pkg/intelligence"
+      ],
+      "test_output": "ok  \tgithub.com/UnicoLab/chronograph/pkg/agents\t0.850s\nok  \tgithub.com/UnicoLab/chronograph/pkg/intelligence\t0.368s\n"
+    },
+    {
+      "mode": "meaning",
+      "clean_release": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+      "apply": "Chronograph source date precision: applied\nChronograph event relationships: applied\nChronograph analysis job control: applied\nChronograph quoted occurrences: applied\nChronograph occurrence identity: applied\nChronograph occurrence alias: applied\nChronograph organization boundaries: applied\nChronograph event direct completion: applied\nChronograph date value types: applied\nChronograph path test portability: applied\nChronograph analysis job schema: applied\nChronograph profile occurrence: applied\nChronograph domain actors: applied\nChronograph event role register: applied\nChronograph event role meaning: applied\n",
+      "idempotent": true,
+      "test_command": [
+        "go",
+        "test",
+        "./pkg/agents",
+        "./pkg/intelligence"
+      ],
+      "test_output": "ok  \tgithub.com/UnicoLab/chronograph/pkg/agents\t0.420s\nok  \tgithub.com/UnicoLab/chronograph/pkg/intelligence\t0.670s\n"
+    }
+  ],
+  "evaluation": {
+    "fresh_default": {
+      "all_expected_sets_matched": false,
+      "fixture_sha256": "49d24d17fc6ca299d8cdb0cf383fb6a36326be78838c42d9282722e68a1a5dbf",
+      "model": "gemini-3.1-flash-lite",
+      "rows": [
+        {
+          "case": "typed-parties-aster",
+          "elapsed_seconds": 1.118763458,
+          "exact_expected_set": false,
+          "expected": [
+            {
+              "source": "owner",
+              "target": "closure",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "closure",
+              "target": "builder",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "builder",
+              "target": "notice",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "notice",
+              "target": "owner",
+              "relation": "NOTIFIED"
+            }
+          ],
+          "method": "Complete",
+          "missing": [
+            "builder|notice|RESPONSIBLE_FOR",
+            "owner|closure|RESPONSIBLE_FOR"
+          ],
+          "model_response": "{\"relations\":[{\"source_ref\":\"closure\",\"target_ref\":\"builder\",\"relation\":\"AFFECTED\",\"fact\":\"Brume Travaux SARL was affected by the closure of the site access.\",\"source_text\":\"Le 8 octobre 2042, Aster Patrimoine SAS a fermé l’accès au chantier. Brume Travaux SARL a été affecté par cette fermeture.\",\"justification\":\"The text explicitly states that the builder was affected by the closure event.\"},{\"source_ref\":\"notice\",\"target_ref\":\"owner\",\"relation\":\"NOTIFIED\",\"fact\":\"Brume Travaux SARL sent a written notification to Aster Patrimoine SAS.\",\"source_text\":\"Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS.\",\"justification\":\"The text explicitly identifies the recipient of the notification event.\"}]}",
+          "operational": {
+            "status": "completed",
+            "proposed": 2,
+            "rejected": 0,
+            "stored": 0
+          },
+          "prompt_sha256": "397c8f14aa9badd7f7104c5895eb124ec03aeb8a75cba23319c4768e0f2b6aa4",
+          "relations": [
+            {
+              "source_ref": "closure",
+              "target_ref": "builder",
+              "relation": "AFFECTED",
+              "fact": "Brume Travaux SARL was affected by the closure of the site access.",
+              "source_text": "Le 8 octobre 2042, Aster Patrimoine SAS a fermé l’accès au chantier. Brume Travaux SARL a été affecté par cette fermeture.",
+              "justification": "The text explicitly states that the builder was affected by the closure event.",
+              "citation": {
+                "source_id": "typed-parties-aster",
+                "char_start": 219,
+                "char_end": 348,
+                "source_text": "Le 8 octobre 2042, Aster Patrimoine SAS a fermé l’accès au chantier. Brume Travaux SARL a été affecté par cette fermeture."
+              }
+            },
+            {
+              "source_ref": "notice",
+              "target_ref": "owner",
+              "relation": "NOTIFIED",
+              "fact": "Brume Travaux SARL sent a written notification to Aster Patrimoine SAS.",
+              "source_text": "Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS.",
+              "justification": "The text explicitly identifies the recipient of the notification event.",
+              "citation": {
+                "source_id": "typed-parties-aster",
+                "char_start": 357,
+                "char_end": 454,
+                "source_text": "Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS."
+              }
+            }
+          ],
+          "response_sha256": "368267e351d24ec7642647e514e5ca59cd51de2a2e6465955d927c0ff4b3c0d1",
+          "source_sha256": "0d9722f6012f6e67d0a1e48164d3e478ce30e167372c5a841fc205ed168ee5f2",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-permit",
+          "elapsed_seconds": 1.263193875,
+          "exact_expected_set": false,
+          "expected": [
+            {
+              "source": "authority",
+              "target": "reject",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "reject",
+              "target": "halt",
+              "relation": "CAUSED"
+            },
+            {
+              "source": "halt",
+              "target": "builder",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "engineer",
+              "target": "notice",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "notice",
+              "target": "authority",
+              "relation": "NOTIFIED"
+            }
+          ],
+          "method": "Complete",
+          "missing": [
+            "authority|reject|RESPONSIBLE_FOR",
+            "engineer|notice|RESPONSIBLE_FOR"
+          ],
+          "model_response": "{\"relations\":[{\"source_ref\":\"reject\",\"target_ref\":\"halt\",\"relation\":\"CAUSED\",\"fact\":\"The permit rejection caused the excavation work to stop.\",\"source_text\":\"This permit rejection caused the excavation work to stop on 13 November 2043\",\"justification\":\"The text explicitly states the rejection caused the work to stop.\"},{\"source_ref\":\"halt\",\"target_ref\":\"builder\",\"relation\":\"AFFECTED\",\"fact\":\"The excavation work stoppage affected Fern Civil Ltd.\",\"source_text\":\"This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd.\",\"justification\":\"The text explicitly identifies Fern Civil Ltd as being affected by the excavation work stoppage.\"},{\"source_ref\":\"notice\",\"target_ref\":\"authority\",\"relation\":\"NOTIFIED\",\"fact\":\"Meridian Engineering Ltd sent a technical notice to North Borough Authority.\",\"source_text\":\"On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority.\",\"justification\":\"The text explicitly states the notice event was sent to the North Borough Authority.\"}]}",
+          "operational": {
+            "status": "completed",
+            "proposed": 3,
+            "rejected": 0,
+            "stored": 0
+          },
+          "prompt_sha256": "d5207a4f3878580d4f882b898f7f3fe2b3bcb1caec46e325092405d3ab94d29e",
+          "relations": [
+            {
+              "source_ref": "reject",
+              "target_ref": "halt",
+              "relation": "CAUSED",
+              "fact": "The permit rejection caused the excavation work to stop.",
+              "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043",
+              "justification": "The text explicitly states the rejection caused the work to stop.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 334,
+                "char_end": 410,
+                "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043"
+              }
+            },
+            {
+              "source_ref": "halt",
+              "target_ref": "builder",
+              "relation": "AFFECTED",
+              "fact": "The excavation work stoppage affected Fern Civil Ltd.",
+              "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd.",
+              "justification": "The text explicitly identifies Fern Civil Ltd as being affected by the excavation work stoppage.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 334,
+                "char_end": 437,
+                "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd."
+              }
+            },
+            {
+              "source_ref": "notice",
+              "target_ref": "authority",
+              "relation": "NOTIFIED",
+              "fact": "Meridian Engineering Ltd sent a technical notice to North Borough Authority.",
+              "source_text": "On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority.",
+              "justification": "The text explicitly states the notice event was sent to the North Borough Authority.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 446,
+                "char_end": 543,
+                "source_text": "On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority."
+              }
+            }
+          ],
+          "response_sha256": "c484d70ebfd3c640950f3aedb2617a26858c59b3fe258f970532b2b19e792422",
+          "source_sha256": "c2b11c3d0b893b860f018d0bafe76ef0d112c3cbf864db101182bb62c3f282c8",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-groupement",
+          "elapsed_seconds": 1.211583833,
+          "exact_expected_set": true,
+          "expected": [
+            {
+              "source": "lead",
+              "target": "stop",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "stop",
+              "target": "sub",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "stop",
+              "target": "revision",
+              "relation": "CAUSED"
+            },
+            {
+              "source": "opc",
+              "target": "revision",
+              "relation": "RESPONSIBLE_FOR"
+            }
+          ],
+          "method": "Complete",
+          "missing": [],
+          "model_response": "{\"relations\":[{\"source_ref\":\"lead\",\"target_ref\":\"stop\",\"relation\":\"RESPONSIBLE_FOR\",\"fact\":\"Érable Pilotage SAS ordered the partial work stoppage.\",\"source_text\":\"Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux\",\"justification\":\"The text explicitly identifies Érable Pilotage SAS as the entity that ordered the event 'Arrêt partiel ordonné'.\"},{\"source_ref\":\"stop\",\"target_ref\":\"sub\",\"relation\":\"AFFECTED\",\"fact\":\"The partial work stoppage affected Silex Pose SARL.\",\"source_text\":\"l’arrêt partiel des travaux, affectant Silex Pose SARL.\",\"justification\":\"The text explicitly states the event 'Arrêt partiel ordonné' affected the entity Silex Pose SARL.\"},{\"source_ref\":\"stop\",\"target_ref\":\"revision\",\"relation\":\"CAUSED\",\"fact\":\"The partial work stoppage caused the revision of the schedule.\",\"source_text\":\"Cet arrêt a entraîné la révision du planning le 4 avril 2044.\",\"justification\":\"The text explicitly states that the stoppage event caused the revision event.\"},{\"source_ref\":\"opc\",\"target_ref\":\"revision\",\"relation\":\"RESPONSIBLE_FOR\",\"fact\":\"Horizon OPC SAS performed the schedule revision.\",\"source_text\":\"Horizon OPC SAS a réalisé cette révision.\",\"justification\":\"The text explicitly identifies Horizon OPC SAS as the entity that performed the 'Révision du planning' event.\"}]}",
+          "operational": {
+            "status": "completed",
+            "proposed": 4,
+            "rejected": 0,
+            "stored": 0
+          },
+          "prompt_sha256": "1c3b9d0caf3e001c5fea40e6f4f135fc6029bfa33cfb7d3b53276adadfba9285",
+          "relations": [
+            {
+              "source_ref": "lead",
+              "target_ref": "stop",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Érable Pilotage SAS ordered the partial work stoppage.",
+              "source_text": "Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux",
+              "justification": "The text explicitly identifies Érable Pilotage SAS as the entity that ordered the event 'Arrêt partiel ordonné'.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 131,
+                "char_end": 210,
+                "source_text": "Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux"
+              }
+            },
+            {
+              "source_ref": "stop",
+              "target_ref": "sub",
+              "relation": "AFFECTED",
+              "fact": "The partial work stoppage affected Silex Pose SARL.",
+              "source_text": "l’arrêt partiel des travaux, affectant Silex Pose SARL.",
+              "justification": "The text explicitly states the event 'Arrêt partiel ordonné' affected the entity Silex Pose SARL.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 180,
+                "char_end": 238,
+                "source_text": "l’arrêt partiel des travaux, affectant Silex Pose SARL."
+              }
+            },
+            {
+              "source_ref": "stop",
+              "target_ref": "revision",
+              "relation": "CAUSED",
+              "fact": "The partial work stoppage caused the revision of the schedule.",
+              "source_text": "Cet arrêt a entraîné la révision du planning le 4 avril 2044.",
+              "justification": "The text explicitly states that the stoppage event caused the revision event.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 247,
+                "char_end": 312,
+                "source_text": "Cet arrêt a entraîné la révision du planning le 4 avril 2044."
+              }
+            },
+            {
+              "source_ref": "opc",
+              "target_ref": "revision",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Horizon OPC SAS performed the schedule revision.",
+              "source_text": "Horizon OPC SAS a réalisé cette révision.",
+              "justification": "The text explicitly identifies Horizon OPC SAS as the entity that performed the 'Révision du planning' event.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 313,
+                "char_end": 357,
+                "source_text": "Horizon OPC SAS a réalisé cette révision."
+              }
+            }
+          ],
+          "response_sha256": "3dd48357932c2ed859c9035d31ee577f2c06465549b09929eaeb5b5d8f9faf36",
+          "source_sha256": "fe04c891526b08ac79d11ab1c89cd54f165d662649ca3a3f33626009a592395b",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-unsent",
+          "elapsed_seconds": 0.692246834,
+          "exact_expected_set": false,
+          "expected": [
+            {
+              "source": "builder",
+              "target": "draft",
+              "relation": "RESPONSIBLE_FOR"
+            }
+          ],
+          "method": "Complete",
+          "missing": [
+            "builder|draft|RESPONSIBLE_FOR"
+          ],
+          "model_response": "{\"relations\":[]}",
+          "operational": {
+            "status": "completed",
+            "proposed": 0,
+            "rejected": 0,
+            "stored": 0
+          },
+          "prompt_sha256": "229f6745c8883ab1935fb2f3d45ef1e305bf7c25ef64f03c28e12cd0c5a09d67",
+          "relations": null,
+          "response_sha256": "096ac3df03946e078dbe269a92a8543208cd3a306619c8121a6cf651f2586842",
+          "source_sha256": "2f39858d03a251b4fd60eefab20bf762b11532f3f62233729bfedc27220b91ce",
+          "unexpected": []
+        }
+      ],
+      "scope": "Read-only relation-pass development cases with supplied endpoints; not end-to-end or held-out quality certification",
+      "variant": "default13-domain-actors"
+    },
+    "fresh_optional_meaning": {
+      "all_expected_sets_matched": true,
+      "fixture_sha256": "49d24d17fc6ca299d8cdb0cf383fb6a36326be78838c42d9282722e68a1a5dbf",
+      "model": "gemini-3.1-flash-lite",
+      "rows": [
+        {
+          "case": "typed-parties-aster",
+          "elapsed_seconds": 2.319162167,
+          "exact_expected_set": true,
+          "expected": [
+            {
+              "source": "owner",
+              "target": "closure",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "closure",
+              "target": "builder",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "builder",
+              "target": "notice",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "notice",
+              "target": "owner",
+              "relation": "NOTIFIED"
+            }
+          ],
+          "method": "Complete",
+          "missing": [],
+          "model_response": "{\"event_roles\":[{\"event_ref\":\"closure\",\"event_name\":\"Fermeture de l’accès\",\"performer\":{\"status\":\"candidate\",\"reason\":\"The original document explicitly states that Aster Patrimoine SAS performed the action of closing the access.\",\"candidates\":[{\"ref\":\"owner\",\"name\":\"Aster Patrimoine SAS\",\"fact\":\"Aster Patrimoine SAS performed the closure of the access.\",\"source_text\":\"Le 8 octobre 2042, Aster Patrimoine SAS a fermé l’accès au chantier.\",\"justification\":\"The text directly links the performer to the action of closing the access.\"}]},\"affected\":{\"status\":\"candidate\",\"reason\":\"The original document explicitly identifies Brume Travaux SARL as the party affected by the closure.\",\"candidates\":[{\"ref\":\"builder\",\"name\":\"Brume Travaux SARL\",\"fact\":\"Brume Travaux SARL was affected by the closure.\",\"source_text\":\"Brume Travaux SARL a été affecté par cette fermeture.\",\"justification\":\"The text explicitly names the builder as the entity affected by the closure event.\"}]},\"caused_by\":{\"status\":\"unresolved\",\"reason\":\"No prior event is identified as the cause of the closure in the original document.\",\"candidates\":[]},\"recipient\":{\"status\":\"not_applicable\",\"reason\":\"This is a physical action event, not a notice event.\",\"candidates\":[]}},{\"event_ref\":\"notice\",\"event_name\":\"Envoi de la notification écrite\",\"performer\":{\"status\":\"candidate\",\"reason\":\"The original document explicitly states that Brume Travaux SARL sent the written notification.\",\"candidates\":[{\"ref\":\"builder\",\"name\":\"Brume Travaux SARL\",\"fact\":\"Brume Travaux SARL performed the sending of the notification.\",\"source_text\":\"Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS.\",\"justification\":\"The text identifies the builder as the performer of the sending action.\"}]},\"affected\":{\"status\":\"unresolved\",\"reason\":\"The text explicitly states that the notice caused no interruption, therefore no party or activity was affected by this specific event.\",\"candidates\":[]},\"caused_by\":{\"status\":\"unresolved\",\"reason\":\"The notice is described as a follow-up to the closure, but the text does not state that the closure caused the act of sending the notice itself.\",\"candidates\":[]},\"recipient\":{\"status\":\"candidate\",\"reason\":\"The original document explicitly names Aster Patrimoine SAS as the recipient of the written notification.\",\"candidates\":[{\"ref\":\"owner\",\"name\":\"Aster Patrimoine SAS\",\"fact\":\"Aster Patrimoine SAS is the recipient of the notification.\",\"source_text\":\"Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS.\",\"justification\":\"The text identifies the owner as the recipient of the notification sent by the builder.\"}]}}]}",
+          "operational": {
+            "status": "completed",
+            "proposed": 4,
+            "rejected": 0,
+            "stored": 0,
+            "events_expected": 2,
+            "events_checked": 2,
+            "roles_with_candidates": 4,
+            "roles_unresolved": 4
+          },
+          "prompt_sha256": "84fb8244bc9d6827a2f457a11ae18023d27a7a6d56fe3c291075e14016badb3d",
+          "relations": [
+            {
+              "source_ref": "owner",
+              "target_ref": "closure",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Aster Patrimoine SAS performed the closure of the access.",
+              "source_text": "Le 8 octobre 2042, Aster Patrimoine SAS a fermé l’accès au chantier.",
+              "justification": "The text directly links the performer to the action of closing the access.",
+              "citation": {
+                "source_id": "typed-parties-aster",
+                "char_start": 219,
+                "char_end": 291,
+                "source_text": "Le 8 octobre 2042, Aster Patrimoine SAS a fermé l’accès au chantier."
+              }
+            },
+            {
+              "source_ref": "closure",
+              "target_ref": "builder",
+              "relation": "AFFECTED",
+              "fact": "Brume Travaux SARL was affected by the closure.",
+              "source_text": "Brume Travaux SARL a été affecté par cette fermeture.",
+              "justification": "The text explicitly names the builder as the entity affected by the closure event.",
+              "citation": {
+                "source_id": "typed-parties-aster",
+                "char_start": 292,
+                "char_end": 348,
+                "source_text": "Brume Travaux SARL a été affecté par cette fermeture."
+              }
+            },
+            {
+              "source_ref": "builder",
+              "target_ref": "notice",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Brume Travaux SARL performed the sending of the notification.",
+              "source_text": "Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS.",
+              "justification": "The text identifies the builder as the performer of the sending action.",
+              "citation": {
+                "source_id": "typed-parties-aster",
+                "char_start": 357,
+                "char_end": 454,
+                "source_text": "Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS."
+              }
+            },
+            {
+              "source_ref": "notice",
+              "target_ref": "owner",
+              "relation": "NOTIFIED",
+              "fact": "Aster Patrimoine SAS is the recipient of the notification.",
+              "source_text": "Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS.",
+              "justification": "The text identifies the owner as the recipient of the notification sent by the builder.",
+              "citation": {
+                "source_id": "typed-parties-aster",
+                "char_start": 357,
+                "char_end": 454,
+                "source_text": "Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS."
+              }
+            }
+          ],
+          "response_sha256": "a02e8a30eb75a9a515f85f0dee7948bc4ff72e8e48424d74e58ffdeda830b525",
+          "source_sha256": "0d9722f6012f6e67d0a1e48164d3e478ce30e167372c5a841fc205ed168ee5f2",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-permit",
+          "elapsed_seconds": 2.704881541,
+          "exact_expected_set": true,
+          "expected": [
+            {
+              "source": "authority",
+              "target": "reject",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "reject",
+              "target": "halt",
+              "relation": "CAUSED"
+            },
+            {
+              "source": "halt",
+              "target": "builder",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "engineer",
+              "target": "notice",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "notice",
+              "target": "authority",
+              "relation": "NOTIFIED"
+            }
+          ],
+          "method": "Complete",
+          "missing": [],
+          "model_response": "{\"event_roles\":[{\"event_ref\":\"reject\",\"event_name\":\"Permit application rejected\",\"performer\":{\"status\":\"candidate\",\"reason\":\"The original document explicitly identifies North Borough Authority as the entity that rejected the permit application.\",\"candidates\":[{\"ref\":\"authority\",\"name\":\"North Borough Authority\",\"fact\":\"North Borough Authority rejected the permit application\",\"source_text\":\"On 12 November 2043, North Borough Authority rejected the permit application.\",\"justification\":\"The text directly links the authority as the subject performing the rejection action.\"}]},\"affected\":{\"status\":\"unresolved\",\"reason\":\"The document does not explicitly state which party or activity was affected by the rejection of the permit application.\",\"candidates\":[]},\"caused_by\":{\"status\":\"unresolved\",\"reason\":\"No prior event is identified as the cause of the permit rejection.\",\"candidates\":[]},\"recipient\":{\"status\":\"not_applicable\",\"reason\":\"not a notice event\",\"candidates\":[]}},{\"event_ref\":\"halt\",\"event_name\":\"Excavation work stopped\",\"performer\":{\"status\":\"unresolved\",\"reason\":\"The document states the work stopped but does not explicitly name the entity that performed the act of stopping the work.\",\"candidates\":[]},\"affected\":{\"status\":\"candidate\",\"reason\":\"The document explicitly states that the stopping of excavation work affected Fern Civil Ltd.\",\"candidates\":[{\"ref\":\"builder\",\"name\":\"Fern Civil Ltd\",\"fact\":\"Fern Civil Ltd was affected by the excavation work stopping\",\"source_text\":\"This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd.\",\"justification\":\"The text explicitly links the stopping of work to the effect on Fern Civil Ltd.\"}]},\"caused_by\":{\"status\":\"candidate\",\"reason\":\"The document explicitly identifies the permit rejection as the cause of the excavation work stopping.\",\"candidates\":[{\"ref\":\"reject\",\"name\":\"Permit application rejected\",\"fact\":\"Permit rejection caused the excavation work to stop\",\"source_text\":\"This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd.\",\"justification\":\"The text identifies the permit rejection as the direct cause of the work stoppage event.\"}]},\"recipient\":{\"status\":\"not_applicable\",\"reason\":\"not a notice event\",\"candidates\":[]}},{\"event_ref\":\"notice\",\"event_name\":\"Technical notice sent\",\"performer\":{\"status\":\"candidate\",\"reason\":\"The document explicitly states that Meridian Engineering Ltd sent the technical notice.\",\"candidates\":[{\"ref\":\"engineer\",\"name\":\"Meridian Engineering Ltd\",\"fact\":\"Meridian Engineering Ltd sent a technical notice\",\"source_text\":\"On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority.\",\"justification\":\"The text identifies the engineer as the sender of the notice.\"}]},\"affected\":{\"status\":\"unresolved\",\"reason\":\"The document does not state that any party or activity was affected by the sending of the notice.\",\"candidates\":[]},\"caused_by\":{\"status\":\"unresolved\",\"reason\":\"No prior event is identified as the cause of the notice being sent.\",\"candidates\":[]},\"recipient\":{\"status\":\"candidate\",\"reason\":\"The document explicitly identifies North Borough Authority as the recipient of the technical notice.\",\"candidates\":[{\"ref\":\"authority\",\"name\":\"North Borough Authority\",\"fact\":\"North Borough Authority received the technical notice\",\"source_text\":\"On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority.\",\"justification\":\"The text identifies the authority as the recipient of the notice sent by the engineer.\"}]}}]}",
+          "operational": {
+            "status": "completed",
+            "proposed": 5,
+            "rejected": 0,
+            "stored": 0,
+            "events_expected": 3,
+            "events_checked": 3,
+            "roles_with_candidates": 5,
+            "roles_unresolved": 7
+          },
+          "prompt_sha256": "56969bc91b12a3269600fe6c51f5c8e8b707b003d4e13df4c8a2be113cb392f8",
+          "relations": [
+            {
+              "source_ref": "authority",
+              "target_ref": "reject",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "North Borough Authority rejected the permit application",
+              "source_text": "On 12 November 2043, North Borough Authority rejected the permit application.",
+              "justification": "The text directly links the authority as the subject performing the rejection action.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 248,
+                "char_end": 325,
+                "source_text": "On 12 November 2043, North Borough Authority rejected the permit application."
+              }
+            },
+            {
+              "source_ref": "halt",
+              "target_ref": "builder",
+              "relation": "AFFECTED",
+              "fact": "Fern Civil Ltd was affected by the excavation work stopping",
+              "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd.",
+              "justification": "The text explicitly links the stopping of work to the effect on Fern Civil Ltd.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 334,
+                "char_end": 437,
+                "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd."
+              }
+            },
+            {
+              "source_ref": "reject",
+              "target_ref": "halt",
+              "relation": "CAUSED",
+              "fact": "Permit rejection caused the excavation work to stop",
+              "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd.",
+              "justification": "The text identifies the permit rejection as the direct cause of the work stoppage event.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 334,
+                "char_end": 437,
+                "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd."
+              }
+            },
+            {
+              "source_ref": "engineer",
+              "target_ref": "notice",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Meridian Engineering Ltd sent a technical notice",
+              "source_text": "On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority.",
+              "justification": "The text identifies the engineer as the sender of the notice.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 446,
+                "char_end": 543,
+                "source_text": "On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority."
+              }
+            },
+            {
+              "source_ref": "notice",
+              "target_ref": "authority",
+              "relation": "NOTIFIED",
+              "fact": "North Borough Authority received the technical notice",
+              "source_text": "On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority.",
+              "justification": "The text identifies the authority as the recipient of the notice sent by the engineer.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 446,
+                "char_end": 543,
+                "source_text": "On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority."
+              }
+            }
+          ],
+          "response_sha256": "10399598be69c3483d6afddb6d8e24e689fe53b499a018bc5ea2c475f411e0e5",
+          "source_sha256": "c2b11c3d0b893b860f018d0bafe76ef0d112c3cbf864db101182bb62c3f282c8",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-groupement",
+          "elapsed_seconds": 1.9612880000000001,
+          "exact_expected_set": true,
+          "expected": [
+            {
+              "source": "lead",
+              "target": "stop",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "stop",
+              "target": "sub",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "stop",
+              "target": "revision",
+              "relation": "CAUSED"
+            },
+            {
+              "source": "opc",
+              "target": "revision",
+              "relation": "RESPONSIBLE_FOR"
+            }
+          ],
+          "method": "Complete",
+          "missing": [],
+          "model_response": "{\"event_roles\":[{\"event_ref\":\"stop\",\"event_name\":\"Arrêt partiel ordonné\",\"performer\":{\"status\":\"candidate\",\"reason\":\"The original document explicitly states that Érable Pilotage SAS ordered the partial work stoppage.\",\"candidates\":[{\"ref\":\"lead\",\"name\":\"Érable Pilotage SAS\",\"fact\":\"Érable Pilotage SAS ordered the partial stoppage of work.\",\"source_text\":\"Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux, affectant Silex Pose SARL.\",\"justification\":\"The text directly links the performer to the act of ordering the stoppage.\"}]},\"affected\":{\"status\":\"candidate\",\"reason\":\"The original document explicitly states that the stoppage affected Silex Pose SARL.\",\"candidates\":[{\"ref\":\"sub\",\"name\":\"Silex Pose SARL\",\"fact\":\"Silex Pose SARL was affected by the partial work stoppage.\",\"source_text\":\"Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux, affectant Silex Pose SARL.\",\"justification\":\"The text explicitly identifies Silex Pose SARL as the party affected by the stoppage.\"}]},\"caused_by\":{\"status\":\"unresolved\",\"reason\":\"No prior event is identified as the cause of the stoppage in the document.\",\"candidates\":[]},\"recipient\":{\"status\":\"not_applicable\",\"reason\":\"This is an order/stoppage event, not a notice event.\",\"candidates\":[]}},{\"event_ref\":\"revision\",\"event_name\":\"Révision du planning\",\"performer\":{\"status\":\"candidate\",\"reason\":\"The original document explicitly states that Horizon OPC SAS performed the revision.\",\"candidates\":[{\"ref\":\"opc\",\"name\":\"Horizon OPC SAS\",\"fact\":\"Horizon OPC SAS performed the planning revision.\",\"source_text\":\"Horizon OPC SAS a réalisé cette révision.\",\"justification\":\"The text identifies Horizon OPC SAS as the entity that carried out the revision.\"}]},\"affected\":{\"status\":\"unresolved\",\"reason\":\"The document does not explicitly name a party or activity affected by the revision of the planning.\",\"candidates\":[]},\"caused_by\":{\"status\":\"candidate\",\"reason\":\"The document explicitly states that the stoppage caused the revision.\",\"candidates\":[{\"ref\":\"stop\",\"name\":\"Arrêt partiel ordonné\",\"fact\":\"The stoppage caused the revision of the planning.\",\"source_text\":\"Cet arrêt a entraîné la révision du planning le 4 avril 2044.\",\"justification\":\"The text identifies the stoppage as the event that led to the revision.\"}]},\"recipient\":{\"status\":\"not_applicable\",\"reason\":\"This is a planning revision event, not a notice event.\",\"candidates\":[]}}]}",
+          "operational": {
+            "status": "completed",
+            "proposed": 4,
+            "rejected": 0,
+            "stored": 0,
+            "events_expected": 2,
+            "events_checked": 2,
+            "roles_with_candidates": 4,
+            "roles_unresolved": 4
+          },
+          "prompt_sha256": "49e93d4abfd4dc419df3ac658a13fa5aba80e3aeff7547efec4fb784ec7a83b9",
+          "relations": [
+            {
+              "source_ref": "lead",
+              "target_ref": "stop",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Érable Pilotage SAS ordered the partial stoppage of work.",
+              "source_text": "Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux, affectant Silex Pose SARL.",
+              "justification": "The text directly links the performer to the act of ordering the stoppage.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 131,
+                "char_end": 238,
+                "source_text": "Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux, affectant Silex Pose SARL."
+              }
+            },
+            {
+              "source_ref": "stop",
+              "target_ref": "sub",
+              "relation": "AFFECTED",
+              "fact": "Silex Pose SARL was affected by the partial work stoppage.",
+              "source_text": "Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux, affectant Silex Pose SARL.",
+              "justification": "The text explicitly identifies Silex Pose SARL as the party affected by the stoppage.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 131,
+                "char_end": 238,
+                "source_text": "Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux, affectant Silex Pose SARL."
+              }
+            },
+            {
+              "source_ref": "opc",
+              "target_ref": "revision",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Horizon OPC SAS performed the planning revision.",
+              "source_text": "Horizon OPC SAS a réalisé cette révision.",
+              "justification": "The text identifies Horizon OPC SAS as the entity that carried out the revision.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 313,
+                "char_end": 357,
+                "source_text": "Horizon OPC SAS a réalisé cette révision."
+              }
+            },
+            {
+              "source_ref": "stop",
+              "target_ref": "revision",
+              "relation": "CAUSED",
+              "fact": "The stoppage caused the revision of the planning.",
+              "source_text": "Cet arrêt a entraîné la révision du planning le 4 avril 2044.",
+              "justification": "The text identifies the stoppage as the event that led to the revision.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 247,
+                "char_end": 312,
+                "source_text": "Cet arrêt a entraîné la révision du planning le 4 avril 2044."
+              }
+            }
+          ],
+          "response_sha256": "573288bf569954826ad4946dfcb7fc73a4c3412e9369d29d6baef7a245df59c4",
+          "source_sha256": "fe04c891526b08ac79d11ab1c89cd54f165d662649ca3a3f33626009a592395b",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-unsent",
+          "elapsed_seconds": 1.517549,
+          "exact_expected_set": true,
+          "expected": [
+            {
+              "source": "builder",
+              "target": "draft",
+              "relation": "RESPONSIBLE_FOR"
+            }
+          ],
+          "method": "Complete",
+          "missing": [],
+          "model_response": "{\"event_roles\":[{\"event_ref\":\"draft\",\"event_name\":\"Draft notice prepared\",\"performer\":{\"status\":\"candidate\",\"reason\":\"The original document explicitly states that Pebble Works Ltd prepared the draft notice.\",\"candidates\":[{\"ref\":\"builder\",\"name\":\"Pebble Works Ltd\",\"fact\":\"Pebble Works Ltd prepared the draft notice\",\"source_text\":\"On 5 May 2045, Pebble Works Ltd prepared a draft notice.\",\"justification\":\"The text directly links the performer to the action of preparing the draft.\"}]},\"affected\":{\"status\":\"unresolved\",\"reason\":\"The document does not identify any party or activity affected by the preparation of the draft.\",\"candidates\":[]},\"caused_by\":{\"status\":\"unresolved\",\"reason\":\"No prior event is identified as the cause of the draft preparation.\",\"candidates\":[]},\"recipient\":{\"status\":\"not_applicable\",\"reason\":\"The event is the preparation of a draft, not the act of sending a notice to a recipient.\",\"candidates\":[]}}]}",
+          "operational": {
+            "status": "completed",
+            "proposed": 1,
+            "rejected": 0,
+            "stored": 0,
+            "events_expected": 1,
+            "events_checked": 1,
+            "roles_with_candidates": 1,
+            "roles_unresolved": 3
+          },
+          "prompt_sha256": "579f46f0f8c2d4bb892cce20d03c2afaa821c8e8a0911c22129fc4b2885c90c9",
+          "relations": [
+            {
+              "source_ref": "builder",
+              "target_ref": "draft",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Pebble Works Ltd prepared the draft notice",
+              "source_text": "On 5 May 2045, Pebble Works Ltd prepared a draft notice.",
+              "justification": "The text directly links the performer to the action of preparing the draft.",
+              "citation": {
+                "source_id": "typed-parties-unsent",
+                "char_start": 231,
+                "char_end": 287,
+                "source_text": "On 5 May 2045, Pebble Works Ltd prepared a draft notice."
+              }
+            }
+          ],
+          "response_sha256": "9124ac6424d86369afb8a191336f70d5278d61c3851fe5c0a940f3d580c03f20",
+          "source_sha256": "2f39858d03a251b4fd60eefab20bf762b11532f3f62233729bfedc27220b91ce",
+          "unexpected": []
+        }
+      ],
+      "scope": "Read-only relation-pass development cases with supplied endpoints; not end-to-end or held-out quality certification",
+      "variant": "optional13-role-meaning"
+    },
+    "default_replay_before": {
+      "all_expected_sets_matched": false,
+      "fixture_sha256": "49d24d17fc6ca299d8cdb0cf383fb6a36326be78838c42d9282722e68a1a5dbf",
+      "model": "gemini-3.1-flash-lite",
+      "rows": [
+        {
+          "case": "typed-parties-aster",
+          "elapsed_seconds": 0.000111334,
+          "exact_expected_set": false,
+          "expected": [
+            {
+              "source": "owner",
+              "target": "closure",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "closure",
+              "target": "builder",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "builder",
+              "target": "notice",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "notice",
+              "target": "owner",
+              "relation": "NOTIFIED"
+            }
+          ],
+          "method": "Complete",
+          "missing": [
+            "builder|notice|RESPONSIBLE_FOR",
+            "owner|closure|RESPONSIBLE_FOR"
+          ],
+          "operational": {
+            "status": "completed",
+            "proposed": 2,
+            "rejected": 0,
+            "stored": 0
+          },
+          "prompt_sha256": "397c8f14aa9badd7f7104c5895eb124ec03aeb8a75cba23319c4768e0f2b6aa4",
+          "relations": [
+            {
+              "source_ref": "closure",
+              "target_ref": "builder",
+              "relation": "AFFECTED",
+              "fact": "Brume Travaux SARL was affected by the closure of the site access.",
+              "source_text": "Le 8 octobre 2042, Aster Patrimoine SAS a fermé l’accès au chantier. Brume Travaux SARL a été affecté par cette fermeture.",
+              "justification": "The text explicitly states that the builder was affected by the closure event.",
+              "citation": {
+                "source_id": "typed-parties-aster",
+                "char_start": 219,
+                "char_end": 348,
+                "source_text": "Le 8 octobre 2042, Aster Patrimoine SAS a fermé l’accès au chantier. Brume Travaux SARL a été affecté par cette fermeture."
+              }
+            },
+            {
+              "source_ref": "notice",
+              "target_ref": "owner",
+              "relation": "NOTIFIED",
+              "fact": "Brume Travaux SARL sent a written notification to Aster Patrimoine SAS.",
+              "source_text": "Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS.",
+              "justification": "The text explicitly identifies the recipient of the notification event.",
+              "citation": {
+                "source_id": "typed-parties-aster",
+                "char_start": 357,
+                "char_end": 454,
+                "source_text": "Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS."
+              }
+            }
+          ],
+          "response_sha256": "368267e351d24ec7642647e514e5ca59cd51de2a2e6465955d927c0ff4b3c0d1",
+          "source_sha256": "0d9722f6012f6e67d0a1e48164d3e478ce30e167372c5a841fc205ed168ee5f2",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-permit",
+          "elapsed_seconds": 3.65e-05,
+          "exact_expected_set": false,
+          "expected": [
+            {
+              "source": "authority",
+              "target": "reject",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "reject",
+              "target": "halt",
+              "relation": "CAUSED"
+            },
+            {
+              "source": "halt",
+              "target": "builder",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "engineer",
+              "target": "notice",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "notice",
+              "target": "authority",
+              "relation": "NOTIFIED"
+            }
+          ],
+          "method": "Complete",
+          "missing": [
+            "authority|reject|RESPONSIBLE_FOR",
+            "engineer|notice|RESPONSIBLE_FOR"
+          ],
+          "operational": {
+            "status": "completed",
+            "proposed": 3,
+            "rejected": 0,
+            "stored": 0
+          },
+          "prompt_sha256": "d5207a4f3878580d4f882b898f7f3fe2b3bcb1caec46e325092405d3ab94d29e",
+          "relations": [
+            {
+              "source_ref": "reject",
+              "target_ref": "halt",
+              "relation": "CAUSED",
+              "fact": "The permit rejection caused the excavation work to stop.",
+              "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043",
+              "justification": "The text explicitly states the rejection caused the work to stop.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 334,
+                "char_end": 410,
+                "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043"
+              }
+            },
+            {
+              "source_ref": "halt",
+              "target_ref": "builder",
+              "relation": "AFFECTED",
+              "fact": "The excavation work stoppage affected Fern Civil Ltd.",
+              "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd.",
+              "justification": "The text explicitly identifies Fern Civil Ltd as being affected by the excavation work stoppage.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 334,
+                "char_end": 437,
+                "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd."
+              }
+            },
+            {
+              "source_ref": "notice",
+              "target_ref": "authority",
+              "relation": "NOTIFIED",
+              "fact": "Meridian Engineering Ltd sent a technical notice to North Borough Authority.",
+              "source_text": "On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority.",
+              "justification": "The text explicitly states the notice event was sent to the North Borough Authority.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 446,
+                "char_end": 543,
+                "source_text": "On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority."
+              }
+            }
+          ],
+          "response_sha256": "c484d70ebfd3c640950f3aedb2617a26858c59b3fe258f970532b2b19e792422",
+          "source_sha256": "c2b11c3d0b893b860f018d0bafe76ef0d112c3cbf864db101182bb62c3f282c8",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-groupement",
+          "elapsed_seconds": 3.8917e-05,
+          "exact_expected_set": false,
+          "expected": [
+            {
+              "source": "lead",
+              "target": "stop",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "stop",
+              "target": "sub",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "stop",
+              "target": "revision",
+              "relation": "CAUSED"
+            },
+            {
+              "source": "opc",
+              "target": "revision",
+              "relation": "RESPONSIBLE_FOR"
+            }
+          ],
+          "method": "Complete",
+          "missing": [
+            "lead|stop|RESPONSIBLE_FOR",
+            "opc|revision|RESPONSIBLE_FOR"
+          ],
+          "operational": {
+            "status": "completed",
+            "proposed": 4,
+            "rejected": 2,
+            "stored": 0
+          },
+          "prompt_sha256": "1c3b9d0caf3e001c5fea40e6f4f135fc6029bfa33cfb7d3b53276adadfba9285",
+          "relations": [
+            {
+              "source_ref": "stop",
+              "target_ref": "sub",
+              "relation": "AFFECTED",
+              "fact": "The partial work stoppage affected Silex Pose SARL.",
+              "source_text": "l’arrêt partiel des travaux, affectant Silex Pose SARL.",
+              "justification": "The text explicitly states the event 'Arrêt partiel ordonné' affected the entity Silex Pose SARL.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 180,
+                "char_end": 238,
+                "source_text": "l’arrêt partiel des travaux, affectant Silex Pose SARL."
+              }
+            },
+            {
+              "source_ref": "stop",
+              "target_ref": "revision",
+              "relation": "CAUSED",
+              "fact": "The partial work stoppage caused the revision of the schedule.",
+              "source_text": "Cet arrêt a entraîné la révision du planning le 4 avril 2044.",
+              "justification": "The text explicitly states that the stoppage event caused the revision event.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 247,
+                "char_end": 312,
+                "source_text": "Cet arrêt a entraîné la révision du planning le 4 avril 2044."
+              }
+            }
+          ],
+          "response_sha256": "3dd48357932c2ed859c9035d31ee577f2c06465549b09929eaeb5b5d8f9faf36",
+          "source_sha256": "fe04c891526b08ac79d11ab1c89cd54f165d662649ca3a3f33626009a592395b",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-unsent",
+          "elapsed_seconds": 8e-06,
+          "exact_expected_set": false,
+          "expected": [
+            {
+              "source": "builder",
+              "target": "draft",
+              "relation": "RESPONSIBLE_FOR"
+            }
+          ],
+          "method": "Complete",
+          "missing": [
+            "builder|draft|RESPONSIBLE_FOR"
+          ],
+          "operational": {
+            "status": "completed",
+            "proposed": 0,
+            "rejected": 0,
+            "stored": 0
+          },
+          "prompt_sha256": "229f6745c8883ab1935fb2f3d45ef1e305bf7c25ef64f03c28e12cd0c5a09d67",
+          "relations": null,
+          "response_sha256": "096ac3df03946e078dbe269a92a8543208cd3a306619c8121a6cf651f2586842",
+          "source_sha256": "2f39858d03a251b4fd60eefab20bf762b11532f3f62233729bfedc27220b91ce",
+          "unexpected": []
+        }
+      ],
+      "scope": "Recorded-response endpoint/evidence validation replay; no model calls, no storage, no new accuracy measurement",
+      "variant": "recorded-before"
+    },
+    "default_replay_after": {
+      "all_expected_sets_matched": false,
+      "fixture_sha256": "49d24d17fc6ca299d8cdb0cf383fb6a36326be78838c42d9282722e68a1a5dbf",
+      "model": "gemini-3.1-flash-lite",
+      "rows": [
+        {
+          "case": "typed-parties-aster",
+          "elapsed_seconds": 0.000107125,
+          "exact_expected_set": false,
+          "expected": [
+            {
+              "source": "owner",
+              "target": "closure",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "closure",
+              "target": "builder",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "builder",
+              "target": "notice",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "notice",
+              "target": "owner",
+              "relation": "NOTIFIED"
+            }
+          ],
+          "method": "Complete",
+          "missing": [
+            "builder|notice|RESPONSIBLE_FOR",
+            "owner|closure|RESPONSIBLE_FOR"
+          ],
+          "operational": {
+            "status": "completed",
+            "proposed": 2,
+            "rejected": 0,
+            "stored": 0
+          },
+          "prompt_sha256": "397c8f14aa9badd7f7104c5895eb124ec03aeb8a75cba23319c4768e0f2b6aa4",
+          "relations": [
+            {
+              "source_ref": "closure",
+              "target_ref": "builder",
+              "relation": "AFFECTED",
+              "fact": "Brume Travaux SARL was affected by the closure of the site access.",
+              "source_text": "Le 8 octobre 2042, Aster Patrimoine SAS a fermé l’accès au chantier. Brume Travaux SARL a été affecté par cette fermeture.",
+              "justification": "The text explicitly states that the builder was affected by the closure event.",
+              "citation": {
+                "source_id": "typed-parties-aster",
+                "char_start": 219,
+                "char_end": 348,
+                "source_text": "Le 8 octobre 2042, Aster Patrimoine SAS a fermé l’accès au chantier. Brume Travaux SARL a été affecté par cette fermeture."
+              }
+            },
+            {
+              "source_ref": "notice",
+              "target_ref": "owner",
+              "relation": "NOTIFIED",
+              "fact": "Brume Travaux SARL sent a written notification to Aster Patrimoine SAS.",
+              "source_text": "Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS.",
+              "justification": "The text explicitly identifies the recipient of the notification event.",
+              "citation": {
+                "source_id": "typed-parties-aster",
+                "char_start": 357,
+                "char_end": 454,
+                "source_text": "Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS."
+              }
+            }
+          ],
+          "response_sha256": "368267e351d24ec7642647e514e5ca59cd51de2a2e6465955d927c0ff4b3c0d1",
+          "source_sha256": "0d9722f6012f6e67d0a1e48164d3e478ce30e167372c5a841fc205ed168ee5f2",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-permit",
+          "elapsed_seconds": 4.5041e-05,
+          "exact_expected_set": false,
+          "expected": [
+            {
+              "source": "authority",
+              "target": "reject",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "reject",
+              "target": "halt",
+              "relation": "CAUSED"
+            },
+            {
+              "source": "halt",
+              "target": "builder",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "engineer",
+              "target": "notice",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "notice",
+              "target": "authority",
+              "relation": "NOTIFIED"
+            }
+          ],
+          "method": "Complete",
+          "missing": [
+            "authority|reject|RESPONSIBLE_FOR",
+            "engineer|notice|RESPONSIBLE_FOR"
+          ],
+          "operational": {
+            "status": "completed",
+            "proposed": 3,
+            "rejected": 0,
+            "stored": 0
+          },
+          "prompt_sha256": "d5207a4f3878580d4f882b898f7f3fe2b3bcb1caec46e325092405d3ab94d29e",
+          "relations": [
+            {
+              "source_ref": "reject",
+              "target_ref": "halt",
+              "relation": "CAUSED",
+              "fact": "The permit rejection caused the excavation work to stop.",
+              "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043",
+              "justification": "The text explicitly states the rejection caused the work to stop.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 334,
+                "char_end": 410,
+                "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043"
+              }
+            },
+            {
+              "source_ref": "halt",
+              "target_ref": "builder",
+              "relation": "AFFECTED",
+              "fact": "The excavation work stoppage affected Fern Civil Ltd.",
+              "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd.",
+              "justification": "The text explicitly identifies Fern Civil Ltd as being affected by the excavation work stoppage.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 334,
+                "char_end": 437,
+                "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd."
+              }
+            },
+            {
+              "source_ref": "notice",
+              "target_ref": "authority",
+              "relation": "NOTIFIED",
+              "fact": "Meridian Engineering Ltd sent a technical notice to North Borough Authority.",
+              "source_text": "On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority.",
+              "justification": "The text explicitly states the notice event was sent to the North Borough Authority.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 446,
+                "char_end": 543,
+                "source_text": "On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority."
+              }
+            }
+          ],
+          "response_sha256": "c484d70ebfd3c640950f3aedb2617a26858c59b3fe258f970532b2b19e792422",
+          "source_sha256": "c2b11c3d0b893b860f018d0bafe76ef0d112c3cbf864db101182bb62c3f282c8",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-groupement",
+          "elapsed_seconds": 4.2667e-05,
+          "exact_expected_set": true,
+          "expected": [
+            {
+              "source": "lead",
+              "target": "stop",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "stop",
+              "target": "sub",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "stop",
+              "target": "revision",
+              "relation": "CAUSED"
+            },
+            {
+              "source": "opc",
+              "target": "revision",
+              "relation": "RESPONSIBLE_FOR"
+            }
+          ],
+          "method": "Complete",
+          "missing": [],
+          "operational": {
+            "status": "completed",
+            "proposed": 4,
+            "rejected": 0,
+            "stored": 0
+          },
+          "prompt_sha256": "1c3b9d0caf3e001c5fea40e6f4f135fc6029bfa33cfb7d3b53276adadfba9285",
+          "relations": [
+            {
+              "source_ref": "lead",
+              "target_ref": "stop",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Érable Pilotage SAS ordered the partial work stoppage.",
+              "source_text": "Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux",
+              "justification": "The text explicitly identifies Érable Pilotage SAS as the entity that ordered the event 'Arrêt partiel ordonné'.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 131,
+                "char_end": 210,
+                "source_text": "Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux"
+              }
+            },
+            {
+              "source_ref": "stop",
+              "target_ref": "sub",
+              "relation": "AFFECTED",
+              "fact": "The partial work stoppage affected Silex Pose SARL.",
+              "source_text": "l’arrêt partiel des travaux, affectant Silex Pose SARL.",
+              "justification": "The text explicitly states the event 'Arrêt partiel ordonné' affected the entity Silex Pose SARL.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 180,
+                "char_end": 238,
+                "source_text": "l’arrêt partiel des travaux, affectant Silex Pose SARL."
+              }
+            },
+            {
+              "source_ref": "stop",
+              "target_ref": "revision",
+              "relation": "CAUSED",
+              "fact": "The partial work stoppage caused the revision of the schedule.",
+              "source_text": "Cet arrêt a entraîné la révision du planning le 4 avril 2044.",
+              "justification": "The text explicitly states that the stoppage event caused the revision event.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 247,
+                "char_end": 312,
+                "source_text": "Cet arrêt a entraîné la révision du planning le 4 avril 2044."
+              }
+            },
+            {
+              "source_ref": "opc",
+              "target_ref": "revision",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Horizon OPC SAS performed the schedule revision.",
+              "source_text": "Horizon OPC SAS a réalisé cette révision.",
+              "justification": "The text explicitly identifies Horizon OPC SAS as the entity that performed the 'Révision du planning' event.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 313,
+                "char_end": 357,
+                "source_text": "Horizon OPC SAS a réalisé cette révision."
+              }
+            }
+          ],
+          "response_sha256": "3dd48357932c2ed859c9035d31ee577f2c06465549b09929eaeb5b5d8f9faf36",
+          "source_sha256": "fe04c891526b08ac79d11ab1c89cd54f165d662649ca3a3f33626009a592395b",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-unsent",
+          "elapsed_seconds": 7e-06,
+          "exact_expected_set": false,
+          "expected": [
+            {
+              "source": "builder",
+              "target": "draft",
+              "relation": "RESPONSIBLE_FOR"
+            }
+          ],
+          "method": "Complete",
+          "missing": [
+            "builder|draft|RESPONSIBLE_FOR"
+          ],
+          "operational": {
+            "status": "completed",
+            "proposed": 0,
+            "rejected": 0,
+            "stored": 0
+          },
+          "prompt_sha256": "229f6745c8883ab1935fb2f3d45ef1e305bf7c25ef64f03c28e12cd0c5a09d67",
+          "relations": null,
+          "response_sha256": "096ac3df03946e078dbe269a92a8543208cd3a306619c8121a6cf651f2586842",
+          "source_sha256": "2f39858d03a251b4fd60eefab20bf762b11532f3f62233729bfedc27220b91ce",
+          "unexpected": []
+        }
+      ],
+      "scope": "Recorded-response endpoint/evidence validation replay; no model calls, no storage, no new accuracy measurement",
+      "variant": "recorded-after"
+    },
+    "meaning_replay_before": {
+      "all_expected_sets_matched": false,
+      "fixture_sha256": "49d24d17fc6ca299d8cdb0cf383fb6a36326be78838c42d9282722e68a1a5dbf",
+      "model": "gemini-3.1-flash-lite",
+      "rows": [
+        {
+          "case": "typed-parties-aster",
+          "elapsed_seconds": 0.000278875,
+          "exact_expected_set": false,
+          "expected": [
+            {
+              "source": "owner",
+              "target": "closure",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "closure",
+              "target": "builder",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "builder",
+              "target": "notice",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "notice",
+              "target": "owner",
+              "relation": "NOTIFIED"
+            }
+          ],
+          "method": "Complete",
+          "missing": [
+            "builder|notice|RESPONSIBLE_FOR",
+            "notice|owner|NOTIFIED",
+            "owner|closure|RESPONSIBLE_FOR"
+          ],
+          "operational": {
+            "status": "completed",
+            "proposed": 4,
+            "rejected": 3,
+            "stored": 0,
+            "events_expected": 2,
+            "events_checked": 2,
+            "roles_with_candidates": 4,
+            "roles_unresolved": 4,
+            "rejection_reasons": {
+              "endpoint_binding": 3
+            }
+          },
+          "prompt_sha256": "84fb8244bc9d6827a2f457a11ae18023d27a7a6d56fe3c291075e14016badb3d",
+          "relations": [
+            {
+              "source_ref": "closure",
+              "target_ref": "builder",
+              "relation": "AFFECTED",
+              "fact": "Brume Travaux SARL was affected by the closure.",
+              "source_text": "Brume Travaux SARL a été affecté par cette fermeture.",
+              "justification": "The text explicitly names the builder as the entity affected by the closure event.",
+              "citation": {
+                "source_id": "typed-parties-aster",
+                "char_start": 292,
+                "char_end": 348,
+                "source_text": "Brume Travaux SARL a été affecté par cette fermeture."
+              }
+            }
+          ],
+          "response_sha256": "a02e8a30eb75a9a515f85f0dee7948bc4ff72e8e48424d74e58ffdeda830b525",
+          "source_sha256": "0d9722f6012f6e67d0a1e48164d3e478ce30e167372c5a841fc205ed168ee5f2",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-permit",
+          "elapsed_seconds": 9.6833e-05,
+          "exact_expected_set": false,
+          "expected": [
+            {
+              "source": "authority",
+              "target": "reject",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "reject",
+              "target": "halt",
+              "relation": "CAUSED"
+            },
+            {
+              "source": "halt",
+              "target": "builder",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "engineer",
+              "target": "notice",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "notice",
+              "target": "authority",
+              "relation": "NOTIFIED"
+            }
+          ],
+          "method": "Complete",
+          "missing": [
+            "authority|reject|RESPONSIBLE_FOR",
+            "engineer|notice|RESPONSIBLE_FOR",
+            "notice|authority|NOTIFIED"
+          ],
+          "operational": {
+            "status": "completed",
+            "proposed": 5,
+            "rejected": 3,
+            "stored": 0,
+            "events_expected": 3,
+            "events_checked": 3,
+            "roles_with_candidates": 5,
+            "roles_unresolved": 7,
+            "rejection_reasons": {
+              "endpoint_binding": 3
+            }
+          },
+          "prompt_sha256": "56969bc91b12a3269600fe6c51f5c8e8b707b003d4e13df4c8a2be113cb392f8",
+          "relations": [
+            {
+              "source_ref": "halt",
+              "target_ref": "builder",
+              "relation": "AFFECTED",
+              "fact": "Fern Civil Ltd was affected by the excavation work stopping",
+              "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd.",
+              "justification": "The text explicitly links the stopping of work to the effect on Fern Civil Ltd.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 334,
+                "char_end": 437,
+                "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd."
+              }
+            },
+            {
+              "source_ref": "reject",
+              "target_ref": "halt",
+              "relation": "CAUSED",
+              "fact": "Permit rejection caused the excavation work to stop",
+              "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd.",
+              "justification": "The text identifies the permit rejection as the direct cause of the work stoppage event.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 334,
+                "char_end": 437,
+                "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd."
+              }
+            }
+          ],
+          "response_sha256": "10399598be69c3483d6afddb6d8e24e689fe53b499a018bc5ea2c475f411e0e5",
+          "source_sha256": "c2b11c3d0b893b860f018d0bafe76ef0d112c3cbf864db101182bb62c3f282c8",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-groupement",
+          "elapsed_seconds": 7.2375e-05,
+          "exact_expected_set": false,
+          "expected": [
+            {
+              "source": "lead",
+              "target": "stop",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "stop",
+              "target": "sub",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "stop",
+              "target": "revision",
+              "relation": "CAUSED"
+            },
+            {
+              "source": "opc",
+              "target": "revision",
+              "relation": "RESPONSIBLE_FOR"
+            }
+          ],
+          "method": "Complete",
+          "missing": [
+            "lead|stop|RESPONSIBLE_FOR",
+            "opc|revision|RESPONSIBLE_FOR"
+          ],
+          "operational": {
+            "status": "completed",
+            "proposed": 4,
+            "rejected": 2,
+            "stored": 0,
+            "events_expected": 2,
+            "events_checked": 2,
+            "roles_with_candidates": 4,
+            "roles_unresolved": 4,
+            "rejection_reasons": {
+              "endpoint_binding": 2
+            }
+          },
+          "prompt_sha256": "49e93d4abfd4dc419df3ac658a13fa5aba80e3aeff7547efec4fb784ec7a83b9",
+          "relations": [
+            {
+              "source_ref": "stop",
+              "target_ref": "sub",
+              "relation": "AFFECTED",
+              "fact": "Silex Pose SARL was affected by the partial work stoppage.",
+              "source_text": "Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux, affectant Silex Pose SARL.",
+              "justification": "The text explicitly identifies Silex Pose SARL as the party affected by the stoppage.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 131,
+                "char_end": 238,
+                "source_text": "Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux, affectant Silex Pose SARL."
+              }
+            },
+            {
+              "source_ref": "stop",
+              "target_ref": "revision",
+              "relation": "CAUSED",
+              "fact": "The stoppage caused the revision of the planning.",
+              "source_text": "Cet arrêt a entraîné la révision du planning le 4 avril 2044.",
+              "justification": "The text identifies the stoppage as the event that led to the revision.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 247,
+                "char_end": 312,
+                "source_text": "Cet arrêt a entraîné la révision du planning le 4 avril 2044."
+              }
+            }
+          ],
+          "response_sha256": "573288bf569954826ad4946dfcb7fc73a4c3412e9369d29d6baef7a245df59c4",
+          "source_sha256": "fe04c891526b08ac79d11ab1c89cd54f165d662649ca3a3f33626009a592395b",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-unsent",
+          "elapsed_seconds": 3.5625e-05,
+          "exact_expected_set": false,
+          "expected": [
+            {
+              "source": "builder",
+              "target": "draft",
+              "relation": "RESPONSIBLE_FOR"
+            }
+          ],
+          "method": "Complete",
+          "missing": [
+            "builder|draft|RESPONSIBLE_FOR"
+          ],
+          "operational": {
+            "status": "completed",
+            "proposed": 1,
+            "rejected": 1,
+            "stored": 0,
+            "events_expected": 1,
+            "events_checked": 1,
+            "roles_with_candidates": 1,
+            "roles_unresolved": 3,
+            "rejection_reasons": {
+              "endpoint_binding": 1
+            }
+          },
+          "prompt_sha256": "579f46f0f8c2d4bb892cce20d03c2afaa821c8e8a0911c22129fc4b2885c90c9",
+          "relations": [],
+          "response_sha256": "9124ac6424d86369afb8a191336f70d5278d61c3851fe5c0a940f3d580c03f20",
+          "source_sha256": "2f39858d03a251b4fd60eefab20bf762b11532f3f62233729bfedc27220b91ce",
+          "unexpected": []
+        }
+      ],
+      "scope": "Recorded-response endpoint/evidence validation replay; no model calls, no storage, no new accuracy measurement",
+      "variant": "recorded-meaning-before"
+    },
+    "meaning_replay_after": {
+      "all_expected_sets_matched": true,
+      "fixture_sha256": "49d24d17fc6ca299d8cdb0cf383fb6a36326be78838c42d9282722e68a1a5dbf",
+      "model": "gemini-3.1-flash-lite",
+      "rows": [
+        {
+          "case": "typed-parties-aster",
+          "elapsed_seconds": 0.000287125,
+          "exact_expected_set": true,
+          "expected": [
+            {
+              "source": "owner",
+              "target": "closure",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "closure",
+              "target": "builder",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "builder",
+              "target": "notice",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "notice",
+              "target": "owner",
+              "relation": "NOTIFIED"
+            }
+          ],
+          "method": "Complete",
+          "missing": [],
+          "operational": {
+            "status": "completed",
+            "proposed": 4,
+            "rejected": 0,
+            "stored": 0,
+            "events_expected": 2,
+            "events_checked": 2,
+            "roles_with_candidates": 4,
+            "roles_unresolved": 4
+          },
+          "prompt_sha256": "84fb8244bc9d6827a2f457a11ae18023d27a7a6d56fe3c291075e14016badb3d",
+          "relations": [
+            {
+              "source_ref": "owner",
+              "target_ref": "closure",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Aster Patrimoine SAS performed the closure of the access.",
+              "source_text": "Le 8 octobre 2042, Aster Patrimoine SAS a fermé l’accès au chantier.",
+              "justification": "The text directly links the performer to the action of closing the access.",
+              "citation": {
+                "source_id": "typed-parties-aster",
+                "char_start": 219,
+                "char_end": 291,
+                "source_text": "Le 8 octobre 2042, Aster Patrimoine SAS a fermé l’accès au chantier."
+              }
+            },
+            {
+              "source_ref": "closure",
+              "target_ref": "builder",
+              "relation": "AFFECTED",
+              "fact": "Brume Travaux SARL was affected by the closure.",
+              "source_text": "Brume Travaux SARL a été affecté par cette fermeture.",
+              "justification": "The text explicitly names the builder as the entity affected by the closure event.",
+              "citation": {
+                "source_id": "typed-parties-aster",
+                "char_start": 292,
+                "char_end": 348,
+                "source_text": "Brume Travaux SARL a été affecté par cette fermeture."
+              }
+            },
+            {
+              "source_ref": "builder",
+              "target_ref": "notice",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Brume Travaux SARL performed the sending of the notification.",
+              "source_text": "Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS.",
+              "justification": "The text identifies the builder as the performer of the sending action.",
+              "citation": {
+                "source_id": "typed-parties-aster",
+                "char_start": 357,
+                "char_end": 454,
+                "source_text": "Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS."
+              }
+            },
+            {
+              "source_ref": "notice",
+              "target_ref": "owner",
+              "relation": "NOTIFIED",
+              "fact": "Aster Patrimoine SAS is the recipient of the notification.",
+              "source_text": "Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS.",
+              "justification": "The text identifies the owner as the recipient of the notification sent by the builder.",
+              "citation": {
+                "source_id": "typed-parties-aster",
+                "char_start": 357,
+                "char_end": 454,
+                "source_text": "Le 9 octobre 2042, Brume Travaux SARL a envoyé une notification écrite à Aster Patrimoine SAS."
+              }
+            }
+          ],
+          "response_sha256": "a02e8a30eb75a9a515f85f0dee7948bc4ff72e8e48424d74e58ffdeda830b525",
+          "source_sha256": "0d9722f6012f6e67d0a1e48164d3e478ce30e167372c5a841fc205ed168ee5f2",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-permit",
+          "elapsed_seconds": 9.9541e-05,
+          "exact_expected_set": true,
+          "expected": [
+            {
+              "source": "authority",
+              "target": "reject",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "reject",
+              "target": "halt",
+              "relation": "CAUSED"
+            },
+            {
+              "source": "halt",
+              "target": "builder",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "engineer",
+              "target": "notice",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "notice",
+              "target": "authority",
+              "relation": "NOTIFIED"
+            }
+          ],
+          "method": "Complete",
+          "missing": [],
+          "operational": {
+            "status": "completed",
+            "proposed": 5,
+            "rejected": 0,
+            "stored": 0,
+            "events_expected": 3,
+            "events_checked": 3,
+            "roles_with_candidates": 5,
+            "roles_unresolved": 7
+          },
+          "prompt_sha256": "56969bc91b12a3269600fe6c51f5c8e8b707b003d4e13df4c8a2be113cb392f8",
+          "relations": [
+            {
+              "source_ref": "authority",
+              "target_ref": "reject",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "North Borough Authority rejected the permit application",
+              "source_text": "On 12 November 2043, North Borough Authority rejected the permit application.",
+              "justification": "The text directly links the authority as the subject performing the rejection action.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 248,
+                "char_end": 325,
+                "source_text": "On 12 November 2043, North Borough Authority rejected the permit application."
+              }
+            },
+            {
+              "source_ref": "halt",
+              "target_ref": "builder",
+              "relation": "AFFECTED",
+              "fact": "Fern Civil Ltd was affected by the excavation work stopping",
+              "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd.",
+              "justification": "The text explicitly links the stopping of work to the effect on Fern Civil Ltd.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 334,
+                "char_end": 437,
+                "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd."
+              }
+            },
+            {
+              "source_ref": "reject",
+              "target_ref": "halt",
+              "relation": "CAUSED",
+              "fact": "Permit rejection caused the excavation work to stop",
+              "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd.",
+              "justification": "The text identifies the permit rejection as the direct cause of the work stoppage event.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 334,
+                "char_end": 437,
+                "source_text": "This permit rejection caused the excavation work to stop on 13 November 2043, affecting Fern Civil Ltd."
+              }
+            },
+            {
+              "source_ref": "engineer",
+              "target_ref": "notice",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Meridian Engineering Ltd sent a technical notice",
+              "source_text": "On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority.",
+              "justification": "The text identifies the engineer as the sender of the notice.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 446,
+                "char_end": 543,
+                "source_text": "On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority."
+              }
+            },
+            {
+              "source_ref": "notice",
+              "target_ref": "authority",
+              "relation": "NOTIFIED",
+              "fact": "North Borough Authority received the technical notice",
+              "source_text": "On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority.",
+              "justification": "The text identifies the authority as the recipient of the notice sent by the engineer.",
+              "citation": {
+                "source_id": "typed-parties-permit",
+                "char_start": 446,
+                "char_end": 543,
+                "source_text": "On 14 November 2043, Meridian Engineering Ltd sent a technical notice to North Borough Authority."
+              }
+            }
+          ],
+          "response_sha256": "10399598be69c3483d6afddb6d8e24e689fe53b499a018bc5ea2c475f411e0e5",
+          "source_sha256": "c2b11c3d0b893b860f018d0bafe76ef0d112c3cbf864db101182bb62c3f282c8",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-groupement",
+          "elapsed_seconds": 5.6875e-05,
+          "exact_expected_set": true,
+          "expected": [
+            {
+              "source": "lead",
+              "target": "stop",
+              "relation": "RESPONSIBLE_FOR"
+            },
+            {
+              "source": "stop",
+              "target": "sub",
+              "relation": "AFFECTED"
+            },
+            {
+              "source": "stop",
+              "target": "revision",
+              "relation": "CAUSED"
+            },
+            {
+              "source": "opc",
+              "target": "revision",
+              "relation": "RESPONSIBLE_FOR"
+            }
+          ],
+          "method": "Complete",
+          "missing": [],
+          "operational": {
+            "status": "completed",
+            "proposed": 4,
+            "rejected": 0,
+            "stored": 0,
+            "events_expected": 2,
+            "events_checked": 2,
+            "roles_with_candidates": 4,
+            "roles_unresolved": 4
+          },
+          "prompt_sha256": "49e93d4abfd4dc419df3ac658a13fa5aba80e3aeff7547efec4fb784ec7a83b9",
+          "relations": [
+            {
+              "source_ref": "lead",
+              "target_ref": "stop",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Érable Pilotage SAS ordered the partial stoppage of work.",
+              "source_text": "Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux, affectant Silex Pose SARL.",
+              "justification": "The text directly links the performer to the act of ordering the stoppage.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 131,
+                "char_end": 238,
+                "source_text": "Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux, affectant Silex Pose SARL."
+              }
+            },
+            {
+              "source_ref": "stop",
+              "target_ref": "sub",
+              "relation": "AFFECTED",
+              "fact": "Silex Pose SARL was affected by the partial work stoppage.",
+              "source_text": "Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux, affectant Silex Pose SARL.",
+              "justification": "The text explicitly identifies Silex Pose SARL as the party affected by the stoppage.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 131,
+                "char_end": 238,
+                "source_text": "Le 3 avril 2044, Érable Pilotage SAS a ordonné l’arrêt partiel des travaux, affectant Silex Pose SARL."
+              }
+            },
+            {
+              "source_ref": "opc",
+              "target_ref": "revision",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Horizon OPC SAS performed the planning revision.",
+              "source_text": "Horizon OPC SAS a réalisé cette révision.",
+              "justification": "The text identifies Horizon OPC SAS as the entity that carried out the revision.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 313,
+                "char_end": 357,
+                "source_text": "Horizon OPC SAS a réalisé cette révision."
+              }
+            },
+            {
+              "source_ref": "stop",
+              "target_ref": "revision",
+              "relation": "CAUSED",
+              "fact": "The stoppage caused the revision of the planning.",
+              "source_text": "Cet arrêt a entraîné la révision du planning le 4 avril 2044.",
+              "justification": "The text identifies the stoppage as the event that led to the revision.",
+              "citation": {
+                "source_id": "typed-parties-groupement",
+                "char_start": 247,
+                "char_end": 312,
+                "source_text": "Cet arrêt a entraîné la révision du planning le 4 avril 2044."
+              }
+            }
+          ],
+          "response_sha256": "573288bf569954826ad4946dfcb7fc73a4c3412e9369d29d6baef7a245df59c4",
+          "source_sha256": "fe04c891526b08ac79d11ab1c89cd54f165d662649ca3a3f33626009a592395b",
+          "unexpected": []
+        },
+        {
+          "case": "typed-parties-unsent",
+          "elapsed_seconds": 4.3375e-05,
+          "exact_expected_set": true,
+          "expected": [
+            {
+              "source": "builder",
+              "target": "draft",
+              "relation": "RESPONSIBLE_FOR"
+            }
+          ],
+          "method": "Complete",
+          "missing": [],
+          "operational": {
+            "status": "completed",
+            "proposed": 1,
+            "rejected": 0,
+            "stored": 0,
+            "events_expected": 1,
+            "events_checked": 1,
+            "roles_with_candidates": 1,
+            "roles_unresolved": 3
+          },
+          "prompt_sha256": "579f46f0f8c2d4bb892cce20d03c2afaa821c8e8a0911c22129fc4b2885c90c9",
+          "relations": [
+            {
+              "source_ref": "builder",
+              "target_ref": "draft",
+              "relation": "RESPONSIBLE_FOR",
+              "fact": "Pebble Works Ltd prepared the draft notice",
+              "source_text": "On 5 May 2045, Pebble Works Ltd prepared a draft notice.",
+              "justification": "The text directly links the performer to the action of preparing the draft.",
+              "citation": {
+                "source_id": "typed-parties-unsent",
+                "char_start": 231,
+                "char_end": 287,
+                "source_text": "On 5 May 2045, Pebble Works Ltd prepared a draft notice."
+              }
+            }
+          ],
+          "response_sha256": "9124ac6424d86369afb8a191336f70d5278d61c3851fe5c0a940f3d580c03f20",
+          "source_sha256": "2f39858d03a251b4fd60eefab20bf762b11532f3f62233729bfedc27220b91ce",
+          "unexpected": []
+        }
+      ],
+      "scope": "Recorded-response endpoint/evidence validation replay; no model calls, no storage, no new accuracy measurement",
+      "variant": "recorded-meaning-after"
+    }
+  },
+  "full_stack": [
+    {
+      "runtime": "runtime",
+      "project_id": "domain-actor-qa-erable-20261004-054755-8fbfa5",
+      "job_id": "3b0f2d81-5999-4825-938e-e16499252d9b",
+      "source_sha256": "8e250e5995538ad7874e6fbe5ca95743ae67631411661f36b4ab97a1530e5575",
+      "nodes": 7,
+      "edges": 7,
+      "events": 1,
+      "directed": 2,
+      "foreign_handle_status": 404,
+      "exact_directed_UTF8_spans": true,
+      "single_submission": true,
+      "GUI_graph_unchanged": true,
+      "event_storage": {
+        "proposed": 2,
+        "stored": 1,
+        "standing_mentions": 1,
+        "classification_reviews": 0,
+        "failed": 0
+      },
+      "event_relations": {
+        "status": "completed",
+        "proposed": 2,
+        "rejected": 0,
+        "stored": 2
+      },
+      "schema_snapshot": {
+        "version": 1,
+        "name": "construction_claims",
+        "sha256": "f35e319cd7b678b59f547f247920708672186f7f2e681a497b2ec6cd5bb56ceb",
+        "event_types": [
+          "milestone",
+          "delay",
+          "completion",
+          "reception",
+          "handover",
+          "reserve_lifting",
+          "phase_start",
+          "phase_end",
+          "decision",
+          "change_order",
+          "modification",
+          "suspension",
+          "termination",
+          "approval",
+          "rejection",
+          "notice_served",
+          "notice_deadline_expired",
+          "claim_event",
+          "force_majeure",
+          "penalty_triggered",
+          "site_condition",
+          "pollution_discovery",
+          "permit_delay",
+          "authority_delay",
+          "concessionaire_delay",
+          "payment",
+          "non_payment",
+          "price_revision",
+          "cost_overrun",
+          "additional_works"
+        ],
+        "captured_at": "2026-10-04T05:48:30.905763Z",
+        "source": "engine"
+      }
+    },
+    {
+      "runtime": "meaning-runtime",
+      "project_id": "domain-actor-qa-aster-20261004-055031-cb0752",
+      "job_id": "9b7fed1e-9eff-4653-b6fc-c77842c51515",
+      "source_sha256": "6c0ab40de1990e2b329e8617980542d5068478577f1869317ba7bf5d4a194e92",
+      "nodes": 6,
+      "edges": 10,
+      "events": 2,
+      "directed": 4,
+      "foreign_handle_status": 404,
+      "exact_directed_UTF8_spans": true,
+      "single_submission": true,
+      "GUI_graph_unchanged": true,
+      "event_storage": {
+        "proposed": 2,
+        "stored": 2,
+        "standing_mentions": 0,
+        "classification_reviews": 2,
+        "failed": 0
+      },
+      "event_relations": {
+        "status": "completed",
+        "proposed": 4,
+        "rejected": 0,
+        "stored": 4,
+        "events_expected": 2,
+        "events_checked": 2,
+        "roles_with_candidates": 4,
+        "roles_unresolved": 4
+      },
+      "schema_snapshot": {
+        "version": 1,
+        "name": "construction_claims",
+        "sha256": "f35e319cd7b678b59f547f247920708672186f7f2e681a497b2ec6cd5bb56ceb",
+        "event_types": [
+          "milestone",
+          "delay",
+          "completion",
+          "reception",
+          "handover",
+          "reserve_lifting",
+          "phase_start",
+          "phase_end",
+          "decision",
+          "change_order",
+          "modification",
+          "suspension",
+          "termination",
+          "approval",
+          "rejection",
+          "notice_served",
+          "notice_deadline_expired",
+          "claim_event",
+          "force_majeure",
+          "penalty_triggered",
+          "site_condition",
+          "pollution_discovery",
+          "permit_delay",
+          "authority_delay",
+          "concessionaire_delay",
+          "payment",
+          "non_payment",
+          "price_revision",
+          "cost_overrun",
+          "additional_works"
+        ],
+        "captured_at": "2026-10-04T05:51:28.779216Z",
+        "source": "engine"
+      }
+    }
+  ],
+  "activation": {
+    "old_engine_pid": 88060,
+    "engine_pid": 94178,
+    "api_pid_unchanged": 83407,
+    "database_backup": "/private/tmp/delaylama-domain-actors/activation-backup/graph.db",
+    "binary_backup": "/private/tmp/delaylama-domain-actors/activation-backup/chronograph-previous",
+    "finished_jobs_archived": 0,
+    "graph_rows_unchanged": true,
+    "table_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    },
+    "config_unchanged": true,
+    "engine_sha256": "c3501cac9072b4b8e7976405a9bcdf63c5840e32e0bbcc2150224775c3dd29f9",
+    "health_before": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    },
+    "health_after": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    }
+  },
+  "preservation": {
+    "protected_engine_source_files_unchanged": true,
+    "protected_app_artifacts_unchanged": true,
+    "user_studio_unchanged": true,
+    "orchid_studio_unchanged": true,
+    "user_graph_all_tables_unchanged": true,
+    "user_engine_health": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    },
+    "user_graph_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    }
+  },
+  "cleanup": {
+    "processes": [
+      {
+        "service": "engine",
+        "pid": 93070,
+        "port": 8097
+      },
+      {
+        "service": "api",
+        "pid": 93071,
+        "port": 8081
+      },
+      {
+        "service": "frontend",
+        "pid": 93072,
+        "port": 5175
+      },
+      {
+        "service": "engine",
+        "pid": 93846,
+        "port": 8098
+      },
+      {
+        "service": "api",
+        "pid": 93847,
+        "port": 8082
+      },
+      {
+        "service": "frontend",
+        "pid": 93848,
+        "port": 5176
+      }
+    ],
+    "owned_ports_closed": true,
+    "tabs_closed": [
+      78,
+      79
+    ]
+  },
+  "limitations": [
+    "Expected relations are manually annotated synthetic development cases with supplied endpoints; not externally adjudicated or held-out contract certification.",
+    "Default fresh relation set retained 9/14 expected edges; its quality gate failed and omissions are retained.",
+    "Optional fresh relation set retained 14/14; role-meaning stays opt-in and was not globally activated.",
+    "Same-response replay isolates type-validation effects: default 7 to 9 accepted, optional meaning 5 to 14; no new model accuracy measurement.",
+    "Full-source default Erable trial retained a schedule revision as Planning, outside event registration and chronology, and omitted performers. This failure is retained, not repaired here.",
+    "The two full-source trials use different originals and variants; their counts are not a paired prompt comparison.",
+    "Existing user graph rows are not repaired; new supported candidates remain model suggestions.",
+    "Current job schema receipts do not capture every provider option or role-prompt/environment variant.",
+    "No new Laya training, GLiNER benchmark, MLX timing, mobile or Docker certification."
+  ]
+}
