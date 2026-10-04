@@ -3352,3 +3352,85 @@ qualification changed.
 See the [causal context audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-causal-context-selection.md),
 [failed final template gate](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/causal-context-selection/template-synthetic-graph.json)
 and [shared receipt](validation/delaylama-causal-context-selection-20261004.json).
+
+
+## L103 — Selected source context, literal scalars and unknown-calendar recall (2026-10-05)
+
+**Measured application engineering progress; extraction coverage still fails.**
+DelayLama added selector-only relationship quotations, source-bound duration
+fields and provider-template consistency. The decoder recovers one continuous
+original envelope, preserving intervening qualifications; it rejects model-spliced
+quotes. Durations have separate own-action and scalar byte citations. A legacy
+impact summary can retain a validated duration while its unsupported model effect
+stays withheld. Repeated attachment clears stale source support and warnings.
+These are source-location/provenance controls, not semantic adjudication.
+
+Fifty-eight real remote jobs on isolated synthetic documents finished and were
+archived. All used Gemini `gemini-3.1-flash-lite`, captured construction-claims
+schemas, complete registered originals and noop embeddings. Forty-eight jobs
+used the optional source-first inventory; provider HTTP attempts/retries were
+not separately counted. Expected labels were never supplied to the model.
+
+| Protocol observation | Declared action / actor / calendar checks | Required causes | Typed durations / legacy impact checks | Gate |
+| --- | --- | --- | --- | --- |
+| Selector protocol, 14 cases | 68/68 / 68/68 / 67/68 | 6/6 | 7/7 / 2/7 | fails 5 cases |
+| Duration compatibility, 16 cases | 80/80 / 80/80 / 79/80 | 8/8 | 9/9 / 9/9 | fails inherited date |
+| Calendar protocol, 18 cases | 89/90 / 89/90 / 89/90 | 8/8 | 10/10 / 10/10 | fails omitted undated return |
+| Normal default31, 4 cases | 20/24 each | 4/4 | 3/4 / 3/4 | fails every case |
+| Normal default32, 6 cases | 33/36 each | 6/6 | 6/6 / 6/6 | English 3 cases pass, French 3 returns missing |
+
+The development sequence adds three pairs of fixtures frozen before their
+requests, then deliberately reuses cases after diagnosed changes. New stories
+vary utility disconnections, elapsed hours/weeks/minutes and inherited dates.
+They remain structural variations, not an independent multilingual contract
+benchmark. All failed observations remain linked. No hidden replacement draw
+was used to produce a passing result. Final optional negatives pass 30/30 causal
+pairs, 20/20 forbidden duration checks and 14/14 unperformed-action checks.
+Normal default32's 18/20 forbidden-duration checks fail for missing nodes, not
+for an accepted foreign duration. Missing facts cannot count as validated absence.
+
+The initial inherited-date output quoted "le même jour" rather than selecting
+its antecedent's literal calendar value. The protocol now asks for the explicitly
+linked original date, and unparseable relative values mark a partial receipt
+instead of completing the field. Unknown date never permits nearby-date fallback.
+Default provider typing also conflicted with undated occurrences. Correcting
+that instruction recovered the English returns but did not solve French recall.
+Some returned candidates still conflate unknown calendar with uncertain occurrence;
+source matching cannot repair that model interpretation.
+
+**Training/evaluation implications:** evaluate candidate recall, source span
+recovery, actor versus recipient, explicit temporal association, elapsed duration,
+occurrence status and causal direction as separate tasks. An original citation
+can accompany an incomplete impact field. A correctly processed model inventory
+can still omit an entire action: operational `completed` always retains
+`completeness=unestablished`. Neighbor traversal cannot recover an omitted graph
+node unless source coverage is audited independently.
+
+For Laya, potential retrieval/ranking data should retain the full enclosing
+original context, separate action/actor/date/scalar anchors and language. Build
+hard negatives from a notice deadline presented as elapsed duration, a preceding
+delivery date applied to a later undated return, model-spliced text, a recipient
+presented as performer, and cause/effect reversal. Distinguish positive performance
+from calendar availability. These are proposed dataset designs, not newly trained
+heads. Unreviewed model output is not gold. Add out-of-family French and English
+source material and reviewed real contracts before accepting a model quality gain.
+
+Browser verification on the final default graph confirmed the unknown calendar
+without a borrowed date, the return performer, the nine-hour duration, a separately
+withheld effect, original relationship context in one disclosure, and traversal
+from two steps (9 facts/13 links) to the full connected component (11 facts/20
+links), with one registered original and no console errors. This is a scoped
+functional test, not completeness or legal accuracy certification. Backend 1,082
+and frontend 779 tests, production build, engine suites/race tests and patch
+combinations are recorded in the shared receipt. An optional coverage rebase
+initially reverted new default instructions; provider-request tests caught it.
+The corrected extension preserves the entire default protocol and failed logs
+remain available. Optional source-first extraction stays excluded from normal
+builds/runtime. User data and edits were preserved.
+
+No Laya/GLiNER weights, training, MLX acceleration, architecture or supervisor
+qualification changed in this application audit.
+
+See the [DelayLama source/graph audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-selector-duration-analysis.md),
+[retained default32 semantic gate](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/selector-duration-analysis/default32-graph.json)
+and [shared receipt](validation/delaylama-selector-duration-analysis-20261005.json).

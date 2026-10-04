@@ -20,6 +20,7 @@ do not confer accuracy or calibration on another application's tasks.
 
 | Record | What it establishes |
 | --- | --- |
+| [DelayLama source-selected context and literal durations (L103)](validation/delaylama-selector-duration-analysis-20261005.json) | Source protocol, unknown-calendar separation, measured English/French recall limits and preserved failed gates; no new training |
 | [DelayLama causal contexts and final output schema (L102)](validation/delaylama-causal-context-selection-20261004.json) | Original antecedent selection, diagnosed output-schema/ellipsis failures, duration incompleteness and retained failed semantic gates; no new training |
 | [DelayLama inventory → Prompt Lab (L96)](validation/delaylama-inventory-prompt-lab-20261004.json) | Source/versioned history handoff, baseline isolation, failed frozen action-separation comparison; no new training |
 | [DelayLama performer premises and causal recall (L101)](validation/delaylama-performer-premise-selection-20261004.json) | Source selection and reason decoder fix, restored undated/joint actors; default compound-action and optional positive-causal gate failures; no new training |
