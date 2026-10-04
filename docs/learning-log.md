@@ -2961,6 +2961,48 @@ was produced in this experiment.
 See the [source inventory audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-inventory.md)
 and [shared receipt](validation/delaylama-source-inventory-20261004.json).
 
+### L96 — Inventory feedback needs an actual baseline and a failed comparison record
+
+**Observed (DelayLama, 2026-10-04):** a selected saved inventory candidate now
+opens the chosen agent's Prompt Lab with its exact original, source version,
+saved scan history, withheld proposals and reviewer request. It preserves existing
+drafts, notes and runs; original selection is explicit. The evidence panel treats
+inventory leads separately from target-agent experiments. Context reads reject
+changed originals and foreign project/document/candidate scopes. Importing does
+not invoke a model or write graph facts.
+
+One previously inspected invented French contract supplied a fresh extraction
+baseline and frozen candidate comparison, with two assistant requests. Before
+the baseline, the assistant still blamed prompt inadequacy despite the recorded
+zero-baseline scope. After seeing a real baseline, it recommended separate
+actions for different actors and claimed the refinement would force separation.
+Both extraction runs returned two operational records, merging the contractor's
+separate suspension into the owner's closure. Both summaries overstated the
+owner's order as a suspension order. The candidate preserved planning non-request
+and non-agreement wording more faithfully, but failed the recorded separation
+and summary criteria. Exact source quotation checks and matching recorded model
+settings did not certify semantics. The candidate was not activated.
+
+**Implication:** measure assertion structure and role association alongside span
+matching. Shared dates, actor transitions and actions stored as consequences
+need explicit evaluation. Preserve unsuccessful assistant suggestions and frozen
+comparisons; do not convert them or inventory candidates into approved labels.
+Use adjudicated source-supported corrections for training, with independent
+contract/story/template splits and a separate promotion gate. A structured
+action-first extraction arm is a proposed comparison, not a measured quality
+improvement. A Laya shortlist or support judge must preserve all necessary
+premises, recognize false support and allow calibrated abstention.
+
+The rendered workflow persisted the selected candidate and both runs through
+reload. Full suites passed 920 backend and 755 frontend tests, with a successful
+build. The user graph and protected artifacts were preserved; API-served replay
+nodes, edges, episodes and timeline were identical. Historical QA SQLite hash
+serialization could not be reconstructed, so no all-table QA hash claim is made.
+No new Laya/GLiNER weights, training, architecture or MLX result was produced.
+
+See the [inventory-to-prompt audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-inventory-prompt-lab.md)
+and [shared receipt](validation/delaylama-inventory-prompt-lab-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

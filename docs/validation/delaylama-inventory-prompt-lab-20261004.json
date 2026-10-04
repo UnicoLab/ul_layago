@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-04",
+  "scope": "Saved inventory candidate to scoped Prompt Lab with baseline-aware review and frozen comparison",
+  "root_audit": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-inventory-prompt-lab.md",
+  "workflow_passed": true,
+  "quality_gate_passed": false,
+  "independent": false,
+  "fresh_requests": {
+    "assistant": 2,
+    "target_extraction_baseline": 1,
+    "target_extraction_frozen_candidate": 1,
+    "inventory": 0,
+    "graph_analysis": 0,
+    "user_project_model_requests": 0
+  },
+  "verification": {
+    "backend_passed": 920,
+    "frontend_passed": 755,
+    "frontend_files": 62,
+    "production_build": "passed",
+    "main_chunk_kb": 514.82
+  },
+  "lessons": [
+    "Saved inventory candidates are source-versioned review leads, not target-agent baselines or training labels",
+    "Assistant attribution claims remained overconfident despite explicit baseline scope",
+    "Frozen candidate preserved negation wording but failed separate action/actor extraction and summary support",
+    "Measure necessary-premise retention and semantic role association, not just quote presence",
+    "No prompt default activation or new Laya/GLiNER training or acceleration result"
+  ],
+  "root_receipt_sha256": "a7a38854a9df989975ad32faa8f56476ee6a1f4c82ff81fb967a2d070bf36ce9"
+}
