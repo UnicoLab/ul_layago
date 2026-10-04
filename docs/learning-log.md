@@ -2618,6 +2618,39 @@ pass. Keep the unsuccessful check rather than silently widening its budget.
 See the [implementation audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-event-representations.md)
 and [shared receipt](validation/delaylama-event-representations-20261004.json).
 
+## L86 — Freeze actual task configuration before evaluating quality (2026-10-04)
+
+DelayLama's startup path previously discarded the configured pipeline and custom
+configuration; the CLI silently fell back after opening errors. The REST catalog
+listed four of seven registered profiles. New regressions fail on the sixteen-patch
+baseline and pass after preserving configuration, validating the winning profile
+before storage and enumerating the registry. Invalid profiles now exit without
+creating either graph. Environment intent alone is not a reproducible experiment.
+
+A contract-scoped selector now submits an explicit task-local profile only when
+analysis is requested. One fresh original-source Gemini job captures
+construction_claims from preset while the shared engine remains general. Choosing
+the profile starts no work; reload retains the choice and one existing run.
+Unavailable choices block new submission, and missing/mismatched job receipts
+produce an observation warning without silently repeating accepted work.
+
+The source result still has three Event nodes and one Planning transmission,
+with only the closure's Ville performer. Startup/transport success therefore
+does not remove the existing chronology/performer and semantic date/clause gates.
+The two saved identity/event outputs were replayed from L84; they are not new model
+draws. No new Laya/GLiNER training or acceleration measurement was performed.
+
+For reusable training/evaluation, record requested configuration separately from
+actual captured configuration, fail invalid winning settings, retain unsuccessful
+probes, and compare independently labelled semantics after transport passes.
+Go internal tests verify bounded pipeline options; the REST config endpoint does
+not expose every option. Full Go, 843 backend and 719 frontend tests pass; final
+copy is covered by 57 focused tests and build. Race checks are explicitly short;
+the earlier full API race timeout remains unresolved.
+
+See the [startup/profile audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-startup-schema.md)
+and [shared receipt](validation/delaylama-startup-schema-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

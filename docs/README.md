@@ -22,6 +22,7 @@ do not confer accuracy or calibration on another application's tasks.
 | --- | --- |
 | [DelayLama results first, 2026-10-04](validation/delaylama-results-first-20261004.json) | Contract/event overviews, source preview isolation, actual saved model jobs and retained evidence/graph gaps; L84 |
 | [DelayLama event representations, 2026-10-04](validation/delaylama-event-representations-20261004.json) | Whole Unicode identifiers, quote versus source-job representations, retained occurrence/role/schema gaps and failed full race sweep; L85 |
+| [DelayLama startup and per-run profiles, 2026-10-04](validation/delaylama-startup-schema-20261004.json) | Captured task configuration vs requested intent, full registry, browser selection without submission and retained quality gates; L86 |
 | [DelayLama review queue, 2026-10-04](validation/delaylama-review-queue-20261004.json) | Unsearched event/role work, scoped source-to-prompt workflow and retained model variability; L80 |
 | [DelayLama observed actions, 2026-10-04](validation/delaylama-observed-actions-20261004.json) | Frozen-output occurrence registration, fresh chronology/source evidence and retained performer omissions; L79 |
 | [DelayLama typed parties, 2026-10-04](validation/delaylama-domain-actors-20261004.json) | Fixed-output endpoint validation, typed role GUI, optional prompt comparisons and retained Planning occurrence failure; L78 |
