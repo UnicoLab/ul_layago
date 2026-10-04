@@ -2408,6 +2408,34 @@ as completeness. No new Laya/GLiNER training, speed or acceleration measurement.
 See the [observed-action audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-observed-actions.md)
 and [shared receipt](validation/delaylama-observed-actions-20261004.json).
 
+## L80 — Review queues must surface unsearched work and retain model variability (2026-10-04)
+
+DelayLama's saved-concern filter could miss source Events that had never been
+checked. A dedicated contract queue now separates missing loaded performer links,
+unmatched quotations, occurrence/date concerns, unsearched candidates and saved
+search failures. Nearby-mention associations and vectors stay out of its event
+review list. Scope, partial snapshots and bounded/unavailable history remain
+visible; no-search and model support are not human acceptance states.
+
+Eight new checks and 679 frontend tests pass. One fresh original-only full-stack
+Gemini draw stored both performers plus affected/cause links, unlike earlier draws
+on the same synthetic original. This is model variability, not proof that the
+prompt improved or role recall is reliable. The live browser opened queue evidence,
+ran one performer source check, retained its exact quote and imported originals
+and search history into Prompt Lab. The graph remained unchanged. That live graph
+had no missing performer slot; missing-slot preparation is covered by mounted UI
+fixtures. No prompt revision, experiment run or activation was requested.
+
+Keep successful and failed draws when constructing training/evaluation data.
+Distinguish quote presence, role association, missing loaded link, search state,
+source version and human acceptance. A review-history import is context for later
+revision, not training or automatic improvement. Version-bound correction/apply/undo
+and independent same-document prompt comparisons remain open. No new Laya/GLiNER
+training, throughput, mobile or Docker measurements occurred here.
+
+See the [queue workflow audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-review-queue.md)
+and [shared receipt](validation/delaylama-review-queue-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
