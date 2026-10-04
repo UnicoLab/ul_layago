@@ -2889,6 +2889,37 @@ No new Laya/GLiNER training or acceleration evidence was produced.
 See the [Prompt Lab audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-prompt-evidence-scope.md)
 and [shared receipt](validation/delaylama-prompt-evidence-scope-20261004.json).
 
+## L94 — More extraction instructions can lose facts without fixing recall
+
+Two isolated action-granularity prompt revisions were rejected after 32 actual
+Gemini draws on four frozen invented English/French sources. V1 appended atomic
+instructions; V2 also removed a conflicting later milestone preference. Every
+arm retained 14/24 selected action records with its own quoted actor/calendar
+premise. Candidate separate action identities rose from 16 to 17/18, but those
+additions lacked their own date/actor support. Deadline/plan retention fell from
+11/14 to 9/14 and 8/14. The known contractor suspension was not returned as a
+separate action in either candidate draw. These are coding-agent-reviewed
+synthetic development bindings, not an independent entailment/recall benchmark.
+
+Both V2 report-receipt findings quoted a report-delivery sentence. The quote was
+original but did not establish that finding or retain its date/pronoun antecedent.
+Signature impacts also asserted entry into force without an explicit premise.
+No declared cancelled/unsent action became observed, but other fields were not
+exhaustively scored. Location validation and a longer quote cannot prove meaning.
+
+For Laya data, create delivery/receipt, instruction/suspension, signature/effective
+and review/approval counterfactuals. Preserve action, actor, date, direction and
+conditions; train insufficient-support labels for a true finding paired with
+its wrong supporting passage. Keep missing-action recall separate from support
+classification: a head cannot recover an unproposed action. Next test a dedicated
+inventory and missing-item pass, then independently reviewed contracts and
+necessary-clause recall before shortlist filtering. Both prompts remain optional
+rejected experiments; no Laya/GLiNER training, architecture or acceleration result
+is claimed. Engineering tests passed without changing the live application.
+
+See the [source action audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-action-coverage.md)
+and [shared receipt](validation/delaylama-source-action-coverage-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

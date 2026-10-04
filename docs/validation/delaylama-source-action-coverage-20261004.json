@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-04",
+  "finding": "L94",
+  "source_receipt": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-action-coverage.json",
+  "source_receipt_sha256": "7adbcbbbeb9545a57043a58864579c9e1a5ba59aa495a9d059ae2e97a962b5f1",
+  "scope": "Synthetic source-action development experiment, not general contract analysis validation",
+  "fixture_sha256": "d78fd3a598e850a793384cb8c285f5f45dd05d6c18e4b44740e2ac7dbe224d52",
+  "provider": "gemini-3.1-flash-lite",
+  "actual_model_calls": 32,
+  "revisions": {
+    "v1": {
+      "aggregates": {
+        "baseline": {
+          "selected_action_denominator": 24,
+          "separate_identity_records": 16,
+          "own_premise_records": 14,
+          "nonobserved_denominator": 14,
+          "nonobserved_records_retained": 11,
+          "observed_negative_errors": 0,
+          "median_draw_elapsed_ms": 3486.0
+        },
+        "candidate": {
+          "selected_action_denominator": 24,
+          "separate_identity_records": 17,
+          "own_premise_records": 14,
+          "nonobserved_denominator": 14,
+          "nonobserved_records_retained": 9,
+          "observed_negative_errors": 0,
+          "median_draw_elapsed_ms": 3780.5
+        }
+      },
+      "decision": "Rejected for activation: missing suspension in both draws, no own-premise recall gain, deadline loss; v2 additionally binds receipt to wrong supporting action."
+    },
+    "v2": {
+      "aggregates": {
+        "baseline": {
+          "selected_action_denominator": 24,
+          "separate_identity_records": 16,
+          "own_premise_records": 14,
+          "nonobserved_denominator": 14,
+          "nonobserved_records_retained": 11,
+          "observed_negative_errors": 0,
+          "median_draw_elapsed_ms": 3546.0
+        },
+        "candidate": {
+          "selected_action_denominator": 24,
+          "separate_identity_records": 18,
+          "own_premise_records": 14,
+          "nonobserved_denominator": 14,
+          "nonobserved_records_retained": 8,
+          "observed_negative_errors": 0,
+          "median_draw_elapsed_ms": 3638.0
+        }
+      },
+      "decision": "Rejected for activation: missing suspension in both draws, no own-premise recall gain, deadline loss; v2 additionally binds receipt to wrong supporting action."
+    }
+  },
+  "training_claim": false,
+  "activation": false,
+  "next_experiments": [
+    "Separate inventory/targeted missing-action pass with original-backed proposed deltas",
+    "Own-premise support vs quote presence; delivery/receipt, observed/planned and signature/effective-date hard negatives",
+    "Independent contract-family/lang/layout evaluation and necessary-clause recall before context filtering"
+  ],
+  "code_verification": {
+    "full_isolated_go": "passed",
+    "focused_race": "passed",
+    "patch_arms": 6,
+    "python_patch_tests": 27,
+    "flag_off_request_parity_modes": 4,
+    "no_app_runtime_or_graph_change": true
+  }
+}
