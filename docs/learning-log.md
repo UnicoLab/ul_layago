@@ -2806,6 +2806,33 @@ clean patch arms pass. The tested binary is active with user data/settings prese
 See the [scalar association audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-associations.md)
 and [shared receipt](validation/delaylama-source-associations-20261004.json).
 
+## L91 — Review metadata must travel with exported findings (2026-10-04)
+
+DelayLama chronology now previews all loaded or visible rows and retains source
+warnings, human decisions/notes, quotations and references in saved-analysis CSV.
+Long warnings expand in the preview without truncating exported values. Located
+text remains a transport/location observation, separate from adjudicated support.
+Use this distinction when curating training candidates: a flag/note is feedback,
+not automatically a correct target label, and a quoted model output is not gold.
+
+An isolated full-stack browser replayed actual earlier synthetic model outputs:
+four source events (one when filtered) and five saved timeline entries (two when
+filtered). A human correction note, flag, original quote and field warning survived
+export and review-backup reload. Browser clipboard copies were observed. A single
+persistent-link download observation timed out; file delivery is unconfirmed.
+Textarea LF normalization is distinct from original CSV serialization. A requested
+390×844 override exposed 582×1260 DOM pixels; report observed dimensions, not an
+unverified device claim. Native dialog modality must end before restoring focus.
+
+Final frontend 735 tests/59 files and build pass; bundle-size warning remains.
+Every replay graph table stayed unchanged, no new analysis/training job ran, and
+user data/settings were preserved. No Laya/GLiNER quality or acceleration result
+was generated. Known missing occurrences and uncertain semantics remain separate
+quality work; reviewed candidate exports make that work reproducible, not solved.
+
+See the [export audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-chronology-export.md)
+and [shared receipt](validation/delaylama-chronology-export-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

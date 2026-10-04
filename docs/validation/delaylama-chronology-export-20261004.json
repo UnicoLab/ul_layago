@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-04",
+  "finding": "L91",
+  "source_revision_before_change": "0e46031fc0b4d3031a08799538df11c33e407779",
+  "scope": "Frontend export engineering and browser replay of earlier actual synthetic model outputs; not a new model quality evaluation",
+  "audit": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-chronology-export.md",
+  "frontend": {
+    "tests": 735,
+    "files": 59,
+    "full_suite": "passed",
+    "production_build": "passed",
+    "remaining_warning": "main chunk exceeds 500 kB"
+  },
+  "browser": {
+    "tabId": "92",
+    "downloadObservation": {
+      "error": "Error: Timed out after 10000ms waiting for download."
+    },
+    "sourceAllCopyLength": 1569,
+    "sourceVisibleCopyLength": 575,
+    "timelineAllCopyLength": 2623,
+    "timelineVisibleCopyLength": 1575,
+    "reviewedTimelineCopyLength": 2745,
+    "reviewPersistedAfterReload": true,
+    "escapeRestoresSourceAndTimelineButton": true,
+    "narrowRequested": {
+      "width": 390,
+      "height": 844
+    },
+    "narrowObserved": {
+      "width": 582,
+      "height": 1260,
+      "dialogWidth": 546.08,
+      "dialogHeight": 906.06,
+      "tableWidth": 979.99,
+      "internalScroll": true
+    },
+    "viewportReset": true,
+    "lightAndDark": true,
+    "clipboardInitiallyEmptyRestoredAsEmptyText": true,
+    "consoleWarningsAndErrors": []
+  },
+  "export_and_stack_checks": {
+    "source-event-chronology.csv": {
+      "rows": 4,
+      "sha256": "6df0f1ee219f1cf1c20f98ead66ca532bc9b7ddf2f7ed6c85d36987454e4dda5",
+      "embeddings_absent": true
+    },
+    "visible-source-event-chronology.csv": {
+      "rows": 1,
+      "sha256": "9d9c65b81903236bdec6ec1151996b1e78c144047a8b92eda40f9b75be50003e",
+      "embeddings_absent": true
+    },
+    "contract-timeline.csv": {
+      "rows": 5,
+      "sha256": "bb91d08902477654e2772f93f6c6bb4fc8dfe9878e5a97f0de08f93bcadd521b",
+      "embeddings_absent": true
+    },
+    "visible-contract-timeline.csv": {
+      "rows": 2,
+      "sha256": "f411de1512ec36923dca47eee9be7b32fc272e98fcb8caeff0fb0ae2df6df599",
+      "embeddings_absent": true
+    },
+    "reviewed-contract-timeline.csv": {
+      "rows": 5,
+      "sha256": "cffc747679310ed02100fecf4e77b2fbba18fbb81940b87b5d016ff3034f48d1",
+      "embeddings_absent": true,
+      "human_feedback_quote_and_warning_preserved": true
+    },
+    "graph_all_tables_unchanged_by_GUI": true,
+    "engine_health": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 8,
+      "episode_count": 1,
+      "node_count": 9,
+      "schema": "general",
+      "status": "ok"
+    },
+    "platform_tables": {
+      "threads": 0,
+      "checkpoints": 0,
+      "agent_invocation_logs": 0,
+      "log_analyses": 0,
+      "optimization_runs": 0,
+      "messages": 0,
+      "feedback": 0,
+      "suspended_states": 0
+    }
+  },
+  "user_preservation": {
+    "protected_engine_source_files_unchanged": true,
+    "protected_app_artifacts_unchanged": true,
+    "user_studio_unchanged": true,
+    "orchid_studio_unchanged": true,
+    "user_graph_all_tables_unchanged": true
+  },
+  "new_training": false,
+  "limits": [
+    "Browser download observation timed out after 10 seconds; actual file delivery unconfirmed. Persistent anchor and successful clipboard copy are separate observations.",
+    "Textarea normalizes CRLF to LF; parser, Blob and clipboard retain serialized CSV. Manual copy is not claimed byte-identical.",
+    "Viewport requested 390x844; observed DOM viewport 582x1260. Internal table scroll and bounded dialog verified at observed size, not a certified 390-pixel mobile viewport.",
+    "Historical source-analysis job memory is not present in restored engine. No new analysis was submitted and no old handle was treated as terminal from a 404.",
+    "Semantic omissions and uncertain category/role/relationship assignments from prior evaluations remain.",
+    "No new backend/Go tests, Laya training, MLX or model acceleration measurement this pass."
+  ],
+  "implementation_revision": "5fc84f2"
+}

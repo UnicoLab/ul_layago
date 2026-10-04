@@ -30,6 +30,7 @@ do not confer accuracy or calibration on another application's tasks.
 | [DelayLama review queue, 2026-10-04](validation/delaylama-review-queue-20261004.json) | Unsearched event/role work, scoped source-to-prompt workflow and retained model variability; L80 |
 | [DelayLama observed actions, 2026-10-04](validation/delaylama-observed-actions-20261004.json) | Frozen-output occurrence registration, fresh chronology/source evidence and retained performer omissions; L79 |
 | [DelayLama typed parties, 2026-10-04](validation/delaylama-domain-actors-20261004.json) | Fixed-output endpoint validation, typed role GUI, optional prompt comparisons and retained Planning occurrence failure; L78 |
+| [DelayLama chronology exports, 2026-10-04](validation/delaylama-chronology-export-20261004.json) | Human review/quote metadata, observed copies, unconfirmed downloads and replay boundaries; L91 |
 | [DelayLama profile occurrences, 2026-10-04](validation/delaylama-profile-occurrence-20261004.json) | Fixed-output event registration, real source rechecks and prompt-history transfer, with retained performer omissions; L77 |
 | [DelayLama captured job schema, 2026-10-04](validation/delaylama-analysis-schema-20261004.json) | Worker configuration isolation, actual-model notice typing/role failures and downstream evaluation priorities; L76 |
 | [DelayLama event vocabulary, 2026-10-04](validation/delaylama-event-vocabulary-20261004.json) | Observed schema categories, bounded run metadata, shared-setting limits and contract-quality priorities; L75 |
