@@ -3434,3 +3434,92 @@ qualification changed in this application audit.
 See the [DelayLama source/graph audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-selector-duration-analysis.md),
 [retained default32 semantic gate](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/selector-duration-analysis/default32-graph.json)
 and [shared receipt](validation/delaylama-selector-duration-analysis-20261005.json).
+
+## L104 — Independent source coverage, graph date integrity and structured output (2026-10-05)
+
+**Adopted application engineering:** DelayLama's normal deep analysis now runs an
+independent original-source omission check before event storage and actor/relation
+extraction. It passes the indexed original and already located action anchors,
+without generated summaries or gold answers. It preserves initial candidates,
+adds uniquely located missing actions, ignores identical anchors and withholds
+any overlap instead of guessing semantic equivalence. It adds one bounded task
+request, not an automatic application retry. Operational completion still retains
+`completeness=unestablished`; skipped/partial/failed receipts are human-readable.
+The experimental replacement inventory now shares its parser and bypasses normal
+recovery; replacement remains off in the user stack.
+
+**Measured:** all 42 accepted Gemini `gemini-3.1-flash-lite` jobs ended and were
+archived. Initial recovery found 44/44 actions across eight synthetic cases,
+including previously missed French undated returns. An intermediate ten-job run
+exposed stale inferred dates on association edges although event nodes were
+correctly undated. The fix copies audited event dates, not pre-audit temporary
+metadata, and restricts copied properties to dates. SQLite/file storage and source
+byte regressions verify this boundary. Ten new projects then passed 48/48 declared
+checks, including 82 association edges.
+
+Two actual two-chunk sources next failed both performer gates. In English, a
+source-matched performer quote ended before the complete own-action anchor; the
+actor link was withheld. In French, introductory prose preceding JSON caused the
+legacy line parser to emit metadata fields as events and quoted actor strings as
+parties. A correct source omission pass could recover the action, but polluted
+endpoints still misdirected actor links. Structured output now accepts one complete
+array with prose/a JSON fence, rejects malformed or multiple blocks, and never
+converts its field lines into facts. Legacy prose requires a unique original
+quotation. Partial actor premises can retain the contiguous original enclosure
+only when they overlap the own action inside its existing source context and
+contain the named candidate. Disjoint/invented premises remain rejected. Old
+performer properties are cleared on reattachment.
+
+The final twelve-job run passes 52/52 distinct source actions, exact actor sets,
+performer citations and event/association calendars; 97 association edges were
+inspected. Required causal links and literal own-action durations pass 6/6 each;
+26 forbidden causal pairs, 36 forbidden durations and eight unperformed-action
+checks pass. No JSON-field graph artifacts remain. Backend 1,081/frontend 780
+checks, production build, final engine suite/race checks, twelve idempotent patch
+combinations and ten ordered optional provider/intelligence/agent combinations
+passed. The tested normal binary was activated while preserving user rows,
+configuration, histories, sources, artifacts and Studio sessions. No existing
+contract was reanalyzed or migrated.
+
+**Evaluation boundaries:** the original performer quote gate wrongly required a
+longer fixture recipient/modifier. Its correction requires the entire independently
+verified node action anchor; source bytes/identity, actor sets, wrong-action and
+clipped-anchor negatives remain mandatory. Its failed receipt is preserved.
+Association-date and structured-field-artifact gates were added rather than
+waiving the observed graph failures. A failed isolated restart left ten requests
+on an older binary; those observations remain a separate phase. An initial
+concurrent optional check is superseded by ordered checks after all patches
+finished applying. New fixtures were frozen before first requests; later runs
+repeat known cases. Long ~62 KB inputs entered the chunked branch with one chunk,
+while ~92 KB/~121 KB inputs used two actual chunks. The smaller English fixture
+has a French annex. Synthetic identifiers/length do not establish independent
+real-contract gold, and fixture language is distinct from the test helper's
+French-default project metadata.
+
+**Implications for Laya training:** retrieval cannot repair a malformed structured
+parser or stale graph metadata. Train/evaluate source coverage independently of
+the combined summary/entity task. Keep byte spans and original qualifiers when
+joining an actor premise to an action; a recipient-bearing extended action is a
+useful hard case for quotation scope. Separate missing action, missing actor,
+unknown calendar, unknown performance, unsupported effect and wrong causal
+relation as different failure classes. Model-unreviewed generated output remains
+candidate material, never gold. Useful negatives include JSON field/prose noise,
+an actor quoted for a different action, a document date copied onto an undated
+edge, and an overlapping bundled-action proposal. Preserve failed raw outputs,
+source/schema versions and both evaluator protocols in any derived dataset.
+
+The browser verified contextual highlighted quotations, human performer names,
+uncertain calendars and source omission receipts. Entire-component traversal from
+a recovered return read eleven facts/twenty links and one original. The final
+French two-chunk graph contains two events/seven facts/thirteen links and the
+correct actor, but its undated return still has model role `unknown`. The declared
+gate does not qualify role interpretation, clause applicability, categories,
+amendment effectiveness, conflicts or arbitrary long contracts. The 16 KB
+relation envelope and source/input/output budgets remain explicit limits.
+
+No new Laya/GLiNER weights, training, MLX architecture or supervisor qualification
+was performed. These are measured application integration findings and proposed
+training designs.
+
+See the [DelayLama report and retained failures](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-action-recovery.md)
+and [shared receipt](validation/delaylama-source-action-recovery-20261005.json).

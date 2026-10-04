@@ -1,0 +1,1031 @@
+{
+  "date": "2026-10-05",
+  "scope": "Original-source omission recovery, exact-span deduplication, audited event association dates, prefaced structured response parsing, source performer enclosures. Declared synthetic checks only.",
+  "full_semantic_qualification": false,
+  "all_final_declared_checks_passed": true,
+  "model": "Gemini gemini-3.1-flash-lite",
+  "qualification_embeddings": "noop only in owned test stack; normal stack retains Gemini embeddings",
+  "candidate_passes": 1,
+  "critic_passes": 0,
+  "schema_preset": "construction_claims",
+  "accepted_analysis_jobs": 42,
+  "terminal_done_jobs": 42,
+  "additional_recovery_task_requests": 42,
+  "provider_http_retry_count": "not instrumented",
+  "final_engine_source_commit": "d8164ecdfe81c98d2ecbb10dfa21c440d7e0e444",
+  "final_engine_sha256": "429324d048926be0614566fcd9e0bc9328327d2acac58086384ab2e77e59f86d",
+  "patches_added": [
+    "source-action-recovery",
+    "structured-source-events"
+  ],
+  "final_metrics": {
+    "distinct_action": {
+      "passed": 52,
+      "total": 52
+    },
+    "performer_correct": {
+      "passed": 52,
+      "total": 52
+    },
+    "performer_evidence_located": {
+      "passed": 52,
+      "total": 52
+    },
+    "date_correct": {
+      "passed": 52,
+      "total": 52
+    },
+    "association_calendar_consistent": {
+      "passed": 52,
+      "total": 52
+    },
+    "required_causation": {
+      "passed": 6,
+      "total": 6
+    },
+    "declared_impacts": {
+      "passed": 6,
+      "total": 6
+    },
+    "declared_durations": {
+      "passed": 6,
+      "total": 6
+    },
+    "forbidden_causation": {
+      "passed": 26,
+      "total": 26
+    },
+    "forbidden_observed_actions": {
+      "passed": 8,
+      "total": 8
+    },
+    "forbidden_durations": {
+      "passed": 36,
+      "total": 36
+    },
+    "association_edges_checked": 97,
+    "cases": {
+      "passed": 12,
+      "total": 12
+    },
+    "structured_output_artifacts": 0
+  },
+  "phases": [
+    {
+      "name": "initial recovery",
+      "jobs": 8,
+      "declared_actions": 44,
+      "legacy_gate_passed": false,
+      "own_action_performer_gate_passed": true
+    },
+    {
+      "name": "intermediate old association binary",
+      "jobs": 10,
+      "declared_actions": 48,
+      "passed": false,
+      "failure": "stale association dates; initial isolated restart failed before changing services"
+    },
+    {
+      "name": "audited association binary",
+      "jobs": 10,
+      "declared_actions": 48,
+      "passed": true
+    },
+    {
+      "name": "actual two-chunk stress",
+      "jobs": 2,
+      "declared_actions": 4,
+      "passed": false,
+      "failure": "English partial performer premise withheld; French prefaced JSON parsed as plain fields/malformed actor names"
+    },
+    {
+      "name": "final parser and performer scope",
+      "jobs": 12,
+      "declared_actions": 52,
+      "passed": true
+    }
+  ],
+  "evaluation_protocol_changes": [
+    "Performer source quote must contain its entire independently verified node action anchor; it need not include a longer fixture recipient/modifier. Exact source bytes, source identity, actor set and distinct action remain required.",
+    "Association edge occurred_at/valid_from/date/date_inferred must agree with the audited originating event.",
+    "Final graph must contain no structured JSON field-name artifacts."
+  ],
+  "fixture_boundaries": "New payment/dispute/withdrawal fixtures and long-source fixtures frozen before their first requests. Later runs deliberately repeat now-known cases. Two-chunk cases use a related synthetic task; neither opaque identifiers nor length make these independently reviewed real-contract gold. Long ~62KB cases took the chunked branch with one chunk; >80KB stress cases used two actual chunks. Long English fixture administrative annex is French; the two-chunk English annex is English.",
+  "limitations": [
+    "A bounded model omission check does not certify complete extraction or legal semantics.",
+    "120 proposed audit actions, configured indexed input budget and 60-second request timeout remain; skipped/failed/partial receipts stay visible.",
+    "Overlapping anchors are withheld rather than merged semantically; disjoint equal-purpose actions and ambiguous repeated text still require review.",
+    "Normative clause coverage, event categories, amendment effectiveness, conflicts, cross-references and real contracts are not fully qualified.",
+    "Existing user contracts are not reanalyzed or migrated.",
+    "No new Laya/GLiNER training, weights, MLX or supervisor qualification in this application audit.",
+    "Some positive undated actions still have model date_role=unknown; the final declared gate does not certify occurrence-role interpretation."
+  ],
+  "browser": {
+    "tab_id": "106",
+    "project_id": "source-recovery-final-qa-orme-power-fr-2098-20261004-231710-04f4eb",
+    "recovered_french_return_visible": true,
+    "short_original_quote_highlighted": true,
+    "return_calendar_unresolved": true,
+    "return_performer": "Cèdre Études SAS",
+    "omission_receipt": {
+      "added_events": 2,
+      "overlap_withheld": 1,
+      "status": "partial"
+    },
+    "two_step_context": {
+      "facts": 5,
+      "connections": 5,
+      "originals": 1
+    },
+    "entire_component": {
+      "facts": 11,
+      "connections": 20,
+      "originals": 1
+    },
+    "console_errors": [],
+    "source_recheck_model_call_performed": false,
+    "screenshots": [
+      "omission-check.png",
+      "recovered-undated-evidence.png"
+    ],
+    "final34_multichunk": {
+      "project_id": "source-recovery-final-qa-two-chunks-fr-2118-20261004-233031-20e109",
+      "loaded_facts": 7,
+      "loaded_connections": 13,
+      "event_nodes": 2,
+      "performer": "Bouleau Audit SAS",
+      "calendar": "unresolved",
+      "date_role": "unknown / not assessed",
+      "metadata_field_artifacts_visible": false,
+      "source_quote_highlighted": true,
+      "console_errors": [],
+      "screenshot": "final-multichunk-graph.png"
+    }
+  },
+  "jobs": [
+    {
+      "case": "fir-causal-en-2093",
+      "project_id": "selector-duration-qa-fir-causal-en-2093-20261004-230655-58b6c8",
+      "job_id": "dd041e78-9527-452c-93a5-5ade297b0aef",
+      "status": "done",
+      "existing_events": 6,
+      "added_events": 2,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "49cfa9371385402e4d2c31506166794fcf09ea577766072125d3950d7a725279"
+    },
+    {
+      "case": "sapin-causal-fr-2094",
+      "project_id": "selector-duration-qa-sapin-causal-fr-2094-20261004-230655-454964",
+      "job_id": "3edcec1f-26e4-4e77-86d8-56e1cdae4e60",
+      "status": "done",
+      "existing_events": 5,
+      "added_events": 4,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "081a8c5df4d071cbd5ab7f6679ba65087b1816f9be1c943a264e59896485ff53"
+    },
+    {
+      "case": "willow-power-en-2097",
+      "project_id": "selector-duration-qa-willow-power-en-2097-20261004-230655-b9ce7f",
+      "job_id": "b5ddab16-8be4-49da-977f-b31d62d6fe0c",
+      "status": "done",
+      "existing_events": 7,
+      "added_events": 1,
+      "duplicate_actions": 0,
+      "overlap_withheld": 1,
+      "audit_status": "partial",
+      "source_sha256": "01650893f4e9a9ee1ab6b20ae2e13fa203160b6d7e6a09fc64d3aea7a3fe5ead"
+    },
+    {
+      "case": "orme-power-fr-2098",
+      "project_id": "selector-duration-qa-orme-power-fr-2098-20261004-230655-9d6b94",
+      "job_id": "2e0fec9f-1f9e-4766-bc1d-24039b761a48",
+      "status": "done",
+      "existing_events": 7,
+      "added_events": 2,
+      "duplicate_actions": 0,
+      "overlap_withheld": 1,
+      "audit_status": "partial",
+      "source_sha256": "8c011ae985a441b8f8a716b68e466b7df82499246a37e6560495c2c2d658daa9"
+    },
+    {
+      "case": "hazel-power-en-2101",
+      "project_id": "selector-duration-qa-hazel-power-en-2101-20261004-230655-816ea3",
+      "job_id": "6a3e8842-dd46-4a13-a2ac-1bbf7dd5e289",
+      "status": "done",
+      "existing_events": 7,
+      "added_events": 1,
+      "duplicate_actions": 2,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "dd114c8fc535d6e3ea5eb312cb88093d1d5590c3120296767593e7e7be67aaab"
+    },
+    {
+      "case": "charme-power-fr-2102",
+      "project_id": "selector-duration-qa-charme-power-fr-2102-20261004-230655-25295c",
+      "job_id": "29a20a01-642b-428a-9499-fe13fc64f3cb",
+      "status": "done",
+      "existing_events": 5,
+      "added_events": 4,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "partial",
+      "source_sha256": "b2115d323f9a423f9dfa4f1984423cc5712f7171262ee6f776b3d7734bcfc554"
+    },
+    {
+      "case": "omission-payment-en-2113",
+      "project_id": "selector-duration-qa-omission-payment-en-2113-20261004-230655-e2cb2e",
+      "job_id": "d66c8f7d-5e07-436c-9e09-d9dffb4e4fd5",
+      "status": "done",
+      "existing_events": 4,
+      "added_events": 4,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "d6ace916a03409b7215e891728de9ad130b8e69c45d89986650ada70fa642684"
+    },
+    {
+      "case": "omission-payment-fr-2114",
+      "project_id": "selector-duration-qa-omission-payment-fr-2114-20261004-230655-496aa5",
+      "job_id": "fbf5e038-2ebc-4559-9c84-ad897a01d810",
+      "status": "done",
+      "existing_events": 5,
+      "added_events": 1,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "partial",
+      "source_sha256": "b293ddf9de588d25b8752d0bb35999f5a9df935e554848581de8b0b6b16a1bb0"
+    },
+    {
+      "case": "fir-causal-en-2093",
+      "project_id": "source-recovery-final-qa-fir-causal-en-2093-20261004-231447-403478",
+      "job_id": "dfa662d9-312d-44c7-b376-1a64a3c1b80a",
+      "status": "done",
+      "existing_events": 7,
+      "added_events": 1,
+      "duplicate_actions": 2,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "49cfa9371385402e4d2c31506166794fcf09ea577766072125d3950d7a725279"
+    },
+    {
+      "case": "sapin-causal-fr-2094",
+      "project_id": "source-recovery-final-qa-sapin-causal-fr-2094-20261004-231447-adc506",
+      "job_id": "28e45fed-c4bf-4aec-b3c0-859a9b41f025",
+      "status": "done",
+      "existing_events": 7,
+      "added_events": 2,
+      "duplicate_actions": 0,
+      "overlap_withheld": 1,
+      "audit_status": "partial",
+      "source_sha256": "081a8c5df4d071cbd5ab7f6679ba65087b1816f9be1c943a264e59896485ff53"
+    },
+    {
+      "case": "willow-power-en-2097",
+      "project_id": "source-recovery-final-qa-willow-power-en-2097-20261004-231447-76e569",
+      "job_id": "00bec427-cfff-4ea8-81ef-a6d567c0d2f0",
+      "status": "done",
+      "existing_events": 7,
+      "added_events": 3,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "01650893f4e9a9ee1ab6b20ae2e13fa203160b6d7e6a09fc64d3aea7a3fe5ead"
+    },
+    {
+      "case": "orme-power-fr-2098",
+      "project_id": "source-recovery-final-qa-orme-power-fr-2098-20261004-231447-19411a",
+      "job_id": "74785ef2-d302-4b0d-aeea-aa1c28a9d754",
+      "status": "done",
+      "existing_events": 7,
+      "added_events": 2,
+      "duplicate_actions": 0,
+      "overlap_withheld": 1,
+      "audit_status": "partial",
+      "source_sha256": "8c011ae985a441b8f8a716b68e466b7df82499246a37e6560495c2c2d658daa9"
+    },
+    {
+      "case": "hazel-power-en-2101",
+      "project_id": "source-recovery-final-qa-hazel-power-en-2101-20261004-231447-052b5a",
+      "job_id": "bcbc3df5-86be-4366-9659-84ebc7fbd466",
+      "status": "done",
+      "existing_events": 7,
+      "added_events": 1,
+      "duplicate_actions": 2,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "dd114c8fc535d6e3ea5eb312cb88093d1d5590c3120296767593e7e7be67aaab"
+    },
+    {
+      "case": "charme-power-fr-2102",
+      "project_id": "source-recovery-final-qa-charme-power-fr-2102-20261004-231447-1c3b83",
+      "job_id": "91945c05-06cb-4c03-b5cb-d0a2c8eb963e",
+      "status": "done",
+      "existing_events": 5,
+      "added_events": 4,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "partial",
+      "source_sha256": "b2115d323f9a423f9dfa4f1984423cc5712f7171262ee6f776b3d7734bcfc554"
+    },
+    {
+      "case": "omission-payment-en-2113",
+      "project_id": "source-recovery-final-qa-omission-payment-en-2113-20261004-231447-40c7f6",
+      "job_id": "dc989dee-e5ae-4797-9f6f-f1497444065f",
+      "status": "done",
+      "existing_events": 4,
+      "added_events": 3,
+      "duplicate_actions": 1,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "d6ace916a03409b7215e891728de9ad130b8e69c45d89986650ada70fa642684"
+    },
+    {
+      "case": "omission-payment-fr-2114",
+      "project_id": "source-recovery-final-qa-omission-payment-fr-2114-20261004-231447-d73d3a",
+      "job_id": "941f7bb0-be6e-4364-a3fe-b0d3fb74076e",
+      "status": "done",
+      "existing_events": 5,
+      "added_events": 1,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "b293ddf9de588d25b8752d0bb35999f5a9df935e554848581de8b0b6b16a1bb0"
+    },
+    {
+      "case": "long-original-en-2115",
+      "project_id": "source-recovery-final-qa-long-original-en-2115-20261004-231447-134a50",
+      "job_id": "ab1df36d-3755-4528-b6c0-c871400e95cc",
+      "status": "done",
+      "existing_events": 2,
+      "added_events": 0,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "dd1da0223b243572bdeb97c7c2343501b7212f8d2643f6fbe31b895f858361b3"
+    },
+    {
+      "case": "long-original-fr-2116",
+      "project_id": "source-recovery-final-qa-long-original-fr-2116-20261004-231447-154762",
+      "job_id": "87ffb7bd-5208-4943-b79e-b03632c65c9b",
+      "status": "done",
+      "existing_events": 2,
+      "added_events": 0,
+      "duplicate_actions": 0,
+      "overlap_withheld": 1,
+      "audit_status": "partial",
+      "source_sha256": "b69c887dcda52c9beecd176d9f76d330f4fb16cad3af789dddb88d8e44b7de03"
+    },
+    {
+      "case": "fir-causal-en-2093",
+      "project_id": "source-recovery-final-qa-fir-causal-en-2093-20261004-231710-0a8733",
+      "job_id": "6483c9fc-dfdd-49e3-9aa5-dcb987caab38",
+      "status": "done",
+      "existing_events": 6,
+      "added_events": 2,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "49cfa9371385402e4d2c31506166794fcf09ea577766072125d3950d7a725279"
+    },
+    {
+      "case": "sapin-causal-fr-2094",
+      "project_id": "source-recovery-final-qa-sapin-causal-fr-2094-20261004-231710-e4db49",
+      "job_id": "bd2bce4e-8b61-4ed6-bcf6-e6fe4ae0b17d",
+      "status": "done",
+      "existing_events": 5,
+      "added_events": 4,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "081a8c5df4d071cbd5ab7f6679ba65087b1816f9be1c943a264e59896485ff53"
+    },
+    {
+      "case": "willow-power-en-2097",
+      "project_id": "source-recovery-final-qa-willow-power-en-2097-20261004-231710-fc19b7",
+      "job_id": "142065ce-e827-4c99-a437-5f2b65600adf",
+      "status": "done",
+      "existing_events": 7,
+      "added_events": 1,
+      "duplicate_actions": 0,
+      "overlap_withheld": 1,
+      "audit_status": "partial",
+      "source_sha256": "01650893f4e9a9ee1ab6b20ae2e13fa203160b6d7e6a09fc64d3aea7a3fe5ead"
+    },
+    {
+      "case": "orme-power-fr-2098",
+      "project_id": "source-recovery-final-qa-orme-power-fr-2098-20261004-231710-04f4eb",
+      "job_id": "470cf372-46dd-4a74-9ebf-f76a80085cf8",
+      "status": "done",
+      "existing_events": 6,
+      "added_events": 2,
+      "duplicate_actions": 0,
+      "overlap_withheld": 1,
+      "audit_status": "partial",
+      "source_sha256": "8c011ae985a441b8f8a716b68e466b7df82499246a37e6560495c2c2d658daa9"
+    },
+    {
+      "case": "hazel-power-en-2101",
+      "project_id": "source-recovery-final-qa-hazel-power-en-2101-20261004-231710-19e7c2",
+      "job_id": "1974eff0-c565-4ab6-be2c-98acebb85a58",
+      "status": "done",
+      "existing_events": 7,
+      "added_events": 1,
+      "duplicate_actions": 2,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "dd114c8fc535d6e3ea5eb312cb88093d1d5590c3120296767593e7e7be67aaab"
+    },
+    {
+      "case": "charme-power-fr-2102",
+      "project_id": "source-recovery-final-qa-charme-power-fr-2102-20261004-231710-3f063f",
+      "job_id": "929ad8a4-69dd-432b-be35-d579ecfc672f",
+      "status": "done",
+      "existing_events": 5,
+      "added_events": 4,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "partial",
+      "source_sha256": "b2115d323f9a423f9dfa4f1984423cc5712f7171262ee6f776b3d7734bcfc554"
+    },
+    {
+      "case": "omission-payment-en-2113",
+      "project_id": "source-recovery-final-qa-omission-payment-en-2113-20261004-231710-a336c2",
+      "job_id": "abaa793d-9b6e-47e5-8b38-23d1e75dcbf9",
+      "status": "done",
+      "existing_events": 4,
+      "added_events": 2,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "d6ace916a03409b7215e891728de9ad130b8e69c45d89986650ada70fa642684"
+    },
+    {
+      "case": "omission-payment-fr-2114",
+      "project_id": "source-recovery-final-qa-omission-payment-fr-2114-20261004-231710-d2d1b4",
+      "job_id": "6c8ab87e-2c1e-4fdb-9a65-72067071afc8",
+      "status": "done",
+      "existing_events": 4,
+      "added_events": 2,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "b293ddf9de588d25b8752d0bb35999f5a9df935e554848581de8b0b6b16a1bb0"
+    },
+    {
+      "case": "long-original-en-2115",
+      "project_id": "source-recovery-final-qa-long-original-en-2115-20261004-231710-b80e66",
+      "job_id": "9e479012-490e-4540-bb7e-bfa687d3e3be",
+      "status": "done",
+      "existing_events": 2,
+      "added_events": 0,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "dd1da0223b243572bdeb97c7c2343501b7212f8d2643f6fbe31b895f858361b3"
+    },
+    {
+      "case": "long-original-fr-2116",
+      "project_id": "source-recovery-final-qa-long-original-fr-2116-20261004-231710-48920b",
+      "job_id": "02748886-09e4-454d-9dbc-b119d9a48ca2",
+      "status": "done",
+      "existing_events": 2,
+      "added_events": 0,
+      "duplicate_actions": 0,
+      "overlap_withheld": 1,
+      "audit_status": "partial",
+      "source_sha256": "b69c887dcda52c9beecd176d9f76d330f4fb16cad3af789dddb88d8e44b7de03"
+    },
+    {
+      "case": "two-chunks-en-2117",
+      "project_id": "source-recovery-final-qa-two-chunks-en-2117-20261004-232344-a6612c",
+      "job_id": "e95bd98d-6f0a-43c9-81ab-61421df4bda8",
+      "status": "done",
+      "existing_events": 2,
+      "added_events": 0,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "38c68a1b74d1f6b0ab2a62d4d9e297993df5d21472bb3b6ff3d86df4c935ba07"
+    },
+    {
+      "case": "two-chunks-fr-2118",
+      "project_id": "source-recovery-final-qa-two-chunks-fr-2118-20261004-232344-6007de",
+      "job_id": "c6a4349d-8f55-4777-85b5-f51e67a95e11",
+      "status": "done",
+      "existing_events": 19,
+      "added_events": 1,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "partial",
+      "source_sha256": "6ef1e5b263fb78deca5c7bdb6c8438126ad2eecf02dbffb252144030a546ca1a"
+    },
+    {
+      "case": "fir-causal-en-2093",
+      "project_id": "source-recovery-final-qa-fir-causal-en-2093-20261004-233031-46a2b4",
+      "job_id": "eac8be16-5739-4ba0-8abb-0b126a52013f",
+      "status": "done",
+      "existing_events": 7,
+      "added_events": 1,
+      "duplicate_actions": 2,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "49cfa9371385402e4d2c31506166794fcf09ea577766072125d3950d7a725279"
+    },
+    {
+      "case": "sapin-causal-fr-2094",
+      "project_id": "source-recovery-final-qa-sapin-causal-fr-2094-20261004-233031-cfc619",
+      "job_id": "48d103f4-3a67-423f-8aae-dbb074a58399",
+      "status": "done",
+      "existing_events": 5,
+      "added_events": 4,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "081a8c5df4d071cbd5ab7f6679ba65087b1816f9be1c943a264e59896485ff53"
+    },
+    {
+      "case": "willow-power-en-2097",
+      "project_id": "source-recovery-final-qa-willow-power-en-2097-20261004-233031-25d374",
+      "job_id": "80edfc4c-cf52-4488-aba7-2ca36722bb8b",
+      "status": "done",
+      "existing_events": 7,
+      "added_events": 3,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "01650893f4e9a9ee1ab6b20ae2e13fa203160b6d7e6a09fc64d3aea7a3fe5ead"
+    },
+    {
+      "case": "orme-power-fr-2098",
+      "project_id": "source-recovery-final-qa-orme-power-fr-2098-20261004-233031-21e2a9",
+      "job_id": "b02e31fc-599e-4686-bc92-74b2658ed88b",
+      "status": "done",
+      "existing_events": 7,
+      "added_events": 2,
+      "duplicate_actions": 0,
+      "overlap_withheld": 1,
+      "audit_status": "partial",
+      "source_sha256": "8c011ae985a441b8f8a716b68e466b7df82499246a37e6560495c2c2d658daa9"
+    },
+    {
+      "case": "hazel-power-en-2101",
+      "project_id": "source-recovery-final-qa-hazel-power-en-2101-20261004-233031-61f915",
+      "job_id": "19fd4765-6458-4712-809e-aaef38eb3d39",
+      "status": "done",
+      "existing_events": 7,
+      "added_events": 1,
+      "duplicate_actions": 0,
+      "overlap_withheld": 2,
+      "audit_status": "partial",
+      "source_sha256": "dd114c8fc535d6e3ea5eb312cb88093d1d5590c3120296767593e7e7be67aaab"
+    },
+    {
+      "case": "charme-power-fr-2102",
+      "project_id": "source-recovery-final-qa-charme-power-fr-2102-20261004-233031-c957e6",
+      "job_id": "99044b57-2864-4a8e-9cb0-f98e7d61e53c",
+      "status": "done",
+      "existing_events": 5,
+      "added_events": 4,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "partial",
+      "source_sha256": "b2115d323f9a423f9dfa4f1984423cc5712f7171262ee6f776b3d7734bcfc554"
+    },
+    {
+      "case": "omission-payment-en-2113",
+      "project_id": "source-recovery-final-qa-omission-payment-en-2113-20261004-233031-3aa605",
+      "job_id": "ff6adc08-9df8-4110-b631-3b6cae37484a",
+      "status": "done",
+      "existing_events": 4,
+      "added_events": 2,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "d6ace916a03409b7215e891728de9ad130b8e69c45d89986650ada70fa642684"
+    },
+    {
+      "case": "omission-payment-fr-2114",
+      "project_id": "source-recovery-final-qa-omission-payment-fr-2114-20261004-233031-f7dd27",
+      "job_id": "2e2f3385-1916-4f5c-b9a7-310d1021e852",
+      "status": "done",
+      "existing_events": 5,
+      "added_events": 1,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "partial",
+      "source_sha256": "b293ddf9de588d25b8752d0bb35999f5a9df935e554848581de8b0b6b16a1bb0"
+    },
+    {
+      "case": "long-original-en-2115",
+      "project_id": "source-recovery-final-qa-long-original-en-2115-20261004-233031-a0e72d",
+      "job_id": "6c17ce49-be40-4b4a-81bd-4c04b9cb26c3",
+      "status": "done",
+      "existing_events": 2,
+      "added_events": 0,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "dd1da0223b243572bdeb97c7c2343501b7212f8d2643f6fbe31b895f858361b3"
+    },
+    {
+      "case": "long-original-fr-2116",
+      "project_id": "source-recovery-final-qa-long-original-fr-2116-20261004-233031-c69bf5",
+      "job_id": "32fc40bb-42cb-4b27-afc8-1a629a0c2f9e",
+      "status": "done",
+      "existing_events": 2,
+      "added_events": 0,
+      "duplicate_actions": 0,
+      "overlap_withheld": 1,
+      "audit_status": "partial",
+      "source_sha256": "b69c887dcda52c9beecd176d9f76d330f4fb16cad3af789dddb88d8e44b7de03"
+    },
+    {
+      "case": "two-chunks-en-2117",
+      "project_id": "source-recovery-final-qa-two-chunks-en-2117-20261004-233031-d508e8",
+      "job_id": "22af207e-d53b-45a0-b0b9-7b29426735d5",
+      "status": "done",
+      "existing_events": 2,
+      "added_events": 0,
+      "duplicate_actions": 0,
+      "overlap_withheld": 0,
+      "audit_status": "completed",
+      "source_sha256": "38c68a1b74d1f6b0ab2a62d4d9e297993df5d21472bb3b6ff3d86df4c935ba07"
+    },
+    {
+      "case": "two-chunks-fr-2118",
+      "project_id": "source-recovery-final-qa-two-chunks-fr-2118-20261004-233031-20e109",
+      "job_id": "06808cd1-1550-4e7a-ad74-4df9eebdcec3",
+      "status": "done",
+      "existing_events": 2,
+      "added_events": 0,
+      "duplicate_actions": 1,
+      "overlap_withheld": 0,
+      "audit_status": "partial",
+      "source_sha256": "6ef1e5b263fb78deca5c7bdb6c8438126ad2eecf02dbffb252144030a546ca1a"
+    }
+  ],
+  "assets_sha256": {
+    "docs/validation/assets/source-action-recovery/activation34.json": "386345e5009b281741b414f851630693b158f2080f67301e3e52abb29a3bf162",
+    "docs/validation/assets/source-action-recovery/api-activation.json": "89be3f26de0fe082394b42bee59c106538cd18ce22d65bf3f8c5324b628c2fa7",
+    "docs/validation/assets/source-action-recovery/backend-final34-all.log": "2f3c6e2b9a8fea6ee33bccb46c8a7a766c9d46027866cde342c706f812ff4d6c",
+    "docs/validation/assets/source-action-recovery/backend-focused.log": "fed958a06231659506c2f5966f2ab4d7a39a0b1e6c7ca0a4117a3bac2910b3de",
+    "docs/validation/assets/source-action-recovery/backend-focused3.log": "9a28a8f440dc05cb8304f25bb043a2ccd551cfa6ef0f06ba454e20145f0ede66",
+    "docs/validation/assets/source-action-recovery/browser-check.json": "21848d343d5a161dde4a2543ad806c380a5239dec784920c00f67720adc22b0e",
+    "docs/validation/assets/source-action-recovery/cleanup.json": "338262d6e9f36c0f29b049994a3d85d164eb369ceea8bbef82957c0e3cfb8ecd",
+    "docs/validation/assets/source-action-recovery/evaluation-own-action.json": "00f81415f4c2390fc60a0abfdfa65898166fe7905710f0569c463b09f7ad436e",
+    "docs/validation/assets/source-action-recovery/evaluation.json": "7bd702ab3b97adfb9a38d3bcd8da6822d6291b31032f07a5fee6c9e31f526bcb",
+    "docs/validation/assets/source-action-recovery/final-inputs.json": "f3ae5522c3f8f3be1470d6796da2c56b49e96d42996390de550228032b8cd398",
+    "docs/validation/assets/source-action-recovery/final-multichunk-graph.png": "ae0af0fadb376d15a3a2bb8534936870ae7984aa209610cf6415f62bedabecc0",
+    "docs/validation/assets/source-action-recovery/final-sync.json": "ce347d9c3c2b8a8ac4aa9b3522ff31bea126cb45d7c8dc7ccc00ce7e566b85df",
+    "docs/validation/assets/source-action-recovery/final34-evaluation.json": "a4e47411d8a23d535c36b406cfd8f056ae9bf19a73ff47bf31b910fd419439be",
+    "docs/validation/assets/source-action-recovery/final34-evaluator-tests.log": "4fd7904e7d12c28231c58aea311cac146c3f5e18d53a23a12a81b4c743961279",
+    "docs/validation/assets/source-action-recovery/final34-inputs.json": "71260c4766e0308a9ab4443330bebaf24555560a46a5feef555011b10a4270fd",
+    "docs/validation/assets/source-action-recovery/final34-metrics.json": "c1c4510c02ffee546b90257508ed8c3b6c74e404aa7bfdc5fbfa818fe6b9423f",
+    "docs/validation/assets/source-action-recovery/final34-model-stage-receipts.json": "6c3473b2e97017a091e9bb1da462f8c90ab3bbfc70b7df316c9999a0ab8c20cf",
+    "docs/validation/assets/source-action-recovery/final34-sync.json": "6a313658f9214359456540a04977cfb76d777a58bbb3bd412db32d6c3bfa8f35",
+    "docs/validation/assets/source-action-recovery/focused.log": "d982f95ced99fe58185c51aae5eda9551fd072790f017c0573e2ebecea1a1923",
+    "docs/validation/assets/source-action-recovery/focused2.log": "1d1b146a9c3f7f508679a41e3ceaa2b1bb2949ecd4be5c341c50118722314f6d",
+    "docs/validation/assets/source-action-recovery/focused3.log": "f139e7b008d2da829855e71d7fabe46fb0eb57ea051a268d0e15f657bcd3a82d",
+    "docs/validation/assets/source-action-recovery/fresh-fixture-freeze.json": "16903cd4243fff6e9016120b179b86e1f2435f3a4d48eb106a1640d93c837a5c",
+    "docs/validation/assets/source-action-recovery/frontend-all.log": "c5c52a60427b17ec0dc5a209b14bfab6e891d347ef742119a6495bd0333316f9",
+    "docs/validation/assets/source-action-recovery/frontend-build.log": "a6fb00f5822d99d893b3bb27ff6cca6469ec2d5bf0d44f9e094b4caf2fc8f27c",
+    "docs/validation/assets/source-action-recovery/go-final34-all.log": "9434f042a754f3c1c1b0064134bb6886c26cb535fd3bfca16fbe7fb51b5d781a",
+    "docs/validation/assets/source-action-recovery/go-final34-race.log": "1531ee39a6107d2049a791bec23d088dfb3b73256d6dfd0d4e18ee52bab4afae",
+    "docs/validation/assets/source-action-recovery/go-verified-final34-variant-audit.log": "3c1dcaa3ec2d02589d05146767ce16b60d7baf151ae8c7ece88d55f19c5b9ec7",
+    "docs/validation/assets/source-action-recovery/go-verified-final34-variant-coverage.log": "90052f518b1dc115f9c2169639a987ab8d5196d658a498164b3b7b010753aaa7",
+    "docs/validation/assets/source-action-recovery/go-verified-final34-variant-inventory-audit.log": "3c1dcaa3ec2d02589d05146767ce16b60d7baf151ae8c7ece88d55f19c5b9ec7",
+    "docs/validation/assets/source-action-recovery/go-verified-final34-variant-inventory-coverage.log": "cf0eec732ba3ea7ef52673d08a903f3828993e0f2d9dd561747b998a36d925be",
+    "docs/validation/assets/source-action-recovery/go-verified-final34-variant-inventory-meaning.log": "cc451390412bfbccd9f118caf0210200b0399f52a314e4b2cb860568c29a3416",
+    "docs/validation/assets/source-action-recovery/go-verified-final34-variant-inventory-passages.log": "3b633c4c8d448f856c596e3cfae3f30562031a59b1c0ede42bbfccdd4c73d884",
+    "docs/validation/assets/source-action-recovery/go-verified-final34-variant-inventory-register.log": "3c1dcaa3ec2d02589d05146767ce16b60d7baf151ae8c7ece88d55f19c5b9ec7",
+    "docs/validation/assets/source-action-recovery/go-verified-final34-variant-meaning.log": "3c1dcaa3ec2d02589d05146767ce16b60d7baf151ae8c7ece88d55f19c5b9ec7",
+    "docs/validation/assets/source-action-recovery/go-verified-final34-variant-passages.log": "3c1dcaa3ec2d02589d05146767ce16b60d7baf151ae8c7ece88d55f19c5b9ec7",
+    "docs/validation/assets/source-action-recovery/go-verified-final34-variant-register.log": "3c1dcaa3ec2d02589d05146767ce16b60d7baf151ae8c7ece88d55f19c5b9ec7",
+    "docs/validation/assets/source-action-recovery/inputs.json": "eac6ce6cc16570110308f80da8dfad8aef10cf23da29b4c562b49503dd34d944",
+    "docs/validation/assets/source-action-recovery/intermediate-evaluation.json": "c0ccf88192a45c3a9725ae053cdc87b26e5416100c31a8de08706f3597db3014",
+    "docs/validation/assets/source-action-recovery/intermediate-model-stage-receipts.json": "a70faeb373ee5734316db417fc58d7439a790cc032d2ab909e21a1e86fad52ae",
+    "docs/validation/assets/source-action-recovery/long-fixture-freeze.json": "58830736bdde0475cea42a1c66441d1997073dfb4c8b05464e75141baa4013a8",
+    "docs/validation/assets/source-action-recovery/model-stage-receipts.json": "efb29f83f62da876520758a821f9d7274b3c561e786bcfe61b74ee0c8464c1fb",
+    "docs/validation/assets/source-action-recovery/multichunk-evaluation.json": "d250d00056a359905bc937e4b04ef77a4344ae4fb1c2b1c5cdddc246d847b107",
+    "docs/validation/assets/source-action-recovery/multichunk-fixture-freeze.json": "de313c57cc49234de73013f015d17c47df2cdf69b51d436118b341b34e396eb3",
+    "docs/validation/assets/source-action-recovery/multichunk-inputs.json": "e550dae60cacf6b0e70ba8191b4aed8fc798a2d4938138b979136975e5ee999c",
+    "docs/validation/assets/source-action-recovery/multichunk-model-stage-receipts.json": "f1f10b9049717ed9f4e841f2b6ba70c23b66709ca58cd450086d75e3691ec8f9",
+    "docs/validation/assets/source-action-recovery/multichunk-sync.json": "1b873b241f0b154d71d897c5af1d494eadc92974624f2e6b79d9ade7376e79db",
+    "docs/validation/assets/source-action-recovery/omission-check.png": "34515209eafc8ff95906ddd2e74e6a01b76f42187fc4940d4c3bad57481fb2e1",
+    "docs/validation/assets/source-action-recovery/patch-arms-final34.json": "c97ad7404f9076d50f4588b361f0d81df07981eca6fb6f053ac6a192a801b6a6",
+    "docs/validation/assets/source-action-recovery/recovered-undated-evidence.png": "44ed872ede4255a396bfbfc8febd67660d875553cc3ec09325345e4833df3f04",
+    "docs/validation/assets/source-action-recovery/recovery-sync.json": "d43a5c1f59752e57f1625cf6461b33deef095eb63550ff40a8634177b52c45e9",
+    "docs/validation/assets/source-action-recovery/release34-checks.json": "b4fa974ee93f48c1eb161263b316a2072b36e149345a152bbf49b69e56a5ccbe",
+    "docs/validation/assets/source-action-recovery/structured-focused-final.log": "c6fc77bf46053c0dab64151e5281846ee5deca3db56bf1393afcc6b16abd69b0",
+    "docs/validation/assets/source-action-recovery/user-audit-before.log": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3",
+    "docs/validation/assets/source-action-recovery/user-audit-final.log": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3",
+    "docs/validation/assets/source-action-recovery/verified-evaluation.json": "13b74e94f9bb2f4d31733ce2971291df5088cc1e155e8f776511458f81c6f0c7",
+    "docs/validation/assets/source-action-recovery/verified-final34-variant-exits.json": "bb5928686cda2a83e9f284487055ab0b47d0d7a8d92d85010d01d618dac534f8",
+    "docs/validation/assets/source-action-recovery/verified-inputs.json": "7a78e28e8450abdb17eea0fff88e4672bc372b5934d171d5a572a1c9e70b3d6e",
+    "docs/validation/assets/source-action-recovery/verified-model-stage-receipts.json": "b118cbca4dd0399ec2817996220b1698254935545116c14d494a041f47a10bff",
+    "docs/validation/assets/source-action-recovery/verified-sync.json": "c68d9a16828ed28a551321d9ce8e6a9c57d3db39211452d5af3aefd10d5efd34"
+  },
+  "checks": {
+    "backend": {
+      "exit_code": 0,
+      "passed": 1081
+    },
+    "backend_focused_final": {
+      "exit_code": 0,
+      "passed": 207
+    },
+    "frontend": {
+      "exit_code": 0,
+      "passed": 780
+    },
+    "frontend_build": {
+      "exit_code": 0
+    },
+    "default_race": {
+      "exit_code": 0
+    },
+    "engine_suites": [
+      {
+        "source": "default34",
+        "exit_code": 0
+      }
+    ],
+    "patch_arms": [
+      {
+        "arm": "default",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": ""
+      },
+      {
+        "arm": "audit",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: applied\nChronograph event role coverage: already applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": ""
+      },
+      {
+        "arm": "register",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: applied\nChronograph event role register: already applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": ""
+      },
+      {
+        "arm": "meaning",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: applied\nChronograph event role register: already applied\nChronograph event role meaning: already applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": ""
+      },
+      {
+        "arm": "passages",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: applied\nChronograph event role register: already applied\nChronograph event role passages: already applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": ""
+      },
+      {
+        "arm": "coverage",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: applied\nChronograph source action coverage: already applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": ""
+      },
+      {
+        "arm": "inventory",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: applied\nChronograph source action inventory: already applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": ""
+      },
+      {
+        "arm": "inventory-audit",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: applied\nChronograph source action inventory: already applied\nChronograph event role coverage: already applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": ""
+      },
+      {
+        "arm": "inventory-register",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: applied\nChronograph source action inventory: already applied\nChronograph event role register: already applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": ""
+      },
+      {
+        "arm": "inventory-meaning",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: applied\nChronograph source action inventory: already applied\nChronograph event role register: already applied\nChronograph event role meaning: already applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": ""
+      },
+      {
+        "arm": "inventory-passages",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: applied\nChronograph source action inventory: already applied\nChronograph event role register: already applied\nChronograph event role passages: already applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": ""
+      },
+      {
+        "arm": "inventory-coverage",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: applied\nChronograph source action inventory: already applied\nChronograph source action coverage: already applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": ""
+      }
+    ],
+    "variant_tests": [
+      {
+        "arm": "audit",
+        "exit_code": 0,
+        "log": "go-verified-final34-variant-audit.log"
+      },
+      {
+        "arm": "register",
+        "exit_code": 0,
+        "log": "go-verified-final34-variant-register.log"
+      },
+      {
+        "arm": "meaning",
+        "exit_code": 0,
+        "log": "go-verified-final34-variant-meaning.log"
+      },
+      {
+        "arm": "passages",
+        "exit_code": 0,
+        "log": "go-verified-final34-variant-passages.log"
+      },
+      {
+        "arm": "coverage",
+        "exit_code": 0,
+        "log": "go-verified-final34-variant-coverage.log"
+      },
+      {
+        "arm": "inventory-audit",
+        "exit_code": 0,
+        "log": "go-verified-final34-variant-inventory-audit.log"
+      },
+      {
+        "arm": "inventory-register",
+        "exit_code": 0,
+        "log": "go-verified-final34-variant-inventory-register.log"
+      },
+      {
+        "arm": "inventory-meaning",
+        "exit_code": 0,
+        "log": "go-verified-final34-variant-inventory-meaning.log"
+      },
+      {
+        "arm": "inventory-passages",
+        "exit_code": 0,
+        "log": "go-verified-final34-variant-inventory-passages.log"
+      },
+      {
+        "arm": "inventory-coverage",
+        "exit_code": 0,
+        "log": "go-verified-final34-variant-inventory-coverage.log"
+      }
+    ],
+    "binary_sha256": "429324d048926be0614566fcd9e0bc9328327d2acac58086384ab2e77e59f86d"
+  },
+  "activation": {
+    "old_engine_pid": 67228,
+    "engine_pid": 87405,
+    "api_pid_unchanged": 67295,
+    "database_backup": "/private/tmp/delaylama-action-recovery/activation34-backup/graph.db",
+    "binary_backup": "/private/tmp/delaylama-action-recovery/activation34-backup/chronograph-previous",
+    "finished_jobs_archived": 0,
+    "graph_rows_unchanged": true,
+    "table_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    },
+    "config_unchanged": true,
+    "engine_sha256": "429324d048926be0614566fcd9e0bc9328327d2acac58086384ab2e77e59f86d",
+    "health_before": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    },
+    "health_after": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    }
+  },
+  "api_activation": {
+    "old_launcher": 83643,
+    "old_listener": 83724,
+    "new_launcher": 67291,
+    "configuration_change": "None; restart to load source recovery receipt validator",
+    "config_sha256_before": "538f6c5d5258b3a3cca8b25a083e695217ef42584564a554497541f57e8b53ad",
+    "config_sha256_after": "538f6c5d5258b3a3cca8b25a083e695217ef42584564a554497541f57e8b53ad",
+    "journal_rows_unchanged": true,
+    "journal_sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c",
+    "no_existing_contract_reanalysis_submitted": true
+  },
+  "preservation": {
+    "audit": "user-audit-final.log",
+    "user_engine_sources_preserved": 14,
+    "user_artifacts_preserved": 32,
+    "studio_sessions_preserved": 2,
+    "user_prompt_excluded_from_commit": true,
+    "user_layago_folder_excluded_from_commit": true,
+    "existing_user_contracts_reanalyzed": false
+  },
+  "cleanup": {
+    "owned_services_stopped": [
+      77024,
+      77025,
+      37715
+    ],
+    "qa_engine_health_before_stop": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 12,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 734,
+      "episode_count": 42,
+      "node_count": 572,
+      "schema": "general",
+      "status": "ok"
+    },
+    "private_qa_backup_created": true,
+    "owned_browser_tab_closed": 106,
+    "owned_patch_clones_removed": [
+      "patch-arm-final33-default",
+      "patch-arm-final33-audit",
+      "patch-arm-final33-register",
+      "patch-arm-final33-meaning",
+      "patch-arm-final33-passages",
+      "patch-arm-final33-coverage",
+      "patch-arm-final33-inventory",
+      "patch-arm-final33-inventory-audit",
+      "patch-arm-final33-inventory-register",
+      "patch-arm-final33-inventory-meaning",
+      "patch-arm-final33-inventory-passages",
+      "patch-arm-final33-inventory-coverage"
+    ],
+    "user_services_stopped": false
+  }
+}
