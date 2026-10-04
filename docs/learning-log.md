@@ -1997,6 +1997,33 @@ unchanged records. No Laya training, MLX, GLiNER or architecture change occurred
 See the [source boundary audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-organization-boundaries.md)
 for fixtures, measurements, GUI proof, remaining limits and activation evidence.
 
+## L68 — Keep review attempts and labels bound to their own source (2026-10-04)
+
+DelayLama's saved-search UI could replace a historical result with the latest
+search on refresh or with a slower asynchronous response after another selection.
+Selection now retains the job ID, cancels obsolete observations and preserves the
+historical result while polling an active search. Human-readable history cards
+retain scope/status/date; importing uses the selected checked originals and
+bounded history. A client guard blocks new submissions when that history contains
+active work. It is not a cross-client/server concurrency guarantee.
+
+For Laya datasets, bind reviewer decisions to the document hash, finding identity,
+actual checked run and prompt version. Do not turn all search suggestions or
+iteration notes into supervised labels. Quote presence, semantic role/direction,
+missing information and explicit human acceptance need separate annotations.
+Repeated recovery attempts on one contract are correlated observations, not
+independent evaluation examples. Historical context may improve prompt proposals;
+its inclusion alone does not establish better extraction or justify input pruning.
+
+Verification used 605 frontend tests, 15 backend source-search tests, a production
+build and native browser navigation over real scoped HTTP endpoints. Three saved
+search records were controlled fixtures on a copied actual extraction graph;
+there were no new LLM or training calls. Selected-source handoff and unchanged
+graph tables were checked. These are workflow results, not semantic model scores.
+The next auxiliary-model comparison still needs independent contract families,
+necessary-clause/amendment recall, false support and end-to-end latency, with a
+full-source fallback. See the [review audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-search-history.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
