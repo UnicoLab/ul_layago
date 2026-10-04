@@ -2733,6 +2733,46 @@ The earlier full API race timeout and bundle-size warning remain limitations.
 See the [date-role audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-event-date-roles.md)
 and [shared receipt](validation/delaylama-event-date-roles-20261004.json).
 
+## L89 — Actor attribution needs its own protocol and evaluation denominator (2026-10-04)
+
+DelayLama's relation prompt omitted real performers and confused action with
+legal responsibility. Required performer cards for every registered Event now
+carry explicit actor/event references and names, candidate/unresolved/not-applicable
+status and original quotations. Actor eligibility comes from the ontology,
+including OPC. Denial of liability does not erase action; a plan/deadline or unsent
+notice does not establish performance. Source/name binding is a transport gate:
+a deterministic wrong-actor counterexample still passes a located quotation.
+
+Thirteen synthetic supplied-register development cases were frozen before the
+candidate. The prior default retains 5/16 declared links plus one extra; initial
+cards retain 16/16 plus one unsupported affected relation from adjacent actions.
+Requiring an explicit affected premise yields 16/16 with zero extras, 13/13 exact
+cases in another draw. Retain the failed arm. These correlated development cases
+are not independent contract quality or a causal estimate of prompt gains.
+
+One fresh French source/browser run retains four performers but still misses the
+contractor's actual suspension. Separate English/French final source draws retain
+six declared performers and two recipients, with exact unique source spans and
+scoped model-candidate labels; an English deadline remains absent as an Event.
+A schedule issuance was mistyped as OPC. Verb expansion alone failed. The final
+strict dated actor-action collision branch changes the identical actual extraction
+SQLite replay from 3/4 to 4/4 Event candidates, leaving actor identity undated.
+The replay also exposes a wrong generic date association to an unrelated deadline.
+Registration, role attribution, source recall and broad graph associations need
+separate denominators and regression gates.
+
+For reusable training, do not label matching quotations or model support verdicts
+as gold meaning. Include wrong actors, negation, duties, plans, unsent notices,
+independent adjacent actions and date/clause misbinding. Split contract families
+and templates before training; check necessary-premise coverage before shortlisting.
+No new Laya/GLiNER training, MLX benchmark or architecture promotion took place.
+Full Go/focused race, 859 backend, 724 frontend and five clean patch arms pass;
+the prior full API race timeout, bundle warning and browser CSV delivery limit
+remain. The live default binary/API were activated with user data/settings preserved.
+
+See the [performer audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-event-performers.md)
+and [shared receipt](validation/delaylama-event-performers-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

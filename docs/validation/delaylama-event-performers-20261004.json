@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-04",
+  "finding": "L89",
+  "source_repository": "https://github.com/UnicoLab/delaylama",
+  "source_receipt": "docs/validation/2026-10-04-event-performers.json",
+  "source_receipt_sha256": "f48eea73c9ef39d8687544d85ffb2aa22564879d4af2b145690ebaec8aa0cc71",
+  "scope": "Synthetic development evaluation and end-to-end engineering checks; not independent real-contract certification",
+  "fixture_hashes": [
+    {
+      "path": "scripts/fixtures/event-performer-checks.json",
+      "sha256": "fe193a80546677548f5b28c6f5aed6e14f47deacccf1c808a06b37fb7db5a3bd"
+    },
+    {
+      "path": "scripts/fixtures/event-performer-contracts.json",
+      "sha256": "10257eed1d54e44b73881c90802366f485f22a45e9c26848664a5fde6a468ed1"
+    },
+    {
+      "path": "scripts/fixtures/event-issued-schedule-replay.json",
+      "sha256": "f0fe8ed0e78656e9874a28f4b0b14e75344a61cbe20a807562fb40e750072b92"
+    }
+  ],
+  "model": "gemini-3.1-flash-lite",
+  "register_comparison": [
+    {
+      "arm": "baseline",
+      "retained_expected": 5,
+      "unexpected": 1,
+      "exact_cases": 6,
+      "cases": 13,
+      "declared_links": 16
+    },
+    {
+      "arm": "candidate",
+      "retained_expected": 16,
+      "unexpected": 1,
+      "exact_cases": 12,
+      "cases": 13,
+      "declared_links": 16
+    },
+    {
+      "arm": "candidate-v2",
+      "retained_expected": 16,
+      "unexpected": 0,
+      "exact_cases": 13,
+      "cases": 13,
+      "declared_links": 16
+    }
+  ],
+  "full_source_final_declared_links": 8,
+  "registration_replay_events": [
+    3,
+    3,
+    4
+  ],
+  "no_new_model_training": true,
+  "remaining": [
+    "Independent real-contract semantic evaluation",
+    "French suspension event omitted",
+    "English completion deadline absent as Event in final draw",
+    "Transmission category needs human review",
+    "Generic date/clause association errors",
+    "Source location and ref/name binding do not certify semantic support",
+    "Affected/causal human correction paths",
+    "Reliable prompt promotion gate",
+    "Held-out Laya calibration and necessary-premise coverage",
+    "Browser CSV delivery unconfirmed in previous pass"
+  ],
+  "engineering_checks": {
+    "backend": 859,
+    "frontend": 724,
+    "full_go": true,
+    "focused_race": true,
+    "clean_patch_arms": 5
+  }
+}
