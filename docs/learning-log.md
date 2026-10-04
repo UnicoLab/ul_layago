@@ -3045,6 +3045,54 @@ architecture or MLX acceleration result was produced.
 See the [action-first and review audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-action-first-comparison-review.md)
 and [shared receipt](validation/delaylama-action-first-comparison-review-20261004.json).
 
+### L98 — More connected context improves retrieval, not entailment
+
+**Observed (DelayLama, 2026-10-04):** node context now pages every scoped
+Chronograph collection, retains direction and edges between boundary nodes, and
+can explore an entire connected component without arbitrary total graph/body/quote
+ceilings. Exact original document hashes, offsets, clause references and conditions
+accompany review. Generic graph `status=validated` was mistakenly available as a
+contract fact: it is now excluded from model context. Curation is not approval,
+legal effectiveness or authenticated semantic adjudication.
+
+The multi-step extraction path previously reused generic cached context and cut
+it at 6,000 characters. Current topic retrieval replaces that shortcut with whole
+original paragraphs and connected facts, preserving complete structured input.
+Model budgets remain separate from graph browsing and expose omissions. Source
+rechecks bind their neighbourhood and originals in the captured finding digest.
+Lexical anchors, passage hashes and graph paths do not establish entity identity,
+causation, applicability or completeness.
+
+Eight fresh event source checks, one browser graph recheck (two calls), and four
+amendment core runs produced **fourteen recorded model calls** on inspected invented
+fixtures. The semantic gate failed. A literal actor/date guard replay withheld a
+wrong cause but still allowed another actor's duration to be assigned to closure.
+Graph context exposed an already merged closure/suspension node; it did not repair
+it. An explicit manual three-original graph fixture verified distributed-source
+retrieval, not model graph extraction. The final amendment run used seven normal
+identify seeds and received the complete 18,125-character topic bundle. It retained
+approval conditions but still inferred legal ineffectiveness from unrecorded
+approval. No actual approval was established. The proposed deadline no longer
+becomes claim impact through application normalisation.
+
+**Implication for Laya:** train/evaluate sufficient-premise retrieval separately
+from occurrence/role binding and contractual applicability. Useful negatives
+include both actors inside the same matched paragraph, same-date distinct actions,
+missing approvals, conditional amendments, changed source versions and graph
+curation flags. Passage keys identify source occurrences, not certified events.
+Neighbourhood shortlists need qualification/amendment recall across disconnected
+clauses and long contracts; report every budget omission and per-stage failure.
+Independent adjudication and story/template/language splits remain required before
+synthetic model suggestions can become support labels.
+
+The full suites passed 976 backend and 767 frontend tests; final focused checks,
+actual API guards, browser highlights/direction and user data preservation passed.
+The model semantic failures remain documented. No Laya/GLiNER weights, training,
+MLX or supervisor result was changed. See the
+[graph context audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-graph-neighborhood-support.md),
+[implementation design](https://github.com/UnicoLab/delaylama/blob/main/docs/contract-graph-context.md)
+and [shared receipt](validation/delaylama-graph-neighborhood-support-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
