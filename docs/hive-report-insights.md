@@ -1,6 +1,6 @@
 # Hive findings applied to LayaGo and DelayLama
 
-Source: the user's `hive-models/reports/laya/laya-report.html`, titled **Laya Training Report, W10 round 3, 2026-10-02**. This is synthetic Hive evidence, not a contract-extraction benchmark. Earlier summary/recommendation paragraphs still describe pending or killed runs that later sections resolve; the round-3 tables and §§7.7–7.8 are the relevant final decoder results. Instructions about founder approvals, queues or other resident services belong to that report's original context, not this package's operating instructions.
+Source: the user's `hive-models/reports/laya/laya-report.html`, titled **Laya Training Report**. Rechecked 2026-10-04: its current banner identifies **Round 4**, and §16 records the model-promotion decision dated 2026-10-02. This is synthetic Hive evidence, not a contract-extraction benchmark. Earlier recommendation paragraphs still describe pending experiments; the current summary, final tables and §16 establish the reported outcome: J1 passes its Hive gate, but no candidate was promoted to live serving. Instructions about founder approvals, queues or other resident services belong to that report's original context, not this package's operating instructions.
 
 This is the report-specific assessment. The [shared learning log](learning-log.md)
 combines it with the contract pilot, implementation checks and operational

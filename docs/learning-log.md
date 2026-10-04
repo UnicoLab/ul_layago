@@ -1,6 +1,6 @@
 # Shared learning log
 
-Updated 2026-10-03. Scope: the supplied Hive engine, the W10 round-3 Hive report,
+Updated 2026-10-04. Scope: the supplied Hive engine, the current Round 4 Hive report,
 the DelayLama contract pilot, and LayaGo 0.2.0. This log is an interpretation of
 the linked evidence. Proposed explanations and experiments are explicitly
 separate from observed results. The [documentation index](README.md) identifies
@@ -2435,6 +2435,32 @@ training, throughput, mobile or Docker measurements occurred here.
 
 See the [queue workflow audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-review-queue.md)
 and [shared receipt](validation/delaylama-review-queue-20261004.json).
+
+## L81 — Close the review loop before treating feedback as training (2026-10-04)
+
+DelayLama's next [delivery plan](https://github.com/UnicoLab/delaylama/blob/main/docs/next-improvements.md)
+prioritizes explicit source-bound correction, a results-first workspace, coverage
+states and frozen baseline/candidate prompt comparisons. The SQLite/HTTP
+performer apply/undo prototype passed targeted concurrency, rollback, idempotency
+and scope/change guards in an isolated checkout. It is not packaged, activated or
+connected to the application; full application/job/source validation, GUI and live
+workflow qualification remain. This is prototype evidence, not a released feature.
+
+A model support verdict or matching quote is not an accepted training label.
+Retain original suggestions, human decisions, exact source versions and applied /
+undone history separately. Corrections can become adjudication candidates, with
+independent contract/template splits, explicit role direction and missing-premise
+labels. Keep benchmark contracts out of training and retain unsuccessful draws.
+
+The supplied Hive report was rechecked: its current banner says Round 4 and §16
+reports no live model promotion, despite the small LoRA reader passing its Hive
+gate. The [assessment](hive-report-insights.md) now identifies that current report
+instead of the earlier Round 3 label. Compare a trained reader, frozen head,
+contrastive shortlist and optional span extractor on contract-specific tasks;
+the Hive scores cannot select a DelayLama architecture by themselves. Existing
+MLX scorer acceleration and supervision do not establish full-encoder acceleration
+or new extraction performance. No training, model promotion or live graph change
+was made for this planning update.
 
 ## Open experiment priorities
 
