@@ -2651,6 +2651,43 @@ the earlier full API race timeout remains unresolved.
 See the [startup/profile audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-startup-schema.md)
 and [shared receipt](validation/delaylama-startup-schema-20261004.json).
 
+## L87 — Recover registration without manufacturing semantic labels (2026-10-04)
+
+DelayLama retained a planning transmission as Planning because its occurrence
+guard missed dated journal language in the historical present. A registered actor,
+supported finite dispatch wording, action-specific title, explicit same-clause
+date and original quote now preserve a reviewable Event candidate. Seventeen
+new storage cases and direct subject/title checks retain duties, future/negative
+wording, document labels, unrelated dates and missing actors as negatives. A
+source supplement can register a newly named company; an initial test incorrectly
+treated that actor as unregistered, so its assumption was corrected and the
+helper's exact-boundary negative is tested independently.
+
+The frozen actual L86 output changes three Events plus one Planning mention to
+four Events without another provider draw. One fresh original-source job yields
+five Events, including the correctly dated transmission but also a June completion
+deadline whose planned/observed role is unresolved. No performers are proposed,
+and the closure-to-March-start affected link lacks occurrence-specific support.
+More stored candidates do not establish better semantic accuracy.
+
+A targeted performer source check returns Horizon with the exact G-2 quote. The
+GUI prepares a candidate link preview and requires human review; no link is applied
+and graph rows remain unchanged. That same recheck also calls the transmission's
+"decision" category supported merely from the record of transmission. Preserve
+this failed semantic check, rather than using its support verdict as a training
+label. Separate registration, quote location, date role, category, role direction
+and human acceptance in datasets and promotion gates.
+
+The chronology and performer-preview visual check exposed low-contrast hover
+text and a faint citation highlight. Scoped hover styles and contextual yellow
+marks restore readability in both themes. Full Go, agents/intelligence races,
+22 Python patch tests, 56 frontend surface tests, build and five patch arms pass.
+Earlier broad frontend/backend checks and the full API race timeout remain
+historical evidence. No new Laya/GLiNER training or speed measurement occurs.
+
+See the [dispatch/UX audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-dated-dispatch.md)
+and [shared receipt](validation/delaylama-dated-dispatch-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
