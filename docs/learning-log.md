@@ -2773,6 +2773,39 @@ remain. The live default binary/API were activated with user data/settings prese
 See the [performer audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-event-performers.md)
 and [shared receipt](validation/delaylama-event-performers-20261004.json).
 
+## L90 — Connectivity is not a scalar-binding label (2026-10-04)
+
+DelayLama's generic orphan linker associated scaffold erection with an unrelated
+completion deadline because the endpoint was nearby. Its justification asserted
+that proximity established qualification; a later healing pass could repeat it.
+Both scalar paths now require original premises. Event date candidates match the
+explicit date text inside a unique original event passage. Other values/references
+need literal same-sentence mentions. Repeated names require a unique supporting
+passage. Original UTF-8 projection prevents case folding from shifting offsets.
+Surviving associations stay unverified; same-sentence location is not meaning.
+
+The identical actual extraction replay through SQLite removes one wrong deadline
+edge while preserving all four Events and date-role metadata. Positive SQLite/
+filedb tests retain a supported date with exact original offsets; negative cases
+cover cross-sentence values, different dates, fabricated/repeated passages,
+foreign scope and forged byte offsets. A fresh synthetic browser/model run retains
+three actual action candidates, performers, notice recipient and a planned unsent
+reminder, without that date edge. Its completion deadline remains absent as an
+Event. Reload and production CSV contents pass; browser download observation
+times out, so file delivery is still unconfirmed.
+
+For training, retain scalar-binding mistakes even if both names/dates occur in
+the document. Separate transport/location, association, date role and adjudicated
+meaning; do not promote connected-ratio gains into gold labels. Conservative
+location guards can lose cross-sentence candidates, requiring independent
+necessary-premise recall and fallback evaluation. General content healing remains
+a separate semantic gate. No new Laya/GLiNER training or acceleration measurement
+was performed. Full Go/final focused race, 725 frontend, 29 patch checks and five
+clean patch arms pass. The tested binary is active with user data/settings preserved.
+
+See the [scalar association audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-associations.md)
+and [shared receipt](validation/delaylama-source-associations-20261004.json).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

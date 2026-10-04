@@ -20,6 +20,7 @@ do not confer accuracy or calibration on another application's tasks.
 
 | Record | What it establishes |
 | --- | --- |
+| [DelayLama scalar associations, 2026-10-04](validation/delaylama-source-associations-20261004.json) | Original-premise date/value binding, exact Unicode offsets, frozen wrong-deadline regression, fresh chronology and retained export/recall limits; L90 |
 | [DelayLama performer checks, 2026-10-04](validation/delaylama-event-performers-20261004.json) | Per-event attribution protocol, retained affected-relation failure, dated issuance replay, fresh directed-role checks and separate generic date-association error; L89 |
 | [DelayLama results first, 2026-10-04](validation/delaylama-results-first-20261004.json) | Contract/event overviews, source preview isolation, actual saved model jobs and retained evidence/graph gaps; L84 |
 | [DelayLama event representations, 2026-10-04](validation/delaylama-event-representations-20261004.json) | Whole Unicode identifiers, quote versus source-job representations, retained occurrence/role/schema gaps and failed full race sweep; L85 |

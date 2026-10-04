@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-04",
+  "finding": "L90",
+  "source_repository": "https://github.com/UnicoLab/delaylama",
+  "source_receipt": "docs/validation/2026-10-04-source-associations.json",
+  "source_receipt_sha256": "6b25d379c47819a72ea6714ba5ac1c9b465e3ac6adc49475620abb94173acd06",
+  "patch": {
+    "file": "patches/chronograph/source-scalar-associations.patch",
+    "sha256": "cd74b72ea86d679d6caabf9f98ea38cc01847184448cc34a94661361fc82a78e",
+    "default_index": 22
+  },
+  "scope": "Original-premise engineering repair and synthetic full-stack observation, not independent contract certification",
+  "frozen_sqlite_wrong_deadline_edges": [
+    1,
+    0
+  ],
+  "event_metadata_preserved": true,
+  "fresh_directed_role_spans": [
+    {
+      "from": "Granite Works Ltd",
+      "to": "Submission of administrative insurance confirmation",
+      "relation": "RESPONSIBLE_FOR",
+      "evidence": {
+        "citation": {
+          "char_end": 729,
+          "char_start": 632,
+          "source_id": "source:original-tamarack-execution-register"
+        },
+        "justification": "The sentence directly attributes the action of sending the confirmation to Granite Works Ltd.",
+        "provenance": "llm",
+        "source_text": "On 17 May 2047, Granite Works Ltd sent Tamarack Council an administrative insurance confirmation."
+      }
+    },
+    {
+      "from": "Maple OPC Ltd",
+      "to": "Issuance of updated schedule",
+      "relation": "RESPONSIBLE_FOR",
+      "evidence": {
+        "citation": {
+          "char_end": 549,
+          "char_start": 491,
+          "source_id": "source:original-tamarack-execution-register"
+        },
+        "justification": "The sentence directly attributes the action of issuing the schedule to Maple OPC Ltd.",
+        "provenance": "llm",
+        "source_text": "On 16 May 2047, Maple OPC Ltd issued the updated schedule."
+      }
+    },
+    {
+      "from": "Granite Works Ltd",
+      "to": "Erection of temporary scaffold",
+      "relation": "RESPONSIBLE_FOR",
+      "evidence": {
+        "citation": {
+          "char_end": 435,
+          "char_start": 370,
+          "source_id": "source:original-tamarack-execution-register"
+        },
+        "justification": "The sentence directly attributes the action of erecting the scaffold to Granite Works Ltd.",
+        "provenance": "llm",
+        "source_text": "On 16 May 2047, Granite Works Ltd erected the temporary scaffold."
+      }
+    },
+    {
+      "from": "Submission of administrative insurance confirmation",
+      "to": "Tamarack Council",
+      "relation": "NOTIFIED",
+      "evidence": {
+        "citation": {
+          "char_end": 729,
+          "char_start": 632,
+          "source_id": "source:original-tamarack-execution-register"
+        },
+        "justification": "The text explicitly states the action of sending the confirmation and identifies Tamarack Council as the recipient.",
+        "provenance": "llm",
+        "source_text": "On 17 May 2047, Granite Works Ltd sent Tamarack Council an administrative insurance confirmation."
+      }
+    }
+  ],
+  "checks": {
+    "full_go": true,
+    "final_focused_race": true,
+    "frontend": 725,
+    "clean_patch_arms": 5,
+    "patch_stack": 29
+  },
+  "remaining": [
+    "Independent real-contract semantics and necessary-premise recall",
+    "Conservative location guards may leave unsupported or ambiguous scalars unlinked; no recall benchmark",
+    "Existing user rows are not migrated",
+    "English deadline absent as Event in this fresh draw",
+    "French suspension omission remains from prior pass",
+    "Remaining generic content-healing and model associations need semantic review",
+    "Browser CSV delivery unconfirmed",
+    "Hardcoded standard-port status/debug labels appear transiently in isolated nonstandard-port QA",
+    "No new Laya/GLiNER training or speed measurement"
+  ],
+  "no_new_training": true
+}
