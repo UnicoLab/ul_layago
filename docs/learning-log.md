@@ -2063,6 +2063,33 @@ No Laya training, GLiNER, MLX, supervisor or architecture change occurred here.
 See the [connection audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-connection-verification.md)
 for fixtures, scores, operational checks, GUI proof and remaining limits.
 
+## L70 — Review visibility and scope must survive retries (2026-10-04)
+
+DelayLama now propagates saved source-review concerns into roles, graph connections,
+fact lists, chronology and CSV notes. A later failed/pending attempt retains the
+previous completed judgment; a newer finding-only search cannot clear a separate
+role-search concern. Keep the newest completed record for each requested field
+scope and inspect the actual unresolved job, rather than substituting the newest
+result. Date/source/direction hashes and current original quotations guard display
+support. A partial snapshot makes endpoint verification unavailable, not changed.
+
+For reusable Laya datasets, preserve document/finding/prompt/run/field-scope identity,
+model suggestions, exact source checks, unresolved outcomes and explicit reviewer
+acceptance separately. Failed retries do not create negative semantic labels, and
+an unknown relationship is not a contradiction. Broader or narrower search scopes
+are not interchangeable evaluation examples. A fresh UI, source match and stored
+review history cannot certify extraction completeness or independent correctness.
+
+The live workflow reused two prior saved LLM searches on a copied synthetic graph
+and added one declared failed retry with no model call. Original jobs and all graph
+rows stayed unchanged. Changing/restoring the registered original invalidated and
+restored both summaries without rerunning models. Native browser checks confirmed
+roles, focused findings, chronology, both themes and refresh recovery. An API-restart
+failure exposed missing project/source recovery and empty-desk graph-view resets;
+both were repaired. Final suites passed 742 backend/SDK and 618 frontend tests.
+No Laya training, GLiNER, MLX, supervisor or architecture change occurred. See the
+[review propagation audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-review-projection.md).
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
