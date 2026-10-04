@@ -2248,6 +2248,37 @@ support. Treat data identity and human decisions independently.
 See the [resume audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-review-resume.md)
 and [shared receipt](validation/delaylama-review-resume-20261004.json).
 
+## L75 — A vocabulary observation does not identify a queued model run (2026-10-04)
+
+DelayLama’s source graph uses the observed general vocabulary: milestone, delay,
+decision, change and deadline. A previously retained notice/decision error must
+be assessed against these permitted labels before concluding that better role
+links or a new encoder solve event meaning. The contract-claims preset includes
+more specific labels, but remains an unmeasured candidate. Exact quotations and
+performer links cannot certify classification.
+
+New analysis runs retain bounded pre-submission vocabulary observations and a
+canonical schema digest without private prompt text. The GUI shows the current
+vocabulary, absent standard notice/suspension labels, legacy unknown metadata
+and changed configuration digests. Schema-read failures do not resubmit work.
+780 backend tests, 661 frontend tests and a production build pass; the isolated
+browser used existing actual-model synthetic-contract results, submitted no new
+model jobs and preserved source/result bytes and graph fingerprints.
+
+The engine’s schema remains shared and mutable. This observation does not prove
+which settings a queued worker used. Before model comparisons or new Laya label
+training, freeze task configuration and separate actual run identity from current
+service settings. Labels for notices, suspensions, duties and proposals need an
+explicit policy and reviewed independent examples. Score occurrence identity,
+classification, roles and spans separately. A schema expansion cannot be counted
+as improved extraction without measured benefit; Laya must retain full-source
+fallback until necessary-clause and amendment recall gates pass.
+
+See the [vocabulary audit and work priorities](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-event-vocabulary.md)
+and [shared receipt](validation/delaylama-event-vocabulary-20261004.json).
+No new Laya training, GLiNER comparison, MLX measurement or accuracy certification
+occurred in this pass.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.

@@ -20,6 +20,7 @@ do not confer accuracy or calibration on another application's tasks.
 
 | Record | What it establishes |
 | --- | --- |
+| [DelayLama event vocabulary, 2026-10-04](validation/delaylama-event-vocabulary-20261004.json) | Observed schema categories, bounded run metadata, shared-setting limits and contract-quality priorities; L75 |
 | [DelayLama exact evidence resume, 2026-10-04](validation/delaylama-review-resume-20261004.json) | Complete-context navigation, citation-list binding, async races and actual saved-analysis browser checks; L74 |
 | [DelayLama scoped navigation, 2026-10-04](validation/delaylama-review-navigation-20261004.json) | Contract/agent/layer isolation, graph reload and preservation checks; L73 |
 | [DelayLama role meaning, 2026-10-04](validation/delaylama-role-meaning-20261004.json) | Synthetic directed role sets, incoming-cause schema, corrected proposal labels, preserved duplicate-event failure and actual GUI coverage; L72 |
