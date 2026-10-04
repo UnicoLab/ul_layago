@@ -1891,6 +1891,56 @@ the experiment quality failures remain visible. User graph/session/source hashes
 stayed unchanged. See the
 [indexed-source audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-source-passages.md).
 
+## L66 — Occurrence identity must precede graph-derived training labels (2026-10-04)
+
+DelayLama's recorded French extraction had short Event concepts `F1`/`F2` beside
+full descriptions of the same two source occurrences. SQLite replay produced four
+dated Event nodes despite an otherwise matching expected relationship set. A
+narrow default repair now enriches the existing concept when one explicit labelled
+dated heading, a uniquely located shared original quote, the same exact day and
+one matching Event concept agree. Existing IDs and relationship endpoints survive;
+self-associations are excluded. It does not establish semantic correctness.
+
+The captured replay now stores two occurrences with readable F1/F2 identifiers.
+Filedb and SQLite regression tests fail before the change with four instead of
+two and pass after it, including two distinct events on the same day. Actor,
+related-name, missing/inferred/partial-date, repeated-quote, multi-heading and
+duplicate-candidate cases withhold binding. Foreign project/tenant and historical
+episode rows cannot be reused. An injected update failure remains reported and
+does not create a duplicate replacement. Existing graph rows are not migrated.
+
+Four frozen synthetic originals were also tested through fresh configured Gemini
+extraction, actual storage and scoped REST before/after: eight jobs completed and
+passed the declared event-count/day, literal-quote, scope and self-link checks.
+Neither fresh arm emitted the short-identifier duplicate pattern, so these runs
+show observed regression checks rather than a measured fresh extraction gain.
+The replay contains normalized properties from a recorded generation; it is not
+an independent gold-labelled extraction trial. Noop embeddings were used in the
+fresh comparison. Role completeness and semantic direction remain unresolved.
+
+For reusable Laya data, separate source span location, occurrence identity, actor
+identity, role association, relation direction and human acceptance. Include
+same-day distinct events, repeated headings/quotes and cross-paragraph corrections
+as negatives. Deduplicate verified occurrence identities before sampling
+graph-derived training examples, while preserving original evidence and rejected
+bindings. Never promote successful storage or exact quotation into automatic
+positive semantic labels. Report independent contract-family evaluation separately
+from replay, register permutations and synthetic fixture cardinality.
+
+The replay also exposed a malformed organization name `F1.\nArdoise SARL` from
+cross-line source matching. Study source-label/actor boundaries without discarding
+legitimate multiline company names. This is separate from occurrence binding and
+remains open. Readable identifiers now support graph/chronology navigation and
+CSV export without displaying internal vectors or identity-basis fields.
+
+602 frontend tests, 704 backend/SDK tests, the production build, full Go suite,
+agents/intelligence race checks and clean default/optional patch compatibility
+passed. The activated default engine preserved every existing graph row,
+configuration, protected source/artifacts and checked Studio sessions. No Laya
+training, MLX, GLiNER or architecture change occurred in this pass. See the
+[occurrence identity audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-04-occurrence-alias.md)
+for frozen fixtures, replay tooling, limits and operational evidence.
+
 ## Open experiment priorities
 
 These are proposed investigations, not implemented quality improvements.
