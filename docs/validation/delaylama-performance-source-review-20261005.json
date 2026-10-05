@@ -1,0 +1,261 @@
+{
+  "date": "2026-10-05",
+  "scope": "Original-source performance classification, enclosing action citations and independent calendar suppression; declared synthetic checks only.",
+  "full_semantic_qualification": false,
+  "all_final_declared_checks_passed": true,
+  "all_final_source_inventory_tasks_succeeded": false,
+  "final_inventory_failures": 1,
+  "model": "Gemini gemini-3.1-flash-lite",
+  "qualification_embeddings": "noop in owned QA only; normal user stack retains Gemini embeddings",
+  "candidate_passes": 1,
+  "critic_passes": 0,
+  "schema_preset": "construction_claims",
+  "accepted_analysis_jobs": 56,
+  "terminal_done_jobs": 56,
+  "source_inventory_task_requests": 56,
+  "separate_performance_task_requests": 2,
+  "additional_task_requests": 58,
+  "provider_http_retry_count": "not instrumented",
+  "final_engine_source_commit": "ec22df4593ff29898e12f10c073f0ea35cf4050a",
+  "final_engine_sha256": "0278a15eae5f3106f6c6850c9c7e12433873edcf3e097e095720aedd08199e73",
+  "patches_added": [
+    "undated-performance-review",
+    "undated-calendar-eligibility",
+    "independent-performance-review"
+  ],
+  "metrics": {
+    "final": {
+      "cases": 14,
+      "declared_actions": 56,
+      "distinct_actions": 56,
+      "performer_sets": 56,
+      "performer_evidence": 56,
+      "performance_assessments": 56,
+      "calendars": 56,
+      "association_calendar_checks": 56,
+      "association_edges": 111,
+      "json_field_artifacts": 0,
+      "required_causation": {
+        "passed": 6,
+        "declared": 6
+      },
+      "forbidden_causation": {
+        "passed": 28,
+        "declared": 28
+      },
+      "forbidden_observed_actions": {
+        "passed": 12,
+        "declared": 12
+      },
+      "declared_durations": {
+        "passed": 6,
+        "declared": 6
+      },
+      "declared_impacts": {
+        "passed": 6,
+        "declared": 6
+      },
+      "forbidden_durations": {
+        "passed": 36,
+        "declared": 36
+      },
+      "separate_performance_tasks": 2,
+      "separate_performance_reassessed": 2,
+      "source_inventory_tasks": 56
+    },
+    "phases": [
+      {
+        "phase": "initial",
+        "jobs": 14,
+        "positive_performance_passed": 51,
+        "declared": 56,
+        "all_declared_checks_passed": false,
+        "inputs": "inputs.json",
+        "model_receipts": "model-stage-receipts.json",
+        "evaluation": "evaluation.json"
+      },
+      {
+        "phase": "context",
+        "jobs": 14,
+        "positive_performance_passed": 55,
+        "declared": 56,
+        "all_declared_checks_passed": false,
+        "inputs": "final-inputs.json",
+        "model_receipts": "final-model-stage-receipts.json",
+        "evaluation": "final-evaluation.json"
+      },
+      {
+        "phase": "calendar",
+        "jobs": 14,
+        "positive_performance_passed": 54,
+        "declared": 56,
+        "all_declared_checks_passed": false,
+        "inputs": "calendar-inputs.json",
+        "model_receipts": "calendar-model-stage-receipts.json",
+        "evaluation": "calendar-evaluation.json"
+      },
+      {
+        "phase": "independent",
+        "jobs": 14,
+        "positive_performance_passed": 56,
+        "declared": 56,
+        "all_declared_checks_passed": true,
+        "inputs": "independent-inputs.json",
+        "model_receipts": "independent-model-stage-receipts.json",
+        "evaluation": "independent-evaluation.json"
+      }
+    ],
+    "total_accepted_jobs": 56
+  },
+  "baseline_readonly": {
+    "positive_performance_proofs": 37,
+    "declared": 52,
+    "model_requests": 0,
+    "graph_writes": 0,
+    "note": "Stronger gate applied to archived default34 results; previous gate did not declare positive performance roles."
+  },
+  "validation": {
+    "backend": {
+      "exit_code": 0,
+      "passed": 1085
+    },
+    "frontend": {
+      "exit_code": 0,
+      "passed": 783
+    },
+    "frontend_build": {
+      "exit_code": 0
+    },
+    "default_race": {
+      "exit_code": 0
+    },
+    "engine_suites": [
+      {
+        "source": "default37",
+        "exit_code": 0
+      }
+    ],
+    "variant_tests": [
+      {
+        "arm": "audit",
+        "exit_code": 0
+      },
+      {
+        "arm": "register",
+        "exit_code": 0
+      },
+      {
+        "arm": "meaning",
+        "exit_code": 0
+      },
+      {
+        "arm": "passages",
+        "exit_code": 0
+      },
+      {
+        "arm": "coverage",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-audit",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-register",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-meaning",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-passages",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-coverage",
+        "exit_code": 0
+      }
+    ]
+  },
+  "patch_combinations": 12,
+  "patch_reapplication_idempotent": true,
+  "native_json_final_inventory_tasks": 14,
+  "native_json_final_performance_tasks": 2,
+  "malformed_failed_response_body_retained": false,
+  "browser": {
+    "owned_port": 5175,
+    "user_port": 5173,
+    "source_exact_highlight_verified": true,
+    "independent_performance_provenance_visible": true,
+    "failed_inventory_receipt_visible": true,
+    "final_console_errors": 0,
+    "owned_tab_closed": true
+  },
+  "activation": {
+    "normal_engine_activated": true,
+    "normal_api_restarted": true,
+    "graph_rows_unchanged": true,
+    "config_unchanged": true,
+    "user_journal_unchanged": true,
+    "existing_contracts_reanalyzed": false,
+    "protected_engine_source_files_unchanged": 14,
+    "saved_artifacts_unchanged": 32,
+    "studio_sessions_unchanged": 2,
+    "preflight_count_correction": "First activation stopped before mutation because its assertion expected 10 optional variants; actual validated set contains 11. Corrected assertion, then activated."
+  },
+  "cleanup": {
+    "owned_services_stopped": [
+      58387,
+      58404,
+      19752
+    ],
+    "owned_tab_closed": "107",
+    "accepted_jobs": 56,
+    "terminal_done_jobs": 56,
+    "current_finished_jobs_archived": 14,
+    "private_sqlite_backup_retained": true,
+    "patch_clones_removed": [
+      "patch-default",
+      "patch-audit",
+      "patch-register",
+      "patch-meaning",
+      "patch-passages",
+      "patch-coverage",
+      "patch-inventory",
+      "patch-inventory-audit",
+      "patch-inventory-register",
+      "patch-inventory-meaning",
+      "patch-inventory-passages",
+      "patch-inventory-coverage",
+      "final-patch-default",
+      "final-patch-audit",
+      "final-patch-register",
+      "final-patch-meaning",
+      "final-patch-passages",
+      "final-patch-coverage",
+      "final-patch-inventory",
+      "final-patch-inventory-audit",
+      "final-patch-inventory-register",
+      "final-patch-inventory-meaning",
+      "final-patch-inventory-passages",
+      "final-patch-inventory-coverage"
+    ],
+    "user_services_untouched_by_cleanup": true
+  },
+  "assets": "assets/performance-source-review",
+  "asset_manifest": "assets/performance-source-review/sha256.json",
+  "limits": [
+    "Known synthetic regression cases plus two newly frozen synthetic cases; final reruns are not blind real-contract validation.",
+    "One of 14 final inventory tasks failed unreadable_response, even though separate classification and all declared graph checks passed.",
+    "Native JSON constrains syntax, not expected output schema; malformed failure body was not retained, so cause is not diagnosed.",
+    "Quotations establish source presence and enclosing action geometry, not correct semantic interpretation or legal effect.",
+    "120 proposals, configured input budget, and 16 KB own-context bounds remain; complete source coverage is unestablished.",
+    "Fixture project metadata defaults to French even for English source text; language metadata correctness was not qualified.",
+    "Normative categories, amendments, dispersed premises, conflicts, PDFs, Laya/GLiNER quality and full model-pipeline call counts remain unqualified."
+  ]
+}

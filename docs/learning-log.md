@@ -3523,3 +3523,71 @@ training designs.
 
 See the [DelayLama report and retained failures](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-action-recovery.md)
 and [shared receipt](validation/delaylama-source-action-recovery-20261005.json).
+
+## L105 — Performance is independent of calendar; source stages need separate receipts (2026-10-05)
+
+**Observed (DelayLama):** the prior declared action gate checked identities,
+performers, calendar values and links without requiring a positive performance
+classification and its enclosing original premise. A read-only stronger gate on
+archived default34 graphs found 37/52 declared performance proofs, with zero
+model requests and zero graph writes. This does not revise the old gate's result;
+it exposes a qualification dimension that was absent.
+
+A reported return with an explicitly unknown date can be observed. An initial
+parsed document date must neither block source classification nor reappear on
+association edges. Clipped role quotations can match an adjacent date while
+omitting their own action, conditions or negation. DelayLama's default patches
+35–37 require an original own-action enclosure, allow exact duplicate inventory
+proposals to reassess unknown undated roles, and add one separate original-context
+classification task for remaining eligible unknown actions. Repeated/foreign
+references and explicit conflicts are withheld. Calendar, actors and effects
+cannot be invented by this classification task; inferred undated calendar
+fallbacks are cleared. These are source-bound model candidates, not approved labels.
+
+**Measured:** four additional 14-case full-stack phases produced 56 accepted,
+terminal `done` jobs. Positive performance checks progressed 51/56, 55/56, 54/56,
+then 56/56; all intermediate failures are retained. The final declared gate passed
+56/56 distinct actions, performer sets/quotations, performance roles/original
+premises, calendars and association-calendar checks. It inspected 111 association
+edges, 6/6 required causes/durations/impacts, 28/28 forbidden causal pairs,
+12/12 unperformed negatives and 36/36 foreign durations, with zero JSON-field
+artifacts. Twelve cases were known regressions; two new synthetic cases were frozen
+before requests. Reruns after fixes are not blind real-contract evaluation. Gold
+was never sent to the model or seeded in graphs.
+
+The run used Gemini `gemini-3.1-flash-lite`, one candidate pass, zero critic passes
+and the construction-claims profile. Noop embeddings were confined to owned QA;
+normal user embeddings remained Gemini. There were 56 inventory task requests and
+two separate classification task requests, not a measured total pipeline/HTTP
+count. Provider retries were not instrumented. Some fixture project language
+metadata defaulted to French despite English originals and remains unqualified.
+
+**Retained failure:** one of fourteen final inventory tasks returned an unreadable
+expected structure despite native JSON mode. Its failed body was not retained,
+so its exact shape and cause are unknown. A separate classification task resolved
+an existing undated return. The browser displays both the failed source-coverage
+receipt and completed performance receipt. Native JSON constrains syntax, not
+semantic or output-schema validity. Full declared graph checks can pass while a
+coverage task fails; never collapse these statuses into one success badge.
+
+Backend 1,085 tests, frontend 783 tests, frontend build, the default Go suite,
+intelligence/agents race checks and eleven optional-engine combinations passed.
+Twelve patch combinations reapplied idempotently. The tested engine/API were
+activated while preserving user graph rows, configuration, job history, saved
+artifacts, Studio sessions and fourteen local edited engine source files. Existing
+contracts were not reanalyzed. Owned QA services and temporary browser/clones were
+cleaned after archiving handles and retaining private backups.
+
+**Training/evaluation lesson:** positive and negative role labels need explicit
+source-premise checks, separately from dates. Include passive returns with unknown
+calendars, conditional actions, cancelled plans, actor/recipient distinctions,
+wrong-role exact quotations and insufficient enclosing text. Require human
+adjudication before converting model source candidates into training targets.
+Retain stage failures and bounded failed outputs for diagnosis; do not train from
+unlocated or conflicting proposals or infer full coverage from a completed graph.
+Compare any Laya/GLiNER acceleration on the same approved premise suite before
+adoption. This audit adds no new Laya quality or MLX training result. Real-contract
+normative roles, dispersed premises, amendments and PDFs remain unqualified.
+
+See the [DelayLama report and retained failures](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-performance-source-review.md)
+and [shared receipt](validation/delaylama-performance-source-review-20261005.json).
