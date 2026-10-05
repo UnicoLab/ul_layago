@@ -4830,3 +4830,44 @@ remain possible. No new Laya training, MLX, OOM-supervision or speed claim follo
 
 [DelayLama contractual predicate report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-contractual-predicates.md)
 · [Shared receipt](validation/delaylama-contractual-predicates-20261005.json).
+
+
+## L131 — Broad candidate scope and historical review qualification (2026-10-05)
+
+A witness belonging to an operative contract can fit inside a broad candidate
+quotation that also contains a separate unsigned amendment. Containment alone is
+not occurrence identity. DelayLama default64 now withholds contractual quotes
+spanning recognized source-unit boundaries, multiple focused relationship
+assertions, or a separate signature assertion. A focused own assertion and its
+wider context remain separate. Physical wrapped lines and an initial own heading
+remain eligible. Formatting is not legal applicability or semantic scope.
+
+A second lesson concerns history. Updating qualification in a graph overview does
+not update a saved detail view that still renders the earlier verdict. Keep the
+historical search intact and return a distinct current assessment against current
+originals/finding. Use it in detail, copied feedback and prompt imports; retain
+both assessments and complete available history for learning. Source/finding
+changes invalidate current qualification rather than silently repairing history.
+Distinguish a failed meaning/scope check from a failed quote or endpoint match.
+
+Go/clean/race, 1,430 backend, 925 frontend/build, twelve fresh/idempotent patch
+combinations and eleven variants pass. Frozen native originals retain the operative
+SC315 candidate, exclude forbidden unsigned links, and retain all 23 expected
+classifications/seven date roles in this draw. A separate controlled browser
+recheck finds the operative passage but keeps a manually supplied broad A316
+proposal unresolved. Status and sanitized prompt context agree; histories and
+stored source graphs remain unchanged. Every user graph table, saved app artifact
+and fourteen engine source edits survive activation.
+
+For LayaGo datasets, annotate focused predicate spans, wider context, instrument
+identity, assertion-unit boundaries, polarity/modality and qualification status
+separately. Add hard negatives that combine an operative agreement and unsigned
+amendment in one quote, including no-heading/same-paragraph cases, line-wrapped
+positive controls and relevant dispersed qualifications. Learn candidate scope
+with an abstain class; verify source versions/coordinates outside learned scores.
+Keep historical failures and current policy assessments separately labelled.
+These development cases are not independent legal training gold. No Laya training,
+MLX speed, OOM supervision or architecture-performance result follows from them.
+
+[DelayLama source-unit report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-contractual-source-units.md)
+· [Shared receipt](validation/delaylama-contractual-source-units-20261005.json).
