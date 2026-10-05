@@ -4089,3 +4089,51 @@ applicability remain unqualified. No new training or acceleration gain is claime
 
 [DelayLama clause-context audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-clause-context.md)
 · [Shared receipt](validation/delaylama-clause-context-20261005.json).
+
+## L116 — Recover structure without certifying discovery (2026-10-05)
+
+DelayLama now makes at most one fresh retry for an unreadable source inventory.
+It preserves the first failed response, uses the same complete original and
+source guards, and shares one 60-second deadline. Initial and retry prompts are
+checked as complete inputs. No failed prefix is salvaged and no failed text,
+graph facts or gold labels enter the fresh task. Cancellation/budget skips and
+failed retries remain explicit; transport, source-location, semantic and output
+limit failures do not trigger another request. This is engine/protocol work,
+not a new Laya or GLiNER quality result.
+
+The unchanged C35/unsigned-amendment development fixture reproduced the exact
+first malformed 4,225-byte response, then exercised one readable retry. It
+improved from 4/13 to **12/13 frozen statement-type checks**. Both deadline
+non-occurrence checks and the inspection actor pass. Sixteen located/classified
+inventory candidates do not imply all source assertions were discovered:
+**“No completion is reported” is still absent as a separate negative statement.**
+The base deadline's explicit date is still withheld because its model-selected
+date passage was omitted. The gold was not changed. Full semantic qualification
+still fails, and this is not an independent benchmark.
+
+Twenty stored action/statement candidates and thirty displayed connections have
+unique exact quotations, source hashes and original spans. This is a source
+binding measurement, not validation of the predicate, meaning, applicability or
+recall. The permission context exposes original Article 9, competing Article 7
+passages, nested exceptions and the unsigned conditional amendment; ambiguity
+remains explicit. The live UI distinguishes a readable retry from a completed
+source/meaning check and keeps raw failed output outside supporting evidence.
+
+Validation passed 1,201 backend tests, 851 frontend tests/build, full engine and
+race checks, 12 idempotent patch combinations and 11 optional variant suites.
+User data, configuration, source edits and journal/history remain preserved.
+Two terminal QA engine handles are archived. Existing user contracts were not
+reanalyzed. No new training, acceleration or architecture improvement is claimed.
+
+For reusable extraction training/evaluation, keep separate gates for response
+validity, source identity, assertion discovery, polarity/modality, own-action date
+premise selection, party roles, graph survival and applicability. Include short
+negative statements adjacent to deadlines, absence-of-record vs positive
+occurrence, separate approval/completion denials, conditional unsigned amendments,
+explicit dates with missing/wrong ranges, Unicode and dispersed clause references.
+Measure missing assertions rather than conditioning recall on returned rows.
+Preserve first failures and frozen expectations when evaluating recovery. Use
+independent contract families before attributing an extraction gain to Laya.
+
+[DelayLama recovery audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-format-recovery.md)
+· [Shared receipt](validation/delaylama-source-format-recovery-20261005.json).
