@@ -4787,3 +4787,46 @@ new Laya training, MLX acceleration or architecture-quality result is claimed.
 
 [DelayLama party roles](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-party-roles.md)
 · [Shared receipt](validation/delaylama-party-roles-20261005.json).
+
+
+## L130 — Own relationship occurrence and focused assertions (2026-10-05)
+
+DelayLama exposed an unsigned-amendment CONTRACTS_WITH proposal that borrowed an
+operative relationship from another part of the same original. Identity and exact
+quote matching do not solve predicate ownership. An agreement between two parties
+does not make every amendment, signature action or party label an operative link.
+
+Default patch63 adds contractual_relationship to the independent blind inventory.
+The model sees original text and endpoint identities; the proposed predicate,
+quotation and previous verdict are withheld. Only afterward does validation bind
+a unique exact focused assertion to the candidate’s own passage and its cited
+context. Negative, proposed, conditional and unknown statements remain reviewable;
+conflicting same-occurrence witnesses withhold support. Contract connections are
+reciprocal, while causation and notice obligations remain directed.
+
+Full Go/race, 1,419 backend, 923 frontend/build, twelve clean/idempotent combinations
+and eleven variant suites pass. SQLite and file-store baseline controls fail on
+default62. Four final frozen native jobs retain an operative SC315 link and reject
+forbidden unsigned A123/A316 links; prior original-overlap criteria retain 23 types
+and seven date roles. Strict prefix mismatches remain documented. A browser recheck
+shows the focused assertion, exact highlight and contextual evidence without
+changing the graph. All user records and fourteen engine source edits survive.
+
+For LayaGo, separate pair similarity from relationship entailment and instrument
+scope. Candidate retrieval can use embeddings, but eligibility should retain
+original instrument/occurrence IDs, source version and exact assertion coordinates.
+Build hard negatives with the same parties in an operative contract and unsigned
+amendment, signature actions without operative-effect statements, proposed or
+conditional appointments, denial/unknown wording, reversed directed predicates,
+repeated quotations and broad context spanning multiple independent assertions.
+Keep original source context and focused predicate spans as separate fields.
+Train an abstain/unknown outcome and evaluate retained positives as well as false
+links withheld; an empty graph is not an accurate graph.
+
+These are synthetic development lessons, not adjudicated training gold. Quote
+containment cannot certify semantics, precedence or legal effect. Broad candidate
+quotes can still require instrument-scope review; omissions and model disagreement
+remain possible. No new Laya training, MLX, OOM-supervision or speed claim follows.
+
+[DelayLama contractual predicate report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-contractual-predicates.md)
+· [Shared receipt](validation/delaylama-contractual-predicates-20261005.json).

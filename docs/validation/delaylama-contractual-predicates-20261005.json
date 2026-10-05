@@ -1,0 +1,527 @@
+{
+  "date": "2026-10-05",
+  "learning": "L130",
+  "scope": "Own-occurrence qualification of CONTRACTS_WITH proposals and saved source searches. Synthetic development controls, not semantic/legal certification.",
+  "engine": {
+    "default_patch_count": 63,
+    "new_patch": "contractual-predicate-ownership.patch",
+    "patch_sha256": "c17b7624039bbdad4552ccc1c14136f99d1029482b6303da215676286897c3f5",
+    "binary_sha256": "c7049b56c22b050e3f93e59eb6c120e43a29006855ee25cb57110f98c2828f62",
+    "development_non_test_go_files": 163,
+    "clean_non_test_go_files": 163,
+    "identical": true,
+    "aggregate_sha256": "3a586d9601d577d0d744801886901b499a777062eecc8cb14e5f84a072087912"
+  },
+  "policy": {
+    "protocol": "source-first-predicate-v1",
+    "independent_inventory": "Full original plus registered endpoint identities; excludes proposed predicate, graph assertion, candidate quote and prior verdict. Candidate original quote is used only after the call.",
+    "contractual_requirement": "Positive actual contractual_relationship witness, not signature_state or party labels. Contract connections reciprocal; cause and notice remain directed.",
+    "occurrence_binding": "Unique original candidate quote; required unique exact predicate_quote inside both candidate quote and one cited context passage. Missing, repeated, unmatched and invalid scopes remain unresolved.",
+    "qualifications": "Negative, conditional, proposed and unknown statements retained; conflicting same-occurrence relationship statements withhold candidate support.",
+    "existing_graph_migration": false,
+    "independent_call_limits": {
+      "pairs": 32,
+      "statements_per_pair": 24,
+      "citations_per_statement": 8,
+      "timeout_seconds": 45
+    },
+    "recheck_own_quote_limit_scalars": 16000,
+    "scope_change": "Server-captured edge source text participates in the finding digest, invalidating reuse when that recorded quote changes.",
+    "historical_unscoped_search": "Cannot validate this occurrence; requires recheck/reanalysis."
+  },
+  "tests": {
+    "backend_passed": 1419,
+    "frontend_passed": 923,
+    "frontend_files": 76,
+    "frontend_build": true,
+    "go_full": true,
+    "go_full_race": true,
+    "clean_go_full": true,
+    "clean_race_packages": [
+      "intelligence",
+      "agents",
+      "reconcile"
+    ],
+    "clean_idempotent_patch_arms": 12,
+    "optional_variant_suites": 11,
+    "default62_sqlite_and_filedb_regression": "Both store the non-signature quotation instead of the operative contract quote; retained failing baseline.",
+    "guards": [
+      "reciprocal contractual endpoints",
+      "directional cause/notice unchanged",
+      "negative/conditional/proposed/unknown",
+      "signature-only withheld",
+      "wrong occurrence",
+      "broad witness context with focused assertion elsewhere",
+      "focused assertion outside citations",
+      "missing focus",
+      "missing/repeated/invented candidate quote",
+      "same-occurrence competing witnesses",
+      "source-captured recheck scope and digest"
+    ],
+    "prompt_go_python_byte_identical": true
+  },
+  "native": {
+    "cases_sha256": "40e3839d6cd8b65e0053f9465eef3d1d262c4952dd1abc31ee0bdd51d127fb18",
+    "source_jobs": 4,
+    "all_done": true,
+    "submissions_per_project": 1,
+    "predicate_gate_pass": true,
+    "focused_positive_gate": {
+      "positive_links": 1,
+      "own_candidate_quote": "Cobalt Estates Ltd contracts with Birch Works Ltd under operative contract SC315.",
+      "focused_assertion": "Cobalt Estates Ltd contracts with Birch Works Ltd under operative contract SC315.",
+      "same_original_occurrence": true,
+      "no_draft_amendment_link": true
+    },
+    "forbidden_unsigned_links": 0,
+    "strict_prefix_types": {
+      "passed": 22,
+      "total": 23
+    },
+    "strict_prefix_dates": {
+      "passed": 6,
+      "total": 7
+    },
+    "original_overlap_types": {
+      "passed": 23,
+      "total": 23
+    },
+    "original_overlap_dates": {
+      "passed": 7,
+      "total": 7
+    },
+    "strict_discrepancy": "French final deadline has a shorter action excerpt within the correct full original deadline quote. Retain strict 22/23 and 6/7 plus independent source-overlap 23/23 and 7/7; no criteria silently replaced.",
+    "original_spans_checked": 218,
+    "context": {
+      "dispersed-notice-en": {
+        "source_candidates": 18,
+        "reached_candidates": 18,
+        "required_fragments": {
+          "Prior written consent from Northmere Employer Ltd": true,
+          "No written consent is recorded": true,
+          "The proposed completion change has not taken effect": true
+        }
+      },
+      "conditional-refusal-fr": {
+        "source_candidates": 9,
+        "reached_candidates": 9,
+        "required_fragments": {
+          "Aucun accord écrit n'est fourni": true,
+          "Aucune suspension n'est rapportée": true
+        }
+      },
+      "operative-contract-and-draft-en": null
+    },
+    "source_statuses": {
+      "dispersed-notice-en": {
+        "located": 135,
+        "ambiguous": 1
+      },
+      "conditional-refusal-fr": {
+        "located": 55,
+        "unavailable": 4,
+        "ambiguous": 1
+      },
+      "operative-contract-and-draft-en": {
+        "located": 26,
+        "unavailable": 2
+      }
+    },
+    "role_gate": {
+      "cases": [
+        {
+          "case": "dispersed-notice-en",
+          "own_label_checks": [
+            {
+              "name": "Northmere Employer Ltd",
+              "role": "client",
+              "bindings": [
+                {
+                  "role": "client",
+                  "status": "source_label_candidate",
+                  "quote": "Northmere Employer Ltd is the employer.",
+                  "original_bytes_round_trip": true,
+                  "role_episode_matches_actor_first_episode": true
+                }
+              ],
+              "api_source_check": true
+            },
+            {
+              "name": "Larch Construction Ltd",
+              "role": "contractor",
+              "bindings": [
+                {
+                  "role": "contractor",
+                  "status": "source_label_candidate",
+                  "quote": "Larch Construction Ltd is the contractor.",
+                  "original_bytes_round_trip": true,
+                  "role_episode_matches_actor_first_episode": true
+                }
+              ],
+              "api_source_check": true
+            },
+            {
+              "name": "Pennant Engineer Ltd",
+              "role": "engineer",
+              "bindings": [
+                {
+                  "role": "engineer",
+                  "status": "source_label_candidate",
+                  "quote": "Pennant Engineer Ltd is the engineer.",
+                  "original_bytes_round_trip": true,
+                  "role_episode_matches_actor_first_episode": true
+                }
+              ],
+              "api_source_check": true
+            }
+          ],
+          "source_roles_not_legal_certification": true
+        },
+        {
+          "case": "conditional-refusal-fr",
+          "own_label_checks": [
+            {
+              "name": "Oseraie Client SA",
+              "role": "client",
+              "bindings": [
+                {
+                  "role": "client",
+                  "status": "source_label_candidate",
+                  "quote": "Oseraie Client SA est le maître d'ouvrage.",
+                  "original_bytes_round_trip": true,
+                  "role_episode_matches_actor_first_episode": true
+                }
+              ],
+              "api_source_check": true
+            },
+            {
+              "name": "Tilleul Ingénieur SARL",
+              "role": "moe",
+              "bindings": [
+                {
+                  "role": "moe",
+                  "status": "source_label_candidate",
+                  "quote": "Tilleul Ingénieur SARL est le maître d'œuvre.",
+                  "original_bytes_round_trip": true,
+                  "role_episode_matches_actor_first_episode": true
+                }
+              ],
+              "api_source_check": true
+            }
+          ],
+          "source_roles_not_legal_certification": true
+        }
+      ],
+      "qualified_parties": 5,
+      "unassessed_generic_entreprise_phrase": "Noyer Travaux SAS est l'entreprise. does not by itself establish contractor. The model-supplied Contractor node type remains an extraction proposal.",
+      "english_permission_parties_retained": true,
+      "structural_role_links_marked_candidates": true
+    },
+    "pre_focus_draw": "Retained separately; passed before adding focused-assertion validation. Final proof uses fresh unchanged frozen originals with final binary."
+  },
+  "browser": {
+    "operative_link_visible_with_both_party_originals": true,
+    "source_recheck_submitted_once": true,
+    "source_recheck_terminal": true,
+    "server_captured_quote_verified": true,
+    "focused_assertion_and_context_highlighted": true,
+    "candidate_only_review_labels": true,
+    "warning_error_logs": [],
+    "source_graph_unchanged_after_recheck": true,
+    "owned_tab_closed": true,
+    "owned_services_stopped": true
+  },
+  "preservation": {
+    "all_user_graph_tables_unchanged": true,
+    "table_counts": {
+      "edges": 660,
+      "episodes": 321,
+      "nodes": 1444,
+      "schema_meta": 1,
+      "timeline_events": 3437
+    },
+    "protected_engine_sources_unchanged": true,
+    "protected_engine_source_files": 14,
+    "journal_snapshots": 24,
+    "journal_unchanged": true,
+    "artifacts": 32,
+    "artifacts_unchanged": true,
+    "studio_sessions": 2,
+    "studio_unchanged": true,
+    "engine_config_unchanged": true,
+    "app_env_unchanged": true,
+    "engine_and_api_healthy": true,
+    "real_contract_reanalysis": false
+  },
+  "limits": [
+    "Exact source location, focused assertion containment and model agreement do not establish semantic truth, legally operative effect, applicability, precedence or absence. A model can still misinterpret a focused quote or omit a relevant qualifier.",
+    "A candidate quote that itself spans multiple separate agreements still requires occurrence/identity review; these guards are not a deterministic instrument-scope resolver.",
+    "These are frozen synthetic same-provider development controls, not independently adjudicated held-out, real-contract or OCR legal accuracy. No native positive causal source job was added in this pass.",
+    "Only cause/notice/contractual predicates have this source-first policy; other relation meanings and broader endpoint normalization need further qualification. Actor/profile duplicate mentions and limited party-role grammar remain.",
+    "Main shared profile remains General; native jobs explicitly capture construction_claims. Missing dedicated engine categories, frontend cache quota and large build chunk remain open.",
+    "Structural party-role connections stay uncertain candidates. Historical user records are unchanged; old relationships are not silently recertified.",
+    "No new Laya training, MLX acceleration, OOM supervisor or architecture-performance result is claimed."
+  ],
+  "proof": [
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-browser-console.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-browser-recheck-job.json",
+      "bytes": 78106,
+      "sha256": "e83554f316de7dd9dc219d53d18760f64632ede6fd8d18ebae10ca1a06db2ffe"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-cases.json",
+      "bytes": 99161,
+      "sha256": "40e3839d6cd8b65e0053f9465eef3d1d262c4952dd1abc31ee0bdd51d127fb18"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-cleanup.json",
+      "bytes": 408,
+      "sha256": "1604a026aa03b44c4520237b47b71420a7e1a473ed428e112594a8e2682bfd9c"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-collect.log",
+      "bytes": 6438,
+      "sha256": "764d9794376b026f756648d6e72673e63d570d469089d28e847c556eb9a68b1d"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-conditional-refusal-fr-component.json",
+      "bytes": 102515,
+      "sha256": "8236968e5a6003631e9ce35facba294b6d92a55704f50b5e5ab6ecf444fcfbad"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-conditional-refusal-fr-graph-response.json",
+      "bytes": 266439,
+      "sha256": "8df4b4ed6aa4ed6509ff4fe94d414bb6d6e2429578f615067cbb88d48ab98887"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-conditional-refusal-fr-snapshot.json",
+      "bytes": 188134,
+      "sha256": "8f5c8da9fc65c6bd11b17f1f70d2866d0893d6ca657198c40fafc564470a3122"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-dispersed-notice-en-component.json",
+      "bytes": 601566,
+      "sha256": "e1cdc8051fa843a97bb542798d1db964d2f2d05569fe320141cd31ff1ce75de3"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-dispersed-notice-en-graph-response.json",
+      "bytes": 1575589,
+      "sha256": "8fbfd51e2287b654d89b4d2b5747f944155112c9bad7968d49a5b0c31e5e35c5"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-dispersed-notice-en-snapshot.json",
+      "bytes": 1043565,
+      "sha256": "97329dad8b55f742f74c1884aff416c92d0037e173c92bd0701ecfcbfe3fbe16"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-focused-native-gate.json",
+      "bytes": 315,
+      "sha256": "0d1daddec7273e73d31538b8080797a81ee62c024e993931930290739b84d1db"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-freeze.json",
+      "bytes": 382,
+      "sha256": "2ea0c6b32b6de03341434f273b7d3a54c661a357c69737ade4c9dfd0f05aefb9"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-gate.json",
+      "bytes": 8966,
+      "sha256": "869d8df4a711aff6550a9b03bc54c8ff336123cf09f26f00572de546389bd1ac"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-native-role-gate.json",
+      "bytes": 2893,
+      "sha256": "f31fa848710ca73375b4d72eb4680594469d05dee244a6764fadcb17a3264d8c"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-observations.json",
+      "bytes": 257995,
+      "sha256": "da6465942ba1fc00bceaa969fb718658f40b3a39b1e2bdf6e94d3435da78cc4a"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-operative-contract-and-draft-en-graph-response.json",
+      "bytes": 143541,
+      "sha256": "3bdb3d249cca8eb52aa4a00ed12a44a0e2f475e389b77d3e4f0cadcad4b9ed22"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-operative-contract-and-draft-en-snapshot.json",
+      "bytes": 104001,
+      "sha256": "a21ca5497f35abcc0c4de52f7cc73bf712cc96f81c996b4907380fd4d06b0d0d"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-operative-recheck-dom.txt",
+      "bytes": 20421,
+      "sha256": "e6895dc991a2b38f1db5d4295d5782fa008a4abdc73ce439af34d3f5032b8680"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-operative-recheck.png",
+      "bytes": 217991,
+      "sha256": "eb27e4349f0b5d664a1f30c65ef2d7fe1ff6bf5814d5f8b62ab7bfe2070028cb"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-run.log",
+      "bytes": 2625,
+      "sha256": "98229d13ef8e83646f650932ee9d36c1573c4382268d357f3a80a7c0068bec5f"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-startup-preflight.json",
+      "bytes": 300,
+      "sha256": "7cc5058c013770907e927aacef8774387170f9cc6b721caef4958186d008f450"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-submissions.json",
+      "bytes": 121514,
+      "sha256": "630659f296694c8ead44476f34967b85b75e9215be0dbceb18c2285b4069ebec"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-terminal-jobs.json",
+      "bytes": 251593,
+      "sha256": "df635383904d953887b8f1bfe70bd54a2ac7df2e6d1f104d9a7331f34e5689fb"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/native-verified-native-identity.json",
+      "bytes": 7984,
+      "sha256": "2a80a81b63a145f2c431ba030645c0d38aeaeba67aab883826b4e78ba4958868"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/pre-focus-cleanup.json",
+      "bytes": 405,
+      "sha256": "e7f8f959469a562dd98405822a7adeab7b353cf24dff46ca25f2a5551b87c720"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/pre-focus-freeze.json",
+      "bytes": 382,
+      "sha256": "2ea0c6b32b6de03341434f273b7d3a54c661a357c69737ade4c9dfd0f05aefb9"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/pre-focus-gate.json",
+      "bytes": 9096,
+      "sha256": "29be567d4a99c48458caa112807433922b0562301f887948636cfe58cc98f3d6"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/pre-focus-terminal-jobs.json",
+      "bytes": 260151,
+      "sha256": "12c3fc345a74e528c32e092434cd19d1283cb0e56d8618beefae648800d28266"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-backend-contract-tests.log",
+      "bytes": 145,
+      "sha256": "5fbefba37aef912d3cd907b2ae7ab14cdf081a931990ed4ef5d416b9e4efe946"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-backend-focused.log",
+      "bytes": 1667,
+      "sha256": "0fea8c1808e7749965c50932a268bf0677d4c1d9aa2d698d4ae071513fab6313"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-before-regressions.log",
+      "bytes": 2716,
+      "sha256": "493ae14eb3cb381380622d10d9c8acdb69bd6a4e500ef718b08c5528ed67e766"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-contract-tests.log",
+      "bytes": 116,
+      "sha256": "b91c3ba886698f2ef0df8a16be4c37dedac0121a237f078254b831bb6c7e389b"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-focused-patch-arms.json",
+      "bytes": 40961,
+      "sha256": "97b73fd6588964616e717e58e8612ba02a76ffdee8dbf9fde4183dfe277ba366"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-frontend-focused-build.log",
+      "bytes": 1274,
+      "sha256": "f5aec766f995076f7f921f11cf9f3bca8c15b898fcf6dd083e173ea243b7834a"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-frontend-focused.log",
+      "bytes": 334,
+      "sha256": "a4f44ec3f8350579ce4e093cd0b431d471161648171c4eff72a406f312586eda"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-go-focused-clean-full.log",
+      "bytes": 1911,
+      "sha256": "3001d9b98bb0809afd65c82f17497c7927736a5d31c36621ec01e7990722b49f"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-go-focused-clean-race.log",
+      "bytes": 174,
+      "sha256": "2c73ebe85f350ad5134e2e2f35af726205e71ca9fd5596073ba0df5f34c0e4c4"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-go-focused-full.log",
+      "bytes": 1951,
+      "sha256": "2b338f03f0832718c3d87c55c532231e8c6890b0737978175d30f12113de6886"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-go-focused-race.log",
+      "bytes": 1925,
+      "sha256": "0943a42a11676fb442ec1326dfaae63be9c1c673fcb6ee8e2ae97375f2e835fb"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-go-focused-variant-audit.log",
+      "bytes": 177,
+      "sha256": "533d9956d10461cf7ad2e4d45f5aca1a985a444b1d256f08926f60b93a963d53"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-go-focused-variant-coverage.log",
+      "bytes": 168,
+      "sha256": "cb7d804514450365be29fdd128484aca404b20595e8c48d99a5b2b48c163b61b"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-go-focused-variant-inventory-audit.log",
+      "bytes": 177,
+      "sha256": "e46726d7455d72afbb63c9f043d61b870e22f4143a4dff3cfe7cb4f9d44a0913"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-go-focused-variant-inventory-coverage.log",
+      "bytes": 168,
+      "sha256": "51092770eb7073e382bebf7bb5b1fa51a036756869c3196714bb2a161f1191d4"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-go-focused-variant-inventory-meaning.log",
+      "bytes": 177,
+      "sha256": "386bf68e4aee9ac55f4385fa048f1838ed38b65c5082da50e7b5570554d04573"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-go-focused-variant-inventory-passages.log",
+      "bytes": 177,
+      "sha256": "d1fa57604e6904a7614223c6c8e56c1f96b60c03a9c35be87ff2e8a9c3fc3c81"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-go-focused-variant-inventory-register.log",
+      "bytes": 177,
+      "sha256": "eb3a1097fc88401832499b3ea12d4ed696c31288d37456b6d2334958c13a8f38"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-go-focused-variant-inventory.log",
+      "bytes": 177,
+      "sha256": "3387c4f1c4ba2b66cd3b25b6f056482ea253274cb4b8e0193a87fb9ba3befb1d"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-go-focused-variant-meaning.log",
+      "bytes": 177,
+      "sha256": "0aee92b614f51c36f2d4613826be6c6ad14d4a8f17490222e9ebb76c64f7c147"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-go-focused-variant-passages.log",
+      "bytes": 177,
+      "sha256": "40df667fa74365134844fcfeb215a3a5cff26f0d9c27630cac6741c2fdc0fbcf"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-go-focused-variant-register.log",
+      "bytes": 177,
+      "sha256": "191545383d4510f186caa75a51cfd79a504758aca4c201a8b95c24d858258dee"
+    },
+    {
+      "path": "docs/validation/assets/contractual-predicates/release-runtime-source-equivalence.json",
+      "bytes": 188,
+      "sha256": "9f7716a192821b0003467dcea359bfdbf3cdb7844e261d1b99c74d83b0eca041"
+    }
+  ]
+}
