@@ -3655,3 +3655,59 @@ This audit adds no new Laya/GLiNER training or acceleration qualification.
 
 See the [DelayLama diagnostic audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-response-diagnostics.md)
 and [shared receipt](validation/delaylama-source-response-diagnostics-20261005.json).
+
+## L107 — Duration ownership needs a separate source task, not quote proximity (2026-10-05)
+
+**Adopted engineering guard; synthetic model regressions measured.** DelayLama's
+old quote geometry admitted an inspector's five-day duration as the engineer's
+file-return duration when both appeared on one line. Unassessed durations and
+dependent effect summaries are now withheld; candidates remain inspectable.
+Independent whole-original review classifies ownership and elapsed/planned/deadline
+kind, retaining several separate, byte-bound original attribution passages.
+Duplicated original action/value targets share one check. Alternate source
+candidates can recover an omitted first value; conflicting supported values are
+withheld rather than silently overwritten or normalized.
+
+The first 18-case full-stack run retained all 64 declared actions but withheld
+three legitimate durations. Duplicate target handling and repeated clarification
+wording caused protocol failures. Those failures are retained. The refined rerun
+passed 64 action/performer/calendar checks, 12 independently assessed durations,
+six impacts and six positive causal links; 38 negative durations, 28 negative
+causes and 12 unperformed actions also passed. Eleven final source inventories
+still reported partial coverage. These are known synthetic reruns, not complete
+or blind real-contract qualification.
+
+Eight source-only actual-model probes passed in each phase: English/French
+cross-action rejection, dispersed context, planned time, a notice deadline,
+unresolved dispute, and recovery of an omitted first candidate. Expected labels
+never entered the model prompt and probes made no graph writes. Recorded tasks:
+36 source inventories, three performance checks and 20 duration reviews across
+36 full-stack jobs, plus 16 diagnostic duration probes. Provider HTTP retries and
+total pipeline calls were not instrumented. Normal embedding/provider settings,
+user graph records, saved sessions and local engine source edits were preserved.
+
+**Learning for training and evaluation:** preserve actor/action occurrence identity
+and original scalar spans separately from attribution labels. Include nearby
+foreign durations, repeated clarifications, dispersed antecedents, different
+kinds of time windows, disputes and missing first-extractor values. Quote presence
+is not a semantic label. A rejected or unresolved assessment is not zero. Human
+review is needed before using these observations as Laya/GLiNER supervision;
+synthetic regression success alone does not qualify generated training data.
+
+Backend 1,104 tests and frontend 789 tests/build passed. Engine suites, race checks,
+12 idempotent patch combinations, 11 optional-engine suites and activation
+preservation are recorded in the linked audit. Full contract coverage, real PDFs,
+cross-document precedence, monetary scalars and free effect prose remain open.
+No new Laya/GLiNER training, MLX or architecture qualification is claimed.
+
+[DelayLama ownership audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-duration-ownership.md)
+· [Shared receipt](validation/delaylama-duration-ownership-20261005.json).
+
+**Additional retained operational finding:** the extended API race sweep timed
+out after ten minutes because malformed complete-analysis bodies silently
+started default reanalysis. Strict object/type/range/trailing-data validation now
+returns 400 before model work or graph changes. The regular full API suite fell
+from 150–177 seconds to about 18 seconds; corrected race results and the original
+timeout are separate audit assets. Request-shape validation belongs before any
+costly analysis or training action; a finished model pipeline cannot compensate
+for unintended invocations.

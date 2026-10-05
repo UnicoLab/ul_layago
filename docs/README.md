@@ -21,6 +21,7 @@ do not confer accuracy or calibration on another application's tasks.
 | Record | What it establishes |
 | --- | --- |
 | [DelayLama source response diagnostics, 2026-10-05](validation/delaylama-source-response-diagnostics-20261005.json) | Diagnosed JSON-list failure, bounded non-evidence diagnostics, unused scalar fields and retained cross-action duration counterexample; L106 |
+| [DelayLama independent duration ownership, 2026-10-05](validation/delaylama-duration-ownership-20261005.json) | Dispersed attribution, elapsed/planned/deadline distinctions, withheld conflicts, retained first-run failures and source-only probes; L107 |
 | [DelayLama original-source performance, 2026-10-05](validation/delaylama-performance-source-review-20261005.json) | Independent performance/calendar premises, stronger declared gate, retained failed inventory stage, native JSON limits and source receipts; L105 |
 | [DelayLama source omission recovery and graph integrity (L104)](validation/delaylama-source-action-recovery-20261005.json) | Independent source audit, 52 declared actions, stale association-date repair, two-chunk parser/actor fixes and retained failed runs; no new training |
 | [DelayLama source-selected context and literal durations (L103)](validation/delaylama-selector-duration-analysis-20261005.json) | Source protocol, unknown-calendar separation, measured English/French recall limits and preserved failed gates; no new training |
