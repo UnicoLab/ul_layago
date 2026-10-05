@@ -4871,3 +4871,39 @@ MLX speed, OOM supervision or architecture-performance result follows from them.
 
 [DelayLama source-unit report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-contractual-source-units.md)
 · [Shared receipt](validation/delaylama-contractual-source-units-20261005.json).
+
+## L132 — Keep graph generation, downstream experiments and historical support distinct (2026-10-05)
+
+A feedback destination is part of evidence provenance. DelayLama was routing every
+source-graph relationship to its execution-event prompt, while a generic field
+extractor was labelled “Entities & relationships.” Neither application prompt
+owns Chronograph’s native graph-generation stage. The handoff now suggests relevant
+downstream comparisons only for assigned tasks and requires an explicit choice
+otherwise. It names the selected experiment and explains what editing it changes.
+A source-graph error alone is not an evaluated failure of that extraction prompt.
+
+Known critical links must require their predicate check even when old finding
+metadata is missing. An assessment of a different relationship cannot establish
+the selected one. Current display and copied feedback remain unresolved while the
+original historical verdict is retained. Do not carry an old qualification into a
+new scope merely because both use similar names or matching passages.
+
+937 frontend tests and the production build pass. An isolated read-only replay
+preserves three native synthetic graphs and a separately supplied controlled edge.
+Its one terminal review is not replayed: status and prompt context agree on the
+unresolved broad A316 proposal and retain the focused operative SC315 witness.
+A browser import into an explicitly chosen Amendments experiment preserves the
+active prompt intent, exact original, historical review and current assessment.
+No model run occurs. Project backup restoration retains these even when browser
+local storage is unavailable/full. User graph tables, fourteen engine edits and
+application histories remain unchanged.
+
+For LayaGo experiments, record the producing stage/model, task/schema, source and
+instrument IDs, predicate identity, historical assessment and current qualification
+policy separately. Route feedback to a measured task; do not mislabel retrieval or
+field extraction as relationship entailment. Keep failures as development evidence,
+not automatically adjudicated gold. These checks establish workflow behavior, not
+new extraction accuracy, complete instrument applicability or Laya/MLX performance.
+
+[DelayLama graph-prompt scope report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-graph-prompt-scope.md)
+· [Shared receipt](validation/delaylama-graph-prompt-scope-20261005.json).

@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-05",
+  "learning": "L132",
+  "scope": "Graph review qualification and explicit downstream prompt comparison. Source engine remains default64; no new extraction/semantic-accuracy result.",
+  "checks": {
+    "frontend_tests": 937,
+    "frontend_files": 76,
+    "production_build": "passed",
+    "build_note": "Existing chunk >500 KB warning remains.",
+    "test_note": "Existing asynchronous React act warnings remain; no failing tests.",
+    "read_only_stack": {
+      "scope": "Read-only replay of default64 synthetic graph and one saved review. No new extraction, recheck or revision model calls. Controlled edge is manually supplied, not native extraction.",
+      "source_graphs": [
+        {
+          "case": "dispersed-notice-en",
+          "nodes": 47,
+          "edges": 89,
+          "unchanged": true
+        },
+        {
+          "case": "conditional-refusal-fr",
+          "nodes": 25,
+          "edges": 42,
+          "unchanged": true
+        },
+        {
+          "case": "operative-contract-and-draft-en",
+          "nodes": 11,
+          "edges": 17,
+          "unchanged": true
+        }
+      ],
+      "controlled_graph_unchanged": true,
+      "saved_review_job_id": "209faf9bd8c34755b11527731bfe664e",
+      "one_same_terminal_review_no_replay": true,
+      "new_native_jobs": 0,
+      "current_review": "insufficient",
+      "reason": "ambiguous_proposal_scope",
+      "current_prompt_context_matches": true,
+      "source_and_finding_unchanged": true,
+      "imported_session": {
+        "target": "amendment_analyzer",
+        "entries": 1,
+        "model_runs": 0,
+        "exact_checked_document": true,
+        "active_prompt_preserved": true,
+        "historical_search_and_current_review_retained": true,
+        "restored_from_project_after_tab_reopen": true,
+        "browser_storage_warning": "Browser local storage was full/unavailable in this QA origin; the project backup saved revision 1 and restored it.",
+        "graph_fixture": "Controlled proposal, not native extraction."
+      }
+    },
+    "cleanup": {
+      "only_owned_services_stopped": true,
+      "ports_closed": true,
+      "one_saved_review_terminal": true,
+      "zero_new_native_jobs": true,
+      "processes": [
+        {
+          "service": "engine",
+          "pid": 38192,
+          "port": 8097
+        },
+        {
+          "service": "api",
+          "pid": 38194,
+          "port": 8081
+        },
+        {
+          "service": "frontend",
+          "pid": 38195,
+          "port": 5175
+        }
+      ],
+      "owned_tab_closed": 140
+    },
+    "log_format": "Test log trailing blank lines removed; content otherwise preserved."
+  },
+  "preservation": {
+    "protected_engine_source_files_unchanged": true,
+    "protected_app_artifacts_unchanged": true,
+    "user_studio_unchanged": true,
+    "orchid_studio_unchanged": true,
+    "user_graph_all_tables_unchanged": true
+  },
+  "limitations": [
+    "No native graph-generation prompt editor was added. Application prompt comparisons do not change native graph-generation prompts.",
+    "The controlled relationship is manually supplied; it is not a native extraction success or independent legal label.",
+    "No new model calls, prompt improvement evaluation, held-out completeness result or Laya training performance result.",
+    "Instrument identity, applicability, precedence and same-paragraph mixed assertions remain outstanding."
+  ],
+  "proof": [
+    {
+      "path": "docs/validation/assets/graph-prompt-scope/frontend-tests.log",
+      "sha256": "757fdc1a0b67683eb66a5c5f749debd482f12aa98f40fe1900055b581f9ecbbe",
+      "bytes": 2713
+    },
+    {
+      "path": "docs/validation/assets/graph-prompt-scope/frontend-build.log",
+      "sha256": "6d2e633025dd4aceadc67ca15b4f9c05d9a54d18da75f703e19465123a4006e0",
+      "bytes": 1274
+    },
+    {
+      "path": "docs/validation/assets/graph-prompt-scope/read-gate.json",
+      "sha256": "74ea2cb507990951cbbe342f00017a07aaef98346e85454c3871b1230f0928e6",
+      "bytes": 1405
+    },
+    {
+      "path": "docs/validation/assets/graph-prompt-scope/cleanup.json",
+      "sha256": "c6ea2761b96f9278bc0e2dd960a386b46cf9becfcc2d098ea284593f36b7713f",
+      "bytes": 419
+    },
+    {
+      "path": "docs/validation/assets/graph-prompt-scope/graph-handoff.png",
+      "sha256": "717c37a63142aa63935245ca098941b33171c7d5f2fa221bef5f4044ae57de83",
+      "bytes": 157596
+    },
+    {
+      "path": "docs/validation/assets/graph-prompt-scope/graph-handoff-dom.txt",
+      "sha256": "fffdca57fcab428e8cd15e9bf4b64e47e9d52593b9a332439a211c89a89235eb",
+      "bytes": 16240
+    },
+    {
+      "path": "docs/validation/assets/graph-prompt-scope/lab-import.png",
+      "sha256": "0094d7df9170ba2d70639b4fa46b6319543c2648819e16b51ccc9a88a2641403",
+      "bytes": 154335
+    },
+    {
+      "path": "docs/validation/assets/graph-prompt-scope/lab-import-dom.txt",
+      "sha256": "9d86ff4f96a097ce522645540e8e716b8682102b4e2ddf30eb109619450df2d5",
+      "bytes": 12893
+    }
+  ]
+}
