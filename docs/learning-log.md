@@ -5153,3 +5153,48 @@ irrelevant repeated graph metadata without dropping qualifiers, assess complete 
 and condition inventories independently, and prevent role co-occurrence from becoming
 an asserted mission at the engine generation stage. Keep all incorrect model outputs
 and source-review histories as failure examples separate from ground-truth labels.
+
+
+## L139 — Source layout, semantic navigation and rule coverage need separate evaluation (2026-10-06)
+
+**Evidence:** [DelayLama receipt](validation/delaylama-focused-claim-context-20261006.json)
+and linked source report, retained context replay, actual model outputs and restored
+feedback proofs. No LayaGo/GLiNER training or MLX measurement was performed.
+
+Document containers dominated lexical anchor ranking and containment expanded whole
+originals into graph reasoning. Focused semantic navigation now expands two steps;
+all matching facts retain own evidence even outside four expansion anchors. Explicit
+numbered clause references enter the model bundle without inventing an applicability
+edge. Source outline/full-component exploration stays separate. Original passages and
+source hashes remained equal across three retained native graph replays; serialized
+graph context fell from 119,150/100,729/119,108 to 49,642/53,237/96,775 characters.
+This does not establish lower total prompt tokens, latency, recall or better analysis.
+
+A per-event inventory checklist distinguishes time/cost rule candidates, conditions
+and documentation gaps. Procedure-only candidates cannot substitute for an entitlement
+rule. Missing independent rules flag definite recognized conclusions while preserving
+raw fields. Current-source quote matching qualifies displayed counts, not interpretation
+or condition fulfillment. Exact event/target review links carried these concerns into
+prompt feedback with the original, actual output and two history entries; restoration
+worked across reload without accepting a finding or running an assistant revision.
+
+Two development model workflows completed with ten application calls. The first was
+incorrectly routed by the test launcher to an API with different graph scope; retain it
+as failed integration evidence. The corrected explicit API origin received focused
+context but still made four incorrect categorical time/cost conclusions from a procedure
+that determined no entitlement. Those answers remain retained and flagged; **no accuracy
+improvement was demonstrated**. Inspect actual input/runtime records before attributing
+an extraction outcome to a graph or trained classifier.
+
+Both requests asked for single-shot, but the active stack forced multi-step. Runtime
+records take precedence over request labels. A copied engine restart retained graph data
+but not the native server's memory-held completed-job registry; no job was resubmitted.
+Durable recovery of interrupted native jobs needs further engineering and failure tests.
+
+**Implications:** evaluate retrieval independently from source-state/object classification
+and final entitlement decisions. Preserve disconnected rules, scope, exceptions, notice
+fulfillment and source versions; shared party/containment proximity is not a legal link.
+Use independent source-first decisions to study bias from earlier incorrect analyses.
+Any LayaGo routing or classifier experiment needs actual invocation-scope/mode verification,
+held-out human labels and retained abstention/negation failures before a quality or speed
+claim. Do not use review flags or exact-quote ratios as semantic ground truth.
