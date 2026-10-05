@@ -1,0 +1,979 @@
+{
+  "version": 1,
+  "date": "2026-10-05",
+  "change": "Preserve source-bound own-action categories and model disagreements, exact occurrence wrapper matching and separate negative qualifications",
+  "default_patch": 50,
+  "engine_source_commit": "887a3a3efffe571d7deed178cfebfac79ecd9123",
+  "engine_binary_sha256": "c292f8b461ada193c019969a083fea3902d9fc98169b04e55dcc8f1913bf235d",
+  "checks": {
+    "backend": 1156,
+    "frontend": 836,
+    "frontend_build_passed": true,
+    "full_go_passed": true,
+    "full_go_race_passed": true,
+    "idempotent_patch_combinations": 12,
+    "optional_engine_suites": 11,
+    "backend_patch_followup": 28,
+    "live_neighborhood_checks": 11
+  },
+  "live_validation": {
+    "provider": "Gemini",
+    "model": "gemini-3.1-flash-lite",
+    "profile": "construction_claims captured per job; service general",
+    "candidate_passes": 1,
+    "critic_passes": 0,
+    "embedding": "noop in isolated QA only",
+    "additional_category_model_calls": 0,
+    "frozen_fixture_hashes": {
+      "frozen-cases.json": "1ced458a3927a8e113740aff084f600971a455af4a3eb5897fcc96bec0cae0c6",
+      "semantic-gold.json": "1f1be192f74ce0dbf468e907553c772ac738341d371b7b4a6b90673572a60f61",
+      "party-gold.json": "320e9ba8bedee7c670295e4a3450c11c3ec9fbe7b4a6f0e41a848397c302bce2",
+      "category-gold.json": "9d0412e7a7b889cce9140d5681fd7a536e095e16d407f606f4f1cee1eb23cd0e",
+      "frozen_before_model_requests": true,
+      "development_replays": [
+        "endpoint-en",
+        "endpoint-fr",
+        "mixed-en",
+        "passive-en",
+        "cross-article-fr"
+      ],
+      "new_synthetic_cases": [
+        "category-en",
+        "category-fr"
+      ],
+      "type_checks": 57,
+      "party_checks": 57,
+      "category_checks": 12,
+      "full_semantic_qualification": false
+    },
+    "rounds": [
+      {
+        "report": "fullstack-gate.json",
+        "type_checks": [
+          45,
+          57
+        ],
+        "party_checks": [
+          57,
+          57
+        ],
+        "category_checks": [
+          6,
+          12
+        ],
+        "source_storage_gates_passed": true,
+        "category_source_gates_passed": true,
+        "health": {
+          "analysis_jobs": {
+            "cancelled": 0,
+            "done": 7,
+            "failed": 0,
+            "queued": 0,
+            "running": 0
+          },
+          "analysis_jobs_scope": "service",
+          "edge_count": 168,
+          "episode_count": 7,
+          "node_count": 112,
+          "schema": "general",
+          "status": "ok"
+        }
+      },
+      {
+        "report": "fullstack-gate-final.json",
+        "type_checks": [
+          57,
+          57
+        ],
+        "party_checks": [
+          57,
+          57
+        ],
+        "category_checks": [
+          12,
+          12
+        ],
+        "source_storage_gates_passed": true,
+        "category_source_gates_passed": true,
+        "health": {
+          "analysis_jobs": {
+            "cancelled": 0,
+            "done": 7,
+            "failed": 0,
+            "queued": 0,
+            "running": 0
+          },
+          "analysis_jobs_scope": "service",
+          "edge_count": 141,
+          "episode_count": 7,
+          "node_count": 122,
+          "schema": "general",
+          "status": "ok"
+        }
+      },
+      {
+        "report": "fullstack-gate-delivery.json",
+        "type_checks": [
+          57,
+          57
+        ],
+        "party_checks": [
+          57,
+          57
+        ],
+        "category_checks": [
+          12,
+          12
+        ],
+        "source_storage_gates_passed": true,
+        "category_source_gates_passed": true,
+        "health": {
+          "analysis_jobs": {
+            "cancelled": 0,
+            "done": 7,
+            "failed": 0,
+            "queued": 0,
+            "running": 0
+          },
+          "analysis_jobs_scope": "service",
+          "edge_count": 135,
+          "episode_count": 7,
+          "node_count": 122,
+          "schema": "general",
+          "status": "ok"
+        }
+      }
+    ],
+    "final_graph": {
+      "node_count": 122,
+      "edge_count": 135,
+      "episode_count": 7
+    },
+    "accepted_terminal_model_jobs_archived": 21,
+    "full_semantic_qualification": false
+  },
+  "browser": {
+    "final_build_dom": "browser-category-dom-delivery.txt",
+    "final_queue_dom": "browser-queue-dom-delivery.txt",
+    "final_console_errors": [],
+    "screenshot_with_category_and_quote": "live-category-review.png",
+    "screenshot_round": "corrected round 2, same application UI; final delivery independently verified by DOM",
+    "final_viewport_screenshot": "live-category-review-delivery.png",
+    "final_viewport_screenshot_scope": "top of graph page; inspector evidence is below viewport",
+    "source_and_prior_categories_visible": true,
+    "exact_action_highlight_in_dom": true,
+    "category_disagreement_first_in_queue": true,
+    "analysis_submitted_through_browser": false,
+    "temporary_tab_closed": true
+  },
+  "remaining_performer_counterexample": {
+    "case": "cross-article-fr",
+    "proposed": 1,
+    "rejected": 1,
+    "stored": 0,
+    "performers": {
+      "status": "completed",
+      "expected": 1,
+      "checked": 1,
+      "missing": 0,
+      "with_candidates": 0,
+      "unresolved": 0,
+      "not_applicable": 0,
+      "withheld": 1,
+      "card_reasons_used": 0,
+      "premises_selected": 0,
+      "premises_rejected": 1,
+      "rejection_reasons": {
+        "original_premise_unmatched": 1
+      },
+      "invalid_cards": 0
+    },
+    "selector_supplied": "event-premise:node:0",
+    "selector_required": "performer-premise:node:0",
+    "no_invalid_link_stored": true,
+    "quality_claim": false
+  },
+  "activation": {
+    "old_engine_pid": 36714,
+    "engine_pid": 66109,
+    "api_pid_unchanged": 36772,
+    "database_backup": "/private/tmp/delaylama-event-categories/activation-backup/graph.db",
+    "binary_backup": "/private/tmp/delaylama-event-categories/activation-backup/chronograph-previous",
+    "finished_jobs_archived": 0,
+    "graph_rows_unchanged": true,
+    "table_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    },
+    "config_unchanged": true,
+    "engine_sha256": "c292f8b461ada193c019969a083fea3902d9fc98169b04e55dcc8f1913bf235d",
+    "health_before": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    },
+    "health_after": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    }
+  },
+  "api_activation": {
+    "old_launcher": 36770,
+    "old_listener": 36772,
+    "new_launcher": 66130,
+    "configuration_change": "None; restart to load source-bound event-category disagreement context",
+    "config_sha256_before": "538f6c5d5258b3a3cca8b25a083e695217ef42584564a554497541f57e8b53ad",
+    "config_sha256_after": "538f6c5d5258b3a3cca8b25a083e695217ef42584564a554497541f57e8b53ad",
+    "journal_rows_unchanged": true,
+    "journal_sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c",
+    "no_existing_contract_reanalysis_submitted": true
+  },
+  "preservation": {
+    "protected_engine_source_files_unchanged": true,
+    "protected_app_artifacts_unchanged": true,
+    "user_studio_unchanged": true,
+    "orchid_studio_unchanged": true,
+    "user_graph_all_tables_unchanged": true,
+    "recorded_replay_nodes_edges_unchanged_by_GUI": true,
+    "owned_jobs_terminal_verified_before_cleanup": true,
+    "replay_verified_before_cleanup": true,
+    "user_engine_health": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    },
+    "user_graph_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    }
+  },
+  "cleanup": {
+    "accepted_terminal_jobs_archived": 21,
+    "rounds": 3,
+    "jobs_per_round": 7,
+    "final_services_stopped": [
+      {
+        "service": "engine",
+        "pid": 60030,
+        "port": 8097
+      },
+      {
+        "service": "api",
+        "pid": 60031,
+        "port": 8081
+      },
+      {
+        "service": "frontend",
+        "pid": 60032,
+        "port": 5175
+      }
+    ],
+    "final_owned_patch_clones_removed": [
+      "final-patch-audit",
+      "final-patch-coverage",
+      "final-patch-default",
+      "final-patch-inventory",
+      "final-patch-inventory-audit",
+      "final-patch-inventory-coverage",
+      "final-patch-inventory-meaning",
+      "final-patch-inventory-passages",
+      "final-patch-inventory-register",
+      "final-patch-meaning",
+      "final-patch-passages",
+      "final-patch-register"
+    ],
+    "user_services_stopped": false,
+    "user_tabs_closed": false,
+    "temporary_browser_tab_closed": true,
+    "shutdown_followup": "Cleanup assertion initially counted final-patch-arms.json as a clone; corrected to owned directories only. PID command output and ports confirm all services stopped without force termination."
+  },
+  "limitations": [
+    "Synthetic development replays, not independent benchmark",
+    "Source presence/model agreement does not certify meaning, performance or legal effect",
+    "Actual event roles are not completely qualified; retained performer premise-selection failure",
+    "Long PDFs/OCR and independent contract families unqualified",
+    "Cross-document amendments, exceptions, applicability and antecedent ambiguity unqualified",
+    "Complete prompt budgets not qualified by this change",
+    "No new Laya training, MLX or classifier gain",
+    "Existing user graphs not reanalysed"
+  ],
+  "assets": [
+    {
+      "path": "docs/validation/assets/event-categories/activation.json",
+      "sha256": "1b1b3bf5f8800eaa57f18e960f182c6b44ed30e99b02dddce50ded7791208ade",
+      "bytes": 1734
+    },
+    {
+      "path": "docs/validation/assets/event-categories/api-activation.json",
+      "sha256": "af7f090b274f41b0c72a4eb2d5d63f919d46857564203669fdb17bee8e8880d9",
+      "bytes": 540
+    },
+    {
+      "path": "docs/validation/assets/event-categories/backend-all.log",
+      "sha256": "042e63c0067c99b6e7d6450723e4265b81e071e94b3cf4f8a658fd23ac448983",
+      "bytes": 1427
+    },
+    {
+      "path": "docs/validation/assets/event-categories/backend-focused.log",
+      "sha256": "f1c71b68b9b06da2bf0eeab85116cf8e17d69edbe500e361a445022d2c23a548",
+      "bytes": 145
+    },
+    {
+      "path": "docs/validation/assets/event-categories/backend-patches-final.log",
+      "sha256": "e94e5aacdc3f2a3cc48f16e1c08954cbbd3bd98381ebcb2651bfb93cf69a643f",
+      "bytes": 145
+    },
+    {
+      "path": "docs/validation/assets/event-categories/before-category-regression.log",
+      "sha256": "b993283eda4fc0b3cfcb3da8caf3abbfb9f478a64ef62884e0d732da49b4b8a6",
+      "bytes": 768
+    },
+    {
+      "path": "docs/validation/assets/event-categories/browser-category-dom-delivery.txt",
+      "sha256": "4266b824ee3a92d1d4e93d14373c56d98a95a8812281ea6a557401818fbdc131",
+      "bytes": 15859
+    },
+    {
+      "path": "docs/validation/assets/event-categories/browser-category-dom.txt",
+      "sha256": "04afd7cae8ddbce05d4a7d919a008a45623fb739cacb412d4d9c7c0e89899786",
+      "bytes": 15868
+    },
+    {
+      "path": "docs/validation/assets/event-categories/browser-checks.json",
+      "sha256": "820216de8e93eaccdb0932bec2f5c91a57788e26610063243850079804179cfe",
+      "bytes": 703
+    },
+    {
+      "path": "docs/validation/assets/event-categories/browser-errors-delivery.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    {
+      "path": "docs/validation/assets/event-categories/browser-errors.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    {
+      "path": "docs/validation/assets/event-categories/browser-queue-dom-delivery.txt",
+      "sha256": "aeea5da63cc1c396b1d2a1ba8e087804796f5aee201e76e4a9eda6ee0f4e2319",
+      "bytes": 24601
+    },
+    {
+      "path": "docs/validation/assets/event-categories/browser-queue-dom.txt",
+      "sha256": "c9fada106cc6170d3dc0c819edcbce040885662cf2a589a8449fb1e111ae645e",
+      "bytes": 24601
+    },
+    {
+      "path": "docs/validation/assets/event-categories/category-en-snapshot-delivery.json",
+      "sha256": "78de045fcf5e82fe8db7a2691cb23b42063b704ed2a949b19cb2c0971ae79803",
+      "bytes": 130396
+    },
+    {
+      "path": "docs/validation/assets/event-categories/category-en-snapshot-final.json",
+      "sha256": "c8c71f5dd8814d3f6ed10ef69b97407386c0d82b86361e1cc732d76d0b00d537",
+      "bytes": 131362
+    },
+    {
+      "path": "docs/validation/assets/event-categories/category-en-snapshot.json",
+      "sha256": "d196fc6af824425d14a16510cbd5fc341147e669b40f0c3e23daf8ba4acb0b52",
+      "bytes": 119299
+    },
+    {
+      "path": "docs/validation/assets/event-categories/category-fr-snapshot-delivery.json",
+      "sha256": "9f26813ca1acb6f652c569d2523aa3a3ae4f507e42dc62b59b27ab62c67dbb61",
+      "bytes": 139459
+    },
+    {
+      "path": "docs/validation/assets/event-categories/category-fr-snapshot-final.json",
+      "sha256": "fb4e7044aa39c2bb437380a19f0c284dc602772cdd0621c2a3c21a14b082d718",
+      "bytes": 139136
+    },
+    {
+      "path": "docs/validation/assets/event-categories/category-fr-snapshot.json",
+      "sha256": "1d97537e7cff4cce4119e6c84da56a2616a69e2f4aa9dfec15d4be576b8d8d88",
+      "bytes": 142793
+    },
+    {
+      "path": "docs/validation/assets/event-categories/category-gold.json",
+      "sha256": "9d0412e7a7b889cce9140d5681fd7a536e095e16d407f606f4f1cee1eb23cd0e",
+      "bytes": 1381
+    },
+    {
+      "path": "docs/validation/assets/event-categories/category-neighborhood-checks.json",
+      "sha256": "d0b0f11d12489e1dab65ac9056ff8ebcf14a7e1e79b958222be79bdb6642a357",
+      "bytes": 10112
+    },
+    {
+      "path": "docs/validation/assets/event-categories/cleanup.json",
+      "sha256": "1261f46eb0d1e7eea8c3f02ed05136b3ebc36d35c27b372b8822292fbb4cca4e",
+      "bytes": 1095
+    },
+    {
+      "path": "docs/validation/assets/event-categories/cross-article-fr-snapshot-delivery.json",
+      "sha256": "1e9ac6ab6c688aa92d728a5b8e822c5b5707c5a2a23b0ad6795220eb75fd3294",
+      "bytes": 136337
+    },
+    {
+      "path": "docs/validation/assets/event-categories/cross-article-fr-snapshot-final.json",
+      "sha256": "05495a0a63dec249397946097bf740f9e273e28070fed912c4d9301125576604",
+      "bytes": 136386
+    },
+    {
+      "path": "docs/validation/assets/event-categories/cross-article-fr-snapshot.json",
+      "sha256": "21549e7aea1dbea8c703cf38191f81010210dd04713bf6692ece192bd6988cb3",
+      "bytes": 146918
+    },
+    {
+      "path": "docs/validation/assets/event-categories/endpoint-en-snapshot-delivery.json",
+      "sha256": "b721431adc27542054188364cb3bf9a349ce5fb04b200e3933a7b1984b73347e",
+      "bytes": 103718
+    },
+    {
+      "path": "docs/validation/assets/event-categories/endpoint-en-snapshot-final.json",
+      "sha256": "0938a88a6e6f42a26581e03886c0ee4d601fecb0609ecdd3d6fb24ae95fe287d",
+      "bytes": 111085
+    },
+    {
+      "path": "docs/validation/assets/event-categories/endpoint-en-snapshot.json",
+      "sha256": "9eed44ca37a88510cf08480d10c191017c331c6fc742aed2814e44b6b6ce2099",
+      "bytes": 111634
+    },
+    {
+      "path": "docs/validation/assets/event-categories/endpoint-fr-snapshot-delivery.json",
+      "sha256": "587d4e76f4299141aa1e8e55cbba829e798f13cbc2dfe3a864c95a748aded7f5",
+      "bytes": 115976
+    },
+    {
+      "path": "docs/validation/assets/event-categories/endpoint-fr-snapshot-final.json",
+      "sha256": "5e8653e8b99dd1c30f24c0931df56b50556548ca356289ee47f54098e3d00aa5",
+      "bytes": 115974
+    },
+    {
+      "path": "docs/validation/assets/event-categories/endpoint-fr-snapshot.json",
+      "sha256": "04664d8788d4e2d7d5c2c9081464ff3cca9a3db6aabdd5d92f1072e24935dd37",
+      "bytes": 116061
+    },
+    {
+      "path": "docs/validation/assets/event-categories/final-patch-arms.json",
+      "sha256": "686d75e55373a1aded4a4b6009fb5702223926c6495c578e77fdc3e36b2f6ade",
+      "bytes": 33629
+    },
+    {
+      "path": "docs/validation/assets/event-categories/first-go-final-variant-audit.log",
+      "sha256": "a9106a22c7bb9cd1a58dc5c77acd042d215979bc3ed919117de12c1fdb2f63b6",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/first-go-final-variant-coverage.log",
+      "sha256": "adb91bfeee7ed2d417969c51d2dd9567e903d073b99c2d1a52db1b72987296fe",
+      "bytes": 168
+    },
+    {
+      "path": "docs/validation/assets/event-categories/first-go-final-variant-inventory-audit.log",
+      "sha256": "6b27ca69dfe6972205d4722d18eaf1af9f4de6c233c601ddefee5289db3552ce",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/first-go-final-variant-inventory-coverage.log",
+      "sha256": "b611d1aab7fb9a540628e6f79cd2bf708ee24b4b3efb3b5d800a9590b9b6363c",
+      "bytes": 168
+    },
+    {
+      "path": "docs/validation/assets/event-categories/first-go-final-variant-inventory-meaning.log",
+      "sha256": "3ab3a422860765de1ed21725afba842cc4add3b715d84f796909b0bc4e9799b5",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/first-go-final-variant-inventory-passages.log",
+      "sha256": "6a04c09f192b125297273d55beb9e8fa4b5da75656549958828ed80031453554",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/first-go-final-variant-inventory-register.log",
+      "sha256": "7650ef6dd77388655e0d98ae39b00ed0db92d40f08fe4694c44511dcef47d364",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/first-go-final-variant-inventory.log",
+      "sha256": "e34a10248d802dc3f406a7dc0bd386403f88eccf8cf446ec2b0d4282f0f86bb7",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/first-go-final-variant-meaning.log",
+      "sha256": "e64c82377922d574aa09956d2d58f37ff03b445960b08c1d3902e2421ba532e7",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/first-go-final-variant-passages.log",
+      "sha256": "b01644527c976bb3bdace425dc88622755a8335acfb134f517a41691c6cf04e2",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/first-go-final-variant-register.log",
+      "sha256": "5aed0fc4dd1989cd3699d9cade378120df6538d8d13f9739e35bc6edb3423374",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/first-patch-arms.json",
+      "sha256": "686d75e55373a1aded4a4b6009fb5702223926c6495c578e77fdc3e36b2f6ade",
+      "bytes": 33629
+    },
+    {
+      "path": "docs/validation/assets/event-categories/fixture-freeze.json",
+      "sha256": "2d8f9ffa92fc61dd16cc66b5e5a5cb7dfe94c3d1c140016c196f1af7b01c41a3",
+      "bytes": 711
+    },
+    {
+      "path": "docs/validation/assets/event-categories/focused-go-final.log",
+      "sha256": "4fb0f0c478fd13a884bdebd659e69b6e331c81e83a1b4810fb87d0f7355fb654",
+      "bytes": 116
+    },
+    {
+      "path": "docs/validation/assets/event-categories/focused-go.log",
+      "sha256": "ae455de5ab0d315c3004a30511d80e9b9a18eb0803efaac3f1e05a1569b02ed5",
+      "bytes": 116
+    },
+    {
+      "path": "docs/validation/assets/event-categories/frontend-all-final.log",
+      "sha256": "6dc1f9a6f6d5419224b54723aebf4ed0d01cbea96d955140f4b7581502091651",
+      "bytes": 2512
+    },
+    {
+      "path": "docs/validation/assets/event-categories/frontend-all.log",
+      "sha256": "adf62cd711245ec5be310772154007785f697949d7061c3f19a3c1f06789d94c",
+      "bytes": 2514
+    },
+    {
+      "path": "docs/validation/assets/event-categories/frontend-build-final.log",
+      "sha256": "6bdc181bd8ca759072282202e5f5b7e06a1f2b12db250ff61cad494e2a770780",
+      "bytes": 1274
+    },
+    {
+      "path": "docs/validation/assets/event-categories/frontend-build.log",
+      "sha256": "3875eff16c36e1f79523c85cfa8e98500d41f2f8a89c6822c675a39766d63056",
+      "bytes": 1274
+    },
+    {
+      "path": "docs/validation/assets/event-categories/frontend-focused.log",
+      "sha256": "a3e28ae9487f8d56ae56de341380f7c4670ef9d785560a4e68847227fe76a1e2",
+      "bytes": 573
+    },
+    {
+      "path": "docs/validation/assets/event-categories/frozen-cases.json",
+      "sha256": "1ced458a3927a8e113740aff084f600971a455af4a3eb5897fcc96bec0cae0c6",
+      "bytes": 6387
+    },
+    {
+      "path": "docs/validation/assets/event-categories/fullstack-gate-delivery.json",
+      "sha256": "b350dc49684c75aee4fb7512c08ea370242cd547d8630411f84e7bce09b48e8e",
+      "bytes": 156200
+    },
+    {
+      "path": "docs/validation/assets/event-categories/fullstack-gate-final.json",
+      "sha256": "094987444a413b3887bcbcd5bdd235ab8391f3621849dc28cca94d431fdff3e2",
+      "bytes": 156070
+    },
+    {
+      "path": "docs/validation/assets/event-categories/fullstack-gate.json",
+      "sha256": "39deb67610a5cde15845ad68905a4e2b43c0ea715e44df58049facb624012ffc",
+      "bytes": 142876
+    },
+    {
+      "path": "docs/validation/assets/event-categories/fullstack-inputs-delivery.json",
+      "sha256": "dc52f3462d97c30d38d09c03e860387e351507bf7170238262f269796e944ff6",
+      "bytes": 13569
+    },
+    {
+      "path": "docs/validation/assets/event-categories/fullstack-inputs-final.json",
+      "sha256": "a3b5c343ebd2763461b1bb7522398be11ba6678a20379d834751bf5dbc552a98",
+      "bytes": 13569
+    },
+    {
+      "path": "docs/validation/assets/event-categories/fullstack-inputs.json",
+      "sha256": "7a96410ef07ebe95fb28109e2c098c15433c2c00d659d52e4bdd8a81f6e921bf",
+      "bytes": 13569
+    },
+    {
+      "path": "docs/validation/assets/event-categories/fullstack-sync-delivery.json",
+      "sha256": "e510214023ed786efe09cd426a19b143050b119c7b4e613e421a9ebacabfa058",
+      "bytes": 55967
+    },
+    {
+      "path": "docs/validation/assets/event-categories/fullstack-sync-final.json",
+      "sha256": "d012d5a5f6e7048f627fc0556595ad650c983b386fb86b8428d0fa4e44f21079",
+      "bytes": 55968
+    },
+    {
+      "path": "docs/validation/assets/event-categories/fullstack-sync.json",
+      "sha256": "6317b5c0ee63ba17551147f929ea78ddb0f3e6505fa7b5dba977865dd581e38a",
+      "bytes": 55849
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-all-final.log",
+      "sha256": "387f04f8767a366329823ff6159e4164e9e313080332c24e03a3b178f9db1561",
+      "bytes": 1931
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-all.log",
+      "sha256": "5621f410301eb156ebd604d049af363d67e8250d27b307cf4adae888f1fb4539",
+      "bytes": 1912
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-core-followup.log",
+      "sha256": "c539b16c3c17b67521ee2bee020b92a44bc123326d1f78fd188076aed8b22568",
+      "bytes": 116
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-delivery.log",
+      "sha256": "b38f48e2162a70034ccee121e0d2f6cb0d4f1f3456d4869b55617ba8bcb242da",
+      "bytes": 1953
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-final-variant-audit.log",
+      "sha256": "0c3060e009a0fa086dd7a57a2ce63c6b7ef6dcb577889b61be58a28a626c58ba",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-final-variant-coverage.log",
+      "sha256": "fa9d0cc5106327260bb85ba18fc795d0ffc4581a13678288d745299794e5d03e",
+      "bytes": 170
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-final-variant-inventory-audit.log",
+      "sha256": "7ee99940eba8a2ae195895c9484d564625126efd68bc060a9f3704930145025d",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-final-variant-inventory-coverage.log",
+      "sha256": "7dc560de605b784a0002078256a29083575486ba3bdb702821216015a0df825a",
+      "bytes": 170
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-final-variant-inventory-meaning.log",
+      "sha256": "ae53d50788f1088ed6b39112e8a52da5a5b1757e1a0c7481e8651bb6a39e29b6",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-final-variant-inventory-passages.log",
+      "sha256": "8acf236aabda181c0ac71487504911fda261ada1f4f3833b40bca43ae6b60063",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-final-variant-inventory-register.log",
+      "sha256": "f8d432a92dae986f767f62af56fc44afb780516ac77fe5ad25c9968d5ad02e94",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-final-variant-inventory.log",
+      "sha256": "7f23d0dc694891a97e3b06143eb54e11a6297cd79cc81c306bd7b2920d0d613f",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-final-variant-meaning.log",
+      "sha256": "3ff1fb6cf8ad33045fb30e2270e899d39b786b07ec654348ec7435789f4255a3",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-final-variant-passages.log",
+      "sha256": "6d8e812d9346c8b455bdb0e840d6f77a19a81e1794587cdcc9691ef8dd1bb804",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-final-variant-register.log",
+      "sha256": "a8a40ed3dee50a4db5a42396ae25dfde7817476b8ec8226cb7b7961a390fe2f4",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-race-delivery.log",
+      "sha256": "4add3310c3119d4c483117a0d4aa53222e3569fc268fc060b02b290f4a6e7d8d",
+      "bytes": 1951
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-race-final.log",
+      "sha256": "01529dc8169ab513b14a713da40ed8369c329deacc62e60dcad29482d4942c53",
+      "bytes": 1933
+    },
+    {
+      "path": "docs/validation/assets/event-categories/go-race.log",
+      "sha256": "c175eb8bb7c06dbf2469dd3708783595652b807e67c82eb6db73212c25b9465d",
+      "bytes": 1913
+    },
+    {
+      "path": "docs/validation/assets/event-categories/live-category-review-delivery.png",
+      "sha256": "a0f0dc4979e5c24a303144416cc8671638327f755b037c583479035a36d1d907",
+      "bytes": 153204
+    },
+    {
+      "path": "docs/validation/assets/event-categories/live-category-review.png",
+      "sha256": "768081f6ae35f4d4c153f1237c4406dc9d7de71649346bbdd4a56168f93ec2d6",
+      "bytes": 200389
+    },
+    {
+      "path": "docs/validation/assets/event-categories/live-result-delivery.log",
+      "sha256": "53c866dcfb7812d9efbc6a3a09af747f8cfe981a72d3bfd04b0cea0d404d69b5",
+      "bytes": 9401
+    },
+    {
+      "path": "docs/validation/assets/event-categories/live-result-final.log",
+      "sha256": "c47b226084ff5848b1bdb1b1b00eaa26efaa3f8d3f19339b6b1a2cbafe7f2e4d",
+      "bytes": 9401
+    },
+    {
+      "path": "docs/validation/assets/event-categories/live-result.log",
+      "sha256": "552c9fbb9733dd9675d7f5a9ef172e681cbde7037bb0c701924e51d48e6805a9",
+      "bytes": 13557
+    },
+    {
+      "path": "docs/validation/assets/event-categories/live-run-delivery.log",
+      "sha256": "4745fdcbc19c10b10ff3686fe1da4dc82d7ec6207314d79098a85c3435e61804",
+      "bytes": 1202
+    },
+    {
+      "path": "docs/validation/assets/event-categories/live-run-final.log",
+      "sha256": "3f56add3fe60d2dd44f6df2fe569c8d8db461c25b4e4b50d2eac46207c0c3ad3",
+      "bytes": 1203
+    },
+    {
+      "path": "docs/validation/assets/event-categories/live-run.log",
+      "sha256": "3d358270ac3ce4927f1e6370d8360b68f84b6a771404f7b6522c9df834f9329a",
+      "bytes": 1333
+    },
+    {
+      "path": "docs/validation/assets/event-categories/mixed-en-snapshot-delivery.json",
+      "sha256": "a05717f1cba90440eddbbba8e5d0563698b8bfec35f64d704cd565ca43e6df65",
+      "bytes": 149609
+    },
+    {
+      "path": "docs/validation/assets/event-categories/mixed-en-snapshot-final.json",
+      "sha256": "b68acbc63ffe24afc2d87938dac7b2340bb3c401026b87a11f214a996df9618a",
+      "bytes": 149849
+    },
+    {
+      "path": "docs/validation/assets/event-categories/mixed-en-snapshot.json",
+      "sha256": "2bbfe5f025277e15628ee14d11eef8ac9054e75db840981c1bbf6d1db6faa2c3",
+      "bytes": 159212
+    },
+    {
+      "path": "docs/validation/assets/event-categories/party-gold.json",
+      "sha256": "320e9ba8bedee7c670295e4a3450c11c3ec9fbe7b4a6f0e41a848397c302bce2",
+      "bytes": 5007
+    },
+    {
+      "path": "docs/validation/assets/event-categories/passive-en-snapshot-delivery.json",
+      "sha256": "40e7084e94a29a3ed16027b0f1ed9f9e4b92e7ee624c25a516fcbbb8e2e47767",
+      "bytes": 124987
+    },
+    {
+      "path": "docs/validation/assets/event-categories/passive-en-snapshot-final.json",
+      "sha256": "2d2598fc7a923f0ce68e2c8f0736e28d5333e63ba0b978aedb81bc5c32a86886",
+      "bytes": 124949
+    },
+    {
+      "path": "docs/validation/assets/event-categories/passive-en-snapshot.json",
+      "sha256": "ef9004d809a63acc8b51a2b84a01ca52298fb9c973ad2597880dbb5cfbf0b6be",
+      "bytes": 126789
+    },
+    {
+      "path": "docs/validation/assets/event-categories/patch-arms-delivery.log",
+      "sha256": "2e5a47423ac6324cc2bc8f2c91ba797290092b6746a5c607f06b61e6e92bb552",
+      "bytes": 7413
+    },
+    {
+      "path": "docs/validation/assets/event-categories/patch-arms-final.log",
+      "sha256": "f6017332fc8fc34d99e56897031fc2d5f96dcf9c4ec3680a8c568ffb1d50fbf5",
+      "bytes": 7413
+    },
+    {
+      "path": "docs/validation/assets/event-categories/patch-arms.log",
+      "sha256": "d8bde6289ffad5006bd3a987b8e8837067b917d0ebaed398d0e5b2ffb1b01d7c",
+      "bytes": 7413
+    },
+    {
+      "path": "docs/validation/assets/event-categories/preservation-final.txt",
+      "sha256": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3",
+      "bytes": 114
+    },
+    {
+      "path": "docs/validation/assets/event-categories/preservation-pre-activation.txt",
+      "sha256": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3",
+      "bytes": 114
+    },
+    {
+      "path": "docs/validation/assets/event-categories/preservation.json",
+      "sha256": "76b5b675f6de4a92a556da0db3200e6d234cdb49300687823fb60e2749061e40",
+      "bytes": 1349
+    },
+    {
+      "path": "docs/validation/assets/event-categories/release-checks.json",
+      "sha256": "710f49da2d2654178a44c0fa5548ba5f59473f2c5e7b501558fca952cb953f9c",
+      "bytes": 35193
+    },
+    {
+      "path": "docs/validation/assets/event-categories/second-go-final-variant-audit.log",
+      "sha256": "58cd23a6c4d2016a67d531dd8e6309434cf7dbc903535370fb34c85f053dd61d",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/second-go-final-variant-coverage.log",
+      "sha256": "7e113c6fc6f6fbbf842c1737e0a8b9d76b11d7c736a8ec6a471f045999511974",
+      "bytes": 170
+    },
+    {
+      "path": "docs/validation/assets/event-categories/second-go-final-variant-inventory-audit.log",
+      "sha256": "992b22054c413ecf6121ef9e83b21616ba807d6ca75770f08055c818bcdde0cc",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/second-go-final-variant-inventory-coverage.log",
+      "sha256": "f198058eb555d42ec8c4f71c8c1975893f2356bf9933ab9dcc3d35fc3a51a311",
+      "bytes": 170
+    },
+    {
+      "path": "docs/validation/assets/event-categories/second-go-final-variant-inventory-meaning.log",
+      "sha256": "5d4d640f3731d185fd9b1510990f514ce7d8534c7b3db1a8ca15da21211d9ac5",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/second-go-final-variant-inventory-passages.log",
+      "sha256": "abb284b1c16709713096856fe3c6e1d5bcbe10057cd58985962cf2b98aab6e37",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/second-go-final-variant-inventory-register.log",
+      "sha256": "484eb4ecce82656af0b5e5213685a5236ea8accabb37b78163bf80882d752747",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/second-go-final-variant-inventory.log",
+      "sha256": "8b0e3348490109dc90b596ed28ed2c0d6e8f7dbf7124a82ef214157821fa159f",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/second-go-final-variant-meaning.log",
+      "sha256": "4bddf3a19febde92a5281f1a9c6e0fb2d7d482afc2759c4b5aaac9abc70ce0a3",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/second-go-final-variant-passages.log",
+      "sha256": "18417102a9c7dff30a96495de3abc47edaa8aeaf0e2d3945578353d6b48bba43",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/second-go-final-variant-register.log",
+      "sha256": "b4f0a4fdf02dda347e12fbce87bb53ab13bfa02a13b4029efc522af080e97a69",
+      "bytes": 177
+    },
+    {
+      "path": "docs/validation/assets/event-categories/second-patch-arms.json",
+      "sha256": "686d75e55373a1aded4a4b6009fb5702223926c6495c578e77fdc3e36b2f6ade",
+      "bytes": 33629
+    },
+    {
+      "path": "docs/validation/assets/event-categories/semantic-gold.json",
+      "sha256": "1f1be192f74ce0dbf468e907553c772ac738341d371b7b4a6b90673572a60f61",
+      "bytes": 4163
+    },
+    {
+      "path": "docs/validation/assets/event-categories/semantic-punctuation-go.log",
+      "sha256": "778c61b0e572004e6083f7039a051b7ca422c3ae16b8e4426259b8bba52e013a",
+      "bytes": 116
+    },
+    {
+      "path": "docs/validation/assets/event-categories/terminal-jobs-delivery.json",
+      "sha256": "57d2017dfcbb50b982012c3ad67310572e301ed6c17b1192042cb8b2ab153e44",
+      "bytes": 397217
+    },
+    {
+      "path": "docs/validation/assets/event-categories/terminal-jobs-final.json",
+      "sha256": "ffc9a46e513dfcec21c5b913f34a9507f0244de6d68580b65fb8feddd2b1195e",
+      "bytes": 396280
+    },
+    {
+      "path": "docs/validation/assets/event-categories/terminal-jobs.json",
+      "sha256": "fd951aa919e7097fff3eeba496de8c671bc144bac9e6c62c34f5569021933a40",
+      "bytes": 369072
+    },
+    {
+      "path": "docs/validation/assets/event-categories/user-source-preflight-delivery.log",
+      "sha256": "14657ab23e8bdaf8a601d472ed1a2bd2d3b389e6a982049989bfa95f1a46feb2",
+      "bytes": 2382
+    },
+    {
+      "path": "docs/validation/assets/event-categories/user-source-preflight-final.log",
+      "sha256": "14657ab23e8bdaf8a601d472ed1a2bd2d3b389e6a982049989bfa95f1a46feb2",
+      "bytes": 2382
+    },
+    {
+      "path": "docs/validation/assets/event-categories/user-source-preflight.log",
+      "sha256": "14657ab23e8bdaf8a601d472ed1a2bd2d3b389e6a982049989bfa95f1a46feb2",
+      "bytes": 2382
+    }
+  ]
+}

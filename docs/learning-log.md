@@ -3926,3 +3926,53 @@ qualification scope. No new training, MLX or classifier gain is claimed here.
 
 [DelayLama statement-party audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-statement-parties.md)
 · [Shared receipt](validation/delaylama-statement-parties-20261005.json).
+
+## L113 — Keep source categories, qualifications and merge identity separate
+
+Adopted engineering change, 2026-10-05. DelayLama's batch extraction called a
+French report delivery approval while the source inventory proposed delivery.
+Correct source discovery was ineffective because merging discarded its category.
+Default patch 50 binds the own-action category to the original hash and byte span,
+retains earlier disagreement, and keeps out-of-profile labels rather than choosing
+a nearby vocabulary item. Conflicting source proposals stay unresolved. These are
+model candidates; agreement and source presence do not establish legal meaning.
+
+Quote identity is an independent failure mode. A leading calendar wrapper or
+terminal full stop prevented otherwise identical source occurrences from matching.
+The correction tolerates only those literal wrappers at the same original span,
+without rewriting stored evidence. Question/exclamation marks and semicolons
+remain significant. Partial verbs, negation, modality and qualifications must not
+be stripped to manufacture equivalence. Different occurrences remain separate.
+
+Explicit assertions that submission does not establish approval, or approval does
+not establish completion, were initially omitted as mere context. Asking for them
+as separate negative assertions improved these frozen checks. On seven synthetic
+English/French cases, the first full-stack run passed 45/57 source-bound type,
+57/57 statement-party and 6/12 category checks. Two corrected runs passed 57/57,
+57/57 and 12/12, including the final delivery build. Five cases were known; two
+were new when frozen. These repeated development replays are not an independent
+quality benchmark. All failed observations and 21 terminal model jobs are retained.
+
+Source-bound category disagreements appear beside the exact action and receive
+review-queue priority. Eleven live neighborhood checks confirm that readable
+category/review metadata reaches model context without raw receipts or vectors.
+Delivery passed 1,156 backend/836 frontend tests/build, Go/race checks, twelve
+patch combinations and eleven optional suites. Existing user data was preserved.
+
+Category improvement does not establish event-role recall. The final French
+delivery still withheld a proposed performer because the model selected the event
+premise identifier where the performer protocol required its own identifier.
+Preserve the failed selection and empty role slot; do not weaken source binding to
+inflate recall. Long documents, independent families, cross-document amendments,
+exceptions, applicability and complete prompt budgets remain unqualified.
+
+For Laya/GLiNER experiments, separate category prediction, statement polarity,
+qualification recall, span identity, endpoint resolution and typed role selection.
+Use delivery-of-approval-request versus approval, qualified approval versus work
+completion, negative qualification pairs, punctuation minimal pairs and repeated
+occurrences. Evaluate pre-merge discovery, post-merge classification and stored
+graph survival separately. Hold out contract families before tuning. No new
+training, acceleration or classifier-quality gain is claimed by this change.
+
+[DelayLama category audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-event-categories.md)
+· [Shared receipt](validation/delaylama-event-categories-20261005.json).
