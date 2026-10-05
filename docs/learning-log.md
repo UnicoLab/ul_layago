@@ -3976,3 +3976,66 @@ training, acceleration or classifier-quality gain is claimed by this change.
 
 [DelayLama category audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-event-categories.md)
 · [Shared receipt](validation/delaylama-event-categories-20261005.json).
+
+## L114 — Evaluate source discovery, role selection and graph survival separately
+
+**Measured engineering repair, 2026-10-05; synthetic development replays.**
+DelayLama's previous French report example already had a valid named performer
+and original passage, but the relationship protocol rejected selection of the
+event's own registered context instead of its narrower performer identifier.
+Accepting either engine-issued reference now requires the same uniquely located
+complete actor/action premise inside that event. Copied text never rescues an
+unknown or foreign selector. The source hash, occurrence, scope, actor identity,
+date role and whole original quotation remain separate gates.
+
+A later run supplied four correct French actor quotations that enclosed the
+selected premise with an original date prefix. A unique enclosing quote is now
+preserved only inside the same event's registered context. Partial overlap and
+other-event context remain rejected. Treat these failures as selection/provenance
+protocol failures, not as missing discovery or evidence of better model semantics.
+
+A new joint-inspection fixture found a downstream storage failure: the inventory
+already classified a roof survey as planned, but a title keyword demoted its
+stored node to an Entity and lost plan metadata. Source-classified plans/deadlines
+now retain their individual Event identity, review explanation and calendar role
+without actual-performance links or occurrence dates. Score discovered candidates,
+classified candidates and surviving graph assertions separately; a training
+change cannot repair facts lost by later storage logic.
+
+Across four cohorts, the seven known synthetic English/French cases passed
+56/57, 57/57, 57/57 and 57/57 expected statement-type checks; named performers
+passed 12/12, 8/12, 12/12 and 12/12. Abstentions passed 2/3, 3/3, 3/3 and 3/3.
+The first run incorrectly assigned an ambiguous French approval request to the
+letter courier. A prompt clarification requested abstention, but repeated success
+on this case does not establish deterministic semantic safety. The four missing
+actors in cohort two were the enclosing-quotation protocol failure. All failed
+observations remain retained rather than being relabelled as success.
+
+The additional fixture was new when frozen, then reused in cohorts two to four.
+It passed 7/8, 7/8 and 8/8 statement-type checks, with all three performer groups
+(four named assignments) correct each time. Its missing plan was a graph-survival
+failure. The final build passes 65/65 combined type checks, 57/57 statement-party
+checks, 12/12 action-category checks, 16/16 named performer assignments and 4/4
+abstentions. These are bounded fixture expectations, not independent recall or
+semantic/legal correctness scores. Thirty-one terminal model jobs are archived.
+
+Five actual application neighborhood requests and browser checks preserve exact
+highlighted originals, directed role links and readable context without vectors
+or raw receipts. The final release passed 1,163 backend tests, 836 frontend tests,
+the production build, full Go and race suites, twelve patch combinations and
+eleven optional Go suites. Existing user graph rows and saved work were preserved.
+Long/OCR contracts, unseen families, amendments, exceptions, applicability and
+whole-request prompt budgets remain unqualified.
+
+For Laya/GLiNER training and evaluation, use separate targets for source span,
+statement kind/polarity, planned versus observed date role, actor identity,
+directed participant role and evidence/context selection. Include explicit
+abstention cases, letter courier versus author/requester, joint performers,
+same-day distinct actions, duties without reported performance and planned
+actions with an explicit non-performance assertion. Preserve minimal pairs and
+qualifiers. Hold out contract families before prompt or head tuning; maintain
+separate pre-storage and stored-graph metrics. These are proposed training uses;
+this repair measures no new training, MLX acceleration or model-quality gain.
+
+[DelayLama performer/plan audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-performer-context.md)
+· [Shared receipt](validation/delaylama-performer-context-20261005.json).

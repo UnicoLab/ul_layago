@@ -1,0 +1,1555 @@
+{
+  "date": "2026-10-05",
+  "topic": "Own-event performer context and source-classified plans/deadlines",
+  "default_patch_count": 52,
+  "base_source_commit": "887a3a3efffe571d7deed178cfebfac79ecd9123",
+  "delivery_source_commit": "1181665a8c35bac8faa4b3b6b039fcff23c05ce2",
+  "binary_sha256": "7105f0884de29076f33723f664ce4773507ba79033ccd170535db0efa53b2e14",
+  "changes": [
+    "Select an engine-issued own event or performer premise with original scope validation",
+    "Preserve the whole unique enclosing performer quotation inside the same event",
+    "Keep source-classified plans/deadlines over entity keyword demotion",
+    "Expose bounded wider performer-context diagnostics in analysis review"
+  ],
+  "known_development_cases": 7,
+  "new_synthetic_case_when_frozen": 1,
+  "full_semantic_qualification": false,
+  "independent_benchmark": false,
+  "baseline_default50": {
+    "named_performers": [
+      11,
+      12
+    ],
+    "abstentions": [
+      3,
+      3
+    ],
+    "source": "baseline-performer-gate.json"
+  },
+  "cohorts": [
+    {
+      "label": "delivery",
+      "source_commit": "9e104ed43ff7ec1d55833107afa55a4f51e73210",
+      "terminal_jobs": 7,
+      "statement_types": [
+        56,
+        57
+      ],
+      "statement_party_checks": [
+        57,
+        57
+      ],
+      "action_categories": [
+        11,
+        12
+      ],
+      "named_performers": [
+        12,
+        12
+      ],
+      "abstentions": [
+        2,
+        3
+      ],
+      "source_bindings_passed": true,
+      "additional": null
+    },
+    {
+      "label": "final",
+      "source_commit": "500579b067230ff586bfb388ac5062692b0fea13",
+      "terminal_jobs": 8,
+      "statement_types": [
+        57,
+        57
+      ],
+      "statement_party_checks": [
+        57,
+        57
+      ],
+      "action_categories": [
+        12,
+        12
+      ],
+      "named_performers": [
+        8,
+        12
+      ],
+      "abstentions": [
+        3,
+        3
+      ],
+      "source_bindings_passed": true,
+      "additional": {
+        "statement_types": [
+          7,
+          8
+        ],
+        "performer_groups": [
+          3,
+          3
+        ],
+        "performer_assignments": 4,
+        "plan_abstentions_passed": false,
+        "source_bindings_passed": null
+      }
+    },
+    {
+      "label": "canonical",
+      "source_commit": "43a85078b0bb7e2d3777a5f05c0994644f567056",
+      "terminal_jobs": 8,
+      "statement_types": [
+        57,
+        57
+      ],
+      "statement_party_checks": [
+        57,
+        57
+      ],
+      "action_categories": [
+        12,
+        12
+      ],
+      "named_performers": [
+        12,
+        12
+      ],
+      "abstentions": [
+        3,
+        3
+      ],
+      "source_bindings_passed": true,
+      "additional": {
+        "statement_types": [
+          7,
+          8
+        ],
+        "performer_groups": [
+          3,
+          3
+        ],
+        "performer_assignments": 4,
+        "plan_abstentions_passed": false,
+        "source_bindings_passed": true
+      }
+    },
+    {
+      "label": "plans",
+      "source_commit": "1181665a8c35bac8faa4b3b6b039fcff23c05ce2",
+      "terminal_jobs": 8,
+      "statement_types": [
+        57,
+        57
+      ],
+      "statement_party_checks": [
+        57,
+        57
+      ],
+      "action_categories": [
+        12,
+        12
+      ],
+      "named_performers": [
+        12,
+        12
+      ],
+      "abstentions": [
+        3,
+        3
+      ],
+      "source_bindings_passed": true,
+      "additional": {
+        "statement_types": [
+          8,
+          8
+        ],
+        "performer_groups": [
+          3,
+          3
+        ],
+        "performer_assignments": 4,
+        "plan_abstentions_passed": true,
+        "source_bindings_passed": true
+      }
+    }
+  ],
+  "accepted_terminal_jobs": 31,
+  "final_totals": {
+    "statement_types": [
+      65,
+      65
+    ],
+    "statement_party_checks": [
+      57,
+      57
+    ],
+    "action_categories": [
+      12,
+      12
+    ],
+    "named_performer_assignments": [
+      16,
+      16
+    ],
+    "abstentions": [
+      4,
+      4
+    ]
+  },
+  "final_health": {
+    "analysis_jobs": {
+      "cancelled": 0,
+      "done": 8,
+      "failed": 0,
+      "queued": 0,
+      "running": 0
+    },
+    "analysis_jobs_scope": "service",
+    "edge_count": 167,
+    "episode_count": 8,
+    "node_count": 139,
+    "schema": "general",
+    "status": "ok"
+  },
+  "tests": {
+    "backend": 1163,
+    "frontend": 836,
+    "frontend_build": "pass",
+    "go_full": "pass",
+    "go_full_race": "pass",
+    "patch_combinations": 12,
+    "optional_go_suites": 11,
+    "user_source_preflight_default_patches": 52
+  },
+  "context_api_checks": 5,
+  "browser": {
+    "temporary_tab_id": "119",
+    "temporary_tab_closed": true,
+    "user_tabs_closed": false,
+    "french_performer_visible": true,
+    "exact_highlight_visible": true,
+    "category_disagreement_visible": true,
+    "directed_connection_and_both_endpoint_evidence_visible": true,
+    "planned_survey_visible": true,
+    "planned_date_role_visible": true,
+    "no_actual_performer_for_plan": true,
+    "browser_error_count": 0,
+    "model_submissions_from_browser": 0
+  },
+  "activation": {
+    "old_engine_pid": 66109,
+    "engine_pid": 5039,
+    "api_pid_unchanged": 66131,
+    "database_backup": "/private/tmp/delaylama-performer-context/activation-backup/graph.db",
+    "binary_backup": "/private/tmp/delaylama-performer-context/activation-backup/chronograph-previous",
+    "finished_jobs_archived": 0,
+    "graph_rows_unchanged": true,
+    "table_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    },
+    "config_unchanged": true,
+    "engine_sha256": "7105f0884de29076f33723f664ce4773507ba79033ccd170535db0efa53b2e14",
+    "health_before": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    },
+    "health_after": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    }
+  },
+  "api_activation": {
+    "old_launcher": 66130,
+    "old_listener": 66131,
+    "new_launcher": 5192,
+    "configuration_change": "None; restart to load validated performer-context diagnostics and retained source plan metadata",
+    "config_sha256_before": "538f6c5d5258b3a3cca8b25a083e695217ef42584564a554497541f57e8b53ad",
+    "config_sha256_after": "538f6c5d5258b3a3cca8b25a083e695217ef42584564a554497541f57e8b53ad",
+    "journal_rows_unchanged": true,
+    "journal_sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c",
+    "no_existing_contract_reanalysis_submitted": true
+  },
+  "preservation": {
+    "protected_engine_source_files_unchanged": true,
+    "protected_app_artifacts_unchanged": true,
+    "user_studio_unchanged": true,
+    "orchid_studio_unchanged": true,
+    "user_graph_all_tables_unchanged": true,
+    "recorded_replay_nodes_edges_unchanged_by_GUI": true,
+    "owned_jobs_terminal_verified_before_cleanup": true,
+    "replay_verified_before_cleanup": true,
+    "user_engine_health": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    },
+    "user_graph_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    }
+  },
+  "cleanup": {
+    "accepted_terminal_jobs_archived": 31,
+    "rounds": [
+      {
+        "cohort": "delivery",
+        "terminal_jobs": 7
+      },
+      {
+        "cohort": "final",
+        "terminal_jobs": 8
+      },
+      {
+        "cohort": "canonical",
+        "terminal_jobs": 8
+      },
+      {
+        "cohort": "plans",
+        "terminal_jobs": 8
+      }
+    ],
+    "final_services_stopped": [
+      {
+        "service": "engine",
+        "pid": 98311,
+        "port": 8097
+      },
+      {
+        "service": "api",
+        "pid": 98312,
+        "port": 8081
+      },
+      {
+        "service": "frontend",
+        "pid": 98313,
+        "port": 5175
+      }
+    ],
+    "final_owned_patch_clones_removed": [
+      "final-patch-audit",
+      "final-patch-inventory-passages",
+      "final-patch-inventory-coverage",
+      "final-patch-passages",
+      "final-patch-coverage",
+      "final-patch-inventory-meaning",
+      "final-patch-register",
+      "final-patch-inventory-register",
+      "final-patch-inventory-audit",
+      "final-patch-inventory",
+      "final-patch-default",
+      "final-patch-meaning"
+    ],
+    "owned_patch_clones_removed_across_four_cohorts": 48,
+    "temporary_browser_tab_closed": true,
+    "user_tabs_closed": false,
+    "user_graph_reanalysis_submitted": false
+  },
+  "learning_id": "L114",
+  "new_laya_training_or_acceleration_measurement": false,
+  "unqualified": [
+    "Independent contract families",
+    "Long PDF/OCR sources",
+    "Cross-document amendments and precedence",
+    "Exceptions, applicability and entitlement",
+    "Complete analysis prompt budgets",
+    "Semantic ambiguous-pronoun abstention across unseen inputs"
+  ],
+  "assets": [
+    {
+      "path": "docs/validation/assets/performer-context/activation.json",
+      "sha256": "150f1d549c23104bdb19c0d3603c0d974f99614affa41a378b3774f387fe0100",
+      "bytes": 1735,
+      "original_path": "/private/tmp/delaylama-performer-context/activation.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-api-canonical-observation.json",
+      "sha256": "eef0b1d6245ba949930935d8f485ef47b09e57c2575f5d390417d9d8a06090e0",
+      "bytes": 21964,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-api-canonical-observation.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-api-canonical-run.log",
+      "sha256": "24122b53d82f7625520761aacafb051739cd5b92b9e3ec79a424b216bfad95b6",
+      "bytes": 1351,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-api-canonical-run.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-api-canonical-submission.json",
+      "sha256": "662fee5ce0551f76798826d4ef1d889ab17698e1cea74634ee41e380774b62cc",
+      "bytes": 6895,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-api-canonical-submission.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-api-initial-404.log",
+      "sha256": "20e07de6c2b7fbafdfd10468d5b5d852d88091441b927287a2dd919d760f1ffb",
+      "bytes": 877,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-api-initial-404.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-api-observation.json",
+      "sha256": "370d4ea81a136cad7f88a33efe15df55518db5c177bb868210d616503753413d",
+      "bytes": 21964,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-api-observation.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-api-plans-observation.json",
+      "sha256": "99156b8f044ccf6167e28e913c45b79c1e8297c30e90a2c5d5e941bfda77e168",
+      "bytes": 21962,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-api-plans-observation.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-api-plans-run.log",
+      "sha256": "3e72fa56764c0449501d962c16ae540bec5d79be8e1f17cbfd3420dc07b458d8",
+      "bytes": 1351,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-api-plans-run.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-api-plans-submission.json",
+      "sha256": "1e2114b1c7b87bbc3d4cf9a66fd3124136c7ed4f58c7e57e0d81fb17d0e44407",
+      "bytes": 6895,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-api-plans-submission.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-api-run.log",
+      "sha256": "dcd780965982e3be0396d10f475439253ffbabada427cff9ba07961d8813482d",
+      "bytes": 429,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-api-run.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-api-submission.json",
+      "sha256": "ff51093fd18e39136fd9dbf4345a6a9f9be5de23b00df2a47addbdeaf8f924e4",
+      "bytes": 6895,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-api-submission.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-case.json",
+      "sha256": "d23b4c06d3a80fee47965b8a17e6379a55e27f88c05a7fd96dc6d34dbf4e69e4",
+      "bytes": 816,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-case.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-freeze.json",
+      "sha256": "accd83fb78394dc382d71eb8ca9456dbee0ab78d3559dcf37d83e5eced0dccde",
+      "bytes": 191,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-freeze.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-gate-canonical.json",
+      "sha256": "1ad97366c45633f1755227b8beca653eb091e29af3837956f52ece8523cf24c4",
+      "bytes": 14571,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-gate-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-gate-final.json",
+      "sha256": "006cc7c5b9880bc464a86789f15592d3560b478520522dd9a937c67ca6d828e4",
+      "bytes": 14080,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-gate-final.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-gate-plans.json",
+      "sha256": "7fd71c15e142cb420a808432cbb43c24cfbc8b8fd15158d1e6b696a60fba684c",
+      "bytes": 15042,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-gate-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-gold.json",
+      "sha256": "0c3ba2e7f13e69f4ad735fc784b1a72ecf71940440a7532150dcaddc04e78ae1",
+      "bytes": 1129,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-gold.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-project-canonical.json",
+      "sha256": "f9778c87ffe41c66cbe5713009c7ffb6ee9a10f3c442be73e08fc15373ad3910",
+      "bytes": 122,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-project-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-project-plans.json",
+      "sha256": "fb896ea5a1ebd67b7d337f145da80b22a9e6d7a85ebd5662f8a83d71e514a585",
+      "bytes": 122,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-project-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-project.json",
+      "sha256": "da3d1a043a818bb2955298a4a21568b506c4b1654eca08cd1051bca985d9da29",
+      "bytes": 227,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-project.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-snapshot-canonical.json",
+      "sha256": "9892e337838ed9e4206b0e390dec665ceff2ea5a8265e10be30a2b1cd0e05d61",
+      "bytes": 120839,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-snapshot-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-snapshot-final.json",
+      "sha256": "47b7d6dd7ec2a7837c9bb6d931216446d9807a07158cd2845e3e75e0d37ea7a9",
+      "bytes": 120850,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-snapshot-final.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-snapshot-plans.json",
+      "sha256": "9d105c160e5a95b446602cb5c4641caad99a0aaf641251f3f249d1bb68b42987",
+      "bytes": 124081,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-snapshot-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-terminal-jobs-canonical.json",
+      "sha256": "80a768cb6d4edd1de1bc21d71ca6a4540460fbc9391429db10171d907186c40f",
+      "bytes": 62246,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-terminal-jobs-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-terminal-jobs-final.json",
+      "sha256": "063801444a7b2e37ca1849584722285afc9f4c2b9823c33854588012a4710f62",
+      "bytes": 62118,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-terminal-jobs-final.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/additional-terminal-jobs-plans.json",
+      "sha256": "3274f36e6ae9260d0f4df7c46071ea47e4139119f013a529af3a25912ccb0fba",
+      "bytes": 62731,
+      "original_path": "/private/tmp/delaylama-performer-context/additional-terminal-jobs-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/api-activation.json",
+      "sha256": "6e14eb87d48e06bb78dbdfaa734c038a0e752a0357a8b9b3acde607bf0f70aa7",
+      "bytes": 564,
+      "original_path": "/private/tmp/delaylama-performer-context/api-activation.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/backend-all-final.log",
+      "sha256": "c037e3d35dd37d228b06b8d827065b8c91abb04e918805b2f9b097278887aaf8",
+      "bytes": 1427,
+      "original_path": "/private/tmp/delaylama-performer-context/backend-all-final.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/backend-all-plans.log",
+      "sha256": "da756b205627fc86d3f708134a2e7fa6ae11102a008c0f9fb474ddad84a9bf6e",
+      "bytes": 1427,
+      "original_path": "/private/tmp/delaylama-performer-context/backend-all-plans.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/backend-all.log",
+      "sha256": "86eb32846974ef26330a9d6d93810d8d72c2933af6936366e4cee97419b2a96f",
+      "bytes": 1427,
+      "original_path": "/private/tmp/delaylama-performer-context/backend-all.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/baseline-performer-gate.json",
+      "sha256": "b4e618975c827fc93c2859b76021e37c561b2f9519ef59c8143e71d841421fba",
+      "bytes": 7770,
+      "original_path": "/private/tmp/delaylama-performer-context/baseline-performer-gate.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/before-planned-storage.log",
+      "sha256": "2e111c595fc3d12c8ebf6360dc6a42c6fc18cee643764c7a65cc69b57578b4b4",
+      "bytes": 941,
+      "original_path": "/private/tmp/delaylama-performer-context/before-planned-storage.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/before-regression.log",
+      "sha256": "efbb073e1f8780c38da2248e16140b4496ad3511080e25e89ca2e0d62e6dafee",
+      "bytes": 454,
+      "original_path": "/private/tmp/delaylama-performer-context/before-regression.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/browser-checks.json",
+      "sha256": "6049109da696e76f2a33876addb20bc882fa425e200fe34486ac7bcc54d189e4",
+      "bytes": 449,
+      "original_path": "/private/tmp/delaylama-performer-context/browser-checks.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/browser-connection-dom.txt",
+      "sha256": "aa860056feff95cf5e21d523e08c7bea2bde418f16a66d4308ada40bf79b5c19",
+      "bytes": 20252,
+      "original_path": "/private/tmp/delaylama-performer-context/browser-connection-dom.txt"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/browser-errors.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "original_path": "/private/tmp/delaylama-performer-context/browser-errors.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/browser-performer-dom.txt",
+      "sha256": "6b4e20171559d8f4d705f4027884d4c9bc5bc3ec8d83a09c157a394a6b59fe7f",
+      "bytes": 16338,
+      "original_path": "/private/tmp/delaylama-performer-context/browser-performer-dom.txt"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/browser-planned-dom.txt",
+      "sha256": "654d38134178eacc66d3d97bef73a35500449167f7fe2ac894273d4561574c9a",
+      "bytes": 17850,
+      "original_path": "/private/tmp/delaylama-performer-context/browser-planned-dom.txt"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/category-en-snapshot-canonical.json",
+      "sha256": "178a541c934aacdc3bb6c3f1ca36ce37977b37b96f6eae8ccfb99c3880bac111",
+      "bytes": 130831,
+      "original_path": "/private/tmp/delaylama-performer-context/category-en-snapshot-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/category-en-snapshot-delivery.json",
+      "sha256": "e7554e4b9dc508e2fb28a289cc384ac4642ee094b85fd131635656311bb3e58b",
+      "bytes": 130627,
+      "original_path": "/private/tmp/delaylama-performer-context/category-en-snapshot-delivery.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/category-en-snapshot-final.json",
+      "sha256": "f56e7b0b020d836f4522f115983834c8b43cca335cbe49826e84a42179bac126",
+      "bytes": 138419,
+      "original_path": "/private/tmp/delaylama-performer-context/category-en-snapshot-final.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/category-en-snapshot-plans.json",
+      "sha256": "4aa72410281cc5b36f0345fc90c2f843b6a05eb666e01b11ed1626000d76925b",
+      "bytes": 130373,
+      "original_path": "/private/tmp/delaylama-performer-context/category-en-snapshot-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/category-fr-snapshot-canonical.json",
+      "sha256": "c8612e1d11772e625336ca1114a626fed53107c5a8f0764d027086a315a49b68",
+      "bytes": 139616,
+      "original_path": "/private/tmp/delaylama-performer-context/category-fr-snapshot-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/category-fr-snapshot-delivery.json",
+      "sha256": "559c84c1432de92ca50a4de0e4158a92d30d16f6888a1cae147b14a3cddf8834",
+      "bytes": 155185,
+      "original_path": "/private/tmp/delaylama-performer-context/category-fr-snapshot-delivery.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/category-fr-snapshot-final.json",
+      "sha256": "0a48eafbd982aadb40cffd92f84e98d5ed159f5aa132be5b4230ad06044bfa71",
+      "bytes": 133348,
+      "original_path": "/private/tmp/delaylama-performer-context/category-fr-snapshot-final.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/category-fr-snapshot-plans.json",
+      "sha256": "8a691f33653f154e46ca77933ec72c214dcf3b9d32965603883fba6ed0f330ac",
+      "bytes": 145746,
+      "original_path": "/private/tmp/delaylama-performer-context/category-fr-snapshot-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/category-gold.json",
+      "sha256": "9d0412e7a7b889cce9140d5681fd7a536e095e16d407f606f4f1cee1eb23cd0e",
+      "bytes": 1381,
+      "original_path": "/private/tmp/delaylama-performer-context/category-gold.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/cleanup.json",
+      "sha256": "fe729058f9edb5e354828d8fdec0da64046d6f23d4f10fe5c2a3bcfff526251d",
+      "bytes": 1182,
+      "original_path": "/private/tmp/delaylama-performer-context/cleanup.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/core-enclosing-final.log",
+      "sha256": "c1f07831bd43beb5db9cff50f4b1c4967440877c4909e7e290123a1397176cee",
+      "bytes": 118,
+      "original_path": "/private/tmp/delaylama-performer-context/core-enclosing-final.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/core-enclosing.log",
+      "sha256": "4845d9d8370f55728640cb1260cb19a3abadb5aa88114d688d35827611a6a514",
+      "bytes": 116,
+      "original_path": "/private/tmp/delaylama-performer-context/core-enclosing.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/core-first.log",
+      "sha256": "781a907c71472c620d81148a914ab94ccb6030bc522c008e8546f9d1934bf12d",
+      "bytes": 116,
+      "original_path": "/private/tmp/delaylama-performer-context/core-first.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/core-plans-final.log",
+      "sha256": "b38d9536d03f6c5cc09d251da4c49b50e15e91f4ecfe224a1dfa7a208109b548",
+      "bytes": 118,
+      "original_path": "/private/tmp/delaylama-performer-context/core-plans-final.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/cross-article-fr-snapshot-canonical.json",
+      "sha256": "72a49b9917605899f431bc23b59ec9290eef90f13de57fb523eea170388c3a08",
+      "bytes": 137861,
+      "original_path": "/private/tmp/delaylama-performer-context/cross-article-fr-snapshot-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/cross-article-fr-snapshot-delivery.json",
+      "sha256": "a3723d56d77887c0dd30c11713699c8bfcc3989c02b5e4e8c7ba7e30c0387e3e",
+      "bytes": 137934,
+      "original_path": "/private/tmp/delaylama-performer-context/cross-article-fr-snapshot-delivery.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/cross-article-fr-snapshot-final.json",
+      "sha256": "10ee7716c7c57f5177788b62966537f1d47d2f8f6b4deb6a61811e39ca6408ce",
+      "bytes": 137884,
+      "original_path": "/private/tmp/delaylama-performer-context/cross-article-fr-snapshot-final.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/cross-article-fr-snapshot-plans.json",
+      "sha256": "e778c98f3aa03324b509996e88e4c728bfaf6d686b8d4a4b9ec7ab3391491bc7",
+      "bytes": 138043,
+      "original_path": "/private/tmp/delaylama-performer-context/cross-article-fr-snapshot-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/endpoint-en-snapshot-canonical.json",
+      "sha256": "388af8d1a2b2414e9aa87d8511e477fa10a93e5e8cff5bcae656fe099fa6bc86",
+      "bytes": 103720,
+      "original_path": "/private/tmp/delaylama-performer-context/endpoint-en-snapshot-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/endpoint-en-snapshot-delivery.json",
+      "sha256": "72ec11cd709783a04adb2d4ec2177c6fd0685f9acc4bcfe9cd28ef28a0f6e4e6",
+      "bytes": 111244,
+      "original_path": "/private/tmp/delaylama-performer-context/endpoint-en-snapshot-delivery.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/endpoint-en-snapshot-final.json",
+      "sha256": "eacd5d809eeafc4dc0b22047cb3c9bdcb1042f03657dadf333afdc7602cff740",
+      "bytes": 111090,
+      "original_path": "/private/tmp/delaylama-performer-context/endpoint-en-snapshot-final.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/endpoint-en-snapshot-plans.json",
+      "sha256": "331d803538bf31822609fc3bccec7d8b7732469a7262960681c9c77df1d128d9",
+      "bytes": 111087,
+      "original_path": "/private/tmp/delaylama-performer-context/endpoint-en-snapshot-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/endpoint-fr-snapshot-canonical.json",
+      "sha256": "ccac560e97a1eca9f40167c7fabd128610a125f8d1aa20e75f1f22c476255073",
+      "bytes": 115916,
+      "original_path": "/private/tmp/delaylama-performer-context/endpoint-fr-snapshot-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/endpoint-fr-snapshot-delivery.json",
+      "sha256": "85407b56003784573796efeed4185f115d45e365da96ae3aa55a83a84eda34e6",
+      "bytes": 116030,
+      "original_path": "/private/tmp/delaylama-performer-context/endpoint-fr-snapshot-delivery.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/endpoint-fr-snapshot-final.json",
+      "sha256": "f7ecf0aebc7dfad395391b31594c39c3e67bfe1b4603eace81792fd7176628ae",
+      "bytes": 115958,
+      "original_path": "/private/tmp/delaylama-performer-context/endpoint-fr-snapshot-final.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/endpoint-fr-snapshot-plans.json",
+      "sha256": "f3538b7436de1b1a26a5063c6abca0ca9e39104a5647dceab6de5a81b05e5c57",
+      "bytes": 115974,
+      "original_path": "/private/tmp/delaylama-performer-context/endpoint-fr-snapshot-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/final-health.json",
+      "sha256": "668c95df112cf042c40c15de9a5140aa6874fe587b162bad2494f07fece3243e",
+      "bytes": 256,
+      "original_path": "/private/tmp/delaylama-performer-context/final-health.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/final-patch-arms.json",
+      "sha256": "5b054f5263eb78f8813721e525eefe70d11682ae62b2321b8a071dc35a8db134",
+      "bytes": 34733,
+      "original_path": "/private/tmp/delaylama-performer-context/final-patch-arms.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/first-cleanup.json",
+      "sha256": "87d9cab3146fa1b4f62c0dc0eae8f610fdc48741271e98bdbd34244264da7729",
+      "bytes": 334,
+      "original_path": "/private/tmp/delaylama-performer-context/first-cleanup.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/first-go-final-variant-audit.log",
+      "sha256": "55dffd897d42999b8e2353d9b26c96dd344f4de5b002b8795b11a95f7ade3da0",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/first-go-final-variant-audit.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/first-go-final-variant-coverage.log",
+      "sha256": "8236e4c814158ffc3680113417d13ae2b4835b21f47462b0bee11edf43210e0a",
+      "bytes": 168,
+      "original_path": "/private/tmp/delaylama-performer-context/first-go-final-variant-coverage.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/first-go-final-variant-inventory-audit.log",
+      "sha256": "31f1a945e7d7987e6a995f29424661c3e81841083958a4a486f2718244bc42f2",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/first-go-final-variant-inventory-audit.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/first-go-final-variant-inventory-coverage.log",
+      "sha256": "83e15e31aeb3756796616b00e0c04f2da69a8b72547bdbdfa7a3159f0b152c0e",
+      "bytes": 168,
+      "original_path": "/private/tmp/delaylama-performer-context/first-go-final-variant-inventory-coverage.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/first-go-final-variant-inventory-meaning.log",
+      "sha256": "f77b208c46cfb6d2289483bc4d1347dcc9a3051c48df67c4517a9dfbd7cd1824",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/first-go-final-variant-inventory-meaning.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/first-go-final-variant-inventory-passages.log",
+      "sha256": "3aecec66f008ce865cb68de0842ee18f3fbe70a4bfbd710d054e58f8248027a7",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/first-go-final-variant-inventory-passages.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/first-go-final-variant-inventory-register.log",
+      "sha256": "29963390dc0381ec22f1c0a7aa480a38f2a8e1d0402cf4578612a1d30082caef",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/first-go-final-variant-inventory-register.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/first-go-final-variant-inventory.log",
+      "sha256": "cd93599bcecd25975b356cf3f3d8ea4e31fdfc4e2df37d764929c3c11b5c2b42",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/first-go-final-variant-inventory.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/first-go-final-variant-meaning.log",
+      "sha256": "6eb231ab74014159f7f108c5f21b17dac3f91cf5d60a22b63ce954df79095991",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/first-go-final-variant-meaning.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/first-go-final-variant-passages.log",
+      "sha256": "1ff5a80d5c09a6a0ced94ce7e5f710f6688fe9ba9568973dbaab6cc2f749aa0c",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/first-go-final-variant-passages.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/first-go-final-variant-register.log",
+      "sha256": "643798920f3bbe446ac88dbe5f25325c490485926cde5aeaa0798e8f6afe14d2",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/first-go-final-variant-register.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/first-patch-arms.json",
+      "sha256": "4473455bacdacd84827c8cac65f232676497355e1d9fb660f834359a4b8b36fc",
+      "bytes": 34181,
+      "original_path": "/private/tmp/delaylama-performer-context/first-patch-arms.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/fixture-freeze.json",
+      "sha256": "f22c08ca9cf4c4e730f6bc533da3a3915835050104046ac1b6de0a9112ac95dd",
+      "bytes": 601,
+      "original_path": "/private/tmp/delaylama-performer-context/fixture-freeze.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/focused-final.log",
+      "sha256": "904d46aaecdaae2502544f214dac6dc94779e352e9b9b5fa680958c65b697506",
+      "bytes": 61,
+      "original_path": "/private/tmp/delaylama-performer-context/focused-final.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/focused-first.log",
+      "sha256": "77b8daaa2996f0f94031100357bcd76309e83bed634ed24499cc29051e576e2c",
+      "bytes": 61,
+      "original_path": "/private/tmp/delaylama-performer-context/focused-first.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/frontend-all-final.log",
+      "sha256": "1538267f6299430c35db76740a0397af0aff69cf3c16482ccb5bd3fa7b08cbe0",
+      "bytes": 341,
+      "original_path": "/private/tmp/delaylama-performer-context/frontend-all-final.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/frontend-build-final.log",
+      "sha256": "caea955a805921b90e3644e3e49aa5e73cf50e34f4758d2554d6263ddd8903fd",
+      "bytes": 1274,
+      "original_path": "/private/tmp/delaylama-performer-context/frontend-build-final.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/frozen-cases.json",
+      "sha256": "1ced458a3927a8e113740aff084f600971a455af4a3eb5897fcc96bec0cae0c6",
+      "bytes": 6387,
+      "original_path": "/private/tmp/delaylama-performer-context/frozen-cases.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/fullstack-gate-canonical.json",
+      "sha256": "55d4a839872219f778e41b771fc836f58866113f45f12e1a0934ae81f288978f",
+      "bytes": 156222,
+      "original_path": "/private/tmp/delaylama-performer-context/fullstack-gate-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/fullstack-gate-delivery.json",
+      "sha256": "e428594f6cfe813472e0c0d5576ad5d7b0aef82668e9732bb90b197384d8bf50",
+      "bytes": 155938,
+      "original_path": "/private/tmp/delaylama-performer-context/fullstack-gate-delivery.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/fullstack-gate-final.json",
+      "sha256": "ed8bde3c4fd1a8d4c28a91809cd4b9535ab1eab27634bc28b36c4f1dd61e3ca8",
+      "bytes": 156097,
+      "original_path": "/private/tmp/delaylama-performer-context/fullstack-gate-final.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/fullstack-gate-plans.json",
+      "sha256": "3dd218a384870514f225eea0c46f1577a21487e525095dc7d31521fdc0028e52",
+      "bytes": 157666,
+      "original_path": "/private/tmp/delaylama-performer-context/fullstack-gate-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/fullstack-inputs-canonical.json",
+      "sha256": "faa8442f5a50187f7ba1d057f69c315e3578ba0a8a0ccfda329ec50b288c9a62",
+      "bytes": 13569,
+      "original_path": "/private/tmp/delaylama-performer-context/fullstack-inputs-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/fullstack-inputs-delivery.json",
+      "sha256": "49687be4c29bba5ad594a211d97329c6643424cba9e52e30c434ef91684d575e",
+      "bytes": 13569,
+      "original_path": "/private/tmp/delaylama-performer-context/fullstack-inputs-delivery.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/fullstack-inputs-final.json",
+      "sha256": "2d1ac530954824cd2a7aa0fcb8429ec6cc0ec2f5bde0380b1c31f4cb8be0a540",
+      "bytes": 13569,
+      "original_path": "/private/tmp/delaylama-performer-context/fullstack-inputs-final.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/fullstack-inputs-plans.json",
+      "sha256": "4aa35dcd9fb36a745b7b374ea81cb2b0fb8879ffdc73a8cb83cac951837a6a21",
+      "bytes": 13569,
+      "original_path": "/private/tmp/delaylama-performer-context/fullstack-inputs-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/fullstack-sync-canonical.json",
+      "sha256": "6ea216b866f6dd333f9c6e5cb659a9f10c45858baba4a6b2baadd2006f8d148a",
+      "bytes": 55787,
+      "original_path": "/private/tmp/delaylama-performer-context/fullstack-sync-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/fullstack-sync-delivery.json",
+      "sha256": "31ab198b06821442a7248d8db50d10e417298d5a9aed02a956deabc8673bd6bc",
+      "bytes": 55841,
+      "original_path": "/private/tmp/delaylama-performer-context/fullstack-sync-delivery.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/fullstack-sync-final.json",
+      "sha256": "946d6f6e7507e579e75531b03a1606a395d312a92f86ec3e21815f062002ebe0",
+      "bytes": 55891,
+      "original_path": "/private/tmp/delaylama-performer-context/fullstack-sync-final.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/fullstack-sync-plans.json",
+      "sha256": "c55b783cd60deaf602cd020447b67f0691e7ef3ea5744c49d9e2bef355068fb4",
+      "bytes": 55848,
+      "original_path": "/private/tmp/delaylama-performer-context/fullstack-sync-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-all-canonical.log",
+      "sha256": "88b3fc7e4cc78fa9e51224431372f4cb7644a9ad56f46581c09e09ef80882728",
+      "bytes": 1952,
+      "original_path": "/private/tmp/delaylama-performer-context/go-all-canonical.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-all-final.log",
+      "sha256": "e76151e4ccb71eb3dc7a296a6fe4669c8f2e72148bedc3914d16d32047c00c01",
+      "bytes": 1950,
+      "original_path": "/private/tmp/delaylama-performer-context/go-all-final.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-all-plans.log",
+      "sha256": "89972c51c3812efb1fbafbb769d4c6d4da87eca16626be50152fb0f137195683",
+      "bytes": 1953,
+      "original_path": "/private/tmp/delaylama-performer-context/go-all-plans.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-all.log",
+      "sha256": "c22694423c475028e7b8c27a5f7ea000e4f959fed8f07d63fcb3db7f8a4bbb7d",
+      "bytes": 1915,
+      "original_path": "/private/tmp/delaylama-performer-context/go-all.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-final-variant-audit.log",
+      "sha256": "8512a097a965fcc497fe5830aec373efb309e5c9db94b84e7f5e854555f2704c",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/go-final-variant-audit.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-final-variant-coverage.log",
+      "sha256": "d0682cf8bbeccaac1d86486f51afa3c0e6130fba289bd06bcc83dfe7b4a707c6",
+      "bytes": 170,
+      "original_path": "/private/tmp/delaylama-performer-context/go-final-variant-coverage.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-final-variant-inventory-audit.log",
+      "sha256": "8e9c95567a371d2a18bfdb7a26d0d1df30c60310a4d64295b93f01e0681ff5da",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/go-final-variant-inventory-audit.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-final-variant-inventory-coverage.log",
+      "sha256": "d85be8a10b9d13802c806e25c238cd773fa1f450cc8277442552377309f7c99f",
+      "bytes": 170,
+      "original_path": "/private/tmp/delaylama-performer-context/go-final-variant-inventory-coverage.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-final-variant-inventory-meaning.log",
+      "sha256": "332b556d97c7a0f11d01389fe35daa57b462713d9984b3686012da27026ed235",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/go-final-variant-inventory-meaning.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-final-variant-inventory-passages.log",
+      "sha256": "951356a50291678674c259a92a67dc94cc5da13b72868cf5692f306454d08b4b",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/go-final-variant-inventory-passages.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-final-variant-inventory-register.log",
+      "sha256": "63f58f136e0b05e2822e59070604817dc27679506294426368aa6d32402eba18",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/go-final-variant-inventory-register.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-final-variant-inventory.log",
+      "sha256": "e3ea2e41688c5e4cc4a1418b619d316db80c3a837abcb62c2e57a10dfbffdf4a",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/go-final-variant-inventory.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-final-variant-meaning.log",
+      "sha256": "9af433c88effe241f643aaac6c94a1bc1ae675373d07a37aa1f42fb78875c98b",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/go-final-variant-meaning.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-final-variant-passages.log",
+      "sha256": "dae39ab570377619e155b8174375ecdb704f001c9bb2a55686148d15d07c699c",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/go-final-variant-passages.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-final-variant-register.log",
+      "sha256": "bd49f385bef2e930e094f940a0b760100707b76a742f49cc9c7f4b847178fa79",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/go-final-variant-register.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-race-canonical.log",
+      "sha256": "669d06ca22d86039184e21097bda8e87e31a1f9470f01f20d31cf9fdf1c8c632",
+      "bytes": 1951,
+      "original_path": "/private/tmp/delaylama-performer-context/go-race-canonical.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-race-final.log",
+      "sha256": "464f1958da14885bc1518bdd234dd98f3905b277819781b7eb977268252b4272",
+      "bytes": 1951,
+      "original_path": "/private/tmp/delaylama-performer-context/go-race-final.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-race-plans.log",
+      "sha256": "82de16618fa4cec5840f9f9428598765c076c76a9bed2058f33d6fb59cabac26",
+      "bytes": 1953,
+      "original_path": "/private/tmp/delaylama-performer-context/go-race-plans.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/go-race.log",
+      "sha256": "2cf3ab3293f53f0a883552fb890d54766132e9944141a14ad7d17a46cfa68ff1",
+      "bytes": 1913,
+      "original_path": "/private/tmp/delaylama-performer-context/go-race.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/initial-startup-refusal.log",
+      "sha256": "374ff5a7cf00ad687d0c71490ce9cf776e32213fa304ce3a3094ce6ed569e417",
+      "bytes": 4940,
+      "original_path": "/private/tmp/delaylama-performer-context/initial-startup-refusal.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/live-neighborhood-checks.json",
+      "sha256": "ae1ad1aa0d36c66a38a93143a4156e683ba78c2bb9b98cd232b04f2516b5c073",
+      "bytes": 206280,
+      "original_path": "/private/tmp/delaylama-performer-context/live-neighborhood-checks.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/live-neighborhood-french.json",
+      "sha256": "17c18053c23e43ca0ddf51202b8237d602d5426b602aa4daa26e562c54d8534b",
+      "bytes": 62908,
+      "original_path": "/private/tmp/delaylama-performer-context/live-neighborhood-french.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/live-performer-context.png",
+      "sha256": "7cc314ee4d9313ab5e945578d0c096c7b77a191e7f5a89700aee13a0fd637537",
+      "bytes": 188890,
+      "original_path": "/private/tmp/delaylama-performer-context/live-performer-context.png"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/live-planned-context.png",
+      "sha256": "0ea1a5fc4ebb296ebf10d4930cce0bcaffe7f97c4ea83baf956d3598d8c58475",
+      "bytes": 162841,
+      "original_path": "/private/tmp/delaylama-performer-context/live-planned-context.png"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/live-result-canonical.log",
+      "sha256": "2bf1fdd74613eac459eb5e39fda2acf09604754fa0ac641cbac89469c70ec2f5",
+      "bytes": 9401,
+      "original_path": "/private/tmp/delaylama-performer-context/live-result-canonical.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/live-result-delivery.log",
+      "sha256": "ab36917d5125f6b1a20dc89b80cfbe469c87552459c593d98083e3ddabe00bb8",
+      "bytes": 9967,
+      "original_path": "/private/tmp/delaylama-performer-context/live-result-delivery.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/live-result-final.log",
+      "sha256": "95e9c173e024268047f08edece203d89e6725e0f291188c74f68a79d9f3a5305",
+      "bytes": 9401,
+      "original_path": "/private/tmp/delaylama-performer-context/live-result-final.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/live-result-plans.log",
+      "sha256": "32772cf6bdde5f2a23054373d22d135b05a361652e2749a8947ba049fafacfe1",
+      "bytes": 9626,
+      "original_path": "/private/tmp/delaylama-performer-context/live-result-plans.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/live-run-canonical.log",
+      "sha256": "183655b9b15c71e701f8c1dd2a185458dac2a5587c99cb45b7cb61adae1c017b",
+      "bytes": 1142,
+      "original_path": "/private/tmp/delaylama-performer-context/live-run-canonical.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/live-run-delivery.log",
+      "sha256": "685404f03853be8a7c4e9b99c818fa1031579e0566671cbd05c7304a694373a0",
+      "bytes": 1206,
+      "original_path": "/private/tmp/delaylama-performer-context/live-run-delivery.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/live-run-final.log",
+      "sha256": "829cc07034ef6150ee47727971a33ad63335e2f5cb30f26109cddda9589bcb77",
+      "bytes": 1201,
+      "original_path": "/private/tmp/delaylama-performer-context/live-run-final.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/live-run-plans.log",
+      "sha256": "2372fdd3b017113a3491b49efe70493908660ce39d05fdcd157367ae0f6a14f3",
+      "bytes": 1204,
+      "original_path": "/private/tmp/delaylama-performer-context/live-run-plans.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/mixed-en-snapshot-canonical.json",
+      "sha256": "530de9f0dce7bb2b467f6457fdba1f997cbbfad594aa4a40af08cb76ecb7e787",
+      "bytes": 149642,
+      "original_path": "/private/tmp/delaylama-performer-context/mixed-en-snapshot-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/mixed-en-snapshot-delivery.json",
+      "sha256": "dc5ef1ad9e2c8db60f16853b95257cb07d7e526ebdb873fb4ad602c54db3cfc3",
+      "bytes": 149551,
+      "original_path": "/private/tmp/delaylama-performer-context/mixed-en-snapshot-delivery.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/mixed-en-snapshot-final.json",
+      "sha256": "1139f7598ed6e770742dfc1c757997582b5917224082631e98c1fd55925842b4",
+      "bytes": 149556,
+      "original_path": "/private/tmp/delaylama-performer-context/mixed-en-snapshot-final.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/mixed-en-snapshot-plans.json",
+      "sha256": "c2ffbc73d13da03a81adb4bf1c8c11be21313f55dfcc90ec2e0210cd30580c71",
+      "bytes": 149755,
+      "original_path": "/private/tmp/delaylama-performer-context/mixed-en-snapshot-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/party-gold.json",
+      "sha256": "320e9ba8bedee7c670295e4a3450c11c3ec9fbe7b4a6f0e41a848397c302bce2",
+      "bytes": 5007,
+      "original_path": "/private/tmp/delaylama-performer-context/party-gold.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/passive-en-snapshot-canonical.json",
+      "sha256": "1e7705b83a9052e86ffe6a3314a7c93ee82c0de14b1a71d34b91a94927c35c23",
+      "bytes": 122986,
+      "original_path": "/private/tmp/delaylama-performer-context/passive-en-snapshot-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/passive-en-snapshot-delivery.json",
+      "sha256": "a5ba31bbe83f3ec33e7c0771764b6655ad40f098363e1d3c7a697364230b1d53",
+      "bytes": 124783,
+      "original_path": "/private/tmp/delaylama-performer-context/passive-en-snapshot-delivery.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/passive-en-snapshot-final.json",
+      "sha256": "6ec9ae326b9e9ed4656657d158c5d3cbc3f8684a6f1b790b958d5be6a7e3d231",
+      "bytes": 122571,
+      "original_path": "/private/tmp/delaylama-performer-context/passive-en-snapshot-final.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/passive-en-snapshot-plans.json",
+      "sha256": "957c529fe33ab5d63b6b7252e392f34d707347751922b9a4efec6081522ad8de",
+      "bytes": 122537,
+      "original_path": "/private/tmp/delaylama-performer-context/passive-en-snapshot-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/patch-arms-canonical.log",
+      "sha256": "a02edc2ef9ea847a532197a671c1a82f3ae4eadd04a8493627ef56dfad0ce417",
+      "bytes": 7413,
+      "original_path": "/private/tmp/delaylama-performer-context/patch-arms-canonical.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/patch-arms-final.log",
+      "sha256": "870c9e9ce2007a2a505097e42985f9a70d46060d365072f9f770708984174f83",
+      "bytes": 7413,
+      "original_path": "/private/tmp/delaylama-performer-context/patch-arms-final.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/patch-arms-plans.log",
+      "sha256": "44268d2a3e9283f59cf4cfaa2e8d8bbfd890eee2f38c16d279f4dcdcd593ed35",
+      "bytes": 7413,
+      "original_path": "/private/tmp/delaylama-performer-context/patch-arms-plans.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/patch-arms.log",
+      "sha256": "642883ab5410d569fc8afad866321bd0bf81d207a228521eb22637941d6bc6b7",
+      "bytes": 7413,
+      "original_path": "/private/tmp/delaylama-performer-context/patch-arms.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/performer-gate-canonical.json",
+      "sha256": "e9e170356f0d81f83655d0285cfa3e111ee47f7679bc0e9dd4cbbae1539ec62a",
+      "bytes": 8390,
+      "original_path": "/private/tmp/delaylama-performer-context/performer-gate-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/performer-gate-delivery.json",
+      "sha256": "524d5095970e0dc60688a1a3b6dae5ab538c8a07f5025b987a0567ade89f8b91",
+      "bytes": 9133,
+      "original_path": "/private/tmp/delaylama-performer-context/performer-gate-delivery.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/performer-gate-final.json",
+      "sha256": "a489c2800ed14fe50fcede41877ec694db5e010920dd0d0249bb3429d1959e5f",
+      "bytes": 6546,
+      "original_path": "/private/tmp/delaylama-performer-context/performer-gate-final.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/performer-gate-plans.json",
+      "sha256": "7af9cc588c0dbac9fa2c2f6aca75d4ab80ef85b7ae68b434e35dd2f1ee26f581",
+      "bytes": 8388,
+      "original_path": "/private/tmp/delaylama-performer-context/performer-gate-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/performer-gold.json",
+      "sha256": "74c85d9d2090c3dbab81d18991bd5ab4451de7b88b430d1037b8fc2cd69d1161",
+      "bytes": 1798,
+      "original_path": "/private/tmp/delaylama-performer-context/performer-gold.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/plan-storage-focused.log",
+      "sha256": "26e40ad42a8fed431410ff406266431e92290985f1e3f7e08da11ce4996dbe55",
+      "bytes": 55,
+      "original_path": "/private/tmp/delaylama-performer-context/plan-storage-focused.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/preservation-before.txt",
+      "sha256": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3",
+      "bytes": 114,
+      "original_path": "/private/tmp/delaylama-performer-context/preservation-before.txt"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/preservation-final.txt",
+      "sha256": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3",
+      "bytes": 114,
+      "original_path": "/private/tmp/delaylama-performer-context/preservation-final.txt"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/preservation.json",
+      "sha256": "76b5b675f6de4a92a556da0db3200e6d234cdb49300687823fb60e2749061e40",
+      "bytes": 1349,
+      "original_path": "/private/tmp/delaylama-performer-context/preservation.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/release-checks.json",
+      "sha256": "7217a37b4c58ea95ce88f5713576580b6ce1edf63c2d18bda4028c3b8ae455fa",
+      "bytes": 229613,
+      "original_path": "/private/tmp/delaylama-performer-context/release-checks.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/second-cleanup.json",
+      "sha256": "87aa1ceaf31ae2ba611aa424307f333d34cffe8deca0ca0a5757af0d4cf37d03",
+      "bytes": 334,
+      "original_path": "/private/tmp/delaylama-performer-context/second-cleanup.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/second-go-final-variant-audit.log",
+      "sha256": "a6db14483b27a3bb5c21e99b518da30b7b88927e0fbb83126cc0431585a1e354",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/second-go-final-variant-audit.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/second-go-final-variant-coverage.log",
+      "sha256": "bce96bf7fbebb9100bf778d3dee70328514ca9d068889d2e44199b875538c363",
+      "bytes": 170,
+      "original_path": "/private/tmp/delaylama-performer-context/second-go-final-variant-coverage.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/second-go-final-variant-inventory-audit.log",
+      "sha256": "72c38c9a5800bdbe6be9a7ef3dc2706e115c77cd9d04b18d724d2802fe8a393c",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/second-go-final-variant-inventory-audit.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/second-go-final-variant-inventory-coverage.log",
+      "sha256": "004d58b562b9bbf0d15fa019a67f4e028aea8d44eabdde82922a3890e741361f",
+      "bytes": 170,
+      "original_path": "/private/tmp/delaylama-performer-context/second-go-final-variant-inventory-coverage.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/second-go-final-variant-inventory-meaning.log",
+      "sha256": "deaf700d11d140b4a9a92798319e43fced289ce34d370042d025c57b11e650f8",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/second-go-final-variant-inventory-meaning.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/second-go-final-variant-inventory-passages.log",
+      "sha256": "93042e5c005a7b5739e9b756744a6a4a644fd56599096ec3ae992decabf4efd4",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/second-go-final-variant-inventory-passages.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/second-go-final-variant-inventory-register.log",
+      "sha256": "8be4f1f36fb01c6ba57bed61aca294e2936fe876e3a3852cca168da45bfa806a",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/second-go-final-variant-inventory-register.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/second-go-final-variant-inventory.log",
+      "sha256": "9dc7c8a12bd054b7f1e993249ae255619920c1dd3be8222fab08d3e187c558a1",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/second-go-final-variant-inventory.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/second-go-final-variant-meaning.log",
+      "sha256": "30990cb8822627ecf3b334470d15297cbde937f54a13cb148622e8eef788a61d",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/second-go-final-variant-meaning.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/second-go-final-variant-passages.log",
+      "sha256": "36810b8963762e30ed00c622221b75b65c68ccd6ac0cfb74e08ab5d0ac72b3b3",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/second-go-final-variant-passages.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/second-go-final-variant-register.log",
+      "sha256": "35e6dd8e288c93092b56a79d69b9c88f54ea33d863802c52fa24b417ab0801c3",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/second-go-final-variant-register.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/second-patch-arms.json",
+      "sha256": "4473455bacdacd84827c8cac65f232676497355e1d9fb660f834359a4b8b36fc",
+      "bytes": 34181,
+      "original_path": "/private/tmp/delaylama-performer-context/second-patch-arms.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/semantic-gold.json",
+      "sha256": "1f1be192f74ce0dbf468e907553c772ac738341d371b7b4a6b90673572a60f61",
+      "bytes": 4163,
+      "original_path": "/private/tmp/delaylama-performer-context/semantic-gold.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/startup-preflight.json",
+      "sha256": "174a0ccc9e6768a04b29bbf607db3297eae6fe625d92b1d4be6ae9c6bcf9dd7c",
+      "bytes": 389,
+      "original_path": "/private/tmp/delaylama-performer-context/startup-preflight.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/terminal-jobs-canonical.json",
+      "sha256": "fae71dbfca4ce4c9f8eaf1a9072f9717172f1c47a1b259a5a76aec4c95c40649",
+      "bytes": 394152,
+      "original_path": "/private/tmp/delaylama-performer-context/terminal-jobs-canonical.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/terminal-jobs-delivery.json",
+      "sha256": "22fba941f446dd40b493c4ef1e59f94fd9c0a62f2c10127561bab6ba104dd5c3",
+      "bytes": 412247,
+      "original_path": "/private/tmp/delaylama-performer-context/terminal-jobs-delivery.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/terminal-jobs-final.json",
+      "sha256": "ac1691181504ee5bc8c102289cb747b1ab5b81233325a290add6433e535df81b",
+      "bytes": 398640,
+      "original_path": "/private/tmp/delaylama-performer-context/terminal-jobs-final.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/terminal-jobs-plans.json",
+      "sha256": "3468e6fbcd01848944118652d9a6c98fa9483a406dcd1573350f017916084fbc",
+      "bytes": 397836,
+      "original_path": "/private/tmp/delaylama-performer-context/terminal-jobs-plans.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/third-cleanup.json",
+      "sha256": "76d041e6a31dace5879d0f4a1cebf46c84072b43379eba4760b304c1f58ef34d",
+      "bytes": 334,
+      "original_path": "/private/tmp/delaylama-performer-context/third-cleanup.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/third-go-final-variant-audit.log",
+      "sha256": "72fec987f4d6de9c4e35df26eda76cfe24ffbdc4c22916b0a344f15f67a95afc",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/third-go-final-variant-audit.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/third-go-final-variant-coverage.log",
+      "sha256": "2d550a3fe21da348c39e6bfe75f412b62a29addd528b5b8e1bc5f5c1761ee6ec",
+      "bytes": 170,
+      "original_path": "/private/tmp/delaylama-performer-context/third-go-final-variant-coverage.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/third-go-final-variant-inventory-audit.log",
+      "sha256": "5e9fa7547b0a0b3fcfcad99b81374143016f71b93f46204e3184d821d095c08a",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/third-go-final-variant-inventory-audit.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/third-go-final-variant-inventory-coverage.log",
+      "sha256": "4ecfa521b3addbef99d78eaaa90c5f3dc19681fb80853ea4d309162b432f3153",
+      "bytes": 170,
+      "original_path": "/private/tmp/delaylama-performer-context/third-go-final-variant-inventory-coverage.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/third-go-final-variant-inventory-meaning.log",
+      "sha256": "175d61a6025288288c8b3a0ecf30712bb931c68b1f95817d6c6b648c6ae0423b",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/third-go-final-variant-inventory-meaning.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/third-go-final-variant-inventory-passages.log",
+      "sha256": "fabe081bb050bffa6c7c6b3d73ca29101fc413b9ca6b5092ddd2448e35729ce7",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/third-go-final-variant-inventory-passages.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/third-go-final-variant-inventory-register.log",
+      "sha256": "460f78914bbadc4a87471e62f410d935e4b3f032d6710ae48e5166ab2b718e47",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/third-go-final-variant-inventory-register.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/third-go-final-variant-inventory.log",
+      "sha256": "5a585157a12b8871efafbc8087309f88e13ccaed8d580abd2708cea3486e8370",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/third-go-final-variant-inventory.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/third-go-final-variant-meaning.log",
+      "sha256": "d9c17ea9f395a2afc74263dd66187bfc728b272248a440923df87eedf12a1b65",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/third-go-final-variant-meaning.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/third-go-final-variant-passages.log",
+      "sha256": "23aa01bec4feb3a8ed163cefc031e87f211cbf95fccd2c71b659b61304e30be7",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/third-go-final-variant-passages.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/third-go-final-variant-register.log",
+      "sha256": "cd1cd5178c2a43d6301ebdb6b80fbe3736b5f0d4882429e8ea6cb2db35ed032f",
+      "bytes": 177,
+      "original_path": "/private/tmp/delaylama-performer-context/third-go-final-variant-register.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/third-patch-arms.json",
+      "sha256": "4473455bacdacd84827c8cac65f232676497355e1d9fb660f834359a4b8b36fc",
+      "bytes": 34181,
+      "original_path": "/private/tmp/delaylama-performer-context/third-patch-arms.json"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/user-source-preflight-canonical.log",
+      "sha256": "3fe60d8b30c7ae9e85e1e68e4d1dd5c0faf226e3515f0d77d88b18d73d96dbe8",
+      "bytes": 2430,
+      "original_path": "/private/tmp/delaylama-performer-context/user-source-preflight-canonical.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/user-source-preflight-final.log",
+      "sha256": "3fe60d8b30c7ae9e85e1e68e4d1dd5c0faf226e3515f0d77d88b18d73d96dbe8",
+      "bytes": 2430,
+      "original_path": "/private/tmp/delaylama-performer-context/user-source-preflight-final.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/user-source-preflight-plans.log",
+      "sha256": "fe5e7432cc009ee4370fb1b22e16f58ea4b0855c9180bacb57b606cdcb5ad664",
+      "bytes": 2478,
+      "original_path": "/private/tmp/delaylama-performer-context/user-source-preflight-plans.log"
+    },
+    {
+      "path": "docs/validation/assets/performer-context/user-source-preflight.log",
+      "sha256": "3fe60d8b30c7ae9e85e1e68e4d1dd5c0faf226e3515f0d77d88b18d73d96dbe8",
+      "bytes": 2430,
+      "original_path": "/private/tmp/delaylama-performer-context/user-source-preflight.log"
+    }
+  ]
+}
