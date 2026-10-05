@@ -1,0 +1,390 @@
+{
+  "date": "2026-10-05",
+  "feature": "Unambiguous relation references and visible conversion/storage diagnostics",
+  "release": {
+    "source_commit": "2c8879ff9aa23fce67b23c9054310973b77887bf",
+    "binary_sha256": "7f6aefb76cb035d0e46b69fd99db99e967d88d3bc85fd77b6e6fc18d5a47e03f",
+    "model_binary_sha256": "ebb5ba17a7eacaea637fb5027ceb0631bc2fb2a8b353f16121a0b56de85a0496",
+    "processing_source_unchanged_between_model_and_release": true,
+    "backend": {
+      "exit_code": 0,
+      "tests": 1124,
+      "log": "backend-delivery.log"
+    },
+    "frontend": {
+      "exit_code": 0,
+      "tests": 797,
+      "log": "frontend-delivery.log"
+    },
+    "frontend_build": {
+      "exit_code": 0,
+      "log": "frontend-delivery-build.log"
+    },
+    "default_race": {
+      "exit_code": 0,
+      "packages": [
+        "intelligence",
+        "agents",
+        "api"
+      ],
+      "log": "go-race.log"
+    },
+    "engine_suites": [
+      {
+        "exit_code": 0,
+        "log": "go-all.log"
+      }
+    ],
+    "patch_arms": [
+      {
+        "arm": "default",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": ""
+      },
+      {
+        "arm": "audit",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph event role coverage: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "register",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph event role register: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "meaning",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph event role register: applied\nChronograph event role meaning: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "passages",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph event role register: applied\nChronograph event role passages: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "coverage",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph source action coverage: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "inventory",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph source action inventory: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "inventory-audit",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph source action inventory: applied\nChronograph event role coverage: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "inventory-register",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph source action inventory: applied\nChronograph event role register: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "inventory-meaning",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph source action inventory: applied\nChronograph event role register: applied\nChronograph event role meaning: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "inventory-passages",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph source action inventory: applied\nChronograph event role register: applied\nChronograph event role passages: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "inventory-coverage",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph source action inventory: applied\nChronograph source action coverage: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      }
+    ],
+    "variant_tests": [
+      {
+        "exit_code": 0,
+        "arm": "audit"
+      },
+      {
+        "exit_code": 0,
+        "arm": "register"
+      },
+      {
+        "exit_code": 0,
+        "arm": "meaning"
+      },
+      {
+        "exit_code": 0,
+        "arm": "passages"
+      },
+      {
+        "exit_code": 0,
+        "arm": "coverage"
+      },
+      {
+        "exit_code": 0,
+        "arm": "inventory"
+      },
+      {
+        "exit_code": 0,
+        "arm": "inventory-audit"
+      },
+      {
+        "exit_code": 0,
+        "arm": "inventory-register"
+      },
+      {
+        "exit_code": 0,
+        "arm": "inventory-meaning"
+      },
+      {
+        "exit_code": 0,
+        "arm": "inventory-passages"
+      },
+      {
+        "exit_code": 0,
+        "arm": "inventory-coverage"
+      }
+    ],
+    "default_patch_count": 46,
+    "user_source_preflight_compatible": true,
+    "full_semantic_qualification": false
+  },
+  "live_model_observations": {
+    "projects": [
+      {
+        "project_id": "parallel-assertion-qa-endpoint-en-20261005-033408-ab8960",
+        "case": "endpoint-en",
+        "nodes": 12,
+        "edges": 9,
+        "episodes": 1,
+        "resolution": {
+          "version": 1,
+          "source_sha256": "f07a751bfaf699458907587a2994b0ff40278f8a7c55122110fa5f5399da0d4b",
+          "proposed": 3,
+          "accepted": 3,
+          "withheld": 0,
+          "aliases_resolved": 0,
+          "reasons": {},
+          "issues": [],
+          "issues_omitted": 0
+        },
+        "storage": {
+          "proposed": 3,
+          "stored": 3,
+          "missing_endpoints": 0,
+          "failed": 0
+        },
+        "terminal_jobs": [
+          "done"
+        ],
+        "scope_correct": true,
+        "sync_status": "done",
+        "assertions": [
+          {
+            "source": "Harbor Engineer Ltd",
+            "target": "Azure Builder Ltd",
+            "relation": "MANAGED_BY",
+            "fact": "Harbor Engineer Ltd certifie les factures de Azure Builder Ltd.",
+            "quote": "Harbor Engineer Ltd certifies Azure Builder Ltd invoices",
+            "source_match": true
+          },
+          {
+            "source": "Amber Client Ltd",
+            "target": "Azure Builder Ltd",
+            "relation": "CONTRACTS_WITH",
+            "fact": "Amber Client Ltd est tenu de payer les factures de Azure Builder Ltd.",
+            "quote": "Amber Client Ltd must pay Azure Builder Ltd invoices approved by Harbor Engineer Ltd.",
+            "source_match": true
+          },
+          {
+            "source": "Amber Client Ltd",
+            "target": "Harbor Engineer Ltd",
+            "relation": "CONTRACTS_WITH",
+            "fact": "Amber Client Ltd nomme Harbor Engineer Ltd en tant qu'ingénieur.",
+            "quote": "Amber Client Ltd appoints Harbor Engineer Ltd as engineer.",
+            "source_match": true
+          }
+        ],
+        "gate_passed": true,
+        "source_matched_concept_edges": 3
+      },
+      {
+        "project_id": "parallel-assertion-qa-endpoint-fr-20261005-033408-26693b",
+        "case": "endpoint-fr",
+        "nodes": 13,
+        "edges": 9,
+        "episodes": 1,
+        "resolution": {
+          "version": 1,
+          "source_sha256": "e67326bf252d14895b52ba51b094eeab61ebef3d7f6f0f602a8c82e63b38f8df",
+          "proposed": 2,
+          "accepted": 2,
+          "withheld": 0,
+          "aliases_resolved": 0,
+          "reasons": {},
+          "issues": [],
+          "issues_omitted": 0
+        },
+        "storage": {
+          "proposed": 2,
+          "stored": 2,
+          "missing_endpoints": 0,
+          "failed": 0
+        },
+        "terminal_jobs": [
+          "done"
+        ],
+        "scope_correct": true,
+        "sync_status": "done",
+        "assertions": [
+          {
+            "source": "Ambre Client SAS",
+            "target": "Azur Travaux SAS",
+            "relation": "CONTRACTS_WITH",
+            "fact": "Ambre Client SAS est le maître d'ouvrage et Azur Travaux SAS est l'entreprise.",
+            "quote": "Le maître d'ouvrage est Ambre Client SAS, l'entreprise est Azur Travaux SAS",
+            "source_match": true
+          },
+          {
+            "source": "Ambre Client SAS",
+            "target": "Port Ingénierie SAS",
+            "relation": "CONTRACTS_WITH",
+            "fact": "Ambre Client SAS désigne Port Ingénierie SAS comme maître d'œuvre.",
+            "quote": "Ambre Client SAS désigne Port Ingénierie SAS comme maître d'œuvre.",
+            "source_match": true
+          }
+        ],
+        "gate_passed": true,
+        "source_matched_concept_edges": 2
+      }
+    ],
+    "full_semantic_qualification": false,
+    "health": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 2,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 18,
+      "episode_count": 2,
+      "node_count": 25,
+      "schema": "general",
+      "status": "ok"
+    },
+    "reference_storage_gate_passed": true
+  },
+  "browser": {
+    "live_source_connections": {
+      "English": 3,
+      "French": 2
+    },
+    "live_english_counts_visible": true,
+    "event_links_and_concept_connections_shown_separately": true,
+    "missing_reports_not_shown_as_zero": true,
+    "withheld_details_verified": true,
+    "diagnostic_fixture": "Manually simulated UI state, clearly labelled and separate from the two actual model jobs",
+    "console_errors": 0,
+    "extra_model_submissions": 0,
+    "temporary_tab_closed": true
+  },
+  "full_contract_accuracy_established": false,
+  "qualification_gaps": [
+    "Missing normative concept assertions, particularly in French",
+    "Overly broad or unsupported relationship categories despite exact source quotation",
+    "No independent contract-family benchmark",
+    "Property and type aliases establish reference uniqueness, not semantic role correctness",
+    "Same-name homonyms and upstream entity merging still need qualification",
+    "Raw provider output and HTTP retry counts not separately instrumented",
+    "Historic incorrect edges are not repaired or automatically reanalyzed"
+  ],
+  "assets_sha256": {
+    "activation.json": "e1d0cae27a8bad92a43c923ae369b62a291dd8a3e3bf48a22c272214a26eb6d1",
+    "api-activation-first.json": "d4fcd4d998570e6f3b047f97cc0095185b047dad6667ea4c8acb67600f9f386c",
+    "api-activation.json": "1943289ede87c486002392edd1eadb58b1ccbcc7bf66d9307932200ad199cc58",
+    "backend-all.log": "cdbef5ab0797ff403bf075facc532d1475df3f288a93218c4809bb4a73e10262",
+    "backend-delivery.log": "edad44abf0dd73206a52715f87b5ddfedd3162d368a2b75730a51e7920fd854d",
+    "before-regression.log": "186add364770bdbdd3d550ae91c0af20a948ef0194f4ad1d5a9c45eca840bb99",
+    "browser-receipt.json": "452f1b49fed16ae30b6ee210d65d57bf615a7fb0561324e16724cbcce7922251",
+    "cleanup.json": "55996f34fed2f977eb9724bf77470dddd509882a398acf831f47c97477461571",
+    "endpoint-en-snapshot.json": "b51f116663393fc7c82a2d21005e4dbb1e82b77fb0d3ba190d13e1118e5e3004",
+    "endpoint-fr-snapshot.json": "31c65ca105c1ca853cc479556118da1d6bd97e14101f731e91f50bf21f53127c",
+    "final-patch-arms.json": "67d4f5373149824d0a5bc573d93cfebe55d6262070602e5f29e5451977af8816",
+    "fixture-freeze.json": "3c692e9617d0d78650939b12d4caa40ba429f1919ff5b1ecdfe6c3efab390322",
+    "focused-go-v2.log": "925500aca3b8cdffb4173e9a3a5525dcac8fe6b853034d57292246db2cc490cc",
+    "frontend-delivery-build.log": "4b626d9badfc01788353a5d8bd1a5dcc9fe313a749d22bd0a9974402836b408f",
+    "frontend-delivery.log": "b751ef938e9416088944d56000016bb2dc36a3119aed467eaa7c952909cfbd98",
+    "frozen-cases.json": "667c423a362375a015db81d9d017c0f7ec251fbc9925b72490e9a1fb95b98347",
+    "fullstack-gate.json": "30cff46369ffd3a6bc12bdb01c6bd033ca8d375836458282e3f03fe9637ea5ce",
+    "fullstack-inputs.json": "f8238792591f13180a9378df31595edc4a2f1234686444d644fa889b741a996a",
+    "fullstack-sync.json": "800dc65de040160b5cdd8554cff72f0f7dafb810c69353a4dff4aa9ffe419082",
+    "go-all.log": "8fddebf052bb3f2b6b8c60a1c6fba321ab86cb93ece8640d3465df556ae1a128",
+    "go-final-variant-audit.log": "3b8100f3a9d122c3ae17680fc58de07da73fbcb29d8507f89e5b39e1de10c89d",
+    "go-final-variant-coverage.log": "08e8c5d2402d3c7df7ffaa98113f5a1ce7cad6d95541e659d39379d295ee5bf3",
+    "go-final-variant-inventory-audit.log": "8fa89f46c71e2deff655df61abce772b082a29853d5a04d828d95d7a807a8256",
+    "go-final-variant-inventory-coverage.log": "81182da2a5355fb31d4ddee40e520ba606e20ec2eca4e89b56482228b6513452",
+    "go-final-variant-inventory-meaning.log": "ffaab0d3b6881bcc7c76f68fe1fbf75c18006a5a66fe9314ca495076852d6d61",
+    "go-final-variant-inventory-passages.log": "ca00741bf90d9e9bba17655505249ae19b6f276a2eaf6ce822e09e7976b2f612",
+    "go-final-variant-inventory-register.log": "5a28de522e44da53fb4f021244f25c36d7a180890cd4eb75c61168e946c79457",
+    "go-final-variant-inventory.log": "9ad9f283679f34e94955ebccfdd9fe2ae62710f9d5c72ee776c7d5db3bbe11fe",
+    "go-final-variant-meaning.log": "cc89c5212fd7bbd6e03b5209c1601d5875bcafaf9336d5df005baecfeff5ee9c",
+    "go-final-variant-passages.log": "f16ff7e4f6cdf76f96f8f030abce7b535e642059c60fe96c51fa0884afa6c39d",
+    "go-final-variant-register.log": "c8b329b536ee36c5f43fd05fe025b0ff19fa984469b6705e1100bd233e3bde32",
+    "go-race.log": "6d45c97ef785c2b0ae230240b96e9e4365a41feeaac030a2b6098695d65235e6",
+    "live-reference-checks.png": "c1503acdb08264b031e9ccb7b2c7bee39c69b157a4c3d85bf738264910a1b635",
+    "preservation-before.txt": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3",
+    "preservation-final.txt": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3",
+    "storage-go-v2.log": "537468a7ef3463d0798df73f395235dd1d62dcd9fcaa3f8e7b5115cea65900f3",
+    "terminal-jobs.json": "f054d68fa236356af5cd934635b95e6277a53593107a824a557f814cc1140a45",
+    "ui-fixture.json": "38ea4cc613bbd0b94537a97cbe29a35146aa7d6acf2386e111e37feb6569acf7",
+    "user-source-preflight.log": "a3931878ea18bcfc29c446011c3b6fca2a1b826069f403c175017fafe5faafb5",
+    "withheld-reference-fixture.png": "27248599640768386bde304e7dd7026e6e1f381edcbccf46f6999870e30f0baf"
+  }
+}

@@ -3746,3 +3746,38 @@ timezone comparisons still need dedicated qualification.
 
 [DelayLama assertion audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-parallel-assertions.md)
 · [Shared receipt](validation/delaylama-parallel-assertions-20261005.json).
+
+
+## L109 — Named endpoints, stored links and correct predicates are separate gates
+
+Adopted engineering change, 2026-10-05. DelayLama reproduced a generic Organization
+endpoint choosing the last organization, while unknown names could disappear at
+storage. Chronograph patch 46 resolves exact names first and only unambiguous
+aliases/types. Ambiguous, unknown and missing references are withheld with bounded,
+source-hashed diagnostics. Initial concept storage separately reports missing
+stored endpoints and write failures. UI counts distinguish event links from
+concept connections and absent reports from zero.
+
+Two frozen synthetic English/French sources produced three/two concept assertions,
+all exact-name references, stored and source-matched. This is a conversion/storage
+gate. The English certification quote still yielded an unsupported MANAGED_BY
+predicate/direction; the French concept graph omitted several normative assertions,
+even where separate Event candidates survived. A matched quote and correct named
+endpoints do not establish the predicate, legal role, applicability or complete
+inventory. Retain these failures when planning the next evaluation.
+
+For Laya/GLiNER data: label entity identity separately from predicate direction,
+modal force, payer/certifier roles, negation, conditions and actual performance.
+Generic role/type labels need ambiguity negatives with multiple same-type parties.
+Evaluate reference attachment, model recall, conversion survival, storage survival
+and semantic edge accuracy separately. Train/evaluate abstention without treating
+withheld references as gold source absence. Same-name homonyms/upstream merging
+remain open. No new training, MLX or classifier-quality gain is claimed.
+
+Final delivery passed 1,124 backend and 797 frontend tests/build, full Go and
+intelligence/agents/API race checks, 12 idempotent patch combinations and eleven
+optional engine suites. Browser review included a clearly separated manual
+ambiguity fixture; it is not model-performance evidence.
+
+[DelayLama reference audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-relation-references.md)
+· [Shared receipt](validation/delaylama-relation-references-20261005.json).
