@@ -1,0 +1,565 @@
+{
+  "date": "2026-10-05",
+  "learning": "L126",
+  "scope": "Synthetic development qualification, injected proposals and fresh native extraction distinguished; same provider, no independent legal gold or general accuracy claim.",
+  "engine": {
+    "base": "v1.3.0",
+    "base_revision": "ec22df4593ff29898e12f10c073f0ea35cf4050a",
+    "default_patch_count": 59,
+    "new_patch": "independent-context-review.patch",
+    "patch_sha256": "e0f1bc3beb8fdea8e9536fb37ed31f666266b608e3ae9e02c2e0f5263d98df8c",
+    "binary_sha256": "cf73f62667740d5acdf40daa8ac7df30a5967d464ae0b7133ae4d187cdba7a72"
+  },
+  "role_trials": [
+    {
+      "trial": "baseline-roles",
+      "passed": 6,
+      "total": 15,
+      "model": "gemini-3.1-flash-lite",
+      "failures": [
+        "ack-en",
+        "plan-en",
+        "deadline-en",
+        "conditional-en",
+        "ack-fr",
+        "plan-fr",
+        "deadline-fr",
+        "conditional-fr",
+        "retained-pr681"
+      ],
+      "scope": "Controlled raw events, real independent performance model and real MemoryAgent/SQLite; not fresh extraction or human gold."
+    },
+    {
+      "trial": "fixed-roles",
+      "passed": 12,
+      "total": 15,
+      "model": "gemini-3.1-flash-lite",
+      "failures": [
+        "conditional-en",
+        "plan-fr",
+        "conditional-fr"
+      ],
+      "scope": "Controlled raw events, real independent performance model and real MemoryAgent/SQLite; not fresh extraction or human gold."
+    },
+    {
+      "trial": "final-roles",
+      "passed": 13,
+      "total": 15,
+      "model": "gemini-3.1-flash-lite",
+      "failures": [
+        "negative-en",
+        "negative-fr"
+      ],
+      "scope": "Controlled raw events, real independent performance model and real MemoryAgent/SQLite; not fresh extraction or human gold."
+    },
+    {
+      "trial": "qualified-roles",
+      "passed": 15,
+      "total": 15,
+      "model": "gemini-3.1-flash-lite",
+      "failures": [],
+      "scope": "Controlled raw events, real independent performance model and real MemoryAgent/SQLite; not fresh extraction or human gold."
+    }
+  ],
+  "notice_trials": [
+    {
+      "trial": "notice-results",
+      "passed": 9,
+      "total": 12,
+      "failures": [
+        "conditional-exemption-en",
+        "unsigned-en",
+        "unsigned-fr"
+      ],
+      "graph_guard_exercised": false
+    },
+    {
+      "trial": "notice-graph-results",
+      "passed": 12,
+      "total": 12,
+      "failures": [],
+      "graph_guard_exercised": true
+    }
+  ],
+  "native": {
+    "source_jobs": 3,
+    "all_done": true,
+    "strict_action_string_types": {
+      "passed": 18,
+      "total": 23
+    },
+    "strict_action_string_dates": {
+      "passed": 6,
+      "total": 7
+    },
+    "secondary_original_span_types": {
+      "passed": 19,
+      "total": 23
+    },
+    "secondary_original_span_dates": {
+      "passed": 7,
+      "total": 7
+    },
+    "omitted_statements": [
+      {
+        "fragment": "Northmere Employer Ltd must pay Larch Construction Ltd",
+        "expected": "Obligation",
+        "actual": [],
+        "pass": false
+      },
+      {
+        "fragment": "Pennant Engineer Ltd may issue payment approval",
+        "expected": "Permission",
+        "actual": [],
+        "pass": false
+      },
+      {
+        "fragment": "Larch Construction Ltd must serve a written delay notice",
+        "expected": "Obligation",
+        "actual": [],
+        "pass": false
+      },
+      {
+        "fragment": "Sending a progress report to Pennant Engineer Ltd does not constitute",
+        "expected": "NegativeAssertion",
+        "actual": [],
+        "pass": false
+      }
+    ],
+    "predicate_gates": true,
+    "positive_native_causal_control_this_turn": false,
+    "french_component": {
+      "source_candidates": 9,
+      "reached_candidates": 9,
+      "required_fragments": {
+        "Aucun accord écrit n'est fourni": true,
+        "Aucune suspension n'est rapportée": true
+      }
+    },
+    "english_component_unavailable": "Missing permission seed; no completeness or connected-context claim for English.",
+    "source_statuses": {
+      "dispersed-notice-en": {
+        "located": 93,
+        "ambiguous": 3,
+        "unavailable": 1
+      },
+      "conditional-refusal-fr": {
+        "located": 54,
+        "unavailable": 4,
+        "ambiguous": 1
+      }
+    },
+    "exact_spans_checked": 151
+  },
+  "checks": {
+    "backend": {
+      "exit_code": 0,
+      "passed": 1353
+    },
+    "frontend": {
+      "exit_code": 0,
+      "passed": 914
+    },
+    "frontend_build": {
+      "exit_code": 0
+    },
+    "default_race": {
+      "exit_code": 0
+    },
+    "engine_suites": [
+      {
+        "exit_code": 0,
+        "suite": "go test ./..."
+      }
+    ],
+    "variant_tests": [
+      {
+        "arm": "audit",
+        "exit_code": 0
+      },
+      {
+        "arm": "register",
+        "exit_code": 0
+      },
+      {
+        "arm": "meaning",
+        "exit_code": 0
+      },
+      {
+        "arm": "passages",
+        "exit_code": 0
+      },
+      {
+        "arm": "coverage",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-audit",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-register",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-meaning",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-passages",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-coverage",
+        "exit_code": 0
+      }
+    ]
+  },
+  "patch_arms": {
+    "count": 12,
+    "clean_and_idempotent": true,
+    "optional_suites": 11
+  },
+  "preservation": {
+    "graph_tables_unchanged": true,
+    "table_counts": {
+      "edges": 660,
+      "episodes": 321,
+      "nodes": 1444,
+      "schema_meta": 1,
+      "timeline_events": 3437
+    },
+    "engine_config_unchanged": true,
+    "app_env_unchanged": true,
+    "journal_snapshots": 24,
+    "journal_unchanged": true,
+    "protected_engine_sources": 14,
+    "protected_engine_sources_unchanged": true,
+    "artifacts": 32,
+    "artifacts_unchanged": true,
+    "studio_sessions": 2,
+    "studio_unchanged": true,
+    "main_engine_healthy": true,
+    "main_api_healthy": true,
+    "historical_graph_rewrite": false
+  },
+  "browser": {
+    "read_only_graphs_unchanged": true,
+    "warning_error_logs": [],
+    "temporary_tab_closed": true,
+    "qa_services_stopped": true
+  },
+  "limits": [
+    "Four early English statements omitted in this native long-source draw.",
+    "Same-provider synthetic fixtures, not held-out legal gold.",
+    "Party boundaries, ambiguity, unavailable quotations, other predicates/applicability and browser cache quota still require work.",
+    "General profile default remains; saved manual choices not migrated.",
+    "No new Laya training, MLX or architecture-quality claim."
+  ],
+  "proof": [
+    {
+      "path": "docs/validation/assets/independent-context-review/baseline-roles.json",
+      "bytes": 155585,
+      "sha256": "2538fee1c8ea9d2b29c784b6839f0516c4a3127b3040ff7dde71939b58c60aa8"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/baseline-roles.log",
+      "bytes": 4082,
+      "sha256": "f7ae2214cc3347d81f58f29f450e6b2560e991c5af96fd5026b2b08af6843d0b"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/dated-before.log",
+      "bytes": 2969,
+      "sha256": "f9cd47538543c110837458b60c2f39d7cf325002eb4cf1ac8b216e7f9007ceb5"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/engine-final-targeted.log",
+      "bytes": 116,
+      "sha256": "1a537b9907e1448d61c0743b3314941b472a31e2b32d49520759f5da10a20dc2"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/final-roles.json",
+      "bytes": 223647,
+      "sha256": "49a9f50356d395cbdc52e5bb78960fb4212023ba12a1a9a15925e0dfa222179f"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/final-roles.log",
+      "bytes": 4075,
+      "sha256": "7ce7998db4a1ed74daa33b32d62042f8e203387ea65192b8241798316b26d12e"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/fixed-roles.json",
+      "bytes": 212950,
+      "sha256": "db4e3dad0e68691d661e2ef69485abd111a63eab5f493ee23930f74d7ec6c438"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/fixed-roles.log",
+      "bytes": 4076,
+      "sha256": "2bd18cd192ce29d90186d60eafcc3c92d024dd515aaa3631ce0ffbdf5b002f2f"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/freeze.json",
+      "bytes": 345,
+      "sha256": "b73112d534b08886dd137bad1810cba5871345af44173aca0979b2f18aa16d93"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-acknowledgement-dom.txt",
+      "bytes": 18992,
+      "sha256": "97f00151cea791f0ad2c8d7bdef24c2325d715cffc4ffd03f07eb6334c7abcbc"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-acknowledgement.png",
+      "bytes": 195352,
+      "sha256": "402addb5573bf4cca88b9bbe830ace31738177f5082ca4f30e732102f300d8c8"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-browser-console.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-cases.json",
+      "bytes": 98322,
+      "sha256": "a9cdd069cb1d677bc6b782c105c42d70b90c6530209dc973b1ed12956f1b9981"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-chronology-dom.txt",
+      "bytes": 16328,
+      "sha256": "2fbf19dca5ed15853a3b6c0752a69b6012f3c8a078bd232f30b5318d5621b1dd"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-chronology.png",
+      "bytes": 150241,
+      "sha256": "a572b4630c8af59e96023df86ec5ec8aab77b6fb8720cd60f67c494c82002a6a"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-cleanup.json",
+      "bytes": 409,
+      "sha256": "3c640cba1cfd9ef245ea3be586d143d8ca2f19c32a8d60a4d63e2f80b9e22b6f"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-collect.log",
+      "bytes": 5530,
+      "sha256": "2b2fd76d96ac16ce34f291472a9010b47c86e32167486d3ff7f31c67df5671f6"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-conditional-refusal-fr-component.json",
+      "bytes": 98021,
+      "sha256": "2f93d651cc90afa35a014bf2c8e402dd498c98a96f5937c1a252b0ee23f171f8"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-conditional-refusal-fr-graph-response.json",
+      "bytes": 253628,
+      "sha256": "4f2797419aff2bea9fcf639719bc1e9efaa20f6eb1b43747ef5f6d12aa1da9db"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-conditional-refusal-fr-snapshot.json",
+      "bytes": 179767,
+      "sha256": "ab116d8add8eedd17095de43bc56bd7a5733ce316d68ff13e8d9dc2a8690a530"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-dispersed-notice-en-graph-response.json",
+      "bytes": 1431809,
+      "sha256": "b1ab851b5768ad64c5f940b7d2ba8753b7e9192263d6df3edd416d7d25577e10"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-dispersed-notice-en-snapshot.json",
+      "bytes": 951309,
+      "sha256": "a1a21bb34af693da06546ddcc085bbbfb3844c112e68f0a4e6aa6408cb52793f"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-freeze.json",
+      "bytes": 221,
+      "sha256": "00d3b3c3a3f56e90babf6fd776535612bb960d81ae02b629d1cd6837cb2c3b19"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-gate.json",
+      "bytes": 7815,
+      "sha256": "4afe647f3e93876f3154c2cf1d8f37688d9d46b12fd321ed8a6ce3d4bf1a5e00"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-observations.json",
+      "bytes": 174599,
+      "sha256": "05da0873b35c76630dcfe16625ae53faa904743e50ab57a86f5374046a2b0572"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-run.log",
+      "bytes": 1100,
+      "sha256": "3b9a5ed193550cdce0d9999e727006f6a92a17ca65dd2bedfb1ff77306dbef2a"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-submissions.json",
+      "bytes": 112818,
+      "sha256": "d058d4f2ac542574694326c6efaec0d67e89fc6251c3bad4789fcc369f812660"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-terminal-jobs.json",
+      "bytes": 148296,
+      "sha256": "fe6df122ce6b5c220fed370f0aab7ece0ad8d7537b061481249c45b90738d1e7"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-verified-native-identity.json",
+      "bytes": 7462,
+      "sha256": "c22f1b02ba5636df5c9922b7c4e253f83e1b39045beaeaf8e1964f2f55252937"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/native-verify_identity.py",
+      "bytes": 2150,
+      "sha256": "8840fd52e03811f3e9357f84ec894bcc3024bdd5c00b3f7409896fe082c87b24"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/notice-cases.json",
+      "bytes": 12133,
+      "sha256": "32ea462f750fb8d333d07b8de7755d6960dd37fec05d1d41514a23214ce37bb9"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/notice-graph-cases.json",
+      "bytes": 12637,
+      "sha256": "a92722fd2fe91cdd65c3e1fb9fdae71697115b2b708672834483afcd35f8c9f2"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/notice-graph-freeze.json",
+      "bytes": 240,
+      "sha256": "2cc515853a16d9b09f66f44930a0eece28fc69f43a578a0da1a4d1a17ea367d8"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/notice-graph-results.json",
+      "bytes": 223021,
+      "sha256": "47543f7ee2bc9e3f8e99560728d6c27f959294bd7105dc80522c45bc42c616a9"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/notice-graph.log",
+      "bytes": 1802,
+      "sha256": "003aae4d32bbfebf65443ae96a1c534259ebd0bacff948b857f574c5a8d1b7ca"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/notice-results.json",
+      "bytes": 112951,
+      "sha256": "dd4d337dc7d9610a07aabe872b0b1ad5a604b72d783fb9ef669c6d6c9d1afc7c"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/notices.log",
+      "bytes": 1799,
+      "sha256": "87c8fa2e7e6ef87afa4cb236705169b49f384b9cf19ddd008cc6903de10871b0"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/plan-before.log",
+      "bytes": 945,
+      "sha256": "4bb58c62ba3f928c872d917d3ffc974f719157909d938f261594a8bb87d02623"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/qualified-roles.json",
+      "bytes": 226583,
+      "sha256": "166b9b1cea461e6cd9695117179316f499ac6f3539ca97afd330ccbc51478a94"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/qualified-roles.log",
+      "bytes": 4073,
+      "sha256": "3ae6c262b6198cad686acc45d2b2662b07f0d2a06485768ef11f8a0dcd458ea1"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-backend-all.log",
+      "bytes": 1587,
+      "sha256": "b1c0b18af30b4b1bd26ac71374ec57b61f104dc97def850e75c9eab294c387b0"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-final-patch-arms.json",
+      "bytes": 38813,
+      "sha256": "f78dca9b10006b3cd77d93e4d97677a21d09ac3f4c0177aa0991e65e1223cb78"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-frontend-all.log",
+      "bytes": 340,
+      "sha256": "c9bb5da0038dc4836be57b6c57488318fc8abf2fdf0a5cb9fbccb8eeafe8d6ca"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-frontend-build.log",
+      "bytes": 1274,
+      "sha256": "a0af7adc8caa36231853aeb1ec190cadc986e829f2a68dc5539e5a808735dc7a"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-go-all.log",
+      "bytes": 1912,
+      "sha256": "9d414e3d336a000ae435f07571f0af5e7cb733594ba27d1bf358122c2e5e6c5d"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-go-final-variant-audit.log",
+      "bytes": 177,
+      "sha256": "63b67371729aae8a0abaaa7b7537cbec2f0fd5a91d3fe2976a03489e50e4dfcf"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-go-final-variant-coverage.log",
+      "bytes": 168,
+      "sha256": "aed750f09e5c11cd17b05d94795dfffc057a70f0e88d062836592c0f6643f6c3"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-go-final-variant-inventory-audit.log",
+      "bytes": 177,
+      "sha256": "196cc8aa22fc2391191a9dfa24714813e2f878bccdf213de3a19bbb35bb31cb6"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-go-final-variant-inventory-coverage.log",
+      "bytes": 168,
+      "sha256": "81f8e0d3da1173aa42ba58efb29a4f2a5c65b82cbdc78e992786ffdcdacc4437"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-go-final-variant-inventory-meaning.log",
+      "bytes": 177,
+      "sha256": "02342ac598f5e6c599f7b0ff8acc18e5885141ce3bf73b0707c69d2c4cb720f7"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-go-final-variant-inventory-passages.log",
+      "bytes": 177,
+      "sha256": "13d5238e4f8d47942450f3d785013330b8313c8ba6e811c6978d3a7792e0d9c2"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-go-final-variant-inventory-register.log",
+      "bytes": 177,
+      "sha256": "4c337feb48020d8d3a34ce52bcfa17959647adda1a8c3108c6c4d26e9b48f837"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-go-final-variant-inventory.log",
+      "bytes": 177,
+      "sha256": "3d0c4732fe04e6749ab59e36d2d1e9a6a5ef5032cf815957f638886bcc86cd21"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-go-final-variant-meaning.log",
+      "bytes": 177,
+      "sha256": "8414a1f62b551527dc6d476c3f5f502be12167eb0c6657c72c6a141cabb94920"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-go-final-variant-passages.log",
+      "bytes": 177,
+      "sha256": "9328bbae6d5dec8f27d946832bfd49b482bb51c7084cc46eeb6dc1b541ede5ab"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-go-final-variant-register.log",
+      "bytes": 177,
+      "sha256": "4c648b3f5b084917a3ef8000a19325c1729cc3523553fe78d1dd7178e6abdbda"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-go-race.log",
+      "bytes": 116,
+      "sha256": "63d05bbc2b69d00d6021615b8456a2c81afd6fe5a408bac4642216a7032d1933"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-patch-checks.log",
+      "bytes": 7413,
+      "sha256": "bc2248983cb760f4a4ee9abb5f41b415bae8875b451a8a45801a3579d51fabf0"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/release-patch-tests.log",
+      "bytes": 145,
+      "sha256": "d4bcc607b240c3dfc18447859ed7d3e955cbf6c8220d12e2819c72c3f7032ffc"
+    },
+    {
+      "path": "docs/validation/assets/independent-context-review/role-cases.json",
+      "bytes": 7563,
+      "sha256": "acb6a3bfa6a8285ee655124a04dd4239d56a98de98a3f800dfb98de05ef9e597"
+    }
+  ]
+}

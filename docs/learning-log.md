@@ -4573,3 +4573,54 @@ applicability and date-role qualification remain open.
 
 [DelayLama source-first predicate audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-first-predicate-audit.md)
 · [Shared receipt](validation/delaylama-source-first-predicate-audit-20261005.json).
+
+## L126 — Date ownership, performance and document coverage are separate (2026-10-05)
+
+DelayLama's independent performance pass previously skipped dated candidates even
+when their role quote lacked the own action. Extend the separate original-context
+task to those candidates, independently request date ownership, and retain the
+existing calendar. Require exact registered enclosing context and preserve earlier
+unresolved values on missing, invalid, duplicate or conflicting assessments.
+A plan, deadline, condition or negated action can own a date without occurring.
+A bare denial of performance is not evidence of a future plan. Keep an engine-only
+review marker when a downstream domain classifier would demote a reviewed plan
+into a standing identity; model-supplied flags must not authorize that override.
+
+Fifteen frozen bilingual controls with injected raw proposals, real Gemini review
+and production MemoryAgent/SQLite storage progress from 6/15 to 12/15, 13/15 and
+15/15 as distinct implementation/prompt changes address dated skipping, ownership,
+French plan classification and negation. Preserve every failed draw. This is not
+native extraction recall or independent gold. Twelve graph source-recheck controls
+match 12/12 after a harness route correction. The earlier generic pilot is 9/12
+and did not exercise the graph guard. Express absence of an obligation differs
+from record silence; delivery and nonservice do not establish or remove a duty.
+
+Three fresh full-stack source jobs complete. The PR-681 acknowledgement now has
+its own full action/date passage, recorded day and reported-occurrence assessment.
+Initial strict action-string gates match 18/23 types and 6/7 calendars. A separate
+unchanged-expectation original-span audit matches 19/23 and 7/7 because a French
+deadline's shorter action is in the same unique source sentence. Do not conflate
+that span-identity correction with semantic improvement. Four early English duty,
+permission and negative statements genuinely have no candidates in this long
+source draw, so an English permission-seeded component cannot be inspected.
+The French component reaches all nine stored candidates; reachability alone does
+not establish document coverage. Use section-level inventories with coverage
+receipts next, preserving full-source cross-clause context.
+
+Full Go/race, 1,353 backend and 914 frontend tests, production build, 12 clean
+idempotent patch arms and 11 optional variant suites pass. Readable longer evidence
+retains earlier model excerpts; main activation preserves all user graph tables,
+24 journal snapshots, 32 artifacts, two Studio sessions and 14 user engine edits.
+Temporary QA services/tab close only after terminal jobs and read-only graph checks.
+
+For LayaGo datasets, separately label performance, own calendar association,
+explicit plans, negation, obligation versus record silence, and document coverage.
+Preserve source/occurrence IDs and exact context; include valid conditional dated
+controls and wrong-action nearby-date negatives. A second pass from the same
+provider is not independent semantic gold. No new Laya training, MLX, speed or
+architecture-quality result is established. Party boundaries, unavailable and
+ambiguous evidence, other predicates/applicability and browser cache quota remain
+open; real/OCR and human-reviewed held-out qualification is still required.
+
+[DelayLama independent context review](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-independent-context-review.md)
+· [Shared receipt](validation/delaylama-independent-context-review-20261005.json).
