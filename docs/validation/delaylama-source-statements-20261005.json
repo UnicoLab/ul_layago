@@ -1,0 +1,300 @@
+{
+  "version": 1,
+  "date": "2026-10-05",
+  "change": "Source statements separate from performed occurrences",
+  "default_patch": 48,
+  "patch": "source-statement-semantics",
+  "engine_source_commit": "b36dc268a869165333ad1e3b2cf47817d5711559",
+  "engine_binary_sha256": "ce66304d9745bc248cf353e76dacb57b80bf44fdac52aeeb3830056aefcad760",
+  "checks": {
+    "backend": 1135,
+    "frontend_full": 816,
+    "frontend_final_wording_targeted": 46,
+    "build_passed": true,
+    "full_go_passed": true,
+    "race_passed": true,
+    "patch_combinations": 12,
+    "optional_engine_suites": 11
+  },
+  "live_validation": {
+    "provider": "Gemini",
+    "model": "gemini-3.1-flash-lite",
+    "profile": "construction_claims captured per job; service default general",
+    "candidate_passes": 1,
+    "critic_passes": 0,
+    "embedding": "noop only in isolated QA",
+    "cases": 3,
+    "rounds": 2,
+    "confirmed_finished_jobs": 6,
+    "originals_and_gold_frozen_before_model_requests": true,
+    "development_replays": [
+      "endpoint-en",
+      "endpoint-fr"
+    ],
+    "new_synthetic_development_case": "mixed-en",
+    "first_run_type_checks": [
+      20,
+      20
+    ],
+    "final_run_type_checks": [
+      20,
+      20
+    ],
+    "final_graph": {
+      "nodes": 45,
+      "edges": 30,
+      "episodes": 3
+    },
+    "final_stored_statements": 17,
+    "final_event_nodes": 3,
+    "performed_actions": 2,
+    "planned_actions": 1,
+    "statement_occurrence_dates": 0,
+    "statement_performer_metadata": 0,
+    "statement_event_role_links": 0,
+    "final_semantic_qualification": false
+  },
+  "known_limits": [
+    "Typed classification is a source-bound model proposal, not an entailment or legal applicability certificate.",
+    "Known EN/FR cases were reused; neither round is an independent accuracy benchmark.",
+    "Mixed inventory changed from 12 candidates to 10; two no-report qualifications stayed in context but were not separate final nodes.",
+    "Missing or invalid statement kinds retain legacy handling and explicit unchecked coverage; not all batch proposals necessarily bind to source inventory.",
+    "Related-concept INVOLVES links remain associations and do not establish a duty-holder, beneficiary, trigger or condition.",
+    "Reported recipient NOTIFIED link does not certify a formal contractual notice.",
+    "Long real PDFs, OCR, independent document families, cross-document exceptions, amendments and applicability remain unqualified.",
+    "Existing user graph was not rewritten or reanalysed; new statement typing applies to new source analysis."
+  ],
+  "preservation": {
+    "user_graph_rows_unchanged": true,
+    "nodes": 1444,
+    "edges": 660,
+    "episodes": 321,
+    "timeline_rows": 3437,
+    "schemas": 1,
+    "protected_engine_source_files": 14,
+    "artifacts": 32,
+    "studio_sessions": 2,
+    "job_journal_unchanged": true,
+    "config_unchanged": true,
+    "user_prompt_edit_preserved": true,
+    "user_layago_folder_preserved": true
+  },
+  "assets": [
+    {
+      "path": "activation.json",
+      "sha256": "1d6a7f9a7d6cb12f0c4e4383fbb98b1a0100251e2a628765d2a8a67b2d8f10a5",
+      "bytes": 1736
+    },
+    {
+      "path": "api-activation.json",
+      "sha256": "7acebffe932ecc407bdb1613c27392bb06562a6a8d7eceaf03e05843db5bc26f",
+      "bytes": 543
+    },
+    {
+      "path": "backend-all.log",
+      "sha256": "8954fc4ed20e110b072d7786073bbb50b3642c319969866bb789d44535411d96",
+      "bytes": 1347
+    },
+    {
+      "path": "before-regression.log",
+      "sha256": "799c1bc98dc87569fef69191ec86b7ffc32775be880c1c40fea06bde60a9c727",
+      "bytes": 955
+    },
+    {
+      "path": "browser-errors.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    {
+      "path": "browser-receipt.json",
+      "sha256": "7b5650f3405a41610a8c4bc0b36dadf467b548c3b00911d2d75e79dd163b3e98",
+      "bytes": 749
+    },
+    {
+      "path": "cleanup.json",
+      "sha256": "3d2439f172b14e527de2a78eab9807ddd7659095d3c0d5197b53db44c5f5e738",
+      "bytes": 503
+    },
+    {
+      "path": "collect_live_final.py",
+      "sha256": "533bb20e739b62923623f257ff766a5f376fd22b697f3b19aaa53bd74d36a05b",
+      "bytes": 4278
+    },
+    {
+      "path": "endpoint-en-snapshot-final.json",
+      "sha256": "4db4cc428dc214df07ccbd692a8b4d55cf61f124b2f19e2418ce8c6218a379f9",
+      "bytes": 87611
+    },
+    {
+      "path": "endpoint-en-snapshot.json",
+      "sha256": "84efebf5856cde9ae9a3588fc5d0f063d074e8eff3c2c324572fb55f467923c1",
+      "bytes": 89637
+    },
+    {
+      "path": "endpoint-fr-snapshot-final.json",
+      "sha256": "172ca11ecf432746223ccf7ffa329b52a945b8dad422fa2c8446804541dd825e",
+      "bytes": 93634
+    },
+    {
+      "path": "endpoint-fr-snapshot.json",
+      "sha256": "f0415febba362756ba5f0914a440b44b95617ed4c20ae3f1f47cf914dc83dd05",
+      "bytes": 96392
+    },
+    {
+      "path": "final-patch-arms.json",
+      "sha256": "d1e4d6e57b56013691d857fbd89f385e21c4b177397f117a4ac9285f4d53354d",
+      "bytes": 32477
+    },
+    {
+      "path": "fixture-freeze.json",
+      "sha256": "e0e9a4b6f1a077f01780a98f0691cafacab0a34b2396a847dc25707e4380549e",
+      "bytes": 315
+    },
+    {
+      "path": "focused-go-final.log",
+      "sha256": "1b7f56a4c94ec41100c63f65fba8a9d11b6756dfc7caa5c2f67a13b688108ec3",
+      "bytes": 299
+    },
+    {
+      "path": "frontend-all-final.log",
+      "sha256": "86760a5013d676f6b372adf0dd4b066a800af6397b92e58b16f7f33789ccdf86",
+      "bytes": 341
+    },
+    {
+      "path": "frontend-build-final.log",
+      "sha256": "fc7d9d0f5de78d5540a00b49f47732be707ae80ce5f03d34b36727e5d3daeaa6",
+      "bytes": 1274
+    },
+    {
+      "path": "frontend-delivery.log",
+      "sha256": "656db68b96f2ab358d452491e20b2fc7d9c2ad108a2390d5e69f75dd39764f99",
+      "bytes": 363
+    },
+    {
+      "path": "frozen-cases.json",
+      "sha256": "a10b4aaff6311d5d30954e70ee942e24db1f5276f2f3122e30d4ff64080a2cc3",
+      "bytes": 2397
+    },
+    {
+      "path": "fullstack-gate-final.json",
+      "sha256": "661f25489d6fd02b47ad93bc9c5c8370967720cd3b5cd8ea81108e2e1ad3bcf4",
+      "bytes": 23782
+    },
+    {
+      "path": "fullstack-gate.json",
+      "sha256": "45ad8b2ebd7ea39bb8359625638445d21298da4da0dc269e451e5bf85a6b0773",
+      "bytes": 24900
+    },
+    {
+      "path": "fullstack-inputs-final.json",
+      "sha256": "f9a96beebf7e9ca4fc4c0646cf6cd83413df1d6493fadf027c6b6b6ebd04265f",
+      "bytes": 5133
+    },
+    {
+      "path": "fullstack-inputs.json",
+      "sha256": "d8d257ea2f049fc9c5843597ecb66516c66f686db51ed7a972acd4e62679378a",
+      "bytes": 5133
+    },
+    {
+      "path": "fullstack-sync-final.json",
+      "sha256": "355c6d0f69034e815a69751fb5d19fb3daf1a010ce1760717484c0aa278d98a1",
+      "bytes": 20260
+    },
+    {
+      "path": "fullstack-sync.json",
+      "sha256": "6d0c17ae8759cb5f40d08efafd46f93672c156da243e460fc26200a08d4b7137",
+      "bytes": 20258
+    },
+    {
+      "path": "go-all-final.log",
+      "sha256": "40113ee2b4eade4e6a3a4879847834d19c82b991b85a851a7b2d717c00ab737e",
+      "bytes": 1954
+    },
+    {
+      "path": "go-race-final.log",
+      "sha256": "758108ac8fc966fe4aacadc42069c64fede677cc24b4d3e30bd925cada5d50d3",
+      "bytes": 353
+    },
+    {
+      "path": "go-statement-metadata.log",
+      "sha256": "f5430db6b9224a96356edc48d466e2c2dd5d0e682278673ae3202f34c2ce1556",
+      "bytes": 116
+    },
+    {
+      "path": "live-result-final.log",
+      "sha256": "1e4500d700ed466d954bbe51231bc65d543aa06d112e1e3d90bd609f7d50ea34",
+      "bytes": 3269
+    },
+    {
+      "path": "live-statement-review.png",
+      "sha256": "461e3eb2c68c8067bd7ff27655c4fedbddabf1670f5d41193de92f63154546f1",
+      "bytes": 182474
+    },
+    {
+      "path": "mixed-en-snapshot-final.json",
+      "sha256": "7506aff506980610e584ea8b403db6aa7fb56781d94453f22fecc1153ff756b1",
+      "bytes": 120737
+    },
+    {
+      "path": "mixed-en-snapshot.json",
+      "sha256": "c46fded985d27e123efaa6b2b0ea125b79ae16d2194af9de78d7957047de869f",
+      "bytes": 129610
+    },
+    {
+      "path": "patch-arms-release.log",
+      "sha256": "725f7d26da92ec1a059e1275f98acf3c806fdba4af0cb9f88b53570d0ed1626a",
+      "bytes": 7413
+    },
+    {
+      "path": "prepare_live.py",
+      "sha256": "31a4b2b418d2415f1f8e81ab12e54802f7582110d3aea0d402bed87f1daf17c3",
+      "bytes": 2747
+    },
+    {
+      "path": "preservation-before.txt",
+      "sha256": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3",
+      "bytes": 114
+    },
+    {
+      "path": "preservation-final.txt",
+      "sha256": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3",
+      "bytes": 114
+    },
+    {
+      "path": "release-checks.json",
+      "sha256": "a53aed8fa852f3ca1dbc2eac756eb472aa0ecb9eb1c334b51cb040ec772eb22f",
+      "bytes": 34400
+    },
+    {
+      "path": "run_fullstack_final.py",
+      "sha256": "1c8db5df8a8b8c5b16b9ddc32142c3f94a8576671f382b0ef56db152ed98056c",
+      "bytes": 2274
+    },
+    {
+      "path": "semantic-gold.json",
+      "sha256": "6974a36be87cb112642111d961109ae3115de63a0585623d94bc4c59e28772b2",
+      "bytes": 1223
+    },
+    {
+      "path": "start_stack_final.py",
+      "sha256": "fe5840fd904fab79f2f4410c0372c76e499f5912d183eb1edb6adf44c5228f4e",
+      "bytes": 2573
+    },
+    {
+      "path": "terminal-jobs-final.json",
+      "sha256": "1b86535808890c1143b13bf4e7ac7f72d5c3c6eef7de36373a083ea770b221db",
+      "bytes": 121310
+    },
+    {
+      "path": "terminal-jobs.json",
+      "sha256": "8bab2221150e5c610c6c704f184b12c7b8dcb4094e1dabe0e7ac95cf4448225a",
+      "bytes": 131722
+    },
+    {
+      "path": "user-source-preflight-final.log",
+      "sha256": "0c3312b5a71012e328a0974a1d93ff5f0eba23c0aa02bc21f6f554d0f152790e",
+      "bytes": 2282
+    }
+  ],
+  "evidence_base": "https://github.com/UnicoLab/delaylama/tree/main/docs/validation/assets/source-statements"
+}

@@ -3828,3 +3828,48 @@ Studio sessions, configuration, graph rows or job journal.
 
 [DelayLama predicate audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-relation-predicates.md)
 · [Shared receipt](validation/delaylama-relation-predicates-20261005.json).
+
+
+## L111 — Source polarity and modality must precede occurrence-role inference
+
+Adopted engineering change, 2026-10-05. A source-located contractual duty and an
+explicit negative assertion could survive as Event candidates and receive actual
+performer interpretation. DelayLama patch 48 asks the existing original-source
+inventory for a separate meaning classification: reported action, designation,
+standing function, duty, permission, prohibition, negative/conditional statement,
+plan, deadline or unknown. A generic recurring function must not be silently
+strengthened into an obligation. A calendar is independent of whether work occurred.
+
+The engine binds candidates to the own original action/context/hash; this verifies
+location, not entailment. Normative/negative/conditional statements have separate
+node types, no occurrence dates or performer metadata, and are excluded from
+actual event-role links. Conflicting duplicate classifications become unknown;
+missing/invalid kinds remain explicitly unassessed. Existing user graphs are not
+silently rewritten. The UI labels statement reviews correctly, excludes them from
+chronology and does not request performers for source-bound plans/deadlines.
+
+Two three-case synthetic full-stack rounds passed the same twenty predefined type
+checks. English/French were known development replays; the mixed case was new in
+this continuation. Final storage retained seventeen statements, two performed
+Events and one plan with correct own quotes/scope. No statement acquired actual
+role links or dates. Mixed recall varied: two explicit no-report qualifications
+were separate assertions in round one but only context in round two. A report
+recipient's NOTIFIED edge does not certify a formal notice. These are bounded
+engineering observations, not a multilingual model-quality or completeness result.
+Full delivery passed 1,135 backend/816 frontend tests/build, Go/race checks,
+twelve patch combinations and eleven optional suites. Actual browser checks
+caught and fixed misleading statement Event badges and a planned performer gap.
+
+For Laya/GLiNER training: supervise original-span identity, polarity, modality,
+parties, conditions/antecedents, date role and applicability as separate targets.
+Use minimal pairs (must/may/must not/did not), generic functions versus performed
+acts, passive voice, conditional scope and explicit plans. Do not label a normative
+subject as an actual performer or treat a quoted condition as established truth.
+Evaluate occurrence precision, normative inventory recall and statement-to-party
+attachment separately. Preserve independently frozen negative checks and source
+qualifications so an improved type score cannot hide omitted assertions. Span
+matching and nearest embeddings cannot substitute for semantic validation.
+No new Laya training, MLX or classifier-quality gain is claimed by this change.
+
+[DelayLama statement audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-statements.md)
+· [Shared receipt](validation/delaylama-source-statements-20261005.json).
