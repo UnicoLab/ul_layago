@@ -1,0 +1,601 @@
+{
+  "date": "2026-10-05",
+  "shared_learning": "L123",
+  "status": "verified_progress_with_retained_semantic_failures",
+  "base_commit": "6386bc22cb943d52c4ed66a0adfe1c47d16df054",
+  "scope": "Fresh model graph qualification and semantic connection/performance review UX. No backend or engine code changes.",
+  "freeze": {
+    "cases_sha256": "bc2802d26482edb54562a5e6a6a4462497931ed25f8da0bdfbddc2fccfd70e71",
+    "types": 23,
+    "dates": 7,
+    "performers": 4,
+    "scope": "New synthetic development fixtures authored and frozen before any model call; not independent human-reviewed semantic gold",
+    "source_lengths": [
+      [
+        89821,
+        376
+      ],
+      [
+        1009
+      ]
+    ]
+  },
+  "model_run": {
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "engine_sha256": "2b97549a1c6ffa1c7be3ab92bf8f78fd248b6710e0fb6d0f1b94722dcf3b83b1",
+    "embedding": "noop",
+    "profile": "construction_claims",
+    "project_submissions": 2,
+    "terminal_source_jobs": 3,
+    "inventory_stage_model_calls": 3,
+    "full_pipeline_model_request_count_instrumented": false,
+    "critic_passes": 0,
+    "candidate_passes": 1,
+    "source_semantic_audits": "partial",
+    "independent_human_reviewed_benchmark": false
+  },
+  "frozen_gate": {
+    "statement_types_passed": 23,
+    "statement_types_total": 23,
+    "calendar_role_checks_passed": 6,
+    "calendar_role_checks_total": 7,
+    "performer_checks_passed": 4,
+    "performer_checks_total": 4,
+    "deadline_nonoccurrence_checks_passed": 3,
+    "deadline_nonoccurrence_checks_total": 3,
+    "complete_semantic_qualification_passed": false
+  },
+  "posthoc_diagnostics": {
+    "expectations_frozen_before_requests": false,
+    "diagnostics": [
+      {
+        "kind": "causation_inferred_from_sequence",
+        "edge_id": "16db677f-cabc-4969-82ac-dfdba5394575",
+        "from": "Submission of progress report PR-681",
+        "to": "Acknowledgement of receipt of PR-681",
+        "relation_type": "CAUSED",
+        "quote": "On 12 February 2066, Larch Construction Ltd sent progress report PR-681 to Pennant Engineer Ltd.\nPennant Engineer Ltd acknowledged receipt of PR-681 on 13 February 2066.\nThe acknowledgement did not approve the report or the works.",
+        "fact": "The submission of PR-681 caused the acknowledgement of receipt by Pennant Engineer Ltd."
+      },
+      {
+        "kind": "unsigned_statement_mapped_to_notice_requirement",
+        "edge_id": "516ba129-ff59-4854-a0a6-4619eeb31767",
+        "from": "Larch Construction Ltd",
+        "to": "A123",
+        "relation_type": "REQUIRES_NOTICE",
+        "quote": "Neither Northmere Employer Ltd nor Larch Construction Ltd has signed A123.",
+        "fact": "Larch Construction Ltd has not signed the amendment."
+      },
+      {
+        "kind": "unsigned_statement_mapped_to_notice_requirement",
+        "edge_id": "117b8e6c-79dc-4d18-a1bb-6af7cb432897",
+        "from": "Northmere Employer Ltd",
+        "to": "A123",
+        "relation_type": "REQUIRES_NOTICE",
+        "quote": "Neither Northmere Employer Ltd nor Larch Construction Ltd has signed A123.",
+        "fact": "Northmere Employer Ltd has not signed the amendment."
+      },
+      {
+        "kind": "party_name_contains_negative_determiner",
+        "node_id": "3ee4b65a-9325-49ac-8156-8b7c43ad217d",
+        "name": "Neither Northmere Employer Ltd"
+      }
+    ],
+    "complete_semantic_gate_passed": false
+  },
+  "context": [
+    {
+      "case": "dispersed-notice-en",
+      "source_statuses": {
+        "located:matches_original": 106,
+        "unmatched:unknown": 14,
+        "unavailable:unknown": 1
+      },
+      "exact_original_spans_checked": 106,
+      "unverified": [
+        {
+          "kind": "nodes",
+          "id": "c8138829-4103-4b29-a49a-88ca515403e2",
+          "status": "unmatched",
+          "message": "The recorded citation and source episode identify different originals. No alternative passage was selected."
+        },
+        {
+          "kind": "nodes",
+          "id": "0a80caa6-c532-4977-b1cc-0d92ce61f31b",
+          "status": "unmatched",
+          "message": "The recorded citation and source episode identify different originals. No alternative passage was selected."
+        },
+        {
+          "kind": "nodes",
+          "id": "2d77e89a-54b1-446b-aa7f-e37d4b94ba69",
+          "status": "unmatched",
+          "message": "The recorded citation and source episode identify different originals. No alternative passage was selected."
+        },
+        {
+          "kind": "nodes",
+          "id": "c9b5b1c5-59bc-4b5b-9c2a-6cbda0e78a08",
+          "status": "unmatched",
+          "message": "The recorded citation and source episode identify different originals. No alternative passage was selected."
+        },
+        {
+          "kind": "nodes",
+          "id": "d067a8e5-8ee1-483a-a5b1-8a93eb44a2a3",
+          "status": "unmatched",
+          "message": "The recorded citation and source episode identify different originals. No alternative passage was selected."
+        },
+        {
+          "kind": "nodes",
+          "id": "f35d3dfe-bb49-4924-99ea-bd8288f69288",
+          "status": "unmatched",
+          "message": "The recorded citation and source episode identify different originals. No alternative passage was selected."
+        },
+        {
+          "kind": "nodes",
+          "id": "39fc04af-d742-4d8f-b3ca-f26bd88f1ef0",
+          "status": "unmatched",
+          "message": "The recorded citation and source episode identify different originals. No alternative passage was selected."
+        },
+        {
+          "kind": "nodes",
+          "id": "48a27634-1543-457c-80e3-bafb4e50f420",
+          "status": "unmatched",
+          "message": "The recorded citation and source episode identify different originals. No alternative passage was selected."
+        },
+        {
+          "kind": "nodes",
+          "id": "46de8695-de26-4c9a-87e6-2046af244b8e",
+          "status": "unmatched",
+          "message": "The recorded citation and source episode identify different originals. No alternative passage was selected."
+        },
+        {
+          "kind": "nodes",
+          "id": "a867803a-d871-4588-b444-31e109014e06",
+          "status": "unmatched",
+          "message": "The recorded citation and source episode identify different originals. No alternative passage was selected."
+        },
+        {
+          "kind": "nodes",
+          "id": "02c1d093-6481-4c67-a46b-de6077807ed2",
+          "status": "unmatched",
+          "message": "The recorded citation and source episode identify different originals. No alternative passage was selected."
+        },
+        {
+          "kind": "nodes",
+          "id": "ae470ef3-5c53-422b-85cf-c50f56504f30",
+          "status": "unmatched",
+          "message": "The recorded citation and source episode identify different originals. No alternative passage was selected."
+        },
+        {
+          "kind": "nodes",
+          "id": "28922cdd-5a66-4d3a-8c0e-48cf03d7e0ae",
+          "status": "unmatched",
+          "message": "The recorded citation and source episode identify different originals. No alternative passage was selected."
+        },
+        {
+          "kind": "nodes",
+          "id": "1f3c53cd-b3a3-48f1-b561-388567fe58af",
+          "status": "unmatched",
+          "message": "The recorded citation and source episode identify different originals. No alternative passage was selected."
+        },
+        {
+          "kind": "nodes",
+          "id": "3ee4b65a-9325-49ac-8156-8b7c43ad217d",
+          "status": "unavailable",
+          "message": "No original quotation recorded for this candidate."
+        }
+      ],
+      "source_candidates": 18,
+      "component_source_candidates": 18,
+      "component_nodes": 39,
+      "component_edges": 74,
+      "required_context_candidates_present": {
+        "Prior written consent from Northmere Employer Ltd": true,
+        "No written consent is recorded": true,
+        "The proposed completion change has not taken effect": true
+      },
+      "references": [
+        {
+          "reference": "Clause 88",
+          "status": "located"
+        }
+      ],
+      "graph_unchanged_by_reads": true
+    },
+    {
+      "case": "conditional-refusal-fr",
+      "source_statuses": {
+        "located:matches_original": 61,
+        "unavailable:unknown": 4,
+        "ambiguous:unknown": 1
+      },
+      "exact_original_spans_checked": 61,
+      "unverified": [
+        {
+          "kind": "nodes",
+          "id": "e26fac18-4444-4557-b191-55f5c24d2cb9",
+          "status": "unavailable",
+          "message": "No original quotation recorded for this candidate."
+        },
+        {
+          "kind": "nodes",
+          "id": "e13d864f-4f24-4f20-b87e-2b0a9b34bce4",
+          "status": "unavailable",
+          "message": "No original quotation recorded for this candidate."
+        },
+        {
+          "kind": "nodes",
+          "id": "9acf3f6f-3846-45fd-9135-c11d416a0295",
+          "status": "unavailable",
+          "message": "No original quotation recorded for this candidate."
+        },
+        {
+          "kind": "nodes",
+          "id": "4e43d004-1b36-4797-ab3b-07a7cddb9977",
+          "status": "unavailable",
+          "message": "No original quotation recorded for this candidate."
+        },
+        {
+          "kind": "nodes",
+          "id": "35569c27-390e-4248-8d59-f03f6f1d2010",
+          "status": "ambiguous",
+          "message": "The quotation occurs in more than one source or occurrence. Identify the intended passage before relying on its roles."
+        }
+      ],
+      "source_candidates": 11,
+      "component_source_candidates": 11,
+      "component_nodes": 20,
+      "component_edges": 41,
+      "required_context_candidates_present": {
+        "Aucun accord écrit n'est fourni": true,
+        "Aucune suspension n'est rapportée": true
+      },
+      "references": [],
+      "graph_unchanged_by_reads": true
+    }
+  ],
+  "causal_recheck": {
+    "job_id": "9196d0c659284f96ac57538b994f452d",
+    "one_UI_submission": true,
+    "status": "done",
+    "model_verdict": "supports",
+    "recorded_model_calls": 2,
+    "semantic_expected": "insufficient: sequence alone does not explicitly establish causation",
+    "semantic_recheck_passed": false,
+    "graph_unchanged": true,
+    "automatic_graph_write": false
+  },
+  "prompt_lab": {
+    "revision": 2,
+    "history_entries": 2,
+    "failed_recheck_retained": true,
+    "human_corrective_note_saved": true,
+    "document_sha256": "6cb514f904dd12d21a7152126ebefda3eef35aebd161c2afb10e1f476649f266",
+    "agent_draft_activated": false,
+    "assistant_request_submitted": false,
+    "cache_quota_warning_displayed": true,
+    "server_backup_verified": true
+  },
+  "checks": {
+    "frontend_passed": 910,
+    "frontend_files_passed": 75,
+    "new_regressions": 5,
+    "regressions_failed_against_previous_code": 5,
+    "production_build_passed": true,
+    "preexisting_large_chunk_warning": true,
+    "backend_tests_rerun": false,
+    "go_tests_rerun": false
+  },
+  "browser": {
+    "errors": 0,
+    "warnings": 0,
+    "temporary_tab_closed": true,
+    "user_tab_untouched": true
+  },
+  "cleanup": {
+    "snapshots": [
+      {
+        "case": "dispersed-notice-en",
+        "unchanged": true,
+        "nodes": 47,
+        "edges": 74,
+        "snapshot_sha256": "e29dcf2b6f0c73dbaa5bcd69bfbbb184fc84d01d22d4beed1a71b152f64a47fa"
+      },
+      {
+        "case": "conditional-refusal-fr",
+        "unchanged": true,
+        "nodes": 25,
+        "edges": 41,
+        "snapshot_sha256": "7b71882618ec8b53f5f569dd125c0064e8de33a0437225cc5c90d91d826deda2"
+      }
+    ],
+    "terminal_source_jobs_retained": 3,
+    "terminal_recheck_jobs_retained": 1,
+    "qa_ports_closed": [
+      8097,
+      8081,
+      5175
+    ],
+    "main_ports_healthy": [
+      8095,
+      8080,
+      5173
+    ],
+    "browser_error_count": 0,
+    "user_contract_reanalysis_submitted": 0,
+    "main_engine_or_API_restarted": false
+  },
+  "preservation": {
+    "configuration_and_journal": {
+      "config_sha256": "538f6c5d5258b3a3cca8b25a083e695217ef42584564a554497541f57e8b53ad",
+      "journal_snapshot_sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c",
+      "jobs": 24,
+      "configuration_unchanged": true,
+      "journal_snapshots_unchanged": true,
+      "active_jobs": 0
+    },
+    "all_user_graph_tables_unchanged": true,
+    "nodes": 1444,
+    "edges": 660,
+    "episodes": 321,
+    "timeline_events": 3437,
+    "protected_engine_source_edits": 14,
+    "saved_app_artifacts": 32,
+    "studio_sessions": 2,
+    "user_prompt_and_layago_folder_excluded_from_commit": true,
+    "main_engine_and_API_restarted": false
+  },
+  "limits": [
+    "Directed causal and unsigned-amendment predicates remain incorrect model candidates; no engine repair claimed.",
+    "Fourteen long-document concept citations retain conflicting chunk-local original identities and remain unverified.",
+    "One dated acknowledgement remains performance-unresolved; four French concepts have no quote and one occurrence is ambiguous.",
+    "The source recheck falsely endorses causation from temporal sequence; exact text is not semantic correctness.",
+    "Proper party naming/merging and browser-cache pressure remain unresolved.",
+    "No agent prompt was activated or newly evaluated; no Laya training, architecture, MLX or acceleration result.",
+    "Frozen fixtures are newly authored synthetic development data; no complete independently reviewed real/OCR semantic benchmark."
+  ],
+  "source_manifest": [
+    {
+      "path": "frontend/src/graphReviewQueue.ts",
+      "sha256": "517e3ae0f05bb9278be0cf9a7cc21b12474a5144489b0e7748cd13b88547d3e3"
+    },
+    {
+      "path": "frontend/src/graphChronology.ts",
+      "sha256": "46263e5490174992ed5610c34253a1519dca912c8db9d7a7f9b7d8814fdd85a5"
+    },
+    {
+      "path": "frontend/src/components/GraphReviewQueue.tsx",
+      "sha256": "1ba862dfc3acfd98c3959babb2dc4fcaa6cacdcef58d423d39a12c3ed4a8fbca"
+    },
+    {
+      "path": "frontend/tests/graph-review-queue.test.tsx",
+      "sha256": "c30d30e5fd453f9f6ac914495f8eb83b78f166b1fb76c0d8dde277f02833aede"
+    },
+    {
+      "path": "frontend/tests/graph-chronology.test.tsx",
+      "sha256": "2125f99396c55e796ef6c5aafb501ff4d85470e92838b548e5e346ef088aad70"
+    }
+  ],
+  "proof_manifest": [
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/acknowledgement-dom.txt",
+      "bytes": 3367,
+      "sha256": "06508b4c2f34029d727537ccfeafc44afbbcc7a4d1d493bbaf65f7f769941489"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/acknowledgement.png",
+      "bytes": 155561,
+      "sha256": "23745cc86f665fc1338f4993ffd330b6b0572fafd3b1b9d05fa74b2aa0d55201"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/browser-errors.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/build-final.log",
+      "bytes": 1274,
+      "sha256": "09aee055a121d2b56aa69aaa9c4df0679c82d5aab4685ec34e17d271ef47a31f"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/cases.json",
+      "bytes": 98268,
+      "sha256": "bc2802d26482edb54562a5e6a6a4462497931ed25f8da0bdfbddc2fccfd70e71"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/causal-connection-dom.txt",
+      "bytes": 2537,
+      "sha256": "1aeb3ef04e73214bc6698349350396d805e1a1999267a5712e42c3ce5f01ce5f"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/causal-recheck-dom.txt",
+      "bytes": 1557,
+      "sha256": "5060722455d1b0cace154e1cdde420377bb6831f75b3716079a53d6bdfef348e"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/causal-recheck.json",
+      "bytes": 251317,
+      "sha256": "91517d1475340f46ac2f26e93bced218ac6497924ca23aee05d06af10bc820f5"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/causal-recheck.png",
+      "bytes": 184310,
+      "sha256": "3f06cc4691d73d364f27fbf32ec495d4ac91ce987810e4013952b8f6dedbdfc6"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/check_context.py",
+      "bytes": 4020,
+      "sha256": "27b65403b4e6d52a2b1a622478a922ca44c3d94a3da3f1044e098d133edb7df7"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/cleanup.json",
+      "bytes": 743,
+      "sha256": "2f6f54f2af49125ed4316f68eb66fba3c604db553854769230c5f94a1b643940"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/collect.py",
+      "bytes": 4226,
+      "sha256": "5101b62a28f9dd4cd16d9e8c90820d442e21f491e71af967e8519c08c098dc0c"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/conditional-refusal-fr-component.json",
+      "bytes": 112889,
+      "sha256": "150c1a4705c912f33d34016c2adeeb071a85a9ee9169475c41d60c015b8fe6b0"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/conditional-refusal-fr-graph-response.json",
+      "bytes": 281731,
+      "sha256": "ad1fe685375d082534d5fca4801208ace45c8dca78af23e38805597b6d557df6"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/conditional-refusal-fr-snapshot.json",
+      "bytes": 200936,
+      "sha256": "9ce71ef30a5206c4f495418ef6526541596581285231c1f6955115bd3dc674d3"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/configuration-journal-preservation.json",
+      "bytes": 295,
+      "sha256": "ea5700452b073287654d70fb359ba2aed36a1ca72fd31d0a824773f953be9934"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/connections-before.log",
+      "bytes": 1399,
+      "sha256": "21b4d7942689e09be71264a22001767827178abd0b95e4f8e572a6686d855e19"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/context-gate.json",
+      "bytes": 6170,
+      "sha256": "2ced21cbd66c9714a2935d3294636af279383430f3eac9c8e6fce0bf0bf2646d"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/dispersed-notice-en-component.json",
+      "bytes": 556638,
+      "sha256": "cf1f3dbf6f3d094d4cb205e0cda22f0cd007f26ac3d4f243a64e4e4b9df4cf90"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/dispersed-notice-en-graph-response.json",
+      "bytes": 1514374,
+      "sha256": "e68be32e707b6524f0aceb3ec5ecabc98a024bb328493ed19286f94af5431820"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/dispersed-notice-en-snapshot.json",
+      "bytes": 1013407,
+      "sha256": "748fc11d97873d508c61ee3deb58209afc225196cc0afe9d06da988b87a8fffd"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/final-health.json",
+      "bytes": 255,
+      "sha256": "7d564a1b3b87b1098d8477f920a2d2aeeac07320878b383bd334e00a0085521f"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/freeze.json",
+      "bytes": 360,
+      "sha256": "e3cbdfd5fb58249e399c8a0de8c918c59b5755554baf1b6306a38b1056482f51"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/frontend-final.log",
+      "bytes": 341,
+      "sha256": "bf5d392a85a6de49bec13a790bbbf55b7637f708ac735d7ccbef85d468e6e7e0"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/main-stack-health.json",
+      "bytes": 456,
+      "sha256": "bdbf35453f67d1f83a29b070eaffeb27740dc61fee44aee1e947e94b73dfa058"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/observations.json",
+      "bytes": 171736,
+      "sha256": "f4ac1e221474b7e47d17e3582d64e1d92e810eb2ab51e7c80248d39b87120507"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/posthoc-semantic-failures.json",
+      "bytes": 1702,
+      "sha256": "19ad0055b93b8f2b6a8d3c35076cb28a25f102fe87f47f68dfa27d87cf696629"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/preservation.json",
+      "bytes": 1349,
+      "sha256": "76b5b675f6de4a92a556da0db3200e6d234cdb49300687823fb60e2749061e40"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/prompt-lab-dom.txt",
+      "bytes": 9184,
+      "sha256": "df79f856aeea95a26c3533f0972fe2289568e76f955f55c4bd5e7f0ed205ddc2"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/prompt-lab.png",
+      "bytes": 146843,
+      "sha256": "23417483d48ebf2a32e2fc9b679564f0e94550b34111d997a3bdfda207a0f712"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/prompt-session-gate.json",
+      "bytes": 356,
+      "sha256": "38955b2a1aefbf5a9ec929764976a9fea30d6754f7fc8944c4bd7643008c6c41"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/prompt-session.json",
+      "bytes": 881448,
+      "sha256": "0a436ad0fcaf7675598b655286b43fe955efd07893952a9153143dafe3b5ed54"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/queue-connections-dom.txt",
+      "bytes": 1796,
+      "sha256": "59b4eccc91fbc6a4eba9a77a0c06b39f90bdc32df63ad82ee8e6a87c5f302895"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/queue-connections.png",
+      "bytes": 151735,
+      "sha256": "fc360f6cc120259f9fb010b61dbbce967204e2c1507fd815b9b3b6f7c641032f"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/queue-role-dom.txt",
+      "bytes": 957,
+      "sha256": "f7f140b84ff671dce6efb327c5cbf5004f195f6d6f2e48f11c0f2593bd2d71a3"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/queue-role.png",
+      "bytes": 146684,
+      "sha256": "ee5a1dc48bc4e43f68b6226814c4113c4f20f62386ec515d28d7b883987e7f66"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/ready.json",
+      "bytes": 230,
+      "sha256": "ea9ed3d73daa5612f1d8cf64720cfba94566fe41aebedfd64e1573ff1729210f"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/recheck-gate.json",
+      "bytes": 352,
+      "sha256": "c012fee6197646915edcf9c736616fd5bc381b1ed3849ae2f5b34afa7d0891bc"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/regression-before.log",
+      "bytes": 3895,
+      "sha256": "42d75ef404e3988613b3ef001a123ff7fe0e83fd06aad4a15239f1be9b00e2b9"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/regression-final.log",
+      "bytes": 268,
+      "sha256": "20167670797a9414b0a4b52897c48f6712ea4c1165ac53979acd4e03f1fa6ad7"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/save_recheck.py",
+      "bytes": 1698,
+      "sha256": "d775a07018dd324a2a3e66e87bfd2e78082801cb71cc2c0baff28f41235734ae"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/semantic-gate.json",
+      "bytes": 20158,
+      "sha256": "d508edbee5acd496a123cdd471c9662fbfab7f22f7ed5e9f8662b86951961585"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/submissions.json",
+      "bytes": 112652,
+      "sha256": "2464fff56b547b1a24327e76c85773677eb2d80cfbaad793117bec2fd8e86593"
+    },
+    {
+      "path": "docs/validation/assets/dispersed-semantic-analysis/terminal-jobs.json",
+      "bytes": 178893,
+      "sha256": "90fd65c51f20e1e4a09e778be77c84809f7934deed4f4808f2643feed95ac601"
+    }
+  ]
+}

@@ -4452,3 +4452,38 @@ architecture improvement is established by this check.
 
 [DelayLama graph grounding and long-source lookup](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-index-performance.md)
 · [Shared receipt](validation/delaylama-source-index-performance-20261005.json).
+
+## L123 — Exact quotes and connected context do not validate predicates (2026-10-05)
+
+Fresh DelayLama English/French dispersed-contract development fixtures retain all
+23 frozen statement types, four performer sets and three deadline non-occurrences,
+but only six of seven calendar/role checks pass. All 18 English and 11 French
+stored source action/assertion candidates are reachable from their permission
+seed. Neither result establishes complete semantic quality: the model inferred
+causation from sequence, mapped two unsigned-amendment assertions to notice
+requirements and included “Neither” in a party name. Fourteen concept citations
+also retained a conflicting chunk-local original identity. These post-observation
+diagnostics remain separate from the pre-request frozen expectations.
+
+One original-source recheck, with two recorded calls, falsely endorsed the causal
+link. The exact quote was real; its predicate was wrong. DelayLama now queues all
+directed semantic candidates, including vocabulary-valid party/document links,
+and exposes unresolved performance/date roles. Five regressions fail before their
+respective fixes; 910 frontend tests and the production build pass. These are UI
+repairs and fresh qualification findings, not engine semantic repairs.
+
+The failed check, exact originals and a corrective human note reach the prompt
+lab's server backup as two history entries, without activating a prompt or writing
+the graph. Browser cache quota is reached; its visible warning remains unresolved.
+The isolated services/tab are closed after terminal jobs, preserving user data.
+
+For LayaGo training and evaluation, keep sequence-versus-explicit-cause and
+unsigned-versus-notice-requirement as hard negatives. Separate predicate, direction,
+modality, party boundaries and applicability from vocabulary membership, source
+presence and connectivity. Chunk ownership, absolute offsets and hashes need
+deterministic engineering checks rather than similarity guesses. Do not use an
+LLM support verdict as independent semantic gold. This synthetic development run
+establishes no new Laya training, MLX, speed gain or real/OCR generalization.
+
+[DelayLama dispersed semantic analysis](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-dispersed-semantic-analysis.md)
+· [Shared receipt](validation/delaylama-dispersed-semantic-analysis-20261005.json).
