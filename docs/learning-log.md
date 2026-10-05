@@ -4686,3 +4686,51 @@ open.
 
 [DelayLama source range inventory](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-range-inventory.md)
 · [Shared receipt](validation/delaylama-source-range-inventory-20261005.json).
+
+## L128 — Similar names are retrieval candidates, not party identities (2026-10-05)
+
+A permission mentioning Northmere Employer Ltd pointed to Neither Northmere
+Employer Ltd. The engine's deterministic supplement absorbed a coordinator, and
+online reconciliation accepted containment/token overlap before checking all
+exact candidates. A graph path with a verbatim quote still had the wrong actor ID.
+Identity correctness is a separate gate from quotation presence and connectivity.
+
+Scan every page in the same typed project/tenant scope before choosing a unique
+exact display-normalized identity. Do not use shared content words as merge proof.
+Ambiguous exact identities and legal-ending variants must remain unresolved.
+DelayLama permits only a unique omitted legal ending on a multiword organization
+base, preserving different explicit legal forms; this is still heuristic. Remove
+coordinators only in paired unquoted syntax, retaining literal/quoted names and
+original UTF-8 spans. Protect routing from malformed legacy nodes without silently
+rewriting historical graphs.
+
+New regressions fail on default 60 and pass on default 61. SQLite and file-storage
+MemoryAgent controls retain all three statement party links despite a seeded bad
+legacy actor. Exact priority, >1,000-row pagination, scope isolation, duplicate
+identities, variant ambiguity, different legal forms and literal/quoted names have
+separate controls. Three fresh full-stack jobs on unchanged frozen synthetic
+English/French originals pass 23/23 expected types and 7/7 date roles. The permission
+now connects both permitted party and conditional approver: 2/2 proposals pass,
+0 withheld, and its association targets the correctly named actor. English context
+reaches all 18 candidates and French all 11. The browser shows the original clause
+highlight and preserves the bare-name evidence ambiguity.
+
+Do not generalize this to perfect extraction: a separate global-role heuristic
+labels Northmere contractor despite an employer declaration. Global role ownership,
+actor/profile duplicates, repeated mention evidence, normalized stored statement
+party names, applicability and precedence remain open. Full Go/race, 1,384 backend,
+916 frontend, build, 12 clean/idempotent arms and 11 variants pass; every user graph
+table, 24 journal rows, 32 artifacts, two Studio sessions and 14 engine source edits
+survive activation.
+
+For LayaGo, contrastive name similarity can retrieve candidate mentions, but entity
+merge precision needs a different supervised target and abstention. Include close
+subsidiary names, omitted versus different legal endings, grammatical coordinators,
+literal brand names, role words attached to another nearby party and exact-name
+collisions across projects/documents. Keep retrieval, identity, role ownership,
+source matching and relationship direction evaluations separate. These synthetic
+same-provider trials are not independently adjudicated held-out labels. No new Laya
+training, MLX, acceleration or architecture-quality result is claimed.
+
+[DelayLama party identity](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-party-identity.md)
+· [Shared receipt](validation/delaylama-party-identity-20261005.json).

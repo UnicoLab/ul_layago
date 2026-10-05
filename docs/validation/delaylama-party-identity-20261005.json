@@ -1,0 +1,381 @@
+{
+  "date": "2026-10-05",
+  "learning": "L128",
+  "scope": "Scoped party identity, exact original party spans and prevention of wrong stored endpoints; synthetic development qualification, not perfect legal analysis or independent gold.",
+  "engine": {
+    "base_release": "v1.3.0",
+    "upstream_base_commit": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+    "clean_apply_checkout_revision": "ec22df4593ff29898e12f10c073f0ea35cf4050a",
+    "default_patch_count": 61,
+    "new_patch": "party-identity.patch",
+    "patch_sha256": "63875c8465ae1d15ab02ac3abc1ca6afd9515cdec7f9573d430f6da6f4206fd5",
+    "runtime_sources_identical": true,
+    "files": 161,
+    "native_binary_sha256": "7f3ec18339f349ce02615343482167148cfabac64c3cccf15f51051805ca22de",
+    "clean_binary_sha256": "72cbc6dd270b9334d50f0943e71cd40c3831c418ba753aae7ea59d6ded637a48"
+  },
+  "policy": {
+    "exact_identity_before_variants": true,
+    "name_substring_identity": false,
+    "token_overlap_identity": false,
+    "same_typed_project_tenant": true,
+    "all_pages_checked": true,
+    "duplicates_or_multiple_variants": "Unresolved; retain a new candidate instead of selecting an arbitrary existing ID.",
+    "omitted_legal_suffix": "Only a unique same-base organization candidate with at least two base words; different explicit legal forms are not equivalent. Still heuristic, not incorporation proof.",
+    "coordinators": "Remove Neither/Ni only for immediately paired nor/ni outside quotes. Preserve standalone/quoted company names.",
+    "source_quote_offsets": "Original UTF-8 bytes retained for deterministic proper nouns."
+  },
+  "native": {
+    "cases_sha256": "a9cdd069cb1d677bc6b782c105c42d70b90c6530209dc973b1ed12956f1b9981",
+    "source_jobs": 3,
+    "all_done": true,
+    "types": {
+      "passed": 23,
+      "total": 23
+    },
+    "date_roles": {
+      "passed": 7,
+      "total": 7
+    },
+    "party_gate": {
+      "permission": "Pennant Engineer Ltd is permitted to issue payment approval only after Northmere Employer Ltd giv...",
+      "proposed": 2,
+      "accepted": 2,
+      "withheld": 0,
+      "connections": [
+        {
+          "type": "INVOLVES",
+          "party": "Northmere Employer Ltd",
+          "party_type": "Organization"
+        },
+        {
+          "type": "HAS_STATEMENT_APPROVAL_PARTY",
+          "party": "Northmere Employer Ltd",
+          "party_type": "Organization"
+        },
+        {
+          "type": "HAS_STATEMENT_SUBJECT",
+          "party": "Pennant Engineer Ltd",
+          "party_type": "Organization"
+        }
+      ],
+      "malformed_actor_absent": true,
+      "no_wrong_party_association": true,
+      "known_remaining_issue": {
+        "name": "Northmere Employer Ltd",
+        "inferred_role": "contractor",
+        "expected_role": "employer/client",
+        "scope": "Global heuristic role labels are not qualified by this party-identity fix."
+      }
+    },
+    "critical_predicate_gates": true,
+    "native_positive_causal_control_this_turn": false,
+    "graph_context": {
+      "dispersed-notice-en": {
+        "source_candidates": 18,
+        "reached_candidates": 18,
+        "required_fragments": {
+          "Prior written consent from Northmere Employer Ltd": true,
+          "No written consent is recorded": true,
+          "The proposed completion change has not taken effect": true
+        }
+      },
+      "conditional-refusal-fr": {
+        "source_candidates": 11,
+        "reached_candidates": 11,
+        "required_fragments": {
+          "Aucun accord écrit n'est fourni": true,
+          "Aucune suspension n'est rapportée": true
+        }
+      }
+    },
+    "source_evidence": {
+      "dispersed-notice-en": {
+        "located": 131,
+        "ambiguous": 4
+      },
+      "conditional-refusal-fr": {
+        "located": 60,
+        "unavailable": 4,
+        "ambiguous": 1
+      }
+    },
+    "exact_spans_checked": 196
+  },
+  "tests": {
+    "backend": 1384,
+    "frontend": 916,
+    "frontend_files": 75,
+    "production_build": true,
+    "go_full": true,
+    "go_race_packages": [
+      "reconcile",
+      "intelligence",
+      "agents"
+    ],
+    "clean_idempotent_patch_arms": 12,
+    "optional_variant_suites": 11,
+    "regressions_fail_on_default60_and_pass_default61": true
+  },
+  "preservation": {
+    "all_graph_tables_unchanged": true,
+    "graph_table_counts": {
+      "edges": 660,
+      "episodes": 321,
+      "nodes": 1444,
+      "schema_meta": 1,
+      "timeline_events": 3437
+    },
+    "engine_config_unchanged": true,
+    "api_process_unchanged": true,
+    "journal_snapshots": 24,
+    "artifacts": 32,
+    "studio_sessions": 2,
+    "protected_engine_source_files": 14,
+    "protected_engine_sources_unchanged": true,
+    "artifacts_unchanged": true,
+    "studio_unchanged": true,
+    "historical_graph_rewrite": false,
+    "real_contract_reanalysis": false
+  },
+  "browser": {
+    "both_parties_visible": true,
+    "conditional_approver_original_highlighted": true,
+    "distant_context_reachable": true,
+    "warning_error_logs": [],
+    "read_only_graphs_unchanged": true,
+    "owned_tab_closed": true,
+    "temporary_services_stopped": true
+  },
+  "limits": [
+    "Heuristic global role inference still mislabels Northmere Employer Ltd as contractor; next target is source-bound ownership of each role declaration.",
+    "Repeated bare entity quotes remain ambiguous and separate actor/profile projections remain; unique identity matching does not resolve legal applicability or entity-role semantics.",
+    "Case/whitespace-normalized stored names and legal-suffix matches still need explicit statement-role endpoint qualification beyond this draw.",
+    "Source span/type/date criteria are synthetic same-provider development tests, not independently adjudicated held-out accuracy or OCR/legal completeness.",
+    "Existing historical graph remains unchanged; malformed legacy names are protected against routing, not silently migrated.",
+    "General-profile defaults, browser cache quota and other semantic relation/application/precedence qualification remain open.",
+    "No new Laya training, MLX, speed or architecture-quality claim."
+  ],
+  "proof": [
+    {
+      "path": "docs/validation/assets/party-identity/native-approver-connection-dom.txt",
+      "bytes": 19999,
+      "sha256": "7623475c1520d6d7255c815cd84c1b6c58b20a151d25dfae19230932f056899c"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-approver-connection.png",
+      "bytes": 221032,
+      "sha256": "f837a6ed07733f324a84dc03d54b7be2740a2717542b234c66fbe4a7b2849c91"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-browser-console.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-cases.json",
+      "bytes": 98322,
+      "sha256": "a9cdd069cb1d677bc6b782c105c42d70b90c6530209dc973b1ed12956f1b9981"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-cleanup.json",
+      "bytes": 409,
+      "sha256": "7ff3160f819c6d2c70caf159c833f497d909b7b79752ea693a8354849c7010bb"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-collect.log",
+      "bytes": 5860,
+      "sha256": "10b3adb8ec9ca3aeccd8cc387a3b69386ba738682726d706643b8771d64cc341"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-conditional-refusal-fr-component.json",
+      "bytes": 111062,
+      "sha256": "e8fba4f44a56dda4218a00dfd29508cb09189fd8cb62e1a35b02401932dc684e"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-conditional-refusal-fr-graph-response.json",
+      "bytes": 278551,
+      "sha256": "966cdbc455feb7f3bc6c694fbec26108f62ca1fd36e3741c3dd273da1d114afe"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-conditional-refusal-fr-snapshot.json",
+      "bytes": 196772,
+      "sha256": "c597099f27d7c94f80c64d8c4c626ed458df577d2cf7dfd2543d9af8bb88edac"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-dispersed-notice-en-component.json",
+      "bytes": 594324,
+      "sha256": "c217d0153ca6b408332940e4f078865304437ae59d694474d82e1dc2d9afb5ec"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-dispersed-notice-en-graph-response.json",
+      "bytes": 1575462,
+      "sha256": "8f66420e44e2a48e3266569e3983302181cdb270611381b0e935f00ae0c55bf3"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-dispersed-notice-en-snapshot.json",
+      "bytes": 1048841,
+      "sha256": "f2d664cda0330befe9ad8b50a64944bafec02de72d206ca38dc7a062047b79c6"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-freeze.json",
+      "bytes": 221,
+      "sha256": "00d3b3c3a3f56e90babf6fd776535612bb960d81ae02b629d1cd6837cb2c3b19"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-gate.json",
+      "bytes": 8351,
+      "sha256": "f991a7b3d55da99fe6942d8f052796eb69194ca0c9411aa21a4c34dc659cb459"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-native-party-gate.json",
+      "bytes": 882,
+      "sha256": "56b9b79d5cf06b0c61eb747bb2ee9e9a81710c513d3c42ee2befa9b2d7bcc559"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-observations.json",
+      "bytes": 231947,
+      "sha256": "71fa173bb16c33ec582de680df876d38f41af34b7bbdb63ba1fc11a279759d2c"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-permission-component-dom.txt",
+      "bytes": 27755,
+      "sha256": "eb49d659c99c8f3401b3c2f609ed12cb496e5c4c5dfaf7e9b126b4351a00ac8e"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-run.log",
+      "bytes": 1937,
+      "sha256": "9bc5247926fbc4de33ae00c32fffba79e6f9e2c199ba0c5f70f933ddbad76a55"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-submissions.json",
+      "bytes": 112848,
+      "sha256": "a8bd5a07aff693b9c2ab7ca3ba09e3017d45ac207158cc03abc006402b5f0098"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-terminal-jobs.json",
+      "bytes": 217700,
+      "sha256": "cde1779f6c3b34eb737015cff0ca93b751eaf1fd80c96566bf95fb2e2f85d9a8"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-verified-native-identity.json",
+      "bytes": 7593,
+      "sha256": "4800253f42cca1fb2fca1cfd1eef3e5e182746383f1cf281b237ecc36ee1f50f"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/native-verify_identity.py",
+      "bytes": 2150,
+      "sha256": "7e018b7b9df2a256e6f49628e040156db164671da46488e1bc16d3e2c1abeada"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-backend.log",
+      "bytes": 1667,
+      "sha256": "4feeca04444bfa77f526b1dd449d740d8cacd7979bd8eaff952920e900fa5f11"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-before-regressions.log",
+      "bytes": 10843,
+      "sha256": "b7b37631bd18629b73c574d95f65d1f9b153e34da3e1f38a9c24eb8bae46e025"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-final-patch-arms.json",
+      "bytes": 39797,
+      "sha256": "0d5569e962e758b0ab0235f1ef70d82d9f337bcdc937b0ef07915b0f3697b26b"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-frontend-build.log",
+      "bytes": 1274,
+      "sha256": "a9a17e0161b441b4da1017df557ff44db65c5a9003eee862646e7979c19e52ed"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-frontend.log",
+      "bytes": 341,
+      "sha256": "0e23027dd71c41e68a271f6a241f9d25f32545d9162e5ffa76dc892e60e2efc1"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-go-clean-full.log",
+      "bytes": 1911,
+      "sha256": "a3415957cadcecece801113ffb7037596e18cf4e4926f5c02cd6035d7ca13bc2"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-go-clean-race.log",
+      "bytes": 174,
+      "sha256": "fa8fe3f4044f803a1e611c8771330cbff5f90fde6d0cacf828d629bbe95f3fd8"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-go-final-variant-audit.log",
+      "bytes": 177,
+      "sha256": "a1aed3d1b7b730efb1591c7e8abe559943d14bb4226aed0d7b981d4a6f757b4f"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-go-final-variant-coverage.log",
+      "bytes": 168,
+      "sha256": "4f153e8473512d261c0215622137f7dece80ea9309ff92d7482548990d30816f"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-go-final-variant-inventory-audit.log",
+      "bytes": 177,
+      "sha256": "203b475fcebe29515e301611445dd0efd0bc618a6972e9bd8755a94bdcb25164"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-go-final-variant-inventory-coverage.log",
+      "bytes": 168,
+      "sha256": "514507a2bfa6e5de5382b415eb26b37bcbe7cc10f714c49501873046b7c6169d"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-go-final-variant-inventory-meaning.log",
+      "bytes": 177,
+      "sha256": "ac4430354c6cdff38106a8b6fef0cc3a9222427f98f7cec0d31dcc0d4f414f00"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-go-final-variant-inventory-passages.log",
+      "bytes": 177,
+      "sha256": "7dfb00d792c44ccd96e78f65e54ec50c50462e99ba4baf43915bc7089096145e"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-go-final-variant-inventory-register.log",
+      "bytes": 177,
+      "sha256": "6f3313d07cd5e720de273fb8d5af78cbcda32f26116d57dc1ee1038902b3f3c8"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-go-final-variant-inventory.log",
+      "bytes": 177,
+      "sha256": "f4e422fedd7753e1c4ec23d8ebce010a1c940adbda121e5518495ad528153de7"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-go-final-variant-meaning.log",
+      "bytes": 177,
+      "sha256": "77ef748385e2a4c80b19ba7d0040787e4a61e7e87531862ccb5f8ece04cb644d"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-go-final-variant-passages.log",
+      "bytes": 177,
+      "sha256": "d68b87747d9c56f70728b5f9f3d9d08f5e0e9797c8728fb8a51fcd11d9deb3c5"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-go-final-variant-register.log",
+      "bytes": 177,
+      "sha256": "0469d01599eac1d6adbc6261c54fd7eaa505c4c6b6275116ca1cb417321f4ea7"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-go-full.log",
+      "bytes": 1917,
+      "sha256": "5e5e9a64971a3f5c64b2ffd81ed93df5c70e2679da076ac988f52a503b7373ce"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-go-race.log",
+      "bytes": 174,
+      "sha256": "10de2f42c9bb69dd58bae1ca92ff968dd0e3e6fa96f2ed448eb436d248af162c"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-identity-tests.log",
+      "bytes": 174,
+      "sha256": "69aba01035978634be94b8acf2de07cd5a1134788b588d58e23edcc43a0db5bb"
+    },
+    {
+      "path": "docs/validation/assets/party-identity/release-runtime-source-equivalence.json",
+      "bytes": 243,
+      "sha256": "b423544aaef74096ebfc65180a05f8fd94117d767aa16036efd8ac834b2425c1"
+    }
+  ]
+}
