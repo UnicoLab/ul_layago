@@ -4982,3 +4982,34 @@ adjudicated legal gold, full precedence/coverage or new Laya/MLX performance.
 
 [DelayLama amendment-applicability report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-amendment-applicability.md)
 · [Shared receipt](validation/delaylama-amendment-applicability-20261005.json).
+
+
+## L135 — Keep event-reference provenance and each finding’s own context (2026-10-05)
+
+DelayLama's event links now carry generated source paths and distinguish supplied
+ID fields from narrative mentions. A sentence explicitly excluding E2 must remain
+available as context, without being displayed as an applicable amendment. Duplicate
+amendment IDs cannot select a peer's status, scope or citations; validated own paths
+are locators and never semantic proof. Legacy unresolved links remain readable.
+Risk rewrites are no longer copied into absent claim-impact fields. The event view
+exposes own conditions, status and quotations; analysis-map mention edges and the
+review queue preserve the uncertainty through prompt feedback.
+
+A hand-authored synthetic extraction replay in an isolated full stack checked two
+repeated-A1 records, express exclusions, same-event risk/claim separation and exact
+parent/nested-status review routing. The own note, whole registered original and
+relationship warning reached a saved two-entry Amendments session without a model
+revision or prompt activation. 1,470 backend tests, 970 frontend tests and the build
+passed. Three frozen native graphs remained unchanged; no new native extraction,
+model call, training or Laya/MLX performance measurement occurred. An initial QA
+harness argument-order error produced invalid QA-only output history, which was
+retained while saving corrected latest fixtures in the same owned project.
+
+For classifier/retriever evaluation, retain endpoint provenance and exclusion
+candidates separately from positive applicability labels. Exact quotation, entity
+identity, relationship assertion, effective status and affected claim dimension are
+different gates. A model that improves retrieval or classification still needs an
+independent semantic/source benchmark; these integration checks do not establish
+held-out legal accuracy or native graph construction completeness.
+
+Shared hashed receipt: [DelayLama event-link context qualification](validation/delaylama-event-link-context-20261005.json).
