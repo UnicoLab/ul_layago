@@ -4412,3 +4412,43 @@ claimed by this integration check.
 
 [DelayLama main graph source provenance audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-main-graph-source-provenance.md)
 · [Shared receipt](validation/delaylama-main-graph-source-provenance-20261005.json).
+
+## L122 — Reuse exact-source indexes without widening acceptance (2026-10-05)
+
+A correct source verifier can become too slow for long contracts if it rebuilds
+Unicode or whitespace offset maps for every finding. DelayLama now captures one
+original per scoped reader, lazily reuses its index, and carries the already-checked
+own citation span into the inspector and chronology. Source identity, version,
+quote, character bounds and repeat ambiguity remain separate checks. Mutating a
+receipt invalidates its captured proof. Avoid global caches keyed only by document
+ID, and keep derived lookup data outside model-facing facts and exports.
+
+Local synthetic three-pass medians changed from **382.83 to 2.02 ms** for 500
+frontend citations in a 106,285-character original, and **617.81 to 16.98 ms** for
+300 backend quotations in a 49,584-character original. These are lookup kernels,
+not whole-application/model-speed gains. Retained linear indexes trade memory for
+less repeated work; process RSS does not demonstrate a memory reduction.
+
+Validation passes **1,308 backend tests**, **905 frontend tests across 75 files**
+and the production build. New regressions include 1,500 seeded Unicode differential
+queries, repeated/overlapping quotations, source/version isolation and mutation
+invalidation. A fresh isolated full stack serves a constructed 301-node/300-edge
+long-document graph: all exact spans agree, older evidence remains flagged, late
+facts load through pagination, a distant consent/negative-approval passage is
+visible, and the old date stays off chronology. No model or graph write occurs in
+these checks. User data/configuration/source edits are preserved after API refresh.
+
+The QA health count disagreed with SQL/stats after direct SQL fixture insertion;
+its cause remains unqualified. Actual scoped collections establish fixture counts,
+not the health badge. Retain such discrepancies rather than treating a status
+indicator as graph completeness or extraction accuracy.
+
+For LayaGo and future extraction pipelines, benchmark deterministic grounding
+separately from embedding, classification and semantic-relation quality. Reusing
+exact-source indexes can accelerate a validator without accepting paraphrases or
+substituting nearby documents. Independent long/dispersed/OCR evaluation, predicate
+precision/recall and applicability remain outstanding; no new training, MLX or
+architecture improvement is established by this check.
+
+[DelayLama graph grounding and long-source lookup](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-index-performance.md)
+· [Shared receipt](validation/delaylama-source-index-performance-20261005.json).
