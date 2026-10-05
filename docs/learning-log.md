@@ -3711,3 +3711,38 @@ from 150–177 seconds to about 18 seconds; corrected race results and the origi
 timeout are separate audit assets. Request-shape validation belongs before any
 costly analysis or training action; a finished model pipeline cannot compensate
 for unintended invocations.
+
+
+## L108 — Relation identity must retain assertions, premises and source versions
+
+DelayLama found that Chronograph silently invalidated any prior edge with the
+same directed endpoints/type, while candidate/chunk/contract merging also used
+only that tuple. Separate duties between the same parties and repeated original
+sources could disappear. The corrected pipeline preserves assertion text,
+original quote and source identity; explicit saved replacement commands remain
+scoped, transactional on SQLite and distinct from legal supersession decisions.
+Graph history stays available with operational labels for humans and the LLM.
+
+The first English/French actual-model phase finished four jobs but returned no
+converted concept relationships. The Gemini prompt did not declare endpoint
+field names. After an explicit complete relation protocol, four known-source
+replay jobs retained four matched concept assertions and two parallel source
+pairs, without automatic invalidation. Failed and corrected phases are archived;
+this does not establish a complete obligation inventory or legal correctness.
+
+For Laya/GLiNER training and evaluation, a party pair/relation category is not a
+unique assertion label. Keep conditions, exceptions, negation, occurrence identity
+and versioned original premises. Graph invalidation/ingestion order must not be
+used as gold for legal applicability. Train contradiction and applicability tasks
+separately from entity pair matching, and calibrate abstention on ambiguous,
+scoped and missing-premise cases. Prompt/schema omissions can mimic low model
+recall; measure conversion and storage losses separately from extraction output.
+No new classifier, retraining or acceleration result is claimed here.
+
+The delivery passed 1,105 backend tests, 795 frontend tests/build, full Go and
+scoped race tests, 12 idempotent patch combinations and 11 optional engine suites.
+Real PDFs, normative completeness, ambiguous endpoint aliases and temporal query
+timezone comparisons still need dedicated qualification.
+
+[DelayLama assertion audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-parallel-assertions.md)
+· [Shared receipt](validation/delaylama-parallel-assertions-20261005.json).
