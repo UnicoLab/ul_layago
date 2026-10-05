@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-05",
+  "learning": "L133",
+  "scope": "Current qualification and transport of stored native predicate witnesses into main graph, neighborhood and model/topic context. Read-only frozen graph replay; no new extraction/model-accuracy or Laya result.",
+  "checks": {
+    "backend_tests": 1461,
+    "frontend_tests": 959,
+    "frontend_files": 77,
+    "production_build": "passed",
+    "build_note": "Existing bundle >500 KB warning remains.",
+    "read_only_stack": {
+      "scope": "Read-only frozen synthetic native graph replay; no extraction/recheck model calls. In-memory broad-quote control is manually modified and is not a native extraction.",
+      "source_graphs": [
+        {
+          "case": "dispersed-notice-en",
+          "nodes": 47,
+          "edges": 89,
+          "assessments": 1,
+          "statuses": {
+            "candidate_support": 0,
+            "possible_contradiction": 0,
+            "unresolved": 1
+          },
+          "unchanged": true
+        },
+        {
+          "case": "conditional-refusal-fr",
+          "nodes": 25,
+          "edges": 42,
+          "assessments": 0,
+          "statuses": {
+            "candidate_support": 0,
+            "possible_contradiction": 0,
+            "unresolved": 0
+          },
+          "unchanged": true
+        },
+        {
+          "case": "operative-contract-and-draft-en",
+          "nodes": 11,
+          "edges": 17,
+          "assessments": 2,
+          "statuses": {
+            "candidate_support": 1,
+            "possible_contradiction": 0,
+            "unresolved": 1
+          },
+          "unchanged": true
+        }
+      ],
+      "native_SC315_current_support_in_graph_neighborhood_model_and_topic": true,
+      "exact_original_spans": true,
+      "broad_control_current_unresolved_old_support_preserved": true,
+      "new_native_jobs": 0,
+      "saved_review_jobs_terminal_no_replay": true,
+      "selected": {
+        "project_id": "contractual-predicate-qa-operative-sc315-and-separate-unsigned-a316-qa-20261005-175222-2dd5be",
+        "edge_id": "e489291d-d213-44bd-a960-090b55513ff9",
+        "source_id": "1a97100d-4ff5-4bd6-b1b4-9cf2692d4e49"
+      }
+    },
+    "cleanup": {
+      "only_owned_services_stopped": true,
+      "ports_closed": true,
+      "one_saved_review_terminal": true,
+      "zero_new_native_jobs": true,
+      "processes": [
+        {
+          "service": "engine",
+          "pid": 53295,
+          "port": 8097
+        },
+        {
+          "service": "api",
+          "pid": 53296,
+          "port": 8081
+        },
+        {
+          "service": "frontend",
+          "pid": 53297,
+          "port": 5175
+        }
+      ],
+      "owned_tab_closed": 141
+    }
+  },
+  "preservation": {
+    "protected_engine_source_files_unchanged": true,
+    "protected_app_artifacts_unchanged": true,
+    "user_studio_unchanged": true,
+    "orchid_studio_unchanged": true,
+    "user_graph_all_tables_unchanged": true
+  },
+  "limitations": [
+    "The broad-quote negative control is manually modified in memory, not native extraction or legal gold.",
+    "No new model calls or held-out extraction accuracy/recall result.",
+    "Stored inventory origin is not cryptographically authenticated; candidate support remains a model suggestion.",
+    "Lexical edge nomination is navigation, not entity resolution or entailment.",
+    "Complete instrument identity/applicability/precedence and dispersed-qualification reasoning remain separate requirements.",
+    "No new Laya training, MLX performance or supervisor result."
+  ],
+  "proof": [
+    {
+      "path": "docs/validation/assets/native-predicate-context/backend-final.log",
+      "sha256": "f52180251313e61f2737b3e03d4496cd064a07b041cd918a6a2f980b67166dec",
+      "bytes": 1747
+    },
+    {
+      "path": "docs/validation/assets/native-predicate-context/frontend-final.log",
+      "sha256": "1051fe318e88a9cdfa06328712d1b6d2ec123009a324f4f51f6bf9fc596c4172",
+      "bytes": 333
+    },
+    {
+      "path": "docs/validation/assets/native-predicate-context/build-final.log",
+      "sha256": "213da465eb9da9bb13e75d035c0d2ca3143658a83a972a5eb358da4cb5691a82",
+      "bytes": 1274
+    },
+    {
+      "path": "docs/validation/assets/native-predicate-context/read-gate.json",
+      "sha256": "516f31fd2c32463099cbf4aafd8d53c9d90469c83ad00ea78925395c66604bf9",
+      "bytes": 1492
+    },
+    {
+      "path": "docs/validation/assets/native-predicate-context/cleanup.json",
+      "sha256": "3ce37dfcce8768e38111f06c38baf1c568fe987b8abd6c35efe3b271da125df9",
+      "bytes": 419
+    },
+    {
+      "path": "docs/validation/assets/native-predicate-context/selected-connection.png",
+      "sha256": "958dc11d99e6af3db8f30b3f6abdb55da8193d15c00e3f224c71660805b2c493",
+      "bytes": 192044
+    },
+    {
+      "path": "docs/validation/assets/native-predicate-context/selected-connection-dom.txt",
+      "sha256": "9a9f08aa65cb6de560706c6505c99babb17ab38c3c53159608daeeb753fffd46",
+      "bytes": 26363
+    },
+    {
+      "path": "docs/validation/assets/native-predicate-context/surrounding-context.png",
+      "sha256": "402c75f74888bcbc1929c06a03b9dc6de9fa235ae9b2b2b881685959e0bf3be4",
+      "bytes": 164086
+    },
+    {
+      "path": "docs/validation/assets/native-predicate-context/surrounding-context-dom.txt",
+      "sha256": "3fee3fa98b029d72220804f94b9477e9ac8d304b6456bd97eff4b6663472dc77",
+      "bytes": 26363
+    },
+    {
+      "path": "docs/validation/assets/native-predicate-context/negative-control.json",
+      "sha256": "b1e100306a8ebff5f8a341ae29d63106b7d47a85c796251d8418dab8a7936444",
+      "bytes": 2773
+    },
+    {
+      "path": "docs/validation/assets/native-predicate-context/model-context.json",
+      "sha256": "aa34bac89d80237f8394c54dbef3fdeba694a25b94649277112cfbed7cce3581",
+      "bytes": 50883
+    },
+    {
+      "path": "docs/validation/assets/native-predicate-context/topic-context.json",
+      "sha256": "895d3fa876174ffac7bb4ac6473a5bd81bbc9b9ace17190324323b00c2a03b48",
+      "bytes": 54105
+    }
+  ]
+}

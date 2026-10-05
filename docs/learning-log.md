@@ -4907,3 +4907,38 @@ new extraction accuracy, complete instrument applicability or Laya/MLX performan
 
 [DelayLama graph-prompt scope report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-graph-prompt-scope.md)
 · [Shared receipt](validation/delaylama-graph-prompt-scope-20261005.json).
+
+## L133 — Do not drop qualified relationship witnesses between graph and reasoning (2026-10-05)
+
+A source-first inventory on a native graph edge is useful only if the context builder
+preserves its meaning checks and witness provenance. DelayLama retained assertions
+and quotes but dropped that inventory before handing neighborhoods to the LLM.
+The application now rechecks its actual predicate/pair, project/tenant, current
+original/version, unique witnesses and exact native UTF-8 coordinates; then carries
+polarity, modality, focused assertion and current qualification into graph previews,
+neighborhoods and model/topic context. Historical status stays distinct and unmodified.
+Raw vectors and unverified model objects do not become visible facts or prompt context.
+
+A topic can occur only on a relationship while endpoint names are generic parties.
+Matching scoped relationships now nominate their actual endpoints. Foreign/dangling
+links do not nominate anchors. This is lexical retrieval, not alias resolution or
+entailment, and coverage/budget limits remain explicit.
+
+1,461 backend and 959 frontend tests plus the production build pass. An isolated
+read-only engine/API/browser replay preserves three synthetic native graphs. Its
+native SC315 relationship has the same currently qualified original witnesses in
+main graph, neighborhood, model and topic context. A manually broadened in-memory
+quote mixing SC315 with unsigned A316 is unresolved while old support remains
+historical. Browser inspectors show focused highlights and expandable context without
+model noise. No new model jobs or user graph/history changes occurred.
+
+LayaGo datasets should retain producer/task/schema, source/version and instrument
+identities, directed endpoints, byte/character coordinate conventions, polarity,
+modality and historical/current qualification policy separately. Evaluate retrieval
+and predicate classification independently. Do not turn these development controls
+into adjudicated legal gold or label every matching quote positive. This is evidence
+transport and policy behavior, not new LLM/Laya accuracy, legal applicability,
+complete recall, MLX performance or supervisor/training evidence.
+
+[DelayLama native-predicate context report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-native-predicate-context.md)
+· [Shared receipt](validation/delaylama-native-predicate-context-20261005.json).
