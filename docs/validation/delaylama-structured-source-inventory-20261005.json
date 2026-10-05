@@ -1,0 +1,1125 @@
+{
+  "date": "2026-10-05",
+  "change": "Native source assertion schema with atomic nullable calendars and independent negative discovery",
+  "default_engine_patch": 54,
+  "engine_source_commit": "ca4bbed11e1e015179c49dc3825c2c9b95fae6b3",
+  "deployed": true,
+  "initial_variant_preserved": true,
+  "initial_source_inventory_requests": 4,
+  "initial_all_source_inventories_failed": true,
+  "initial_c35": {
+    "passed": 2,
+    "total": 13
+  },
+  "initial_additional_types": {
+    "en": [
+      1,
+      7
+    ],
+    "fr": [
+      1,
+      7
+    ]
+  },
+  "final_confirmed_terminal_jobs": 4,
+  "qa_project_submissions": 3,
+  "user_project_submissions": 0,
+  "inventory_model_calls_per_source": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "all_final_source_audits_partial": true,
+  "frozen_c35": {
+    "project_id": "structured-inventory-qa-c35-20261005-092128-024af2",
+    "frozen_expected_type_checks": [
+      {
+        "fragment": "Amber Client Ltd must pay Birch Works Ltd invoices",
+        "expected_type": "Obligation",
+        "matching_types": [
+          "Obligation"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "The completion deadline for Birch Works Ltd",
+        "expected_type": "Event",
+        "matching_types": [
+          "Event"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "No completion is reported",
+        "expected_type": "NegativeAssertion",
+        "matching_types": [
+          "NegativeAssertion"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "Cedar Engineer Ltd inspected the foundations",
+        "expected_type": "Event",
+        "matching_types": [
+          "Event"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "That inspection did not constitute approval",
+        "expected_type": "NegativeAssertion",
+        "matching_types": [
+          "NegativeAssertion"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "Birch Works Ltd must submit a written notice",
+        "expected_type": "Obligation",
+        "matching_types": [
+          "Obligation"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "Cedar Engineer Ltd may approve invoices",
+        "expected_type": "Permission",
+        "matching_types": [
+          "Permission"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "No written consent is recorded",
+        "expected_type": "NegativeAssertion",
+        "matching_types": [
+          "NegativeAssertion"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "Amber Client Ltd must give written consent",
+        "expected_type": "Obligation",
+        "matching_types": [
+          "Obligation"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "No accepted programme is supplied",
+        "expected_type": "NegativeAssertion",
+        "matching_types": [
+          "NegativeAssertion"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "The proposed completion deadline for Birch Works Ltd",
+        "expected_type": "Event",
+        "matching_types": [
+          "Event"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "Neither party has signed Amendment A2",
+        "expected_type": "NegativeAssertion",
+        "matching_types": [
+          "NegativeAssertion"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "The proposed change is not effective",
+        "expected_type": "NegativeAssertion",
+        "matching_types": [
+          "NegativeAssertion"
+        ],
+        "passed": true
+      }
+    ],
+    "type_checks_passed": 13,
+    "type_checks_total": 13,
+    "nonoccurrence_checks": [
+      {
+        "fragment": "The completion deadline for Birch Works Ltd",
+        "passed": true
+      },
+      {
+        "fragment": "The proposed completion deadline for Birch Works Ltd",
+        "passed": true
+      }
+    ],
+    "inspection_performer": {
+      "expected": "Cedar Engineer Ltd",
+      "actual": [
+        "Cedar Engineer Ltd"
+      ],
+      "passed": true
+    },
+    "source_passes": [
+      {
+        "job_id": "893067b2-c5ff-4ad6-8763-149586a59637",
+        "source": "source:original-contract-c35",
+        "job_status": "done",
+        "source_inventory_status": "partial",
+        "model_calls": 1,
+        "response_recovery": null,
+        "source_failure": null
+      },
+      {
+        "job_id": "27d2b8ec-985e-4cae-b8c5-69bda0e6ddf0",
+        "source": "source:proposed-amendment-a2",
+        "job_status": "done",
+        "source_inventory_status": "partial",
+        "model_calls": 1,
+        "response_recovery": null,
+        "source_failure": null
+      }
+    ],
+    "accepted_terminal_jobs": 2,
+    "graph_counts": {
+      "nodes": 29,
+      "edges": 21
+    },
+    "independent_benchmark": false,
+    "full_semantic_qualification": false
+  },
+  "additional_frozen_cases": [
+    {
+      "case": "record-negative-en",
+      "project_id": "record-negative-qa-en-20261005-092146-d2ab40",
+      "types": [
+        {
+          "fragment": "Harbor Client Ltd must pay Canal Builder Ltd",
+          "expected_type": "Obligation",
+          "types": [
+            "Obligation"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "No written consent has been supplied",
+          "expected_type": "NegativeAssertion",
+          "types": [
+            "NegativeAssertion"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "Ridge Engineer Ltd inspected the retaining walls",
+          "expected_type": "Event",
+          "types": [
+            "Event"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "That inspection does not establish completion",
+          "expected_type": "NegativeAssertion",
+          "types": [
+            "NegativeAssertion"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "The completion deadline for Canal Builder Ltd",
+          "expected_type": "Event",
+          "types": [
+            "Event"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "No completion certificate is provided",
+          "expected_type": "NegativeAssertion",
+          "types": [
+            "NegativeAssertion"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "Ridge Engineer Ltd may approve payment",
+          "expected_type": "Permission",
+          "types": [
+            "Permission"
+          ],
+          "passed": true
+        }
+      ],
+      "type_checks_passed": 7,
+      "type_checks_total": 7,
+      "dates": [
+        {
+          "fragment": "Ridge Engineer Ltd inspected the retaining walls",
+          "expected_date": "2074-07-09",
+          "expected_role": "observed",
+          "dates": [
+            "2074-07-09"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "The completion deadline for Canal Builder Ltd",
+          "expected_date": "2074-12-18",
+          "expected_role": "deadline",
+          "dates": [
+            "2074-12-18"
+          ],
+          "passed": true
+        }
+      ],
+      "actor": {
+        "expected": "Ridge Engineer Ltd",
+        "actual": [
+          "Ridge Engineer Ltd"
+        ],
+        "passed": true
+      },
+      "deadline_nonoccurrence": true,
+      "graph_counts": {
+        "nodes": 14,
+        "edges": 11
+      },
+      "independent_benchmark": false
+    },
+    {
+      "case": "record-negative-fr",
+      "project_id": "record-negative-qa-fr-20261005-092146-c0cf33",
+      "types": [
+        {
+          "fragment": "Port Client SA doit payer Canal Bâtisseur SA",
+          "expected_type": "Obligation",
+          "types": [
+            "Obligation"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "Aucun accord écrit n'est fourni",
+          "expected_type": "NegativeAssertion",
+          "types": [
+            "NegativeAssertion"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "Crête Ingénieur SA a inspecté les murs de soutènement",
+          "expected_type": "Event",
+          "types": [
+            "Event"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "Cette inspection ne constate pas l'achèvement",
+          "expected_type": "NegativeAssertion",
+          "types": [
+            "NegativeAssertion"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "La date limite d'achèvement pour Canal Bâtisseur SA",
+          "expected_type": "Event",
+          "types": [
+            "Event"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "Aucun certificat d'achèvement n'est fourni",
+          "expected_type": "NegativeAssertion",
+          "types": [
+            "NegativeAssertion"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "Crête Ingénieur SA peut approuver le paiement",
+          "expected_type": "Permission",
+          "types": [
+            "Permission"
+          ],
+          "passed": true
+        }
+      ],
+      "type_checks_passed": 7,
+      "type_checks_total": 7,
+      "dates": [
+        {
+          "fragment": "Crête Ingénieur SA a inspecté les murs de soutènement",
+          "expected_date": "2074-07-09",
+          "expected_role": "observed",
+          "dates": [
+            "2074-07-09"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "La date limite d'achèvement pour Canal Bâtisseur SA",
+          "expected_date": "2074-12-18",
+          "expected_role": "deadline",
+          "dates": [
+            "2074-12-18"
+          ],
+          "passed": true
+        }
+      ],
+      "actor": {
+        "expected": "Crête Ingénieur SA",
+        "actual": [
+          "Crête Ingénieur SA"
+        ],
+        "passed": true
+      },
+      "deadline_nonoccurrence": true,
+      "graph_counts": {
+        "nodes": 19,
+        "edges": 12
+      },
+      "independent_benchmark": false
+    }
+  ],
+  "calendar_diagnostic": {
+    "declared_after_c35_type_gold": true,
+    "separate_from_frozen_13_type_metric": true,
+    "node_id": "5767af09-130d-484a-a267-6e8f9c3ca22d",
+    "expected_date": "2061-09-30",
+    "actual_date": "2061-09-30",
+    "date_role": "deadline",
+    "exact_literal": "30 September 2061",
+    "passed": true,
+    "no_nearby_date_fallback": true
+  },
+  "grounding": {
+    "action_and_statement_candidates": 17,
+    "exact_unique_source_citations_passed": 17,
+    "checks": [
+      {
+        "node_id": "7432f4e1-38df-4419-b3dc-197143955d25",
+        "type": "NegativeAssertion",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "e266f7ac-4bbb-4542-b344-e9401e2df09f",
+        "type": "Obligation",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "a81e8322-1f91-4f60-b453-7f6d402f537a",
+        "type": "NegativeAssertion",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "566c49b7-eaae-491c-8ff4-d2635c370e81",
+        "type": "Obligation",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "744f44cb-eb1c-4348-a0bd-7a6a8af39809",
+        "type": "NegativeAssertion",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "b43fc46a-dfab-40f0-8613-2b1cb94bb753",
+        "type": "Permission",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "465333cc-a241-4a0f-bc40-56b4224f3814",
+        "type": "ContractFunction",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "65db9920-3db3-49c3-abfe-84e9e04a7fda",
+        "type": "Obligation",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "4ae520de-a788-447e-a477-d2b255b9840e",
+        "type": "NegativeAssertion",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "9ae28412-edc8-421b-8c33-fcf49389c7b4",
+        "type": "NegativeAssertion",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "5767af09-130d-484a-a267-6e8f9c3ca22d",
+        "type": "Event",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "e5a5fa8d-9b22-49e5-ad29-114d2c7a14ee",
+        "type": "Obligation",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "5f10b2c1-c5fd-437e-b04f-c3c435b8b25d",
+        "type": "Event",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "69414233-9fbd-4e7d-baa8-29ab31d624e5",
+        "type": "NegativeAssertion",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "442e40b8-bba9-4f78-86a4-d00ae1f47ada",
+        "type": "NegativeAssertion",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "46a59217-2db3-41e9-a65e-b6d46e174ebe",
+        "type": "Event",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "036adadc-b349-46db-9e58-c01f9041d195",
+        "type": "ConditionalStatement",
+        "exact_unique_source_citation": true
+      }
+    ],
+    "connection_citations_checked": 21,
+    "exact_connection_citations_passed": 21,
+    "graph_unchanged_by_inspection": true,
+    "meaning_and_completeness_unqualified": true
+  },
+  "additional_grounding": [
+    {
+      "case": "record-negative-en",
+      "candidate_checks": [
+        {
+          "node_id": "4a03bf53-e855-4b18-a76f-8c5834e72fbf",
+          "exact_unique_source_citation": true
+        },
+        {
+          "node_id": "01fc8800-cfef-4ad9-bcc6-c75cba9892e7",
+          "exact_unique_source_citation": true
+        },
+        {
+          "node_id": "487a893e-0bd5-4d11-8f18-dbfc4ec313c5",
+          "exact_unique_source_citation": true
+        },
+        {
+          "node_id": "23c8121a-1ac6-4f26-8cbb-c819a144dd96",
+          "exact_unique_source_citation": true
+        },
+        {
+          "node_id": "d6b02b9a-78a1-44cc-b452-f1d70f8fb7be",
+          "exact_unique_source_citation": true
+        },
+        {
+          "node_id": "396847d7-ae91-4189-8d74-1645d7d454e8",
+          "exact_unique_source_citation": true
+        },
+        {
+          "node_id": "905d161f-3d72-4271-bfb1-dcf86698d98a",
+          "exact_unique_source_citation": true
+        }
+      ],
+      "connection_checks": [
+        {
+          "edge_id": "14d8000c-e0c9-42ad-9180-c66c89172f63",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "7da6fcf0-b342-46a6-b231-13cc6b79fbf6",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "a13c9d7f-2f07-4ac9-8bb1-7b96130fac66",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "a2ba0d4e-ae58-4360-a0f4-0495e54530a1",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "d71c09aa-a85b-45df-80a3-2effff87f81b",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "fbc76f2c-0ee2-4682-8f40-70e92936f6f1",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "21311639-3e97-4407-a482-01ce8231e3f0",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "24f42be7-1f73-4afd-a388-c1fcb48b0854",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "e58cc4ab-e190-485b-ae12-9c94ac6c1269",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "f0281bd5-cc91-4841-9911-1208064a74a3",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "0d15eeaf-ba61-4410-964b-bfac0aa6e09c",
+          "exact_unique_source_citation": true
+        }
+      ],
+      "candidate_citations_passed": 7,
+      "connection_citations_passed": 11,
+      "graph_unchanged_by_inspection": true,
+      "semantic_quality_unqualified": true
+    },
+    {
+      "case": "record-negative-fr",
+      "candidate_checks": [
+        {
+          "node_id": "a3aecce7-ad30-46c5-9155-b703cea8e977",
+          "exact_unique_source_citation": true
+        },
+        {
+          "node_id": "f594d014-18b9-423e-a254-a98d756e2adf",
+          "exact_unique_source_citation": true
+        },
+        {
+          "node_id": "163989f2-e5d3-402c-871f-092611a61c59",
+          "exact_unique_source_citation": true
+        },
+        {
+          "node_id": "6f34840c-4178-4bf4-8d41-28bf191e34ad",
+          "exact_unique_source_citation": true
+        },
+        {
+          "node_id": "165c1e12-f90d-4686-bebf-62c1a9de73f5",
+          "exact_unique_source_citation": true
+        },
+        {
+          "node_id": "dc05e222-ff33-435d-a933-fcf5bf54204d",
+          "exact_unique_source_citation": true
+        },
+        {
+          "node_id": "8cc343a7-7605-466f-b9b2-434fc8e8250d",
+          "exact_unique_source_citation": true
+        },
+        {
+          "node_id": "79ebd28c-0e61-49fc-836b-6311ea629382",
+          "exact_unique_source_citation": true
+        },
+        {
+          "node_id": "816dec18-0b53-4ced-8a4b-d50233c4c221",
+          "exact_unique_source_citation": true
+        },
+        {
+          "node_id": "e1e05b7c-27f6-46bf-8c43-65fb2ff3a051",
+          "exact_unique_source_citation": true
+        }
+      ],
+      "connection_checks": [
+        {
+          "edge_id": "3b64997e-f7f2-4bff-b52d-55d945baa60d",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "765aa772-28a2-4bc3-992b-1319b3f4d605",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "be08b110-3e91-4679-8f1d-560639012fcd",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "374374cd-9556-4a83-9222-1980dac700d0",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "4a1463ad-bdb4-4040-8c81-85b10bf756ee",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "e43e5044-6db9-428d-9078-040d1c77697a",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "12d6aa1b-f6ab-4e7a-8257-4b1e01f5c33d",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "2a91b0cc-e8f1-4b9a-a138-630797e8ff79",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "530b48f4-bdc6-463a-9cde-12efa4b754d9",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "0097cdbe-c585-4b47-a5d1-3c3216999adb",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "27c0aa9d-a7f0-4ac4-95e4-0e1f20824ee2",
+          "exact_unique_source_citation": true
+        },
+        {
+          "edge_id": "c14d8250-cc76-4a96-9aa9-df3dfa66773c",
+          "exact_unique_source_citation": true
+        }
+      ],
+      "candidate_citations_passed": 10,
+      "connection_citations_passed": 12,
+      "graph_unchanged_by_inspection": true,
+      "semantic_quality_unqualified": true
+    }
+  ],
+  "component_coverage": {
+    "stored_source_candidates": 17,
+    "permission_component_source_candidates": 8,
+    "outside_permission_component": [
+      {
+        "id": "7432f4e1-38df-4419-b3dc-197143955d25",
+        "action": "No accepted programme is supplied.",
+        "type": "NegativeAssertion",
+        "recorded_connections": 0
+      },
+      {
+        "id": "a81e8322-1f91-4f60-b453-7f6d402f537a",
+        "action": "inspection alone does not provide that instruction.",
+        "type": "NegativeAssertion",
+        "recorded_connections": 0
+      },
+      {
+        "id": "566c49b7-eaae-491c-8ff4-d2635c370e81",
+        "action": "Emergency works require a separate written instruction",
+        "type": "Obligation",
+        "recorded_connections": 0
+      },
+      {
+        "id": "744f44cb-eb1c-4348-a0bd-7a6a8af39809",
+        "action": "No written consent is recorded.",
+        "type": "NegativeAssertion",
+        "recorded_connections": 0
+      },
+      {
+        "id": "4ae520de-a788-447e-a477-d2b255b9840e",
+        "action": "That inspection did not constitute approval of the works.",
+        "type": "NegativeAssertion",
+        "recorded_connections": 0
+      },
+      {
+        "id": "9ae28412-edc8-421b-8c33-fcf49389c7b4",
+        "action": "No completion is reported.",
+        "type": "NegativeAssertion",
+        "recorded_connections": 0
+      },
+      {
+        "id": "5767af09-130d-484a-a267-6e8f9c3ca22d",
+        "action": "The completion deadline for Birch Works Ltd is 30 September 2061.",
+        "type": "Event",
+        "recorded_connections": 0
+      },
+      {
+        "id": "69414233-9fbd-4e7d-baa8-29ab31d624e5",
+        "action": "The proposed change is not effective",
+        "type": "NegativeAssertion",
+        "recorded_connections": 0
+      },
+      {
+        "id": "442e40b8-bba9-4f78-86a4-d00ae1f47ada",
+        "action": "Neither party has signed Amendment A2",
+        "type": "NegativeAssertion",
+        "recorded_connections": 0
+      }
+    ],
+    "same_project_is_not_same_connected_component": true,
+    "full_contract_coverage": false
+  },
+  "candidate_citations_exact": 34,
+  "connection_citations_exact": 44,
+  "schema_sha256": "42aaabcb0931d1f9f81f67924ed21038df1ff51ad2c7737c1c51b36336a0d9e6",
+  "frozen_type_gates_passed": true,
+  "full_contract_qualification": false,
+  "independent_benchmark": false,
+  "test_counts": {
+    "backend": 1207,
+    "frontend": 852,
+    "patch_combinations": 12,
+    "optional_variants": 11
+  },
+  "shared_learning": "L117",
+  "no_new_laya_training_claim": true,
+  "remaining": [
+    "Nine of seventeen source candidates lie outside the inspected permission component",
+    "Long/dispersed/OCR and independent contract families unqualified",
+    "Predicate correctness and relationship recall unqualified",
+    "Applicability/amendment precedence unqualified",
+    "Whole-context LLM budgets and topic completeness unqualified"
+  ],
+  "assets": [
+    {
+      "path": "assets/structured-source-inventory/activation.json",
+      "bytes": 1754,
+      "sha256": "fc6268e7a6a90c9d203229a8a47ac89e86e08ce4b22461ad51b77010ed215c72"
+    },
+    {
+      "path": "assets/structured-source-inventory/additional-freeze.json",
+      "bytes": 105,
+      "sha256": "a7f68c040e1dd68e76a0563d0c9c8179e2d48cdff4d6cddb94c3fc877226d60c"
+    },
+    {
+      "path": "assets/structured-source-inventory/additional-frozen-cases.json",
+      "bytes": 3803,
+      "sha256": "9845fb0214785e69f7217a36e7e7a7372c5a02db2a8bacf561419c6562a52dcf"
+    },
+    {
+      "path": "assets/structured-source-inventory/additional-gate.json",
+      "bytes": 4794,
+      "sha256": "38474c56cc0bf42cef4b7ec59d0825d0921499dc1937a66ac825a5422cdefb6c"
+    },
+    {
+      "path": "assets/structured-source-inventory/additional-grounding.json",
+      "bytes": 5380,
+      "sha256": "c08903907e977973706d36d845f63bcbf0fc6447d8214ab2cd443bb8c56edec4"
+    },
+    {
+      "path": "assets/structured-source-inventory/additional-observation.json",
+      "bytes": 50907,
+      "sha256": "f30fde4e0db3cf895cce016e91aed71a4a1c92ff9f3fc6a8ba0bdfcd87f789e0"
+    },
+    {
+      "path": "assets/structured-source-inventory/additional-submissions.json",
+      "bytes": 18507,
+      "sha256": "082448742dd70adb6cf491a36c6f53fb886e92d8c71aba5420be7479d8c4179b"
+    },
+    {
+      "path": "assets/structured-source-inventory/additional-terminal-jobs.json",
+      "bytes": 104771,
+      "sha256": "c6a91a6e01d61ce90e07177c5a4c6bb6b9e25b50d6f8370812aad1aa9fcd2cee"
+    },
+    {
+      "path": "assets/structured-source-inventory/api-activation.json",
+      "bytes": 531,
+      "sha256": "888f2d452b651b9b1f9e98dd504fdbf991a2cac957d62bbfcf0fdff69552bd09"
+    },
+    {
+      "path": "assets/structured-source-inventory/backend-all.log",
+      "bytes": 1428,
+      "sha256": "e93506fd0d6618678c57f5a121ad76b3e7ba8989366fea2c677f6f879d145507"
+    },
+    {
+      "path": "assets/structured-source-inventory/backend-patches.log",
+      "bytes": 145,
+      "sha256": "1fcb61a6dadbf866d38be29797da0584afcd6c6785946f5ad12ffa6ba763335e"
+    },
+    {
+      "path": "assets/structured-source-inventory/browser-checks.json",
+      "bytes": 547,
+      "sha256": "6fed342684617652c5f5ffafcc8e6e17e8d7cb0f07b1c9d2f560294b7292cd7d"
+    },
+    {
+      "path": "assets/structured-source-inventory/browser-deadline-dom.txt",
+      "bytes": 16542,
+      "sha256": "6fa92b17ca359e6ffdbdbc0acc400554c9264be171a6ae8f2fe1ff541ff8d27d"
+    },
+    {
+      "path": "assets/structured-source-inventory/browser-errors.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "assets/structured-source-inventory/browser-negative-dom.txt",
+      "bytes": 14444,
+      "sha256": "f387cf458afa1a24976e8fe25ca8e82074b6fc5a79cd8814daf803c546ff68d5"
+    },
+    {
+      "path": "assets/structured-source-inventory/browser-schema-dom.txt",
+      "bytes": 24586,
+      "sha256": "887f74fb0dd87008b7c48e9650b0143c6097cc0af7259d56ed9a7af94fb78ff9"
+    },
+    {
+      "path": "assets/structured-source-inventory/calendar-diagnostic.json",
+      "bytes": 327,
+      "sha256": "b6b86316cab8f62fc6eaf581238a6fc73da517a887858bf0a8e139ba46458b25"
+    },
+    {
+      "path": "assets/structured-source-inventory/cleanup.json",
+      "bytes": 444,
+      "sha256": "80f5b69ba164e4ec05c9ea19c0e484c8a4e96552a68076229e0da6ba911ca165"
+    },
+    {
+      "path": "assets/structured-source-inventory/component-coverage.json",
+      "bytes": 1955,
+      "sha256": "2029b4204380a22b5aa7cd86e1aac0fcfa76484218abd8c8cffad0e959ac4a6a"
+    },
+    {
+      "path": "assets/structured-source-inventory/engine-source-hashes.json",
+      "bytes": 1146,
+      "sha256": "3183677e6f6f25969162d8b1cdd7c10586a7fa396d4b511e91ffd6e26db8d354"
+    },
+    {
+      "path": "assets/structured-source-inventory/final-health.json",
+      "bytes": 254,
+      "sha256": "4f355c4b681465462261880b5d093470a9470b94689b834c654517da33df6ddc"
+    },
+    {
+      "path": "assets/structured-source-inventory/final-patch-arms.json",
+      "bytes": 35993,
+      "sha256": "4fb9d1dd68aa94da8e2dabffe2160052cf8dbcdce9c24c107ea808be27888a9f"
+    },
+    {
+      "path": "assets/structured-source-inventory/fixture-freeze.json",
+      "bytes": 186,
+      "sha256": "15d628c5351da668b5b29751e9473b2eddd81de9a514868bf38b6e92a2411b6e"
+    },
+    {
+      "path": "assets/structured-source-inventory/frontend-all.log",
+      "bytes": 336,
+      "sha256": "0812a53693b01c67beb04e93592b2026df58e834287f1fa587520d0a2742b1cd"
+    },
+    {
+      "path": "assets/structured-source-inventory/frontend-build.log",
+      "bytes": 1274,
+      "sha256": "528c922d2418532bdd98d23f6b6656668d3233ac6abb1ea5efab49a892a7a403"
+    },
+    {
+      "path": "assets/structured-source-inventory/frozen-cases.json",
+      "bytes": 2098,
+      "sha256": "65b4691a085f0f0c35e07964973e1455a271a34687dfc13eddd3dee46b6bafc4"
+    },
+    {
+      "path": "assets/structured-source-inventory/go-all.log",
+      "bytes": 1933,
+      "sha256": "bfb642fd7cd4de86dd62c28e32ec8c7b43977601e86c77eb11d90c9fa9b3c6cc"
+    },
+    {
+      "path": "assets/structured-source-inventory/go-focused-final.log",
+      "bytes": 122,
+      "sha256": "87962897c6cf56c2025914c03885bea8d761c496e4bd23fcc6307d926e7bf7a1"
+    },
+    {
+      "path": "assets/structured-source-inventory/go-race.log",
+      "bytes": 231,
+      "sha256": "417cc79e838f0ab2c607dd6a11fffe23725392d07192c4de7a88492ef78f00d4"
+    },
+    {
+      "path": "assets/structured-source-inventory/grounding-checks.json",
+      "bytes": 2725,
+      "sha256": "2b8a933b9d2d62e7aa560af3f9f652bedb693f2070e7d6ecbbc76e7efee3f321"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-additional-gate.json",
+      "bytes": 4327,
+      "sha256": "4496d2bf32f4bcf306fe7c2b337a57ca0e081ae5b62e105d1507b4279f42b6e1"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-additional-observation.json",
+      "bytes": 49449,
+      "sha256": "23c6645a70721ca8c4c8d0553441717bb7a3ff186fa7df6f6a993c66574dde92"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-additional-submissions.json",
+      "bytes": 18505,
+      "sha256": "74639003fb9efae0ca59f2be7c35a63e2a2be4b4ec05c66ff44c24bace10bfe6"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-additional-terminal-jobs.json",
+      "bytes": 47361,
+      "sha256": "a9e8eb105c6d639aa9d7144d5cb5a6c3fadcc2d0ffde086533b2f674dbd4a5fe"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-cleanup.json",
+      "bytes": 483,
+      "sha256": "8486857b4d28c4d5af212866508abf096e8a1cdc9903f41a6a098c5c43b98586"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-model-gate.json",
+      "bytes": 3456,
+      "sha256": "efe27f2cadcfaa0fcfa6e2fd29efbbdaafd04ecbe98442c1ffbd44656e273f61"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-model-observation.json",
+      "bytes": 24493,
+      "sha256": "7a15762f5c0b1518fcf4e1210a6cfd20e8f9e3bc38710cfad4527922a88fb621"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-model-snapshot.json",
+      "bytes": 121029,
+      "sha256": "7aa901d4c6d52008fc7f83cfa0c886a0ff3f9bd88301dd6ff7177f235ed2c02c"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-model-submission.json",
+      "bytes": 10307,
+      "sha256": "1553e35e386dde512404b4778a9eb6f8830001988f4e055bbb342f0f835694a9"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-model-terminal-jobs.json",
+      "bytes": 41327,
+      "sha256": "8571708a76fab08839aa175966ad8044084d3f59bf12edd23b1180df2560c720"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-provider-minimal-probes.json",
+      "bytes": 971,
+      "sha256": "b3696cefde6c09b585f783bc8849d90eb8ec519febd3057168249f056c01334f"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-provider-no-maxitems-probe.json",
+      "bytes": 129,
+      "sha256": "749f5f5c89480ea912a93a0603ec315eed60cab1f76d58c352ac53b9a1b6494b"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-provider-nullable-probe.json",
+      "bytes": 236,
+      "sha256": "407dba48b0686683f19b2d00e7ad089df5310dcac46a157dc8cc2ed3e3ba5103"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-provider-probe.json",
+      "bytes": 180,
+      "sha256": "f9014e183fec794f3f8e7faafc551ed218b8633027fe6326e9bab1e8b704d66f"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-schema-nullable.json",
+      "bytes": 2438,
+      "sha256": "967340db076d7cdd36eac40b2430306196dc0af3432913c9ca2b63ee84bcd6e3"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-schema-unbounded-provider.json",
+      "bytes": 2423,
+      "sha256": "42aaabcb0931d1f9f81f67924ed21038df1ff51ad2c7737c1c51b36336a0d9e6"
+    },
+    {
+      "path": "assets/structured-source-inventory/initial-schema.json",
+      "bytes": 2514,
+      "sha256": "0426a1a085cb7d8d1b5da54d597bbb602994149ec742e4221bc562443867dcae"
+    },
+    {
+      "path": "assets/structured-source-inventory/live-deadline-evidence.png",
+      "bytes": 530393,
+      "sha256": "5d40eb46e3e608f1e678b8e7010ebc1679ee2fe8393ec22c678798a02ccf9884"
+    },
+    {
+      "path": "assets/structured-source-inventory/live-deadline-viewport.png",
+      "bytes": 191984,
+      "sha256": "7900e7b596e201ac4446cdec3c17674db3477bc53d8e7666aec41e6708a939f0"
+    },
+    {
+      "path": "assets/structured-source-inventory/live-negative-evidence.png",
+      "bytes": 437527,
+      "sha256": "dac1db8b1bf9b8aed305515881830d248fd9e19248ca3ad8a20c53d214814ed8"
+    },
+    {
+      "path": "assets/structured-source-inventory/live-schema-report.png",
+      "bytes": 861385,
+      "sha256": "2b0aa89fec7ad61401fe7ae91c77629bb69db79b8a1129ea2b7957163d99a12a"
+    },
+    {
+      "path": "assets/structured-source-inventory/main-stack-health.json",
+      "bytes": 394,
+      "sha256": "e9be85812bab3d3da21de1699d9bac65bb6655ede32e5af30040b9921464d8df"
+    },
+    {
+      "path": "assets/structured-source-inventory/model-gate.json",
+      "bytes": 3793,
+      "sha256": "27adc28863d9fd182be7916604ae74625ec08e30d347012b611caf875a95ffd7"
+    },
+    {
+      "path": "assets/structured-source-inventory/model-observation.json",
+      "bytes": 27045,
+      "sha256": "a4dbb448b394fbd63821b9f5542d10cb7833519038e614f5d83ea84935375d12"
+    },
+    {
+      "path": "assets/structured-source-inventory/model-project.json",
+      "bytes": 1931,
+      "sha256": "67b3a8867c03e8f4171f555599a71f1ab0a1d6f6dd14902ef9d580950d22742f"
+    },
+    {
+      "path": "assets/structured-source-inventory/model-snapshot.json",
+      "bytes": 198491,
+      "sha256": "735ef14136a377da1ecdfed628b0e33276fe02e16fa943d59e2f700f9413d756"
+    },
+    {
+      "path": "assets/structured-source-inventory/model-submission.json",
+      "bytes": 10307,
+      "sha256": "ad873b1c5e09954babc28196d4ad722e8a6ac41d39d6b3c32966afd48ba63941"
+    },
+    {
+      "path": "assets/structured-source-inventory/model-terminal-jobs.json",
+      "bytes": 95716,
+      "sha256": "95b9ea9dadd2ed6a9e5834ba7c0779b58a9a619701914c099eff53aa323532b6"
+    },
+    {
+      "path": "assets/structured-source-inventory/neighborhood-checks.json",
+      "bytes": 166297,
+      "sha256": "a8ff8c0cfecf3335171789d2b571f94fe409d07333f0fe63399092d85c679800"
+    },
+    {
+      "path": "assets/structured-source-inventory/patch-arms.log",
+      "bytes": 7413,
+      "sha256": "1856b1bda55c4fbd8868f9019bc34470aef45099627cd639ab44b10c1f1ab3b1"
+    },
+    {
+      "path": "assets/structured-source-inventory/permission-component.json",
+      "bytes": 72247,
+      "sha256": "c4ddbedded85bbd36d65828675772502fefb4970b9eaee4b89d558f43941c184"
+    },
+    {
+      "path": "assets/structured-source-inventory/preservation-after-activation.txt",
+      "bytes": 114,
+      "sha256": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3"
+    },
+    {
+      "path": "assets/structured-source-inventory/preservation-after-cleanup.txt",
+      "bytes": 114,
+      "sha256": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3"
+    },
+    {
+      "path": "assets/structured-source-inventory/preservation-before.txt",
+      "bytes": 114,
+      "sha256": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3"
+    },
+    {
+      "path": "assets/structured-source-inventory/record-negative-en-neighborhoods.json",
+      "bytes": 168830,
+      "sha256": "204106a3d8b1296fa2425a7a33b26feb021160279a822ec5c7b8b3ab78a84af0"
+    },
+    {
+      "path": "assets/structured-source-inventory/record-negative-en-snapshot.json",
+      "bytes": 100738,
+      "sha256": "84d6dcd78ada429f4d0cd9af4b249e439398ed5ac736c3ccc648b9f5a2438013"
+    },
+    {
+      "path": "assets/structured-source-inventory/record-negative-fr-neighborhoods.json",
+      "bytes": 274672,
+      "sha256": "668f2d5e72fab42b4c65cca7ccedc3b8c902c217615551af7a90e2723d3d2e2e"
+    },
+    {
+      "path": "assets/structured-source-inventory/record-negative-fr-snapshot.json",
+      "bytes": 115724,
+      "sha256": "28752def21a738fbe81fcf171dff057133287b5ccafc1e9e1efef21434189764"
+    },
+    {
+      "path": "assets/structured-source-inventory/release-checks.json",
+      "bytes": 37540,
+      "sha256": "772d689c5403062d1a7509005d9808c7ba326e5676d8a6993639b6ac70b69fc9"
+    },
+    {
+      "path": "assets/structured-source-inventory/request-schema.json",
+      "bytes": 2423,
+      "sha256": "42aaabcb0931d1f9f81f67924ed21038df1ff51ad2c7737c1c51b36336a0d9e6"
+    },
+    {
+      "path": "assets/structured-source-inventory/run-live.log",
+      "bytes": 551,
+      "sha256": "938b7bbed0c074248994ee76a3b20aac0b8864c4ba79a0e97c5a07350205bd92"
+    },
+    {
+      "path": "assets/structured-source-inventory/semantic-gold.json",
+      "bytes": 1431,
+      "sha256": "2e3298ddb35e7a175c5377e468c592b006be066ad7d38a033434f6a13544eda1"
+    },
+    {
+      "path": "assets/structured-source-inventory/user-source-preflight.log",
+      "bytes": 2587,
+      "sha256": "9dda1a7dd3de0c998ab82c44c856df7d9a8cb14f7e17a9083129e372ed34eeb6"
+    }
+  ]
+}

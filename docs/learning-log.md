@@ -4137,3 +4137,69 @@ independent contract families before attributing an extraction gain to Laya.
 
 [DelayLama recovery audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-format-recovery.md)
 · [Shared receipt](validation/delaylama-source-format-recovery-20261005.json).
+
+## L117 — Pair calendar premises; measure discovery and connectivity separately (2026-10-05)
+
+DelayLama's source inventory now requests every assertion field through an optional
+native Gemini JSON schema. Calendar text and its own original passage selector
+form one nullable object. The complete prompt plus schema is budgeted initially
+and for the existing bounded format retry. Required primitive fields, extra and
+duplicate keys are checked locally before unchanged own-action source guards.
+Unknown calendars do not borrow nearby dates. General absence-of-record
+instructions ask for independent negative assertions without feeding evaluation
+gold into the model task. This is protocol/extraction work, not a new Laya result.
+
+The first four accepted source-inventory jobs failed provider requests and remain
+archived. C35's retained first graph passed only 2/13 frozen type checks; the
+additional English/French cases each passed 1/7. A controlled compatibility probe
+accepted the nullable schema only after removing its provider array cap. The
+unchanged engine still completely withholds more than 120 rows without retry or
+truncation. Generic HTTP 400 responses do not prove an internal grammar cause or
+that array limits are universally unsupported. Preserve rejected implementations
+and compare identical fixtures rather than reporting only the successful draw.
+
+The corrected full-stack variant passes **13/13 unchanged C35 type checks**,
+including the previously missed completion negative. Its exact original deadline
+calendar is restored through paired premises; that separate calendar diagnostic
+was not part of the thirteen frozen type targets. Both deadlines remain
+non-occurrences and the inspection retains its own engineer performer. Two new
+translated synthetic development cases, frozen before their first submission,
+each pass **7/7 type checks**, both date targets, actor and deadline non-occurrence
+checks. These small cases are not independent benchmarks. Every final inventory
+returned structure in one inventory call; all source audits remain partial.
+
+Seventeen C35, seven English and ten French returned candidate citations, plus
+44 connection citations, bind uniquely to current originals with exact hashes
+and spans. This says nothing about extra candidate quality, missing assertions,
+predicate meaning, applicability or relationship recall. Neighborhood reads
+preserve all graph snapshots. The UI exposes the recovered negative separately,
+its highlighted original, the deadline calendar and readable schema diagnostics.
+It does not present request validity as complete analysis.
+
+**A whole component is still not a whole contract.** The permission component
+contains only eight of seventeen extracted source candidates; nine are outside,
+including the isolated completion negative. The source reference layer retains
+ambiguous Article 7 passages and a qualified amendment reference, but graph
+connectivity cannot yet supply every relevant dispersed premise. Next work must
+measure missing source/section/topic connections separately from fact extraction.
+Structural adjacency must remain distinct from asserted dependency, causation,
+contradiction and legal precedence; do not fabricate semantic links to fill a
+connectivity metric.
+
+For reusable training/evaluation, predict calendar value and source selector as
+one target, train explicit null/abstention cases, and independently test another
+action's calendar, missing range, Unicode offsets and date roles. Keep separate
+response-format, assertion-recall, polarity, role, premise ownership, graph
+survival, structural-context and directed-predicate gates. Include untranslated
+independent long/dispersed/OCR families before claiming transfer or attributing
+quality gains to a fast classifier. A strong model cannot repair a pipeline that
+omits context or assigns source text to the wrong assertion.
+
+Validation: 1,207 backend tests, 852 frontend tests/build, full Go/race checks,
+twelve idempotent patch combinations and eleven optional variants passed. User
+graph/configuration/journal/reviews/source edits remain unchanged; failed and
+final QA handles are archived. No existing user contract was reanalyzed. No new
+Laya training, MLX performance or architecture result is claimed.
+
+[DelayLama structured-source audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-structured-source-inventory.md)
+· [Shared receipt](validation/delaylama-structured-source-inventory-20261005.json).
