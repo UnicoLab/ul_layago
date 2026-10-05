@@ -3781,3 +3781,50 @@ ambiguity fixture; it is not model-performance evidence.
 
 [DelayLama reference audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-relation-references.md)
 · [Shared receipt](validation/delaylama-relation-references-20261005.json).
+
+
+## L110 — Preserve assertion meaning before aligning a relation vocabulary
+
+Adopted engineering change, 2026-10-05. Eight Chronograph regressions showed
+normalization reversing passive meaning, erasing negation or collapsing distinct
+contractual predicates. Patch 47 preserves exact keys, uses a small equivalent
+phrase table and otherwise formats the original label. Token/stem similarity and
+preferred inverse aliases cannot decide assertion meaning. Versioned conversion
+metadata is review evidence, not an entailment label. Source/target identity and
+predicate direction must be evaluated independently.
+
+Provider extraction and critic paths now treat relation vocabulary as suggested,
+preserve modality/negation/conditions and request original premises. Cross-chunk
+discovery receives original chunks, not a generated summary; provider budgets
+still constrain coverage. Controlled provider tests verify request content, not
+model adherence. The human graph review shows parties, precise predicate and
+original quote, with expandable conversion details and warnings for unknown types.
+
+Known English/French synthetic full-stack replays returned four of five expected
+propositions each: appointment, conditional payment duty, certification and access
+duty. Both omitted the separate engineer-does-not-pay relation. A separate A1/C1
+critic probe recovered the English negative relation, but French still missed it.
+English's negative quote needs an antecedent in the preceding original. These
+are development observations, not an independent efficacy benchmark. Normative
+and negative statements also survive as warned Event candidates, and a performer
+link was observed on a negative candidate; an actor mention does not establish
+actual performance. No global critic configuration or existing user graph changed.
+
+For Laya/GLiNER training and evaluation, separate: entity/reference identity,
+directed predicate, polarity, modal force, actor versus duty-holder/certifier/payer,
+conditions/exceptions, quote scope and antecedent binding. Include passive/active
+pairs, same-endpoint assertions with different qualifiers, and negatives against
+closest-vocabulary collapse. Predict typed proposals/abstention with original span
+support; keep normalization/calibration outside semantic truth. Measure source
+assertion inventory recall separately from quote location, conversion survival,
+storage survival and legal applicability. An extra critic call is an intervention
+that needs language/family-specific evaluation, not an automatic quality guarantee.
+No new training, MLX or classifier-quality gain is claimed here.
+
+Final delivery passes 1,133 backend and 810 frontend tests/build, full Go and
+race checks, twelve idempotent patch combinations and eleven optional suites.
+The tested engine/API are active without changing existing sources, artifacts,
+Studio sessions, configuration, graph rows or job journal.
+
+[DelayLama predicate audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-relation-predicates.md)
+· [Shared receipt](validation/delaylama-relation-predicates-20261005.json).
