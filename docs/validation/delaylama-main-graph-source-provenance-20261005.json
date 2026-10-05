@@ -1,0 +1,378 @@
+{
+  "date": "2026-10-05",
+  "shared_learning": "L121",
+  "status": "verified_progress",
+  "base_commit": "eb5f94ea3788702378c9cd51000b9be4841e907a",
+  "scope": "Main graph inspector, source-version coverage, chronology and review queue share exact-source verifier; engine unchanged.",
+  "checks": {
+    "backend_passed": 1295,
+    "frontend_passed": 890,
+    "frontend_files_passed": 74,
+    "production_build_passed": true,
+    "preexisting_large_chunk_warning": true,
+    "regression_tests_failed_against_previous_graph_code": 15,
+    "new_backend_tests": 11,
+    "new_frontend_tests": 15,
+    "go_tests_rerun": false
+  },
+  "full_stack": {
+    "projects": [
+      {
+        "case": "C35",
+        "project_id": "structured-inventory-qa-c35-20261005-092128-024af2",
+        "verified_current": 98,
+        "changed": 3,
+        "unknown": 1,
+        "unresolved": 0,
+        "snapshot_unchanged": true,
+        "model_calls": 0,
+        "extraction_accuracy_measured": false
+      },
+      {
+        "case": "record-negative-en",
+        "project_id": "record-negative-qa-en-20261005-092146-d2ab40",
+        "verified_current": 48,
+        "changed": 0,
+        "unknown": 0,
+        "unresolved": 0,
+        "snapshot_unchanged": true,
+        "model_calls": 0,
+        "extraction_accuracy_measured": false
+      },
+      {
+        "case": "record-negative-fr",
+        "project_id": "record-negative-qa-fr-20261005-092146-c0cf33",
+        "verified_current": 59,
+        "changed": 0,
+        "unknown": 0,
+        "unresolved": 0,
+        "snapshot_unchanged": true,
+        "model_calls": 0,
+        "extraction_accuracy_measured": false
+      }
+    ],
+    "engine_has_llm": false,
+    "engine_jobs": 0,
+    "model_calls": 0,
+    "graph_counts": {
+      "nodes": 43,
+      "edges": 59,
+      "episodes": 6
+    },
+    "independent_semantic_accuracy_measured": false
+  },
+  "browser": {
+    "errors": 0,
+    "temporary_tab_closed": true,
+    "user_tab_untouched": true,
+    "views_checked": [
+      "event quotation and surrounding context",
+      "changed performer link and both endpoints",
+      "chronology withholding",
+      "review queue performer investigation",
+      "refresh retaining review state"
+    ]
+  },
+  "activation": {
+    "old_launcher": 60239,
+    "old_listener": 60240,
+    "new_launcher": 68949,
+    "configuration_change": "None; restart to load checked main graph, review queue and chronology source verifier",
+    "config_sha256_before": "538f6c5d5258b3a3cca8b25a083e695217ef42584564a554497541f57e8b53ad",
+    "config_sha256_after": "538f6c5d5258b3a3cca8b25a083e695217ef42584564a554497541f57e8b53ad",
+    "journal_rows_unchanged": true,
+    "journal_sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c",
+    "no_existing_contract_reanalysis_submitted": true
+  },
+  "cleanup": {
+    "qa_model_calls": 0,
+    "qa_engine_jobs": 0,
+    "qa_snapshot_unchanged_by_reads": true,
+    "qa_ports_closed": [
+      8097,
+      8081,
+      5175
+    ],
+    "main_ports_healthy": [
+      8095,
+      8080,
+      5173
+    ],
+    "browser_error_count": 0,
+    "user_contract_reanalysis_submitted": 0
+  },
+  "preservation": {
+    "all_user_graph_tables_unchanged": true,
+    "nodes": 1444,
+    "edges": 660,
+    "episodes": 321,
+    "timeline_events": 3437,
+    "engine_source_edits_preserved": 14,
+    "application_artifacts_preserved": 32,
+    "studio_sessions_preserved": 2,
+    "user_prompt_and_layago_folder_excluded_from_commit": true,
+    "engine_sha256": "2b97549a1c6ffa1c7be3ab92bf8f78fd248b6710e0fb6d0f1b94722dcf3b83b1"
+  },
+  "limits": [
+    "No new extraction run, semantic relationship benchmark or model training was performed.",
+    "Correct version/quotation binding does not certify polarity, modality, applicability, roles or directed predicates.",
+    "Missing/legacy/direct-engine provenance fails closed; original text remains inspectable.",
+    "Qualifying independent long/dispersed/OCR contracts and extraction/relationship recall remains necessary.",
+    "Existing unknown-version records are not automatically rewritten or assigned a source version.",
+    "Full originals are returned once per scoped graph receipt; very large-original payload performance is not newly benchmarked."
+  ],
+  "source_manifest": [
+    {
+      "path": "delaylama/ai_core/graph_neighborhood.py",
+      "sha256": "a0dc25909bbdd3bd272d1018523300bad3585645b840a086ca86f8bd395cdfe0"
+    },
+    {
+      "path": "delaylama/ai_core/graph_snapshot_evidence.py",
+      "sha256": "91758f4e3ba12bbfa4fe23e37f2d12c4d08c63bdfc23423bc65a27d1a799822f"
+    },
+    {
+      "path": "delaylama/endpoints/project_workflow/endpoint.py",
+      "sha256": "0bafb564da559c20cde6b6e0ab29822741bca67f1c1a6beb8bd63db836478732"
+    },
+    {
+      "path": "delaylama/tests/test_graph_snapshot_evidence.py",
+      "sha256": "cfad6e9bc3b289af36c8cd0824f496c6ccc5f1cb62ce9d27bd9b73f359d6143f"
+    },
+    {
+      "path": "frontend/src/components/GraphEventRoles.tsx",
+      "sha256": "ec6e85e7b25399cd8e8d8d12c8c0cbc4481da5da7794f95ec6940f882390879c"
+    },
+    {
+      "path": "frontend/src/components/GraphStatementParties.tsx",
+      "sha256": "4cee36517f66ece481cc3c42d47c91712a96938aaaca695586b5439dd681b70f"
+    },
+    {
+      "path": "frontend/src/components/KnowledgeGraph.tsx",
+      "sha256": "e6454b470e20e046e614f809761b74fa883332f389c77729d184e7ba7eea0bd9"
+    },
+    {
+      "path": "frontend/src/contractGraph.ts",
+      "sha256": "16a6aeba09bb93dc3250deb6d1457bf27b972a3f0dcd2af187118dd8db1e217f"
+    },
+    {
+      "path": "frontend/src/graphChronology.ts",
+      "sha256": "9fa72a8a969d028743d5539bbba238aba93dcd29034de4a9b859982c34e22008"
+    },
+    {
+      "path": "frontend/src/graphReviewQueue.ts",
+      "sha256": "ac75c269d29a95ec8a3f75f288afb91853035b8a10f7b33fcbfbd03470c2e640"
+    },
+    {
+      "path": "frontend/src/graphSourceEvidence.ts",
+      "sha256": "20c795e5df9178afc8a9ec4c07c3860bf2433330b2796edd34d3bfde4d8903f5"
+    },
+    {
+      "path": "frontend/tests/graph-chronology.test.tsx",
+      "sha256": "8ce203852ff26e58fff3a7780adc5207f44004d9502436cfdca7cdafa935ab95"
+    },
+    {
+      "path": "frontend/tests/graph-event-roles.test.tsx",
+      "sha256": "70ac7ec087c9ce6e1269a88aee3cc0314ae9cfcdb075f36e254ff0f8a7c9c788"
+    },
+    {
+      "path": "frontend/tests/graph-review-queue.test.tsx",
+      "sha256": "d8ddabe23eef45cb0f33548ee30603b0b02efdee422ceb2a4fa6d91b820ba8ca"
+    },
+    {
+      "path": "frontend/tests/graph-source-evidence.test.tsx",
+      "sha256": "4e91737a860246f23cc3f5c112d6d98ca89dcfc43a0b32b1784d5acbe4ba932d"
+    },
+    {
+      "path": "frontend/tests/graph-source-reviews.test.tsx",
+      "sha256": "e813ba8c88cdd21591461c89f1472c9188d8b825dd730a6c046accf05b1a2d74"
+    },
+    {
+      "path": "frontend/tests/graphEvidenceFixture.ts",
+      "sha256": "b7eba70ba0b7fc49410e9997c87bf8e21b4c72659797e5711bf1ed6b072f2e22"
+    },
+    {
+      "path": "frontend/tests/knowledge-graph.test.tsx",
+      "sha256": "e8e20b286d2a910b3ddbaba784635704307f78d6c3e2f7da8f22d20dd8610d8f"
+    },
+    {
+      "path": "frontend/tests/workspace-navigation.test.tsx",
+      "sha256": "b8d9533b8b4f4c7b782890568e6d0d1d01c202de5d40594372aea5ac9829ac8a"
+    },
+    {
+      "path": "frontend/tests/workspace-selection.test.tsx",
+      "sha256": "8c59bf4665fa88bdebe4e8c0d6731dd749a0be506ecdfa3c2a587e24593cc508"
+    }
+  ],
+  "assets": [
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/C35-graph-response.json",
+      "bytes": 484759,
+      "sha256": "1edaa3e3439e06572a5f16326ad7298bce18c872db9d99041d2ecfae2d621ad3"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/api-activation.json",
+      "bytes": 555,
+      "sha256": "82bcf7bcb9a2801ca2f07b0c0ce6b2430d957f4a4679e6562c49cb795f69c647"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/backend-all.log",
+      "bytes": 1507,
+      "sha256": "fe9eac83cc30ec5955373d0988899ae7bdb2f7f36435b94c63bedd3b9acbf67f"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/baseline-regression.log",
+      "bytes": 7946,
+      "sha256": "bf0871b7386785405c235e2d31ff6eba17bef97a41082eca1c2c9bd9fe4619e9"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/browser-errors.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/case.json",
+      "bytes": 2420,
+      "sha256": "3ba822ff20b05096e7a2eba0ddb53fff8ef82d26ce2ab0faa7970cead3d42dab"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/check_live.py",
+      "bytes": 2890,
+      "sha256": "d2978f8998b2fcba82fe3d8c7972b53179d1f50d2002ddbac6e3d98df0953c4d"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/chronology-dom.txt",
+      "bytes": 15223,
+      "sha256": "8697beee4875802b0e11efdd3d0777ccdfbf4ac3203d6dc6ee53b9de7549b13a"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/chronology.png",
+      "bytes": 140620,
+      "sha256": "c2510d9fb42e1f62391f8a21869983f17e4e2edca496e296abab1b387fac69a2"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/cleanup.json",
+      "bytes": 279,
+      "sha256": "3ab2d7da17842fab29cbc6d5386cdfe860409531339a45bab93eff182cf10335"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/cleanup.py",
+      "bytes": 2535,
+      "sha256": "4fa36de649fccc29c40ab83958e8fe7a45ff734526e73ae9a50c8f6415859faa"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/connection-dom.txt",
+      "bytes": 16092,
+      "sha256": "c2c6dda882177d92eeac9891b04fdffcb8664c1d61f3b838dd2fb8e2ea35a487"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/connection.png",
+      "bytes": 197884,
+      "sha256": "bd6e32c50df3b5bf104afb13fedf712a02bf1f62abe10b9572acf003bc950bfd"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/event-review-dom.txt",
+      "bytes": 19239,
+      "sha256": "9045a4e5c7ef74eed92a715d2248c6bab9a33a0baac95cec09651ce73a7dfba0"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/event-review.png",
+      "bytes": 180001,
+      "sha256": "cd549eca04bde94a8b80122c014aa955a7d1ac401f6759a954f80de943ebf8ec"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/final-health.json",
+      "bytes": 255,
+      "sha256": "9013ad8ae3a429552c718ae461673f488e7e225d251afbfe7baefe0c64d1b1c0"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/final-live-gate.json",
+      "bytes": 1145,
+      "sha256": "619302efbe0749fdb90a2cd42cc0727d2a5395ad5b764d5deab2309574c8c04a"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/final-ready.json",
+      "bytes": 222,
+      "sha256": "3b12df26ce171619d4e1bba127604a52567892d473d73a9391ee61ab15c801c6"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/frontend-all.log",
+      "bytes": 333,
+      "sha256": "e8e34732d20c6db075594e67dce3ae45e7bb6c4b79c994588a5f0e44500067f5"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/frontend-build.log",
+      "bytes": 1274,
+      "sha256": "917044c4ebb6b51b897d919f1aae73f698e58c5ce5d43e88b6ab992a36ae2616"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/indexed-case.json",
+      "bytes": 1214,
+      "sha256": "1a2b7281305aa97d3863199b0933774c946974333918dc65caf526b7122f5033"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/initial-layout-regressions.log",
+      "bytes": 18073,
+      "sha256": "d96e700adef0af3adf6751e5cdc88c131c5434b8aacc4247cfd5cc65f857a75e"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/main-stack-health.json",
+      "bytes": 456,
+      "sha256": "bdbf35453f67d1f83a29b070eaffeb27740dc61fee44aee1e947e94b73dfa058"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/record-negative-en-graph-response.json",
+      "bytes": 218930,
+      "sha256": "402e4747cc8f1fed6c2b3c93d2c35eef59bf7e04cbcd4d2b3323fd4be34d8d76"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/record-negative-fr-graph-response.json",
+      "bytes": 258575,
+      "sha256": "2a3a19d5fc5a5b5f46634eb31b7aee0aa8d586c51b001bbc4d9bca35ef0bd984"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/refresh-dom.txt",
+      "bytes": 26030,
+      "sha256": "9c8a0e1b154a12b8b7cfc9d41283abc41af6b0e8f27e9e82f370aaee5acdd21d"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/refresh_qa_api.py",
+      "bytes": 2207,
+      "sha256": "362522bb9c1c3b6b5c6818a1be666072f52e2e0ba9b304166f2eedfa2e571402"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/restart_user_api.py",
+      "bytes": 2529,
+      "sha256": "f38c7cbee37a9fda69197a319cbc03bf35caebc4f567e855c77f51fdc55a696e"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/review-queue-dom.txt",
+      "bytes": 26039,
+      "sha256": "f0c618aa1ab166d04cf0bdb7a24db844cc5843ced0af96aa452c98c20ac354cc"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/review-queue.png",
+      "bytes": 150808,
+      "sha256": "ecc37a99be09e9cf021fcd189471fe59941d067c7abcbba9351a2407036ae134"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/snapshot-after.json",
+      "bytes": 331010,
+      "sha256": "e50f8f64c9dde16c1110b5056b1fee872fab0715b6c4247c3c327920a253bbee"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/snapshot-before.json",
+      "bytes": 331366,
+      "sha256": "60fb98f09d3b6638d9596b33ed588b8024a2deeafe274a050c63019b21f2b089"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/start_stack.py",
+      "bytes": 3589,
+      "sha256": "a3de452971a79b20e8c6cf804551d78ca705a8d1cb75df0e9daadce833d54f6f"
+    },
+    {
+      "path": "docs/validation/assets/main-graph-source-provenance/user-preservation.json",
+      "bytes": 1349,
+      "sha256": "76b5b675f6de4a92a556da0db3200e6d234cdb49300687823fb60e2749061e40"
+    }
+  ]
+}

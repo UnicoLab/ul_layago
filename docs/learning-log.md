@@ -4367,3 +4367,48 @@ recall, relevance budgets and legal applicability remain qualification work.
 
 [DelayLama context source provenance audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-context-source-provenance.md)
 · [Shared receipt](validation/delaylama-context-source-provenance-20261005.json).
+
+## L121 — Share provenance checks across every graph consumer (2026-10-05)
+
+A correct neighborhood verifier is insufficient if the inspector, chronology or
+review queue still accept any quote found in joined documents. DelayLama's main
+graph had that gap: an older event could appear source-matched and be plotted,
+while an older performer link suppressed the actor investigation. Fifteen new
+frontend regressions reproduce the previous behavior and pass after integration.
+
+The scoped graph API now supplies read-only evidence receipts from the same
+exact-episode, project/tenant, original-reference, occurrence/version and indexed
+excerpt verifier. Batch-fetch missing referenced episodes using scoped pages;
+reject foreign/duplicate pages and ignored offsets. Missing or unavailable
+provenance must stay unverified, including direct-engine fallback data. Detect
+overlapping repeated quotations as well as ordinary repeats. A stored name/span
+can remain navigation text without becoming proof of its source version.
+
+Inspect the connection and each endpoint against their own original and captured
+version. Keep surviving quotes readable with surrounding context, but distinguish
+current, changed and unknown source versions. Withhold unverified dates and date
+roles from chronology/CSV. A stale performer edge must not satisfy the review
+queue's current actor-link coverage. Retain model proposals and historical counts
+as proposals/checks at analysis time, with current-version review flags.
+
+Validation passes **1,295 backend tests**, **890 frontend tests across 74 files**
+and the production build. A copied C35 graph has 98 current, three changed and one
+unknown node/edge evidence records, including containment objects; English/French
+copies have 48/59 current records. These are provenance checks, not fresh extraction
+recall or semantic relationship measurements. Full-stack browser checks retain
+readable citations, withhold the old inspection date and keep performer
+investigation available. No model inference or graph mutation occurred; temporary
+services/tabs were closed and the user graph/artifacts/configuration were preserved.
+
+For reusable LayaGo evaluation, test the complete downstream decision path rather
+than only the classifier output. Separate text match, occurrence identity, source
+version, directed role and applicability labels. Fixed quotes with changed distant
+exceptions/consent/amendments are useful hard negatives. Version hashes and scope
+are deterministic gates; a similarity score cannot substitute for them. Do not
+count stale links as coverage positives or unknown versions as current. Maintain
+independent long/dispersed/OCR and semantic-relationship benchmarks before claiming
+extraction gains. No new training, acceleration or classification-speed gain is
+claimed by this integration check.
+
+[DelayLama main graph source provenance audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-main-graph-source-provenance.md)
+· [Shared receipt](validation/delaylama-main-graph-source-provenance-20261005.json).
