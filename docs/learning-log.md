@@ -4314,3 +4314,56 @@ not those remaining semantic and model-quality gaps.
 
 [DelayLama source-only backfill audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-structure-backfill.md)
 · [Shared receipt](validation/delaylama-source-structure-backfill-20261005.json).
+
+## L120 — Match original versions separately from surviving quotations (2026-10-05)
+
+A short quote can survive an important document change. DelayLama's neighborhood
+adapter also read a node-style source ID for relationships, ignoring their actual
+episode ID. With two versions of the same source, an old relationship could then
+look current. A controlled graph-copy/API comparison reproduces the old located
+result and the corrected outdated result with identical assertion and quote.
+The browser retains highlighted text next to the changed-version warning; no
+model or graph write is involved.
+
+Bind nodes and edges to their exact episode fields. Treat episode `source` as
+identity and `name` as display text. Require project/tenant ownership and reconcile
+explicit citation references with the bound episode. Do not select a different
+original because it contains matching prose. Missing episodes, conflicting
+references and unreadable hashes remain unavailable/unmatched; repeated text
+remains ambiguous. An unbound legacy record cannot borrow the sole visible
+episode's version. Source structure also independently verifies episode scope.
+
+Indexed quote episodes need a separate representation: their content is an
+excerpt, so its hash cannot be compared with the whole original's hash. Recognize
+scoped extraction-source metadata and require the quote to occur in its own
+excerpt and its registered original. New upserts pin the full original hash and
+Unicode character bounds. Validate current excerpt boundaries independently.
+Legacy excerpts remain readable with unknown original versions; changed original
+hashes remain outdated even when the quote itself is unchanged. Corrupt span/hash
+metadata cannot establish a current original version.
+
+Three persisted indexed-excerpt fixtures pass live API/browser checks for legacy,
+current and changed originals. The full source component separately shows 49
+current matches and one changed source version. English/French copies retain
+25/31 current semantic evidence candidates and 23/28 structural objects. These
+are provenance checks on engine-shaped graph copies, not new extraction recall or
+directed semantic-relationship measurements. Transport arguments from the actual
+quote-upsert helper are checked with a mock client, including Unicode offsets.
+
+Thirteen initial regressions fail against the old adapter. Final validation passes
+**1,284 backend tests**, **875 frontend tests/build** and read-only full-stack
+checks with no engine LLM/jobs. Review summarizes current/changed/unknown/missing
+source evidence, displays readable enum values and hides internal IDs. User
+records/configuration/journal/source edits remain unchanged after API refresh.
+No new model training, MLX, classification-speed or architectural gain is claimed.
+
+For LayaGo data, separate quote match, occurrence identity, original-version
+binding, classification and predicate labels. Include hard negatives where the
+quote stays fixed but a distant exception, consent requirement or unsigned
+amendment changes. A classifier should not certify current applicability merely
+from a surviving quote or nearest passage. Keep excerpt/full-document hashes
+distinct. Independent long/dispersed/OCR cases, other result adapters, predicate
+recall, relevance budgets and legal applicability remain qualification work.
+
+[DelayLama context source provenance audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-context-source-provenance.md)
+· [Shared receipt](validation/delaylama-context-source-provenance-20261005.json).
