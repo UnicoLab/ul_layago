@@ -4039,3 +4039,53 @@ this repair measures no new training, MLX acceleration or model-quality gain.
 
 [DelayLama performer/plan audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-performer-context.md)
 · [Shared receipt](validation/delaylama-performer-context-20261005.json).
+
+## L115 — Reference retrieval cannot compensate for a failed extraction pass
+
+**Measured context improvement and extraction failure, 2026-10-05.** DelayLama's
+read-only neighborhood adapter now follows explicit numbered Article/Clause/
+Section references directly in registered originals when the graph omits their
+links. Unique source-bound targets can be followed recursively; cycles terminate,
+parent passages retain nested exceptions and competing amendment headings remain
+ambiguous. Document-qualified references and unsupported layouts need review.
+This locates context without asserting semantic graph relations, precedence or
+legal applicability. It is not a new Laya or GLiNER model measurement.
+
+Two manually seeded synthetic projects each had one payment node and no graph
+connections. The actual application API and browser retrieved Article 7, its
+Article 7.1 exception and Article 9 from one original, then exposed both competing
+Article 7 passages from a contract and conditional proposed amendment. Lookup
+preserved the graph and made no model call. Wrong-document seed evidence did not
+start expansion. Frontend validation maps original Unicode character boundaries
+to browser UTF-16 positions and checks quotes, source identity/hash and bounds.
+Astral-Unicode tests prevent shifted highlights or rejected valid citations.
+
+A new two-document synthetic C35 fixture, frozen before model submission, found
+an important separate failure. Both engine jobs completed, but the contract's
+native-JSON source inventory returned extra closing structures. Strict parsing
+rejected it and preserved the failed diagnostic. Only **4/13 expected statement
+types** survived in the graph. The inspection actor and proposed-deadline
+non-occurrence checks pass; the base deadline is absent. Original reference
+lookup cannot restore missing structured extraction, and a completed job is not
+a complete analysis. This failed development fixture remains a failure, not a
+new quality benchmark or evidence of improved extraction recall.
+
+The interface now highlights failed original-source checks outside collapsed run
+details and opens their saved explanation without submitting again. Validation
+passed 1,180 backend tests, 848 frontend tests and the production build; no engine
+source changed or Go/race suite was repeated. User data and configuration were
+preserved; both terminal model handles are archived. The first failed diagnostic
+SHA-256 is `294896df026a7d0befbb04d00c30a26fb02e37950f4d266174f037f25d934998`.
+
+Future training/evaluation should separate explicit reference detection, exact
+source-span binding, target disambiguation, topical retrieval, statement discovery,
+structured-output validity and graph survival. Use duplicate clause labels,
+conditional unsigned amendments, negative qualifications, nested exceptions,
+reference cycles, wrapped document qualifiers and Unicode minimal pairs. Preserve
+the first failed response when testing recovery and keep the original gold.
+Bounded format recovery is proposed work, not a measured success here. Long/OCR
+contracts, implicit topics, plural/annex syntax, whole prompt budgets and legal
+applicability remain unqualified. No new training or acceleration gain is claimed.
+
+[DelayLama clause-context audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-clause-context.md)
+· [Shared receipt](validation/delaylama-clause-context-20261005.json).

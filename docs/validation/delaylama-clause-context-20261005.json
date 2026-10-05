@@ -1,0 +1,418 @@
+{
+  "date": "2026-10-05",
+  "topic": "Source-only recursive clause context and failed-source visibility",
+  "protocol": "explicit-clause-context-v1",
+  "base_application_commit": "6727b6dbec89710b8aa5c15e309ac231f4b2d14a",
+  "engine_source_unchanged": "1181665a8c35bac8faa4b3b6b039fcff23c05ce2",
+  "engine_sha256": "7105f0884de29076f33723f664ce4773507ba79033ccd170535db0efa53b2e14",
+  "new_engine_patches": 0,
+  "tests": {
+    "backend_passed": 1180,
+    "frontend_passed": 848,
+    "frontend_build": "pass",
+    "go_suites_repeated": false,
+    "go_suite_reason": "No engine source or patch changed; preceding default-52 qualification retained."
+  },
+  "controlled_api_checks": {
+    "seed_nodes": 2,
+    "stored_clause_links": 0,
+    "chain": "Article 7 and Article 9 located; parent preserves Article 7.1 exception; cycle terminates",
+    "competing_amendment": "Both Article 7 passages retained; ambiguous; no precedence selected",
+    "same_source_quote_wrong_document_identity": "No reference expansion from unmatched seed evidence",
+    "graph_changed_by_lookup": false,
+    "model_called_by_lookup": false
+  },
+  "browser": {
+    "temporary_tab": "120",
+    "closed": true,
+    "chain_article7_and_article9_visible": true,
+    "nested_exception_and_negative_approval_visible": true,
+    "competing_amendment_passages_visible": true,
+    "no_automatic_precedence_visible": true,
+    "failed_source_banner_visible": true,
+    "failed_checks_button_opens_details": true,
+    "browser_model_submissions": 0,
+    "browser_error_count": 0
+  },
+  "new_model_fixture": {
+    "originals": 2,
+    "words": 265,
+    "submission_count": 1,
+    "terminal_jobs": 2,
+    "frozen_type_checks_passed": 4,
+    "frozen_type_checks_total": 13,
+    "inspection_performer": "pass",
+    "proposed_deadline_nonoccurrence": "pass",
+    "contract_deadline_nonoccurrence": "fail; absent after failed source inventory",
+    "source_inventory_failures": 1,
+    "full_semantic_qualification": false,
+    "independent_benchmark": false,
+    "diagnostic_sha256": "294896df026a7d0befbb04d00c30a26fb02e37950f4d266174f037f25d934998",
+    "failed_model_result_is_not_feature_qualification": true
+  },
+  "unicode_citation_offsets": {
+    "backend": "Unicode character indices",
+    "browser": "UTF-16 units",
+    "client_mapping": "Only requested boundaries mapped; each original scanned once",
+    "tests": "Backend exact original spans and frontend adapter source/node/reference mapping with astral Unicode",
+    "browser_emoji_fixture_repeated": false
+  },
+  "api_activation": {
+    "old_launcher": 5192,
+    "old_listener": 5193,
+    "new_launcher": 17807,
+    "configuration_change": "None; restart to load source-backed explicit clause reference context",
+    "config_sha256_before": "538f6c5d5258b3a3cca8b25a083e695217ef42584564a554497541f57e8b53ad",
+    "config_sha256_after": "538f6c5d5258b3a3cca8b25a083e695217ef42584564a554497541f57e8b53ad",
+    "journal_rows_unchanged": true,
+    "journal_sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c",
+    "no_existing_contract_reanalysis_submitted": true
+  },
+  "preservation": {
+    "protected_engine_source_files_unchanged": true,
+    "protected_app_artifacts_unchanged": true,
+    "user_studio_unchanged": true,
+    "orchid_studio_unchanged": true,
+    "user_graph_all_tables_unchanged": true,
+    "recorded_replay_nodes_edges_unchanged_by_GUI": true,
+    "owned_jobs_terminal_verified_before_cleanup": true,
+    "replay_verified_before_cleanup": true,
+    "user_engine_health": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    },
+    "user_graph_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    }
+  },
+  "cleanup": {
+    "terminal_jobs_archived": 2,
+    "services_stopped": [
+      {
+        "service": "engine",
+        "pid": 9775,
+        "port": 8097
+      },
+      {
+        "service": "api",
+        "pid": 16468,
+        "port": 8081
+      },
+      {
+        "service": "frontend",
+        "pid": 9777,
+        "port": 5175
+      }
+    ],
+    "temporary_browser_tab_closed": true,
+    "user_tabs_closed": false,
+    "user_graph_mutated": false,
+    "qa_controlled_graph_seed_nodes": 2,
+    "qa_graph_model_runs_submitted": 1
+  },
+  "learning_id": "L115",
+  "remaining_work": [
+    "Recover malformed/failed source inventory safely with preserved failed receipts",
+    "Reevaluate unchanged C35 expectations, then independent contract families",
+    "Whole model request budgets with referenced context",
+    "OCR, implicit topics, plurals, annex labels and unsupported heading layouts",
+    "Cross-document legal applicability, amendment effectiveness and precedence"
+  ],
+  "new_laya_training": false,
+  "assets": [
+    {
+      "path": "docs/validation/assets/clause-context/api-activation.json",
+      "original_path": "/private/tmp/delaylama-clause-context/api-activation.json",
+      "sha256": "7582fe9668e00809f0704482f6d670902c448c421439418b5a48269bc29208dd",
+      "bytes": 537
+    },
+    {
+      "path": "docs/validation/assets/clause-context/backend-all-delivery.log",
+      "original_path": "/private/tmp/delaylama-clause-context/backend-all-delivery.log",
+      "sha256": "6195c2f74f017adbfd0bc00032438f4e08f7555a55a1fd4cfb21b561bd68de28",
+      "bytes": 1428
+    },
+    {
+      "path": "docs/validation/assets/clause-context/backend-all-final.log",
+      "original_path": "/private/tmp/delaylama-clause-context/backend-all-final.log",
+      "sha256": "dc4f0ad39d4ccca5e6add2fa907d5846d942464c955185afa6e4921530940f4d",
+      "bytes": 3402
+    },
+    {
+      "path": "docs/validation/assets/clause-context/backend-all-unicode.log",
+      "original_path": "/private/tmp/delaylama-clause-context/backend-all-unicode.log",
+      "sha256": "d11b0a74e95b8ac07ae8bac5efe730c33da60553dbc3b694f2ce7d278bc09681",
+      "bytes": 1428
+    },
+    {
+      "path": "docs/validation/assets/clause-context/backend-all.log",
+      "original_path": "/private/tmp/delaylama-clause-context/backend-all.log",
+      "sha256": "5cc961efe9895a2a11f1e84f9b43e876136736dd576632ebb9a17ad414fc31d9",
+      "bytes": 1427
+    },
+    {
+      "path": "docs/validation/assets/clause-context/backend-focused.log",
+      "original_path": "/private/tmp/delaylama-clause-context/backend-focused.log",
+      "sha256": "3710801990fd0d37cf6bda75ed5a1b2f1a4e10fca2711623834f58962aac3b2b",
+      "bytes": 145
+    },
+    {
+      "path": "docs/validation/assets/clause-context/browser-chain-dom.txt",
+      "original_path": "/private/tmp/delaylama-clause-context/browser-chain-dom.txt",
+      "sha256": "07ad721aa873755c10d149d3455b20dd2034b543a6eed8d7a239bf88915c6660",
+      "bytes": 13616
+    },
+    {
+      "path": "docs/validation/assets/clause-context/browser-checks.json",
+      "original_path": "/private/tmp/delaylama-clause-context/browser-checks.json",
+      "sha256": "5c76348733cf0e925675cd1b9c1cfae3bf32b8b4ba782a22e93c94ddaff02483",
+      "bytes": 391
+    },
+    {
+      "path": "docs/validation/assets/clause-context/browser-competing-dom.txt",
+      "original_path": "/private/tmp/delaylama-clause-context/browser-competing-dom.txt",
+      "sha256": "07260b92786b4e860b6e45bae00915038bedfe00e5361219ea7bab03773ddb41",
+      "bytes": 13056
+    },
+    {
+      "path": "docs/validation/assets/clause-context/browser-errors.json",
+      "original_path": "/private/tmp/delaylama-clause-context/browser-errors.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    {
+      "path": "docs/validation/assets/clause-context/browser-failed-source-dom.txt",
+      "original_path": "/private/tmp/delaylama-clause-context/browser-failed-source-dom.txt",
+      "sha256": "963848a8ffe92842effe944c8b16e173acd5dbd0baf60fb8d80c46bddcbe6663",
+      "bytes": 25038
+    },
+    {
+      "path": "docs/validation/assets/clause-context/cleanup.json",
+      "original_path": "/private/tmp/delaylama-clause-context/cleanup.json",
+      "sha256": "942f209644f4c635fae2524e505923f53f69ac21e889a96bff3d46f86e2aaddd",
+      "bytes": 473
+    },
+    {
+      "path": "docs/validation/assets/clause-context/controlled-http-checks.json",
+      "original_path": "/private/tmp/delaylama-clause-context/controlled-http-checks.json",
+      "sha256": "ce0ba53ff3959e17911794a95b76b7eff6ea58ede91b20f1bca33a0940878bf3",
+      "bytes": 13472
+    },
+    {
+      "path": "docs/validation/assets/clause-context/controlled-initial-gate.json",
+      "original_path": "/private/tmp/delaylama-clause-context/controlled-initial-gate.json",
+      "sha256": "67c3bacf71fae90643c9087052db3d704b804486436f3da78ec653f542bd45c0",
+      "bytes": 2869
+    },
+    {
+      "path": "docs/validation/assets/clause-context/final-health.json",
+      "original_path": "/private/tmp/delaylama-clause-context/final-health.json",
+      "sha256": "ee2a9897f03972da1ad5820603d86b421d8b01fe1a7df637d73046f4249fc9ee",
+      "bytes": 254
+    },
+    {
+      "path": "docs/validation/assets/clause-context/fixture-freeze.json",
+      "original_path": "/private/tmp/delaylama-clause-context/fixture-freeze.json",
+      "sha256": "15d628c5351da668b5b29751e9473b2eddd81de9a514868bf38b6e92a2411b6e",
+      "bytes": 186
+    },
+    {
+      "path": "docs/validation/assets/clause-context/frontend-all-delivery.log",
+      "original_path": "/private/tmp/delaylama-clause-context/frontend-all-delivery.log",
+      "sha256": "009272555e5edb498fdc9e2807420be6c8192a7923cef8e725c344ebbc808675",
+      "bytes": 337
+    },
+    {
+      "path": "docs/validation/assets/clause-context/frontend-all-unicode.log",
+      "original_path": "/private/tmp/delaylama-clause-context/frontend-all-unicode.log",
+      "sha256": "fe5b6da5054e8276d5fc5c12bd7eacc36f6daee92e5e92860b4c3a0d0ce0c7c1",
+      "bytes": 337
+    },
+    {
+      "path": "docs/validation/assets/clause-context/frontend-all.log",
+      "original_path": "/private/tmp/delaylama-clause-context/frontend-all.log",
+      "sha256": "ec620d3718d48e856ecddd340c8550320bc615e48a49009ab9f77ab29396017b",
+      "bytes": 335
+    },
+    {
+      "path": "docs/validation/assets/clause-context/frontend-build-delivery.log",
+      "original_path": "/private/tmp/delaylama-clause-context/frontend-build-delivery.log",
+      "sha256": "02b7c895e5b3eb214fa6c84484a05961f30f72478aa921babd8102e473079d89",
+      "bytes": 1274
+    },
+    {
+      "path": "docs/validation/assets/clause-context/frontend-build-final.log",
+      "original_path": "/private/tmp/delaylama-clause-context/frontend-build-final.log",
+      "sha256": "1092bd9603f0781735e0fed6cf5a34a936993a4af98a3f679b89c00f44c166a2",
+      "bytes": 1274
+    },
+    {
+      "path": "docs/validation/assets/clause-context/frontend-build-unicode.log",
+      "original_path": "/private/tmp/delaylama-clause-context/frontend-build-unicode.log",
+      "sha256": "faa4ab1a1f638f18d0ae5500ad1a6a6aec5e59ae5b5fa8320d3d4a379daca385",
+      "bytes": 1274
+    },
+    {
+      "path": "docs/validation/assets/clause-context/frontend-build.log",
+      "original_path": "/private/tmp/delaylama-clause-context/frontend-build.log",
+      "sha256": "40145fc1a0f32bbdfadef4abe84f69d08a98b3b16b317ad1c2e1ba2240c78ac1",
+      "bytes": 1274
+    },
+    {
+      "path": "docs/validation/assets/clause-context/frontend-focused-final.log",
+      "original_path": "/private/tmp/delaylama-clause-context/frontend-focused-final.log",
+      "sha256": "5f20bd10ac74c14d2b3738670568d365f5111986204676ea33d6a92ce4867b50",
+      "bytes": 395
+    },
+    {
+      "path": "docs/validation/assets/clause-context/frozen-cases.json",
+      "original_path": "/private/tmp/delaylama-clause-context/frozen-cases.json",
+      "sha256": "65b4691a085f0f0c35e07964973e1455a271a34687dfc13eddd3dee46b6bafc4",
+      "bytes": 2098
+    },
+    {
+      "path": "docs/validation/assets/clause-context/initial-neighborhood-error.json",
+      "original_path": "/private/tmp/delaylama-clause-context/initial-neighborhood-error.json",
+      "sha256": "687edc4d9d6b627d3ae6f677373a3209bcda82f020f5b7bebec86077deaa2887",
+      "bytes": 610
+    },
+    {
+      "path": "docs/validation/assets/clause-context/initial-registration-error.log",
+      "original_path": "/private/tmp/delaylama-clause-context/initial-registration-error.log",
+      "sha256": "940701b888b27b40d550b4175ebe18023ac66f0745d0e6783bfc63f050ba90d5",
+      "bytes": 406
+    },
+    {
+      "path": "docs/validation/assets/clause-context/initial-run-error.log",
+      "original_path": "/private/tmp/delaylama-clause-context/initial-run-error.log",
+      "sha256": "7c8a10ec9649aef7ba1bdbf53f30644f13f9818fe67622da3bb1f08d6fb61c66",
+      "bytes": 771
+    },
+    {
+      "path": "docs/validation/assets/clause-context/initial-source-identity-error.log",
+      "original_path": "/private/tmp/delaylama-clause-context/initial-source-identity-error.log",
+      "sha256": "96a6fb73876d35ebaa343f26660879000209436b7ce54f99776c533d4949066b",
+      "bytes": 435
+    },
+    {
+      "path": "docs/validation/assets/clause-context/live-clause-chain.png",
+      "original_path": "/private/tmp/delaylama-clause-context/live-clause-chain.png",
+      "sha256": "5a54ad9fbb128daff222450d36bda14852310ab0d6e45aa760f075fb39eed7d5",
+      "bytes": 145890
+    },
+    {
+      "path": "docs/validation/assets/clause-context/live-competing-clauses.png",
+      "original_path": "/private/tmp/delaylama-clause-context/live-competing-clauses.png",
+      "sha256": "44a96ce810302cb6545f66e7883b445e33742c34fb1dcb66f4b58d55a5296266",
+      "bytes": 140861
+    },
+    {
+      "path": "docs/validation/assets/clause-context/live-failed-source-review.png",
+      "original_path": "/private/tmp/delaylama-clause-context/live-failed-source-review.png",
+      "sha256": "c7624f123e588e63bf9c57d615ae7f259214cbcef5317cf1c7472382a94d7170",
+      "bytes": 236874
+    },
+    {
+      "path": "docs/validation/assets/clause-context/live-run.log",
+      "original_path": "/private/tmp/delaylama-clause-context/live-run.log",
+      "sha256": "b422c02ce3a0eff049877ec68f8acc6041a0d4c054e8b986b5b90323d38a7960",
+      "bytes": 236
+    },
+    {
+      "path": "docs/validation/assets/clause-context/model-gate.json",
+      "original_path": "/private/tmp/delaylama-clause-context/model-gate.json",
+      "sha256": "bd30d1fb3e66c6eb0f73af485e7de36b994c51038f1592995821fcafdcb56909",
+      "bytes": 8693
+    },
+    {
+      "path": "docs/validation/assets/clause-context/model-observation.json",
+      "original_path": "/private/tmp/delaylama-clause-context/model-observation.json",
+      "sha256": "6009924dda42ad7a0c3bf7816113fbe825742f06044d1f328bb9d2d8d3721e5f",
+      "bytes": 24747
+    },
+    {
+      "path": "docs/validation/assets/clause-context/model-project.json",
+      "original_path": "/private/tmp/delaylama-clause-context/model-project.json",
+      "sha256": "9d9157bc8a93175fc85c659bd1420a3a141ffb6843f3547c03206bb59e350d58",
+      "bytes": 1930
+    },
+    {
+      "path": "docs/validation/assets/clause-context/model-snapshot.json",
+      "original_path": "/private/tmp/delaylama-clause-context/model-snapshot.json",
+      "sha256": "6960a9cd1269200afe6e4a24129fad288de9dd50be90b3a8ed78bb24a1da651c",
+      "bytes": 134728
+    },
+    {
+      "path": "docs/validation/assets/clause-context/model-submission.json",
+      "original_path": "/private/tmp/delaylama-clause-context/model-submission.json",
+      "sha256": "1286ce0f25822602d591f85cd2d30194b4f7e4a227bc019186cb7098c92ddbf1",
+      "bytes": 10302
+    },
+    {
+      "path": "docs/validation/assets/clause-context/model-terminal-jobs.json",
+      "original_path": "/private/tmp/delaylama-clause-context/model-terminal-jobs.json",
+      "sha256": "91a2ab9eba05f5130d25c83bb6da1b0573ecccf75ca6034979eeced03378937e",
+      "bytes": 54181
+    },
+    {
+      "path": "docs/validation/assets/clause-context/neighborhood-checks-delivery.json",
+      "original_path": "/private/tmp/delaylama-clause-context/neighborhood-checks-delivery.json",
+      "sha256": "ff41a37116ae7e076ecbdb8ce75c62221eec0bd2ce27636caabda25ace944c02",
+      "bytes": 101885
+    },
+    {
+      "path": "docs/validation/assets/clause-context/preservation-after-cleanup.txt",
+      "original_path": "/private/tmp/delaylama-clause-context/preservation-after-cleanup.txt",
+      "sha256": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3",
+      "bytes": 114
+    },
+    {
+      "path": "docs/validation/assets/clause-context/preservation-final.txt",
+      "original_path": "/private/tmp/delaylama-clause-context/preservation-final.txt",
+      "sha256": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3",
+      "bytes": 114
+    },
+    {
+      "path": "docs/validation/assets/clause-context/preservation.json",
+      "original_path": "/private/tmp/delaylama-clause-context/preservation.json",
+      "sha256": "76b5b675f6de4a92a556da0db3200e6d234cdb49300687823fb60e2749061e40",
+      "bytes": 1349
+    },
+    {
+      "path": "docs/validation/assets/clause-context/semantic-gold.json",
+      "original_path": "/private/tmp/delaylama-clause-context/semantic-gold.json",
+      "sha256": "2e3298ddb35e7a175c5377e468c592b006be066ad7d38a033434f6a13544eda1",
+      "bytes": 1431
+    }
+  ]
+}
