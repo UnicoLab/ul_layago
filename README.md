@@ -124,3 +124,8 @@ Set `schedule_epochs` in training config to size cosine decay independently of
 `max_epochs`; zero retains the original behavior. See the
 [Hive report assessment](docs/hive-report-insights.md) for motivation and
 architecture experiments still to qualify.
+
+[Learning L129](docs/learning-log.md#l129--own-label-ownership-is-separate-from-identity-and-contractual-relationship-2026-10-05)
+separates party similarity, source-owned role labels and contractual relationship
+entailment. It includes hard-negative dataset ideas and the retained DelayLama
+source-role qualification; it is not a new model training or accuracy result.

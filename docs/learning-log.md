@@ -4734,3 +4734,56 @@ training, MLX, acceleration or architecture-quality result is claimed.
 
 [DelayLama party identity](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-party-identity.md)
 · [Shared receipt](validation/delaylama-party-identity-20261005.json).
+
+## L129 — Own-label ownership is separate from identity and contractual relationship (2026-10-05)
+
+A correctly identified employer acquired another party's contractor label because
+both declarations were on one line. Nearby role words and company-name terms are
+retrieval cues, not ownership premises. A negated declaration could also become a
+positive role. Default DelayLama patch 62 records only recognized own declarations,
+direct party fields or scoped headings, retaining episode, original byte span,
+quote and source hash. Negative, qualified and competing labels abstain; coordinated
+labels do not select the first. Cross-source exact actor reuse keeps every role
+premise instead of borrowing the actor's first episode. Damaged history is retained
+and blocks primary role selection.
+
+The API checks project/tenant, registered original, role episode, hash and exact
+UTF-8 occurrence; the browser converts to UTF16 for highlight. Current text matching
+is not role meaning, appointment validity, authority or applicability. Explicit
+spans disambiguate repeated quotes; changed sources retain history without current
+highlights. Human-readable role panels expose each own passage and qualifications;
+duplicate evidence collapses only for the same checked occurrence. Global bare
+role fields no longer enter neighborhood context. Role-derived connections remain
+uncertain source-review candidates even when both labels match original text.
+
+Full Go/race, 1,400 backend, 922 frontend/build, 12 clean/idempotent combinations
+and 11 variant suites pass. SQLite/file controls retain competing cross-source
+roles without a primary. Three fresh unchanged synthetic source jobs verify five
+explicit English/French party declarations and retain the permission's permitted
+party/conditional approver. English reaches 18/18 stored source candidates and
+French 9/9. Original-overlap criteria pass 23 types and seven date roles; strict
+prefix criteria remain 22/23 and 6/7 because a French deadline uses a shorter action
+span inside the correct full original quote. Both results are retained.
+
+Do not turn these controls into a semantic accuracy score. The French word
+entreprise alone does not establish contractor, though an extracted Contractor
+node type remains a model proposal. Model CONTRACTS_WITH links from unsigned
+amendment non-signature evidence still need polarity/modality and applicability
+qualification beyond the current causation/notice audit. Actor/profile duplicate
+mentions, complex role wording, precedence and independent real/OCR contract tests
+remain open. Every user graph table, 24 journal snapshots, 32 artifacts, two Studio
+sessions and 14 engine source edits survive activation; no historical migration.
+
+For LayaGo datasets, distinguish mention similarity, identity, label ownership,
+polarity, modality and relationship entailment. Build hard negatives with adjacent
+parties/roles, role-like company names, employer/payee objects, negated appointments,
+conditional signatures, competing declarations across amendments, representatives
+under party headings, multilingual legal forms and repeated original quotations.
+Train candidate retrieval or ownership classification with an abstain/unknown
+class; never promote a close embedding or a matched role phrase into legal meaning.
+Keep evidence-version/coordinate validation outside learned confidence. These are
+synthetic development learnings, not independently adjudicated training gold. No
+new Laya training, MLX acceleration or architecture-quality result is claimed.
+
+[DelayLama party roles](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-party-roles.md)
+· [Shared receipt](validation/delaylama-party-roles-20261005.json).

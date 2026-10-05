@@ -1,0 +1,507 @@
+{
+  "date": "2026-10-05",
+  "learning": "L129",
+  "scope": "Own-declaration party labels, cross-source ownership, original occurrence checks and human-readable role UI. Synthetic development qualification, not complete legal/semantic accuracy.",
+  "engine": {
+    "base_release": "v1.3.0",
+    "upstream_base_commit": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+    "default_patch_count": 62,
+    "new_patch": "party-role-ownership.patch",
+    "patch_sha256": "565d62767ad653f76666f0c90c87c37b934638160f5804752299783cd1494a03",
+    "runtime_sources_identical": true,
+    "files": 163,
+    "native_binary_sha256": "f45130d202f0db647f4e3e6ded0bc6852581785aafa730538b698a432f686fe0",
+    "clean_binary_sha256": "2afbe56c250926f0ca14c12f55d45429d7798d2cecc71a2efa39fd504f6102af",
+    "optional_patch_manifest_hashes_corrected": [
+      "source-action-coverage.patch",
+      "source-action-inventory.patch"
+    ]
+  },
+  "policy": {
+    "protocol": "party-role-evidence-v1",
+    "own_source_label_only": true,
+    "label_from_actor_name_or_nearby_other_party": false,
+    "negative_qualified_or_competing_role": "Keep original labels; do not choose a primary role.",
+    "role_episode_separate_from_actor_first_episode": true,
+    "source_coordinates": "Original UTF-8 bytes and SHA256; API validates project/tenant/document/episode/version and converts to Unicode scalar indices. Browser uses UTF16 offsets for exact highlighting.",
+    "unreadable_history": "Preserve damaged history and withhold the primary label; API returns unavailable.",
+    "recognized_grammar": "Limited explicit declaration, direct party field and scoped markdown heading patterns; other wording stays unassessed.",
+    "per_binding_quote_byte_limit": 16000,
+    "api_binding_limit": 120,
+    "structural_role_edges": "Candidate connections only; party ownership cannot establish a contractual relationship.",
+    "new_model_calls_for_role_ownership": 0,
+    "historical_graph_migration": false
+  },
+  "native": {
+    "cases_sha256": "a9cdd069cb1d677bc6b782c105c42d70b90c6530209dc973b1ed12956f1b9981",
+    "source_jobs": 3,
+    "all_done": true,
+    "role_gate": {
+      "cases": [
+        {
+          "case": "dispersed-notice-en",
+          "own_label_checks": [
+            {
+              "name": "Northmere Employer Ltd",
+              "role": "client",
+              "bindings": [
+                {
+                  "role": "client",
+                  "status": "source_label_candidate",
+                  "quote": "Northmere Employer Ltd is the employer.",
+                  "original_bytes_round_trip": true,
+                  "role_episode_matches_actor_first_episode": true
+                }
+              ],
+              "api_source_check": true
+            },
+            {
+              "name": "Larch Construction Ltd",
+              "role": "contractor",
+              "bindings": [
+                {
+                  "role": "contractor",
+                  "status": "source_label_candidate",
+                  "quote": "Larch Construction Ltd is the contractor.",
+                  "original_bytes_round_trip": true,
+                  "role_episode_matches_actor_first_episode": true
+                }
+              ],
+              "api_source_check": true
+            },
+            {
+              "name": "Pennant Engineer Ltd",
+              "role": "engineer",
+              "bindings": [
+                {
+                  "role": "engineer",
+                  "status": "source_label_candidate",
+                  "quote": "Pennant Engineer Ltd is the engineer.",
+                  "original_bytes_round_trip": true,
+                  "role_episode_matches_actor_first_episode": true
+                }
+              ],
+              "api_source_check": true
+            }
+          ],
+          "source_roles_not_legal_certification": true
+        },
+        {
+          "case": "conditional-refusal-fr",
+          "own_label_checks": [
+            {
+              "name": "Oseraie Client SA",
+              "role": "client",
+              "bindings": [
+                {
+                  "role": "client",
+                  "status": "source_label_candidate",
+                  "quote": "Oseraie Client SA est le maître d'ouvrage.",
+                  "original_bytes_round_trip": true,
+                  "role_episode_matches_actor_first_episode": true
+                }
+              ],
+              "api_source_check": true
+            },
+            {
+              "name": "Tilleul Ingénieur SARL",
+              "role": "moe",
+              "bindings": [
+                {
+                  "role": "moe",
+                  "status": "source_label_candidate",
+                  "quote": "Tilleul Ingénieur SARL est le maître d'œuvre.",
+                  "original_bytes_round_trip": true,
+                  "role_episode_matches_actor_first_episode": true
+                }
+              ],
+              "api_source_check": true
+            }
+          ],
+          "source_roles_not_legal_certification": true
+        }
+      ],
+      "qualified_parties": 5,
+      "unassessed_generic_entreprise_phrase": "Noyer Travaux SAS est l'entreprise. does not by itself establish contractor. The model-supplied Contractor node type remains an extraction proposal.",
+      "english_permission_parties_retained": true,
+      "structural_role_links_marked_candidates": true
+    },
+    "strict_literal_prefix_types": {
+      "passed": 22,
+      "total": 23
+    },
+    "strict_literal_prefix_dates": {
+      "passed": 6,
+      "total": 7
+    },
+    "original_overlap_types": {
+      "passed": 23,
+      "total": 23
+    },
+    "original_overlap_dates": {
+      "passed": 7,
+      "total": 7
+    },
+    "strict_discrepancy": "French deadline action_source_text is remise du dossier final; full original quote contains La date limite de remise du dossier final. Correct Event/date/deadline role remains present. Initial literal-prefix failures are retained; criteria were not replaced.",
+    "critical_predicate_gates": true,
+    "graph_context": {
+      "dispersed-notice-en": {
+        "source_candidates": 18,
+        "reached_candidates": 18,
+        "required_fragments": {
+          "Prior written consent from Northmere Employer Ltd": true,
+          "No written consent is recorded": true,
+          "The proposed completion change has not taken effect": true
+        }
+      },
+      "conditional-refusal-fr": {
+        "source_candidates": 9,
+        "reached_candidates": 9,
+        "required_fragments": {
+          "Aucun accord écrit n'est fourni": true,
+          "Aucune suspension n'est rapportée": true
+        }
+      }
+    },
+    "source_evidence": {
+      "dispersed-notice-en": {
+        "located": 137,
+        "ambiguous": 1
+      },
+      "conditional-refusal-fr": {
+        "located": 55,
+        "unavailable": 4,
+        "ambiguous": 1
+      }
+    },
+    "exact_spans_checked": 194,
+    "remaining_relation_concern": {
+      "status": "unresolved",
+      "concern": "Affirmative CONTRACTS_WITH type proposed for an unsigned amendment from negative signature evidence; model_suggestion is not a positive contractual witness. The current critical predicate audit covers causation/notice requirements, not all relation vocabulary.",
+      "candidates": [
+        {
+          "type": "CONTRACTS_WITH",
+          "source": "Larch Construction Ltd",
+          "target": "A123",
+          "fact": "Larch Construction Ltd has not signed A123",
+          "original_quote": "Neither Northmere Employer Ltd nor Larch Construction Ltd has signed A123.",
+          "status": "model_suggestion"
+        },
+        {
+          "type": "CONTRACTS_WITH",
+          "source": "Northmere Employer Ltd",
+          "target": "A123",
+          "fact": "Northmere Employer Ltd has not signed A123",
+          "original_quote": "Neither Northmere Employer Ltd nor Larch Construction Ltd has signed A123.",
+          "status": "model_suggestion"
+        }
+      ]
+    }
+  },
+  "tests": {
+    "backend": 1400,
+    "frontend": 922,
+    "frontend_files": 76,
+    "production_build": true,
+    "go_full": true,
+    "go_race_packages": [
+      "intelligence",
+      "agents",
+      "reconcile"
+    ],
+    "clean_idempotent_patch_arms": 12,
+    "optional_variant_suites": 11,
+    "role_ownership_and_negation_regressions_fail_on_default61": true,
+    "sqlite_and_file_storage_actor_reuse_conflict_controls": true
+  },
+  "browser": {
+    "employer_label_and_own_original_highlighted": true,
+    "role_evidence_visible_in_neighbor_fact_details": true,
+    "duplicate_citation_collapsed_only_for_same_checked_occurrence": true,
+    "role_based_connection_marked_for_source_review": true,
+    "both_party_endpoint_evidence_visible": true,
+    "warning_error_logs": [],
+    "read_only_graphs_unchanged": true,
+    "owned_tab_closed": true,
+    "temporary_services_stopped": true
+  },
+  "preservation": {
+    "all_graph_tables_unchanged": true,
+    "graph_table_counts": {
+      "edges": 660,
+      "episodes": 321,
+      "nodes": 1444,
+      "schema_meta": 1,
+      "timeline_events": 3437
+    },
+    "engine_config_unchanged": true,
+    "api_refreshed": true,
+    "journal_unchanged": true,
+    "journal_snapshots": 24,
+    "artifacts": 32,
+    "studio_sessions": 2,
+    "protected_engine_source_files": 14,
+    "protected_engine_sources_unchanged": true,
+    "artifacts_unchanged": true,
+    "studio_unchanged": true,
+    "historical_graph_rewrite": false,
+    "real_contract_reanalysis": false
+  },
+  "limits": [
+    "Role ownership is structural candidate extraction with limited grammar, not proof of appointment, authority, scope, current applicability or absence. Coordinated multi-party declarations outside recognized grammar can remain unassessed.",
+    "French entreprise alone does not establish contractor; its model-supplied Contractor node type remains an extraction proposal. Client SA remains a separate unresolved mention; actor/profile duplicates persist.",
+    "CONTRACTS_WITH model proposals from negative non-signature evidence on unsigned A123 remain an unresolved polarity/applicability problem beyond the current causation/notice predicate audit. See retained candidates.",
+    "All originals/criteria are synthetic same-provider development controls, not independently adjudicated held-out or real OCR/legal accuracy. Full-source overlap does not certify semantics.",
+    "No native positive causal control or cross-source role-conflict source job is added this turn; cross-source conflicts are tested in controlled SQLite/file storage.",
+    "Historical user graph stays unchanged; old labels are flagged for verification, not silently migrated.",
+    "Broader stored name normalization, model relationship applicability/precedence, global profile defaults, browser cache quota and event category disagreements remain open.",
+    "No new Laya training, MLX, speed or architecture-quality result."
+  ],
+  "proof": [
+    {
+      "path": "docs/validation/assets/party-roles/native-browser-console.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-cases.json",
+      "bytes": 98322,
+      "sha256": "a9cdd069cb1d677bc6b782c105c42d70b90c6530209dc973b1ed12956f1b9981"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-cleanup.json",
+      "bytes": 409,
+      "sha256": "2e753836cd78ecc216fe350e66a1e26e4cdf0441dd039ec596e0b596334620a6"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-collect.log",
+      "bytes": 5806,
+      "sha256": "6225caa96d6fc613f8f292e2fcf31cd0566496dd460565a05c5639dd4e0b794e"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-conditional-refusal-fr-component.json",
+      "bytes": 103113,
+      "sha256": "22b3c0bc5e605b6977b90018790fba235b4aa6167992a060e73b4c26b9dda47f"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-conditional-refusal-fr-graph-response.json",
+      "bytes": 267781,
+      "sha256": "109f0024c1058a4570351f27f6cb4e7a190d9250253d0fdceba81757a7cf41d9"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-conditional-refusal-fr-snapshot.json",
+      "bytes": 189303,
+      "sha256": "56243ea67a63effdf08293e184f43c45b4b05cf6f83b936e60efbcc650acab4b"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-dispersed-notice-en-component.json",
+      "bytes": 603500,
+      "sha256": "92479aac23e15bbbb87359033cc3fd1a9e311aa57c22755f48a62ddd3f4adf8b"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-dispersed-notice-en-graph-response.json",
+      "bytes": 1586903,
+      "sha256": "b6e59bae6f428ea1b8c6889112ff8defa99d8cd8ec7f4118a21dcaef7257ac57"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-dispersed-notice-en-snapshot.json",
+      "bytes": 1052630,
+      "sha256": "ebd250bb30d16f179fc7232d38cb6fd5ee622a45eae59b8e1dce46b3fb0615e0"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-employer-role-dom.txt",
+      "bytes": 23108,
+      "sha256": "dcb49af1eff2f38175f71e567f8cf7cbf020cdd7ad4fefc171724f3c648cfdc6"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-employer-role.png",
+      "bytes": 181732,
+      "sha256": "6c32fce79e3177a7ceb46debc473bc05f244a3c2f2abe7db3bb08354fc891e1b"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-freeze.json",
+      "bytes": 221,
+      "sha256": "00d3b3c3a3f56e90babf6fd776535612bb960d81ae02b629d1cd6837cb2c3b19"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-gate.json",
+      "bytes": 8221,
+      "sha256": "6e44c6e8e8d0bcf3b154ed904a3a9e7e02787b89e5fff2bc49e33319310f7b49"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-native-role-gate.json",
+      "bytes": 2893,
+      "sha256": "f31fa848710ca73375b4d72eb4680594469d05dee244a6764fadcb17a3264d8c"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-neighborhood-role-dom.txt",
+      "bytes": 30057,
+      "sha256": "ca6b2079593f0fce6052be4d46318b481bf87fb06037c56eef6934c0b0de3de1"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-observations.json",
+      "bytes": 232059,
+      "sha256": "017719aa8c3247eb9354655eee1cfda499793075db6d82448cfad4544be2cf03"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-remaining-relation-concern.json",
+      "bytes": 944,
+      "sha256": "dc2b3974923322343b96136f095b41848af2e0331e00312a248d394c11790810"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-run.log",
+      "bytes": 1857,
+      "sha256": "aaf0caf2b861908128b4dcd235089b58ef2fe1878d668bf80c7fc2fc1d9816d5"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-startup-preflight.json",
+      "bytes": 345,
+      "sha256": "c471da986cfcd4d2cfe58e89098b3d56f06cf70f0d591af36293ed8a1bcb3f48"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-structural-role-link-dom.txt",
+      "bytes": 33484,
+      "sha256": "68ce845466463a15697a95834e27bef38b119452613597bdced2194d735bebe7"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-structural-role-link.png",
+      "bytes": 210022,
+      "sha256": "92f244b8c1fa2ff6b0551957a98bb566567c768be0333b40eb377ce0d0e055ea"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-submissions.json",
+      "bytes": 112850,
+      "sha256": "17bdd1b73becd75bd1bbd5e3bcb77561bbb887045bd1af5aef92f902097db719"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-terminal-jobs.json",
+      "bytes": 213425,
+      "sha256": "418d8cee7d76ce2e8fcbe74475e4b2756044d8a9948dc05ffda717831717d1e6"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-verified-native-identity.json",
+      "bytes": 7593,
+      "sha256": "4800253f42cca1fb2fca1cfd1eef3e5e182746383f1cf281b237ecc36ee1f50f"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-verify_identity.py",
+      "bytes": 2147,
+      "sha256": "9b9eab42068ffcba05ff706bb4d3366d354e08ac91eb8723bb9647a08c4d94f2"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/native-verify_roles.py",
+      "bytes": 3593,
+      "sha256": "346c3dcdcdc1551d4348b538ba1bb32522edb57049ca00aaa863dc8489233396"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-backend.log",
+      "bytes": 1667,
+      "sha256": "ca8565e13e8456c91579f3345f8adecb252673e2b8c7c756029fea622f067ccc"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-before-regressions.log",
+      "bytes": 1136,
+      "sha256": "dc98c95990beb4c9a88c26c9bf0b9b07788ac402f971b937dcca87a20bf329d9"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-final-ownership.log",
+      "bytes": 174,
+      "sha256": "bcd13853fe58643f86c41283c255eefa82a4a59357dbdc45cacc67719dad7920"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-final-patch-arms.json",
+      "bytes": 40313,
+      "sha256": "4439c6197f4250fce8da5355c059d9e4fd8408d766a258c25be361c3e082c4d3"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-frontend-build.log",
+      "bytes": 1274,
+      "sha256": "54295179ba467cbc634d07e595f00bbd3f488f247a73f0928d6ab91cc865f2da"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-frontend.log",
+      "bytes": 334,
+      "sha256": "a89341bf6ce23d98e4dff5cc56e63849fccab1b0bdae8030e633ec1f5af2c407"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-go-clean-full.log",
+      "bytes": 1911,
+      "sha256": "e0565f8bd9a43424899c6161561fd484d86087fca0e7e737fb87939d707bd03f"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-go-clean-race.log",
+      "bytes": 174,
+      "sha256": "63a8ae963507f217b2908dcc00b3d66864dc235fd34c7f3a540c811dc1cef5bc"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-go-final-variant-audit.log",
+      "bytes": 177,
+      "sha256": "0ff5b0a5a60f5f3f04ad002a3de3f433b1f2199ac7057ca539e4d5780f8bebbe"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-go-final-variant-coverage.log",
+      "bytes": 168,
+      "sha256": "d18e266b2dee099c90a003784911b5dc096bba31c6d99a24d16bc381b2d93b26"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-go-final-variant-inventory-audit.log",
+      "bytes": 177,
+      "sha256": "56a9cb69cff0b5fac273c7fa684afa83dd7b54da34f318a90f65ae50fadee877"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-go-final-variant-inventory-coverage.log",
+      "bytes": 168,
+      "sha256": "ba5c4745447be26a20cc402f0f19b2ca043a6efd0cff7f3f897be5e33e688d7e"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-go-final-variant-inventory-meaning.log",
+      "bytes": 177,
+      "sha256": "d3603b628acd95e5904ae9852be678bb1b335fbebf65b1c04465d46705852bc2"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-go-final-variant-inventory-passages.log",
+      "bytes": 177,
+      "sha256": "b03f802156c722c1483e2fe11084f1d4d5df2f6bf5958fdc3d17daba385fe557"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-go-final-variant-inventory-register.log",
+      "bytes": 177,
+      "sha256": "268a824fa1b4f373c780ad1912568b8c9cd7c4c1212607ee119a1fe116dbf32d"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-go-final-variant-inventory.log",
+      "bytes": 177,
+      "sha256": "da9200d5c49a04628e384bab45526a9e27b722e5008c35ac90617478cf2d8ff5"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-go-final-variant-meaning.log",
+      "bytes": 177,
+      "sha256": "48dee68f8a00b75696ae988077bd8e7e6808ac69e14f8d7705c1e8dd3590376a"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-go-final-variant-passages.log",
+      "bytes": 177,
+      "sha256": "e42164a0ee3455a34ba8a17fb28d474f26fe2def4eb4f3037651cdfee8666fb8"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-go-final-variant-register.log",
+      "bytes": 177,
+      "sha256": "8744f42baf2b5fe4a3203153db9dd100bb52b2091ec1a18781138283027c4e77"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-go-full.log",
+      "bytes": 1935,
+      "sha256": "8316eb5ade929b154397c1284c85d1dd0aa2ff2571f5123a68114a8085a9cf04"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-go-race.log",
+      "bytes": 174,
+      "sha256": "c2e71e681c8b5810864dd9bd17006ce5775a43641a8f5f99017706272cbf9488"
+    },
+    {
+      "path": "docs/validation/assets/party-roles/release-runtime-source-equivalence.json",
+      "bytes": 243,
+      "sha256": "61a258e7eed7657f2ca47aac126b151a860e1e2672731c539a48e0b29893b8e2"
+    }
+  ]
+}
