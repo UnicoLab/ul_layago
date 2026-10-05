@@ -4524,3 +4524,52 @@ No new Laya training, MLX or architecture-quality result is established here.
 
 [DelayLama chunk original provenance](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-chunk-original-provenance.md)
 · [Shared receipt](validation/delaylama-chunk-original-provenance-20261005.json).
+
+## L125 — Separate predicate witnesses from proposed graph meaning (2026-10-05)
+
+DelayLama now inventories full-original relationships for registered endpoint
+pairs without showing the proposed predicate, recorded fact, quotes or prior
+verdict. Keep causal effect, chronology, notice obligation, notice delivery and
+signature state distinct, with direction, negation and modality. Match original
+identity and exact spans deterministically; treat a matching inventory as a model
+candidate rather than proof of entailment. A second pass can share the first
+provider's errors and still sees model-derived endpoint labels.
+
+A controlled real-model/SQLite replay changes 13-case storage criteria from 4/13
+to 13/13: four valid candidates retained, nine unsuitable candidates withheld.
+The initial Event-only restriction reached 11/13 by overwithholding two valid
+undated controls. Narrow the construction profile's guard to known standing
+causes: a place/party/obligation must not substitute for an occurrence. Generic
+Entity/Concept labels remain candidates, not certified occurrences. Preserve
+failed draws and positive controls; a stricter validator can reduce useful recall.
+
+Five native source jobs complete in an isolated full stack. Dispersed English and
+French retain 23/23 frozen statement types and 6/7 date/role checks; reachable
+context includes distant consent and unsigned-amendment passages. The first
+positive source falsely stored a location as cause; the final native run retains
+the actual closure→stoppage event link and withholds two standing proxies. Exact
+quotes and connectivity alone never establish predicate correctness. A 12-case
+source recheck remains 11/12 because an explicit no-duty inventory has unresolved
+modality, and an acknowledgement role remains unknown. These synthetic development
+checks are not independent legal gold or a general accuracy estimate.
+
+Source-first statements, exact quotes and review history reach the prompt lab's
+server backup without changing a graph or activating prompts. Neighbor navigation
+is excluded from stable finding identity; authenticated legacy hashes remain
+read-only. Operational counts include withheld candidates and verify original
+hashes, but do not measure semantic accuracy. Full Go/race, 1,352 backend and 912
+frontend checks, production build, 12 patch arms and 11 variant suites pass. User
+data and source edits remain intact after controlled engine/API activation.
+
+For LayaGo datasets, use separate tasks for kind, direction, polarity, modality
+and endpoint role, preserving source/occurrence IDs and exact context. Retain
+chronology-versus-cause, signature-versus-notice, delivery-versus-duty and
+conditional-versus-observed hard negatives, with valid undated positive controls.
+Do not train on automatic support verdicts as independent truth. Benchmark
+precision/recall and escalation on held-out human-reviewed long/dispersed/OCR
+sources before enabling acceptance. No new Laya training, MLX, speed or architecture
+quality is established in this turn. Browser cache quota and broader predicate,
+applicability and date-role qualification remain open.
+
+[DelayLama source-first predicate audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-first-predicate-audit.md)
+· [Shared receipt](validation/delaylama-source-first-predicate-audit-20261005.json).

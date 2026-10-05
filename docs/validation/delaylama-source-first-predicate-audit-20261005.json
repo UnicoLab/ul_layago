@@ -1,0 +1,439 @@
+{
+  "date": "2026-10-05",
+  "learning": "L125",
+  "scope": "Synthetic development qualification of source-first predicate witnesses and construction-profile occurrence guards, not independent human/legal gold or general accuracy.",
+  "default_patch": 58,
+  "predicates": [
+    "CAUSED",
+    "CAUSES",
+    "CAUSED_DELAY",
+    "REQUIRES_NOTICE"
+  ],
+  "recheck": {
+    "trial": {
+      "cases": 12,
+      "pass": 9,
+      "failed": [
+        "signature-not-notice-en",
+        "different-occurrence-en",
+        "delivery-not-duty-en"
+      ]
+    },
+    "final": {
+      "cases": 12,
+      "pass": 11,
+      "failed": [
+        "delivery-not-duty-en"
+      ]
+    },
+    "erratum": "delivery-not-duty-en expectation corrected to explicit contradiction before the final draw. Final modality disagreement remains unresolved."
+  },
+  "storage": {
+    "baseline-storage": {
+      "cases": 12,
+      "pass": 4,
+      "failed": [
+        "sequence-not-cause-en",
+        "sequence-not-cause-fr",
+        "signature-not-notice-en",
+        "signature-not-notice-fr",
+        "conditional-cause-en",
+        "different-occurrence-en",
+        "reverse-direction-en",
+        "delivery-not-duty-en"
+      ]
+    },
+    "fixed-storage": {
+      "cases": 12,
+      "pass": 12,
+      "failed": []
+    },
+    "baseline-role-storage": {
+      "cases": 13,
+      "pass": 4,
+      "failed": [
+        "sequence-not-cause-en",
+        "sequence-not-cause-fr",
+        "signature-not-notice-en",
+        "signature-not-notice-fr",
+        "conditional-cause-en",
+        "different-occurrence-en",
+        "reverse-direction-en",
+        "delivery-not-duty-en",
+        "place-is-not-closure-occurrence"
+      ]
+    },
+    "fixed-role-storage": {
+      "cases": 13,
+      "pass": 11,
+      "failed": [
+        "explicit-cause-en",
+        "explicit-cause-fr"
+      ]
+    },
+    "baseline-final-storage": {
+      "cases": 13,
+      "pass": 4,
+      "failed": [
+        "sequence-not-cause-en",
+        "sequence-not-cause-fr",
+        "signature-not-notice-en",
+        "signature-not-notice-fr",
+        "conditional-cause-en",
+        "different-occurrence-en",
+        "reverse-direction-en",
+        "delivery-not-duty-en",
+        "place-is-not-closure-occurrence"
+      ]
+    },
+    "fixed-final-storage": {
+      "cases": 13,
+      "pass": 13,
+      "failed": []
+    }
+  },
+  "native": {
+    "terminal_source_jobs": 5,
+    "initial_type_checks": {
+      "pass": 23,
+      "total": 23
+    },
+    "initial_calendar_role_checks": {
+      "pass": 6,
+      "total": 7
+    },
+    "initial_positive_standing_proxy_failure_retained": true,
+    "final_gate": {
+      "explicit_event_cause_retained": true,
+      "no_standing_proxy_cause": true,
+      "all_critical_candidates_audited": true,
+      "storage_counts_verified": true,
+      "source_bound_operational_receipts": true,
+      "no_receipt_warning": true
+    },
+    "final_gate_pass": true,
+    "component_reachability": {
+      "english": [
+        15,
+        15
+      ],
+      "french": [
+        9,
+        9
+      ]
+    }
+  },
+  "verification": {
+    "backend_passed": 1352,
+    "frontend_passed": 912,
+    "frontend_files": 75,
+    "frontend_build_pass": true,
+    "go_full_pass": true,
+    "go_focused_race_pass": true,
+    "clean_idempotent_patch_arms": 12,
+    "optional_variant_suites": 11,
+    "console_errors_warnings": 0
+  },
+  "activation": {
+    "engine_sha256": "3f2f981349e6bad1420d519975a2fecd2da91acedc43f58fa318cb7b172964d7",
+    "graph_rows_unchanged": true,
+    "config_unchanged": true,
+    "finished_engine_jobs_archived": 0,
+    "api_healthy": true,
+    "journal_unchanged": true,
+    "journal": {
+      "count": 24,
+      "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+    },
+    "app_env_unchanged": true
+  },
+  "preservation": {
+    "protected_engine_source_files_unchanged": true,
+    "protected_app_artifacts_unchanged": true,
+    "user_studio_unchanged": true,
+    "orchid_studio_unchanged": true,
+    "user_graph_all_tables_unchanged": true,
+    "user_graph_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    }
+  },
+  "qa_cleanup": {
+    "qa_jobs_terminal": true,
+    "qa_journal_jobs": 1,
+    "qa_listeners_closed": true,
+    "owned_tab_closed": true,
+    "main_engine_healthy": true,
+    "prompt_lab_server_backup_contains_inventory": true,
+    "engine_health_before_cleanup": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 1,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 176,
+      "episode_count": 5,
+      "node_count": 103,
+      "schema": "general",
+      "status": "ok"
+    },
+    "closed_processes": [
+      {
+        "service": "engine",
+        "pid": 28192,
+        "port": 8097
+      },
+      {
+        "service": "api",
+        "pid": 28193,
+        "port": 8081
+      },
+      {
+        "service": "frontend",
+        "pid": 11005,
+        "port": 5175
+      }
+    ]
+  },
+  "limitations": [
+    "Source-matched model agreement is not semantic/legal certification; passes share a provider.",
+    "One explicit no-duty recheck stays insufficient because of a modality disagreement.",
+    "Acknowledgement date 2066-02-13 is correct but its role remains unknown; repeated/unavailable citations remain.",
+    "Only the named critical predicates in guarded deep-analysis paths are qualified; standard/inferred paths and other predicate aliases are outside scope.",
+    "Construction profile rejects known standing causes; generic Entity/Concept labels remain model candidates, not certified occurrences.",
+    "No historical graph migration, user-contract reanalysis, prompt activation, Laya training or MLX quality claim.",
+    "Browser cache quota warning remains; project session backup revision 1 contains the imported inventory.",
+    "Fresh extraction recall and independent long, real, OCR contracts remain unqualified."
+  ],
+  "proof": {
+    "docs/validation/assets/source-first-predicate-audit/cases.json": {
+      "sha256": "09526887572179b746d07e82427c603147c51a74a32ddb76b479230bf3dd5e53",
+      "bytes": 11223
+    },
+    "docs/validation/assets/source-first-predicate-audit/cases-final.json": {
+      "sha256": "99eeadf01deca44aec8b8b3b520cce876b54369a605fefa7f687ccecbe6b7428",
+      "bytes": 11222
+    },
+    "docs/validation/assets/source-first-predicate-audit/cases-role.json": {
+      "sha256": "546299050ed06727c2045deffc13d86ce572f29ac0fcc719ed8f55700b137aa7",
+      "bytes": 12404
+    },
+    "docs/validation/assets/source-first-predicate-audit/freeze.json": {
+      "sha256": "662ced0857c811a92d21c196357e2d83f9daa8bf054c558158cdf0ce86816d6d",
+      "bytes": 269
+    },
+    "docs/validation/assets/source-first-predicate-audit/freeze-final.json": {
+      "sha256": "de0c1bbb86686f15ae9d71a03921f4c42dadf644bff44c0188a828dbaeb907db",
+      "bytes": 529
+    },
+    "docs/validation/assets/source-first-predicate-audit/freeze-role.json": {
+      "sha256": "8d5b15658afc7e057b67ab683164d67e11874b00f8bedfcc56d601d5da970cff",
+      "bytes": 263
+    },
+    "docs/validation/assets/source-first-predicate-audit/backend-trial.json": {
+      "sha256": "1dbfaee1efd6d85b5e4c9128b748f644a55f392b7d1dc65a4fa2cb44a61f8b37",
+      "bytes": 184591
+    },
+    "docs/validation/assets/source-first-predicate-audit/backend-final.json": {
+      "sha256": "d0fcf14e82e92a098c72896321098f526c4e965d5598901251683fd395a174ef",
+      "bytes": 206359
+    },
+    "docs/validation/assets/source-first-predicate-audit/baseline-storage.json": {
+      "sha256": "a22f94dc48bb02b8fcdd7e4cfa3f6fd2071a22d732bdfad484022c91d0861520",
+      "bytes": 89291
+    },
+    "docs/validation/assets/source-first-predicate-audit/fixed-storage.json": {
+      "sha256": "28f351c9cfc66daca8b12794cc7e56bcbae2ba7711e96d237672ab8d77505543",
+      "bytes": 131584
+    },
+    "docs/validation/assets/source-first-predicate-audit/baseline-role-storage.json": {
+      "sha256": "0b53d07001ce7d0db717e0e2ec8a003d5ccdebfc1e20e1440d5a300bf0b94e6c",
+      "bytes": 103604
+    },
+    "docs/validation/assets/source-first-predicate-audit/fixed-role-storage.json": {
+      "sha256": "08178cddd8547639ed96e486e7db75caa733c61cdda05e886a65b0fa6b7485f6",
+      "bytes": 132641
+    },
+    "docs/validation/assets/source-first-predicate-audit/baseline-final-storage.json": {
+      "sha256": "0503aea586d94567ac628a468a8e4a4b7221afd35f67a1f6994de54fe42cfb2d",
+      "bytes": 103602
+    },
+    "docs/validation/assets/source-first-predicate-audit/fixed-final-storage.json": {
+      "sha256": "6967dcb1fba862d99824ee533ca61fce84a21dc2d65ad6334e869cf486f08545",
+      "bytes": 147587
+    },
+    "docs/validation/assets/source-first-predicate-audit/backend-trial.log": {
+      "sha256": "23a50874b91415ad07788aa69262aeca257552940c908d2f5cea07fd004914fe",
+      "bytes": 1878
+    },
+    "docs/validation/assets/source-first-predicate-audit/backend-final.log": {
+      "sha256": "ca130aa40fe47efbc977c19ae73dce1aaebcc7c489fecf970a83a407c0872aa4",
+      "bytes": 1879
+    },
+    "docs/validation/assets/source-first-predicate-audit/final-storage-run.log": {
+      "sha256": "af6a89f26d58a782a5da5d7bfacf8978811b7bed6b8a4e7a18a3555546941add",
+      "bytes": 26
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-cases.json": {
+      "sha256": "19b3ab70dfe6bddc14b6f744acb5e697265f59893267e51d25b9e0c8152436a5",
+      "bytes": 99182
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-freeze.json": {
+      "sha256": "ad6f0ace5acf25ea2af90a79cbec144fe5f77b1fa5277e1bbef7c4d7cffec3a6",
+      "bytes": 556
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-submissions.json": {
+      "sha256": "89ba29319fc3763084587d8317f965df095744ecf797c8adb2a10dffa116c0db",
+      "bytes": 121288
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-observations.json": {
+      "sha256": "9fcd9465e0cc6a9b844a4722815c07a53fb9fcaf634dd2d3c312848c84110a89",
+      "bytes": 200499
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-terminal-jobs.json": {
+      "sha256": "b59ae8ce894695923e0f8302b96c78e2081a0e15420949fd049905f216431c1e",
+      "bytes": 218473
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-gate.json": {
+      "sha256": "98d6b0bc3550ca2df7711ba8232191dce38a3060c45368b50c441b82e631c3bd",
+      "bytes": 9229
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-dispersed-notice-en-component.json": {
+      "sha256": "06212cc211a6ddb313648793bb7b77db2e0ee60dec2def0f105a3495b8bed5ef",
+      "bytes": 558995
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-conditional-refusal-fr-component.json": {
+      "sha256": "8fba198e292711fb326270508825190a1726c09919bd16d677e64060f8e9e613",
+      "bytes": 95910
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-explicit-cause-and-notice-en-snapshot.json": {
+      "sha256": "5b267d040410bacff0fb69da9c171280e4bfc6e41a8b333b7da821bbfd90c453",
+      "bytes": 166395
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-positive-recheck.json": {
+      "sha256": "af8cb32124cbbf10f19980a252bd45715a3aa5a733d7e35726ae8732d4c531d0",
+      "bytes": 122688
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-positive-recheck-dom.txt": {
+      "sha256": "d474b38c8c115773288c214a212e20c0a6e8245ff3308074f8939eca217c30c4",
+      "bytes": 22286
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-positive-recheck.png": {
+      "sha256": "0348e70aba82f91dd6a16e5551c6b4de35393845760c6780df60af58bfc534e5",
+      "bytes": 179636
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-legacy-review-identity-fixed.json": {
+      "sha256": "f6dc8f9cd8a1a36ef0376fb29838a39903e4c25d8e4bd5908d7842a05888f0a0",
+      "bytes": 764
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-case-final.json": {
+      "sha256": "4f94b0b54cff4a953e9ab9c5a80fea3dfd7e50518b6a96723f04c8e3d637346a",
+      "bytes": 898
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-freeze-final.json": {
+      "sha256": "458a6e6a8b222b6a593b4f3791aea08b8dad17e5efe1088641223406bc73f44c",
+      "bytes": 357
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-final-submission.json": {
+      "sha256": "c91fad64e9e5ce8f2210585a4ab7af6075830f40b38a7cbaa17c30b9faf9c326",
+      "bytes": 7756
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-final-observation.json": {
+      "sha256": "fff3d93da6dc91f5f1ee52ffe93333986c152378b785e40b2258e8365d552fb0",
+      "bytes": 27220
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-final-terminal-job.json": {
+      "sha256": "9edb83cc33ae2602f6e5828d2877a8cd2d021426f26c6d77790a98f9ea40b625",
+      "bytes": 54098
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-final-gate.json": {
+      "sha256": "411271152e1a8b659a7d3c5e37113a75915edf6d61b4c2c17c7e6f53244790fe",
+      "bytes": 6439
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-final-snapshot.json": {
+      "sha256": "25ba7c3c0401b4800feaed71d4f98341cfbd3c76f17c9a3117ede60e708218e5",
+      "bytes": 159814
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-prompt-lab-dom.txt": {
+      "sha256": "e71f4b28b7de59625ab04b6c405d29a3d1906dd59b8ff6e8862dbe3b92d4ba8d",
+      "bytes": 11768
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-prompt-lab.png": {
+      "sha256": "931cbf0f72ca3f25017a017ed2629779821285e54ca2129052e6e40ec95277a4",
+      "bytes": 141125
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-prompt-lab-backup.json": {
+      "sha256": "e46856e13ceedb8b3294abedee7a38305ebd63a55db5a19b5a31600ba35fe6df",
+      "bytes": 306243
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-browser-console.json": {
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-startup-empty-owner.json": {
+      "sha256": "a3112f07980ee198af73e22bdacb5b83da0b5250fe3fd8ad25f352091e7566dd",
+      "bytes": 32
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-startup-readiness-error.log": {
+      "sha256": "3997fd147e1799bd6b3683d3e014ee005f61b24c4c5f2c1b184742b4caed36c5",
+      "bytes": 4942
+    },
+    "docs/validation/assets/source-first-predicate-audit/e2e-cleanup.json": {
+      "sha256": "01c02481254564c94fd88940a9a55595e79221919b4540f0b273e44310acb762",
+      "bytes": 783
+    },
+    "docs/validation/assets/source-first-predicate-audit/checks-backend-all.log": {
+      "sha256": "41203f901174efc29ef2be70c0305a16d9647f976b6e19e55bd3948e48f94974",
+      "bytes": 1588
+    },
+    "docs/validation/assets/source-first-predicate-audit/checks-frontend-all.log": {
+      "sha256": "27e96b83a06eff6f29eaf9c7f7b7412658ad7166df08eeb978bba7c2cc956a5f",
+      "bytes": 344
+    },
+    "docs/validation/assets/source-first-predicate-audit/checks-frontend-build.log": {
+      "sha256": "0e4277868bf8213ba092d79c7640248ee458f547d57337db227d8ae61d66fdfd",
+      "bytes": 1274
+    },
+    "docs/validation/assets/source-first-predicate-audit/checks-go-all.log": {
+      "sha256": "593b500409062f8ca21d13eb42fe2e94afa65b1eb6cc8f5db3f38440f39e0161",
+      "bytes": 1918
+    },
+    "docs/validation/assets/source-first-predicate-audit/checks-go-race.log": {
+      "sha256": "394417f29c57fea2ff60fc03d4e6dd3a1f8de3b0284416a7a680ea888e12844c",
+      "bytes": 116
+    },
+    "docs/validation/assets/source-first-predicate-audit/checks-build.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "docs/validation/assets/source-first-predicate-audit/checks-final-patch-arms.json": {
+      "sha256": "d70370f6481084baa377f7ad75fecb18b62f90a57725df4ec1a31d03ba665341",
+      "bytes": 38225
+    },
+    "docs/validation/assets/source-first-predicate-audit/checks-patch-checks.log": {
+      "sha256": "bc2248983cb760f4a4ee9abb5f41b415bae8875b451a8a45801a3579d51fabf0",
+      "bytes": 7413
+    }
+  }
+}
