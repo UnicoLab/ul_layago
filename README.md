@@ -12,9 +12,10 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L125 finding](docs/learning-log.md#l125--separate-predicate-witnesses-from-proposed-graph-meaning-2026-10-05)
-separates exact-source grounding from predicate/direction/modality and occurrence
-roles, retaining failed trials and positive controls for future LayaGo evaluation.
+The latest [L140 finding](docs/learning-log.md#l140--independent-source-decisions-and-actual-runtime-controls-2026-10-06)
+records source-first claim decisions, silently dropped model controls, retained
+semantic failures and missing-target coverage. Exact quotations and successful
+execution remain separate from semantic accuracy.
 
 ## Build and use
 

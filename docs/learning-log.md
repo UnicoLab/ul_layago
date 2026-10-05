@@ -5198,3 +5198,46 @@ Use independent source-first decisions to study bias from earlier incorrect anal
 Any LayaGo routing or classifier experiment needs actual invocation-scope/mode verification,
 held-out human labels and retained abstention/negation failures before a quality or speed
 claim. Do not use review flags or exact-quote ratios as semantic ground truth.
+
+
+## L140 — Independent source decisions and actual runtime controls (2026-10-06)
+
+**Evidence:** [DelayLama receipt](validation/delaylama-source-first-claim-decisions-20261006.json)
+links original synthetic controls, actual outputs, failures, model request checks and
+browser proofs. No LayaGo/GLiNER/MLX training or performance measurement occurred.
+
+First claim decisions now use originals, event identity candidates and uniquely
+source-located graph passages; prior conclusions, graph explanations and draft
+verdicts are withheld. Graph paths nominate original context rather than certify
+meaning. Prior records remain inspectable. This separation improved some development
+answers but did not establish a complete or accurate contract model.
+
+A dedicated reasoning profile initially looked correct in YAML, but the installed
+Agentomatic driver silently dropped flat reasoning_effort. Actual request construction
+and runtime inspection exposed it; extra_body forwarding fixed it. An initial
+budgeted probe therefore used provider-default thinking, not the requested low
+setting. Evaluation must record actual controls, input scope and response identity,
+including silently ignored settings. JSON recovery must preserve original source/
+schema constraints; known truncation must not become a completed analysis.
+
+Seventy-one recorded application calls and two native source jobs were retained.
+After forwarding was fixed, the new C130 control preserved four unresolved rights
+and unknown undocumented outcomes. Harder C128 still rejected one cost target
+without an applicable rule; C129 preserved a grant/exclusion but omitted event
+targets. Earlier non-waiver polarity mistakes remain saved. Missing-target gaps,
+exact-quote ratios and model uncertainty are observations, not ground-truth labels.
+
+**Training implications:** separate retrieval, occurrence identity, request/decision
+object, source polarity, rule applicability, condition fulfillment and recorded
+outcomes. Include procedure-only clauses, permission refusals, explicit exclusions,
+grants, non-waivers and undocumented states as distinct multilingual controls.
+Preserve independent positive controls and abstention errors; do not train on a
+model rejection as gold simply because its quote matches. Split unseen contracts/
+templates and require human labels before semantic quality claims. A LayaGo router
+can nominate passages, while an independently evaluated classifier can propose
+states; neither should turn role proximity or contrastive similarity into entitlement.
+
+**Open:** graph mission edges still inferred from role co-occurrence need generation-
+time source grounding, long-dossier recall needs independent evaluation, and native
+job recovery across restart remains unfinished. This work added no LayaGo architecture,
+MLX acceleration or training supervisor changes.
