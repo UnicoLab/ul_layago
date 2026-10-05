@@ -1,0 +1,232 @@
+{
+  "date": "2026-10-05",
+  "scope": "Bounded failed source-task diagnostics, whole JSON action-list compatibility, unused optional scalar premise handling and output-limit failure partitions.",
+  "full_semantic_qualification": false,
+  "all_declared_final_graph_checks_passed": true,
+  "known_cross_action_duration_counterexample_passed": false,
+  "model": "Gemini gemini-3.1-flash-lite",
+  "candidate_passes": 1,
+  "critic_passes": 0,
+  "schema_preset": "construction_claims",
+  "qualification_embeddings": "noop in owned QA only; normal user stack retains Gemini embeddings",
+  "metrics": {
+    "accepted_jobs": 17,
+    "terminal_done_jobs": 17,
+    "final_cases": 14,
+    "final_actions": 56,
+    "final_declared_gate": true,
+    "distinct_actions": 56,
+    "performers": 56,
+    "performer_quotes": 56,
+    "performance_roles": 56,
+    "calendars": 56,
+    "association_calendar": 56,
+    "association_edges": 109,
+    "final_inventory_failed": 0,
+    "final_inventory_completed": 11,
+    "final_inventory_partial": 3,
+    "final_array_inventories": 1,
+    "final_unsupported_duration_reports": 0,
+    "separate_performance_task_requests": 3,
+    "source_inventory_task_requests": 17,
+    "additional_task_requests": 20,
+    "required_causation": {
+      "passed": 6,
+      "declared": 6
+    },
+    "forbidden_causation": {
+      "passed": 28,
+      "declared": 28
+    },
+    "forbidden_observed_actions": {
+      "passed": 12,
+      "declared": 12
+    },
+    "declared_durations": {
+      "passed": 6,
+      "declared": 6
+    },
+    "declared_impacts": {
+      "passed": 6,
+      "declared": 6
+    },
+    "forbidden_durations": {
+      "passed": 36,
+      "declared": 36
+    },
+    "json_field_artifacts": 0,
+    "known_cross_action_duration_counterexample_passed": false
+  },
+  "provider_http_retry_count": "not instrumented",
+  "patches_added": [
+    "source-response-diagnostics",
+    "source-array-inventory",
+    "unused-optional-source-premises",
+    "failed-source-limit-counts"
+  ],
+  "diagnosed_fresh_failure": {
+    "case": "long-original-fr-2116",
+    "format": "json_array",
+    "response_bytes": 1538,
+    "response_sha256": "ece98d937e5ccb6ba2fa29904d7c88cf28588a4fc8d5a4b9a3bdd4525d005fb7",
+    "excerpt_truncated": false,
+    "note": "A fresh actual-model run, not retroactive diagnosis of the prior unretained response."
+  },
+  "model_phase_source": "default40",
+  "model_phase_binary_sha256": "4aaf0f615dad42f6848ee0f0c2b6b441b3b12b5c4fcd09cfa98bf2b66652af5f",
+  "release_engine_source_commit": "2e235af899a224902716c92b765ca67c97e1cba9",
+  "release_engine_sha256": "bcc89ca5bca70e50dfb17bda33ed5546e6e22d1750507ac810c8e5b1b04cc3cc",
+  "release_delta": "default41 changes only counts on wholly withheld output-limit responses; fault tests and exact-response replay executed on default41.",
+  "exact_failure_replay": {
+    "mode": "fixed_response_replay",
+    "network_model_requests": 0,
+    "provider_task_invocations": 1,
+    "located_actions": 2,
+    "status": "completed",
+    "source": "exact-failed-response-replay.json"
+  },
+  "validation": {
+    "backend": {
+      "exit_code": 0,
+      "passed": 1088
+    },
+    "frontend": {
+      "exit_code": 0,
+      "passed": 786
+    },
+    "frontend_build": {
+      "exit_code": 0
+    },
+    "default_race": {
+      "exit_code": 0
+    },
+    "engine_suites": [
+      {
+        "source": "default41",
+        "exit_code": 0
+      }
+    ],
+    "variant_tests": [
+      {
+        "arm": "audit",
+        "exit_code": 0
+      },
+      {
+        "arm": "register",
+        "exit_code": 0
+      },
+      {
+        "arm": "meaning",
+        "exit_code": 0
+      },
+      {
+        "arm": "passages",
+        "exit_code": 0
+      },
+      {
+        "arm": "coverage",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-audit",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-register",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-meaning",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-passages",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-coverage",
+        "exit_code": 0
+      }
+    ]
+  },
+  "patch_combinations": 12,
+  "reapplication_idempotent": true,
+  "diagnostic_excerpt_max_bytes": 8192,
+  "diagnostic_excerpt_in_app_history": false,
+  "diagnostic_excerpt_in_graph_properties": false,
+  "diagnostic_excerpt_in_logs": false,
+  "browser": {
+    "owned_port": 5175,
+    "failed_stage_reason_verified": true,
+    "raw_failed_output_not_shown_as_evidence": true,
+    "final_long_original_inventory_completed": true,
+    "final_console_errors": 0,
+    "user_port_5173_untouched": true,
+    "owned_tab_closed": true
+  },
+  "remaining_limits": [
+    "Known synthetic regressions and fixed-response replay are not blind real-contract qualification.",
+    "Three final source inventories remained partial; complete coverage remains unestablished.",
+    "Existing guard admits a model duration candidate from another sentence if both actions and scalar share a broad quoted line. It proves location, not semantic ownership. This failed counterexample remains open.",
+    "Oversized response diagnostics are bounded; model-output limits and indexed source budgets remain.",
+    "English fixture metadata still defaults to French; language metadata was not qualified.",
+    "No new Laya/GLiNER training or acceleration qualification.",
+    "Earlier failed response bodies were not retained; their exact historical shapes remain unknown."
+  ],
+  "assets": "assets/source-response-diagnostics",
+  "asset_manifest": "assets/source-response-diagnostics/sha256.json",
+  "activation": {
+    "graph_rows_unchanged": true,
+    "configuration_unchanged": true,
+    "journal_unchanged": true,
+    "artifacts_preserved": 32,
+    "studio_sessions_preserved": 2,
+    "protected_local_engine_sources_preserved": 14,
+    "existing_contracts_reanalyzed": false
+  },
+  "cleanup": {
+    "owned_services_stopped": [
+      36885,
+      36886,
+      21217
+    ],
+    "owned_browser_tab_closed": "108",
+    "accepted_jobs": 17,
+    "terminal_done_jobs": 17,
+    "current_finished_jobs_archived": 14,
+    "private_graph_backup_retained": true,
+    "patch_clones_removed": [
+      "patch-default",
+      "patch-audit",
+      "patch-register",
+      "patch-meaning",
+      "patch-passages",
+      "patch-coverage",
+      "patch-inventory",
+      "patch-inventory-audit",
+      "patch-inventory-register",
+      "patch-inventory-meaning",
+      "patch-inventory-passages",
+      "patch-inventory-coverage",
+      "final-patch-default",
+      "final-patch-audit",
+      "final-patch-register",
+      "final-patch-meaning",
+      "final-patch-passages",
+      "final-patch-coverage",
+      "final-patch-inventory",
+      "final-patch-inventory-audit",
+      "final-patch-inventory-register",
+      "final-patch-inventory-meaning",
+      "final-patch-inventory-passages",
+      "final-patch-inventory-coverage"
+    ],
+    "user_services_untouched_by_cleanup": true,
+    "private_scratch_directory_mode": "0700"
+  },
+  "counterexample_on_release_source": "assets/source-response-diagnostics/release-duration-counterexample.json"
+}

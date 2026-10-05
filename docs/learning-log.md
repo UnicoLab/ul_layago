@@ -3591,3 +3591,67 @@ normative roles, dispersed premises, amendments and PDFs remain unqualified.
 
 See the [DelayLama report and retained failures](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-performance-source-review.md)
 and [shared receipt](validation/delaylama-performance-source-review-20261005.json).
+
+## L106 — Diagnose output shapes, distinguish unused fields and preserve semantic counterexamples (2026-10-05)
+
+**Observed (DelayLama):** a fresh long-French source inventory failed because its
+1,538-byte Gemini response was a JSON action list rather than the requested
+`events` object. Bounded failure diagnostics captured its exact bytes and digest;
+this does not diagnose the older response whose body was unavailable. Whole-array
+compatibility now uses the same source/role/count guards as the wrapper. Malformed
+rows, prose/multiple values, invented quotations and over-limit inventories remain
+withheld, without an application retry. Replay of the exact failed bytes on release
+source completed with two located actions and zero network model requests.
+
+Diagnostics retain at most 8,192 readable UTF-8 bytes in a scoped engine job
+receipt. App history and evidence views receive only validated metadata and a
+human-readable reason; failed text does not become graph facts or citations and
+is not logged. Over-limit proposal lists are not retained in full, and their
+wholly withheld counts preserve the receipt partition. Do not confuse an inventory
+withheld before passage validation with a failed original quotation match.
+
+Empty optional duration/effect values with populated line ranges had produced
+spurious duration warnings. The indexed-source parser now treats these ranges as
+unused when no scalar or explicit legacy premise was proposed. Nonempty scalars
+retain their checks. This is not proof that the original has no duration/effect;
+missing fields still require independent coverage assessment.
+
+**Measured:** seventeen new accepted jobs ended `done`: a three-case diagnostic
+phase followed by fourteen known synthetic regressions. The final declared gate
+passed 56/56 distinct actions, performers/quotations, performance roles/premises,
+calendars and association-calendar checks; 109 associations were inspected. It
+passed 6/6 required causes/durations/impacts, 28/28 forbidden causes, 12/12
+unperformed negatives and 36/36 foreign-duration checks, with no JSON artifacts.
+Eleven final inventories completed, three remained partial and none failed. One
+again returned an array and was accepted. There were seventeen inventory task
+requests and three separate performance task requests, not a measured total
+pipeline/HTTP call count. Provider retries were not instrumented.
+
+Gemini `gemini-3.1-flash-lite` used one candidate pass, zero critic passes and the
+construction-claims preset. Noop embeddings were confined to owned QA. Gold was
+not model input or graph seed. Runs after changes are known-case regressions, not
+blind real-contract qualification; English fixture language metadata still defaults
+to French. Actual-model results used default40. Release default41 changes only
+wholly withheld output-limit counts, validated through fault tests, full Go/race
+suites, patch combinations and exact-response replay rather than another fresh
+model run. Backend 1,088 tests, frontend 786 tests and build passed; twelve patch
+combinations reapplied idempotently and eleven optional-engine suites passed.
+Normal activation preserved user data/configuration and local engine source edits.
+
+**Retained semantic failure:** fixed model output assigned "five days" to the
+engineer's return in "Engineer returned the file. Inspector visited for five days."
+A whole-line original premise contains both assertions, so the existing geometry
+can accept a located duration **model candidate** without proving ownership. A
+failed focused test and reproduction on final release source remain recorded;
+zero network calls and zero graph writes were made by this counterexample.
+The passing unmatched-literal regression does not qualify this ownership error.
+
+**Learning:** never substitute quote location for scalar meaning or count only
+cases where the first extractor already got the field right. Add independent
+scalar ownership/ambiguity assessment, test omitted and conflicting duration
+candidates, and require human-approved training labels. A clean output shape and
+completed inventory do not certify legal applicability or complete coverage.
+This audit adds no new Laya/GLiNER training or acceleration qualification.
+
+See the [DelayLama diagnostic audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-response-diagnostics.md)
+and [shared receipt](validation/delaylama-source-response-diagnostics-20261005.json).
