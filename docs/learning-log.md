@@ -4203,3 +4203,63 @@ Laya training, MLX performance or architecture result is claimed.
 
 [DelayLama structured-source audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-structured-source-inventory.md)
 · [Shared receipt](validation/delaylama-structured-source-inventory-20261005.json).
+
+## L118 — Separate source navigation from semantic truth (2026-10-05)
+
+DelayLama's previous graph extracted seventeen source assertion/action candidates,
+but only eight were reachable from the payment permission. A deterministic source
+outline now links each located stored finding to its original section/document.
+The controlled replay on a copy of that same graph expands membership from
+**8/17 to 17/17**, without calling a model or modifying any existing fact or edge,
+including properties and timestamps. Eleven source anchors and thirty-eight
+containment links are added. Measure this as structural reachability, not recall,
+semantic relationship accuracy or understanding of every relevant contract term.
+
+Structural provenance, original episode/project/tenant identity, source hashes
+and exact UTF-8 byte boundaries remain explicit. Unique own-action/source quotes
+gate containment; foreign, stale, repeated, fabricated or unresolved quotes are
+withheld. Nested headings retain distinct source positions. Source document and
+section nodes cannot be entity-merged across documents just because labels match.
+Missing parent storage stays partial instead of quietly assigning a different
+parent. Per-analysis opt-in is captured independently for queued jobs, avoiding
+shared mutable flags. The application independently validates current originals,
+spans and endpoint bounds, while leaving heading interpretation unqualified.
+
+Fresh full-stack model checks retain **13/13 frozen C35 type checks** and **7/7
+English/French checks** each, expected dates, inspection actors and non-occurrence
+deadlines. All four structural passes complete with exact original spans. The
+fresh C35 graph has one additional semantic node/edge compared with the baseline;
+do not credit this model variability to structural storage. The controlled replay
+isolates the implementation's actual contribution. All source inventories remain
+partial and these small translated synthetic cases are not independent benchmarks.
+
+Source anchors/containment are hidden from the main fact list and semantic review
+queue by default. Surrounding context exposes them separately, retains highlighted
+original quotes and keeps competing or document-qualified clause references
+unresolved. A full component can contain irrelevant statements; no structural
+path proves dependency, causation, applicability or amendment precedence. Model
+context retains structural ranges while original bodies are supplied separately,
+avoiding document copies in every containment quote. Large-context budgets and
+relevance selection still need qualification.
+
+For LayaGo training and evaluation, maintain separate targets for formatting
+boundaries, original span selection, assertion discovery/classification, premise
+ownership, structural reachability and directed semantic predicates. Synthetic
+families should include parallel clauses, repeated headings across documents,
+unheaded text, nested exceptions, unsigned amendments, explicit and implicit
+references, absence-of-record statements and unrelated nearby clauses. Freeze
+expected records and relationships independently. Do not train a classifier to
+turn proximity or containment into a causal label; include abstention and hard
+negative pairs. A fast classifier may select context candidates, but this result
+provides no new model training, accuracy, MLX or speed measurement.
+
+Validation passes 1,231 backend tests, 854 frontend tests/build, Go/race checks,
+twelve idempotent patch combinations and eleven optional suites. The real browser
+checks semantic/structural separation and readable evidence. Existing user graphs,
+configuration, journal, reviews and source edits are unchanged; no historical
+backfill or reanalysis occurs. A separate source-only backfill workflow, independent
+long/dispersed/OCR contracts, implicit topic links, predicate recall, legal
+applicability and whole-context budgets remain work items.
+
+[DelayLama source-structure audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-structure.md)
+· [Shared receipt](validation/delaylama-source-structure-20261005.json).

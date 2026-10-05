@@ -1,0 +1,1264 @@
+{
+  "version": 1,
+  "date": "2026-10-05",
+  "feature": "original_source_structure",
+  "default_engine_patch_count": 55,
+  "shared_learning": "L118",
+  "source_protocol": "source-structure-v1",
+  "engine_source_commit": "c5df8f2c685a0086032ab50ad2e7254ccf64f98a",
+  "tests": {
+    "backend": {
+      "exit_code": 0,
+      "passed": 1231
+    },
+    "frontend": {
+      "exit_code": 0,
+      "passed": 854
+    },
+    "frontend_build": {
+      "exit_code": 0
+    },
+    "default_race": {
+      "exit_code": 0
+    },
+    "engine_suites": [
+      {
+        "exit_code": 0,
+        "log": "go-all.log"
+      }
+    ],
+    "patch_arms": [
+      {
+        "arm": "default",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph relation predicate meaning: applied\nChronograph source statement semantics: applied\nChronograph statement participant roles: applied\nChronograph source event categories: applied\nChronograph performer event context: applied\nChronograph source classified plans: applied\nChronograph source inventory format recovery: applied\nChronograph structured source inventory: applied\nChronograph source structure: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": ""
+      },
+      {
+        "arm": "audit",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph relation predicate meaning: applied\nChronograph source statement semantics: applied\nChronograph statement participant roles: applied\nChronograph source event categories: applied\nChronograph performer event context: applied\nChronograph source classified plans: applied\nChronograph source inventory format recovery: applied\nChronograph structured source inventory: applied\nChronograph source structure: applied\nChronograph event role coverage: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "register",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph relation predicate meaning: applied\nChronograph source statement semantics: applied\nChronograph statement participant roles: applied\nChronograph source event categories: applied\nChronograph performer event context: applied\nChronograph source classified plans: applied\nChronograph source inventory format recovery: applied\nChronograph structured source inventory: applied\nChronograph source structure: applied\nChronograph event role register: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "meaning",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph relation predicate meaning: applied\nChronograph source statement semantics: applied\nChronograph statement participant roles: applied\nChronograph source event categories: applied\nChronograph performer event context: applied\nChronograph source classified plans: applied\nChronograph source inventory format recovery: applied\nChronograph structured source inventory: applied\nChronograph source structure: applied\nChronograph event role register: applied\nChronograph event role meaning: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "passages",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph relation predicate meaning: applied\nChronograph source statement semantics: applied\nChronograph statement participant roles: applied\nChronograph source event categories: applied\nChronograph performer event context: applied\nChronograph source classified plans: applied\nChronograph source inventory format recovery: applied\nChronograph structured source inventory: applied\nChronograph source structure: applied\nChronograph event role register: applied\nChronograph event role passages: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "coverage",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph relation predicate meaning: applied\nChronograph source statement semantics: applied\nChronograph statement participant roles: applied\nChronograph source event categories: applied\nChronograph performer event context: applied\nChronograph source classified plans: applied\nChronograph source inventory format recovery: applied\nChronograph structured source inventory: applied\nChronograph source structure: applied\nChronograph source action coverage: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "inventory",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph relation predicate meaning: applied\nChronograph source statement semantics: applied\nChronograph statement participant roles: applied\nChronograph source event categories: applied\nChronograph performer event context: applied\nChronograph source classified plans: applied\nChronograph source inventory format recovery: applied\nChronograph structured source inventory: applied\nChronograph source structure: applied\nChronograph source action inventory: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "inventory-audit",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph relation predicate meaning: applied\nChronograph source statement semantics: applied\nChronograph statement participant roles: applied\nChronograph source event categories: applied\nChronograph performer event context: applied\nChronograph source classified plans: applied\nChronograph source inventory format recovery: applied\nChronograph structured source inventory: applied\nChronograph source structure: applied\nChronograph source action inventory: applied\nChronograph event role coverage: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "inventory-register",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph relation predicate meaning: applied\nChronograph source statement semantics: applied\nChronograph statement participant roles: applied\nChronograph source event categories: applied\nChronograph performer event context: applied\nChronograph source classified plans: applied\nChronograph source inventory format recovery: applied\nChronograph structured source inventory: applied\nChronograph source structure: applied\nChronograph source action inventory: applied\nChronograph event role register: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "inventory-meaning",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph relation predicate meaning: applied\nChronograph source statement semantics: applied\nChronograph statement participant roles: applied\nChronograph source event categories: applied\nChronograph performer event context: applied\nChronograph source classified plans: applied\nChronograph source inventory format recovery: applied\nChronograph structured source inventory: applied\nChronograph source structure: applied\nChronograph source action inventory: applied\nChronograph event role register: applied\nChronograph event role meaning: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "inventory-passages",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph relation predicate meaning: applied\nChronograph source statement semantics: applied\nChronograph statement participant roles: applied\nChronograph source event categories: applied\nChronograph performer event context: applied\nChronograph source classified plans: applied\nChronograph source inventory format recovery: applied\nChronograph structured source inventory: applied\nChronograph source structure: applied\nChronograph source action inventory: applied\nChronograph event role register: applied\nChronograph event role passages: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      },
+      {
+        "arm": "inventory-coverage",
+        "apply_exit": 0,
+        "output": "Chronograph source date precision: already applied\nChronograph event relationships: already applied\nChronograph analysis job control: already applied\nChronograph quoted occurrences: already applied\nChronograph occurrence identity: already applied\nChronograph occurrence alias: already applied\nChronograph organization boundaries: already applied\nChronograph event direct completion: already applied\nChronograph date value types: already applied\nChronograph path test portability: already applied\nChronograph analysis job schema: already applied\nChronograph profile occurrence: already applied\nChronograph domain actors: already applied\nChronograph observed actions: already applied\nChronograph reviewed performers: already applied\nChronograph document identifiers: already applied\nChronograph startup schema config: already applied\nChronograph dated dispatch: already applied\nChronograph event date roles: already applied\nChronograph event performers: already applied\nChronograph issued dispatch: already applied\nChronograph source scalar associations: already applied\nChronograph repeated event merging: already applied\nChronograph source action frame: already applied\nChronograph performer premise selection: already applied\nChronograph event relation context: already applied\nChronograph relation context template: already applied\nChronograph selected context quotation: already applied\nChronograph event duration premises: already applied\nChronograph duration impact summary: already applied\nChronograph event duration template: already applied\nChronograph undated event template: already applied\nChronograph source action recovery: already applied\nChronograph structured source events: already applied\nChronograph undated performance review: already applied\nChronograph undated calendar eligibility: already applied\nChronograph independent performance review: already applied\nChronograph source response diagnostics: applied\nChronograph source array inventory: applied\nChronograph unused optional source premises: applied\nChronograph failed source limit counts: applied\nChronograph duration ownership review: applied\nChronograph complete analysis request validation: applied\nChronograph parallel assertion preservation: applied\nChronograph relation assertion identity: applied\nChronograph relation reference resolution: applied\nChronograph relation predicate meaning: applied\nChronograph source statement semantics: applied\nChronograph statement participant roles: applied\nChronograph source event categories: applied\nChronograph performer event context: applied\nChronograph source classified plans: applied\nChronograph source inventory format recovery: applied\nChronograph structured source inventory: applied\nChronograph source structure: applied\nChronograph source action inventory: applied\nChronograph source action coverage: applied\n",
+        "error": "",
+        "idempotent": true,
+        "second_error": "",
+        "test_exit": 0
+      }
+    ],
+    "variant_tests": [
+      {
+        "arm": "audit",
+        "exit_code": 0
+      },
+      {
+        "arm": "register",
+        "exit_code": 0
+      },
+      {
+        "arm": "meaning",
+        "exit_code": 0
+      },
+      {
+        "arm": "passages",
+        "exit_code": 0
+      },
+      {
+        "arm": "coverage",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-audit",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-register",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-meaning",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-passages",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-coverage",
+        "exit_code": 0
+      }
+    ],
+    "binary_sha256": "d13a4b8f40e72ccda4f3e82c619630613e3339ee1d157596e80e6320a713a92c",
+    "engine_source_commit": "c5df8f2c685a0086032ab50ad2e7254ccf64f98a",
+    "independent_benchmark": false,
+    "full_contract_qualification": false
+  },
+  "controlled_replay": {
+    "project_id": "structured-inventory-qa-c35-20261005-092128-024af2",
+    "controlled_replay": true,
+    "model_called": false,
+    "original_nodes_and_edges_unchanged": true,
+    "baseline_candidates": 17,
+    "candidate_members_before": 8,
+    "candidate_members_after": 17,
+    "before_component_nodes": 14,
+    "after_component_nodes": 40,
+    "new_source_anchors": 11,
+    "new_containment_links": 38,
+    "full_semantic_context_unqualified": true
+  },
+  "frozen_c35": {
+    "project_id": "structured-inventory-qa-c35-20261005-095340-30d0d4",
+    "frozen_expected_type_checks": [
+      {
+        "fragment": "Amber Client Ltd must pay Birch Works Ltd invoices",
+        "expected_type": "Obligation",
+        "matching_types": [
+          "Obligation"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "The completion deadline for Birch Works Ltd",
+        "expected_type": "Event",
+        "matching_types": [
+          "Event"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "No completion is reported",
+        "expected_type": "NegativeAssertion",
+        "matching_types": [
+          "NegativeAssertion"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "Cedar Engineer Ltd inspected the foundations",
+        "expected_type": "Event",
+        "matching_types": [
+          "Event"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "That inspection did not constitute approval",
+        "expected_type": "NegativeAssertion",
+        "matching_types": [
+          "NegativeAssertion"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "Birch Works Ltd must submit a written notice",
+        "expected_type": "Obligation",
+        "matching_types": [
+          "Obligation"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "Cedar Engineer Ltd may approve invoices",
+        "expected_type": "Permission",
+        "matching_types": [
+          "Permission"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "No written consent is recorded",
+        "expected_type": "NegativeAssertion",
+        "matching_types": [
+          "NegativeAssertion"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "Amber Client Ltd must give written consent",
+        "expected_type": "Obligation",
+        "matching_types": [
+          "Obligation"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "No accepted programme is supplied",
+        "expected_type": "NegativeAssertion",
+        "matching_types": [
+          "NegativeAssertion"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "The proposed completion deadline for Birch Works Ltd",
+        "expected_type": "Event",
+        "matching_types": [
+          "Event"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "Neither party has signed Amendment A2",
+        "expected_type": "NegativeAssertion",
+        "matching_types": [
+          "NegativeAssertion"
+        ],
+        "passed": true
+      },
+      {
+        "fragment": "The proposed change is not effective",
+        "expected_type": "NegativeAssertion",
+        "matching_types": [
+          "NegativeAssertion"
+        ],
+        "passed": true
+      }
+    ],
+    "type_checks_passed": 13,
+    "type_checks_total": 13,
+    "nonoccurrence_checks": [
+      {
+        "fragment": "The completion deadline for Birch Works Ltd",
+        "passed": true
+      },
+      {
+        "fragment": "The proposed completion deadline for Birch Works Ltd",
+        "passed": true
+      }
+    ],
+    "inspection_performer": {
+      "expected": "Cedar Engineer Ltd",
+      "actual": [
+        "Cedar Engineer Ltd"
+      ],
+      "passed": true
+    },
+    "source_passes": [
+      {
+        "job_id": "ecebe517-8144-470c-a5b2-e2b492c26108",
+        "source": "source:original-contract-c35",
+        "job_status": "done",
+        "source_inventory_status": "partial",
+        "model_calls": 1,
+        "response_recovery": null,
+        "source_failure": null
+      },
+      {
+        "job_id": "19fe69ee-2c94-4707-85e9-92291809762a",
+        "source": "source:proposed-amendment-a2",
+        "job_status": "done",
+        "source_inventory_status": "partial",
+        "model_calls": 1,
+        "response_recovery": null,
+        "source_failure": null
+      }
+    ],
+    "accepted_terminal_jobs": 2,
+    "graph_counts": {
+      "nodes": 41,
+      "edges": 61
+    },
+    "independent_benchmark": false,
+    "full_semantic_qualification": false
+  },
+  "additional_cases": [
+    {
+      "case": "record-negative-en",
+      "project_id": "record-negative-qa-en-20261005-095358-f7f736",
+      "types": [
+        {
+          "fragment": "Harbor Client Ltd must pay Canal Builder Ltd",
+          "expected_type": "Obligation",
+          "types": [
+            "Obligation"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "No written consent has been supplied",
+          "expected_type": "NegativeAssertion",
+          "types": [
+            "NegativeAssertion"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "Ridge Engineer Ltd inspected the retaining walls",
+          "expected_type": "Event",
+          "types": [
+            "Event"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "That inspection does not establish completion",
+          "expected_type": "NegativeAssertion",
+          "types": [
+            "NegativeAssertion"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "The completion deadline for Canal Builder Ltd",
+          "expected_type": "Event",
+          "types": [
+            "Event"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "No completion certificate is provided",
+          "expected_type": "NegativeAssertion",
+          "types": [
+            "NegativeAssertion"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "Ridge Engineer Ltd may approve payment",
+          "expected_type": "Permission",
+          "types": [
+            "Permission"
+          ],
+          "passed": true
+        }
+      ],
+      "type_checks_passed": 7,
+      "type_checks_total": 7,
+      "dates": [
+        {
+          "fragment": "Ridge Engineer Ltd inspected the retaining walls",
+          "expected_date": "2074-07-09",
+          "expected_role": "observed",
+          "dates": [
+            "2074-07-09"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "The completion deadline for Canal Builder Ltd",
+          "expected_date": "2074-12-18",
+          "expected_role": "deadline",
+          "dates": [
+            "2074-12-18"
+          ],
+          "passed": true
+        }
+      ],
+      "actor": {
+        "expected": "Ridge Engineer Ltd",
+        "actual": [
+          "Ridge Engineer Ltd"
+        ],
+        "passed": true
+      },
+      "deadline_nonoccurrence": true,
+      "graph_counts": {
+        "nodes": 19,
+        "edges": 29
+      },
+      "independent_benchmark": false
+    },
+    {
+      "case": "record-negative-fr",
+      "project_id": "record-negative-qa-fr-20261005-095358-9b9424",
+      "types": [
+        {
+          "fragment": "Port Client SA doit payer Canal Bâtisseur SA",
+          "expected_type": "Obligation",
+          "types": [
+            "Obligation"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "Aucun accord écrit n'est fourni",
+          "expected_type": "NegativeAssertion",
+          "types": [
+            "NegativeAssertion"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "Crête Ingénieur SA a inspecté les murs de soutènement",
+          "expected_type": "Event",
+          "types": [
+            "Event"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "Cette inspection ne constate pas l'achèvement",
+          "expected_type": "NegativeAssertion",
+          "types": [
+            "NegativeAssertion"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "La date limite d'achèvement pour Canal Bâtisseur SA",
+          "expected_type": "Event",
+          "types": [
+            "Event"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "Aucun certificat d'achèvement n'est fourni",
+          "expected_type": "NegativeAssertion",
+          "types": [
+            "NegativeAssertion"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "Crête Ingénieur SA peut approuver le paiement",
+          "expected_type": "Permission",
+          "types": [
+            "Permission"
+          ],
+          "passed": true
+        }
+      ],
+      "type_checks_passed": 7,
+      "type_checks_total": 7,
+      "dates": [
+        {
+          "fragment": "Crête Ingénieur SA a inspecté les murs de soutènement",
+          "expected_date": "2074-07-09",
+          "expected_role": "observed",
+          "dates": [
+            "2074-07-09"
+          ],
+          "passed": true
+        },
+        {
+          "fragment": "La date limite d'achèvement pour Canal Bâtisseur SA",
+          "expected_date": "2074-12-18",
+          "expected_role": "deadline",
+          "dates": [
+            "2074-12-18"
+          ],
+          "passed": true
+        }
+      ],
+      "actor": {
+        "expected": "Crête Ingénieur SA",
+        "actual": [
+          "Crête Ingénieur SA"
+        ],
+        "passed": true
+      },
+      "deadline_nonoccurrence": true,
+      "graph_counts": {
+        "nodes": 24,
+        "edges": 35
+      },
+      "independent_benchmark": false
+    }
+  ],
+  "source_receipts": [
+    {
+      "project_id": "structured-inventory-qa-c35-20261005-095340-30d0d4",
+      "source": "source:original-contract-c35",
+      "source_structure": {
+        "version": 1,
+        "protocol": "source-structure-v1",
+        "status": "completed",
+        "source_sha256": "db7dd6a2bae6b262f30da005e89d295237d7ae24865c4dfd73dfbe67f3210723",
+        "proposed": 20,
+        "located": 20,
+        "linked": 20,
+        "withheld": 0,
+        "failed": 0,
+        "documents_stored": 1,
+        "sections_proposed": 8,
+        "sections_stored": 8,
+        "containment_stored": 28
+      },
+      "source_inventory_status": "partial",
+      "source_inventory_protocol": "native_schema",
+      "source_inventory_calls": 1
+    },
+    {
+      "project_id": "structured-inventory-qa-c35-20261005-095340-30d0d4",
+      "source": "source:proposed-amendment-a2",
+      "source_structure": {
+        "version": 1,
+        "protocol": "source-structure-v1",
+        "status": "completed",
+        "source_sha256": "82bff9678ec659d37bf60886ef72051d5c4b97ebc041b63952090754deaa5515",
+        "proposed": 10,
+        "located": 10,
+        "linked": 10,
+        "withheld": 0,
+        "failed": 0,
+        "documents_stored": 1,
+        "sections_proposed": 1,
+        "sections_stored": 1,
+        "containment_stored": 11
+      },
+      "source_inventory_status": "partial",
+      "source_inventory_protocol": "native_schema",
+      "source_inventory_calls": 1
+    },
+    {
+      "project_id": "record-negative-qa-en-20261005-095358-f7f736",
+      "source": "source:record-negative-qa-en",
+      "source_structure": {
+        "version": 1,
+        "protocol": "source-structure-v1",
+        "status": "completed",
+        "source_sha256": "037ef9734bcd3f3649dfc93d19dd5462de63f53e79c255774c552f71f983fafd",
+        "proposed": 14,
+        "located": 14,
+        "linked": 14,
+        "withheld": 0,
+        "failed": 0,
+        "documents_stored": 1,
+        "sections_proposed": 4,
+        "sections_stored": 4,
+        "containment_stored": 18
+      },
+      "source_inventory_status": "partial",
+      "source_inventory_protocol": "native_schema",
+      "source_inventory_calls": 1
+    },
+    {
+      "project_id": "record-negative-qa-fr-20261005-095358-9b9424",
+      "source": "source:record-negative-qa-fr",
+      "source_structure": {
+        "version": 1,
+        "protocol": "source-structure-v1",
+        "status": "completed",
+        "source_sha256": "6ad009447b331f0b07375e0b64b2c5340c6c2d5f408270e854269adf479ee4ee",
+        "proposed": 19,
+        "located": 19,
+        "linked": 19,
+        "withheld": 0,
+        "failed": 0,
+        "documents_stored": 1,
+        "sections_proposed": 4,
+        "sections_stored": 4,
+        "containment_stored": 23
+      },
+      "source_inventory_status": "partial",
+      "source_inventory_protocol": "native_schema",
+      "source_inventory_calls": 1
+    }
+  ],
+  "context_gate": [
+    {
+      "case": "record-negative-en",
+      "source_candidates": 7,
+      "reachable_source_candidates": 7,
+      "exact_unique_candidate_citations": 7,
+      "located_source_structure_objects": 23,
+      "meaning_and_completeness_unqualified": true
+    },
+    {
+      "case": "record-negative-fr",
+      "source_candidates": 10,
+      "reachable_source_candidates": 10,
+      "exact_unique_candidate_citations": 10,
+      "located_source_structure_objects": 28,
+      "meaning_and_completeness_unqualified": true
+    },
+    {
+      "case": "C35",
+      "source_candidates": 17,
+      "reachable_source_candidates": 17,
+      "exact_unique_candidate_citations": 17,
+      "located_source_structure_objects": 50,
+      "meaning_and_completeness_unqualified": true
+    }
+  ],
+  "citation_gate": {
+    "action_and_statement_candidates": 17,
+    "exact_unique_source_citations_passed": 17,
+    "checks": [
+      {
+        "node_id": "ecad09c1-281c-433b-829f-679668ff3d1c",
+        "type": "NegativeAssertion",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "91c29903-5662-45a8-b8a7-5e11eb672fb1",
+        "type": "Obligation",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "0e472af7-1394-4bd9-93f0-ff45bb4f13b0",
+        "type": "NegativeAssertion",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "84a2060a-b979-4f6d-9102-b1d380b66b29",
+        "type": "Obligation",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "a40e846a-c881-4293-a2a8-5279521c22ec",
+        "type": "NegativeAssertion",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "090dd45a-3f23-454e-b149-adabea5be485",
+        "type": "Permission",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "6c2c7625-c841-4b42-a88f-88fa17193875",
+        "type": "ContractFunction",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "39e0c4ec-89d9-46b7-a6b1-6652d89ee6f1",
+        "type": "Obligation",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "e5430d2f-ecf5-4ca7-9938-4b93fc85a990",
+        "type": "NegativeAssertion",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "2a31ae3f-d80e-4d66-9aa4-c35e1180ccb4",
+        "type": "NegativeAssertion",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "5c5d2300-9bc3-421a-a062-82c7388c11dc",
+        "type": "Event",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "eb002026-d59b-4a2d-86a1-5a23af4bdee3",
+        "type": "Obligation",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "551b81b5-7b94-4f89-b0b9-57fcef2367f3",
+        "type": "Event",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "5d9f1562-37c5-484d-a479-bc1159dfc3a1",
+        "type": "NegativeAssertion",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "49016d39-0de4-498d-a1ba-b3954d96c154",
+        "type": "NegativeAssertion",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "a28f678b-9deb-45c1-89d1-873621be8557",
+        "type": "Event",
+        "exact_unique_source_citation": true
+      },
+      {
+        "node_id": "8b2f6d00-6514-4594-bf58-028b74e5dfa6",
+        "type": "ConditionalStatement",
+        "exact_unique_source_citation": true
+      }
+    ],
+    "connection_citations_checked": 61,
+    "exact_connection_citations_passed": 61,
+    "graph_unchanged_by_inspection": true,
+    "meaning_and_completeness_unqualified": true
+  },
+  "browser": {
+    "isolated_live_stack": true,
+    "selected_case": "C35",
+    "selected_finding": "No completion of works is reported.",
+    "facts": 30,
+    "semantic_connections": 22,
+    "source_anchors": 11,
+    "containment_connections": 39,
+    "outline_hidden_by_default": true,
+    "outline_inspected_separately": true,
+    "ambiguous_clauses_retained": true,
+    "exact_quotes_highlighted": true,
+    "source_receipts_visible": true,
+    "internal_document_labels_hidden": true,
+    "browser_errors": 0,
+    "replacement_analysis_submitted": false
+  },
+  "activation": {
+    "old_engine_pid": 83279,
+    "engine_pid": 12958,
+    "api_pid_unchanged": 83303,
+    "database_backup": "/private/tmp/delaylama-source-structure/activation-backup/graph.db",
+    "binary_backup": "/private/tmp/delaylama-source-structure/activation-backup/chronograph-previous",
+    "finished_jobs_archived": 0,
+    "graph_rows_unchanged": true,
+    "table_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    },
+    "config_unchanged": true,
+    "engine_sha256": "d13a4b8f40e72ccda4f3e82c619630613e3339ee1d157596e80e6320a713a92c",
+    "health_before": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    },
+    "health_after": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    }
+  },
+  "api_activation": {
+    "old_launcher": 83297,
+    "old_listener": 83303,
+    "new_launcher": 13069,
+    "configuration_change": "None; restart to load validated original source structure",
+    "config_sha256_before": "538f6c5d5258b3a3cca8b25a083e695217ef42584564a554497541f57e8b53ad",
+    "config_sha256_after": "538f6c5d5258b3a3cca8b25a083e695217ef42584564a554497541f57e8b53ad",
+    "journal_rows_unchanged": true,
+    "journal_sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c",
+    "no_existing_contract_reanalysis_submitted": true
+  },
+  "cleanup": {
+    "archived_terminal_jobs": 4,
+    "qa_processes_stopped": [
+      98054,
+      98055,
+      98056
+    ],
+    "main_stack_healthy": true,
+    "user_tab_untouched": true,
+    "user_contracts_reanalysed": false
+  },
+  "independent_benchmark": false,
+  "full_contract_qualification": false,
+  "legacy_graphs_backfilled": false,
+  "laya_training_or_performance_gain": false,
+  "remaining": [
+    "legacy source-only backfill",
+    "independent long/dispersed/OCR evaluation",
+    "implicit topic relationships",
+    "directed predicate/relationship recall",
+    "applicability and precedence",
+    "whole-context budgets"
+  ],
+  "assets": [
+    {
+      "path": "assets/source-structure/activation.json",
+      "sha256": "c3ac01e6185c709bc93874399f0b3a47f154ba93ec7dd1ef7dbe3d7fe528c4ec",
+      "bytes": 1734
+    },
+    {
+      "path": "assets/source-structure/api-activation.json",
+      "sha256": "6980f216ee1acd4b1757f333b3c7179a81959d1aec5603824de399d43ce92b31",
+      "bytes": 527
+    },
+    {
+      "path": "assets/source-structure/api-refresh.json",
+      "sha256": "8bc64d4a627a20d728196fbd7f402528660e8717ae8062ec60b5100e011dd54a",
+      "bytes": 527
+    },
+    {
+      "path": "assets/source-structure/release-checks.json",
+      "sha256": "ff55e3ab85830bcd5ad0ec7281845032fcbf3c7d084978ddb2fe10e39a4cc91f",
+      "bytes": 37939
+    },
+    {
+      "path": "assets/source-structure/cleanup.json",
+      "sha256": "d505147d3995fddb07db526e3ae3726838bb3e42af808fbbc8b95b4b3b2805af",
+      "bytes": 197
+    },
+    {
+      "path": "assets/source-structure/final-health.json",
+      "sha256": "72fea3ecbe68fc313da13c0835c24dafd64a92ff9bd4e9f25c358448366c8e52",
+      "bytes": 255
+    },
+    {
+      "path": "assets/source-structure/main-stack-health.json",
+      "sha256": "efc44bf4c459b9e53b1a4404a44c402326033d345cd1f064b1e9699782c64ae5",
+      "bytes": 259
+    },
+    {
+      "path": "assets/source-structure/preservation-before-activation.txt",
+      "sha256": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3",
+      "bytes": 114
+    },
+    {
+      "path": "assets/source-structure/preservation-after-activation.txt",
+      "sha256": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3",
+      "bytes": 114
+    },
+    {
+      "path": "assets/source-structure/preservation-after-cleanup.txt",
+      "sha256": "e256a274e54f6358d40be0e9a2aecf2045910f02e8103938a3d114561266d6d3",
+      "bytes": 114
+    },
+    {
+      "path": "assets/source-structure/model-project.json",
+      "sha256": "a541ccbc3b56ce0df4863c87e7c3ea88a10c7ef40f71ad81089f2f562c1872fe",
+      "bytes": 1931
+    },
+    {
+      "path": "assets/source-structure/model-submission.json",
+      "sha256": "84c8cc8996b890876e794fd012cab938c32136fbe0addf39d1b3584ba4e16e6b",
+      "bytes": 10503
+    },
+    {
+      "path": "assets/source-structure/model-observation.json",
+      "sha256": "ae5cb64f5e3d33cacd2fdbfd4f5f537e6977a545db5d512a1b8e650a8e9f447d",
+      "bytes": 29501
+    },
+    {
+      "path": "assets/source-structure/model-terminal-jobs.json",
+      "sha256": "265cdbc1caa82a343d2477ae594cbdf64337d165f5234e3e0559b98aae9aed32",
+      "bytes": 98600
+    },
+    {
+      "path": "assets/source-structure/model-snapshot.json",
+      "sha256": "5d1e21165ecbd9b61766622cc251622032c24656f812250a8df238119f2a9fe2",
+      "bytes": 311150
+    },
+    {
+      "path": "assets/source-structure/model-gate.json",
+      "sha256": "1b6fa4cc78b334455693c044502606c0aa2766687204ddceab249cc1c57937a6",
+      "bytes": 3793
+    },
+    {
+      "path": "assets/source-structure/additional-submissions.json",
+      "sha256": "4fc941cff7839122f373fafaeda0dfb7c203b53a4cfa44b8acb221625def91be",
+      "bytes": 18711
+    },
+    {
+      "path": "assets/source-structure/additional-observation.json",
+      "sha256": "6d72d92be05d11a80b9d85462b51717952bfabca30a5e03a4a49b8edf4ddd443",
+      "bytes": 53839
+    },
+    {
+      "path": "assets/source-structure/additional-terminal-jobs.json",
+      "sha256": "b3387a02d271f69a66cae184410026d489c4d96324684bd011e51f576daa8b70",
+      "bytes": 105734
+    },
+    {
+      "path": "assets/source-structure/additional-gate.json",
+      "sha256": "74d08a989bedc94d0719d6a295fc585f3d4d7b161ee2c3bb80d816031954dd5a",
+      "bytes": 4794
+    },
+    {
+      "path": "assets/source-structure/record-negative-en-snapshot.json",
+      "sha256": "7c4edfec2d1973f1afd784901f3c7b101eb751a7385d30397b30dfb878fc3ae7",
+      "bytes": 145914
+    },
+    {
+      "path": "assets/source-structure/record-negative-fr-snapshot.json",
+      "sha256": "ddab5c9bd5e9024893717baccb77b74096469f9aeefa86e95ec73a1aa9a1d51b",
+      "bytes": 170665
+    },
+    {
+      "path": "assets/source-structure/record-negative-en-component.json",
+      "sha256": "3e2893cdceafb80d5f659b95267cf2471bc1737bc2c5afe802f934d603a6b3e8",
+      "bytes": 87887
+    },
+    {
+      "path": "assets/source-structure/record-negative-fr-component.json",
+      "sha256": "ae66196cd5e624178c0c6fce11ef4671a29ca84b710ccea13c0eec17b6fbffbb",
+      "bytes": 104099
+    },
+    {
+      "path": "assets/source-structure/final-terminal-jobs.json",
+      "sha256": "2dfc0c6eb9c78e68a1725f6e7657e1bf92c24fb8076afb3a6582f78de9f01675",
+      "bytes": 204331
+    },
+    {
+      "path": "assets/source-structure/source-receipts.json",
+      "sha256": "9c6b88e5496b43d0a38045bd36e5291db11fe524fb15d038605f43324a3a91e5",
+      "bytes": 2735
+    },
+    {
+      "path": "assets/source-structure/calendar-diagnostic.json",
+      "sha256": "2320976316be14bbbc852d68587f4a2d026866111eac7ca941fc475e65f4d10a",
+      "bytes": 222
+    },
+    {
+      "path": "assets/source-structure/frozen-cases.json",
+      "sha256": "65b4691a085f0f0c35e07964973e1455a271a34687dfc13eddd3dee46b6bafc4",
+      "bytes": 2098
+    },
+    {
+      "path": "assets/source-structure/semantic-gold.json",
+      "sha256": "2e3298ddb35e7a175c5377e468c592b006be066ad7d38a033434f6a13544eda1",
+      "bytes": 1431
+    },
+    {
+      "path": "assets/source-structure/fixture-freeze.json",
+      "sha256": "15d628c5351da668b5b29751e9473b2eddd81de9a514868bf38b6e92a2411b6e",
+      "bytes": 186
+    },
+    {
+      "path": "assets/source-structure/additional-frozen-cases.json",
+      "sha256": "9845fb0214785e69f7217a36e7e7a7372c5a02db2a8bacf561419c6562a52dcf",
+      "bytes": 3803
+    },
+    {
+      "path": "assets/source-structure/additional-freeze.json",
+      "sha256": "a7f68c040e1dd68e76a0563d0c9c8179e2d48cdff4d6cddb94c3fc877226d60c",
+      "bytes": 105
+    },
+    {
+      "path": "assets/source-structure/context-gate.json",
+      "sha256": "3d587e5fedf338b3c66e5d3dff38eae3c5cd7e5b9ef639987a620546c8bc95c8",
+      "bytes": 729
+    },
+    {
+      "path": "assets/source-structure/grounding-checks.json",
+      "sha256": "cc47a5e4dd0c7c3828038e7870dd97bc775d632760cbcac59e3a444cbda9336e",
+      "bytes": 2725
+    },
+    {
+      "path": "assets/source-structure/neighborhood-checks.json",
+      "sha256": "80dbfa7b93baf75b31d5d24da09ab3297f7f270e845853aaf64f9234a1dde91d",
+      "bytes": 235919
+    },
+    {
+      "path": "assets/source-structure/permission-component.json",
+      "sha256": "03f12005f68b71201ee1ce5e67fc0e4e2050180a50b456edc810d328d90b6497",
+      "bytes": 190005
+    },
+    {
+      "path": "assets/source-structure/browser-component.txt",
+      "sha256": "44e93c1f400877050fb4bf3b08268e57518b36a51ae8ce8a8efed06b4520dc4f",
+      "bytes": 23979
+    },
+    {
+      "path": "assets/source-structure/browser-outline.txt",
+      "sha256": "98df9aa6a4d354e09852df9bff5e5b289c70eb4ea139f261073a604a60040dff",
+      "bytes": 34038
+    },
+    {
+      "path": "assets/source-structure/browser-receipts.txt",
+      "sha256": "0364b7e3882fdb1d94c72d92488308a1d011b157cfa831999cb427adb62f681d",
+      "bytes": 34084
+    },
+    {
+      "path": "assets/source-structure/browser-errors.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "assets/source-structure/browser-checks.json",
+      "sha256": "de9f6e270d73358986a03950deb2ec3366b7d9addf6176598371ab20e4d69a41",
+      "bytes": 518
+    },
+    {
+      "path": "assets/source-structure/browser-context.png",
+      "sha256": "8b286aec4023c089d633f6c89b49026cd59bc2d81e93c4ab5b06b4748a2bb76e",
+      "bytes": 164711
+    },
+    {
+      "path": "assets/source-structure/browser-outline.png",
+      "sha256": "5eac47847f05cc0a83b9adf97348d937704f70baf0646cae72573317692887c8",
+      "bytes": 181414
+    },
+    {
+      "path": "assets/source-structure/backend-all-final.log",
+      "sha256": "8211459802a833f4b7f4df660c981a5d6899c1485e7a87ccc77b45b6af9dfc71",
+      "bytes": 1508
+    },
+    {
+      "path": "assets/source-structure/backend-patches.log",
+      "sha256": "05818445cfa043e46c8f0dc0a8d1d5b6b128eb58c9576cee0867336343ae1b8c",
+      "bytes": 145
+    },
+    {
+      "path": "assets/source-structure/frontend-all.log",
+      "sha256": "14a9b2744704af8c55a5e8bc4bb4be8eca45b791859c1b58dbe9c080551396f6",
+      "bytes": 336
+    },
+    {
+      "path": "assets/source-structure/frontend-build.log",
+      "sha256": "34b941257083d0cbf7196c4795ce6f4bf5c35e69f7153e8d8f4d198a2528f28e",
+      "bytes": 1274
+    },
+    {
+      "path": "assets/source-structure/frontend-targeted.log",
+      "sha256": "260e12f58356abcca342df11df3ba9ae719b917ca14f54cf9d3ec731c3154c23",
+      "bytes": 4981
+    },
+    {
+      "path": "assets/source-structure/frontend-targeted-repaired.log",
+      "sha256": "ea72991f12f102c9f880d98f91ae6c4ce95698e5a6563e11855607fc562cc3c1",
+      "bytes": 4981
+    },
+    {
+      "path": "assets/source-structure/frontend-targeted-final.log",
+      "sha256": "ddec0ba96a866e4d24068c32ad5f2dc8809659924077ecfe69b016f98f57117c",
+      "bytes": 4981
+    },
+    {
+      "path": "assets/source-structure/frontend-targeted-second-repair.log",
+      "sha256": "d10d2d4ec4ed566d28ce81ffb9cecd4b036b718396e437339fc7076b0bdb57e6",
+      "bytes": 270
+    },
+    {
+      "path": "assets/source-structure/go-all.log",
+      "sha256": "bf6df38c6013c1916c06595413afbca5119eaeeb0c0432036b4e423a4bd17e07",
+      "bytes": 1915
+    },
+    {
+      "path": "assets/source-structure/go-race.log",
+      "sha256": "05adff68b1b201241633ae5859c313e1f15d805cd4dfb7aa9b6247ec709edcb5",
+      "bytes": 229
+    },
+    {
+      "path": "assets/source-structure/go-structure.log",
+      "sha256": "5e88c7e1420eae747221eaf4b6ce3c45d49b1f9193ece8ba7ce72262bf48108f",
+      "bytes": 55
+    },
+    {
+      "path": "assets/source-structure/go-targeted.log",
+      "sha256": "721bf27a8846e19605cd087a8b22d41869071fe64990f9866c2c80ab46af98da",
+      "bytes": 108
+    },
+    {
+      "path": "assets/source-structure/final-patch-arms.json",
+      "sha256": "63e329c48c7acabdb48d71adbcac781af1a914707d3a75a9fb377897fd6cefad",
+      "bytes": 36461
+    },
+    {
+      "path": "assets/source-structure/user-source-preflight.log",
+      "sha256": "0b995b6683f921dff0f587bd9617b7741261cf14d3edbec9c7f43652b85f990e",
+      "bytes": 2628
+    },
+    {
+      "path": "assets/source-structure/patch-arms.log",
+      "sha256": "3196dc9d85890e5627c6d9f1e9daacd3c968d82e2c9e92226e294e48bb431fbb",
+      "bytes": 7413
+    },
+    {
+      "path": "assets/source-structure/run-live.log",
+      "sha256": "1f145262a215488ee70bc6daf5b028a9e83eba68ada5d17d3381f313915552be",
+      "bytes": 551
+    },
+    {
+      "path": "assets/source-structure/go-final-variant-audit.log",
+      "sha256": "66873c89997144593b98bf6ddae47302fae536da3b6eb6c706528a5dc29c7a8b",
+      "bytes": 177
+    },
+    {
+      "path": "assets/source-structure/go-final-variant-coverage.log",
+      "sha256": "f9fb7c4ee65ce5893b9dad477dddd82437926679f022c8dcf64b4519e8df9d1b",
+      "bytes": 168
+    },
+    {
+      "path": "assets/source-structure/go-final-variant-inventory-audit.log",
+      "sha256": "e63d46c24295dffb3f7049cb96f71d9d993799b0e2b6538d13d32ea8c4395cca",
+      "bytes": 177
+    },
+    {
+      "path": "assets/source-structure/go-final-variant-inventory-coverage.log",
+      "sha256": "e7930309bba1d2ec522548dd29c9d079eacf7e06ce959b960efdcf269c547a35",
+      "bytes": 168
+    },
+    {
+      "path": "assets/source-structure/go-final-variant-inventory-meaning.log",
+      "sha256": "be275cd527a8db95494b7d3bb34967edb5441b4882fc6d6ee54d70855222b466",
+      "bytes": 177
+    },
+    {
+      "path": "assets/source-structure/go-final-variant-inventory-passages.log",
+      "sha256": "891ce1ea462998a66d1c2220eed17121c77e8d29c2e83e010673110ec47b7572",
+      "bytes": 177
+    },
+    {
+      "path": "assets/source-structure/go-final-variant-inventory-register.log",
+      "sha256": "a3d61ad1e994ab09e02a7d2a5a55ab9e49afd870349c57c868f9ba2872f4083a",
+      "bytes": 177
+    },
+    {
+      "path": "assets/source-structure/go-final-variant-inventory.log",
+      "sha256": "03d03ad3faa7b00778e654697a31615306038b87de0e0b173ea9b2ff8b5c8347",
+      "bytes": 177
+    },
+    {
+      "path": "assets/source-structure/go-final-variant-meaning.log",
+      "sha256": "7f383f8f7f0fb9ebb00d9a7fb54ef9f57276d782993d08342fac408394ec3e76",
+      "bytes": 177
+    },
+    {
+      "path": "assets/source-structure/go-final-variant-passages.log",
+      "sha256": "f024dceef23916a127f638d3184f2570059c95fe4b0123dba24e6de3a40f2f75",
+      "bytes": 177
+    },
+    {
+      "path": "assets/source-structure/go-final-variant-register.log",
+      "sha256": "715d90006f55b27b6abd7d9be78e12b64168503c20c53bb6458f3c3f70f6bdbf",
+      "bytes": 177
+    },
+    {
+      "path": "assets/source-structure/replay-gate.json",
+      "sha256": "8429c139ebe079f2ae8efaed6ec6e1efb5c8df4753075632ec96cd137d7beff8",
+      "bytes": 435
+    },
+    {
+      "path": "assets/source-structure/replay-reports.json",
+      "sha256": "76b0bd57fc720e666aa31145a3383f3c8f8c4acd0f2d457bb86bb6b6d0672d0f",
+      "bytes": 1064138
+    },
+    {
+      "path": "assets/source-structure/replay-permission-component.json",
+      "sha256": "4c32a996ce099140ba9b38805e5319f8773cf2d0ac93e732b4a4c26d0ac3a50e",
+      "bytes": 184349
+    },
+    {
+      "path": "assets/source-structure/replay-replay.log",
+      "sha256": "79ecb1e5cc64d414f63ac8a72efab4ace4d28e1204b77867d8f34742e81b3c9c",
+      "bytes": 55
+    }
+  ],
+  "api_refresh": {
+    "old_launcher": 13069,
+    "old_listener": 13070,
+    "new_launcher": 20316,
+    "configuration_change": "None; restart to load validated original source structure",
+    "config_sha256_before": "538f6c5d5258b3a3cca8b25a083e695217ef42584564a554497541f57e8b53ad",
+    "config_sha256_after": "538f6c5d5258b3a3cca8b25a083e695217ef42584564a554497541f57e8b53ad",
+    "journal_rows_unchanged": true,
+    "journal_sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c",
+    "no_existing_contract_reanalysis_submitted": true
+  },
+  "asset_base_url": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/"
+}
