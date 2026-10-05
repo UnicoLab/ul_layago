@@ -1,0 +1,235 @@
+{
+  "date": "2026-10-05",
+  "learning": "L134",
+  "scope": "Explicit amendment applicability and grounded-status UX; unknown waiver flag preservation and nested-citation verifier correction. Synthetic pilot, not independent legal gold or semantic accuracy improvement.",
+  "checks": {
+    "backend_tests": 1468,
+    "frontend_tests": 964,
+    "frontend_files": 77,
+    "production_build": "passed",
+    "build_note": "Existing bundle >500 KB advisory remains.",
+    "pilot": {
+      "recorded_production_consolidation_invocations": 4,
+      "before": 2,
+      "after": 2,
+      "frozen_statuses": 8,
+      "structured_statuses_match": 8,
+      "exact_effect_status_quotes": 7,
+      "unverified_effect_status_quotes": 1,
+      "semantic_accuracy_gain_claimed": false,
+      "same_after_responses_current_verifier_replayed_offline": true,
+      "no_semantic_retry_to_get_preferred_answer": true,
+      "configured_provider_transport_json_retry_policy_retained": true
+    },
+    "fixture": {
+      "path": "scripts/fixtures/amendment-applicability-cases.json",
+      "sha256": "ef3111eda196ac3a87a2896bf86f49993b72d91a38992c7b3af6e369eb50b2da"
+    },
+    "stack": {
+      "scope": "Read-only after UI replay. Two owned new projects contain replayed model outputs, not new native extraction. Main and frozen graphs unchanged. No browser model run or native job.",
+      "source_graphs": [
+        {
+          "case": "dispersed-notice-en",
+          "unchanged": true,
+          "nodes": 47,
+          "edges": 89
+        },
+        {
+          "case": "conditional-refusal-fr",
+          "unchanged": true,
+          "nodes": 25,
+          "edges": 42
+        },
+        {
+          "case": "operative-contract-and-draft-en",
+          "unchanged": true,
+          "nodes": 11,
+          "edges": 17
+        }
+      ],
+      "new_native_jobs": 0,
+      "one_saved_review_terminal_no_replay": true,
+      "owned_project_outputs": [
+        {
+          "case": "dispersed-amendments-en",
+          "project_id": "amendment-status-qa-en-20261005-190705-9b4857",
+          "saved": "/private/tmp/delaylama-amendment-effect-qa/runtime/processed/amendment-status-qa-en-20261005-190705-9b4857/extractions/amendment_analyzer_20261005_190705_157775.json",
+          "own_statuses": [
+            "proposed",
+            "not_effective",
+            "effective",
+            "unknown"
+          ],
+          "quotes_verified": [
+            true,
+            true,
+            true,
+            false
+          ]
+        },
+        {
+          "case": "dispersed-amendments-fr",
+          "project_id": "amendment-status-qa-fr-20261005-190705-4fddad",
+          "saved": "/private/tmp/delaylama-amendment-effect-qa/runtime/processed/amendment-status-qa-fr-20261005-190705-4fddad/extractions/amendment_analyzer_20261005_190705_189908.json",
+          "own_statuses": [
+            "proposed",
+            "not_effective",
+            "effective",
+            "unknown"
+          ],
+          "quotes_verified": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      ],
+      "feedback": {
+        "project_backup_revision": 1,
+        "entries": 2,
+        "flagged_path": "amendments[3].applicability",
+        "owner_label": "A734 \u00b7 effect status",
+        "correct_target": "amendment_analyzer",
+        "original_whole_once_with_registered_source_heading": true,
+        "full_document_and_note_preserved": true,
+        "browser_storage_unavailable_project_backup_worked": true,
+        "no_prompt_revision_or_browser_model_call": true
+      },
+      "unknown_waiver_flags_preserved_in_current_project_api_helper": true,
+      "waiver_helper_check_scope": "Current in-process production project API helper reads the saved owned projects after QA listeners were stopped; HTTP/browser replay preceded the final null-flag correction."
+    },
+    "main_api": {
+      "old_launcher_pid": 65222,
+      "new_launcher_pid": 68186,
+      "api_healthy": true,
+      "journal_unchanged": true,
+      "journal": {
+        "count": 24,
+        "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+      },
+      "app_env_unchanged": true
+    },
+    "cleanup": {
+      "only_owned_services_stopped": true,
+      "ports_closed": true,
+      "one_saved_review_terminal": true,
+      "zero_new_native_jobs": true,
+      "processes": [
+        {
+          "service": "engine",
+          "pid": 61815,
+          "port": 8097
+        },
+        {
+          "service": "api",
+          "pid": 67140,
+          "port": 8081
+        },
+        {
+          "service": "frontend",
+          "pid": 61817,
+          "port": 5175
+        }
+      ],
+      "owned_tab_closed": 142
+    }
+  },
+  "preservation": {
+    "protected_engine_source_files_unchanged": true,
+    "protected_app_artifacts_unchanged": true,
+    "user_studio_unchanged": true,
+    "orchid_studio_unchanged": true,
+    "user_graph_all_tables_unchanged": true
+  },
+  "limitations": [
+    "Baseline prose already retained amendment conditions; no comparative semantic-accuracy gain.",
+    "One English unknown-status quote contains invented ellipsis and remains unverified. Its raw response is retained.",
+    "Some original-date premises and general amendment date role remain review concerns. Complete field grounding is not established.",
+    "HTTP/browser replay preceded the final null-flag correction; that final behavior is checked through current production project API helper reading saved owned projects.",
+    "No new browser prompt revision/model call or native graph extraction. Existing frozen graphs are read-only replay.",
+    "No full instrument precedence/applicability/alias/real-OCR coverage result, independent legal gold or new Laya/MLX training evidence."
+  ],
+  "proof": [
+    {
+      "path": "docs/validation/assets/amendment-applicability/baseline.json",
+      "sha256": "b20d0b16e66c1484061912fc250e9d1dd5453bc32dbae8f9a205f0cdc3a0b8d2",
+      "bytes": 27849
+    },
+    {
+      "path": "docs/validation/assets/amendment-applicability/after.json",
+      "sha256": "36887032f75236df5bcc7eb7598493ee4fcc69399fae5845676b5e4ce43586bb",
+      "bytes": 38347
+    },
+    {
+      "path": "docs/validation/assets/amendment-applicability/qualification.json",
+      "sha256": "6af383ff20cfe5fcf878f3cf293f6a6e980933668b14a92c72069e81654fed20",
+      "bytes": 23250
+    },
+    {
+      "path": "docs/validation/assets/amendment-applicability/stack-gate.json",
+      "sha256": "078b26635b35d17bd096e2a3e1d143e093ac6526bf92da89664aaec76433e986",
+      "bytes": 2427
+    },
+    {
+      "path": "docs/validation/assets/amendment-applicability/activation-summary.json",
+      "sha256": "a3d0addccc717e4b33d7ec827c70da1daa9fa54cd3515bd31ca2b3237c5dbf0e",
+      "bytes": 260
+    },
+    {
+      "path": "docs/validation/assets/amendment-applicability/cleanup.json",
+      "sha256": "0a4d020923f4655d7382c17dee2f41d3f6b99596cd86b737ea1956e56739f673",
+      "bytes": 419
+    },
+    {
+      "path": "docs/validation/assets/amendment-applicability/backend-final.log",
+      "sha256": "831cfa94603f38722349e47673590a92ac906b0fd9623b13c9eb4bc31bf24334",
+      "bytes": 1747
+    },
+    {
+      "path": "docs/validation/assets/amendment-applicability/frontend-final.log",
+      "sha256": "c16dd87448da7d811c84f3ce8df6ec687b27f1358e0fb94ca9aacd6e8698ce43",
+      "bytes": 335
+    },
+    {
+      "path": "docs/validation/assets/amendment-applicability/build-final.log",
+      "sha256": "38b29fe41ab05748a78cf259f928b347d5b263bb8f1958d92bb8aeb20c61bbb4",
+      "bytes": 1274
+    },
+    {
+      "path": "docs/validation/assets/amendment-applicability/unmatched-status.png",
+      "sha256": "5e4fe6f7bb3f005b3186d7d4d8f733489847bcc445b3658dd8cd89d84f1c090f",
+      "bytes": 167963
+    },
+    {
+      "path": "docs/validation/assets/amendment-applicability/claim-desk-dom.txt",
+      "sha256": "4208ec5d7909afe915c38951d3af5df8cacaa8d6abd1c177c2b4c54e927060ab",
+      "bytes": 13763
+    },
+    {
+      "path": "docs/validation/assets/amendment-applicability/effect-review.png",
+      "sha256": "458485cefa2ba6cf80ef93c6ca7a4a374b874e02d5e359d433e7789f289e6e11",
+      "bytes": 142937
+    },
+    {
+      "path": "docs/validation/assets/amendment-applicability/effect-review-dom.txt",
+      "sha256": "5ad8355d1d9d5832d71709bb067050ad4f1e4d9a9a7a7fe21cf7315d040953fa",
+      "bytes": 8849
+    },
+    {
+      "path": "docs/validation/assets/amendment-applicability/prompt-feedback.png",
+      "sha256": "c49a44915373bd1414ba1df674623b4b4104b5fc3f2193bea387784c4a722680",
+      "bytes": 198575
+    },
+    {
+      "path": "docs/validation/assets/amendment-applicability/prompt-feedback-dom.txt",
+      "sha256": "aa35e020e1cd520ea17e234ec1eddca445f167fb7793c222e5a02d90e92804c1",
+      "bytes": 23020
+    },
+    {
+      "path": "docs/validation/assets/amendment-applicability/evaluate-original.py",
+      "sha256": "1a89c0561cdb5c888cfcd16d68519a35897c406eaba4207987ce3a7c69cba75f",
+      "bytes": 2090
+    }
+  ]
+}

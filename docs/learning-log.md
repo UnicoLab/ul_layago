@@ -4942,3 +4942,43 @@ complete recall, MLX performance or supervisor/training evidence.
 
 [DelayLama native-predicate context report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-native-predicate-context.md)
 · [Shared receipt](validation/delaylama-native-predicate-context-20261005.json).
+
+## L134 — Separate amendment wording, effect status and unknown flags (2026-10-05)
+
+A waiver flag is not an applicability premise. DelayLama generated an entitlement
+effect from that flag when a summary was missing, and its desk merger converted
+unknown waiver values to false. It now requests scope/applicability review and
+preserves unknown flags as null. Linked event impact chains retain each amendment's
+own status record. Extraction requests status, affected scope, conditions, effective
+date, rationale and own citations; it cannot borrow another amendment's approval,
+signatures or date. UI review labels identify the owning amendment and surface
+unmatched status quotes beside the assessment.
+
+Two bilingual documents and eight synthetic expected statuses were frozen before
+four production consolidation invocations (two before, two after). The baseline
+already described the conditions correctly in prose. The new explicit statuses
+match 8/8 in one draw; this is a structured-interface result, not a demonstrated
+semantic accuracy gain. Only 7/8 status quotes match: one English unknown-status
+quote joins nonadjacent text with an invented ellipsis. The original response is
+retained, not repaired into gold or rerun for a preferred answer.
+
+That error exposed a verifier skipping citation objects with other nonempty lists
+such as conditions. Explicit own citations are now checked regardless of list
+count. The same responses were requalified offline; the invented quote remains
+unverified. A no-LLM owned-project replay verifies API/UI status delivery and the
+exact nested correction note reaching the Amendments prompt experiment with the
+full registered original and history. Final null-flag behavior is checked via the
+current production API helper after listeners stopped. 1,468 backend and 964 frontend
+tests plus build pass. Main API is refreshed; user graph/history/source edits remain
+unchanged. Date-role and missing-date-premise concerns remain visible.
+
+For LayaGo datasets, separate waiver wording from operative status, amendment ID,
+affected term/incident/claim dimension, fulfilled/unfulfilled/unknown conditions,
+effective date and retained rights. Treat missing records as unknown, not a negative
+label. A valid classification with an invalid quote is not a grounded positive.
+Keep exact witness spans and failed raw responses, and evaluate classification and
+evidence selection separately. These are development controls, not independently
+adjudicated legal gold, full precedence/coverage or new Laya/MLX performance.
+
+[DelayLama amendment-applicability report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-amendment-applicability.md)
+· [Shared receipt](validation/delaylama-amendment-applicability-20261005.json).
