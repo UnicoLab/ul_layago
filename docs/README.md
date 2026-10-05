@@ -22,6 +22,7 @@ do not confer accuracy or calibration on another application's tasks.
 | --- | --- |
 | [DelayLama relation references, 2026-10-05](validation/delaylama-relation-references-20261005.json) | Unambiguous names, conversion/storage diagnostics and remaining predicate/recall failures; L109 |
 | [DelayLama source statements, 2026-10-05](validation/delaylama-source-statements-20261005.json) | Polarity/modality separate from performed events, source-bound statement storage, review UX and bounded bilingual/mixed tests; L111 |
+| [DelayLama statement parties, 2026-10-05](validation/delaylama-statement-parties-20261005.json) | Separate party task, passive predicates, article antecedents, directed roles and evidence-bearing neighborhoods; L112 |
 | [DelayLama relation predicates, 2026-10-05](validation/delaylama-relation-predicates-20261005.json) | Direction/negation-preserving labels, original cross-chunk inputs, normative recall gaps and critic probe; L110 |
 | [DelayLama parallel assertions, 2026-10-05](validation/delaylama-parallel-assertions-20261005.json) | Preserved source assertions, explicit scoped replacement, graph history UX and retained conversion failure; L108 |
 | [DelayLama source response diagnostics, 2026-10-05](validation/delaylama-source-response-diagnostics-20261005.json) | Diagnosed JSON-list failure, bounded non-evidence diagnostics, unused scalar fields and retained cross-action duration counterexample; L106 |

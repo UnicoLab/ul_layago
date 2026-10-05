@@ -3873,3 +3873,56 @@ No new Laya training, MLX or classifier-quality gain is claimed by this change.
 
 [DelayLama statement audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-statements.md)
 · [Shared receipt](validation/delaylama-source-statements-20261005.json).
+
+## L112 — Separate assertion discovery from statement-party attachment
+
+Adopted engineering change, 2026-10-05. Adding party roles to the action inventory
+increased task interference: the first four-case replay passed 26/26 types but
+39/44 roles, with one extra role; a larger combined prompt regressed a designation
+to an Event and still passed only 39/44 roles. Preserve these failures when
+assessing an architectural change, rather than reporting only the best replay.
+
+DelayLama patch 49 instead runs one bounded independent role task over the full
+original and already typed statements. It cannot create/reclassify actions or
+alter dates/performance. Subject, recipient, conditional approver and referenced
+party have separate directed statement-to-party edges. Passive payment must retain
+its complete governing predicate; a Vendor-submission modifier alone does not
+represent the Buyer's payment duty. Invoice ownership can be explicitly established
+in one article and reused by payment, review and negative-payment assertions in
+later articles. Requests need their own direction: a party asked for corrections
+is the request's addressee, not recipient of the resulting corrections.
+
+Original line premises are reconstructed, uniquely located and bound to the own
+assertion, named party/antecedent and original hash. Identity accepts exact names
+or unique explicit aliases, then checks stored scope/type against a frozen concept
+register. Neither original span presence nor unambiguous identity establishes
+semantic role correctness or fulfilled approval. Missing/null/duplicate rows,
+withheld proposals and storage failures have distinct receipts. Neighborhood
+assembly must retain readable role and review metadata end to end; a correct
+stored edge is ineffective if the context adapter drops its meaning.
+
+The initial independent pass passed 32/33 types and 48/57 roles, with two extra
+roles. Keeping complete own predicates and explicit article/invoice antecedents
+then passed 33/33 type and 57/57 role checks in direct replay, restored full-stack
+replay and the canonical delivery build. All five cases are synthetic development
+fixtures, not an independent benchmark; four were known and the French article
+chain was new when frozen. The final 79-node/117-edge graph retains quoted party
+links without normative occurrence dates or actual performer edges. Full delivery
+passed 1,155 backend/824 frontend tests/build, full Go/race checks, twelve patch
+combinations and eleven optional suites. Existing user graph and work were
+preserved. Broad event category accuracy remains unqualified: a French report
+delivery still had an `approval` category candidate, separate from its correct
+observed-action typing.
+
+For Laya/GLiNER experiments, supervise complete predicate boundaries, polarity,
+modality, own-assertion identity, antecedent chains and directed roles separately.
+Include passive/active pairs, payments versus invoice review, negative payment,
+requests, competing issuers, named approval conditions and ambiguous aliases.
+Evaluate statement inventory recall, role precision/recall, source binding,
+reference resolution and storage survival independently. Hold out contract
+families and article arrangements before model/prompt tuning; repeated synthetic
+replay cannot establish generalization. Train explicit abstention and preserve
+qualification scope. No new training, MLX or classifier gain is claimed here.
+
+[DelayLama statement-party audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-statement-parties.md)
+· [Shared receipt](validation/delaylama-statement-parties-20261005.json).
