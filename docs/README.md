@@ -20,6 +20,7 @@ do not confer accuracy or calibration on another application's tasks.
 
 | Record | What it establishes |
 | --- | --- |
+| [DelayLama source range inventory, 2026-10-05](validation/delaylama-source-range-inventory-20261005.json) | Four early predicates recovered with full-original focused ranges, exact ownership, visible failures and remaining party/connection uncertainty; L127 |
 | [DelayLama independent context review, 2026-10-05](validation/delaylama-independent-context-review-20261005.json) | Dated own-action assessment, plan/denial and duty/silence distinctions, native early-clause omissions and retained control failures; L126 |
 | [DelayLama relation references, 2026-10-05](validation/delaylama-relation-references-20261005.json) | Unambiguous names, conversion/storage diagnostics and remaining predicate/recall failures; L109 |
 | [DelayLama source statements, 2026-10-05](validation/delaylama-source-statements-20261005.json) | Polarity/modality separate from performed events, source-bound statement storage, review UX and bounded bilingual/mixed tests; L111 |

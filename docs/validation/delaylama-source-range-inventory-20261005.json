@@ -1,0 +1,602 @@
+{
+  "date": "2026-10-05",
+  "learning": "L127",
+  "scope": "Long-source omission recovery, source-bound original-range execution and readable review; not perfect legal analysis, independent gold or a general accuracy estimate.",
+  "engine": {
+    "base_release": "v1.3.0",
+    "upstream_base_commit": "9227b1ae0ddbd6c91c6e60b249fbb41c09188175",
+    "clean_apply_checkout_revision": "ec22df4593ff29898e12f10c073f0ea35cf4050a",
+    "default_patch_count": 60,
+    "new_patch": "source-range-inventory.patch",
+    "patch_sha256": "f387768d3d1032d238a9b4e7db67a29c44ffdc2b0cb3a4621a6f010a8d8d792a",
+    "release_binary_sha256": "7d6b18e80b01880a5d6d1339958484dd994309eb2b9dca34d3c7bbab685ccdc1",
+    "native_binary_sha256": "d2e4325402d7d0b5e126ce591f5fe8ae14bed8441518a4cb6bdf2f4c218addcf",
+    "runtime_sources_identical": true,
+    "runtime_source_files_compared": 161
+  },
+  "policy": {
+    "automatic_above_source_bytes": 24000,
+    "also_after_output_limit_if_multiple_ranges": true,
+    "target_range_bytes": 8000,
+    "maximum_ranges": 64,
+    "shared_deadline_seconds": 300,
+    "request_deadline_seconds": 60,
+    "per_response_row_limit": 120,
+    "full_original_context": true,
+    "offset_unit": "utf8_bytes",
+    "scope_ownership": "Unique own-action original start lies inside engine-assigned half-open byte interval. Supporting premises can lie elsewhere in the same original.",
+    "semantic_completeness": "unestablished"
+  },
+  "previous_native_baseline": {
+    "receipt": "docs/validation/2026-10-05-independent-context-review.json",
+    "source_bound_types": {
+      "passed": 19,
+      "total": 23
+    },
+    "strict_action_string_types": {
+      "passed": 18,
+      "total": 23
+    },
+    "date_roles": {
+      "passed": 7,
+      "total": 7
+    },
+    "missing_early_statements": 4,
+    "scope": "Historical L126 draw, not a paired reproducible provider seed."
+  },
+  "first_native": {
+    "source_jobs": 3,
+    "all_done": true,
+    "range_execution": {
+      "protocol": "source-range-inventory-v1",
+      "status": "partial",
+      "reason": "unresolved_source_ranges",
+      "source_sha256": "64f276e0d52078445dbefe3c1fc74b111395fe185708666859ccccbdea1d30e7",
+      "source_bytes": 89821,
+      "source_lines": 1232,
+      "planned": 14,
+      "attempted": 14,
+      "completed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "model_calls": 14,
+      "owned": 15,
+      "outside_withheld": 80,
+      "completeness": "unestablished"
+    },
+    "types": {
+      "passed": 23,
+      "total": 23
+    },
+    "date_roles": {
+      "passed": 7,
+      "total": 7
+    },
+    "strict_action_string_types": {
+      "passed": 22,
+      "total": 23
+    },
+    "strict_action_string_dates": {
+      "passed": 6,
+      "total": 7
+    },
+    "scope": "Fresh synthetic source draws, unchanged original texts and expectations; not independent legal gold."
+  },
+  "final_native": {
+    "source_jobs": 3,
+    "all_done": true,
+    "range_execution": {
+      "protocol": "source-range-inventory-v1",
+      "status": "partial",
+      "reason": "unresolved_source_ranges",
+      "source_sha256": "64f276e0d52078445dbefe3c1fc74b111395fe185708666859ccccbdea1d30e7",
+      "source_bytes": 89821,
+      "source_lines": 1232,
+      "planned": 14,
+      "attempted": 14,
+      "completed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "model_calls": 14,
+      "owned": 15,
+      "outside_withheld": 0,
+      "completeness": "unestablished"
+    },
+    "types": {
+      "passed": 23,
+      "total": 23
+    },
+    "date_roles": {
+      "passed": 7,
+      "total": 7
+    },
+    "strict_action_string_types": {
+      "passed": 23,
+      "total": 23
+    },
+    "strict_action_string_dates": {
+      "passed": 7,
+      "total": 7
+    },
+    "scope": "Fresh synthetic source draws, unchanged original texts and expectations; not independent legal gold."
+  },
+  "graph_context": {
+    "dispersed-notice-en": {
+      "source_candidates": 18,
+      "reached_candidates": 18,
+      "required_fragments": {
+        "Prior written consent from Northmere Employer Ltd": true,
+        "No written consent is recorded": true,
+        "The proposed completion change has not taken effect": true
+      }
+    },
+    "conditional-refusal-fr": {
+      "source_candidates": 9,
+      "reached_candidates": 9,
+      "required_fragments": {
+        "Aucun accord écrit n'est fourni": true,
+        "Aucune suspension n'est rapportée": true
+      }
+    }
+  },
+  "source_evidence": {
+    "dispersed-notice-en": {
+      "located": 127,
+      "ambiguous": 3,
+      "unavailable": 1
+    },
+    "conditional-refusal-fr": {
+      "located": 52,
+      "unavailable": 4,
+      "ambiguous": 1
+    }
+  },
+  "exact_spans_checked": 183,
+  "critical_predicate_gates": true,
+  "native_positive_causal_control_this_turn": false,
+  "tests": {
+    "backend": {
+      "exit_code": 0,
+      "passed": 1384
+    },
+    "frontend": {
+      "exit_code": 0,
+      "passed": 916
+    },
+    "frontend_build": {
+      "exit_code": 0
+    },
+    "default_race": {
+      "exit_code": 0
+    },
+    "engine_suites": [
+      {
+        "exit_code": 0,
+        "suite": "go test ./..."
+      }
+    ],
+    "variant_tests": [
+      {
+        "arm": "audit",
+        "exit_code": 0
+      },
+      {
+        "arm": "register",
+        "exit_code": 0
+      },
+      {
+        "arm": "meaning",
+        "exit_code": 0
+      },
+      {
+        "arm": "passages",
+        "exit_code": 0
+      },
+      {
+        "arm": "coverage",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-audit",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-register",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-meaning",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-passages",
+        "exit_code": 0
+      },
+      {
+        "arm": "inventory-coverage",
+        "exit_code": 0
+      }
+    ]
+  },
+  "patch_arms": {
+    "count": 12,
+    "clean_idempotent": true,
+    "optional_suites": 11
+  },
+  "preservation": {
+    "graph_all_tables_unchanged": true,
+    "table_counts": {
+      "edges": 660,
+      "episodes": 321,
+      "nodes": 1444,
+      "schema_meta": 1,
+      "timeline_events": 3437
+    },
+    "engine_config_unchanged": true,
+    "app_env_unchanged": true,
+    "journal_snapshots": 24,
+    "journal_unchanged": true,
+    "protected_engine_sources": 14,
+    "protected_engine_sources_unchanged": true,
+    "artifacts": 32,
+    "artifacts_unchanged": true,
+    "studio_sessions": 2,
+    "studio_unchanged": true,
+    "main_engine_api_healthy": true,
+    "historical_graph_rewrite": false,
+    "real_contract_reanalysis": false
+  },
+  "browser": {
+    "exact_permission_and_clause88_context_visible": true,
+    "compact_range_details_visible": true,
+    "warning_error_logs": [],
+    "read_only_graphs_unchanged": true,
+    "owned_tab_closed": true,
+    "temporary_services_stopped": true
+  },
+  "limits": [
+    "Synthetic same-provider qualification, not independent human/legal gold, locked held-out recall or a general accuracy estimate.",
+    "Party boundary Neither Northmere Employer Ltd remains, including an associated-with model suggestion from the permission.",
+    "Ambiguous/unavailable quotations and withheld party/entity roles remain.",
+    "Other semantic predicates, aliases, direction, applicability and legal precedence need separate qualification.",
+    "Default engine General profile, browser cache quota and real/OCR qualification remain open.",
+    "No new Laya training, MLX or speed/architecture-quality claim.",
+    "Full-original repeated context has an additional inference cost; limits are explicit and incomplete checks remain visible."
+  ],
+  "proof": [
+    {
+      "path": "docs/validation/assets/source-range-inventory/control-after.log",
+      "bytes": 61,
+      "sha256": "1a6a6d9bd0dfeafd8cabd3b5b5cc874bbe1530ffd09b173ba012cb824995eca5"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/control-backend-proof-targeted.log",
+      "bytes": 386,
+      "sha256": "99f5f5e2f9a5a22dc3e2a1aca2b2541859023dce5267b5d0206a4a4b2839e423"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/control-before.log",
+      "bytes": 931,
+      "sha256": "2206293d4d0f82dbaa2f2ceb9580f772ace0ed892a0d44a43e1932dff214b293"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/control-engine-targeted.log",
+      "bytes": 5658,
+      "sha256": "47551adf680e81958c598f5e3365b5a81c96eece63343075e6e9c59bb8c660be"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/control-final-controls-corrected.log",
+      "bytes": 61,
+      "sha256": "f422c308fe729dd4639eadda388cfd646ac36f8612dfc732a5bbb050732b6a0c"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/control-final-controls.log",
+      "bytes": 500,
+      "sha256": "85a6182321d68eb410c20f703b05ba53e5d0fca7775e3085c6b7dfaaaab662cf"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/control-ranges.log",
+      "bytes": 61,
+      "sha256": "b573bed11fa110bc0377ed83a5aa54387c4ee6f652a262ddb2f94e3ccb3dedb6"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-api-refresh.json",
+      "bytes": 117,
+      "sha256": "48913ebf2a1dc882d02481ded63bf1f0e85edfac42f56e678edf4acfa1b44506"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-browser-console.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-cases.json",
+      "bytes": 98322,
+      "sha256": "a9cdd069cb1d677bc6b782c105c42d70b90c6530209dc973b1ed12956f1b9981"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-cleanup.json",
+      "bytes": 409,
+      "sha256": "151a08bbafbaaa13420672597f09c2c881187b79b90b50b1aa2a7e61e76f830a"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-collect.log",
+      "bytes": 5876,
+      "sha256": "8bf140cd4bbaaf2504995641d601cdccd7cf9aa05b6bab18959772beea8c03bb"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-conditional-refusal-fr-component.json",
+      "bytes": 95941,
+      "sha256": "0bba3fbe624907377169037475394acdea1ec8e60ffe2650665cdf60a89e53d7"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-conditional-refusal-fr-graph-response.json",
+      "bytes": 247167,
+      "sha256": "3ca15a7d22b35e8d5c632af053849b3679e2cf78cd670d32a343289b18259998"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-conditional-refusal-fr-snapshot.json",
+      "bytes": 175089,
+      "sha256": "8099b191943bc86630f57100cbc5285640659583b5f8be86750159c0e048a70d"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-dispersed-notice-en-component.json",
+      "bytes": 585242,
+      "sha256": "4c3b6019e9a89c6ec951ff84b2ed0a56292ca6f743defc1cb93b20a03800343a"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-dispersed-notice-en-graph-response.json",
+      "bytes": 1553815,
+      "sha256": "573379185d4e3470cccdfc96d7c711b1c8914fdd2f8957738f372b473158b924"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-dispersed-notice-en-snapshot.json",
+      "bytes": 1032005,
+      "sha256": "e6caec293c03c9feb4df06901ca489b2d155ec428e0c41e2b8c135b59444c7e2"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-freeze.json",
+      "bytes": 221,
+      "sha256": "00d3b3c3a3f56e90babf6fd776535612bb960d81ae02b629d1cd6837cb2c3b19"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-gate.json",
+      "bytes": 8373,
+      "sha256": "611d3a45e8b3012ae4ea6e9927136515981b0daadccdf0262207aacdebed2071"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-observations.json",
+      "bytes": 233455,
+      "sha256": "d652bb96818d7935d5290f76c6a9b23c21a766dce411f1f1a299807d5d7d91cd"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-permission-context-dom.txt",
+      "bytes": 21387,
+      "sha256": "c2941242dbbca2755a2ed631bdf8a02dd756693f892d2101f85dcb4ec9d81cfe"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-permission-context.png",
+      "bytes": 200352,
+      "sha256": "fc6faf751568728f90a5fb34e1fcbaa4ffd67dd80ab2b1ea7ae851b2ff5c6612"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-range-coverage-dom.txt",
+      "bytes": 30684,
+      "sha256": "ad9b726d671e95aac64fbadf86f5d80c6c9a411c25000281109ccf0d0d098d16"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-range-coverage.png",
+      "bytes": 252416,
+      "sha256": "2ce90bb0e207ee072d4cc1e3fd66f1c4ba7c423c26babadf2371f076db613a32"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-run.log",
+      "bytes": 1693,
+      "sha256": "19233c03631f3c6c4336cfe1fa233f5beef87e55f5acf7d5686ad03183495eaa"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-submissions.json",
+      "bytes": 112848,
+      "sha256": "50b665f822a3ac18acb5272583788d04ee3ff6c178dc7a778bd1b84e4e5bcd08"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-terminal-jobs.json",
+      "bytes": 209424,
+      "sha256": "f1960df91520f571e074f1cdd6142d332f16fa1f87b996da6c8d1801bbedc38c"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-verified-native-identity.json",
+      "bytes": 7593,
+      "sha256": "4800253f42cca1fb2fca1cfd1eef3e5e182746383f1cf281b237ecc36ee1f50f"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/final-verify_identity.py",
+      "bytes": 2159,
+      "sha256": "9f09a100dd4af8ea5bfeb4da1364b2d33ad868a80ce47f0b8ebfa6a53c378976"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-cases.json",
+      "bytes": 98322,
+      "sha256": "a9cdd069cb1d677bc6b782c105c42d70b90c6530209dc973b1ed12956f1b9981"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-cleanup.json",
+      "bytes": 409,
+      "sha256": "78dec9f31dd0fdc981a64b2648e658a7cf2da5c9db68a7ebef4ed6650f558940"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-collect.log",
+      "bytes": 5824,
+      "sha256": "985ce6bd7fc94f96e403cea0962e0b4d70b4588f5ad9cec701589a7a745f8fcc"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-conditional-refusal-fr-component.json",
+      "bytes": 98021,
+      "sha256": "ab14eda0e75ca25c462febf46129c2207c709ba2ed5e9dde5e4bc90a249b1a49"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-conditional-refusal-fr-graph-response.json",
+      "bytes": 254088,
+      "sha256": "edb70e6493fc274d8f7d7c601ce2cc1349793c8c5af7ccf5a1e760e461adc767"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-conditional-refusal-fr-snapshot.json",
+      "bytes": 179960,
+      "sha256": "ff9bbc8cc5f1c7ec337a8d7ea8ad4bc4ac070ea42f4aae61508a6d60d0343533"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-dispersed-notice-en-component.json",
+      "bytes": 585745,
+      "sha256": "f78ec4fe5262f82f6b5d2205cdbb26574927db068d8b0f07a8dcc6ebf558e8c9"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-dispersed-notice-en-graph-response.json",
+      "bytes": 1555352,
+      "sha256": "a0d23bfbfcc1428ebad5444970280e9788ca82c4dd6a848bb8531b7f37a83123"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-dispersed-notice-en-snapshot.json",
+      "bytes": 1033419,
+      "sha256": "7e8d52b2017b8b9d2d8170ef7b8a923a73bde9ce605937a84a1f528b3459b889"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-freeze.json",
+      "bytes": 221,
+      "sha256": "00d3b3c3a3f56e90babf6fd776535612bb960d81ae02b629d1cd6837cb2c3b19"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-gate.json",
+      "bytes": 8245,
+      "sha256": "d4191b52a1e9dd2d006a789f81681fbb32a80dd2bb9c093da32417f80b10184c"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-observations.json",
+      "bytes": 233545,
+      "sha256": "0cfb1d4b1ac27a897a1cf7d6224374f644ee385892636fcd26f01c2811fd34af"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-run.log",
+      "bytes": 2841,
+      "sha256": "4e7d1fa9dc44ce5219c079ca2f72a5763af4c2d8fea3916947a2e93bf9b2bad2"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-submissions.json",
+      "bytes": 112850,
+      "sha256": "5da3c4fb7b8bf2d26d268adbb65843d0f91e48147a4d386e7e76db9e7bc6d5c2"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-terminal-jobs.json",
+      "bytes": 287718,
+      "sha256": "1cc04e59152f3a73c6c240a230e3d9a1ccde3eff2330d6973f99a7a4ae006301"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-verified-native-identity.json",
+      "bytes": 7593,
+      "sha256": "4800253f42cca1fb2fca1cfd1eef3e5e182746383f1cf281b237ecc36ee1f50f"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/first-verify_identity.py",
+      "bytes": 2153,
+      "sha256": "afa03cee8c581cef7f13317ff4952eaa3ace483e95e23e303b656ebea6851726"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-backend-all.log",
+      "bytes": 1667,
+      "sha256": "42f2aab8edab0820b3a6126d836997143701d8b459b77d37c0c042c8bf4f2c9c"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-final-patch-arms.json",
+      "bytes": 39353,
+      "sha256": "f942d224f2fd93d8eed056ae71da11f206e611246e54ca5ce57031d0bc7f0bb2"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-frontend-all.log",
+      "bytes": 340,
+      "sha256": "f0f794fb7561636d73a47e37882c249abd581a811bf0784eaa86e22f24c65e0b"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-frontend-build.log",
+      "bytes": 1274,
+      "sha256": "127ce783f88317f407ffb893537babbab0eb6a6822cc1c94ea7fb1d668baec5a"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-go-all.log",
+      "bytes": 1911,
+      "sha256": "fd0863176452210a74f85fd5dfb9c99ee9e178845c94555f81cae17a0334f926"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-go-final-variant-audit.log",
+      "bytes": 177,
+      "sha256": "84ae8b44c343634292351ce229dc33a7ad4aa5c012d712ba1fdbcd8cf32eb464"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-go-final-variant-coverage.log",
+      "bytes": 168,
+      "sha256": "592c833a84cf78b6b922d5929bf2740061fc8d95116ba37e4efd384add864773"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-go-final-variant-inventory-audit.log",
+      "bytes": 177,
+      "sha256": "1b4cb9950cb5ce0a5d8a291d1ec0dfa7a792b0fc8803da9cf68f01c56445e922"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-go-final-variant-inventory-coverage.log",
+      "bytes": 168,
+      "sha256": "48e42ebe2d8c94b419644bde4e699573a37118e20758a5fd2d3dc212a5acfcb5"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-go-final-variant-inventory-meaning.log",
+      "bytes": 177,
+      "sha256": "638fe04801205edd75a9f71967ce1e15840ee9a0e615af163243fb9f8beeb609"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-go-final-variant-inventory-passages.log",
+      "bytes": 177,
+      "sha256": "ff4f5b8b3a215d5be5f2b18dc31fcb602b16f8c14e7699064fad2cab3234f25c"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-go-final-variant-inventory-register.log",
+      "bytes": 177,
+      "sha256": "b0b38b8597215b107314797dc07bdcdde81244336687d36f62e52a57eeeb686f"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-go-final-variant-inventory.log",
+      "bytes": 177,
+      "sha256": "613f5307a33cf61c552b2f64bdc3306e4368558dac655e95b347991ece352b77"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-go-final-variant-meaning.log",
+      "bytes": 177,
+      "sha256": "dc897e69efcd573f623b42f361ad17132602914095937726652881dd108fa8e7"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-go-final-variant-passages.log",
+      "bytes": 177,
+      "sha256": "8eb23575c986249538b5819d881a72cd7678460fd61e127d98b46b482b98ab7e"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-go-final-variant-register.log",
+      "bytes": 177,
+      "sha256": "6694b16c42e9b9dc4412b96bc4495b8540e21ef0afdb973c44190fa7c7dbb5a6"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-go-race.log",
+      "bytes": 116,
+      "sha256": "9dfe482357582fc17252c26bcf4153787ac5901309bf18ac124bff896a0ef508"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-patch-checks.log",
+      "bytes": 7413,
+      "sha256": "bc2248983cb760f4a4ee9abb5f41b415bae8875b451a8a45801a3579d51fabf0"
+    },
+    {
+      "path": "docs/validation/assets/source-range-inventory/release-runtime-source-equivalence.json",
+      "bytes": 22758,
+      "sha256": "104f80a1a212e832b0f2e215bd6e727d6f974584fc945fce3d7c56e650f728fa"
+    }
+  ]
+}

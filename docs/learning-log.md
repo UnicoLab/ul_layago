@@ -4624,3 +4624,65 @@ open; real/OCR and human-reviewed held-out qualification is still required.
 
 [DelayLama independent context review](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-independent-context-review.md)
 · [Shared receipt](validation/delaylama-independent-context-review-20261005.json).
+
+## L127 — Inventory coverage must precede graph completeness (2026-10-05)
+
+DelayLama's whole-original pass omitted four early duty, permission and negative
+predicates while returning seven late statements. Graph connectivity cannot
+recover statements that have no candidates. Add separate formatting-range
+inventories with the full original available, preserving global line IDs and exact
+UTF-8 intervals. Accept an own predicate only when its uniquely located start lies
+inside the assigned interval; its original supporting context may extend outside.
+Do not use extracted entities or existing actions as a completeness checklist.
+
+Partition every original byte without semantic filtering or overlap. Group small
+sections, split large ones at whole lines, preserve Unicode and expose input,
+output and range budgets. DelayLama uses roughly 8,000-byte targets above 24,000
+bytes, at most 64 ranges, one shared five-minute deadline and 120 rows per response.
+Repeated full-original context adds inference cost. A failed or empty range does
+not establish absence, and execution counts do not measure semantic completeness.
+Duplicate kind disagreements stay unknown; a later pass cannot choose meaning
+by response order. Keep new-row performance review separate from earlier existing
+row update counters.
+
+The exact retained English/French originals and expectations are frozen before
+each new trial. Two fresh full-stack draws each accept three terminal source jobs.
+Both match 23/23 original-span statement types and 7/7 original-span date-role
+criteria, recovering all four early omissions. First-trial strict action-string
+checks are 22/23 and 6/7 because a French deadline uses a shorter own-action span
+inside the same unique source sentence. The final strict checks also match 23/23
+and 7/7; retain both audits and unchanged expectations. Span identity does not
+certify semantics. The historical L126 draw matched 19/23 original-span types.
+This is not a paired provider seed or locked held-out accuracy measurement. The
+first new prompt repeated outside-range statements 80 times because full-document
+enumeration instructions competed with scope; deterministic ownership withheld
+them. Explicit focus instructions and a final focus block reduce out-of-range
+proposals to zero in the changed-prompt draw. Preserve both outcomes.
+
+The recovered English permission reaches all 18 stored source statement candidates,
+including distant consent and unsigned-amendment passages; French reaches all nine.
+The browser locates Clause 88 without another model call. Reachability and exact
+source spans still do not establish entailment, applicability or legal precedence.
+The `Neither Northmere Employer Ltd` entity boundary and an associated-with model
+suggestion from the permission remain, alongside withheld approver/entity roles
+and unavailable/ambiguous evidence. Party identity and relation correctness are
+the next graph-integrity targets.
+
+Original-bound receipt guards check byte/line partitions, hashes, candidate counts
+and per-range execution, stripping raw proposals. The interface groups empty
+ranges and highlights ranges to inspect, with all details available on demand.
+Full Go/race, 1,384 backend and 916 interface tests, build, 12 clean/idempotent patch
+arms and 11 variant suites pass. Main activation preserves every user graph table,
+24 journal snapshots, 32 artifacts, both Studio sessions and 14 engine-source edits.
+
+For LayaGo training, distinguish source-window ownership from semantic relevance,
+entity identity and document coverage. Include omitted early predicates, late
+qualifications, passive/modality/negative statements, empty-range negatives and
+outside-range but real source assertions. Never label a model-supported inventory
+as independent gold. Evaluate human-reviewed held-out long/OCR cases and relation
+precision separately. No new Laya training, MLX, speed or architecture-quality
+claim is established here; General-profile defaults and browser cache quota remain
+open.
+
+[DelayLama source range inventory](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-range-inventory.md)
+· [Shared receipt](validation/delaylama-source-range-inventory-20261005.json).
