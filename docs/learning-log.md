@@ -4487,3 +4487,40 @@ establishes no new Laya training, MLX, speed gain or real/OCR generalization.
 
 [DelayLama dispersed semantic analysis](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-dispersed-semantic-analysis.md)
 · [Shared receipt](validation/delaylama-dispersed-semantic-analysis-20261005.json).
+
+## L124 — A chunk is an extraction view of its original (2026-10-05)
+
+DelayLama's next engine fix repairs a concrete source-ownership failure. Automatic
+chunk extraction used `source:<document>#chunkN` citations while storage retained
+an episode for `source:<document>`. Offsets could also locate only an entity name
+rather than its longer supplied quote. Preserve the exact original byte interval
+at splitting time, check each supplied quotation within its own chunk and rebase
+it before merging. Do not infer original ownership from an arbitrary suffix or
+unique matching text in another document. The explicit chunk API's known original
+is its joined input, not an unknown pre-split document.
+
+A controlled replay reconstructs the 14 concept candidates from L123's stored
+synthetic evidence. Actual extraction/SQLite/containment changes current exact
+grounding from 0/14 to 13/14 and links 13 findings to their own source sections.
+The repeated Clause 88 remains ambiguous. This is not a new model draw or extraction
+recall benchmark; the raw provider output is not reconstructed. Historical user
+rows are not silently repaired. Source identity/span corrections establish no
+improvement in semantic predicates, applicability or model classification.
+
+Unicode-aware splitting preserves whole characters and complete source coverage,
+and oversized overlap cannot stall advancement. Both chunk extraction paths,
+forced fallback, foreign/missing/invented/repeated quotations and citation metadata
+are covered. Full Go and focused race checks, 1,308 backend tests, 28 patch tests,
+12 clean/idempotent patch arms and 11 optional variant suites pass. Model-disabled
+full-stack inspection verifies all 13 current spans, their connected context and
+the browser's visible ambiguity. The tested engine is activated with backed-up,
+unchanged user graph tables/configuration and protected source edits.
+
+For reusable LayaGo pipelines, make source intervals and coordinate conventions
+explicit at every split/merge boundary. Keep provenance tests separate from model
+quality. A source-matched wrong causal or notice predicate remains wrong; L123's
+semantic counterexamples, entity naming and acknowledgement role are unresolved.
+No new Laya training, MLX or architecture-quality result is established here.
+
+[DelayLama chunk original provenance](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-chunk-original-provenance.md)
+· [Shared receipt](validation/delaylama-chunk-original-provenance-20261005.json).

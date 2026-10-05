@@ -1,0 +1,659 @@
+{
+  "date": "2026-10-05",
+  "shared_learning": "L124",
+  "base_commit": "4d6ffbc",
+  "scope": "Correct original citation ownership and UTF-8 coordinates across automatic and explicit chunk extraction; no semantic predicate repair or historical migration",
+  "status": "verified_provenance_repair_with_retained_semantic_limits",
+  "default_patch": 57,
+  "engine_binary_sha256": "8ab539ecefd95e9103c843e4d49800dc03cd170da438f67b06687d24ec5854a3",
+  "fixture": {
+    "scope": "Captured 14 concept candidates from failed C123 synthetic draw; controlled replay, not fresh extraction recall",
+    "stored_evidence_reconstruction_not_raw_model_response": true,
+    "source_utf8_bytes": 89821,
+    "source_unicode_characters": 89809,
+    "source_sha256": "64f276e0d52078445dbefe3c1fc74b111395fe185708666859ccccbdea1d30e7",
+    "captured_concepts": 14,
+    "independent_benchmark": false
+  },
+  "comparison": {
+    "baseline": {
+      "captured_concepts": [
+        {
+          "name": "Clause 77",
+          "source_id": "source:long-contract-c123#chunk2",
+          "utf8_start": 11200,
+          "utf8_end": 11209,
+          "exact_original_slice": false,
+          "original_source_identity": false
+        },
+        {
+          "name": "12 February 2066",
+          "source_id": "source:long-contract-c123#chunk2",
+          "utf8_start": 11234,
+          "utf8_end": 11250,
+          "exact_original_slice": false,
+          "original_source_identity": false
+        },
+        {
+          "name": "PR-681",
+          "source_id": "source:long-contract-c123#chunk2",
+          "utf8_start": 11296,
+          "utf8_end": 11302,
+          "exact_original_slice": false,
+          "original_source_identity": false
+        },
+        {
+          "name": "13 February 2066",
+          "source_id": "source:long-contract-c123#chunk2",
+          "utf8_start": 11383,
+          "utf8_end": 11399,
+          "exact_original_slice": false,
+          "original_source_identity": false
+        },
+        {
+          "name": "Clause 99",
+          "source_id": "source:long-contract-c123#chunk2",
+          "utf8_start": 11688,
+          "utf8_end": 11697,
+          "exact_original_slice": false,
+          "original_source_identity": false
+        },
+        {
+          "name": "20 November 2066",
+          "source_id": "source:long-contract-c123#chunk2",
+          "utf8_start": 11767,
+          "utf8_end": 11783,
+          "exact_original_slice": false,
+          "original_source_identity": false
+        },
+        {
+          "name": "C123",
+          "source_id": "source:long-contract-c123#chunk1",
+          "utf8_start": 19,
+          "utf8_end": 23,
+          "exact_original_slice": false,
+          "original_source_identity": false
+        },
+        {
+          "name": "Larch Construction Ltd",
+          "source_id": "source:long-contract-c123#chunk1",
+          "utf8_start": 127,
+          "utf8_end": 149,
+          "exact_original_slice": false,
+          "original_source_identity": false
+        },
+        {
+          "name": "Pennant Engineer Ltd",
+          "source_id": "source:long-contract-c123#chunk1",
+          "utf8_start": 169,
+          "utf8_end": 189,
+          "exact_original_slice": false,
+          "original_source_identity": false
+        },
+        {
+          "name": "Clause 2",
+          "source_id": "source:long-contract-c123#chunk1",
+          "utf8_start": 209,
+          "utf8_end": 217,
+          "exact_original_slice": false,
+          "original_source_identity": false
+        },
+        {
+          "name": "Clause 88",
+          "source_id": "source:long-contract-c123#chunk1",
+          "utf8_start": 334,
+          "utf8_end": 343,
+          "exact_original_slice": true,
+          "original_source_identity": false
+        },
+        {
+          "name": "Clause 5",
+          "source_id": "source:long-contract-c123#chunk1",
+          "utf8_start": 468,
+          "utf8_end": 476,
+          "exact_original_slice": false,
+          "original_source_identity": false
+        },
+        {
+          "name": "seven days",
+          "source_id": "source:long-contract-c123#chunk1",
+          "utf8_start": 588,
+          "utf8_end": 598,
+          "exact_original_slice": false,
+          "original_source_identity": false
+        },
+        {
+          "name": "Appendix X",
+          "source_id": "source:long-contract-c123#chunk1",
+          "utf8_start": 719,
+          "utf8_end": 729,
+          "exact_original_slice": false,
+          "original_source_identity": false
+        }
+      ],
+      "correct_identity_and_span": 0,
+      "source_structure": {
+        "version": 1,
+        "protocol": "source-structure-v1",
+        "status": "partial",
+        "source_sha256": "64f276e0d52078445dbefe3c1fc74b111395fe185708666859ccccbdea1d30e7",
+        "proposed": 15,
+        "located": 0,
+        "linked": 0,
+        "withheld": 15,
+        "failed": 0,
+        "documents_stored": 1,
+        "sections_proposed": 6,
+        "sections_stored": 6,
+        "containment_stored": 6
+      },
+      "graph_nodes": 22,
+      "graph_edges": 8
+    },
+    "fixed": {
+      "captured_concepts": [
+        {
+          "name": "Clause 77",
+          "source_id": "source:long-contract-c123",
+          "utf8_start": 89193,
+          "utf8_end": 89223,
+          "exact_original_slice": true,
+          "original_source_identity": true
+        },
+        {
+          "name": "12 February 2066",
+          "source_id": "source:long-contract-c123",
+          "utf8_start": 89227,
+          "utf8_end": 89243,
+          "exact_original_slice": true,
+          "original_source_identity": true
+        },
+        {
+          "name": "PR-681",
+          "source_id": "source:long-contract-c123",
+          "utf8_start": 89273,
+          "utf8_end": 89295,
+          "exact_original_slice": true,
+          "original_source_identity": true
+        },
+        {
+          "name": "13 February 2066",
+          "source_id": "source:long-contract-c123",
+          "utf8_start": 89376,
+          "utf8_end": 89392,
+          "exact_original_slice": true,
+          "original_source_identity": true
+        },
+        {
+          "name": "Clause 99",
+          "source_id": "source:long-contract-c123",
+          "utf8_start": 89681,
+          "utf8_end": 89705,
+          "exact_original_slice": true,
+          "original_source_identity": true
+        },
+        {
+          "name": "20 November 2066",
+          "source_id": "source:long-contract-c123",
+          "utf8_start": 89760,
+          "utf8_end": 89776,
+          "exact_original_slice": true,
+          "original_source_identity": true
+        },
+        {
+          "name": "C123",
+          "source_id": "source:long-contract-c123",
+          "utf8_start": 0,
+          "utf8_end": 23,
+          "exact_original_slice": true,
+          "original_source_identity": true
+        },
+        {
+          "name": "Larch Construction Ltd",
+          "source_id": "source:long-contract-c123",
+          "utf8_start": 127,
+          "utf8_end": 167,
+          "exact_original_slice": true,
+          "original_source_identity": true
+        },
+        {
+          "name": "Pennant Engineer Ltd",
+          "source_id": "source:long-contract-c123",
+          "utf8_start": 169,
+          "utf8_end": 205,
+          "exact_original_slice": true,
+          "original_source_identity": true
+        },
+        {
+          "name": "Clause 2",
+          "source_id": "source:long-contract-c123",
+          "utf8_start": 209,
+          "utf8_end": 243,
+          "exact_original_slice": true,
+          "original_source_identity": true
+        },
+        {
+          "name": "Clause 88",
+          "source_id": "source:long-contract-c123",
+          "utf8_start": 0,
+          "utf8_end": 0,
+          "exact_original_slice": false,
+          "original_source_identity": true
+        },
+        {
+          "name": "Clause 5",
+          "source_id": "source:long-contract-c123",
+          "utf8_start": 468,
+          "utf8_end": 497,
+          "exact_original_slice": true,
+          "original_source_identity": true
+        },
+        {
+          "name": "seven days",
+          "source_id": "source:long-contract-c123",
+          "utf8_start": 581,
+          "utf8_end": 598,
+          "exact_original_slice": true,
+          "original_source_identity": true
+        },
+        {
+          "name": "Appendix X",
+          "source_id": "source:long-contract-c123",
+          "utf8_start": 719,
+          "utf8_end": 759,
+          "exact_original_slice": true,
+          "original_source_identity": true
+        }
+      ],
+      "correct_identity_and_span": 13,
+      "source_structure": {
+        "version": 1,
+        "protocol": "source-structure-v1",
+        "status": "partial",
+        "source_sha256": "64f276e0d52078445dbefe3c1fc74b111395fe185708666859ccccbdea1d30e7",
+        "proposed": 15,
+        "located": 13,
+        "linked": 13,
+        "withheld": 2,
+        "failed": 0,
+        "documents_stored": 1,
+        "sections_proposed": 6,
+        "sections_stored": 6,
+        "containment_stored": 19
+      },
+      "graph_nodes": 22,
+      "graph_edges": 21
+    }
+  },
+  "full_stack": {
+    "controlled_replay": true,
+    "fresh_extraction_recall_measured": false,
+    "captured_concepts": 14,
+    "current_exact_grounded": 13,
+    "ambiguous": 1,
+    "source_statuses": {
+      "Clause 77": "located",
+      "12 February 2066": "located",
+      "PR-681": "located",
+      "13 February 2066": "located",
+      "Clause 99": "located",
+      "20 November 2066": "located",
+      "C123": "located",
+      "Larch Construction Ltd": "located",
+      "Pennant Engineer Ltd": "located",
+      "Clause 2": "located",
+      "Clause 88": "ambiguous",
+      "Clause 5": "located",
+      "seven days": "located",
+      "Appendix X": "located"
+    },
+    "all_located_spans_exact": true,
+    "reachable_located_concepts": 13,
+    "component_nodes": 21,
+    "component_connections": 21,
+    "model_calls": 0,
+    "engine_has_llm": false,
+    "engine_jobs": 0,
+    "graph_unchanged": true,
+    "source_sha256": "64f276e0d52078445dbefe3c1fc74b111395fe185708666859ccccbdea1d30e7"
+  },
+  "validation": {
+    "three_public_extraction_or_unicode_regressions_failed_before_fix": true,
+    "go_full_suite_passed": true,
+    "intelligence_and_agents_race_passed": true,
+    "backend_passed": 1308,
+    "patch_test_passed": 28,
+    "clean_v130_patch_arms": 12,
+    "idempotent_arms": 12,
+    "optional_variant_suites_passed": 11,
+    "frontend_passed": 910,
+    "frontend_test_scope": "Immediately preceding 4d6ffbc qualification; frontend source unchanged in chunk repair",
+    "frontend_production_build_scope": "Passed in immediately preceding 4d6ffbc qualification; no frontend change"
+  },
+  "activation": {
+    "old_engine_pid": 41950,
+    "engine_pid": 97593,
+    "api_pid_unchanged": 78875,
+    "database_backup": "/private/tmp/delaylama-chunk-provenance/activation-backup/graph.db",
+    "binary_backup": "/private/tmp/delaylama-chunk-provenance/activation-backup/chronograph-previous",
+    "finished_jobs_archived": 0,
+    "graph_rows_unchanged": true,
+    "table_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    },
+    "config_unchanged": true,
+    "engine_sha256": "8ab539ecefd95e9103c843e4d49800dc03cd170da438f67b06687d24ec5854a3",
+    "health_before": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    },
+    "health_after": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    }
+  },
+  "cleanup": {
+    "graph_unchanged": true,
+    "nodes": 22,
+    "edges": 21,
+    "closed_ports": [
+      8097,
+      8081,
+      5175
+    ],
+    "qa_model_enabled": false,
+    "qa_analysis_jobs": 0,
+    "temporary_tab_closed": 131,
+    "user_tab_untouched": true,
+    "main_engine_health": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    },
+    "main_API_and_frontend_healthy": true,
+    "user_contract_reanalysis_submitted": 0
+  },
+  "preservation": {
+    "protected_engine_source_files_unchanged": true,
+    "protected_app_artifacts_unchanged": true,
+    "user_studio_unchanged": true,
+    "orchid_studio_unchanged": true,
+    "user_graph_all_tables_unchanged": true,
+    "recorded_replay_nodes_edges_unchanged_by_GUI": true,
+    "owned_jobs_terminal_verified_before_cleanup": true,
+    "replay_verified_before_cleanup": true,
+    "user_engine_health": {
+      "analysis_jobs": {
+        "cancelled": 0,
+        "done": 0,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "analysis_jobs_scope": "service",
+      "edge_count": 660,
+      "episode_count": 321,
+      "node_count": 1444,
+      "schema": "general",
+      "status": "ok"
+    },
+    "user_graph_fingerprints": {
+      "edges": {
+        "rows": 660,
+        "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+      },
+      "episodes": {
+        "rows": 321,
+        "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+      },
+      "nodes": {
+        "rows": 1444,
+        "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+      },
+      "schema_meta": {
+        "rows": 1,
+        "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+      },
+      "timeline_events": {
+        "rows": 3437,
+        "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+      }
+    }
+  },
+  "remaining_limits": [
+    "Historical user graph rows and chunk-local records are not migrated or rebound.",
+    "Repeated Clause 88 remains ambiguous; additional missing-quote party is unverified.",
+    "Causal-from-sequence, unsigned-amendment predicates, negative-party naming and acknowledgement-role failures from L123 remain unresolved.",
+    "Exact quotation, source ownership, containment and connectivity do not prove meaning, relevance, applicability or complete extraction.",
+    "Controlled stored-evidence replay makes no model call; no fresh recall, Laya training or independent real/OCR generalization result."
+  ],
+  "source_manifest": [
+    {
+      "path": "patches/chronograph/chunk-original-provenance.patch",
+      "sha256": "ac2658dbbc4a33c030f1ec311a2f301f9edae3f64160a67398a7b3c1f5d6ad17"
+    },
+    {
+      "path": "patches/chronograph/UPSTREAM.json",
+      "sha256": "961afc6b77bbe8508f4197a61b6dc06f8d2bc16f24320161b0bdb45cb55bcc01"
+    },
+    {
+      "path": "scripts/apply_chronograph_patches.py",
+      "sha256": "8db46865cfe68053c390bf44f3ddeb1b4a90f2bc3c64aa99249e5b9710287232"
+    },
+    {
+      "path": "scripts/chronograph_chunk_replay.go",
+      "sha256": "f2a46853e92c57baae031a93525d715354f4c6d9de6a958b8fab29b7bb3c2783"
+    },
+    {
+      "path": "scripts/fixtures/chronograph-chunk-citations.json",
+      "sha256": "0786473b2fb2341b1f17c0ef89af9557d59d6d23392391dd46e4c0787f9548ab"
+    },
+    {
+      "path": "delaylama/tests/test_chronograph_patches.py",
+      "sha256": "b2dec5ef589ff2b8cb00831fffee3ec154f6b8cbac58fd91311fe74c2c9b9845"
+    }
+  ],
+  "proof_manifest": [
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/activation.json",
+      "bytes": 1734,
+      "sha256": "6c6f5187ea262f6dd38d6581a4b07b1ab8d9dc676754aa52bfe88ff1f539793e"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/ambiguous-clause-dom.txt",
+      "bytes": 764,
+      "sha256": "97b5cf2c5aeef3e561dcceed763d565ffc575064bb7c149440a11076c4c6a5cd"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/ambiguous-clause.png",
+      "bytes": 114294,
+      "sha256": "761b80e68addf14940b2ceb2fc658b873c47d673d7201e54c0aaa0b97b242d8f"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/backend-all.log",
+      "bytes": 1587,
+      "sha256": "1c75799ab9074e661328aa71f2c6d372b64a9f96450f1a631cbd4e4b1d8c1469"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/baseline-replay.json",
+      "bytes": 685614,
+      "sha256": "229d952d8b302538d399a2e766acf81e593a7f73a403c322cbe3ede5229026b2"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/before.log",
+      "bytes": 2771,
+      "sha256": "8dae5332d8e839f1a6dc56bd43712a8088350fc6ce5a61e9c23e9a63c124d816"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/browser-errors.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/build.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/captured.json",
+      "bytes": 95844,
+      "sha256": "0786473b2fb2341b1f17c0ef89af9557d59d6d23392391dd46e4c0787f9548ab"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/check_live.py",
+      "bytes": 2811,
+      "sha256": "06dadc2c83ba52391b12c828cc80b50b881d682fafdd0b014cb2e5413d8760a8"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/cleanup.json",
+      "bytes": 625,
+      "sha256": "5e86419ac23a086c52efaa5ec1441104c180a7239c945bb8d093d1336ae6bb23"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/cleanup.py",
+      "bytes": 2004,
+      "sha256": "d95ac9dbc618c17881875d4afd3663f8e00926b61aa0b19f43b280c0ba4f31a9"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/configuration-journal-preservation.json",
+      "bytes": 260,
+      "sha256": "bdd918690ab92321e9ae6d6c28226fb6af5db952dcadf89e8d3fe4f53edb421b"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/context-dom.txt",
+      "bytes": 3616,
+      "sha256": "9715d66815d1a23b10b1695985e89d29db0c7bf27489c794e1f92afb888e552f"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/final-patch-arms.json",
+      "bytes": 37613,
+      "sha256": "d8baf98fa1bba329f07b2385c815cbda5c6717aceae971ff92cf43cd9074be9c"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/fixed-replay.json",
+      "bytes": 709863,
+      "sha256": "f606a64eb3daf7a73c4a46156d235d073ddde6626e800d080b2a032eee612f3e"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/go-all.log",
+      "bytes": 1911,
+      "sha256": "3356ffdbc32a6bc0cdde3b75bc28a95431356056c63928c31a1a47f81350c87e"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/go-race.log",
+      "bytes": 116,
+      "sha256": "b68e33c22734905733c77d7283750af4114775bda33ca6ae08f82e9bcaea05cd"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/graph-response.json",
+      "bytes": 1116794,
+      "sha256": "0bb992a29bccae47a6d96fe57f6329a2e51aa280b2be77b8c10f4863080db61f"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/late-citation-dom.txt",
+      "bytes": 1057,
+      "sha256": "00334754b5a9006c7bef62fddae189a5f622d3571b71534411a489148620c600"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/late-citation.png",
+      "bytes": 137372,
+      "sha256": "26ce9d19a681092e2056187785f30702052e97674a7972091cadbe3b1c825c71"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/live-gate.json",
+      "bytes": 920,
+      "sha256": "3d908bfe9cec21371673c0353269cc4bfb512171b0b91befe3ab52a76b28af48"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/neighborhood-response.json",
+      "bytes": 427825,
+      "sha256": "8ec75c0b9155366befa22efa00046437d4dcd2e0344b46fa1452567a178618c7"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/patch-tests.log",
+      "bytes": 145,
+      "sha256": "d4bcc607b240c3dfc18447859ed7d3e955cbf6c8220d12e2819c72c3f7032ffc"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/preservation.json",
+      "bytes": 1349,
+      "sha256": "76b5b675f6de4a92a556da0db3200e6d234cdb49300687823fb60e2749061e40"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/qa-final-health.json",
+      "bytes": 555,
+      "sha256": "94b9f835847bc613506fa8707f464f81efb793bd3ecbbec11accfadb41ae7443"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/replay-comparison.json",
+      "bytes": 7729,
+      "sha256": "13a4c7b1e710ee242ea61335d5b1074a215ee17dd8edefa38c6ee57f3275da25"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/snapshot-before.json",
+      "bytes": 700287,
+      "sha256": "af505595ecf8478bf4e5b5f4162b0e76dab2406128042f981728078505a35846"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/targeted.log",
+      "bytes": 61,
+      "sha256": "de48b59485f9b7334ad6b6713c2ec084062ea038f6c445e3eb9ed5e1a9158b89"
+    },
+    {
+      "path": "docs/validation/assets/chunk-original-provenance/user-source-preflight.log",
+      "bytes": 2728,
+      "sha256": "55e574b1fdf12f1c2f31091ed7d73db44fe86934649936dd606a31267b601c72"
+    }
+  ]
+}
