@@ -5241,3 +5241,44 @@ states; neither should turn role proximity or contrastive similarity into entitl
 time source grounding, long-dossier recall needs independent evaluation, and native
 job recovery across restart remains unfinished. This work added no LayaGo architecture,
 MLX acceleration or training supervisor changes.
+
+
+## L141 — Party roles are not relationship witnesses (2026-10-06)
+
+**Evidence:** [DelayLama receipt](validation/delaylama-role-relation-generation-20261006.json)
+links before-fix regression failures, storage controls, fresh native outputs, actual
+browser witnesses and preserved-state activation. No LayaGo training or speed claim.
+
+A deterministic role pass cross-multiplied owners and contractors, assigned specific
+missions from general project-manager roles, defaulted insurance/guarantee beneficiaries
+and created utility nodes from stakeholder labels. A role declaration quotation
+supported the label, not those endpoint relations or scopes. Exact text and structural
+provenance did not repair that semantic gap.
+
+Default compatibility patch65 separates role-only nominations from stored edges,
+synthetic entities and known-relationship prompts. Source-backed party labels remain
+candidates. Positive SQLite/file-store controls retain an explicit operative contract
+with its own predicate witness while withholding an unsigned amendment. Two fresh
+saved projects produced three native source jobs and twelve application calls: no
+role-inferred edges, and the explicit SC315 contract/invoice certification persisted.
+These development controls do not establish full semantic accuracy or recall.
+
+A source-hashed receipt distinguishes withheld generation proposals from graph facts.
+Wrong-source or malformed receipts cannot become a verified policy display. The
+browser keeps that policy separate from source-extracted model relationships and
+highlights the retained witness. No historical graph edge was deleted.
+
+**Training implications:** use minimally differing examples with the same parties/roles:
+a roster alone, an explicit bilateral agreement, a proposed unsigned amendment, a
+narrow assignment, a negative assignment and an insurance/guarantee scope for a named
+beneficiary. Include multiple possible counterparties so a classifier cannot choose
+the first label, plus identical role words attached to different originals. Evaluate
+endpoint/direction, predicate, modality, instrument and conditions separately from
+role classification. Contrastive similarity can nominate contexts, but a party role
+embedding must not certify a contract or legal relationship.
+
+**Open:** duplicate native and extraction-seeded role declarations need source identity
+reconciliation. Other heuristic/model predicates, long-dossier recall, precedence,
+causality/fulfillment and durable native job recovery still need evaluation. Previous
+claim abstention/omission/waiver failures are not resolved by this graph generation
+change. No LayaGo architecture, GLiNER integration, MLX or supervisor change occurred.

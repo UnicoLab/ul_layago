@@ -12,10 +12,10 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L140 finding](docs/learning-log.md#l140--independent-source-decisions-and-actual-runtime-controls-2026-10-06)
-records source-first claim decisions, silently dropped model controls, retained
-semantic failures and missing-target coverage. Exact quotations and successful
-execution remain separate from semantic accuracy.
+The latest [L141 finding](docs/learning-log.md#l141--party-roles-are-not-relationship-witnesses-2026-10-06)
+records why party roles cannot establish contracts, missions or beneficiaries.
+Source-only nominations, explicit relationship witnesses and retained failures
+remain separate from semantic quality certificates.
 
 ## Build and use
 
