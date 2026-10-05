@@ -5051,3 +5051,46 @@ location; use unseen independently reviewed cases before claiming quality gains.
 These controls could guide a later dataset, but no training improvement is measured.
 
 Shared hashed receipt: [DelayLama claim context and premise qualification](validation/delaylama-claim-context-handoff-20261005.json).
+
+## L137 — Claim rechecks need separate object, state, rule and applicability premises (2026-10-05)
+
+An exact witness span about D-174 did not establish a payment request: its original
+antecedent described a suspension request. DelayLama's source recheck now asks for
+separate outcome-object and recorded-state evidence, and for separate dimension,
+rule type and event-applicability evidence for definite time/cost conclusions.
+Coverage, source matching, enum binding and conservative wording checks gate review
+candidates. A permission procedure or missing approval record cannot substitute for
+an entitlement/exclusion rule or independently established condition noncompliance.
+These gates do not certify the meaning of validly formatted model declarations.
+
+Four frozen synthetic development controls were run once, then once more after
+making the array schema and required metadata explicit. The initial valid payment
+control was an **insufficient false negative** from missing metadata; it is retained.
+The follow-up kept both C124 negatives unresolved while the explicit payment and
+weather-cost-exclusion controls received candidate support. The raw time response
+still misinterpreted a permission rule: qualification blocked promotion, not the
+underlying semantic error. Five initial calls, four follow-up calls and one actual
+browser recheck completed. All returned quotations matched; no fallback or semantic
+persuasion retries occurred. This is format development, not independent legal gold
+or held-out extraction accuracy.
+
+The actual button kept the erroneous payment fact unchanged, with four gaps and no
+qualified contradiction. Compact field disclosures retained independent passages.
+Own field-prefixed premise explanations and exact quotes, the correction note, full
+registered original and two history entries saved and restored through project
+backups. The source-heading hash difference and detector gate stayed visible.
+1,528 backend and 984 frontend tests plus build pass. Three existing native graph
+snapshots and protected user state stayed unchanged; owned services were stopped.
+No native graph construction, Laya training or MLX performance test occurred.
+
+For future reusable LayaGo datasets, distinguish request object, decision stage,
+recorded absence versus undocumented state, dimension, rule type and applicability.
+Use genuine matching spans for the wrong object/rule as hard negatives. Measure
+abstention/false negatives separately from false support, and retain initial failures
+alongside development follow-ups. Train association and condition handling against
+independent labels; graph neighbors and successful quote location are not legal
+gold. A useful next evaluation would blind the object/rule inventory to the proposed
+claim conclusion, following the existing graph predicate-audit separation, then test
+unseen independently reviewed cases. No quality gain from training is measured here.
+
+Shared hashed receipt: [DelayLama claim premise review](validation/delaylama-claim-premise-review-20261005.json).

@@ -1,0 +1,285 @@
+{
+  "learning": "L137",
+  "date": "2026-10-05",
+  "report": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-claim-premise-review.md",
+  "source_receipt_sha256": "a151227280c27b9fea5277891fa6bd6ed6f02ed10ffafb2f4bc40587c492ed77",
+  "delaylama_receipt": {
+    "date": "2026-10-05",
+    "log_copy_normalization": "Trailing whitespace and final empty lines removed from copied logs; raw private logs retained.",
+    "scope": "Claim source-recheck premise qualification, compact review and full history handoff; no extraction regeneration or native graph construction.",
+    "tests": {
+      "backend": 1528,
+      "frontend": 984,
+      "frontend_files": 78,
+      "build_passed": true,
+      "existing_bundle_advisory": true
+    },
+    "model_development": [
+      {
+        "batch": "pilot",
+        "status": "done",
+        "rows": [
+          {
+            "case": "failed-suspension-as-payment-fr",
+            "verdict": "insufficient",
+            "real_model_calls": 2,
+            "schema_repair": true,
+            "rejected_quotes": 0,
+            "fallback_used": false,
+            "fields": {
+              "kind": "insufficient",
+              "status": "insufficient",
+              "value": "insufficient",
+              "date": "insufficient"
+            }
+          },
+          {
+            "case": "failed-time-entitlement-fr",
+            "verdict": "insufficient",
+            "real_model_calls": 1,
+            "schema_repair": false,
+            "rejected_quotes": 0,
+            "fallback_used": false,
+            "fields": {
+              "viability": "insufficient",
+              "time entitlement": "insufficient",
+              "recommended action": "insufficient"
+            }
+          },
+          {
+            "case": "explicit-payment-request-en",
+            "verdict": "insufficient",
+            "real_model_calls": 1,
+            "schema_repair": false,
+            "rejected_quotes": 0,
+            "fallback_used": false,
+            "fields": {
+              "kind": "insufficient",
+              "status": "insufficient",
+              "value": "insufficient",
+              "date": "insufficient"
+            }
+          },
+          {
+            "case": "explicit-cost-exclusion-en",
+            "verdict": "supports",
+            "real_model_calls": 1,
+            "schema_repair": false,
+            "rejected_quotes": 0,
+            "fallback_used": false,
+            "fields": {
+              "viability": "supports",
+              "cost entitlement": "supports"
+            }
+          }
+        ]
+      },
+      {
+        "batch": "pilot-followup",
+        "status": "done",
+        "rows": [
+          {
+            "case": "failed-suspension-as-payment-fr",
+            "verdict": "insufficient",
+            "real_model_calls": 1,
+            "schema_repair": false,
+            "rejected_quotes": 0,
+            "fallback_used": false,
+            "fields": {
+              "kind": "insufficient",
+              "status": "insufficient",
+              "value": "insufficient",
+              "date": "insufficient"
+            }
+          },
+          {
+            "case": "failed-time-entitlement-fr",
+            "verdict": "insufficient",
+            "real_model_calls": 1,
+            "schema_repair": false,
+            "rejected_quotes": 0,
+            "fallback_used": false,
+            "fields": {
+              "viability": "insufficient",
+              "time entitlement": "insufficient",
+              "recommended action": "insufficient"
+            }
+          },
+          {
+            "case": "explicit-payment-request-en",
+            "verdict": "supports",
+            "real_model_calls": 1,
+            "schema_repair": false,
+            "rejected_quotes": 0,
+            "fallback_used": false,
+            "fields": {
+              "kind": "supports",
+              "status": "supports",
+              "value": "supports",
+              "date": "supports"
+            }
+          },
+          {
+            "case": "explicit-cost-exclusion-en",
+            "verdict": "supports",
+            "real_model_calls": 1,
+            "schema_repair": false,
+            "rejected_quotes": 0,
+            "fallback_used": false,
+            "fields": {
+              "viability": "supports",
+              "cost entitlement": "supports"
+            }
+          }
+        ]
+      }
+    ],
+    "total_real_model_calls": 10,
+    "initial_positive_false_negative_retained": true,
+    "followup_is_format_development_not_held_out_accuracy": true,
+    "raw_semantic_failure_retained": true,
+    "semantic_certification": false,
+    "browser": {
+      "owned_tab": 146,
+      "exact_review_path": "assessments[1].recorded_outcomes[1]",
+      "overall_verdict": "insufficient",
+      "field_candidates": 0,
+      "field_contradictions": 0,
+      "field_gaps": 4,
+      "browser_real_model_calls": 1,
+      "response_model": "gemini-3.1-flash-lite",
+      "own_premises_and_quote_highlighted": true,
+      "default_open_field_panels": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "expand_all_and_collapse_all_verified": true,
+      "long_concerns_collapsed_all_reasons_retained": true,
+      "original_model_fact_retained": true,
+      "saved_review_revision": 2,
+      "saved_prompt_session_revision": 1,
+      "whole_registered_original_chars": 1041,
+      "bare_model_source_chars": 981,
+      "source_heading_difference_warning_and_current_detector_gate_retained": true,
+      "history_entries": 2,
+      "premise_feedback_exact_fields_and_quotes_retained": true,
+      "browser_storage_unavailable_server_backup_working": true,
+      "no_assistant_revision_or_prompt_activation": true,
+      "graphs": [
+        {
+          "case": "dispersed-notice-en",
+          "nodes": 47,
+          "edges": 89,
+          "unchanged": true
+        },
+        {
+          "case": "conditional-refusal-fr",
+          "nodes": 25,
+          "edges": 42,
+          "unchanged": true
+        },
+        {
+          "case": "operative-contract-and-draft-en",
+          "nodes": 11,
+          "edges": 17,
+          "unchanged": true
+        }
+      ],
+      "extraction_files_sha256": {
+        "claim_viability_20261005_202107_397124.json": "4aef5ed602dcbced2d2d42660e798d05d9a70d0db4b4ce36fd71eca302f0447c",
+        "event_detector_20261005_202107_399365.json": "5d34e4308cd452c055219c35c41efcec314667964fc6c00ff369b0ca5f779024"
+      },
+      "saved_session_restored_after_reload_and_project_reselection": true,
+      "saved_review_restored_after_reload": true,
+      "browser_console_errors_or_warnings": [],
+      "owned_tab_closed": true
+    },
+    "activation": {
+      "old_launcher_pid": 7671,
+      "new_launcher_pid": 15879,
+      "api_healthy": true,
+      "journal_unchanged": true,
+      "journal": {
+        "count": 24,
+        "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+      },
+      "app_env_unchanged": true
+    },
+    "preservation": {
+      "protected_engine_source_files_unchanged": true,
+      "protected_app_artifacts_unchanged": true,
+      "user_studio_unchanged": true,
+      "orchid_studio_unchanged": true,
+      "user_graph_all_tables_unchanged": true
+    },
+    "cleanup": {
+      "only_owned_services_stopped": true,
+      "ports_closed": true,
+      "copied_terminal_journal_entries": 1,
+      "native_jobs_queued_or_running": 0,
+      "new_native_jobs": 0,
+      "model_runs_terminal": 2,
+      "real_model_calls": 10,
+      "browser_source_recheck_terminal": true,
+      "owned_tabs_closed": [
+        146
+      ],
+      "processes": [
+        {
+          "service": "engine",
+          "pid": 89702,
+          "port": 8097
+        },
+        {
+          "service": "api",
+          "pid": 94299,
+          "port": 8081
+        },
+        {
+          "service": "frontend",
+          "pid": 89704,
+          "port": 5175
+        }
+      ]
+    },
+    "source_files_sha256": {
+      "delaylama/ai_core/claim_outcomes.py": "0482d1e18a5b5f5a0deb119f08fb9390f1a291f09d7869db3e5c8ca490d2f792",
+      "delaylama/ai_core/claim_support.py": "94c88cd10c3df280b2db27880aa248d5e73aae84018b30522fab8cfc89634c6e",
+      "delaylama/ai_core/evidence_recovery.py": "d3ce2412832a9c4e04466dad5787fd08e16cee7839599727d5dcd10d57a63afa",
+      "delaylama/tests/test_claim_support.py": "ef8291e121267d144335efad3cdabd899a304fc97d76bd37ff2cad359ef26165",
+      "frontend/src/claimSupport.ts": "e506626c39a1fb8e54dfe0be49c29de1bcdfe3a87d51f92eb19fba9ee7d31e61",
+      "frontend/src/claimOutcomes.ts": "f3d5e8be5d936ae540465eda899690122fb1a86ed4ecaf76f67c639979a41f06",
+      "frontend/src/fieldEvidence.ts": "908bf1a995e655ac02933a41902921d37c6c43baff63a21cf3b106549e7143ba",
+      "frontend/src/review.ts": "6f61ce4bd723603f2d4c73910824d4c76b1bdf5020eba81aecc62fc790a5e534",
+      "frontend/src/components/FieldEvidenceReview.tsx": "bc703851592c0e6b232000a220ed2809922c6eda92be2ba6d843541c76b3bef7",
+      "frontend/src/components/FieldFactEvidence.tsx": "af9639fbe42e54fb2eb263ba7d44100e0810ac97b44affcfac56193765454c14",
+      "frontend/src/components/FieldReviewNotice.tsx": "64cac4154946fccadf9903b1385fb0432c36d02a374572d6f9402c76763d194a",
+      "frontend/tests/claim-support.test.tsx": "8ae9e4463b7386fdfb392e018070cc49ce221751e54bb7203f7206d857d0ecc0"
+    },
+    "assets_sha256": {
+      "docs/validation/assets/claim-premise-review/final-contradiction-targeted.log": "00bf0a9f7d45d16e268df155c6529ea28259e0584e4357f8b63e9b2e686b189f",
+      "docs/validation/assets/claim-premise-review/backend-final.log": "c61f424e91ac072b79dfdfa51a32272414f0a10172f80864fd32732e6d17d37f",
+      "docs/validation/assets/claim-premise-review/pilot-followup-protocol-audit.json": "f81eabb463ba771e5031444d418c6193f95ead545ba98cbb84066b9d2ebcb51a",
+      "docs/validation/assets/claim-premise-review/session-agent-claim_viability-r1.json": "0cc27a822ecc41b273610d66cc8948045ad9d66d3ec9c59cc019eb59ac82b994",
+      "docs/validation/assets/claim-premise-review/session-agent-review_c4137f06e9725873cb32454b4513b1786de1e380c9c7cff9b33eff5e80dd8b4d-r2.json": "cf3f6190a44799b822f757b5ed62cb5b5bf504c7fced40ad444cece169390544",
+      "docs/validation/assets/claim-premise-review/contradiction-before-backend.log": "a59a43b7f1a3f558047da8fea8e087ae4017fc36d25787bc49e1818405300b92",
+      "docs/validation/assets/claim-premise-review/build-final.log": "f7378919a1463877d8ed309720af1f5d7278b4ac7c30a8c23f196553abce714c",
+      "docs/validation/assets/claim-premise-review/cleanup.json": "f84a3c76f9a16be6ed113888a217fe96739c2f0699fceaaf6447d8520db5b3af",
+      "docs/validation/assets/claim-premise-review/pilot-followup.json": "0f7e71a73fb542184b966ecb98b6a5fc24f9f9119c27763063b84543d6f92d3f",
+      "docs/validation/assets/claim-premise-review/session-agent-review_c4137f06e9725873cb32454b4513b1786de1e380c9c7cff9b33eff5e80dd8b4d-r1.json": "ea221c67176860a1bcea344bb2c7b278c90e1936e875ca1f6fd0862c5f6315a3",
+      "docs/validation/assets/claim-premise-review/claim-premise-compact.png": "6d3116528a4948f2957c87eddea34b97df93872b745ae72583328595cb808280",
+      "docs/validation/assets/claim-premise-review/pilot.json": "93371797a26053a87b9cf9ce4431d6c922b13ee1eb283ffddce2ce48b4a92fda",
+      "docs/validation/assets/claim-premise-review/claim-premise-review.png": "f0ece4586d94d9ec768e9887f9720ee5ac357ba78360a124fa8073ed2459856d",
+      "docs/validation/assets/claim-premise-review/pilot-protocol-audit.json": "f81eabb463ba771e5031444d418c6193f95ead545ba98cbb84066b9d2ebcb51a",
+      "docs/validation/assets/claim-premise-review/contradiction-before-frontend.log": "e52f1df30020be155bbae3258e165b2e042051ad9ec54f8137c991f58581bac5",
+      "docs/validation/assets/claim-premise-review/frontend-final.log": "96154265b3c5520cfd08b03c427d4aec1eb8b71cf9015a6721f226a56b2a2b20",
+      "docs/validation/assets/claim-premise-review/final-qualification-replay.json": "bffe6a43d09910e1066bc1935a3487b6c4c83bad21144a6609049850190869f2",
+      "docs/validation/assets/claim-premise-review/claim-premise-viewport.png": "09f4ba6a241b90c0c629917a55c17a27f9643b0fdd57f57441041ae5d9e3d28d",
+      "docs/validation/assets/claim-premise-review/browser-proof.json": "3098641f4b55a95b0fe0d54545f47a7f3665b9ebe96f338d2b47a1d35b702b5e",
+      "docs/validation/assets/claim-premise-review/pilot-input.json": "edf66e815a8fb9ae654b9f270d04c6297005afb6f9dc9d1076585a37be8f821f",
+      "docs/validation/assets/claim-premise-review/pilot-followup-input.json": "b2fc876dbf52bb78f5ad503868cec2f67dd03fe8a29ab235a14505f4d618d10e"
+    }
+  }
+}
