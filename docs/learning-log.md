@@ -5013,3 +5013,41 @@ independent semantic/source benchmark; these integration checks do not establish
 held-out legal accuracy or native graph construction completeness.
 
 Shared hashed receipt: [DelayLama event-link context qualification](validation/delaylama-event-link-context-20261005.json).
+
+
+## L136 — Quote retrieval is separate from outcome-object and rule support (2026-10-05)
+
+DelayLama claim input now retains all selected prior analyses and a distinct graph
+bundle, including long-tail analysis. Unavailable graph refreshes become visible
+saved gaps rather than silently replacing supplied context. Tests cover both
+reasoning modes, empty/readiness/error/sentinel paths and exact context preservation.
+
+A production time/cost consolidation on synthetic C124 received its whole original,
+hand-authored event/prior controls and current context from its existing native graph.
+All eight quotes matched, but the model called a suspension request a payment request,
+and its refusal an absent extension/payment award. Missing client approval records
+also became categorical entitlement conclusions. One documented two-request prompt
+follow-up still failed outcome kinds and entitlement; both failed raw responses are
+retained. Four total real requests completed without fallback. This is prompt
+development, not independent legal gold or a successful accuracy benchmark.
+
+Own-path backend/frontend review hints now expose unrecognized stage premises,
+documentation gaps used as absence, and definite time/cost conclusions without own
+dimension wording. They preserve answers and never certify a matching vocabulary.
+An owned browser check carried the exact correction, warning, whole registered
+original and two-entry history into a saved Claim viability prompt session. Its
+source heading changes the hash versus the bare model original; the provenance
+warning and current-detector gate remain visible. No revised model/detector run or
+prompt activation occurred in the browser. 1,495 backend and 974 frontend tests plus
+build pass. Three native graph snapshots and protected user state remain unchanged;
+owned listeners stopped. No new native graph build or Laya/MLX experiment occurred.
+
+For future LayaGo classifiers/retrievers, label the object of each request and
+refusal, occurrence, decision stage, document-status uncertainty, and applicable
+rule as separate dimensions. An exact witness span with the wrong object is a hard
+negative, not a grounded positive. Missing records must not become absence labels.
+Train/evaluate association, polarity and rule applicability independently of quote
+location; use unseen independently reviewed cases before claiming quality gains.
+These controls could guide a later dataset, but no training improvement is measured.
+
+Shared hashed receipt: [DelayLama claim context and premise qualification](validation/delaylama-claim-context-handoff-20261005.json).

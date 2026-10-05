@@ -1,0 +1,127 @@
+{
+  "learning": "L136",
+  "date": "2026-10-05",
+  "report": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-claim-context-handoff.md",
+  "report_sha256": "276f54a9e8bf70777bb910030c3b254ff8ba8e65d632f7a205bc99d788943485",
+  "receipt_sha256": "7704a84b8e8fa10670227135f4afb8c1e946551b693c3dea810a0e5d2da5e84a",
+  "qualification": {
+    "date": "2026-10-05",
+    "scope": "Complete claim input handoff, explicit graph retrieval gaps and read-only outcome/entitlement premise review. Synthetic model development test and owned full-stack saved-result review; no new native graph construction or training.",
+    "tests": {
+      "backend": 1495,
+      "frontend": 974,
+      "frontend_files": 77,
+      "build_passed": true,
+      "existing_bundle_advisory": true
+    },
+    "model_evaluation": {
+      "runs": 2,
+      "requests_per_run": 2,
+      "total_requests": 4,
+      "fallback_used": false,
+      "exact_quote_matches_per_run": 8,
+      "outcome_kind_failures_retained": true,
+      "followup_is_prompt_development_not_independent_benchmark": true,
+      "semantic_accuracy_not_established": true
+    },
+    "graphs": [
+      {
+        "case": "dispersed-notice-en",
+        "nodes": 47,
+        "edges": 89,
+        "unchanged": true
+      },
+      {
+        "case": "conditional-refusal-fr",
+        "nodes": 25,
+        "edges": 42,
+        "unchanged": true
+      },
+      {
+        "case": "operative-contract-and-draft-en",
+        "nodes": 11,
+        "edges": 17,
+        "unchanged": true
+      }
+    ],
+    "browser": {
+      "owned_tab": 145,
+      "exact_review_path": "assessments[1].recorded_outcomes[1]",
+      "own_quote_highlighted": true,
+      "original_model_fact_retained": true,
+      "own_note_and_warning_in_prompt_feedback": true,
+      "whole_registered_original_chars": 1041,
+      "model_original_chars": 981,
+      "registered_source_heading_difference_preserved_as_provenance_warning": true,
+      "saved_review_revision": 1,
+      "saved_prompt_session_revision": 1,
+      "history_entries": 2,
+      "no_assistant_revision_or_prompt_activation": true,
+      "total_real_model_requests": 4
+    },
+    "activation": {
+      "old_launcher_pid": 75718,
+      "new_launcher_pid": 86155,
+      "api_healthy": true,
+      "journal_unchanged": true,
+      "journal": {
+        "count": 24,
+        "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+      },
+      "app_env_unchanged": true
+    },
+    "preservation": {
+      "protected_engine_source_files_unchanged": true,
+      "protected_app_artifacts_unchanged": true,
+      "user_studio_unchanged": true,
+      "orchid_studio_unchanged": true,
+      "user_graph_all_tables_unchanged": true
+    },
+    "cleanup": {
+      "only_owned_services_stopped": true,
+      "ports_closed": true,
+      "copied_terminal_journal_entries": 1,
+      "native_jobs_queued_or_running": 0,
+      "new_native_jobs": 0,
+      "model_runs_terminal": 2,
+      "real_model_requests": 4,
+      "owned_tabs_closed": [
+        145
+      ],
+      "processes": [
+        {
+          "service": "engine",
+          "pid": 81147,
+          "port": 8097
+        },
+        {
+          "service": "api",
+          "pid": 83837,
+          "port": 8081
+        },
+        {
+          "service": "frontend",
+          "pid": 81149,
+          "port": 5175
+        }
+      ]
+    },
+    "assets_sha256": {
+      "docs/validation/assets/claim-context-handoff/model.json": "ae197cf3ce19ed941db7243d4a71868f5dab2585583535d3bd564765a94720c0",
+      "docs/validation/assets/claim-context-handoff/backend-final.log": "d82332d6d6fa7cfa62b0b5a6a5c9d50fc94dd2a42b558c506f6992351d037511",
+      "docs/validation/assets/claim-context-handoff/qualification.json": "b510575fdf0578ef7b558fa9967a0154b74d41c3dcc025f9df35e86cbc988fb2",
+      "docs/validation/assets/claim-context-handoff/input.json": "db639a76c46329b4deb153a337dcee005f6afc947f632bc5ef45c1c480db69d3",
+      "docs/validation/assets/claim-context-handoff/source-review.png": "620b90e916757d1a0c6fb18f128733d265aaea2e3a43685739b96ea694ef3fdd",
+      "docs/validation/assets/claim-context-handoff/build-final.log": "068d6486ea9b9d03ce0e509774848977c8a24523c08f5167bc2ff878e7b02130",
+      "docs/validation/assets/claim-context-handoff/cleanup.json": "358b3f015c2021bad740828b6814396d111f9c3a416191adc03b80c8daf61440",
+      "docs/validation/assets/claim-context-handoff/session-agent-review_c4137f06e9725873cb32454b4513b1786de1e380c9c7cff9b33eff5e80dd8b4d.json": "7860d0f1da6de5533b6eb2b9bc6df94435627ee99ee1649d54114e40fa87a46f",
+      "docs/validation/assets/claim-context-handoff/model-after-qualified.json": "3b537ec0c8f953e698ada28ca9f73287ce21f6dc5c2bad8b66a17bf8297b43b2",
+      "docs/validation/assets/claim-context-handoff/model-qualified.json": "8da46195cd3e5f78d3a8df2bda520a44cc7abf1d7a313cd81e99578e3e62e716",
+      "docs/validation/assets/claim-context-handoff/frontend-final.log": "f68afdb6b27f41c067c6993bd4ab67d71683dffd49c2062cdd9dbc2d290a6d12",
+      "docs/validation/assets/claim-context-handoff/browser-proof.json": "cdec26451d99b8462ba794a733943bc4adfc3954c6f9fbd07f9e16d939b8f8e3",
+      "docs/validation/assets/claim-context-handoff/model-after.json": "cfd07cb998b175905287b246df0724f15eaa5901b17a8835a75de15c7efbc1ae",
+      "docs/validation/assets/claim-context-handoff/session-agent-claim_viability.json": "baa4ce52b4b7b1eeeae6d9273ccf3909cb67d63d7e7893f1910d6771441e6ae3",
+      "docs/validation/assets/claim-context-handoff/prompt-feedback.png": "9c2b935d24c1a51c82c25abf4242c6fd98bff64765a7e28aa2a33fe226638c68"
+    }
+  }
+}
