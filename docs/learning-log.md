@@ -4263,3 +4263,54 @@ applicability and whole-context budgets remain work items.
 
 [DelayLama source-structure audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-structure.md)
 · [Shared receipt](validation/delaylama-source-structure-20261005.json).
+
+## L119 — Backfill source context independently of extraction (2026-10-05)
+
+Existing graphs need a source-only upgrade path: rerunning a model to add
+formatting/navigation also changes extraction outputs and makes causal attribution
+harder. DelayLama now previews current registered-original episodes and explicitly
+builds their source containment. It pins the complete graph and original versions,
+persists intent before submission, and reconciles lost responses by scoped
+request identity. It sends episode/hash/request identifiers rather than document
+bodies or prompts. A model-disabled engine performs all four tested jobs.
+
+On a copy of the earlier C35 graph, the permission's reachable assertion/action
+candidates expand **8/17 → 17/17**. All 29 stored findings connect; eleven source
+anchors and thirty-eight containment links are added. English and French
+record-negative copies connect 14 and 19 findings respectively, reaching all seven
+and ten source candidates. Every original node, edge and episode is unchanged.
+All 100 structural objects across the three fixtures independently locate against
+current registered originals. These observations measure structural navigation,
+not discovery of omitted assertions, semantic relationship accuracy or complete
+understanding. No new model extraction, training, acceleration or speed gain is
+measured; earlier frozen extraction results remain historical evidence.
+
+Treat source-document identity, exact content, episode/project/tenant ownership
+and spans as separate invariants. Check ownership/content after waiting for worker
+capacity as well as before accepting a job. Exclude stale original versions and
+refuse partial snapshots; never count malformed receipts as grounded evidence.
+Retain partial writes/outcomes visibly. Reusing an accepted request must return
+its existing handle. A lost or foreign handle must not trigger automatic model
+work or silently become a completed result. Application journals survive page
+reopening, but current engine workers are in memory: after engine restart, absent
+handles remain unknown and durable worker recovery is still a work item.
+
+The real browser verifies preview, explicit build, saved status/results and
+identical handles on page reopening. Source context has its own readable card,
+while structural containment remains separate from semantic review. The full
+checks pass **1,249 backend tests**, **868 frontend tests/build**, Go/race suites,
+twelve idempotent patch combinations and eleven optional variant suites. The
+checked main stack is active and user graph/configuration/journal/reviews/source
+edits are preserved. User contracts are not automatically backfilled.
+
+For future LayaGo data and evaluations, keep structural reachability labels
+separate from assertion recall, directed predicate labels and applicability.
+Add hard negatives for nearby unrelated clauses, parallel statements, duplicate
+headings and unsigned amendments. Train abstention when a predicate cannot be
+established; a classifier should not turn containment into causation. Independently
+qualify long/dispersed/OCR originals and context budgets before claiming broad
+contract gains. This result closes the historical source-backfill workflow gap,
+not those remaining semantic and model-quality gaps.
+
+[DelayLama source-only backfill audit](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-05-source-structure-backfill.md)
+· [Shared receipt](validation/delaylama-source-structure-backfill-20261005.json).
