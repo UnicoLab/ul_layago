@@ -5094,3 +5094,62 @@ claim conclusion, following the existing graph predicate-audit separation, then 
 unseen independently reviewed cases. No quality gain from training is measured here.
 
 Shared hashed receipt: [DelayLama claim premise review](validation/delaylama-claim-premise-review-20261005.json).
+
+
+## L138 — Fresh graphs and blind premise inventories still need semantic evaluation (2026-10-05)
+
+**Evidence:** [DelayLama receipt](validation/delaylama-fresh-claim-premises-20261005.json)
+and its linked report, frozen author-written controls, native reports, retained raw
+model outputs and browser/source-map proofs. This is synthetic development evidence,
+not independent legal gold. No LayaGo training or MLX/GLiNER run was performed.
+
+A completed source graph was unavailable to saved-project analysis because explicit
+native jobs did not mirror extraction's readiness record. Shared current-source
+readiness and actual event-language/reference queries fixed the wiring. Generic
+English queries had no French topic matches. Native witness metadata then overflowed
+the context window even on short originals; keep whole original passages and graph
+items, disclose omissions, and preserve unresolved missing context. Node reachability
+and located quotations do not establish predicate meaning or applicability.
+
+A source-first claim inventory saw only reported event identity/title/date candidates
+and full originals, without prior verdicts, graph assertions or draft claims. One
+shared inventory preceded independent time/cost passes. Source presence, own quotes,
+metadata and event joins were checked; raw failures remained visible. The source map
+made occurrence, permission request, refusal, conditions and documentation gaps easy
+to compare. Three inventory calls were recorded. An inventory can still omit rules
+or misinterpret a passage, even when every returned quote matches.
+
+Six native jobs and five application jobs finished across three fresh projects with
+six originals, twenty saved outputs and 48 recorded application model calls. Native
+model calls are additional and were not aggregated. The combined C127/C128 follow-up
+improved undocumented payment/extension statuses but still made categorical conclusions
+from clauses that supplied no rule. A new C129 run preserved a signed two-day grant
+and express weather-cost exclusion, but still classified undocumented payment stages
+as absent and non-waiver text as a recorded waiver. Source-review flags expose these
+inconsistencies while retaining the actual answers. No repeated preferred-answer
+retry or manual correction was used. The shared pass adds one serial call; speed and
+causal quality benefits were not independently established.
+
+Role-inferred engine connections can assert a specific engineering mission merely
+from a party label. Their structural-role status, qualification and explicit unresolved
+assessment must survive every reasoning and inspection projection. These are review
+suggestions, not semantic graph facts. A usable neighborhood is neither an exhaustive
+contract reading nor an automatically correct legal model.
+
+**Training/evaluation implications:** build distinct labels for occurrence versus
+permission/obligation, request object versus decision object, undocumented versus
+explicitly absent, non-waiver versus waiver, and rules that determine entitlement
+versus procedures or non-determination. Test multilingual negation, modality, scope,
+notice fulfillment and dispersed amendments using separate contracts/templates and
+independently labelled expected states. Measure source location, retrieval recall,
+object/state classification, entailment/applicability and resulting claims separately.
+A LayaGo candidate router/classifier can nominate passages and uncertain states, but
+must not turn lexical confidence or graph reachability into certified rights. Preserve
+hard false positives, abstention failures and positive controls; report latency/memory
+and end-to-end cost before claiming a faster or better extraction system.
+
+**Next:** evaluate per-event multilingual retrieval on long unseen dossiers, reduce
+irrelevant repeated graph metadata without dropping qualifiers, assess complete rule
+and condition inventories independently, and prevent role co-occurrence from becoming
+an asserted mission at the engine generation stage. Keep all incorrect model outputs
+and source-review histories as failure examples separate from ground-truth labels.

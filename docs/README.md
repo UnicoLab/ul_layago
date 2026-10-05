@@ -20,6 +20,7 @@ do not confer accuracy or calibration on another application's tasks.
 
 | Record | What it establishes |
 | --- | --- |
+| [DelayLama fresh claim premises, 2026-10-05](validation/delaylama-fresh-claim-premises-20261005.json) | Fresh native bilingual graph construction, corrected readiness/event queries, bounded whole-item context, blind source inventory, retained semantic failures and source-map review; L138 |
 | [DelayLama party identity, 2026-10-05](validation/delaylama-party-identity-20261005.json) | Exact scoped identity before similarity, corrected permission party links, source spans and remaining global role ownership; L128 |
 | [DelayLama source range inventory, 2026-10-05](validation/delaylama-source-range-inventory-20261005.json) | Four early predicates recovered with full-original focused ranges, exact ownership, visible failures and remaining party/connection uncertainty; L127 |
 | [DelayLama independent context review, 2026-10-05](validation/delaylama-independent-context-review-20261005.json) | Dated own-action assessment, plan/denial and duty/silence distinctions, native early-clause omissions and retained control failures; L126 |
