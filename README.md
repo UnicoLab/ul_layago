@@ -12,9 +12,9 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L152 finding](docs/learning-log.md#l152--ground-nominations-independently-and-distinguish-documentary-facts-2026-10-06)
-records independent action grounding, documentary facts versus performed acts,
-and why release evidence must match the actual clean source baseline.
+The latest [L153 finding](docs/learning-log.md#l153--actor-ownership-follows-the-own-predicate-not-a-party-label-2026-10-06)
+records predicate-specific actor ownership, own-record evidence, time grants versus
+money, and separate quality targets for extraction and source checks.
 
 ## Build and use
 

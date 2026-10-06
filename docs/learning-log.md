@@ -5803,3 +5803,66 @@ reused originals are not independent gold, held-out/repeated-seed, causal or com
 contract accuracy. Actor ownership, applicability, notice triggers/compliance,
 source recall and payment reconciliation remain open. No LayaGo/GLiNER/MLX model,
 training, architecture, weights or measured speed improvement occurred.
+
+
+## L153 — Actor ownership follows the own predicate, not a party label (2026-10-06)
+
+**Evidence:** [DelayLama report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-event-actor-ownership.md)
+with [hashed receipt](validation/delaylama-event-actor-ownership-20261006.json).
+
+**Observed failure:** a notice receipt was assigned to the party supplying the
+notice. A grant by the owner received actor support from an earlier owner blockage
+passage. Shared party names and a possessive document label did not identify the
+performer of the selected predicate. Authorship is not dispatch; beneficiary status
+is not granting. Conversely, the recipient *does* perform receiving when that own
+predicate is expressly reported.
+
+**Implementation learning:** require separately quoted own occurrence/calendar and
+actor-role premises. Preserve the requested actor, literal source performer proposal
+and role separately. Unique original Markdown record headings can bound citation
+ownership, while incidental “notice for R-1” headings cannot replace R-1's own
+heading. Repeated headings, generated source wrappers, missing quotes or roles stay
+unresolved. This narrow formatting guard is not alias resolution or semantic proof.
+Read-time revalidation prevents old weak support badges surviving new requirements,
+without rewriting model history or making a model call. Manual and automatic field
+checks share the role guard; changed source/core details withhold current support.
+
+Place a full role-bearing JSON example after older impact/cause examples. The first
+live response copied the old shape and omitted role fields; a later draw called a
+grantor a document author. Clear predicate examples improved these proposals but did
+not eliminate conservative/incorrect evidence. A completed act of drafting needs
+coverage even if the drafted document proposes an unapproved effect. Preserve the
+act separately from the document's proposed effect and from sending/receiving.
+
+**Another dimension failure:** an extracted seven-day extension occupied a
+`payment_award` record with amount `7 days`. A narrow unit warning now exposes this
+without rewriting the original. Explicit time-versus-money extraction guidance was
+followed by a separate time-grant category and empty financial records in one final
+run. Rates such as EUR 7 per day remain monetary expressions. Do not confuse granted
+time, observed delay, requested money, incurred expense, payment award or payment.
+
+**Training implications:** include minimal contrasts sharing actors, document names
+and quantities but changing the predicate. Train sender/receiver/drafter/grantor
+ownership, own record identity, action dates and scalar dimensions separately. Use
+multiple actions by the same party, possessive notices, third-party drafting,
+beneficiary grants, duration-as-money negatives and daily monetary rates. Include
+missing/duplicate role cards, repeated headings, incidental references, changed
+source versions and absent premises as abstention examples. Graph proximity and
+matching parties must not become a positive label for an unsupported predicate.
+Evaluate extraction recall separately from source-location/role coherence and human
+semantic acceptance. Preserve withheld and wrong predictions for evaluation.
+
+**Measured limits:** 143 application calls and three native source jobs (internal
+calls excluded), six application workflows submitted once; 1,721 backend tests,
+1,058 frontend tests across 93 files and production build passed. Native C147 graph
+had seven separate dated action candidates with expected actor proposals; extraction
+returned six and omitted a separate awareness entry. A negative receipt-actor batch
+refused the possessive/sender substitution. Final time-grant extraction preserved
+expected actors/dates, but four parent actor verdicts remained insufficient despite
+complete premise cards. No reroll or automatic promotion forced support. Assigned
+analysis IDs also changed; claim analysis was rerun against that final generation.
+Stable cross-generation linkage, parent evidence ergonomics, aliases, notice
+applicability, payment reconciliation and long-contract recall remain open. Reused
+synthetic English development originals are not independent gold, repeated-seed,
+held-out or multilingual accuracy. No LayaGo/GLiNER/MLX training, architecture,
+weights or measured speed improvement occurred.

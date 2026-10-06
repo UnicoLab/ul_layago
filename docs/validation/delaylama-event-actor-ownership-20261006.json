@@ -1,0 +1,1494 @@
+{
+  "learning": "L153",
+  "date": "2026-10-06",
+  "report": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-event-actor-ownership.md",
+  "delaylama_commit": "6b14d3a2a3177423a9cb155ce11316b1ff8ca8a5",
+  "source_receipt_sha256": "972236f57f3f3bc2a9063f8a0e367bb153941843442b3e9d4f7b622eac5cdfd3",
+  "delaylama_receipt": {
+    "application_calls": 143,
+    "stages": [
+      {
+        "file": "saved-runs.json",
+        "rows": [
+          {
+            "case": "retained-receipt-and-grant-c146",
+            "project_id": "qualified-action-grounding-and-calendar-baseline-c146-20261006-072217-6f6317",
+            "calls": 21,
+            "output_file": "outputs-saved-runs-0.json"
+          }
+        ]
+      },
+      {
+        "file": "new-control-run.json",
+        "rows": [
+          {
+            "case": "separate-dispatch-receipt-and-grant-c147",
+            "project_id": "separate-dispatch-receipt-and-grant-c147-20261006-081408-cd344e",
+            "calls": 35,
+            "output_file": "outputs-new-control-run-0.json"
+          }
+        ]
+      },
+      {
+        "file": "role-rechecks.json",
+        "rows": [
+          {
+            "case": "retained-receipt-and-grant-c146",
+            "project_id": "qualified-action-grounding-and-calendar-baseline-c146-20261006-072217-6f6317",
+            "calls": 23,
+            "output_file": "outputs-role-rechecks-0.json"
+          },
+          {
+            "case": "separate-dispatch-receipt-and-grant-c147",
+            "project_id": "separate-dispatch-receipt-and-grant-c147-20261006-081408-cd344e",
+            "calls": 32,
+            "output_file": "outputs-role-rechecks-1.json"
+          }
+        ]
+      },
+      {
+        "file": "duration-recheck.json",
+        "rows": [
+          {
+            "case": "separate-dispatch-receipt-and-grant-c147",
+            "project_id": "separate-dispatch-receipt-and-grant-c147-20261006-081408-cd344e",
+            "calls": 4,
+            "output_file": "outputs-duration-recheck.json"
+          }
+        ]
+      },
+      {
+        "file": "claim-after-duration.json",
+        "rows": [
+          {
+            "case": "separate-dispatch-receipt-and-grant-c147",
+            "project_id": "separate-dispatch-receipt-and-grant-c147-20261006-081408-cd344e",
+            "calls": 27,
+            "output_file": "outputs-claim-after-duration.json"
+          }
+        ]
+      }
+    ],
+    "native_events": [
+      {
+        "id": "6309e8e4-522f-4f31-8b16-0753e38fc072",
+        "name": "Granting of time extension",
+        "properties": {
+          "action_citation": {
+            "char_end": 530,
+            "char_start": 458,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "Aspen Owner Ltd granted Hazel Build Ltd seven additional completion days"
+          },
+          "action_occurrence_key": "ea677e915cba7fed1cf536b6a9e318dc6e6ea19ef18d2f7094390b70565e7c28",
+          "action_scope_protocol": "source-action-frame-v1",
+          "action_scope_review": "Individual action clause located; action meaning and relationships remain model candidates.",
+          "action_scope_status": "located",
+          "action_source_text": "Aspen Owner Ltd granted Hazel Build Ltd seven additional completion days",
+          "date": "2098-07-04",
+          "date_precision": "exact",
+          "date_role": "observed",
+          "date_role_basis": "model_assessment",
+          "date_role_citation": {
+            "char_end": 556,
+            "char_start": 458,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "Aspen Owner Ltd granted Hazel Build Ltd seven additional completion days for R-147 on 4 July 2098."
+          },
+          "date_role_quote_status": "unique_original_match",
+          "date_role_review": "Model date-role assessment; the quotation was located in the original, but its meaning has not been human reviewed.",
+          "date_role_source_text": "Aspen Owner Ltd granted Hazel Build Ltd seven additional completion days for R-147 on 4 July 2098.",
+          "date_role_suggested": "observed",
+          "date_source": "date_text",
+          "date_text": "4 July 2098",
+          "duration": "seven additional completion days",
+          "duration_candidates": [
+            {
+              "assessment": {
+                "basis": "independent_original_source_review",
+                "kind": "planned",
+                "premises": [
+                  {
+                    "char_end": 677,
+                    "char_start": 458,
+                    "source_id": "source:notice-request-and-grant-c143",
+                    "source_text": "Aspen Owner Ltd granted Hazel Build Ltd seven additional completion days for R-147 on 4 July 2098. The grant does not state the actual access delay duration and does not constitute a settlement or waiver of cost rights."
+                  }
+                ],
+                "source_sha256": "d759bb0d75e36b96bb805ec29554155ac4116da5d4f174f0ed0829af585dc782",
+                "status": "supported"
+              },
+              "source_text": "Aspen Owner Ltd granted Hazel Build Ltd seven additional completion days for R-147 on 4 July 2098.",
+              "value": "seven additional completion days"
+            }
+          ],
+          "duration_citation": {
+            "char_end": 556,
+            "char_start": 458,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "Aspen Owner Ltd granted Hazel Build Ltd seven additional completion days for R-147 on 4 July 2098."
+          },
+          "duration_kind": "planned",
+          "duration_ownership_basis": "independent_original_source_review",
+          "duration_ownership_status": "supported",
+          "duration_premise_citations": [
+            {
+              "char_end": 677,
+              "char_start": 458,
+              "source_id": "source:notice-request-and-grant-c143",
+              "source_text": "Aspen Owner Ltd granted Hazel Build Ltd seven additional completion days for R-147 on 4 July 2098. The grant does not state the actual access delay duration and does not constitute a settlement or waiver of cost rights."
+            }
+          ],
+          "duration_scope_review": "An independent whole-original model task assigns this duration to this action. All attribution passages are bound to original bytes. Ownership remains a model assessment; review its evidence.",
+          "duration_scope_status": "located_model_candidate",
+          "duration_source_text": "Aspen Owner Ltd granted Hazel Build Ltd seven additional completion days for R-147 on 4 July 2098.",
+          "duration_value_citation": {
+            "char_end": 530,
+            "char_start": 498,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "seven additional completion days"
+          },
+          "effect_scope_status": "unresolved",
+          "event_category_review": "No source-bound category assessment was recorded. The existing category is a model candidate; compare its own action with the original.",
+          "event_category_status": "unassessed",
+          "event_type": "modification",
+          "evidence": {
+            "citation": {
+              "char_end": 556,
+              "char_start": 458,
+              "source_id": "source:notice-request-and-grant-c143"
+            },
+            "justification": "Event extracted from the source: Granting of time extension",
+            "provenance": "llm",
+            "source_text": "Aspen Owner Ltd granted Hazel Build Ltd seven additional completion days for R-147 on 4 July 2098."
+          },
+          "impact": "Planned duration: seven additional completion days",
+          "impact_citation": {
+            "char_end": 556,
+            "char_start": 458,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "Aspen Owner Ltd granted Hazel Build Ltd seven additional completion days for R-147 on 4 July 2098."
+          },
+          "impact_model_candidate": "Does not constitute a settlement or waiver of cost rights.",
+          "impact_scope_review": "The model impact lacks an original attribution passage containing this individual action. It was withheld from the event impact; absence of support is not zero impact.",
+          "impact_scope_status": "located_model_candidate",
+          "impact_source_text": "Aspen Owner Ltd granted Hazel Build Ltd seven additional completion days for R-147 on 4 July 2098.",
+          "impact_summary_basis": "source_duration",
+          "justification": "Event extracted from the source: Granting of time extension",
+          "performer_citation": {
+            "char_end": 556,
+            "char_start": 458,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "Aspen Owner Ltd granted Hazel Build Ltd seven additional completion days for R-147 on 4 July 2098."
+          },
+          "performer_names": [
+            "Aspen Owner Ltd"
+          ],
+          "performer_premise_status": "located_model_candidate",
+          "performer_source_text": "Aspen Owner Ltd granted Hazel Build Ltd seven additional completion days for R-147 on 4 July 2098.",
+          "provenance": "llm",
+          "source_sha256": "d759bb0d75e36b96bb805ec29554155ac4116da5d4f174f0ed0829af585dc782",
+          "source_text": "Aspen Owner Ltd granted Hazel Build Ltd seven additional completion days for R-147 on 4 July 2098."
+        },
+        "occurred_at": "2098-07-04T00:00:00Z"
+      },
+      {
+        "id": "fda10e58-3175-476f-ae99-6605468459a6",
+        "name": "Request for compensation",
+        "properties": {
+          "action_citation": {
+            "char_end": 348,
+            "char_start": 293,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "Hazel Build Ltd requested EUR 6200 from Aspen Owner Ltd"
+          },
+          "action_occurrence_key": "fc1ffa1f931c8e399b4082f25e1febed5f0c28a991b4c32972765ac76343cad5",
+          "action_scope_protocol": "source-action-frame-v1",
+          "action_scope_review": "Individual action clause located; action meaning and relationships remain model candidates.",
+          "action_scope_status": "located",
+          "action_source_text": "Hazel Build Ltd requested EUR 6200 from Aspen Owner Ltd",
+          "date": "2098-07-03",
+          "date_precision": "exact",
+          "date_role": "observed",
+          "date_role_basis": "model_assessment",
+          "date_role_citation": {
+            "char_end": 374,
+            "char_start": 293,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "Hazel Build Ltd requested EUR 6200 from Aspen Owner Ltd for R-147 on 3 July 2098."
+          },
+          "date_role_quote_status": "unique_original_match",
+          "date_role_review": "Model date-role assessment; the quotation was located in the original, but its meaning has not been human reviewed.",
+          "date_role_source_text": "Hazel Build Ltd requested EUR 6200 from Aspen Owner Ltd for R-147 on 3 July 2098.",
+          "date_role_suggested": "observed",
+          "date_source": "date_text",
+          "date_text": "3 July 2098",
+          "event_category_review": "No source-bound category assessment was recorded. The existing category is a model candidate; compare its own action with the original.",
+          "event_category_status": "unassessed",
+          "event_type": "claim_event",
+          "evidence": {
+            "citation": {
+              "char_end": 374,
+              "char_start": 293,
+              "source_id": "source:notice-request-and-grant-c143"
+            },
+            "justification": "Event extracted from the source: Request for compensation",
+            "provenance": "llm",
+            "source_text": "Hazel Build Ltd requested EUR 6200 from Aspen Owner Ltd for R-147 on 3 July 2098."
+          },
+          "justification": "Event extracted from the source: Request for compensation",
+          "performer_citation": {
+            "char_end": 374,
+            "char_start": 293,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "Hazel Build Ltd requested EUR 6200 from Aspen Owner Ltd for R-147 on 3 July 2098."
+          },
+          "performer_names": [
+            "Hazel Build Ltd"
+          ],
+          "performer_premise_status": "located_model_candidate",
+          "performer_source_text": "Hazel Build Ltd requested EUR 6200 from Aspen Owner Ltd for R-147 on 3 July 2098.",
+          "provenance": "llm",
+          "source_sha256": "d759bb0d75e36b96bb805ec29554155ac4116da5d4f174f0ed0829af585dc782",
+          "source_text": "Hazel Build Ltd requested EUR 6200 from Aspen Owner Ltd for R-147 on 3 July 2098."
+        },
+        "occurred_at": "2098-07-03T00:00:00Z"
+      },
+      {
+        "id": "a326fc7d-7b9c-4693-9a85-0f1b219b79d9",
+        "name": "Receipt of notice N-147",
+        "properties": {
+          "action_citation": {
+            "char_end": 237,
+            "char_start": 172,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "Aspen Owner Ltd received Hazel Build Ltd’s written notice N-147"
+          },
+          "action_occurrence_key": "bb5cede2ceb36ce382db554b93b0d9f5c87ef00c61e69eb7130a6b32229affb1",
+          "action_scope_protocol": "source-action-frame-v1",
+          "action_scope_review": "Individual action clause located; action meaning and relationships remain model candidates.",
+          "action_scope_status": "located",
+          "action_source_text": "Aspen Owner Ltd received Hazel Build Ltd’s written notice N-147",
+          "date": "2098-07-02",
+          "date_precision": "exact",
+          "date_role": "observed",
+          "date_role_basis": "model_assessment",
+          "date_role_citation": {
+            "char_end": 276,
+            "char_start": 172,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "Aspen Owner Ltd received Hazel Build Ltd’s written notice N-147 for access delay R-147 on 2 July 2098."
+          },
+          "date_role_quote_status": "unique_original_match",
+          "date_role_review": "Model date-role assessment; the quotation was located in the original, but its meaning has not been human reviewed.",
+          "date_role_source_text": "Aspen Owner Ltd received Hazel Build Ltd’s written notice N-147 for access delay R-147 on 2 July 2098.",
+          "date_role_suggested": "observed",
+          "date_source": "date_text",
+          "date_text": "2 July 2098",
+          "event_category_review": "No source-bound category assessment was recorded. The existing category is a model candidate; compare its own action with the original.",
+          "event_category_status": "unassessed",
+          "event_type": "notice_served",
+          "evidence": {
+            "citation": {
+              "char_end": 276,
+              "char_start": 172,
+              "source_id": "source:notice-request-and-grant-c143"
+            },
+            "justification": "Event extracted from the source: Receipt of notice N-147",
+            "provenance": "llm",
+            "source_text": "Aspen Owner Ltd received Hazel Build Ltd’s written notice N-147 for access delay R-147 on 2 July 2098."
+          },
+          "justification": "Event extracted from the source: Receipt of notice N-147",
+          "performer_citation": {
+            "char_end": 276,
+            "char_start": 172,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "Aspen Owner Ltd received Hazel Build Ltd’s written notice N-147 for access delay R-147 on 2 July 2098."
+          },
+          "performer_names": [
+            "Aspen Owner Ltd"
+          ],
+          "performer_premise_status": "located_model_candidate",
+          "performer_source_text": "Aspen Owner Ltd received Hazel Build Ltd’s written notice N-147 for access delay R-147 on 2 July 2098.",
+          "provenance": "llm",
+          "source_sha256": "d759bb0d75e36b96bb805ec29554155ac4116da5d4f174f0ed0829af585dc782",
+          "source_text": "Aspen Owner Ltd received Hazel Build Ltd’s written notice N-147 for access delay R-147 on 2 July 2098."
+        },
+        "occurred_at": "2098-07-02T00:00:00Z"
+      },
+      {
+        "id": "afb9c3a2-64bc-4b93-a7c8-123e81c5674f",
+        "name": "Sending of notice N-147",
+        "properties": {
+          "action_citation": {
+            "char_end": 124,
+            "char_start": 83,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "Hazel Build Ltd sent written notice N-147"
+          },
+          "action_occurrence_key": "bfdd40d2b20bbfbb96c5cf535ceffd5209cfd40893ba8e3604959c9c98894f8a",
+          "action_scope_protocol": "source-action-frame-v1",
+          "action_scope_review": "Individual action clause located; action meaning and relationships remain model candidates.",
+          "action_scope_status": "located",
+          "action_source_text": "Hazel Build Ltd sent written notice N-147",
+          "date": "2098-07-01",
+          "date_precision": "exact",
+          "date_role": "observed",
+          "date_role_basis": "model_assessment",
+          "date_role_citation": {
+            "char_end": 155,
+            "char_start": 68,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "On 1 July 2098 Hazel Build Ltd sent written notice N-147 to Aspen Owner Ltd by courier."
+          },
+          "date_role_quote_status": "unique_original_match",
+          "date_role_review": "Model date-role assessment; the quotation was located in the original, but its meaning has not been human reviewed.",
+          "date_role_source_text": "On 1 July 2098 Hazel Build Ltd sent written notice N-147 to Aspen Owner Ltd by courier.",
+          "date_role_suggested": "observed",
+          "date_source": "date_text",
+          "date_text": "1 July 2098",
+          "event_category_review": "No source-bound category assessment was recorded. The existing category is a model candidate; compare its own action with the original.",
+          "event_category_status": "unassessed",
+          "event_type": "notice_served",
+          "evidence": {
+            "citation": {
+              "char_end": 155,
+              "char_start": 68,
+              "source_id": "source:notice-request-and-grant-c143"
+            },
+            "justification": "Event extracted from the source: Sending of notice N-147",
+            "provenance": "llm",
+            "source_text": "On 1 July 2098 Hazel Build Ltd sent written notice N-147 to Aspen Owner Ltd by courier."
+          },
+          "justification": "Event extracted from the source: Sending of notice N-147",
+          "performer_citation": {
+            "char_end": 155,
+            "char_start": 68,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "On 1 July 2098 Hazel Build Ltd sent written notice N-147 to Aspen Owner Ltd by courier."
+          },
+          "performer_names": [
+            "Hazel Build Ltd"
+          ],
+          "performer_premise_status": "located_model_candidate",
+          "performer_source_text": "On 1 July 2098 Hazel Build Ltd sent written notice N-147 to Aspen Owner Ltd by courier.",
+          "provenance": "llm",
+          "source_sha256": "d759bb0d75e36b96bb805ec29554155ac4116da5d4f174f0ed0829af585dc782",
+          "source_text": "On 1 July 2098 Hazel Build Ltd sent written notice N-147 to Aspen Owner Ltd by courier."
+        },
+        "occurred_at": "2098-07-01T00:00:00Z"
+      },
+      {
+        "id": "bd9ee01b-76fc-4d9e-89b9-63148e9fab87",
+        "name": "Drafting of notice N-147",
+        "properties": {
+          "action_citation": {
+            "char_end": 740,
+            "char_start": 699,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "Cedar Clerk Ltd drafted the text of N-147"
+          },
+          "action_occurrence_key": "9f31a7758d1118dbfac7fdd1e37e36f8365f5202eeed7feb13e6e74db905b92a",
+          "action_scope_protocol": "source-action-frame-v1",
+          "action_scope_review": "Individual action clause located; action meaning and relationships remain model candidates.",
+          "action_scope_status": "located",
+          "action_source_text": "Cedar Clerk Ltd drafted the text of N-147",
+          "date": "2098-06-30",
+          "date_precision": "exact",
+          "date_role": "observed",
+          "date_role_basis": "model_assessment",
+          "date_role_citation": {
+            "char_end": 777,
+            "char_start": 699,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "Cedar Clerk Ltd drafted the text of N-147 for Hazel Build Ltd on 30 June 2098."
+          },
+          "date_role_quote_status": "unique_original_match",
+          "date_role_review": "Model date-role assessment; the quotation was located in the original, but its meaning has not been human reviewed.",
+          "date_role_source_text": "Cedar Clerk Ltd drafted the text of N-147 for Hazel Build Ltd on 30 June 2098.",
+          "date_role_suggested": "observed",
+          "date_source": "date_text",
+          "date_text": "30 June 2098",
+          "event_category_review": "No source-bound category assessment was recorded. The existing category is a model candidate; compare its own action with the original.",
+          "event_category_status": "unassessed",
+          "event_type": "modification",
+          "evidence": {
+            "citation": {
+              "char_end": 777,
+              "char_start": 699,
+              "source_id": "source:notice-request-and-grant-c143"
+            },
+            "justification": "Event extracted from the source: Drafting of notice N-147",
+            "provenance": "llm",
+            "source_text": "Cedar Clerk Ltd drafted the text of N-147 for Hazel Build Ltd on 30 June 2098."
+          },
+          "justification": "Event extracted from the source: Drafting of notice N-147",
+          "performer_citation": {
+            "char_end": 777,
+            "char_start": 699,
+            "source_id": "source:notice-request-and-grant-c143",
+            "source_text": "Cedar Clerk Ltd drafted the text of N-147 for Hazel Build Ltd on 30 June 2098."
+          },
+          "performer_names": [
+            "Cedar Clerk Ltd"
+          ],
+          "performer_premise_status": "located_model_candidate",
+          "performer_source_text": "Cedar Clerk Ltd drafted the text of N-147 for Hazel Build Ltd on 30 June 2098.",
+          "provenance": "llm",
+          "source_sha256": "d759bb0d75e36b96bb805ec29554155ac4116da5d4f174f0ed0829af585dc782",
+          "source_text": "Cedar Clerk Ltd drafted the text of N-147 for Hazel Build Ltd on 30 June 2098."
+        },
+        "occurred_at": "2098-06-30T00:00:00Z"
+      },
+      {
+        "id": "2391115a-b9b7-4698-ba8c-2acdaa96a86e",
+        "name": "Hazel Build Ltd became aware of the access block",
+        "properties": {
+          "action_citation": {
+            "char_end": 155,
+            "char_start": 117,
+            "source_id": "source:occurrence-record-r143",
+            "source_text": "Hazel Build Ltd became aware that day."
+          },
+          "action_occurrence_key": "1ecbdb434b4690ba1b7b923fa222926fd1d0aa97f583e40344cc8f91b8b48e91",
+          "action_scope_protocol": "source-action-frame-v1",
+          "action_scope_review": "Individual action clause located; action meaning and relationships remain model candidates.",
+          "action_scope_status": "located",
+          "action_source_text": "Hazel Build Ltd became aware that day.",
+          "classification_review": "The model proposed an occurrence, but an actor-type cue also matched its title. It is retained as a separate event candidate. Verify the action, date and parties against the original; source matching does not certify its classification.",
+          "date": "2098-07-01",
+          "date_precision": "exact",
+          "date_role": "observed",
+          "date_role_basis": "model_assessment",
+          "date_role_citation": {
+            "char_end": 329,
+            "char_start": 50,
+            "source_id": "source:occurrence-record-r143",
+            "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098. Hazel Build Ltd became aware that day. The actual access delay was two days and caused EUR 1700 of additional expense. Invoice INV-147 documents that EUR 1700 expense. The expense accounting date is not recorded."
+          },
+          "date_role_quote_status": "unique_original_match",
+          "date_role_review": "Model date-role assessment; the quotation was located in the original, but its meaning has not been human reviewed.",
+          "date_role_source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098. Hazel Build Ltd became aware that day. The actual access delay was two days and caused EUR 1700 of additional expense. Invoice INV-147 documents that EUR 1700 expense. The expense accounting date is not recorded.",
+          "date_role_suggested": "observed",
+          "date_source": "date_text",
+          "date_text": "1 July 2098",
+          "event_category": {
+            "basis": "source_inventory_model",
+            "category": "awareness",
+            "citation": {
+              "char_end": 155,
+              "char_start": 117,
+              "source_id": "source:occurrence-record-r143",
+              "source_text": "Hazel Build Ltd became aware that day."
+            },
+            "source_categories": [
+              "awareness"
+            ],
+            "source_sha256": "38d8e6556356028adb58a3e7386eac0b247998d245686f37f6d670e6fd9183f4",
+            "status": "source_model_candidate",
+            "version": 1
+          },
+          "event_category_previous": "",
+          "event_category_review": "Source-inventory category proposal bound to the own action. Source location and model agreement do not certify category meaning, performance or legal effect.",
+          "event_category_status": "source_model_candidate",
+          "event_type": "awareness",
+          "evidence": {
+            "citation": {
+              "char_end": 329,
+              "char_start": 50,
+              "source_id": "source:occurrence-record-r143"
+            },
+            "justification": "Event extracted from the source: Hazel Build Ltd became aware of the access block",
+            "provenance": "llm",
+            "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098. Hazel Build Ltd became aware that day. The actual access delay was two days and caused EUR 1700 of additional expense. Invoice INV-147 documents that EUR 1700 expense. The expense accounting date is not recorded."
+          },
+          "impact_model_candidate": "none",
+          "impact_scope_review": "The model impact lacks an original attribution passage containing this individual action. It was withheld from the event impact; absence of support is not zero impact.",
+          "impact_scope_status": "unresolved",
+          "justification": "Event extracted from the source: Hazel Build Ltd became aware of the access block",
+          "performer_citation": {
+            "char_end": 329,
+            "char_start": 50,
+            "source_id": "source:occurrence-record-r143",
+            "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098. Hazel Build Ltd became aware that day. The actual access delay was two days and caused EUR 1700 of additional expense. Invoice INV-147 documents that EUR 1700 expense. The expense accounting date is not recorded."
+          },
+          "performer_names": [
+            "Hazel Build Ltd"
+          ],
+          "performer_premise_status": "located_model_candidate",
+          "performer_source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098. Hazel Build Ltd became aware that day. The actual access delay was two days and caused EUR 1700 of additional expense. Invoice INV-147 documents that EUR 1700 expense. The expense accounting date is not recorded.",
+          "provenance": "llm",
+          "source_sha256": "38d8e6556356028adb58a3e7386eac0b247998d245686f37f6d670e6fd9183f4",
+          "source_statement": {
+            "basis": "source_inventory_model",
+            "citation": {
+              "char_end": 329,
+              "char_start": 50,
+              "source_id": "source:occurrence-record-r143",
+              "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098. Hazel Build Ltd became aware that day. The actual access delay was two days and caused EUR 1700 of additional expense. Invoice INV-147 documents that EUR 1700 expense. The expense accounting date is not recorded."
+            },
+            "kind": "observed_action",
+            "previous_date_role": "observed",
+            "source_sha256": "38d8e6556356028adb58a3e7386eac0b247998d245686f37f6d670e6fd9183f4",
+            "version": 1
+          },
+          "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098. Hazel Build Ltd became aware that day. The actual access delay was two days and caused EUR 1700 of additional expense. Invoice INV-147 documents that EUR 1700 expense. The expense accounting date is not recorded.",
+          "statement_kind": "observed_action",
+          "statement_review": "Source-bound model classification; review polarity, modality, parties, conditions and the original. This is not proof of actual performance or legal applicability."
+        },
+        "occurred_at": "2098-07-01T00:00:00Z"
+      },
+      {
+        "id": "e118d178-c1ff-4c0d-b58f-0b8cf79956b5",
+        "name": "Blocking of site access",
+        "properties": {
+          "action_citation": {
+            "char_end": 100,
+            "char_start": 50,
+            "source_id": "source:occurrence-record-r143",
+            "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access"
+          },
+          "action_grounding": {
+            "action_citation": {
+              "char_end": 100,
+              "char_start": 50,
+              "source_id": "source:occurrence-record-r143",
+              "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access"
+            },
+            "citation": {
+              "char_end": 116,
+              "char_start": 50,
+              "source_id": "source:occurrence-record-r143",
+              "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098."
+            },
+            "explanation": "The record explicitly states that Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098.",
+            "nomination": {
+              "action_source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access",
+              "citation": {
+                "source_id": "source:occurrence-record-r143",
+                "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098. The actual access delay was two days and caused EUR 1700 of additional expense."
+              },
+              "date": "2098-07-01T00:00:00Z",
+              "date_role": "observed",
+              "date_role_source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098.",
+              "date_text": "1 July 2098",
+              "description": "Blocking of site access",
+              "duration_source_text": "The actual access delay was two days",
+              "duration_text": "two days",
+              "event_type": "delay",
+              "impact": "EUR 1700 of additional expense",
+              "impact_source_text": "The actual access delay was two days and caused EUR 1700 of additional expense.",
+              "performer_names": [
+                "Aspen Owner Ltd"
+              ],
+              "performer_source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098.",
+              "related_concepts": [
+                "Aspen Owner Ltd",
+                "Hazel Build Ltd"
+              ],
+              "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098. The actual access delay was two days and caused EUR 1700 of additional expense."
+            },
+            "protocol": "source-action-grounding-v1",
+            "source_sha256": "38d8e6556356028adb58a3e7386eac0b247998d245686f37f6d670e6fd9183f4",
+            "statement_kind": "observed_action",
+            "verdict": "supports"
+          },
+          "action_occurrence_key": "4c567b5c6bdf3ad0d060a0455a2b762bff30f65f8a7fed1309c0ba7f51323710",
+          "action_scope_protocol": "source-action-frame-v1",
+          "action_scope_review": "Individual action clause located; action meaning and relationships remain model candidates.",
+          "action_scope_status": "located",
+          "action_source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access",
+          "date": "2098-07-01",
+          "date_precision": "exact",
+          "date_role": "observed",
+          "date_role_basis": "model_assessment",
+          "date_role_citation": {
+            "char_end": 116,
+            "char_start": 50,
+            "source_id": "source:occurrence-record-r143",
+            "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098."
+          },
+          "date_role_quote_status": "unique_original_match",
+          "date_role_review": "Model date-role assessment; the quotation was located in the original, but its meaning has not been human reviewed.",
+          "date_role_source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098.",
+          "date_role_suggested": "observed",
+          "date_source": "date_text",
+          "date_text": "1 July 2098",
+          "duration": "two days",
+          "duration_candidates": [
+            {
+              "assessment": {
+                "basis": "independent_original_source_review",
+                "kind": "elapsed",
+                "premises": [
+                  {
+                    "char_end": 329,
+                    "char_start": 50,
+                    "source_id": "source:occurrence-record-r143",
+                    "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098. Hazel Build Ltd became aware that day. The actual access delay was two days and caused EUR 1700 of additional expense. Invoice INV-147 documents that EUR 1700 expense. The expense accounting date is not recorded."
+                  }
+                ],
+                "source_sha256": "38d8e6556356028adb58a3e7386eac0b247998d245686f37f6d670e6fd9183f4",
+                "status": "supported"
+              },
+              "source_text": "The actual access delay was two days",
+              "value": "two days"
+            }
+          ],
+          "duration_citation": {
+            "char_end": 192,
+            "char_start": 156,
+            "source_id": "source:occurrence-record-r143",
+            "source_text": "The actual access delay was two days"
+          },
+          "duration_kind": "elapsed",
+          "duration_ownership_basis": "independent_original_source_review",
+          "duration_ownership_status": "supported",
+          "duration_premise_citations": [
+            {
+              "char_end": 329,
+              "char_start": 50,
+              "source_id": "source:occurrence-record-r143",
+              "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098. Hazel Build Ltd became aware that day. The actual access delay was two days and caused EUR 1700 of additional expense. Invoice INV-147 documents that EUR 1700 expense. The expense accounting date is not recorded."
+            }
+          ],
+          "duration_scope_review": "An independent whole-original model task assigns this duration to this action. All attribution passages are bound to original bytes. Ownership remains a model assessment; review its evidence.",
+          "duration_scope_status": "located_model_candidate",
+          "duration_source_text": "The actual access delay was two days",
+          "duration_value_citation": {
+            "char_end": 192,
+            "char_start": 184,
+            "source_id": "source:occurrence-record-r143",
+            "source_text": "two days"
+          },
+          "effect_scope_status": "unresolved",
+          "event_category_review": "No source-bound category assessment was recorded. The existing category is a model candidate; compare its own action with the original.",
+          "event_category_status": "unassessed",
+          "event_type": "delay",
+          "evidence": {
+            "citation": {
+              "char_end": 116,
+              "char_start": 50,
+              "source_id": "source:occurrence-record-r143"
+            },
+            "justification": "Event extracted from the source: Blocking of site access",
+            "provenance": "llm",
+            "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098."
+          },
+          "impact": "Reported elapsed duration: two days",
+          "impact_citation": {
+            "char_end": 192,
+            "char_start": 156,
+            "source_id": "source:occurrence-record-r143",
+            "source_text": "The actual access delay was two days"
+          },
+          "impact_model_candidate": "EUR 1700 of additional expense",
+          "impact_scope_review": "The model impact lacks an original attribution passage containing this individual action. It was withheld from the event impact; absence of support is not zero impact.",
+          "impact_scope_status": "located_model_candidate",
+          "impact_source_text": "The actual access delay was two days",
+          "impact_summary_basis": "source_duration",
+          "justification": "Event extracted from the source: Blocking of site access",
+          "performer_citation": {
+            "char_end": 116,
+            "char_start": 50,
+            "source_id": "source:occurrence-record-r143",
+            "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098."
+          },
+          "performer_names": [
+            "Aspen Owner Ltd"
+          ],
+          "performer_premise_status": "located_model_candidate",
+          "performer_source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098.",
+          "provenance": "llm",
+          "source_sha256": "38d8e6556356028adb58a3e7386eac0b247998d245686f37f6d670e6fd9183f4",
+          "source_statement": {
+            "basis": "source_inventory_model",
+            "citation": {
+              "char_end": 116,
+              "char_start": 50,
+              "source_id": "source:occurrence-record-r143",
+              "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098."
+            },
+            "kind": "observed_action",
+            "previous_date_role": "observed",
+            "source_sha256": "38d8e6556356028adb58a3e7386eac0b247998d245686f37f6d670e6fd9183f4",
+            "version": 1
+          },
+          "source_text": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098.",
+          "statement_kind": "observed_action",
+          "statement_review": "Source-bound model classification; review polarity, modality, parties, conditions and the original. This is not proof of actual performance or legal applicability."
+        },
+        "occurred_at": "2098-07-01T00:00:00Z"
+      }
+    ],
+    "native_source_jobs": 3,
+    "native_registry": {
+      "cancelled": 0,
+      "done": 3,
+      "failed": 0,
+      "queued": 0,
+      "running": 0
+    },
+    "terminal_jobs": 66,
+    "terminal_counts": {
+      "error": 1,
+      "done": 65
+    },
+    "diagnostic_calls": 1,
+    "negative_actor_diagnostic": {
+      "request_id": "event_0_responsible_party",
+      "event_index": 0,
+      "field": "responsible_party",
+      "value": "Hazel Build Ltd",
+      "field_kind": "action_performer",
+      "field_scope": "own_event",
+      "verdict": "insufficient",
+      "explanation": "Event-specific support is incomplete. The source record identifies Aspen Owner Ltd as the performer of the receipt action, not Hazel Build Ltd. Model field explanation: The source record identifies Aspen Owner Ltd as the party receiving the notice.",
+      "citations": [
+        {
+          "quote": "Aspen Owner Ltd received Hazel Build Ltd’s written notice N-147 for access delay R-147 on 2 July 2098.",
+          "char_start": 1120,
+          "char_end": 1222,
+          "location_basis": "unique_original",
+          "clause_ref": "",
+          "source_matched": true
+        }
+      ],
+      "rejected_quotes": 0,
+      "requires_review": true,
+      "event_scope": {
+        "path": "events[0]",
+        "title": "Notice Receipt",
+        "responsible_party": "Hazel Build Ltd",
+        "event_date": "2 July 2098",
+        "source_event_id": "N-147"
+      },
+      "event_checks": [
+        {
+          "premise": "occurrence_scope",
+          "association": "same_event",
+          "verdict": "supports",
+          "explanation": "The record identifies the receipt of notice N-147 on 2 July 2098.",
+          "citations": [
+            {
+              "quote": "Aspen Owner Ltd received Hazel Build Ltd’s written notice N-147 for access delay R-147 on 2 July 2098.",
+              "char_start": 1120,
+              "char_end": 1222,
+              "location_basis": "unique_original",
+              "clause_ref": "",
+              "source_matched": true
+            }
+          ],
+          "rejected_quotes": 0,
+          "requires_review": true,
+          "record_binding": "own_record_heading"
+        },
+        {
+          "premise": "actor_role",
+          "association": "explicit",
+          "verdict": "contradicts",
+          "explanation": "The source record identifies Aspen Owner Ltd as the performer of the receipt action, not Hazel Build Ltd.",
+          "citations": [
+            {
+              "quote": "Aspen Owner Ltd received Hazel Build Ltd’s written notice N-147 for access delay R-147 on 2 July 2098.",
+              "char_start": 1120,
+              "char_end": 1222,
+              "location_basis": "unique_original",
+              "clause_ref": "",
+              "source_matched": true
+            }
+          ],
+          "rejected_quotes": 0,
+          "requires_review": true,
+          "protocol": "event-actor-role-v1",
+          "role": "own_action_performer",
+          "party_name": "Hazel Build Ltd",
+          "performer_name": ""
+        }
+      ],
+      "model_verdict": "supports"
+    },
+    "native_graph": {
+      "nodes": 37,
+      "edges": 68,
+      "actor_rows": [
+        {
+          "event": "Granting of time extension",
+          "actor_proposal": "Aspen Owner Ltd",
+          "date": "2098-07-04",
+          "relationship_status": "model_suggestion",
+          "neighborhood_nodes": 28,
+          "neighborhood_connections": 63,
+          "source_documents": [
+            "synthetic-contract-c143",
+            "occurrence-record-r143",
+            "notice-request-and-grant-c143"
+          ],
+          "coverage": {
+            "scope": "Loaded graph neighborhood, not the entire contract",
+            "connection_steps": 3,
+            "graph_snapshot_partial": false,
+            "omitted_connections_by_budget": 0,
+            "missing_endpoint_connections": 0,
+            "max_nodes": null,
+            "max_edges": null,
+            "completeness": "unestablished",
+            "entire_connected_component_requested": false,
+            "snapshot_atomic": false
+          }
+        },
+        {
+          "event": "Request for compensation",
+          "actor_proposal": "Hazel Build Ltd",
+          "date": "2098-07-03",
+          "relationship_status": "model_suggestion",
+          "neighborhood_nodes": 28,
+          "neighborhood_connections": 63,
+          "source_documents": [
+            "synthetic-contract-c143",
+            "occurrence-record-r143",
+            "notice-request-and-grant-c143"
+          ],
+          "coverage": {
+            "scope": "Loaded graph neighborhood, not the entire contract",
+            "connection_steps": 3,
+            "graph_snapshot_partial": false,
+            "omitted_connections_by_budget": 0,
+            "missing_endpoint_connections": 0,
+            "max_nodes": null,
+            "max_edges": null,
+            "completeness": "unestablished",
+            "entire_connected_component_requested": false,
+            "snapshot_atomic": false
+          }
+        },
+        {
+          "event": "Receipt of notice N-147",
+          "actor_proposal": "Aspen Owner Ltd",
+          "date": "2098-07-02",
+          "relationship_status": "model_suggestion",
+          "neighborhood_nodes": 28,
+          "neighborhood_connections": 63,
+          "source_documents": [
+            "synthetic-contract-c143",
+            "occurrence-record-r143",
+            "notice-request-and-grant-c143"
+          ],
+          "coverage": {
+            "scope": "Loaded graph neighborhood, not the entire contract",
+            "connection_steps": 3,
+            "graph_snapshot_partial": false,
+            "omitted_connections_by_budget": 0,
+            "missing_endpoint_connections": 0,
+            "max_nodes": null,
+            "max_edges": null,
+            "completeness": "unestablished",
+            "entire_connected_component_requested": false,
+            "snapshot_atomic": false
+          }
+        },
+        {
+          "event": "Sending of notice N-147",
+          "actor_proposal": "Hazel Build Ltd",
+          "date": "2098-07-01",
+          "relationship_status": "model_suggestion",
+          "neighborhood_nodes": 28,
+          "neighborhood_connections": 63,
+          "source_documents": [
+            "synthetic-contract-c143",
+            "occurrence-record-r143",
+            "notice-request-and-grant-c143"
+          ],
+          "coverage": {
+            "scope": "Loaded graph neighborhood, not the entire contract",
+            "connection_steps": 3,
+            "graph_snapshot_partial": false,
+            "omitted_connections_by_budget": 0,
+            "missing_endpoint_connections": 0,
+            "max_nodes": null,
+            "max_edges": null,
+            "completeness": "unestablished",
+            "entire_connected_component_requested": false,
+            "snapshot_atomic": false
+          }
+        },
+        {
+          "event": "Drafting of notice N-147",
+          "actor_proposal": "Cedar Clerk Ltd",
+          "date": "2098-06-30",
+          "relationship_status": "model_suggestion",
+          "neighborhood_nodes": 23,
+          "neighborhood_connections": 49,
+          "source_documents": [
+            "synthetic-contract-c143",
+            "occurrence-record-r143",
+            "notice-request-and-grant-c143"
+          ],
+          "coverage": {
+            "scope": "Loaded graph neighborhood, not the entire contract",
+            "connection_steps": 3,
+            "graph_snapshot_partial": false,
+            "omitted_connections_by_budget": 0,
+            "missing_endpoint_connections": 0,
+            "max_nodes": null,
+            "max_edges": null,
+            "completeness": "unestablished",
+            "entire_connected_component_requested": false,
+            "snapshot_atomic": false
+          }
+        },
+        {
+          "event": "Hazel Build Ltd became aware of the access block",
+          "actor_proposal": "Hazel Build Ltd",
+          "date": "2098-07-01",
+          "relationship_status": "model_suggestion",
+          "neighborhood_nodes": 30,
+          "neighborhood_connections": 61,
+          "source_documents": [
+            "synthetic-contract-c143",
+            "occurrence-record-r143",
+            "notice-request-and-grant-c143"
+          ],
+          "coverage": {
+            "scope": "Loaded graph neighborhood, not the entire contract",
+            "connection_steps": 3,
+            "graph_snapshot_partial": false,
+            "omitted_connections_by_budget": 0,
+            "missing_endpoint_connections": 0,
+            "max_nodes": null,
+            "max_edges": null,
+            "completeness": "unestablished",
+            "entire_connected_component_requested": false,
+            "snapshot_atomic": false
+          }
+        },
+        {
+          "event": "Blocking of site access",
+          "actor_proposal": "Aspen Owner Ltd",
+          "date": "2098-07-01",
+          "relationship_status": "model_suggestion",
+          "neighborhood_nodes": 30,
+          "neighborhood_connections": 61,
+          "source_documents": [
+            "synthetic-contract-c143",
+            "occurrence-record-r143",
+            "notice-request-and-grant-c143"
+          ],
+          "coverage": {
+            "scope": "Loaded graph neighborhood, not the entire contract",
+            "connection_steps": 3,
+            "graph_snapshot_partial": false,
+            "omitted_connections_by_budget": 0,
+            "missing_endpoint_connections": 0,
+            "max_nodes": null,
+            "max_edges": null,
+            "completeness": "unestablished",
+            "entire_connected_component_requested": false,
+            "snapshot_atomic": false
+          }
+        }
+      ],
+      "model_semantics_certified": false
+    },
+    "tests": {
+      "backend": 1721,
+      "frontend": 1058,
+      "frontend_files": 93,
+      "production_build_passed": true,
+      "bundle_warning_retained": true,
+      "go_changes_this_increment": false,
+      "engine_default": 69,
+      "prior_default_qualification": "docs/validation/2026-10-06-action-grounding.md"
+    },
+    "date": "2026-10-06",
+    "scope": "Own-predicate actor evidence, own-record location, legacy read-time review, duration/money warning and live synthetic graph/claim qualification. Not complete analysis accuracy.",
+    "remaining": [
+      "Semantic interpretation, alias resolution, notice clock/applicability, payment reconciliation and long-contract recall remain under qualification.",
+      "Source/heading and role metadata matching are structural guards, not semantic proof or accepted legal conclusions.",
+      "Latest parent actor verdicts may remain insufficient even with complete premise cards; no automatic promotion.",
+      "Native graph has a separate awareness action; event detector returned six actions without a separate awareness entry.",
+      "Assigned analysis event IDs changed in the duration recheck. Claim analysis was then rerun; broader stable cross-generation linkage remains to qualify.",
+      "Synthetic English development controls with reused originals are not independent gold, multilingual, held-out or repeated-seed accuracy.",
+      "No new LayaGo/GLiNER/MLX training, architecture, weights or measured speed gain."
+    ],
+    "preservation": {
+      "protected_engine_source_files_unchanged": true,
+      "protected_app_artifacts_unchanged": true,
+      "user_studio_unchanged": true,
+      "orchid_studio_unchanged": true,
+      "user_graph_all_tables_unchanged": true,
+      "recorded_replay_nodes_edges_unchanged_by_GUI": true,
+      "owned_jobs_terminal_verified_before_cleanup": true,
+      "replay_verified_before_cleanup": true,
+      "user_engine_health": {
+        "analysis_jobs": {
+          "cancelled": 0,
+          "done": 0,
+          "failed": 0,
+          "queued": 0,
+          "running": 0
+        },
+        "analysis_jobs_scope": "service",
+        "edge_count": 660,
+        "episode_count": 321,
+        "node_count": 1444,
+        "schema": "general",
+        "status": "ok"
+      },
+      "user_graph_fingerprints": {
+        "edges": {
+          "rows": 660,
+          "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+        },
+        "episodes": {
+          "rows": 321,
+          "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+        },
+        "nodes": {
+          "rows": 1444,
+          "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+        },
+        "schema_meta": {
+          "rows": 1,
+          "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+        },
+        "timeline_events": {
+          "rows": 3437,
+          "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+        }
+      }
+    },
+    "api_activation": {
+      "old_launcher_pid": 75925,
+      "new_launcher_pid": 89967,
+      "api_healthy": true,
+      "journal_unchanged": true,
+      "journal": {
+        "count": 24,
+        "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+      },
+      "app_env_unchanged": true,
+      "health": {
+        "status": "healthy",
+        "agents": {
+          "agent_critic": {
+            "status": "healthy"
+          },
+          "amendment_analyzer": {
+            "status": "healthy"
+          },
+          "claim_viability": {
+            "status": "healthy"
+          },
+          "contract_identity": {
+            "status": "healthy"
+          },
+          "contract_identity_base": {
+            "status": "healthy"
+          },
+          "event_detector": {
+            "status": "healthy"
+          },
+          "extractor": {
+            "status": "healthy"
+          },
+          "guarantee_analyzer": {
+            "status": "healthy"
+          },
+          "notification_register": {
+            "status": "healthy"
+          },
+          "penalty_analyzer": {
+            "status": "healthy"
+          },
+          "project_context": {
+            "status": "healthy"
+          },
+          "prompt_improver": {
+            "status": "healthy"
+          },
+          "risk_allocator": {
+            "status": "healthy"
+          }
+        },
+        "agent_count": 13,
+        "plugins": {},
+        "plugin_count": 0,
+        "endpoints": {
+          "project_workflow": {
+            "status": "healthy"
+          },
+          "prompt_editor": {
+            "status": "healthy"
+          },
+          "review_sessions": {
+            "status": "healthy"
+          },
+          "studio_sessions": {
+            "status": "healthy"
+          }
+        },
+        "endpoint_count": 4,
+        "ingestors": {
+          "markitdown": {
+            "status": "healthy"
+          }
+        },
+        "ingestor_count": 1,
+        "pipelines": [
+          "claim_prep",
+          "consolidate",
+          "contract_analysis",
+          "contract_analysis_sequential",
+          "contract_identity_base",
+          "contract_identity_critic",
+          "contract_identity_only",
+          "extract_batch",
+          "extractor_fanout",
+          "project_consolidate",
+          "prompt_improve"
+        ],
+        "pipeline_count": 11,
+        "tasks_enabled": true,
+        "storage": {
+          "status": "healthy"
+        }
+      }
+    },
+    "cleanup": {
+      "owned_processes": [
+        {
+          "service": "engine",
+          "pid": 55032,
+          "port": 8097
+        },
+        {
+          "service": "api",
+          "pid": 88408,
+          "port": 8081
+        },
+        {
+          "service": "frontend",
+          "pid": 55034,
+          "port": 5176
+        }
+      ],
+      "owned_ports_closed": true,
+      "terminal_application_jobs": 66,
+      "native_jobs": {
+        "cancelled": 0,
+        "done": 3,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "temporary_browser_tabs": [
+        166
+      ],
+      "temporary_browser_tab_closed": true
+    },
+    "export_policy": "Vectors omitted; intermediate failures retained; configured credential-value scan passed.",
+    "asset_manifest": [
+      {
+        "file": "docs/validation/assets/event-actor-ownership/api-activation.json",
+        "sha256": "8797554c661d2dec857d0cf5b219219ee906537a6b644cfdf099b24d4323443d",
+        "bytes": 2081
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/backend-final.log",
+        "sha256": "7f3d95f9ba6700d455902598444b0d76d5ff92c7edce3d36c943acbb91ea0025",
+        "bytes": 1988
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/backend-initial-failure.log",
+        "sha256": "dd0398a48921cb69e59699db0a80727ee5e5fbd120d35a0bd95188cd3d5e0517",
+        "bytes": 1083
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/browser-final.txt",
+        "sha256": "b3b5c657a204fb4e9805e8f721c4d4ef17875123eb521a225de71d75184bbc0e",
+        "bytes": 59489
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/browser-proof.txt",
+        "sha256": "8ec050561b092b0db36c7abdf2387ab3adf876830a13644f4507a2a486790150",
+        "bytes": 68772
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/build-final.log",
+        "sha256": "44c68cdd1f3021f0c38a86fc58003ee51fcc07b997730f5abb916a073a05de9e",
+        "bytes": 1274
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/claim-after-duration.json",
+        "sha256": "2a7d7493dc03840fc3fa4bb7311b510cfe607b434c727898d9246ab1c2d37c61",
+        "bytes": 369647
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/claim-after-duration.log",
+        "sha256": "c4f768b04bd23c4f2ab52085aaf34fd6a0bf200e6a3379d7aac88cb4ebf063e1",
+        "bytes": 143
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/cleanup.json",
+        "sha256": "9ad4876ccf68710c76ecd145065dc77a4eb4e7926becc381d2cae28ddd0ce594",
+        "bytes": 524
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/desk-final.json",
+        "sha256": "2e742dc27360d2f84cf0f6dff6d0b49466824e971dad6b21ee90ad030199492b",
+        "bytes": 514410
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/duration-recheck.json",
+        "sha256": "f619ca4af6afad578509fa8228d588b3b3a96bb2181c0c2ebf368573212e9f32",
+        "bytes": 218106
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/duration-recheck.log",
+        "sha256": "c4f768b04bd23c4f2ab52085aaf34fd6a0bf200e6a3379d7aac88cb4ebf063e1",
+        "bytes": 143
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/false-actor-diagnostic.json",
+        "sha256": "d6dc0b7180d3532a0ec6f0ff7f693b386d91ce591797e8a54814a6652ac7a5f8",
+        "bytes": 25209
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/false-actor-freeze.json",
+        "sha256": "90fb51909a05077d81b940337604e422e53001721030edbb1dbd6492e76ffc0f",
+        "bytes": 11197
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/false-actor-initial-failure.log",
+        "sha256": "c47d16624518e1369f6372dc036b36f08ede208dbc9d7fcfebc545e90091de76",
+        "bytes": 807
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/false-actor-second-failure.log",
+        "sha256": "e72f56edf710aefcb1ced40450764aa93ae88936625d6fc081f1f51d02885ab1",
+        "bytes": 433
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/false-actor.log",
+        "sha256": "13f5b63eeb4bff5638a60513f1193ca8d354509bc9217f1c63ed58ea9316b2b6",
+        "bytes": 2365
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/final-time-grant.png",
+        "sha256": "a4e636ce7ca26a98b2189d7c356499632b9a0893fb1e0670e1f101d80cf8557e",
+        "bytes": 182793
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/frontend-final.log",
+        "sha256": "191dc6c2ce285b7013068a463d43d3672852bf5e8c0c5d0dcb6b22324331b3b4",
+        "bytes": 344
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/graph-current.json",
+        "sha256": "c8cb0d4bff657d8803228acd721129dd8c5e8a9e65313ebc654b64fde2e51c0b",
+        "bytes": 470016
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/harness-notes.json",
+        "sha256": "cc84260710f26c8fb043f6ff719b4f95453bb3cff319b368a90fef0e29834aad",
+        "bytes": 1645
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/harness-start-notes.json",
+        "sha256": "83135910ac5d4e313919821138f4bfc43e22184559c6ff96395f8eb096b0965c",
+        "bytes": 249
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/load_claim_desk-current.json",
+        "sha256": "bd386c3eab6b21876ae9dcaba5ecf7d5bd61b6c0e251027abd5bb3baded7993b",
+        "bytes": 626285
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/native-jobs-current.json",
+        "sha256": "f33a868bd82e205918edf631198404a47e1f326e2c199f8a8b56b664a0e54073",
+        "bytes": 139832
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/neighborhood-2391115a-b9b7-4698-ba8c-2acdaa96a86e.json",
+        "sha256": "6ce4595c571ddec1c856814e09c276e3df4c8572062a7e6f17d602169f6b858b",
+        "bytes": 171406
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/neighborhood-6309e8e4-522f-4f31-8b16-0753e38fc072.json",
+        "sha256": "4bdb40591797da88c2f729e0c051b94232347eb697ddc494de860d39031e7284",
+        "bytes": 172854
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/neighborhood-a326fc7d-7b9c-4693-9a85-0f1b219b79d9.json",
+        "sha256": "866c2feeb1d38f642ed281a3e2d2f38f7f20a9b0bf77e1256bc39b7c5170c377",
+        "bytes": 172854
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/neighborhood-afb9c3a2-64bc-4b93-a7c8-123e81c5674f.json",
+        "sha256": "379d899a5081cf9a64104c6fdd7a5d77694810de9b9fd141ddc5662dc67e5e7a",
+        "bytes": 172854
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/neighborhood-bd9ee01b-76fc-4d9e-89b9-63148e9fab87.json",
+        "sha256": "ac8389844254fb62f60d980f2e082c2bd77a38db8a66c049b7b2cc271ad74420",
+        "bytes": 137912
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/neighborhood-e118d178-c1ff-4c0d-b58f-0b8cf79956b5.json",
+        "sha256": "9822563f9eebe98461bbaf7073938e31db71444552bd2b234861db84d6c31d01",
+        "bytes": 171406
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/neighborhood-fda10e58-3175-476f-ae99-6605468459a6.json",
+        "sha256": "576ecdc2e92cbf21c097b7586f360eca0470933a169131e2b663ef7246efebae",
+        "bytes": 172854
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/new-control-freeze.json",
+        "sha256": "0a63cdc6e2c6ff9ecc1ae4c33b25bf2bc197b07c7273059642f4ac60c68aeb48",
+        "bytes": 126
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/new-control-process.log",
+        "sha256": "ef7c302626dbb8dc0a13f92d56bb37946e6475d262e3d9a7c8a75ff563874aee",
+        "bytes": 4911
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/new-control-run.json",
+        "sha256": "abc921052c88674026f2a2599da3685cbc573bee22d422622f74f1fc59b9c6dc",
+        "bytes": 156348
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/new-control-running.log",
+        "sha256": "1b68dc22b5cb396c1584fa275280d13ec275272b7691406d43d92b553b1c872d",
+        "bytes": 260
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/new-control-startup-failure.json",
+        "sha256": "bf9c824da5b0bfd8c43022d2a617594fb2261b5f25b3113fc047344c60f715a5",
+        "bytes": 63
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/new-control.json",
+        "sha256": "13381e94e015a48d94c2d35f42107fbde94c6333d04ad0f409899c91fa6d873f",
+        "bytes": 2414
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/outputs-claim-after-duration.json",
+        "sha256": "b347f4bde317877ec9c200200a48050265a6bf3b09eb4629b03ab8d80713ed95",
+        "bytes": 273261
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/outputs-duration-recheck.json",
+        "sha256": "d4f8e20bfbb3523023a54d64e5b9ef7b20c24d1346ee331fcac114d4d35770ee",
+        "bytes": 146042
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/outputs-new-control-run-0.json",
+        "sha256": "70ee9b1ebfcb97c015773d5e6bf329042eb362c084a5f606b26d678f2dfe24ac",
+        "bytes": 517413
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/outputs-role-rechecks-0.json",
+        "sha256": "1128e9aed3a29765d52dfca1bf796f64f64df245c2b8391ee96fb74b5fcb0c15",
+        "bytes": 391625
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/outputs-role-rechecks-1.json",
+        "sha256": "132223505f47773125f6676f5b184aa4612b9527a9d988378285403824d507ec",
+        "bytes": 505823
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/outputs-saved-runs-0.json",
+        "sha256": "ec809bfc0316ee7a506eae27271e7514bbda89678608abcf766e5300f58334a0",
+        "bytes": 377825
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/owned-api-actor-refresh.json",
+        "sha256": "98abe31a13e328a631128f2660d8fa46d9d9a8a8c2e7c1c5264a058bd1ded714",
+        "bytes": 663
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/owned-api-drafting-guidance-refresh.json",
+        "sha256": "3e296c0eb2862bcdb9faf3d66dee01a5b5488f90aa2ac1797d44e4a33e7779cc",
+        "bytes": 663
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/owned-api-duration-guidance-refresh.json",
+        "sha256": "f2bf8decfd3d90590c267f2daf6e9213051a2794fa164e0f6ea9b88dd284903c",
+        "bytes": 663
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/owned-api-financial-unit-refresh.json",
+        "sha256": "806dfabec48c367b59e161947e63972c6b8251dbb4bd0ce4206f31cfb5323458",
+        "bytes": 663
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/owned-api-role-template-refresh.json",
+        "sha256": "82818a5e555d5e3219cc49c4dcbc5af7cd8eda8cecc0248f701ec722d1420598",
+        "bytes": 663
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/receipt-and-duration.png",
+        "sha256": "61184f9704e47131e63d5d7c80aa7c6e6c2ff2dbd9ae0a9c3199408ab20cacef",
+        "bytes": 159057
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/retained-actor-read-time.json",
+        "sha256": "7ea74a0d0db5399d5f7b816af73cd8a3443c5dfc4c07911ef3ec67a1a89d6d74",
+        "bytes": 84803
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/retained-controls.json",
+        "sha256": "dae2f5ac92006d814b61d1efb993a918c5a268c50c103498d0b3657ed80de27f",
+        "bytes": 156
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/role-controls.json",
+        "sha256": "3c1bfa93d0a75f57f0c995c1416d0db9890e3d929223f3d5982aa9de15246cc1",
+        "bytes": 305
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/role-recheck-process.log",
+        "sha256": "4af3cafd9c4eea1eaf148557d22b9912c153e826ee36432aeaaaedbdeab0326e",
+        "bytes": 1143
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/role-recheck-running.log",
+        "sha256": "4e7320fe2739af7c0df56207f9bddad3b2e8465964cee29335d6902db3b21e59",
+        "bytes": 246
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/role-rechecks.json",
+        "sha256": "089631074cbc501d4c50fa2df5e6ebef6e4bf576f3d50f7bb8b5f3e457a33991",
+        "bytes": 79027
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/saved-process.log",
+        "sha256": "807639eef3fc4ce54b406dd281ed6c1c3767812f42f9886c0f4224ec914ec77d",
+        "bytes": 125
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/saved-runs.json",
+        "sha256": "3439702a9abddfc734fa2ea7ecd5364c6f3e5b6cb2553d5b837f67555e622787",
+        "bytes": 40269
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/start-corrected-process.log",
+        "sha256": "5e6c8d8db5e3a7a40ef3c61ee243630ab2c9761c04ed43f0746ebd52eda92ed5",
+        "bytes": 153
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/start-process.log",
+        "sha256": "c69cd80ee389e1cd6461b3fb22b2b49cfe2e907ffc62a91c8a86465532c637e5",
+        "bytes": 283
+      },
+      {
+        "file": "docs/validation/assets/event-actor-ownership/verification-final.json",
+        "sha256": "652ae5b2b374f6bac96c2012a557f928ae0424297664c9adb375d208c890eb3a",
+        "bytes": 47439
+      }
+    ]
+  }
+}
