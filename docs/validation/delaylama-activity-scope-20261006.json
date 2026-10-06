@@ -1,0 +1,145 @@
+{
+  "protocol": "delaylama-activity-scope-validation-v1",
+  "date": "2026-10-06",
+  "parallel_tracks": [
+    "backend boundary/payment ownership",
+    "frontend evidence UX and legacy review",
+    "independent collection/native graph audit"
+  ],
+  "tests": {
+    "backend": 2218,
+    "frontend": 1516,
+    "frontend_files": 111,
+    "production_build": "passed",
+    "bundle_size_warning": "Existing large main chunk warning remains."
+  },
+  "cross_runtime_comparisons": {
+    "premises_and_boundary_wording": 199,
+    "collection_scope": 9,
+    "payment_stage": 60,
+    "total": 268,
+    "mismatches": 0
+  },
+  "frozen_fixture": {
+    "name": "S151 competing activity boundaries",
+    "documents": 3,
+    "original_chars": 935,
+    "source_sha256": "8db19202b904afc0ac860b1095c6b5c199c27f135f7d56564b382d7ec8d51fe1",
+    "initial_model_draws": 1,
+    "model_phases": [
+      "extract",
+      "event_field_source_batch_0",
+      "event_field_source_batch_1",
+      "activity_interval_source_inventory"
+    ],
+    "inventory_repair_attempted": false
+  },
+  "observed_initial_result": {
+    "events": 5,
+    "intervals": 3,
+    "independently_qualified_actual_pairs": [
+      [
+        "2098-09-05",
+        "2098-09-12"
+      ],
+      [
+        "2098-09-05",
+        "2098-09-14"
+      ]
+    ],
+    "exact_interval_bars": 0,
+    "planned_interval": "unresolved own end paraphrase/record support",
+    "payment_award": "Unsupported completed-payment classification retained and flagged by new guard."
+  },
+  "native_graph_audit": {
+    "nodes": 21,
+    "edges": 27,
+    "located_node_proofs": 21,
+    "located_edge_proofs": 25,
+    "located_quotes_exact": 46,
+    "unmatched_edges": 2,
+    "relation_semantics_and_completeness": "unestablished"
+  },
+  "browser_verification": {
+    "source_or_date_absence_separate_from_withheld_candidates": true,
+    "scope_comparison_visible_in_timeline_and_review": true,
+    "exact_review_routing": true,
+    "review_saved_revision": 1,
+    "review_flagged": 1,
+    "review_accepted": 0,
+    "studio_saved_revision": 1,
+    "studio_document_chars": 935,
+    "feedback_chars": 26126,
+    "feedback_contains_W4_W6_and_scope_note": true,
+    "startup_missing_source_crash_fixed_and_regressed": true,
+    "temporary_tab": 179,
+    "temporary_tab_absent_from_session_inventory": true
+  },
+  "runtime": {
+    "owned_ports": [
+      8097,
+      8081,
+      5176
+    ],
+    "cleanup": {
+      "owned_processes": [
+        {
+          "service": "engine",
+          "pid": 53931,
+          "port": 8097
+        },
+        {
+          "service": "api",
+          "pid": 53932,
+          "port": 8081
+        },
+        {
+          "service": "frontend",
+          "pid": 53933,
+          "port": 5176
+        }
+      ],
+      "owned_ports_closed": true,
+      "terminal_application_jobs": 92,
+      "native_jobs": {
+        "cancelled": 0,
+        "done": 3,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "temporary_browser_tabs": [
+        179
+      ],
+      "temporary_browser_tab_absent_from_session_inventory": true
+    },
+    "main_api_healthy": true,
+    "main_journal_unchanged": {
+      "count": 24,
+      "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+    },
+    "main_env_unchanged": true,
+    "user_graph_engine_sources_artifacts_sessions": "Preservation audit passed."
+  },
+  "source_files": {
+    "delaylama/ai_core/activity_intervals.py": "2b6f043f3fd9f7d83d4987a0927d83e2db900cfd7ba3b52f43166c7b2cd573e9",
+    "delaylama/ai_core/activity_interval_scope.py": "bdbf4114e7666a9379be2248c729a79753ff10881f9c21bac0b9648d61a313fb",
+    "delaylama/ai_core/payment_stage_review.py": "51b00ff03ed31ca1eda7b12acf94c852e2703282aae572cadfc54e23c997ba03",
+    "frontend/src/activityIntervalEvidence.ts": "564da7283b2cf11230be5cec9c6003318b85ce49dbe614fd36a492ba1d447f28",
+    "frontend/src/activityIntervalScope.ts": "d4780804ab621c2be21790220d9e570deab5c3898ccd2d5e2bb0f4822b1c8bad",
+    "frontend/src/paymentStageReview.ts": "e489656d473f3f6440a70e2372f9a6d17b58457bc1b26d308a8800d0e8645c4a",
+    "frontend/src/review.ts": "0febf0796954e5bf4cd40735c66c0e4681bd28e0faaa34377912e38a20955390"
+  },
+  "limitations": [
+    "Synthetic development case, not held-out accuracy or complete recall.",
+    "Unknown semantic subjects/objects, repeated work cycles and revision applicability need review.",
+    "Unmatched graph quotations and unsupported predicate interpretations remain candidates.",
+    "Native quote-container calendar parser issue remains open.",
+    "No new LayaGo/GLiNER/MLX training, weights, architecture or throughput result."
+  ],
+  "retained_development_failures": [
+    "Initial planned interval own-quotation failure and raw payment-award misclassification.",
+    "Two requested/modal award-noun regression failures corrected; logs retained in owned QA directory.",
+    "Graph startup missing-source crash corrected; dedicated regression passed."
+  ]
+}

@@ -93,6 +93,8 @@ Latest contract engineering evidence: [graph context and notice correctness, 202
 
 Latest notice workflow evidence: [source-trigger resolution, 2026-10-06](validation/delaylama-notice-source-resolution-20261006.json), discussed in learning **L158**, includes rejected outputs, successful retries, persistence and parser parity.
 
+Latest activity scope evidence: [boundary ownership and competing versions, 2026-10-06](validation/delaylama-activity-scope-20261006.json), discussed in learning **L164**. This includes retained extraction failures, independent graph source checks and conservative payment-stage warnings; no new model training.
+
 ## Keeping this reference useful
 
 Record observations separately from explanations and proposed fixes. Link a
