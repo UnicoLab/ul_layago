@@ -1,0 +1,443 @@
+{
+  "learning": "L147",
+  "date": "2026-10-06",
+  "report": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-substantive-rule-separation.md",
+  "source_receipt_sha256": "6a745012fbba36a4c45df02a2ac878491fa1f7b07366868308dfeb8cfd6f5398",
+  "delaylama_receipt": {
+    "date": "2026-10-06",
+    "scope": "Substantive-rule/procedure separation in claim reasoning; original-first risk allocation with independent recorded-decision fields and source-state display. Observed improvement on development controls, not exhaustive contract correctness.",
+    "tests": {
+      "backend": 1668,
+      "frontend": 1037,
+      "frontend_files": 88,
+      "build_passed": true,
+      "build_warning": "Main chunk exceeds 500kB",
+      "go_changes": false,
+      "reused_engine_default": 68
+    },
+    "calls": {
+      "source_only_prototypes": 75,
+      "initial_saved_workflows": 49,
+      "risk_rechecks_after_changes": 6,
+      "total_application": 130,
+      "native_source_jobs": 3,
+      "native_internal_model_calls_not_counted": true
+    },
+    "final_requested_coverage": {
+      "reported_events": 7,
+      "event_target_rows": 14
+    },
+    "observations": [
+      "Baseline C137 source-only draw returned two potentially claimable cost proposals; revised draw and saved workflow returned unresolved rights and empty entitlement values while keeping payments as facts.",
+      "C139 substantive reimbursement and fulfilled notice condition remained claimable; actual expense and time grant stayed separately inspectable.",
+      "Initial saved C137 risk output inferred liability from an award; original-first basis classification removed that allocation in the recheck.",
+      "First risk-basis recheck still put a five-day grant in prospective claimable_time. Separate recorded_decisions fields removed that copy; final state labels distinguish reported, denied, proposed, conditional and unknown.",
+      "Source locations, provision-kind consistency and edited-field binding are checks, not semantic acceptance. Legacy bases remain readable.",
+      "Source-only risk prompt withholds prior analyses, unstructured graph assertions and drafts; only original and located graph navigation are supplied."
+    ],
+    "remaining": [
+      "C137 E3 claim source ledger rejected subject association and an own focused statement, including an award row; C139 E1 rejected a focused statement. Source-outcome coverage remains partial.",
+      "Literal event-reference checks can still warn when the reference is in a heading rather than the quotation body.",
+      "French C138 cost applicability remains unresolved; its substantive provision is retained with unknown conditions. Exact verdict labels and scope still need qualification.",
+      "Amendment summary phrasing may describe cost rights as unresolved without fully qualifying its amendment-only scope; cross-agent conclusions need broader evaluation.",
+      "Native/app source classification, source recall, long-dossier completeness, all contractual exceptions and conflict handling remain unproven.",
+      "No independent legal gold, held-out/repeated-seed/causal accuracy estimate or LayaGo/GLiNER/MLX/training/speed gain.",
+      "Owned extraction registration may refresh alias/index metadata; no immutable owned-graph claim."
+    ],
+    "source_input_policy": "Three frozen original/neutral-identity controls; baseline and revised code copied separately. Same configured claim profile, one draw per arm/case. Prompt/schema changes and sampling are not isolated causal accuracy evidence. All earlier bad risk outputs remain retained.",
+    "final_risk_units": [
+      {
+        "case": "procedure-right-separation-c137",
+        "calls": 1,
+        "basis_kinds": [
+          "undetermined"
+        ],
+        "recorded_decisions": [
+          [
+            {
+              "kind": "payment_request",
+              "status": "recorded",
+              "value": "EUR 1700"
+            },
+            {
+              "kind": "payment_award",
+              "status": "recorded",
+              "value": "EUR 1300"
+            },
+            {
+              "kind": "release",
+              "status": "proposed",
+              "value": ""
+            }
+          ]
+        ]
+      },
+      {
+        "case": "explicit-right-and-fulfilled-notice-c139",
+        "calls": 1,
+        "basis_kinds": [
+          "substantive_rule"
+        ],
+        "recorded_decisions": [
+          [
+            {
+              "kind": "extension_grant",
+              "status": "recorded",
+              "value": "5 days"
+            }
+          ]
+        ]
+      }
+    ],
+    "activation": {
+      "old_launcher_pid": 40021,
+      "new_launcher_pid": 57195,
+      "api_healthy": true,
+      "journal_unchanged": true,
+      "journal": {
+        "count": 24,
+        "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+      },
+      "app_env_unchanged": true,
+      "health": {
+        "status": "healthy",
+        "agents": {
+          "agent_critic": {
+            "status": "healthy"
+          },
+          "amendment_analyzer": {
+            "status": "healthy"
+          },
+          "claim_viability": {
+            "status": "healthy"
+          },
+          "contract_identity": {
+            "status": "healthy"
+          },
+          "contract_identity_base": {
+            "status": "healthy"
+          },
+          "event_detector": {
+            "status": "healthy"
+          },
+          "extractor": {
+            "status": "healthy"
+          },
+          "guarantee_analyzer": {
+            "status": "healthy"
+          },
+          "notification_register": {
+            "status": "healthy"
+          },
+          "penalty_analyzer": {
+            "status": "healthy"
+          },
+          "project_context": {
+            "status": "healthy"
+          },
+          "prompt_improver": {
+            "status": "healthy"
+          },
+          "risk_allocator": {
+            "status": "healthy"
+          }
+        },
+        "agent_count": 13,
+        "plugins": {},
+        "plugin_count": 0,
+        "endpoints": {
+          "project_workflow": {
+            "status": "healthy"
+          },
+          "prompt_editor": {
+            "status": "healthy"
+          },
+          "review_sessions": {
+            "status": "healthy"
+          },
+          "studio_sessions": {
+            "status": "healthy"
+          }
+        },
+        "endpoint_count": 4,
+        "ingestors": {
+          "markitdown": {
+            "status": "healthy"
+          }
+        },
+        "ingestor_count": 1,
+        "pipelines": [
+          "claim_prep",
+          "consolidate",
+          "contract_analysis",
+          "contract_analysis_sequential",
+          "contract_identity_base",
+          "contract_identity_critic",
+          "contract_identity_only",
+          "extract_batch",
+          "extractor_fanout",
+          "project_consolidate",
+          "prompt_improve"
+        ],
+        "pipeline_count": 11,
+        "tasks_enabled": true,
+        "storage": {
+          "status": "healthy"
+        }
+      }
+    },
+    "cleanup": {
+      "owned_processes": [
+        {
+          "service": "engine",
+          "pid": 53561,
+          "port": 8097
+        },
+        {
+          "service": "api",
+          "pid": 56256,
+          "port": 8081
+        },
+        {
+          "service": "frontend",
+          "pid": 53563,
+          "port": 5175
+        }
+      ],
+      "owned_ports_closed": true,
+      "terminal_application_jobs": 39,
+      "native_jobs": {
+        "cancelled": 0,
+        "done": 3,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "temporary_browser_tabs": [
+        156,
+        157
+      ],
+      "temporary_browser_tab_closed": true
+    },
+    "user_preservation": {
+      "protected_engine_source_files_unchanged": true,
+      "protected_app_artifacts_unchanged": true,
+      "user_studio_unchanged": true,
+      "orchid_studio_unchanged": true,
+      "user_graph_all_tables_unchanged": true,
+      "recorded_replay_nodes_edges_unchanged_by_GUI": true,
+      "owned_jobs_terminal_verified_before_cleanup": true,
+      "replay_verified_before_cleanup": true,
+      "user_engine_health": {
+        "analysis_jobs": {
+          "cancelled": 0,
+          "done": 0,
+          "failed": 0,
+          "queued": 0,
+          "running": 0
+        },
+        "analysis_jobs_scope": "service",
+        "edge_count": 660,
+        "episode_count": 321,
+        "node_count": 1444,
+        "schema": "general",
+        "status": "ok"
+      },
+      "user_graph_fingerprints": {
+        "edges": {
+          "rows": 660,
+          "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+        },
+        "episodes": {
+          "rows": 321,
+          "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+        },
+        "nodes": {
+          "rows": 1444,
+          "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+        },
+        "schema_meta": {
+          "rows": 1,
+          "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+        },
+        "timeline_events": {
+          "rows": 3437,
+          "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+        }
+      }
+    },
+    "export_policy": "Embedding/vector arrays omitted; raw model errors and partial/rejected rows retained; configured credential-value scan passed.",
+    "asset_manifest": [
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/api-activation.json",
+        "sha256": "3e908d8e1e598cac7e701ca9705d71a2c59b2d0662b885b2cdcd08dfe3173208",
+        "bytes": 2081
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/backend-final3.log",
+        "sha256": "41293f57f2f1d9048a0b9614df903e5ed1983f5dd38746e21243b33d160bef5c",
+        "bytes": 1987
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/baseline-probe.json",
+        "sha256": "6df2409b527b73fa94a6f9c52e580d825d74bac84b61aa5c4110d4a94938b33a",
+        "bytes": 495099
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/baseline-source.json",
+        "sha256": "654ce97ef2f517c5a2b7bfee46167214e6173888b54133233aee774ba420d708",
+        "bytes": 417
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/build-final5.log",
+        "sha256": "36159b146b43482105285f087ae543ea152f33541e213ca0f943f031d35439f7",
+        "bytes": 1274
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/cleanup.json",
+        "sha256": "4443a996837117f47e36a578aaff86d542d094de481f4dfc72c11952a1418eda",
+        "bytes": 533
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/frontend-final5.log",
+        "sha256": "695868027c0452540c0ecca828d23a88274752526a5476dac3b93be8fa988350",
+        "bytes": 341
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/graph-explicit-right-and-fulfilled-notice-c139.json",
+        "sha256": "5810c5056af4431386067c085c1e01a2fd7a919177528fdd0f8433cad552dd5c",
+        "bytes": 301096
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/graph-procedure-right-separation-c137.json",
+        "sha256": "86898c5841f26ba7240ddc70127c21d3072727599bc14f936fb090f5563ae45b",
+        "bytes": 231447
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/new-control-freeze.json",
+        "sha256": "353efa611b65ce0058db214695a6195b97912a3e19fe4d6013d7d49ea8d439aa",
+        "bytes": 238
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/new-control-run.json",
+        "sha256": "7d9bdae8f3038f2074ee7cc605613c0b8d464f97f25593ffd86c91d46cb46038",
+        "bytes": 178923
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/new-control.json",
+        "sha256": "0b3f6d8dc117fca7d808c86f8cd5d8d319c03287ef94a2687c9d3a99242f271f",
+        "bytes": 2732
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/owned-api-risk-refresh.json",
+        "sha256": "498516679af39c24c1f92a09c3bd665c65e5d587a65b86d85797680b90205f8a",
+        "bytes": 670
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/owned-api-risk-stage-refresh.json",
+        "sha256": "0e202e818fbdc2a21c8cadc6c07ede10ace1e7d0c1ae22a5cbb9de949b0b725b",
+        "bytes": 670
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/owned-api-risk-state-refresh.json",
+        "sha256": "fbde24e5f29de99939e88e54de760c9a132761ab643c9aa6baecf3e6b3fc2fa8",
+        "bytes": 670
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/positive-right-dom.txt",
+        "sha256": "9d8a3732641e7a66345b45e23c428aab10d03a6a5b8d5bbedd811adb90801ac9",
+        "bytes": 32640
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/positive-right.png",
+        "sha256": "36af0216dc6aa7f4774763058ff15d7f4616aee1cd14b6bf8a775282a078726b",
+        "bytes": 206855
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/probe-comparison.json",
+        "sha256": "c26e4f99229afb7e7f6b2a29afe57bc4e2dd4e1e7d65291256d39e72d341a79c",
+        "bytes": 9505
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/probe-controls.json",
+        "sha256": "0afba09bc5cd5ec0abaa73a111f604d079460e35dea7b29d59a291cdb46a9373",
+        "bytes": 5966
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/probe-freeze.json",
+        "sha256": "38f582a900fe94dc812f863e3847bd2b37aa48406d3271a00eb9d96e807b0d25",
+        "bytes": 267
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/procedure-basis-dom.txt",
+        "sha256": "b8a33018dd1af8803f1ce6659aed33acb2d895abbe62ce934dc151acb71aa25e",
+        "bytes": 36369
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/procedure-basis.png",
+        "sha256": "0505bba5ec639ab21f80e2d634dbce108dd39430b4ca37e1cfc08b35326db703",
+        "bytes": 211562
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/procedure-inventory-dom.txt",
+        "sha256": "cdcd87da9416f84167dde92bf7666845aefc73ce9d4c66250519f5483ec3ee23",
+        "bytes": 40940
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/procedure-inventory.png",
+        "sha256": "072ced4d9092589fe8fcdaeb6cb690098e281b33d60a344645287e83f8e3cf29",
+        "bytes": 174718
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/revised-probe.json",
+        "sha256": "8e29cac6a605d2aae9360ecd45239906b9522508c484d49f035902c0d8b59959",
+        "bytes": 544145
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/revised-source.json",
+        "sha256": "d67012a08db6fd573cd590b251d51381d6c399162109eb718664597c86e177d8",
+        "bytes": 417
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/risk-decisions-dom.txt",
+        "sha256": "88d519e89d5012610c3d76babbbd27c50e2a0d92ffbea1944478ea31cdcbc245",
+        "bytes": 31096
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/risk-decisions.png",
+        "sha256": "29c595d0f715fcbd743f9fc23b6bb5b0c81f25db98a897412159fe8f87f50d7c",
+        "bytes": 179732
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/risk-final-verification.json",
+        "sha256": "cf6f8d4d4b20df08a272c32ac118cb7ed6470155aadc9336da7498d3afbbb077",
+        "bytes": 644475
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/risk-recheck.json",
+        "sha256": "1faceb542c6bfc6cfe26f3b5d28efbc843d4081aa42984c9250a23c34f5ded84",
+        "bytes": 75633
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/risk-stage-recheck.json",
+        "sha256": "54d3a354e56492585626d02646f894c0a51047e3102807b7f7fbfe3cdaabc95d",
+        "bytes": 72539
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/risk-state-recheck.json",
+        "sha256": "386ea1ac24ff424ad5454ee059bbe0d83e28c8d091fedb9606357bb6d8152095",
+        "bytes": 73242
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/risk-target.log",
+        "sha256": "48b8ebe7b9aab138409516f97ba9c6aa1ecaa4b54d6af667a5afbed08c500535",
+        "bytes": 144
+      },
+      {
+        "file": "docs/validation/assets/substantive-rule-separation/verification.json",
+        "sha256": "5bb12d250f4b23c5cf1dea023cd90a336f9f5973249680b173752ae82a54d628",
+        "bytes": 1107422
+      }
+    ]
+  }
+}

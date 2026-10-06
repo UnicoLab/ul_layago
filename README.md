@@ -12,9 +12,9 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L146 finding](docs/learning-log.md#l146--document-calendar-and-concept-occurrence-must-remain-separate-2026-10-06)
-records two native calendar inference failures and their correction, with retained
-English/French workflow evidence and training controls for date provenance.
+The latest [L147 finding](docs/learning-log.md#l147--procedures-substantive-rights-and-recorded-decisions-need-distinct-output-channels-2026-10-06)
+records why statement-function classification and dedicated factual channels matter
+across claim and risk agents, with retained failures and positive/negative controls.
 
 ## Build and use
 

@@ -5500,3 +5500,44 @@ control reused; French control frozen before submission. No independent legal go
 held-out, repeated-seed or causal accuracy result; explicit model date associations,
 semantic typing, source recall, applicability and native recovery remain open.
 No LayaGo/GLiNER/MLX training or speed gain was measured.
+
+
+## L147 — Procedures, substantive rights and recorded decisions need distinct output channels (2026-10-06)
+
+**Evidence:** [DelayLama substantive-rule validation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-substantive-rule-separation.md)
+and [hashed receipt](validation/delaylama-substantive-rule-separation-20261006.json).
+
+An original-first claim baseline still promoted a duty to request payment into
+tentative cost entitlement. Its inventory had no procedure category, while the
+numeric request/award stages supplied a strong competing signal. A dedicated
+procedure kind and explicit provision-role classification removed those proposals
+on the fixed negative control, while a positive substantive reimbursement clause
+with fulfilled notice remained recognized. Substantive clauses with unknown
+conditions were retained even when applicability remained unresolved.
+
+Checking the whole application exposed the same error in another agent: Risk
+allocation inferred liability from an award despite the corrected claim result.
+Original-first risk inputs and basis classification removed that allocation. The
+first recheck still put granted days into prospective claimable_time. Separate
+recorded_decisions fields gave the true fact an appropriate channel and removed
+the overload in subsequent draws. Reported, denied, proposed, conditional and
+unknown states prevent treating a non-waiver or unsigned proposal as operative.
+
+**Training implications:** classify statement function before predicting legal
+consequence. Include filing deadlines with payment vocabulary, recorded awards
+without allocation clauses, genuine reimbursement rules, fulfilled/unknown notice
+conditions, and recorded grants that do not create general prospective rights.
+Provide dedicated factual channels rather than forcing quantities into entitlement
+fields. Evaluate every consuming agent; one correct decision does not make a
+contradictory risk summary correct. Preserve raw failures, own quotation coordinates,
+source scope and unknowns. Exact text and a coherent role are not acceptance labels.
+
+**Evidence limits:** 75 baseline/revised source-only calls, 49 initial saved-workflow
+calls and six risk rechecks after changes: 130 application calls, three native
+source jobs, final 14 pairs across seven reported events. Claims kept Gemini 3.5
+Flash / low reasoning; risk kept its fast profile. 1,668 backend and 1,037 frontend
+tests plus build passed. These are synthetic development draws, not independent
+legal gold, held-out/repeated-seed or isolated causal accuracy. Focused-statement
+and subject-association rejections, literal heading-reference warnings, cross-agent
+summary scope, comprehensive recall and applicability remain open. No LayaGo,
+GLiNER, MLX, training-quality or speed gain was measured.
