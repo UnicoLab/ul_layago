@@ -1,0 +1,1035 @@
+{
+  "learning": "L152",
+  "date": "2026-10-06",
+  "report": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-action-grounding.md",
+  "delaylama_commit": "92decd418123468d5ce900a7d83024c64f1a9b60",
+  "source_receipt_sha256": "df82faf8bc3158eb3a8bfbe662433824bd70469ef19458244066245a8f8e7785",
+  "delaylama_receipt": {
+    "application_calls": 124,
+    "native_source_jobs": 12,
+    "native_internal_calls_not_counted": true,
+    "stages": [
+      {
+        "file": "new-control-run.json",
+        "rows": [
+          {
+            "case": "retained-action-grounding-c143",
+            "project_id": "retained-original-action-grounding-c143-20261006-070736-446414",
+            "calls": 30,
+            "graph": {
+              "nodes": 36,
+              "edges": 64,
+              "events": 5,
+              "documentary_facts": 1,
+              "unresolved_nominations": 1
+            },
+            "grounding": [
+              {
+                "protocol": "source-action-grounding-v1",
+                "source_sha256": "9ee04b236a3efc1278ad1bf5142aad6d2a9daacddb89b8137fa607f907f43b92",
+                "status": "partial",
+                "reason": "",
+                "requested": 1,
+                "supported": 0,
+                "contradicted": 0,
+                "unresolved": 1,
+                "model_calls": 1,
+                "completeness": "unestablished"
+              }
+            ]
+          },
+          {
+            "case": "documentary-fact-and-issued-invoice-c144",
+            "project_id": "documentary-fact-and-actual-invoice-issuance-c144-20261006-070736-00f82c",
+            "calls": 36,
+            "graph": {
+              "nodes": 41,
+              "edges": 67,
+              "events": 6,
+              "documentary_facts": 2,
+              "unresolved_nominations": 1
+            },
+            "grounding": [
+              {
+                "protocol": "source-action-grounding-v1",
+                "source_sha256": "aa3a4232b8f5fedf00188ff6947fff5f16b4388bd1ff5658b2e027f04c1c4667",
+                "status": "partial",
+                "reason": "",
+                "requested": 1,
+                "supported": 0,
+                "contradicted": 0,
+                "unresolved": 1,
+                "model_calls": 1,
+                "completeness": "unestablished"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "file": "final-control-run.json",
+        "rows": [
+          {
+            "case": "independent-action-description-c145",
+            "project_id": "independent-action-description-grounding-c145-20261006-071724-ea37a1",
+            "calls": 29,
+            "graph": {
+              "nodes": 35,
+              "edges": 58,
+              "events": 5,
+              "documentary_facts": 1,
+              "unresolved_nominations": 0
+            },
+            "grounding": [
+              {
+                "protocol": "source-action-grounding-v1",
+                "source_sha256": "9ee04b236a3efc1278ad1bf5142aad6d2a9daacddb89b8137fa607f907f43b92",
+                "status": "completed",
+                "reason": "",
+                "requested": 1,
+                "supported": 1,
+                "contradicted": 0,
+                "unresolved": 0,
+                "model_calls": 1,
+                "completeness": "unestablished"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "file": "qualified-control-run.json",
+        "rows": [
+          {
+            "case": "qualified-action-grounding-baseline-c146",
+            "project_id": "qualified-action-grounding-and-calendar-baseline-c146-20261006-072217-6f6317",
+            "calls": 29,
+            "graph": {
+              "nodes": 35,
+              "edges": 57,
+              "events": 6,
+              "documentary_facts": 1,
+              "unresolved_nominations": 0
+            },
+            "grounding": [
+              {
+                "protocol": "source-action-grounding-v1",
+                "source_sha256": "9ee04b236a3efc1278ad1bf5142aad6d2a9daacddb89b8137fa607f907f43b92",
+                "status": "completed",
+                "reason": "",
+                "requested": 1,
+                "supported": 1,
+                "contradicted": 0,
+                "unresolved": 0,
+                "model_calls": 1,
+                "completeness": "unestablished"
+              }
+            ],
+            "neighborhood": {
+              "nodes": 27,
+              "connections": 52,
+              "sources": [
+                "synthetic-contract-c143",
+                "occurrence-record-r143",
+                "notice-request-and-grant-c143"
+              ],
+              "model_called": false,
+              "completeness": "unestablished"
+            }
+          }
+        ]
+      }
+    ],
+    "current_native_registry": {
+      "cancelled": 0,
+      "done": 3,
+      "failed": 0,
+      "queued": 0,
+      "running": 0
+    },
+    "terminal_jobs": 60,
+    "terminal_counts": {
+      "done": 59,
+      "error": 1
+    },
+    "tests": {
+      "backend": 1707,
+      "frontend": 1054,
+      "frontend_files": 91,
+      "build_passed": true,
+      "bundle_warning_retained": true,
+      "full_go_passed_on_corrected_default69": true,
+      "relevant_go_race_passed": true,
+      "patch_arms": 12,
+      "variant_tests": 11,
+      "current_patch_idempotence": [
+        {
+          "arm": "default",
+          "exit": 0,
+          "all_already_applied": true,
+          "error": ""
+        },
+        {
+          "arm": "audit",
+          "exit": 0,
+          "all_already_applied": true,
+          "error": ""
+        },
+        {
+          "arm": "register",
+          "exit": 0,
+          "all_already_applied": true,
+          "error": ""
+        },
+        {
+          "arm": "meaning",
+          "exit": 0,
+          "all_already_applied": true,
+          "error": ""
+        },
+        {
+          "arm": "passages",
+          "exit": 0,
+          "all_already_applied": true,
+          "error": ""
+        },
+        {
+          "arm": "coverage",
+          "exit": 0,
+          "all_already_applied": true,
+          "error": ""
+        },
+        {
+          "arm": "inventory",
+          "exit": 0,
+          "all_already_applied": true,
+          "error": ""
+        },
+        {
+          "arm": "inventory-audit",
+          "exit": 0,
+          "all_already_applied": true,
+          "error": ""
+        },
+        {
+          "arm": "inventory-register",
+          "exit": 0,
+          "all_already_applied": true,
+          "error": ""
+        },
+        {
+          "arm": "inventory-meaning",
+          "exit": 0,
+          "all_already_applied": true,
+          "error": ""
+        },
+        {
+          "arm": "inventory-passages",
+          "exit": 0,
+          "all_already_applied": true,
+          "error": ""
+        },
+        {
+          "arm": "inventory-coverage",
+          "exit": 0,
+          "all_already_applied": true,
+          "error": ""
+        }
+      ],
+      "source_equivalence": {
+        "development_non_test_files": 165,
+        "clean_non_test_files": 165,
+        "identical": true,
+        "sha256": {
+          "transformers.go": "a7aa46ece9d0e5c9e578c1752337cf7e912d6fbb9d1022bf71ed4f54b798479a",
+          "env.go": "56ab2b439f191169ba443309e88cb529545909f8a9dad314d7c014f40d0d1e7c",
+          "project_scope.go": "d0136a4c264a9467d85cccd9cfa3daee023cf6549ed85e645d20a9712e1ce8e4",
+          "hooks.go": "6fe93b12161e44cba93fc0d17bfece4a2d1f22ef32fd658925d7467c6f7943c2",
+          "config_loader.go": "b01c32e5eba350ee50924ea4272dbc20927d29acb146e7a54f405c3c2a9b1cbc",
+          "plugins.go": "a8500bf20e8a2313a12e3d101d5c13648758a032c8c637f2cfc6ca6dabe3dc2d",
+          "options.go": "365673ec55a156600350df8be0f3616a1f73ed73502633fc879c62231e0efe2e",
+          "chronograph.go": "2b2b61b0d8ee6b5b2ff66748cc1b919f345c1f66922ff1020a6fc656485e6bb2",
+          "quick.go": "4c10ec7afaac8af09341c42cf1273567a2442f08547326ade0219ae156533cd5",
+          "events.go": "9c296e988d8a94e1b6377f9d462d9e6cbe270e5c696ad0d12f68871caa269d94",
+          "pipeline_config.go": "1c06c524e89eaf57167801c7712bd04dd15b5f657bf627d1f99a1b8d1be11ef9",
+          "builtin_hooks.go": "37deeff6c2e3d6767a3683130de0c8f51c7919ebba71632a6dd6658be1a8b50e",
+          "analysis_snapshot.go": "26c3e59b3ec771bb9b5660e534dff9ee8e2ae6288a3ad57eed7b8bd34fc9d173",
+          "pkg/demo/seed.go": "e1776e6c6ca16ec2857c8b9e6fc47254efbf54fe238970784fd31734c3868a0c",
+          "pkg/temporal/resolve.go": "bb8eff747e2ed85f71588a1ec9aa73773117a6ba03833b105636d73e68fafd76",
+          "pkg/temporal/extractor.go": "d8549c0bcaaa5de740428a79aa35b2634645d45915d720818edadd0f49017a97",
+          "pkg/transaction/transaction.go": "eeb146237b36cd1a0490ce5e98e1759e4b78d84ba28cfa4c527363537c99f624",
+          "pkg/lint/lint.go": "adfff272c30f5e0533e16e93d869f6997b72615dce86acea957c0137ded358e9",
+          "pkg/parsers/chunker.go": "41fe6d724d3dc4df23b90e3be221b3b87681720b2f004a18dd8b7fd830fddc53",
+          "pkg/parsers/docx.go": "4591b8e9ea613d13b19721db6b79a2a0ea0de175d06ba1225fe9448749793175",
+          "pkg/parsers/pdf.go": "288ca3ec5370a5296e4d7d97c8036abe37d891e7a5afc122d04308587555b022",
+          "pkg/parsers/smart_chunker.go": "31da214b36edf26eb7928d36855be34eb5d1a2e1309ca0c44c63c301d5862c80",
+          "pkg/parsers/html.go": "24fd9b25aed9427f6f754279a9df266baa6ed684f46d776f4e2804a94fa89ba0",
+          "pkg/parsers/interface.go": "c627cd802b9f6e8a43e3a50e9776900e6b9d38087c21623711b9f9e601e1b0d2",
+          "pkg/parsers/smart_pdf.go": "e744264b9b3833f536fcb1caef7fe313398a08d158d9e915efda638b81792db9",
+          "pkg/parsers/xlsx.go": "b462c1070f7264dbe2a27c5f309b4bfa66fe6624e4b4f5807df956aa6bfc32d4",
+          "pkg/parsers/structure.go": "adfc9910a5bcb378d8f6fa9c09d7f4bd6a4afe6665ad536ee260834553d5ee2e",
+          "pkg/parsers/text.go": "e92413fac2351ce59c292b458a5a3c15542c5336e451389998370b01c1454319",
+          "pkg/parsers/csv.go": "6bfc5be210b5b47bc51ea9053f4d5b70f7d7777e4caa1edbed5345a90b1fab7f",
+          "pkg/parsers/pipeline.go": "c2cac48add91a825abd9db514061406ff082a640bbc78cf429c2af137ae425ec",
+          "pkg/parsers/email.go": "d39ea0b8d1f2cf3b19153085d7923cb5d7d1faf1702d1f35dc304710bcc5e110",
+          "pkg/parsers/zlib.go": "0d3e3f202b1f04f64a823335eb477c3fcdc982b085320f3774d49b5456b36949",
+          "pkg/parsers/vision_parser.go": "42083f6aa75380ebd5f5119e98ba475262cc8a06e7ef09d5ff10012f99c398a9",
+          "pkg/parsers/detect.go": "b66a67663383f40e2a9c889352495b9dfda5af09b4d2ef7e6399a861a3bdc964",
+          "pkg/reconcile/reconciler.go": "46fdc8988e4e19e2fc783c88846ce73c4b3bd13c8b24a4c93ad6f1066028bebc",
+          "pkg/llm/provider.go": "dfa63bf359b0dcb1e276ae9f223939609159fb54decbc32842610cf8c86244f7",
+          "pkg/llm/relation_semantics.go": "568d9fc44b57485299b2868222393a9b283cf55b112d974695d289d983aafb7e",
+          "pkg/llm/ollama.go": "46e7adcf73a93473e1f4a6668c0d3d8941065141445f14b546608b7c7d07d8c8",
+          "pkg/core/episode.go": "b4fdaddefff7b49a904eec999c4187dfe4ff86485e21c26b2aac3e78dffc5b87",
+          "pkg/core/edge.go": "db1ad99c58637e5ca4a627d6699032a738cf7bfca7037ca697e42e6d7a51923f",
+          "pkg/core/temporal.go": "de58f62c09b58310c2a296fbc383ac50089a883ce5cabf40b1e9988292151abd",
+          "pkg/core/citation.go": "ce4e6d31cd2c7b165b8389d674afbc28670d64ef798e56b8224edbe9c4f932d6",
+          "pkg/core/ontology.go": "53bf1397e591bb83dc937ebcb4682abd8566d697f170867db4487ca7ca4005c4",
+          "pkg/core/schema.go": "a2e636481c074102a1521e7076d487c8f89895b0f311a2baec610c56fc9c8cc1",
+          "pkg/core/evidence.go": "b7d44a0f2ec1780d5b9afc7a500e23db3699025cbd7ce2d95564bf94b83b061d",
+          "pkg/core/node.go": "bc41932e917e93ab21322a48263bde373d7580dc5a9fb509e122eae24d84358b",
+          "pkg/intelligence/heal.go": "f40fffeace26f38a3be55af7bcc1c97ef7f4d3ad034e095f7a20eb95d35dfc1f",
+          "pkg/intelligence/roles.go": "0c06072ba5c857df6517553536322100960c2e28d803965fddf3618a43aba8d2",
+          "pkg/intelligence/contract_pipeline.go": "e46ed33f53082991adca3b5c89a6fcf0cd842f2990b679bbd46f2faa80596e7f",
+          "pkg/intelligence/event_time.go": "af3652028c724bff9340829d3fcdd1bb00373d17ccde7656ef5388140055652d",
+          "pkg/intelligence/relation_resolution.go": "8d3bfe3d1f17b304fd25d6fec4bae84facd50820061dd2f75bb0579dd1b52ddb",
+          "pkg/intelligence/resolve.go": "cc0bbfdf078c160bdb16c3caab68bd55a886e9437c4ebba01f1db11be3a36073",
+          "pkg/intelligence/actor_types.go": "984c5685e5a944b2137967fcb9e70dd5ecacae280367fd6890175ce3dbfba3a2",
+          "pkg/intelligence/chunk_provenance.go": "2bb14e9ccd8e3bd7524e252b41d821ef5c489259a19327ba9f165de97c4c3c4e",
+          "pkg/intelligence/contractual_scope.go": "327673641d3106c18dc197b04c2c25ff50b32308fd0e75743f70954874979744",
+          "pkg/intelligence/source_inventory_schema.go": "e1a5ec4466a864594abf214f4ca6b33c50511b6f2c6cabf5bc578918c6e0c4c7",
+          "pkg/intelligence/chains.go": "357efc751851568b93f13549a17eaab2130f667f64b41dacd201a96878932fe4",
+          "pkg/intelligence/party_roles.go": "3ace263f7c9e873c2afa9d749a813c9275dccd89d7acfd9e8d4ab1cc11b00bed",
+          "pkg/intelligence/document_identifier.go": "066a01819108582044fad6114815fe142ebfd0b33cf0bb95be16541f1cd29b88",
+          "pkg/intelligence/statement_participant_pass.go": "378fd9b7acaa8cb32cf4a96ecdfd80edbfc7a5886e0e531dc90df8c354b61e8f",
+          "pkg/intelligence/regex_extractor.go": "403b0a32528d0d2e4c6cc4216040ca3910151dd486d83ce19f46fbce3bbdc302",
+          "pkg/intelligence/coreference.go": "b241b6f0b61df37a512d1a15ded99d919d6bf839491de3dabc7aa826c1419b9e",
+          "pkg/intelligence/event_duration.go": "ba4fbe57ebaaba0f5c29f98a0907abfc41962a61abf4c14baa34cb09622f52c3",
+          "pkg/intelligence/event_relations.go": "b396c8cff5369233d0ea546360e879d509dd4eaf74b5f79f18a585948c4add8a",
+          "pkg/intelligence/extractor.go": "77b82b7b8bda66879e3f0419e816216f428b561a9591330a2eac971cb7561a32",
+          "pkg/intelligence/section_inventory.go": "0a8a46947cdf8d3e96ea1c0f8dd7ca578f37ca0cdf0cb78b4d88a0e0ad1cce75",
+          "pkg/intelligence/contract_identity.go": "18a3822bbf1368491d0b4a6244238425534dfefb46433d98511e96a7c765a6b9",
+          "pkg/intelligence/performance_review.go": "c740c30a99eaa10a14b6486206da7d641b9603c31ba4085f1cb37716b257e7a0",
+          "pkg/intelligence/claim_viability.go": "54316cb64eb73b3f2b8fa4ff6f5e71f5cb330a70449f110b4b0930cb8ea3d31b",
+          "pkg/intelligence/source_action_inventory.go": "7cc71d74bae56b0f8780b9275f6dff694a843a3debfc35d074541047c292b6c4",
+          "pkg/intelligence/predicate_audit.go": "a3d6934bdddb43757035f5e0579aa000c234240f5b862e2c0c77e7d56b0505a8",
+          "pkg/intelligence/duration_review.go": "0f5c1cd2e0e437aa30b67effc0a58cc5417f96ddf438ba2ad8d69d66bbe11d94",
+          "pkg/intelligence/crosslink.go": "9cf12e37775c689a35b36508135cf46b7c8083a5f745e149f0859495c57e5195",
+          "pkg/intelligence/action_grounding.go": "54b135cda8b020518f7be027ecffba19954aac313adeebad2b4399b7addef998",
+          "pkg/intelligence/action_recovery.go": "df8963df811051c128216cfac9e594853605649f37ad477bce45ecc5d00c3ff5",
+          "pkg/intelligence/source_structure.go": "d01c114d1cde417d343c80b9b3d70e17a4a210683745c58828a204eb9725478c",
+          "pkg/intelligence/reasoning.go": "10b5ae1fa0774b67b716c0b68297eccfbdc41eceb0cb007f984bd24e30f6830c",
+          "pkg/intelligence/event_relation_premises.go": "3a0e88d7fbbd88d83955c33f08dbcec9ff068ecd94f0dec86cc2255629b53408",
+          "pkg/intelligence/event_category.go": "6e5311c0bad689c3923d546aa1ba3ff48901e947d9a7450bb3cfd6762ab14202",
+          "pkg/intelligence/source_response_failure.go": "308799e92fbcb6235396cb971bcf62830d1f2fa5b6859e35d945efd9db740d62",
+          "pkg/intelligence/source_statement.go": "ba20901bed85bfb82c16b12234d9f10ee77d23f5fae52dba65d883237127c0c6",
+          "pkg/intelligence/statement_participants.go": "f79b57e49468177aac5b01b8cfb146160a6bf319f7c230a8558264df0f550dda",
+          "pkg/intelligence/event_merge.go": "ed9919f8db7f3c6dc59bcd3efc4c6b3bd11634cd46ee20265057d5161240f94e",
+          "pkg/intelligence/event_action.go": "96b44acb1627af36603cb7c5ca6248efb0958f26028f4a9d680e014dafc0213d",
+          "pkg/intelligence/loops.go": "5b0431cba3591a13e268959a4c36ebccec86ed4529c62276912399cc6f0eaad2",
+          "pkg/intelligence/synthesize.go": "7606a26a975f67904b93f81d98a82ff16cf70718f9fa36ea13108ccd29e59e1d",
+          "pkg/intelligence/calibration.go": "b34b293fa9a570d7d78d75143d5491d14ac7b27cd01970df3eb3db19689cdbb7",
+          "pkg/intelligence/verifier.go": "4e1351c288b7393ea74f98f3b230d2e199dbefc8b74c1cc645980abc10f04463",
+          "pkg/intelligence/source_inventory_format_recovery.go": "7b8a47e4b74fa4295a051dac7cfb2d9005a903f7de67f0570071371a5a2904da",
+          "pkg/intelligence/organization_spans.go": "4243dc4eb57828e6ec3a7a4c0af0c96aa59c7bebaef3337d2b8a7f066ee93123",
+          "pkg/intelligence/relation_identity.go": "393eac26de62b5e45b521586bff418e1fc6200fe131fb584d86e22683e6e1961",
+          "pkg/intelligence/event_date_role.go": "8ac41da5a26fd3704ab7c9cabe1327762b3d9dbc7aac51372acf7e8dce19f3f4",
+          "pkg/intelligence/source_association.go": "69b039776b7831741fdbfb9235d50761069a102b42a50379a3b7ebea48cec643",
+          "pkg/intelligence/typing.go": "b91a76aa13a8c5dd04562721b6ac595c01d299dc501b64e3ab40c9fa06b3a976",
+          "pkg/intelligence/event_performers.go": "451290f78930eef055f1e6686786891534032021212b755f878c4c904eff0431",
+          "pkg/tui/app.go": "d5a4ab95497b78b9432afe5a39ae81a4f22509aa24343cdb731090d1e3aa456c",
+          "pkg/ingest/pipeline.go": "eeba9d8f129a75a580d0524277c817777315265c0ba30ff52d488bc1e6806de6",
+          "pkg/path/path.go": "6c6c9e57a0f0512f10b9f87d5d29c70d3ac51623356a53da90d0af447b31919b",
+          "pkg/embedding/provider.go": "0938d0065e0355556f5e76af4c0128da45e38ec983b1601b6c58a3aa81856d30",
+          "pkg/embedding/noop.go": "58cd13cbf5becd18e16214a31237e6de564ad56535545fdd9adea4a5a36373c6",
+          "pkg/embedding/ollama.go": "57e781038ab6cf96ae107d3c58742b882a01f371beae0193cbe3c3e1c43d1473",
+          "pkg/agents/heal.go": "868aa357f7705097190a8a7e673234a1033feb923cc9265954a7d409629d4c74",
+          "pkg/agents/memory.go": "fd4592339e620764979d02de984a1ff1ef64ba1f8c294462cb13634f157b3da8",
+          "pkg/agents/resolve.go": "cf2c9ab03cc1227f5c40ac72ccef352160fc467f084208596b41626cddd99255",
+          "pkg/agents/party_roles.go": "485d7f38620479c29f4cc402554ec1a77620750c222978e79896b396cb68ebab",
+          "pkg/agents/repair.go": "53eb20f2f1d40f3912ffc8d850cff94b94a5912fe5e1fc0aa8259284de11f5c3",
+          "pkg/agents/event_relations.go": "22649796ef5143e22fa904397de0246272b9a9d42a9aae6ca802604abc71eddd",
+          "pkg/agents/independent_plan.go": "b0cc806f0363caf08fa3dd4d7a73069365bfcaadf00ee6dc6b526d8d90158c5d",
+          "pkg/agents/predicate_audit.go": "bb32b8554d262950f5a594699e2051c802020376f943393bfeccf16ec670aacd",
+          "pkg/agents/profile_occurrence.go": "74474cc5cba70e52edb9937dfa49d1d4dfba6712fe45f9369d6f9634c422f923",
+          "pkg/agents/source_structure.go": "7387617e90c83231096f9f359aa5c0f1880d1beb5ca132f31676ba92134f6623",
+          "pkg/agents/source_structure_backfill.go": "0822d0fb6ad171056cfd5329ee542b850f60bf96059b0db1589c4fe12524cf97",
+          "pkg/agents/occurrence_alias.go": "56f755dc3f6ad8de87f0f8370f51f2e49e5218abfb4a86870139fc33e3ec25c9",
+          "pkg/agents/statement_participants.go": "6affd6b658a7d7c7f8053ad33e5c3f027086721b871dde437175a588038744ff",
+          "pkg/agents/analysis_snapshot.go": "498fea12fb2796b081055372a210e7e4c0f240d31c0ce950a08315daf0e83145",
+          "pkg/agents/observed_action.go": "3d14a8b26249a5d4d507ec2898c5a4072aa0cae1c33093474d2104ea7f6526a2",
+          "pkg/agents/source_mention.go": "f871a6a607e5b3c262aa2d0902b26e6114f302f4ad5e6372e6555fd03cd1b1a8",
+          "pkg/agents/verify.go": "bd1392817818e6ec40084f9a9e351c561e28f6776673196b1c43f0b3db310407",
+          "pkg/storage/reviewed_performer.go": "6447577f310631d4494decb091cc6efba43b2f9f6512312ace741a3b6814d08a",
+          "pkg/storage/config.go": "e64d5f9db8b9c6fba81a1d708e418cee4171fd4502f1db3612a5b79d634da5ba",
+          "pkg/storage/edge_supersession.go": "50714d00fc18b25f5239618b4334fc578533ea78cff6d859f9c6019d18782b06",
+          "pkg/storage/interface.go": "9ef2c4a7129ab8e8c33498ed1dbe23711e60515dc96b11bb1407af8edc42d257",
+          "pkg/storage/scope.go": "904692d4f4cbb4a4e957b151496b9f2c7dfda8cf24f8ee3229d74ae19886346b",
+          "pkg/schema/domain.go": "7b0a206271950804561bd2fc917fabd47359f54e3bd6615a664617c5c25876f1",
+          "pkg/schema/relations.go": "e4b0420c0127bac391139ee8caefe7c5d9592345074b1be7c1cd2c62900631de",
+          "pkg/schema/snapshot.go": "ecd3d8e9434da4f10967fb950fe25fae682db8bf7ee6415f4730df79b885d743",
+          "pkg/schema/profiles.go": "007933262c3525b213006a08ac349e1b82ecc347716ea514b10c2cad3ad17849",
+          "pkg/retrieval/query.go": "204a65da825049949b63243ee2d33a089e9a9ed56363a9f71eda2b3091ab2669",
+          "pkg/retrieval/temporal.go": "d7189cbd5d9ad1b0c45c11ca5df95c6bd082cc7862312934e92d82a4d9906e31",
+          "pkg/retrieval/bm25.go": "f6fc043061bce1b45e24977c9c592c37727f0ae46c7fb08f2faff0a8c1fc0f62",
+          "pkg/retrieval/simulation.go": "6d35184bd94cca0b74270e44ba8b51209d7123cd5450d40b935833798cf8cee4",
+          "pkg/retrieval/graph.go": "b69e4f7d2e4b47a330e5bbc9a79976d6d101c925efe734ebd7d5e3629474d3a6",
+          "pkg/retrieval/hybrid.go": "84946faa7b76f75ac17be95bbb104f24aae0b649345bb2db4d1f4760f20e2dd0",
+          "pkg/retrieval/causal.go": "12775e547b50426bda015c284aa63c3c82c2be29c5b316aa356e4d25ec9fa9b8",
+          "pkg/retrieval/context.go": "d28ea9b6836a7b1e5408c35eb26a0ba8915ff398f6a834592248316ab8f4d088",
+          "pkg/retrieval/impact.go": "84f002fd1abe83f2f3ef00a2dbcf1cc389781303ab614519f8fb93998be974fb",
+          "pkg/retrieval/provenance.go": "a71efc81c92a444b505a995da1f15ac27e4d8917dcd04c16e3967b1075349b1b",
+          "pkg/retrieval/analytics.go": "bb33473df6bf4095ad3e2e1cd0eddf4802d19aba8013dec886def047fc3cd08d",
+          "pkg/audit/log.go": "5a3d760534e2181f291b67a05ba5ff726b79a492f399eab18a3cc640c87caf64",
+          "pkg/api/curation.go": "9439af6d690895226318d7b6f955e44b650d3fa15b62779f697589e0953af805",
+          "pkg/api/reviewed_performer.go": "895b0be923496726d33fb59f65747397fe470543b3de38924a68a50712a0de8b",
+          "pkg/api/server.go": "df9acb5200b353a7dbe001034ac765e4639374f20c976fc990ec305f2a15d20c",
+          "pkg/api/simulation.go": "20d4a8f804bf0bcaad7b8ccc7108f45f259446486b9a841dd3b8a9aef1110c00",
+          "pkg/api/source_structure_backfill.go": "c07499106d634dd8ad33319aef8b9e13f4c2225f474ef9820e249aa74c1b6834",
+          "pkg/api/analyze_jobs.go": "e329467e8be37752e416ceef2fb0ce3b467e28edade4c2f5491e6f63f8bf1949",
+          "pkg/export/export.go": "3ad84211df048d4b7e9bf2a63126b2163d221823d2ba9d4e5d3069f5f233b24d",
+          "pkg/client/client.go": "d076d6bdc4e7ffb9712ffc72c3ccc5fc3bfb4f221b0358cdcbcef690ebf8cf3e",
+          "pkg/storage/sqlite/reviewed_performer.go": "b5ea414461a56c88511b14f1e8832ff2bd228f98f555d07de73812806bc0984d",
+          "pkg/storage/sqlite/edge_supersession.go": "855948be355461291244c342dee7820a84f8fd81cfd890e3132c9f2e232e7c63",
+          "pkg/storage/sqlite/sqlite.go": "97d0f92add4459794c9da7b19f55c9ed12b9166ba730a40d7fde0700e8e2171f",
+          "pkg/storage/sqlite/migrations.go": "9afd0126ac5b4af046e92f776aa1c4de6db7cb14802ae25e796da4863b58906a",
+          "pkg/storage/sqlite/helpers.go": "760a8120e9e34421fee0868938c2733479baff3178fc776882722688612997a7",
+          "pkg/storage/postgres/postgres.go": "60e3eee318c7ed9807391b472b647e706ecc78130f0b9a104c25d03c9d1bfd4b",
+          "pkg/storage/storagetest/suite.go": "d5ab2d86718d2f9f0c502eba6e41e5d3c460f57e93127e83c9ce079a00bd5213",
+          "pkg/storage/filedb/filedb.go": "dc98df4df8704c742d6acb8ebfa392fbc7fa0b3cb38fc9dc8583dc052f75bd62",
+          "pkg/agents/domainpacks/legal.go": "2068350eefdefe3181016409549b1303dc202f83ef525ad7a6c8714fcb68d61d",
+          "pkg/agents/domainpacks/pm.go": "90510329ebca819e383a9ac11b89cbefd25344a32c7f2c27d81e4a826bb8a5e6",
+          "pkg/agents/domainpacks/registry.go": "05c7e9697054d0858cb5f4795610e2b8fee00ce7faccc3b94625d922249808c3",
+          "pkg/agents/domainpacks/construction.go": "253b2036bc5eb511cdf18b978d57fe64b2397a389e274de59a5c0e8bd0c17623",
+          "pkg/embedding/gemini/gemini.go": "aee4a726aecd6e40e4fdaccc935e227c2cff665ab5291346cd3b185254f4bdb3",
+          "pkg/embedding/openai/openai.go": "a9b16a264d45bc4d3bee0ed1c103a66e0c28cdf129ea3322baa827d0f0427418",
+          "pkg/llm/gemini/gemini.go": "84bd0213fa509075274424d1edc0f7067d847ef7ecf888d972bfa8c1d96e79a5",
+          "pkg/llm/openai/reasoning.go": "88ac3ac9aab7b27d542e23415c9e35ae2536425eaf04c0a11ef2ee7fd5503ed5",
+          "pkg/llm/openai/openai.go": "1c50cd076403ef932c318fd8ae5a0c357db80e491756bb663b2c600ab22aa812",
+          "cmd/chronograph/main.go": "780fc75099fe84bc894f428cd33ab0097b355bd8bb72f094e6a71c0eccd77cf5"
+        }
+      }
+    },
+    "date": "2026-10-06",
+    "scope": "Original-first initial nomination grounding, source-span reconciliation, documentary facts distinct from performed acts, graph/UI checks and qualified compatibility default69 activation. Not complete contract correctness.",
+    "remaining": [
+      "Model semantics, actor ownership, applicability, notice trigger/compliance and payment reconciliation still need qualification.",
+      "Only initially unframed nominations get the extra pass; framed candidates can still have wrong meanings. Classification is not certified semantic truth.",
+      "Missing/ambiguous/bundled source spans remain review leads or withheld overlaps; no fuzzy identity merge or historical migration.",
+      "Synthetic English development draws and reused originals are not held-out/repeated-seed, causal, multilingual or long-dossier accuracy.",
+      "Prior unqualified development draws and failures remain retained. Positive issuance control was from the early development baseline; controlled storage tests also pass on corrected default69.",
+      "No new LayaGo/GLiNER/MLX training, model architecture, weights or measured speed gain."
+    ],
+    "preservation": {
+      "protected_engine_source_files_unchanged": true,
+      "protected_app_artifacts_unchanged": true,
+      "user_studio_unchanged": true,
+      "orchid_studio_unchanged": true,
+      "user_graph_all_tables_unchanged": true,
+      "recorded_replay_nodes_edges_unchanged_by_GUI": true,
+      "owned_jobs_terminal_verified_before_cleanup": true,
+      "replay_verified_before_cleanup": true,
+      "user_engine_health": {
+        "analysis_jobs": {
+          "cancelled": 0,
+          "done": 0,
+          "failed": 0,
+          "queued": 0,
+          "running": 0
+        },
+        "analysis_jobs_scope": "service",
+        "edge_count": 660,
+        "episode_count": 321,
+        "node_count": 1444,
+        "schema": "general",
+        "status": "ok"
+      },
+      "user_graph_fingerprints": {
+        "edges": {
+          "rows": 660,
+          "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+        },
+        "episodes": {
+          "rows": 321,
+          "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+        },
+        "nodes": {
+          "rows": 1444,
+          "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+        },
+        "schema_meta": {
+          "rows": 1,
+          "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+        },
+        "timeline_events": {
+          "rows": 3437,
+          "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+        }
+      }
+    },
+    "activation": {
+      "old_engine_pid": 50781,
+      "engine_pid": 75902,
+      "api_pid_unchanged": 82550,
+      "database_backup": "/private/tmp/delaylama-action-grounding-qa/activation-backup/graph.db",
+      "binary_backup": "/private/tmp/delaylama-action-grounding-qa/activation-backup/chronograph-previous",
+      "finished_jobs_archived": 0,
+      "graph_rows_unchanged": true,
+      "table_fingerprints": {
+        "edges": {
+          "rows": 660,
+          "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+        },
+        "episodes": {
+          "rows": 321,
+          "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+        },
+        "nodes": {
+          "rows": 1444,
+          "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+        },
+        "schema_meta": {
+          "rows": 1,
+          "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+        },
+        "timeline_events": {
+          "rows": 3437,
+          "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+        }
+      },
+      "config_unchanged": true,
+      "engine_sha256": "b11a9d0500edaffce28ad74870d31232c5f54a1c2709368f97729bf67138203a",
+      "health_before": {
+        "analysis_jobs": {
+          "cancelled": 0,
+          "done": 0,
+          "failed": 0,
+          "queued": 0,
+          "running": 0
+        },
+        "analysis_jobs_scope": "service",
+        "edge_count": 660,
+        "episode_count": 321,
+        "node_count": 1444,
+        "schema": "general",
+        "status": "ok"
+      },
+      "health_after": {
+        "analysis_jobs": {
+          "cancelled": 0,
+          "done": 0,
+          "failed": 0,
+          "queued": 0,
+          "running": 0
+        },
+        "analysis_jobs_scope": "service",
+        "edge_count": 660,
+        "episode_count": 321,
+        "node_count": 1444,
+        "schema": "general",
+        "status": "ok"
+      }
+    },
+    "api_activation": {
+      "old_launcher_pid": 82549,
+      "new_launcher_pid": 75925,
+      "api_healthy": true,
+      "journal_unchanged": true,
+      "journal": {
+        "count": 24,
+        "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+      },
+      "app_env_unchanged": true,
+      "health": {
+        "status": "healthy",
+        "agents": {
+          "agent_critic": {
+            "status": "healthy"
+          },
+          "amendment_analyzer": {
+            "status": "healthy"
+          },
+          "claim_viability": {
+            "status": "healthy"
+          },
+          "contract_identity": {
+            "status": "healthy"
+          },
+          "contract_identity_base": {
+            "status": "healthy"
+          },
+          "event_detector": {
+            "status": "healthy"
+          },
+          "extractor": {
+            "status": "healthy"
+          },
+          "guarantee_analyzer": {
+            "status": "healthy"
+          },
+          "notification_register": {
+            "status": "healthy"
+          },
+          "penalty_analyzer": {
+            "status": "healthy"
+          },
+          "project_context": {
+            "status": "healthy"
+          },
+          "prompt_improver": {
+            "status": "healthy"
+          },
+          "risk_allocator": {
+            "status": "healthy"
+          }
+        },
+        "agent_count": 13,
+        "plugins": {},
+        "plugin_count": 0,
+        "endpoints": {
+          "project_workflow": {
+            "status": "healthy"
+          },
+          "prompt_editor": {
+            "status": "healthy"
+          },
+          "review_sessions": {
+            "status": "healthy"
+          },
+          "studio_sessions": {
+            "status": "healthy"
+          }
+        },
+        "endpoint_count": 4,
+        "ingestors": {
+          "markitdown": {
+            "status": "healthy"
+          }
+        },
+        "ingestor_count": 1,
+        "pipelines": [
+          "claim_prep",
+          "consolidate",
+          "contract_analysis",
+          "contract_analysis_sequential",
+          "contract_identity_base",
+          "contract_identity_critic",
+          "contract_identity_only",
+          "extract_batch",
+          "extractor_fanout",
+          "project_consolidate",
+          "prompt_improve"
+        ],
+        "pipeline_count": 11,
+        "tasks_enabled": true,
+        "storage": {
+          "status": "healthy"
+        }
+      }
+    },
+    "cleanup": {
+      "owned_processes": [
+        {
+          "service": "engine",
+          "pid": 58625,
+          "port": 8097
+        },
+        {
+          "service": "api",
+          "pid": 58652,
+          "port": 8081
+        },
+        {
+          "service": "frontend",
+          "pid": 24938,
+          "port": 5175
+        }
+      ],
+      "owned_ports_closed": true,
+      "terminal_application_jobs": 60,
+      "native_jobs": {
+        "cancelled": 0,
+        "done": 3,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "temporary_browser_tabs": [
+        165
+      ],
+      "temporary_browser_tab_closed": true
+    },
+    "export_policy": "Embedding/vector arrays omitted; intermediate failures retained; configured credential-value scan passed.",
+    "asset_manifest": [
+      {
+        "file": "docs/validation/assets/action-grounding/activation.json",
+        "sha256": "49754c711a3a9a0219c0f85a43683d21daab4e3d72e5c7ebdbb9802e3801069e",
+        "bytes": 1741
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/api-activation.json",
+        "sha256": "1cb415ecaf3441ded4c85769a6cc0ed3af6ec63e74105a6a6e6bcd2cb72246d0",
+        "bytes": 2081
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/backend-last.log",
+        "sha256": "e5d02b79db4309998bfb5b88175dfdcb4a621776a80c72d6ad9b3626c3f14985",
+        "bytes": 1988
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/build-last.log",
+        "sha256": "73106bd0ebcfa861314e1996f61bfe022f06c061aef6b21f2595364af56305ce",
+        "bytes": 1274
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/cleanup.json",
+        "sha256": "70decd9a3d99f1c002d35ce650a82ba153833b132e8c99aabddcb8948fb29b01",
+        "bytes": 524
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/current-idempotence-process.log",
+        "sha256": "5c8cdd4e25ce52eb47d55707c46aec65c887e48a24434929bc10335800ac6895",
+        "bytes": 234
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/current-patch-idempotence.json",
+        "sha256": "58f779d63dc636f6c5bd02d56cfa3649a8bec04c5ce5f571ba11509940339a89",
+        "bytes": 1197
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/default68-apply.log",
+        "sha256": "d4c709147668ed310bdf077b1847b2e5ebcef776a01c382d5b8c6f17af447d0c",
+        "bytes": 407
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/desk-documentary-fact-and-issued-invoice-c144.json",
+        "sha256": "23556256cd30c73d57fc018af2dd127309538dc17f444c04d8b12fcd36d2427c",
+        "bytes": 616409
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/desk-independent-action-description-c145.json",
+        "sha256": "e42d7d265cdef38035a8eae2dc4d7c666ddf44f1377d39c1ce66d2f2cb84785b",
+        "bytes": 498019
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/desk-qualified-action-grounding-baseline-c146.json",
+        "sha256": "2f098bdf2e4caf54f66464f6ab18651f6411e0be790e9b1ebd1693b0aebaed8a",
+        "bytes": 518608
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/desk-retained-action-grounding-c143.json",
+        "sha256": "d376f121a4dbd99464d73a70823e60bf7d7bd4f0f777048d6871cb5bbd8c2198",
+        "bytes": 503069
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/documentary-fact-dom.txt",
+        "sha256": "f4e72408f11c374abe9802a9fc896b3a2e8d112e83ab2a599309a2588253958e",
+        "bytes": 29845
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/documentary-fact.png",
+        "sha256": "6209e309c9774ade748691f03e7bbdbd1b9062711266334cf6f29d5593d37754",
+        "bytes": 159008
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/final-control-freeze.json",
+        "sha256": "288d484ec925537944f9d2922f17e3f630ec71425ff5133e36fb043a84797a0f",
+        "bytes": 168
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/final-control-process.log",
+        "sha256": "6ee7f8237a1138cdc7a6301c4f1ca880e744f098df6cdc76861212128fd231bc",
+        "bytes": 245
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/final-control-run.json",
+        "sha256": "b4653698bfbffb4a233729e7d54c214f0c2ca46affdf8e16eabb76cfac8cbb2a",
+        "bytes": 156894
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/final-control.json",
+        "sha256": "55cc6b86998500ce2840fe1a93fc67d845608efdb64064ab8fb933130a89a925",
+        "bytes": 2130
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/final-patch-arms-process.log",
+        "sha256": "bc2248983cb760f4a4ee9abb5f41b415bae8875b451a8a45801a3579d51fabf0",
+        "bytes": 7413
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/final-patch-arms.json",
+        "sha256": "a604dd58bf912de9b2ba70975917534934f3217caf20e07239f0fd24f5d57ef1",
+        "bytes": 44405
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/focused-patch-arms.json",
+        "sha256": "a604dd58bf912de9b2ba70975917534934f3217caf20e07239f0fd24f5d57ef1",
+        "bytes": 44405
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/frontend-last.log",
+        "sha256": "d641e495f6a286a44bd55602d12c99fc15c5a1ecbf2f721588c650afe47e8588",
+        "bytes": 344
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-api-calendar-race.log",
+        "sha256": "506fc099da33bbf50d41282606d908bd0b8788bcb191b544f55f397fc67df589",
+        "bytes": 234
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-final-variant-audit.log",
+        "sha256": "584e737aa644a93efc8541482d93f30dc9f73ab5c55350ccf75a69973b573ea0",
+        "bytes": 190
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-final-variant-coverage.log",
+        "sha256": "79759d7a2295764a4da592e5ae6de008d37a1b5cd4273356660a5411d2ea877b",
+        "bytes": 181
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-final-variant-inventory-audit.log",
+        "sha256": "4cccaf5bb1e5dd9b00188b4b5abd3bd7404df36e239648ba5095b8f76d4355fd",
+        "bytes": 190
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-final-variant-inventory-coverage.log",
+        "sha256": "f656027cafbbc7bec7bcee1283ab8fc18b8a3f1dccd935deaa12384e802446b0",
+        "bytes": 181
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-final-variant-inventory-meaning.log",
+        "sha256": "888ca6ee11b5db55d7ec7d682e2e045a9d8b59bc6c0e036178b833a6dd59c61a",
+        "bytes": 190
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-final-variant-inventory-passages.log",
+        "sha256": "4ab9ee322680dac5d947f1202369d6bb2a6efb7f04ce3184c1d2ae555575faaa",
+        "bytes": 190
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-final-variant-inventory-register.log",
+        "sha256": "1c43c9ca981057f4eb007c9be6dcbf964aeabfd6887a1468a97cc6451917642f",
+        "bytes": 190
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-final-variant-inventory.log",
+        "sha256": "3168d8dcd1de7892f60fb7d5f437e21e8e586b0f89bff5ec33c6133d68f905b5",
+        "bytes": 190
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-final-variant-meaning.log",
+        "sha256": "d838f0264623d81108580cc74420cfaded6d20c11f0ed06f9601c51d0ae0a4a1",
+        "bytes": 190
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-final-variant-passages.log",
+        "sha256": "d8b764857db3583261b1db9405ad64c32c1b1a4f28001a433f49afc79220da12",
+        "bytes": 190
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-final-variant-register.log",
+        "sha256": "61a38719372bd89e985ef48d5e5d63a553fa96e57c6dcfeeb61799244a24c4bb",
+        "bytes": 190
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-full-corrected-baseline.log",
+        "sha256": "257599f2c3706db715fd1289e4f8dcc0a446e0ec135dc28df404c9f36c3e854c",
+        "bytes": 2089
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-full.log",
+        "sha256": "d71e26bdfb3677aaacf2397463fc30bbd5499005727a13d4ec24f8900c168645",
+        "bytes": 2054
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-initial.log",
+        "sha256": "26c707a7a7883441a0f1ec74320298ca8c27f7ebd487e3f31e72209c49d80900",
+        "bytes": 37307
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-race-corrected-baseline.log",
+        "sha256": "3d1d5f029e07f0f1b326a07caf0ff0392e8ed3387fceb4a61d6af53d99db913d",
+        "bytes": 199
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-second.log",
+        "sha256": "29e959f145681f6197d906fe758fd4e78a5812650b96b53b9f22b9988c2c4939",
+        "bytes": 126
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/go-storage-target.log",
+        "sha256": "7cb6b21d33b5a44828d208c31fb18dd2a70bc83271e7696185134ff80bea5d07",
+        "bytes": 499
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/graph-documentary-fact-and-issued-invoice-c144.json",
+        "sha256": "44174336f3910c1f25117f9081519a67504e0e8cbf8123a26134e4332b466e5b",
+        "bytes": 452456
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/graph-independent-action-description-c145.json",
+        "sha256": "b70aeb281fee4e833c36a6123d5c8c5346b71b0ed69f90684a2a74f8523c9579",
+        "bytes": 398900
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/graph-qualified-action-grounding-baseline-c146.json",
+        "sha256": "fb09fe90ad9fec2e11662b497eb51a78df73b44d112536e7c17815106153d11a",
+        "bytes": 411479
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/graph-retained-action-grounding-c143.json",
+        "sha256": "415278224025c1880d5af350dfb081a4ae8b2e07e926a92ac8de558b2c065c69",
+        "bytes": 446511
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/harness-notes.json",
+        "sha256": "b052ca14e2573f888fedf16049cc06f9a06c6ae899c711a69c3ee68e650c0693",
+        "bytes": 1897
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/initial-grounding-raw-native.json",
+        "sha256": "42acf349567b4c2857b6b07e12fbaa587bee48b67f839718749c252bcf44b8e1",
+        "bytes": 43781
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/issued-invoice-dom.txt",
+        "sha256": "5dd4a77476d40e5cb27db5612194729521d2daf5364bf10e78ee13ea5447d1f8",
+        "bytes": 59463
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/issued-invoice.png",
+        "sha256": "ff5804f37bfafb0a1ce9da3515f142ebac0ad713206bb3842d113d6e6562eb2f",
+        "bytes": 149636
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/neighborhood-qualified.json",
+        "sha256": "d6d651f29cea6953f9dae4e6198a209ee245b1576a4aad2a2d588e739f40bc9b",
+        "bytes": 155910
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/new-control-freeze.json",
+        "sha256": "dca8abb4b7eaaa6e8bfc2ad875914054fdf58558be6599e886c43e7bafcaf852",
+        "bytes": 126
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/new-control-process.log",
+        "sha256": "2a20c5664b022c55db2871df3275a2fe8a8a10522994dbfb694c48f2fbcbe5b4",
+        "bytes": 465
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/new-control-run.json",
+        "sha256": "030605b249e6ad5bec400e94ff34936ee145fbb46c50860a496093260295716a",
+        "bytes": 314701
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/new-control.json",
+        "sha256": "2779db940f27c35ebcfd527a7691d698101867c7dfc8bbe82645d968c85fe2eb",
+        "bytes": 4181
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/outputs-documentary-fact-and-issued-invoice-c144.json",
+        "sha256": "43cfbe2e2e067ddcabc60d2c541cdf61d34e76d51216c4f7c1e9281cc08f51ca",
+        "bytes": 498861
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/outputs-independent-action-description-c145.json",
+        "sha256": "3c956c33eb7c725cf7662bd9e17b39f18a5a3caafb9a042cd5ac36e9e715af15",
+        "bytes": 409169
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/outputs-qualified-action-grounding-baseline-c146.json",
+        "sha256": "31ad46c1809a7ef459b43355e907ac7894b74aa9ea207e9368498e621ac1ca5f",
+        "bytes": 426239
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/outputs-retained-action-grounding-c143.json",
+        "sha256": "b16218f5ace2b3cb605820cbd087370b4537178a243d2abe0004d22b5a757ac3",
+        "bytes": 413276
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/owned-api-context-refresh.json",
+        "sha256": "5fcfb4e55caacb4b9aac77c3253905ddc41fd27a31e5c623cc244035bd069a87",
+        "bytes": 663
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/owned-engine-baseline-refresh.json",
+        "sha256": "0a61c608d3c60690574e0496218cbef75dee9e9e279ae1c32677357ccd704d35",
+        "bytes": 883
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/owned-engine-refresh.json",
+        "sha256": "ccb1559397fd8f9f9328bda54ae4521c55de4d40043a7f23e932fe790274f2b1",
+        "bytes": 879
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/pre-baseline-refresh-native-jobs.json",
+        "sha256": "0f62f46f0fcff2361d3af14081834a93b64e407613f5ee1c6d6606ae0638f104",
+        "bytes": 144383
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/pre-refresh-native-jobs.json",
+        "sha256": "af7672983656a6a5543704086db4a53bce456bbca55cb2900c123fd61d35a2b6",
+        "bytes": 303094
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/qualified-control-freeze.json",
+        "sha256": "502657773cc366b9c84bdee0b77fe16edb925754c8765a155a335c1054e453c2",
+        "bytes": 224
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/qualified-control-process.log",
+        "sha256": "0a4d68c3818fc1fcffa00ec8d2fa9c700a0ad9d5b9988e4554019318ded4c72f",
+        "bytes": 260
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/qualified-control-run.json",
+        "sha256": "a5f0ea26966349e865e100887dd94cb4da1f5d094d2a40d3bf4e3d7bbe23da90",
+        "bytes": 161269
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/qualified-control.json",
+        "sha256": "eacf0adee017d49f2a38fb2714ced61bb453f309f7ddf2d7b869a5bc95883df5",
+        "bytes": 2143
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/qualified-native-jobs.json",
+        "sha256": "4025a09c0a30261f98cc75ed8bf693083dc5bfc3e9196af877e58015d0085737",
+        "bytes": 140645
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/release-checks.json",
+        "sha256": "a88e74b39fabfec97ead314c15bf1eff690735d18b10ec19bcbf481795cce382",
+        "bytes": 63114
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/source-equivalence-corrected.json",
+        "sha256": "86c0357cd53e059e98626c54b6158b56c74d9a844c597190332f8fba7dd5d071",
+        "bytes": 17027
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/source-equivalence.json",
+        "sha256": "71864a8d0e5447354c92326369ae960825456fe00b7aeff937aa34f3bb5b010c",
+        "bytes": 17142
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/source-grounding-dom.txt",
+        "sha256": "e2e64f8580af79140b70c8b534f139dd52954a61b0cb3c5d4efad4cea61e8b37",
+        "bytes": 29836
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/source-grounding.png",
+        "sha256": "7e90dc884db082ec65287e546b8ed3ac8f50408503272c33da81e452ab535834",
+        "bytes": 257526
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/verification-process.log",
+        "sha256": "242448198737f650a4144888d3201e3fba6e1ba2fb0239b24cdba61c8081366a",
+        "bytes": 79
+      },
+      {
+        "file": "docs/validation/assets/action-grounding/verification.json",
+        "sha256": "18bec4b6391c9041a5af8c93454d87cca54509f7b51462e3b2b9d1bc0713d699",
+        "bytes": 23927
+      }
+    ]
+  }
+}

@@ -5749,3 +5749,57 @@ This populated-field pass does not establish omitted-field recall, native entity
 resolution, legal applicability or payment reconciliation. Synthetic English cases
 are not independent legal gold, held-out/repeated-seed or long-contract accuracy.
 No LayaGo/GLiNER/MLX architecture, training, weights or measured speed gain occurred.
+
+## L152 — Ground nominations independently and distinguish documentary facts (2026-10-06)
+
+**Evidence:** [DelayLama action-grounding qualification](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-action-grounding.md)
+and [hashed receipt](validation/delaylama-action-grounding-20261006.json).
+
+A generated initial event quote omitted an intervening awareness sentence. The
+independent grounding model copied that reconstruction when it was included in
+its input. Removing earlier generated excerpts, supplying only the nominated
+label/calendar plus the full original, and showing a contiguous own-action example
+preceded successful source selection. Matching source contexts are not permission
+to fabricate missing quotation text. Invalid/ambiguous/missing cards remain review
+leads. Exact own spans may reconcile nominations with inventory; partial overlap
+must not silently merge different predicates or bundled actions.
+
+An invoice documenting expense was also named as an issuance event. Positive
+`factual_statement`/`SourceFact` is now separate from `observed_action`: documentary
+support, a reported quantity or state does not establish issuing, delivering or
+paying. The fact's own assertion supplies its display name; earlier labels survive
+as proposals. Ungrounded nominations are `ActionCandidate` records outside executed
+events, without occurrence calendars or actual performer/causal roles. Original
+proposals remain inspectable. Source facts and proposals are not human acceptance.
+
+**Training implications:** contrast documentary support versus actual issuance,
+receipt versus sending, expense versus request/award, generic state versus a stated
+change, and observed versus normative/deadline language. Include old generated
+excerpts that reconstruct or omit intervening text, but keep them out of the
+independent selector's evidence input. Supervise own assertion, enclosing context,
+statement kind, occurrence identity and scalar/date ownership separately. Include
+repeated quotations, overlapping clauses and source changes; retain abstentions
+and rejected predictions instead of forcing fuzzy identity matches. Source matching
+and candidate classifications need separate labels from semantic acceptance.
+
+**Engineering learning:** clean-source equivalence caught a missed calendar patch
+in the isolated development baseline. An invalid positional patch command had
+failed while later shell commands continued. Earlier live runs and Go tests did
+not qualify the full default series. The baseline was corrected, full Go/races
+repeated, source files matched to the clean build, and a distinct qualified project
+ran before activation. A variant idempotence probe also needed each arm's original
+flags; the preflight refused writes when those were omitted. Preserve intermediate
+failures, verify the actual compiled source set and avoid treating a passing suite
+on the wrong baseline as release evidence.
+
+**Evidence limits:** 124 application calls, 12 native source jobs (internal calls
+excluded); 1,707 backend and 1,054 frontend tests plus build, full corrected Go,
+relevant races, 12 patch arms and 11 variant suites. Final control grounded one
+initial block and withheld overlapping inventory, preserving one performed block;
+invoice documentation remained a source fact. The explicit issuance positive was
+also retained. Early native draws used the incomplete development baseline; these
+remain reported separately from corrected default69 qualification. Synthetic English
+reused originals are not independent gold, held-out/repeated-seed, causal or complete
+contract accuracy. Actor ownership, applicability, notice triggers/compliance,
+source recall and payment reconciliation remain open. No LayaGo/GLiNER/MLX model,
+training, architecture, weights or measured speed improvement occurred.
