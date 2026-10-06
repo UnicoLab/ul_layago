@@ -5639,3 +5639,53 @@ award-minus-expense recommendation, C141's related-notice time-right duplication
 native entity candidates and event quotation coverage remain issues. Synthetic
 single draws are not independent legal gold, held-out/repeated-seed or causal
 accuracy evidence. No LayaGo/GLiNER/MLX architecture/training or speed gain occurred.
+
+
+## L150 — A source record and its claim subject need separate identities (2026-10-06)
+
+**Evidence:** [DelayLama claim-subject validation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-claim-subject-context.md)
+and [hashed receipt](validation/delaylama-claim-subject-context-20261006.json).
+
+A notice assessment named the underlying delay as its subject but the interface
+linked only its record ID, making repeated time proposals resemble independent
+rights. Source-bound subject context now keeps record, subject, target and role
+separate. Unique identities, captured full basis, current whole-original hash and
+own association span permit candidate navigation; they do not certify legal meaning.
+Unknown or stale scopes stay unresolved. Different proposals, quantities and review
+paths remain intact. Subject/target indexing is not verdict aggregation or summation.
+
+The same distinction appears in graph navigation. The analysis graph has separate
+record-reference and proposed-subject links, with the own association quotation.
+The browser waits for the current original digest, sharing promises across cards.
+An edited original blocks a stale link even if the quote still appears. Graph
+inspection initially hid quotations on all structural references; the new subject
+link now exposes its own quote with candidate wording. Long fact/review fields also
+span the inspector rather than wrapping inside a narrow column.
+
+A three-source control exposed a deeper error: “a notice alone does not grant
+payment” became a substantive exclusion of the underlying delay claim. Matching
+text and coherent relation fields did not make that interpretation correct. Scoped
+guidance and a narrow English current-field warning distinguish notice contribution
+from substantive exclusion or late-notice forfeiture. One recheck removed that
+exclusion while leaving cost applicability unresolved with its provision retained.
+The bad draw, changed cost wording and remaining procedure-only time judgment in
+the saved case remain visible; navigation and a later draw are not adjudication.
+
+**Training implications:** supervise record identity, assessed subject, event role,
+association and rule scope separately. Include notice-only non-grant versus true
+underlying exclusion, actual late-notice rules, grants versus future rights, and
+several records reporting one subject's quantity. A repeated quantity is not another
+right or independent evidence. Include changed whole-source versions with unchanged
+local quotes, duplicate IDs/ambiguous associations and scalar-versus-UTF-16 positions.
+Keep source-bound candidate links distinct from acceptance labels, and test evidence
+visibility, indexing, counters and review navigation as well as extraction quality.
+
+**Evidence limits:** 37 application calls, three native source-analysis jobs,
+1,699 backend and 1,047 frontend tests plus build; claims retained Gemini 3.5 Flash /
+low reasoning. The fresh graph had 28 nodes and 41 edges; one three-step neighborhood
+retrieved all three originals with unestablished completeness. These English synthetic
+single draws are not independent legal gold, held-out/repeated-seed, causal or complete
+long-contract accuracy. Semantic entity/occurrence duplication, event quotation
+coverage, related title/scope consistency, precise applicability/labels and payment
+reconciliation remain open. No LayaGo/GLiNER/MLX architecture, new training/weights or
+measured speed gain occurred.

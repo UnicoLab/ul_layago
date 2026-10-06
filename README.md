@@ -12,9 +12,9 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L149 finding](docs/learning-log.md#l149--missing-details-must-not-erase-known-outcomes-2026-10-06)
-records separate outcome, amount, date and supporting-document scope, with known
-expenses preserved across extraction, review and graph/interface projections.
+The latest [L150 finding](docs/learning-log.md#l150--a-source-record-and-its-claim-subject-need-separate-identities-2026-10-06)
+records source-bound subject context, candidate graph evidence and the difference
+between notice contribution and the underlying claim’s substantive rights.
 
 ## Build and use
 

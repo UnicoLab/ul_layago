@@ -1,0 +1,662 @@
+{
+  "learning": "L150",
+  "date": "2026-10-06",
+  "report": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-claim-subject-context.md",
+  "delaylama_commit": "ef18373d5f60ff0e2cbe93190aa94db838fc0d6e",
+  "source_receipt_sha256": "ae67d803b61af5c35e37f3d8f20d6ea19da3ca7478445e57e5ee3dbbdc347851",
+  "delaylama_receipt": {
+    "application_calls": 37,
+    "stages": [
+      {
+        "file": "saved-runs.json",
+        "calls": 9,
+        "rows": [
+          {
+            "case": "related-notice-c141",
+            "project_id": "separate-expense-date-and-support-gaps-c141-20261006-044922-d9b1a8",
+            "job_id": "d707f42f1c8a4f11a67dc9aad5cfa7be",
+            "calls": 9,
+            "claim_calls": 9,
+            "claim_profile": {
+              "class": "langchain_openai.chat_models.base.ChatOpenAI",
+              "model": "gemini-3.5-flash",
+              "endpoint_origin": "https://generativelanguage.googleapis.com",
+              "parameters": {
+                "temperature": 1.0,
+                "top_p": null,
+                "top_k": null,
+                "max_tokens": 16384,
+                "max_completion_tokens": null,
+                "seed": null,
+                "reasoning_effort": "low",
+                "thinking_budget": null,
+                "frequency_penalty": null,
+                "presence_penalty": null,
+                "stop": null,
+                "enable_thinking": null
+              }
+            },
+            "assessments": [
+              {
+                "record_event_id": "E1",
+                "target": "time",
+                "viability": "claimable",
+                "rule_kind": "substantive_entitlement",
+                "subject_id": "E1",
+                "subject_status": "own_subject_candidate",
+                "rule_concerns": []
+              },
+              {
+                "record_event_id": "E1",
+                "target": "cost",
+                "viability": "conditional",
+                "rule_kind": "substantive_entitlement",
+                "subject_id": "E1",
+                "subject_status": "own_subject_candidate",
+                "rule_concerns": []
+              },
+              {
+                "record_event_id": "E2",
+                "target": "time",
+                "viability": "claimable",
+                "rule_kind": "procedure",
+                "subject_id": "E1",
+                "subject_status": "related_subject_candidate",
+                "rule_concerns": [
+                  "The model gives a definite verdict while its rule effect or applicability remains undetermined. The proposal is retained; resolve the source basis before relying on it.",
+                  "This recovery or exclusion proposal relies on a procedural basis. Locate the substantive right and its applicability; a tentative label does not resolve that missing premise."
+                ]
+              },
+              {
+                "record_event_id": "E2",
+                "target": "cost",
+                "viability": "unresolved",
+                "rule_kind": "procedure",
+                "subject_id": "E1",
+                "subject_status": "related_subject_candidate",
+                "rule_concerns": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "file": "new-control-run.json",
+        "calls": 18,
+        "rows": [
+          {
+            "case": "dispersed-notice-subject-c142",
+            "project_id": "dispersed-notice-and-claim-subject-c142-20261006-052505-10ade1",
+            "job_id": "5f9d4d6da06a41d58bab731a1da08b4c",
+            "calls": 18,
+            "claim_calls": 9,
+            "claim_profile": {
+              "class": "langchain_openai.chat_models.base.ChatOpenAI",
+              "model": "gemini-3.5-flash",
+              "endpoint_origin": "https://generativelanguage.googleapis.com",
+              "parameters": {
+                "temperature": 1.0,
+                "top_p": null,
+                "top_k": null,
+                "max_tokens": 16384,
+                "max_completion_tokens": null,
+                "seed": null,
+                "reasoning_effort": "low",
+                "thinking_budget": null,
+                "frequency_penalty": null,
+                "presence_penalty": null,
+                "stop": null,
+                "enable_thinking": null
+              }
+            },
+            "assessments": [
+              {
+                "record_event_id": "E1",
+                "target": "time",
+                "viability": "claimable",
+                "rule_kind": "substantive_entitlement",
+                "subject_id": "E1",
+                "subject_status": "own_subject_candidate",
+                "rule_concerns": []
+              },
+              {
+                "record_event_id": "E1",
+                "target": "cost",
+                "viability": "potentially_claimable",
+                "rule_kind": "substantive_entitlement",
+                "subject_id": "E1",
+                "subject_status": "own_subject_candidate",
+                "rule_concerns": []
+              },
+              {
+                "record_event_id": "E2",
+                "target": "time",
+                "viability": "unresolved",
+                "rule_kind": "procedure",
+                "subject_id": "E1",
+                "subject_status": "related_subject_candidate",
+                "rule_concerns": []
+              },
+              {
+                "record_event_id": "E2",
+                "target": "cost",
+                "viability": "excluded",
+                "rule_kind": "substantive_exclusion",
+                "subject_id": "E1",
+                "subject_status": "related_subject_candidate",
+                "rule_concerns": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "file": "scope-recheck.json",
+        "calls": 10,
+        "rows": [
+          {
+            "case": "dispersed-notice-subject-c142",
+            "project_id": "dispersed-notice-and-claim-subject-c142-20261006-052505-10ade1",
+            "job_id": "3dfaaf8a0cee4235be718c950ab1690d",
+            "calls": 10,
+            "claim_calls": 10,
+            "claim_profile": {
+              "class": "langchain_openai.chat_models.base.ChatOpenAI",
+              "model": "gemini-3.5-flash",
+              "endpoint_origin": "https://generativelanguage.googleapis.com",
+              "parameters": {
+                "temperature": 1.0,
+                "top_p": null,
+                "top_k": null,
+                "max_tokens": 16384,
+                "max_completion_tokens": null,
+                "seed": null,
+                "reasoning_effort": "low",
+                "thinking_budget": null,
+                "frequency_penalty": null,
+                "presence_penalty": null,
+                "stop": null,
+                "enable_thinking": null
+              }
+            },
+            "assessments": [
+              {
+                "record_event_id": "E1",
+                "target": "time",
+                "viability": "claimable",
+                "rule_kind": "substantive_entitlement",
+                "subject_id": "E1",
+                "subject_status": "own_subject_candidate",
+                "rule_concerns": []
+              },
+              {
+                "record_event_id": "E1",
+                "target": "cost",
+                "viability": "unresolved",
+                "rule_kind": "substantive_entitlement",
+                "subject_id": "E1",
+                "subject_status": "own_subject_candidate",
+                "rule_concerns": []
+              },
+              {
+                "record_event_id": "E2",
+                "target": "time",
+                "viability": "unresolved",
+                "rule_kind": "procedure",
+                "subject_id": "E1",
+                "subject_status": "related_subject_candidate",
+                "rule_concerns": []
+              },
+              {
+                "record_event_id": "E2",
+                "target": "cost",
+                "viability": "unresolved",
+                "rule_kind": "procedure",
+                "subject_id": "E1",
+                "subject_status": "related_subject_candidate",
+                "rule_concerns": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "native_source_jobs": 3,
+    "native_internal_model_calls_not_counted": true,
+    "terminal_application_jobs": 50,
+    "terminal_counts": {
+      "done": 49,
+      "error": 1
+    },
+    "native_registry": {
+      "cancelled": 0,
+      "done": 3,
+      "failed": 0,
+      "queued": 0,
+      "running": 0
+    },
+    "graph": {
+      "nodes": 28,
+      "edges": 41,
+      "source_documents": 3,
+      "source_sections": 4,
+      "neighborhood": {
+        "nodes": 20,
+        "connections": 32,
+        "sources": [
+          "synthetic-contract-c142",
+          "occurrence-record-r142",
+          "notice-receipt-n142"
+        ],
+        "coverage": {
+          "scope": "Loaded graph neighborhood, not the entire contract",
+          "connection_steps": 3,
+          "graph_snapshot_partial": false,
+          "omitted_connections_by_budget": 0,
+          "missing_endpoint_connections": 0,
+          "max_nodes": null,
+          "max_edges": null,
+          "completeness": "unestablished",
+          "entire_connected_component_requested": false,
+          "snapshot_atomic": false
+        },
+        "model_called": false
+      }
+    },
+    "tests": {
+      "backend": 1699,
+      "frontend": 1047,
+      "frontend_files": 90,
+      "build_passed": true,
+      "bundle_warning_retained": true,
+      "go_changes": false,
+      "engine_default_reused": 68
+    },
+    "date": "2026-10-06",
+    "scope": "Bound declared claim-subject navigation, separate record/subject proposals and counts, graph association evidence, inspector layout and notice-only scope review. No claim of perfect contract correctness.",
+    "observations": [
+      "Existing C141 raw declaration resolves at read time without model invocation; one own claimable assessment and one related claimable proposal remain separate.",
+      "Related context pointers open the original record/target; arrays, fields and feedback paths remain unchanged.",
+      "Candidate graph subject edges require the current original digest and own association; their quotes are visible in the inspector.",
+      "Initial C142 wrongly excluded the underlying delay using a notice-only non-grant. Retained and flagged by the current checker without rewriting it.",
+      "A distinct recheck after guidance change removed that exclusion; occurrence cost remains unresolved with its substantive provision and reported expense retained.",
+      "Long/multiline graph fact fields span the inspector grid; browser observed equal 1331px field/grid widths."
+    ],
+    "remaining": [
+      "C141 notice time proposal still has procedure/definite-verdict consistency warnings. Source navigation does not repair semantic reasoning.",
+      "C142 cost changed from potentially claimable to unresolved; conditions, applicability and exact verdict labels need wider qualification.",
+      "Some titles still identify notice costs while the declared subject is the occurrence; raw titles remain visible.",
+      "Native entity/occurrence duplication, execution citation/reference coverage, broad source recall and award/payment reconciliation remain open.",
+      "Narrow English wording warning, not a general multilingual legal classifier.",
+      "Synthetic single development draws, not independent legal gold, held-out/repeated-seed/causal or exhaustive correctness evidence.",
+      "No new Go implementation, LayaGo/GLiNER/MLX training, architecture, weights or speed gain."
+    ],
+    "graph_projection_policy": "Application analysis graph navigation only. Source location and coherent metadata are not semantic acceptance; native graph was not rewritten using these proposals.",
+    "preservation": {
+      "protected_engine_source_files_unchanged": true,
+      "protected_app_artifacts_unchanged": true,
+      "user_studio_unchanged": true,
+      "orchid_studio_unchanged": true,
+      "user_graph_all_tables_unchanged": true,
+      "recorded_replay_nodes_edges_unchanged_by_GUI": true,
+      "owned_jobs_terminal_verified_before_cleanup": true,
+      "replay_verified_before_cleanup": true,
+      "user_engine_health": {
+        "analysis_jobs": {
+          "cancelled": 0,
+          "done": 0,
+          "failed": 0,
+          "queued": 0,
+          "running": 0
+        },
+        "analysis_jobs_scope": "service",
+        "edge_count": 660,
+        "episode_count": 321,
+        "node_count": 1444,
+        "schema": "general",
+        "status": "ok"
+      },
+      "user_graph_fingerprints": {
+        "edges": {
+          "rows": 660,
+          "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+        },
+        "episodes": {
+          "rows": 321,
+          "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+        },
+        "nodes": {
+          "rows": 1444,
+          "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+        },
+        "schema_meta": {
+          "rows": 1,
+          "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+        },
+        "timeline_events": {
+          "rows": 3437,
+          "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+        }
+      }
+    },
+    "activation": {
+      "old_launcher_pid": 69822,
+      "new_launcher_pid": 84778,
+      "api_healthy": true,
+      "journal_unchanged": true,
+      "journal": {
+        "count": 24,
+        "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+      },
+      "app_env_unchanged": true,
+      "health": {
+        "status": "healthy",
+        "agents": {
+          "agent_critic": {
+            "status": "healthy"
+          },
+          "amendment_analyzer": {
+            "status": "healthy"
+          },
+          "claim_viability": {
+            "status": "healthy"
+          },
+          "contract_identity": {
+            "status": "healthy"
+          },
+          "contract_identity_base": {
+            "status": "healthy"
+          },
+          "event_detector": {
+            "status": "healthy"
+          },
+          "extractor": {
+            "status": "healthy"
+          },
+          "guarantee_analyzer": {
+            "status": "healthy"
+          },
+          "notification_register": {
+            "status": "healthy"
+          },
+          "penalty_analyzer": {
+            "status": "healthy"
+          },
+          "project_context": {
+            "status": "healthy"
+          },
+          "prompt_improver": {
+            "status": "healthy"
+          },
+          "risk_allocator": {
+            "status": "healthy"
+          }
+        },
+        "agent_count": 13,
+        "plugins": {},
+        "plugin_count": 0,
+        "endpoints": {
+          "project_workflow": {
+            "status": "healthy"
+          },
+          "prompt_editor": {
+            "status": "healthy"
+          },
+          "review_sessions": {
+            "status": "healthy"
+          },
+          "studio_sessions": {
+            "status": "healthy"
+          }
+        },
+        "endpoint_count": 4,
+        "ingestors": {
+          "markitdown": {
+            "status": "healthy"
+          }
+        },
+        "ingestor_count": 1,
+        "pipelines": [
+          "claim_prep",
+          "consolidate",
+          "contract_analysis",
+          "contract_analysis_sequential",
+          "contract_identity_base",
+          "contract_identity_critic",
+          "contract_identity_only",
+          "extract_batch",
+          "extractor_fanout",
+          "project_consolidate",
+          "prompt_improve"
+        ],
+        "pipeline_count": 11,
+        "tasks_enabled": true,
+        "storage": {
+          "status": "healthy"
+        }
+      }
+    },
+    "cleanup": {
+      "owned_processes": [
+        {
+          "service": "engine",
+          "pid": 73315,
+          "port": 8097
+        },
+        {
+          "service": "api",
+          "pid": 79422,
+          "port": 8081
+        },
+        {
+          "service": "frontend",
+          "pid": 73317,
+          "port": 5175
+        }
+      ],
+      "owned_ports_closed": true,
+      "terminal_application_jobs": 50,
+      "native_jobs": {
+        "cancelled": 0,
+        "done": 3,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "temporary_browser_tabs": [
+        161,
+        162,
+        163
+      ],
+      "temporary_browser_tab_closed": true
+    },
+    "export_policy": "Vectors/embeddings omitted; raw bad/intermediate proposals and diagnostics retained; configured credential-value scan passed.",
+    "asset_manifest": [
+      {
+        "file": "docs/validation/assets/claim-subject-context/api-activation.json",
+        "sha256": "908b0de3fce95be2a38949f420f8effd5f95f0e422eb39491167e45d103f2713",
+        "bytes": 2081
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/backend.log",
+        "sha256": "ecab66927dba0a1b1b9e9923eb0525dad3bdf1cc9b3e2eb122c22664ebb9ebd5",
+        "bytes": 1987
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/build.log",
+        "sha256": "2d9b6e2dbbd4b4f518626e95cd8c39971e8691cc97b5bc06dceb90e5a1b78faa",
+        "bytes": 1274
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/cleanup.json",
+        "sha256": "ee0413af161b246cd06eeb8985725198b15092cb1c75a5e9e959729b6ce12124",
+        "bytes": 542
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/desk-dispersed-notice-subject-c142.json",
+        "sha256": "66fc55ab57bd35a7ecb9fa3334bf63c316bc2a9b592813f91bc3c8f048d9a61c",
+        "bytes": 361475
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/desk-related-notice-c141.json",
+        "sha256": "b3b4536f714d14c7b0366b9eb243ec2c0cbb75aa41d6d3ec3e552af805e612e9",
+        "bytes": 210927
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/final-notice-scope-dom.txt",
+        "sha256": "44b4047569efb1e1105ae7c6a79b44cf00830d92cda9f8cd137ad2872eef7e00",
+        "bytes": 5019
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/final-subject-context-dom.txt",
+        "sha256": "e463a624a9a6f2a3cefffb24f4422fd115bc8a9f1d60f15ac3aadbfdca0ccfba",
+        "bytes": 1267
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/final-subject-context.png",
+        "sha256": "a7889366b4c8e5229b7aefc3584c526701ba52db098fac54780ef494484027e9",
+        "bytes": 146778
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/frontend.log",
+        "sha256": "4f3aee8c3b74e47bf8048a7fdc609475d4278bd79ea73fef1d56c1f73e50ca4f",
+        "bytes": 342
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/graph-c142.json",
+        "sha256": "ba27f93cb2d7994f777278a40a31885e4cbf052b3958ed52dbe6df46c95673cb",
+        "bytes": 333502
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/graph-inspector-final-dom.txt",
+        "sha256": "970fb78ce4e78bbd06afc466ac7efd5602a0e8b2451e2bc5433097839060315e",
+        "bytes": 2673
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/graph-inspector-final.png",
+        "sha256": "75048680dbb1631d52c2e0d42fdcb79f1f90f4c3601238c1f50a25e9ae528cd2",
+        "bytes": 192830
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/graph-subject-edge-dom.txt",
+        "sha256": "f860076cb7b2f01d5b7bff3f9f1b15c5fefdee684dca6ea7080852389d13fc8b",
+        "bytes": 875
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/graph-subject-edge.png",
+        "sha256": "f294933577a0e2bd0d4e1f20714a15f8830e43655d8975cc992bc2c8f7643241",
+        "bytes": 174053
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/harness-notes.json",
+        "sha256": "73220ccaea84dd5c7a5c9db743d527cda16678c3ad2cb6359d8bea82f2f67c60",
+        "bytes": 559
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/neighborhood-c142.json",
+        "sha256": "9bb223a8e944bca1040a549bcae1bbab2061ad76c766acd1efd560b6c21fbf8f",
+        "bytes": 104615
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/new-control-freeze.json",
+        "sha256": "be8671d04f513e5207d241a1d0829aa6517d87e732aeef1054fbbd59c68c5f1f",
+        "bytes": 228
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/new-control-process.log",
+        "sha256": "17f45df54837fdd11607fab0091f227ed16d226fda68d2bcca1c2c5336641252",
+        "bytes": 227
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/new-control-run-outputs.json",
+        "sha256": "0b4b5b4c6346af24f2c8fd80206ed11402422d53039478374eb8329956b6c8e9",
+        "bytes": 181878
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/new-control-run.json",
+        "sha256": "0f8fde906f0eb9c0ef60ce985d4b1a11bfd137353c92d2ba612762867aab7bfa",
+        "bytes": 154767
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/new-control.json",
+        "sha256": "d3f999283febaaf5e073cbef2db431d6e51c6b8b8b6f8313d7d8d2f083d9699c",
+        "bytes": 1619
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/owned-api-review-refresh.json",
+        "sha256": "9ab2fb5f087e6a93ac2fd79830db04261937c64c305712e8d0db76120a8aff6c",
+        "bytes": 670
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/owned-api-scope-refresh.json",
+        "sha256": "1fadb30298cc3a8d7086eacfe78b104c1dffafe411fa0172ddbe93671c171d10",
+        "bytes": 670
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/related-record-dom.txt",
+        "sha256": "e103a4544381785e782b0947f8df915b163d92f3ea70a518f70eaffd1672c148",
+        "bytes": 3698
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/related-record.png",
+        "sha256": "91e035785c25c5998ca4437934b5b23923fc96f40d2c19763abea948099b565b",
+        "bytes": 244222
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/related-subject-dom.txt",
+        "sha256": "1116a0b726d76c0a33f7569eccadd69e0582414a44e526a29309926e83139ccf",
+        "bytes": 1218
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/retained-read-time-context.json",
+        "sha256": "2a460e299d92de2409f04967a9f14aadc49caa510d679f32218e12f242b5826a",
+        "bytes": 207166
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/retained-scope-diagnostic.json",
+        "sha256": "aaa9b59db615ec57441cc9139471d195b83d36628bc3a38c6967be9a5b961ba3",
+        "bytes": 14971
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/saved-process.log",
+        "sha256": "a2ca1ef32a9620ff040716139a6484d25ac04861214ddf4112a45d00079e50cf",
+        "bytes": 101
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/saved-runs-outputs.json",
+        "sha256": "129037689cd42912aabf45a9a1ee7bdb42c0b396317a3d9d3310d069b99dbce1",
+        "bytes": 117553
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/saved-runs.json",
+        "sha256": "c5535551690217d9dee44784492e717f7f8d90f8348d99386a36ddf7a206c25d",
+        "bytes": 169898
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/scope-recheck-outputs.json",
+        "sha256": "a783369f800cd3982d8ed4f4c470ce40be26dbd6fec6e9f48aa772325653eb8c",
+        "bytes": 221302
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/scope-recheck-process.log",
+        "sha256": "e41217583ee2ca2e884660fca7ead01303c4150a6b6c6cd456eadb11d90d4ba9",
+        "bytes": 121
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/scope-recheck.json",
+        "sha256": "6a6550059dce0f36e499a22f264abeb92f13e74dee2c21d9bffb4fa2dabb6509",
+        "bytes": 304839
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/subject-ui-target.log",
+        "sha256": "1e6a347a4aeeb7092819914801949f7469bb530944c74c674939b6f2e113e7c3",
+        "bytes": 361
+      },
+      {
+        "file": "docs/validation/assets/claim-subject-context/verification.json",
+        "sha256": "91dcc11343d54b113de52f44c77041b85ff214562f13e3c8d7b7936411590fc5",
+        "bytes": 8786
+      }
+    ]
+  }
+}
