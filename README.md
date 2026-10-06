@@ -12,9 +12,9 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L147 finding](docs/learning-log.md#l147--procedures-substantive-rights-and-recorded-decisions-need-distinct-output-channels-2026-10-06)
-records why statement-function classification and dedicated factual channels matter
-across claim and risk agents, with retained failures and positive/negative controls.
+The latest [L148 finding](docs/learning-log.md#l148--scope-quotation-location-preserve-row-identity-and-separate-awards-from-payment-2026-10-06)
+records scoped quotation recovery, heading context and row identity, plus retained
+award-versus-payment and unknown accounting-date failures for future training.
 
 ## Build and use
 

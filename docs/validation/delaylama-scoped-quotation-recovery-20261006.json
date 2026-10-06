@@ -1,0 +1,656 @@
+{
+  "learning": "L148",
+  "date": "2026-10-06",
+  "report": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-scoped-quotation-recovery.md",
+  "delaylama_commit": "73f3a0f16739e5b2ccb0a4351c4c3fcd6e1e11d7",
+  "source_receipt_sha256": "b6862212bf5fd95ba25739f867842ef9d63a4f5311fe6b2e2180098f5a502cce",
+  "delaylama_receipt": {
+    "date": "2026-10-06",
+    "scope": "Scoped original quotation location, bounded statement quotation selection, heading-only occurrence retrieval and award/balance payment review. No claim of exhaustive or perfect contract correctness.",
+    "tests": {
+      "backend": 1680,
+      "frontend": 1039,
+      "frontend_files": 88,
+      "build_passed": true,
+      "engine_default_reused": 68,
+      "go_changes": false
+    },
+    "application_call_records": 104,
+    "call_stages": [
+      {
+        "file": "selection-probe.json",
+        "calls": 2,
+        "rows": [
+          {
+            "case": "procedure-right-separation-c137",
+            "event_id": "E3",
+            "calls": 1,
+            "recovery_status": "selected",
+            "rejections": []
+          },
+          {
+            "case": "explicit-right-and-fulfilled-notice-c139",
+            "event_id": "E1",
+            "calls": 1,
+            "recovery_status": "selected",
+            "rejections": []
+          }
+        ]
+      },
+      {
+        "file": "selection-row-recheck.json",
+        "calls": 1,
+        "rows": [
+          {
+            "case": "explicit-right-and-fulfilled-notice-c139",
+            "event_id": "E3",
+            "calls": 1,
+            "recovery_status": "selected",
+            "rejections": []
+          }
+        ]
+      },
+      {
+        "file": "saved-runs.json",
+        "calls": 33,
+        "rows": [
+          {
+            "case": "procedure-right-separation-c137",
+            "job_id": "86ee94896095447188ed744db9f365c8",
+            "status": "done",
+            "agents": {
+              "claim_viability": {
+                "calls": 19,
+                "source_path": "/private/tmp/delaylama-quoted-context-qa/runtime/processed/procedure-and-rights-separation-c137-20261006-031254-56c86f/extractions/claim_viability_20261006_041852_235097.json"
+              }
+            }
+          },
+          {
+            "case": "explicit-right-and-fulfilled-notice-c139",
+            "job_id": "8124d5c68d1346a78bb0fb0d7586bb68",
+            "status": "done",
+            "agents": {
+              "claim_viability": {
+                "calls": 14,
+                "source_path": "/private/tmp/delaylama-quoted-context-qa/runtime/processed/explicit-right-and-fulfilled-notice-c139-20261006-031254-207da6/extractions/claim_viability_20261006_041847_321193.json"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "file": "new-control-run.json",
+        "calls": 30,
+        "rows": [
+          {
+            "case": "heading-only-record-identities-c140",
+            "job_id": "2458d2b529d44b18bc316ccb748d3bab",
+            "status": "done",
+            "agents": {
+              "contract_identity": {
+                "calls": 5,
+                "source_path": "/private/tmp/delaylama-quoted-context-qa/runtime/processed/heading-only-record-identities-c140-20261006-041820-d61ebe/extractions/contract_identity_20261006_041836_791675.json"
+              },
+              "risk_allocator": {
+                "calls": 1,
+                "source_path": "/private/tmp/delaylama-quoted-context-qa/runtime/processed/heading-only-record-identities-c140-20261006-041820-d61ebe/extractions/risk_allocator_20261006_041839_838202.json"
+              },
+              "amendment_analyzer": {
+                "calls": 1,
+                "source_path": "/private/tmp/delaylama-quoted-context-qa/runtime/processed/heading-only-record-identities-c140-20261006-041820-d61ebe/extractions/amendment_analyzer_20261006_041841_166044.json"
+              },
+              "notification_register": {
+                "calls": 1,
+                "source_path": "/private/tmp/delaylama-quoted-context-qa/runtime/processed/heading-only-record-identities-c140-20261006-041820-d61ebe/extractions/notification_register_20261006_041842_868111.json"
+              },
+              "event_detector": {
+                "calls": 1,
+                "source_path": "/private/tmp/delaylama-quoted-context-qa/runtime/processed/heading-only-record-identities-c140-20261006-041820-d61ebe/extractions/event_detector_20261006_041847_347985.json"
+              },
+              "claim_viability": {
+                "calls": 21,
+                "source_path": "/private/tmp/delaylama-quoted-context-qa/runtime/processed/heading-only-record-identities-c140-20261006-041820-d61ebe/extractions/claim_viability_20261006_041925_449962.json"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "file": "payment-stage-recheck.json",
+        "calls": 19,
+        "rows": [
+          {
+            "case": "heading-only-record-identities-c140",
+            "job_id": "f8db43a339af44e5807742e3082ca79a",
+            "status": "done",
+            "agents": {
+              "claim_viability": {
+                "calls": 19,
+                "source_path": "/private/tmp/delaylama-quoted-context-qa/runtime/processed/heading-only-record-identities-c140-20261006-041820-d61ebe/extractions/claim_viability_20261006_042824_544995.json"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "file": "payment-stage-final-recheck.json",
+        "calls": 19,
+        "rows": [
+          {
+            "case": "heading-only-record-identities-c140",
+            "job_id": "025b2413d27441a6ac7b32920a4bbb90",
+            "status": "done",
+            "agents": {
+              "claim_viability": {
+                "calls": 19,
+                "source_path": "/private/tmp/delaylama-quoted-context-qa/runtime/processed/heading-only-record-identities-c140-20261006-041820-d61ebe/extractions/claim_viability_20261006_042937_754727.json"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "native_source_jobs": 2,
+    "native_internal_model_calls_not_counted": true,
+    "graph": {
+      "nodes": 28,
+      "edges": 43,
+      "source_document_nodes": 2,
+      "source_section_nodes": 6,
+      "neighbor_nodes": 18,
+      "neighbor_connections": 36,
+      "neighbor_sources": [
+        {
+          "document_id": "synthetic-contract-c140",
+          "sha256": "1b0dd0a21af677a036e459ad4f0f8f53859aa21faced1b9bbb17d7c16e118cb6"
+        },
+        {
+          "document_id": "execution-records-c140",
+          "sha256": "a03ed9f002d5b625feec8102858a63bbf7a2cee77d0805d95d53921c816626ad"
+        }
+      ],
+      "coverage": {
+        "scope": "Loaded graph neighborhood, not the entire contract",
+        "connection_steps": 3,
+        "graph_snapshot_partial": false,
+        "omitted_connections_by_budget": 0,
+        "missing_endpoint_connections": 0,
+        "max_nodes": null,
+        "max_edges": null,
+        "completeness": "unestablished",
+        "entire_connected_component_requested": false,
+        "snapshot_atomic": false
+      },
+      "model_called": false
+    },
+    "final_saved_coverage": [
+      {
+        "case": "procedure-right-separation-c137",
+        "reported_events": 4,
+        "event_target_rows": 8,
+        "source_outcome_count": 8
+      },
+      {
+        "case": "explicit-right-and-fulfilled-notice-c139",
+        "reported_events": 3,
+        "event_target_rows": 6,
+        "source_outcome_count": 4
+      },
+      {
+        "case": "heading-only-record-identities-c140",
+        "reported_events": 4,
+        "event_target_rows": 8,
+        "source_outcome_count": 6
+      }
+    ],
+    "observations": [
+      "Repeated association wording resolves uniquely inside own exact citation context; distinct own occurrences remain ambiguous.",
+      "One indexed selection pass changes unresolved quotation fields only and binds the original row, source hash and full proposal. Failed/unknown/stale selections preserve gaps.",
+      "Heading and first own body paragraph stay contiguous and never cross the next heading; repeated indexed options retain physical coordinates.",
+      "Source highlights convert Python scalar offsets to browser UTF-16; scoped subquotes need current parent containment.",
+      "Initial C140 recognized separate actual expense, request and award; final recheck retained substantive time/cost rights but varied source-outcome coverage and introduced an accounting-date documentation-gap statement.",
+      "The clarified row identity recovered a rejected C139 quote in a retained-source diagnostic; the earlier saved partial result remains unchanged.",
+      "Award-minus-expense balance text persisted after prompt change; a visible review warning now requires independent payment and allocation evidence without modifying the raw recommendation."
+    ],
+    "limits": [
+      "Synthetic development draws only; no independent legal gold, held-out/repeated-seed or causal accuracy estimate.",
+      "Original quote location does not certify statement kind, polarity, subject relation, date role, applicability or legal correctness.",
+      "One saved C139 result remains partial; diagnostic recovery is not a silently substituted production result.",
+      "Final C140 accounting-date gap was projected as an unknown incurred-cost statement; separate temporal-gap scope and comprehensive statement recall need work.",
+      "Native graph includes an If Linden Owner Ltd organization candidate, broad payment types and one withheld execution structure item. Automatic entity/classification correctness remains unproven.",
+      "Award is not actual payment; prompt guidance did not remove all wrong balance recommendations. The narrow lexical review warning is not a payment detector or calculation validator.",
+      "The intermediate 19-call payment recheck used the previous copied prompt; not revised-prompt evidence.",
+      "Graph neighborhood is bounded by traversal/snapshot context, not proven entire contract understanding.",
+      "No Go engine, LayaGo/GLiNER/MLX architecture/training/speed changes. Reused engine default 68."
+    ],
+    "user_preservation": {
+      "protected_engine_source_files_unchanged": true,
+      "protected_app_artifacts_unchanged": true,
+      "user_studio_unchanged": true,
+      "orchid_studio_unchanged": true,
+      "user_graph_all_tables_unchanged": true,
+      "recorded_replay_nodes_edges_unchanged_by_GUI": true,
+      "owned_jobs_terminal_verified_before_cleanup": true,
+      "replay_verified_before_cleanup": true,
+      "user_engine_health": {
+        "analysis_jobs": {
+          "cancelled": 0,
+          "done": 0,
+          "failed": 0,
+          "queued": 0,
+          "running": 0
+        },
+        "analysis_jobs_scope": "service",
+        "edge_count": 660,
+        "episode_count": 321,
+        "node_count": 1444,
+        "schema": "general",
+        "status": "ok"
+      },
+      "user_graph_fingerprints": {
+        "edges": {
+          "rows": 660,
+          "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+        },
+        "episodes": {
+          "rows": 321,
+          "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+        },
+        "nodes": {
+          "rows": 1444,
+          "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+        },
+        "schema_meta": {
+          "rows": 1,
+          "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+        },
+        "timeline_events": {
+          "rows": 3437,
+          "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+        }
+      }
+    },
+    "activation": {
+      "old_launcher_pid": 64225,
+      "new_launcher_pid": 64761,
+      "api_healthy": true,
+      "journal_unchanged": true,
+      "journal": {
+        "count": 24,
+        "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+      },
+      "app_env_unchanged": true,
+      "health": {
+        "status": "healthy",
+        "agents": {
+          "agent_critic": {
+            "status": "healthy"
+          },
+          "amendment_analyzer": {
+            "status": "healthy"
+          },
+          "claim_viability": {
+            "status": "healthy"
+          },
+          "contract_identity": {
+            "status": "healthy"
+          },
+          "contract_identity_base": {
+            "status": "healthy"
+          },
+          "event_detector": {
+            "status": "healthy"
+          },
+          "extractor": {
+            "status": "healthy"
+          },
+          "guarantee_analyzer": {
+            "status": "healthy"
+          },
+          "notification_register": {
+            "status": "healthy"
+          },
+          "penalty_analyzer": {
+            "status": "healthy"
+          },
+          "project_context": {
+            "status": "healthy"
+          },
+          "prompt_improver": {
+            "status": "healthy"
+          },
+          "risk_allocator": {
+            "status": "healthy"
+          }
+        },
+        "agent_count": 13,
+        "plugins": {},
+        "plugin_count": 0,
+        "endpoints": {
+          "project_workflow": {
+            "status": "healthy"
+          },
+          "prompt_editor": {
+            "status": "healthy"
+          },
+          "review_sessions": {
+            "status": "healthy"
+          },
+          "studio_sessions": {
+            "status": "healthy"
+          }
+        },
+        "endpoint_count": 4,
+        "ingestors": {
+          "markitdown": {
+            "status": "healthy"
+          }
+        },
+        "ingestor_count": 1,
+        "pipelines": [
+          "claim_prep",
+          "consolidate",
+          "contract_analysis",
+          "contract_analysis_sequential",
+          "contract_identity_base",
+          "contract_identity_critic",
+          "contract_identity_only",
+          "extract_batch",
+          "extractor_fanout",
+          "project_consolidate",
+          "prompt_improve"
+        ],
+        "pipeline_count": 11,
+        "tasks_enabled": true,
+        "storage": {
+          "status": "healthy"
+        }
+      }
+    },
+    "cleanup": {
+      "owned_processes": [
+        {
+          "service": "engine",
+          "pid": 62203,
+          "port": 8097
+        },
+        {
+          "service": "api",
+          "pid": 64344,
+          "port": 8081
+        },
+        {
+          "service": "frontend",
+          "pid": 62205,
+          "port": 5175
+        }
+      ],
+      "owned_ports_closed": true,
+      "terminal_application_jobs": 44,
+      "native_jobs": {
+        "cancelled": 0,
+        "done": 2,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "temporary_browser_tabs": [
+        158
+      ],
+      "temporary_browser_tab_closed": true
+    },
+    "export_policy": "Vectors/embeddings omitted. Raw rejected proposals and harness failures retained; configured credential-value scanning passed.",
+    "asset_manifest": [
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/api-activation.json",
+        "sha256": "26a103f05ffe7c8a3fce2b9def96366730979420d03a93d3054056cbce89ec26",
+        "bytes": 2081
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/api-final-activation.json",
+        "sha256": "d4131a2e5622b9530567407ad5cfb3d0cc29b4eba70c862cb9416c7ee6d63d69",
+        "bytes": 2081
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/backend-complete-final.log",
+        "sha256": "545c704ec77db2ab577d81c2b160a94e311719c34edf8897f25cf955b4fca969",
+        "bytes": 1987
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/backend.log",
+        "sha256": "419c56ebd7a75e90376c8ba245455d1f0445e8b8eb78b3d3bb9aaafcc144dc14",
+        "bytes": 1987
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/build-final.log",
+        "sha256": "ce770d5b5d024cac250ebcacd8728776156815542033ff4d5b09f45036486524",
+        "bytes": 1274
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/cleanup.json",
+        "sha256": "8847850fdd4c49f06731050848b714f4a883a1eaa941024f00d11fc9ac79aec3",
+        "bytes": 524
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/desk-explicit-right-and-fulfilled-notice-c139.json",
+        "sha256": "644f4f655f7cce69fc8c5b197074ee149eceaa8289b340c0d9b694db4aad2a7f",
+        "bytes": 250996
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/desk-heading-only-record-identities-c140.json",
+        "sha256": "3fb867396e488a23faabee31aab17b5d682af53e0bb7cbe52eb517214658b5c6",
+        "bytes": 357285
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/desk-procedure-right-separation-c137.json",
+        "sha256": "dbfb9da543abf762b829f4176d1f087b67703f3135d31c23709f3f7618d3ad8c",
+        "bytes": 362205
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/final-balance-warning-dom.txt",
+        "sha256": "ad72faec66a215e665f007b1a3ae0ccef7a2b8a19987ccd44160f3122a469285",
+        "bytes": 3336
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/final-balance-warning.png",
+        "sha256": "c5f5234007e82dff34c62a99e14a60bfb9e105367ef3d0199016884175d402d7",
+        "bytes": 211364
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/freeze.json",
+        "sha256": "f0a413b45d4acd0b1df225b06683cb39ef3270f348b2811173cb2ad6610d0956",
+        "bytes": 236
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/fresh-claims-before-payment-recheck-dom.txt",
+        "sha256": "c70da8135c3a36b51b944b796e45a9d137b7065b61b1352c40d926b90e583a5a",
+        "bytes": 3101
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/frontend-final.log",
+        "sha256": "a8287b237422cae4a943864cf3473579c057211cd7d75f202eaaf91f824db1bb",
+        "bytes": 342
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/frontend.log",
+        "sha256": "4273833a9f04203e8034774beba08f21cb6efcdbdd292d822b036d02855926cf",
+        "bytes": 555
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/frontend2.log",
+        "sha256": "9900a9ad6ac222bd2ef6aaa6bf72a2b2b037398daf6bc64d0d248e9b5b00d31c",
+        "bytes": 1604
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/frontend3.log",
+        "sha256": "011ab54f11acaa150bb686db039107fd257e3330ec2b2083e38592cd71306f43",
+        "bytes": 340
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/graph-c140.json",
+        "sha256": "779070e4318f1b7f4872605b109399e49533600636e4ea3bfc152267362f6812",
+        "bytes": 327257
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/harness-errors.json",
+        "sha256": "03fd8411254431747d232d805dbda9867a8bfd1c605fe8ba04a79694b78c76af",
+        "bytes": 718
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/heading-only-occurrence-dom.txt",
+        "sha256": "1959cdfc48115038f2888fd8a5b932a8cdcc284fb340c622e42be38cf2475555",
+        "bytes": 2455
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/heading-source-dom.txt",
+        "sha256": "9782ba97831f738cb082ac46bfaeb575a82b0f2ead2d8b6925ca19ebdcfdcd00",
+        "bytes": 482
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/heading-source.png",
+        "sha256": "b3bc708f0a17f11f4e3a0346c65e7b1a59eadecbb9c2ec8ee86dbb30fcb3932e",
+        "bytes": 216690
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/initial-source-span-test-failure.log",
+        "sha256": "6a32b2c394c66c84c4924184c9a59982e299f3fd4cf6692a809adf19b3a831dd",
+        "bytes": 1278
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/neighborhood-c140.json",
+        "sha256": "07a1cb5ac0d2ea54a95f204ab2ae8f707bb0ed0a1e102ba7b710db9ceb4ecdc2",
+        "bytes": 108378
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/new-control-freeze.json",
+        "sha256": "b58afdfedf5909ece943de500d12a616046199032820b9ac9d559308ea267962",
+        "bytes": 178
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/new-control-run-heading-only-record-identities-c140-outputs.json",
+        "sha256": "a2f1031c24ae13a57249666d903e61ad63b00dcff4e6f4e5e356d3fdd300d82b",
+        "bytes": 330037
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/new-control-run-outputs.json",
+        "sha256": "a2f1031c24ae13a57249666d903e61ad63b00dcff4e6f4e5e356d3fdd300d82b",
+        "bytes": 330037
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/new-control-run.json",
+        "sha256": "44b3ec78994bada02f89fac67f091f1a3b37681e12959bcb8fd2571e03e123ae",
+        "bytes": 110310
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/new-control.json",
+        "sha256": "c4ed199f5096faa4439ab8f57e8c5797f1a81366a1c974c40b51e2460bacea1b",
+        "bytes": 1750
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/owned-api-balance-refresh.json",
+        "sha256": "ce40b3a4f5486922de003cbac1d148a76388a026149e9f7fce194a45c47838d9",
+        "bytes": 670
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/owned-api-quote-refresh.json",
+        "sha256": "2cbf94eed949ad2473a0ea8457d1c5587e16405bb7148d8d0bf0eb29445edd3f",
+        "bytes": 670
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/payment-stage-final-recheck-heading-only-record-identities-c140-outputs.json",
+        "sha256": "f5ac2f5d04e30ded20e12a74fbd5cad387e747c3fbc313801e1fd069a65b14b1",
+        "bytes": 215758
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/payment-stage-final-recheck-outputs.json",
+        "sha256": "f5ac2f5d04e30ded20e12a74fbd5cad387e747c3fbc313801e1fd069a65b14b1",
+        "bytes": 215758
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/payment-stage-final-recheck.json",
+        "sha256": "e30327625136ce817b6024f9a85592428ada5142c1cef9fa4c93c7d5dbb90fd0",
+        "bytes": 290389
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/payment-stage-recheck-heading-only-record-identities-c140-outputs.json",
+        "sha256": "a839f9e5924851ba87fe5919d7e9ed4b76e6e3528e130c5313dcf14628df1999",
+        "bytes": 213778
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/payment-stage-recheck-outputs.json",
+        "sha256": "a839f9e5924851ba87fe5919d7e9ed4b76e6e3528e130c5313dcf14628df1999",
+        "bytes": 213778
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/payment-stage-recheck.json",
+        "sha256": "8530e89b697dcc378b3c2826f5069b3a8781325318700446d467a216abcfd842",
+        "bytes": 288288
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/retained-controls.json",
+        "sha256": "de0be86b9a99c777ee705918d4fdfdcdbf7b365d556e2678602328c11555f8da",
+        "bytes": 72458
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/saved-runs-explicit-right-and-fulfilled-notice-c139-outputs.json",
+        "sha256": "929cb9a733f7e241df85de5265f10fa05b8829bd99e9dbf0bbefcc2f58db8aba",
+        "bytes": 150974
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/saved-runs-procedure-right-separation-c137-outputs.json",
+        "sha256": "f0eba18e8d8cf54e8ed3789d549613f51281c74a7f2859d70826ee8c29a51d5e",
+        "bytes": 222946
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/saved-runs.json",
+        "sha256": "a277d8bf8e70321c283fdfe41403297c58b1a41e3d7ce5959af04f3959297243",
+        "bytes": 505550
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/scoped-award-dom.txt",
+        "sha256": "3783267e4b02bb4e78b643198f8eac434c0e60a5c82226aeaaa86645adf10f04",
+        "bytes": 2474
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/scoped-award.png",
+        "sha256": "319f541cb380716a378955d58384e3d4ec171e78b96d464f8a4517e4516f0e0d",
+        "bytes": 153114
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/selection-probe-process.log",
+        "sha256": "aac546ffe8866f9bbb6bb5b108b3193f64899706b999e25ca8ff8a25b9cc1e3a",
+        "bytes": 1369
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/selection-probe.json",
+        "sha256": "0587168f1271f21b324d3d60d07edc7c9e4231d9dbc8060e5e087ca9cdfd828c",
+        "bytes": 32360
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/selection-row-control.json",
+        "sha256": "46b83639fd64b7009cb3ae407caefcac812f13bade00fc3d1c3db1c8dbadc5ce",
+        "bytes": 15583
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/selection-row-freeze.json",
+        "sha256": "27e4cba7ac43c20a8bc1f3b016a6757b185164f94d80289f751ff8d2aa0e4819",
+        "bytes": 170
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/selection-row-process.log",
+        "sha256": "7de3695e8122c00752a680c623574ebbc6aed6a1e80f965b71be69767f94f03e",
+        "bytes": 1303
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/selection-row-recheck.json",
+        "sha256": "2a1543b5c3180486f645346c4cb224519966ac32155743e4897cd18265d5e919",
+        "bytes": 15958
+      },
+      {
+        "file": "docs/validation/assets/scoped-quotation-recovery/verification.json",
+        "sha256": "5eaf05454e9c7d27af45f24f798c4d3a9be3e5f12380330925d3013c7ac59bac",
+        "bytes": 20527
+      }
+    ]
+  }
+}

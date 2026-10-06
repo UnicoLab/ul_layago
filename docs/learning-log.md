@@ -5541,3 +5541,53 @@ legal gold, held-out/repeated-seed or isolated causal accuracy. Focused-statemen
 and subject-association rejections, literal heading-reference warnings, cross-agent
 summary scope, comprehensive recall and applicability remain open. No LayaGo,
 GLiNER, MLX, training-quality or speed gain was measured.
+
+
+## L148 — Scope quotation location, preserve row identity and separate awards from payment (2026-10-06)
+
+**Evidence:** [DelayLama scoped-quotation validation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-scoped-quotation-recovery.md)
+and [hashed receipt](validation/delaylama-scoped-quotation-recovery-20261006.json).
+
+Global repetition had rejected an award association that occurred once in its own
+exact citation. Matching inside independently located parent passages resolves that
+physical occurrence, while distinct own locations remain ambiguous. A heading and
+its contiguous body also retain an otherwise isolated record identity without
+borrowing the next record's date. Source positions must survive both transformations
+and Python scalar-to-browser UTF-16 conversion, including astral characters.
+
+A bounded quotation selector can repair invented ellipses without changing the
+statement's kind, subject, amount, date, polarity, modality or legal decision. It
+selects prepared original spans only for unresolved evidence fields. Full raw
+proposal and source-hash binding reject stale selections. A sole filtered request
+with original row 2 initially received row 0; that response was correctly withheld.
+Explicit original-index instructions recovered the quote in a separate diagnostic.
+The earlier partial saved result remains unchanged. Selection success is source
+location, not certification of the assertion or a permanent completeness result.
+
+Full-stack browser review found another inference boundary: the LLM subtracted an
+award from actual expense to recommend an unpaid balance. Revised prompt guidance
+did not eliminate that action. A separate visible review warning now requires own
+payment/allocation evidence; the raw action and gross entitlement remain inspectable.
+A later draw also projected an unknown accounting date as an unknown incurred-cost
+statement. Unknown time metadata must not erase a known amount or create apparent
+contradictory expense coverage. Both failures remain training/validation examples.
+
+**Training implications:** include repeated identifiers in requests and awards,
+heading-only identities, verbatim versus invented focused quotes, negative scope,
+nonzero filtered row IDs and Unicode positions. Label citation location separately
+from subject association, statement function, polarity and date role. Distinguish
+requested, awarded, actually paid, allocated and discharged values; derive an unpaid
+balance only from supported payment allocation to the same obligation. Label unknown
+accounting dates separately from quantified expense. Keep raw failures and partial
+coverage, and evaluate new draws across agents and interface projections. Graph
+reachability and exact quoting do not create semantic acceptance labels.
+
+**Evidence limits:** 104 retained application call records, two native source jobs,
+1,680 backend and 1,039 frontend tests plus build. The fresh two-source graph had
+28 nodes and 43 edges; one three-step neighborhood retrieved both originals with
+unestablished completeness. An `If Linden Owner Ltd` organization candidate, broad
+payment types and a withheld structure item remain issues. One intermediate payment
+recheck used the earlier copied prompt and is retained as a harness mistake. These
+are synthetic development controls, not independent legal gold, held-out,
+repeated-seed or causal accuracy evidence. No LayaGo/GLiNER/MLX architecture,
+training-quality or speed gain was measured; no new model weights were trained.
