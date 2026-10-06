@@ -5591,3 +5591,51 @@ recheck used the earlier copied prompt and is retained as a harness mistake. The
 are synthetic development controls, not independent legal gold, held-out,
 repeated-seed or causal accuracy evidence. No LayaGo/GLiNER/MLX architecture,
 training-quality or speed gain was measured; no new model weights were trained.
+
+
+## L149 — Missing details must not erase known outcomes (2026-10-06)
+
+**Evidence:** [DelayLama outcome-detail validation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-outcome-detail-scope.md)
+and [hashed receipt](validation/delaylama-outcome-detail-scope-20261006.json).
+
+A source-only extractor represented an unrecorded expense accounting date as an
+unknown incurred-cost statement beside a quantified expense. Its output shape had
+no way to identify which detail was unknown, creating an apparent whole-outcome
+conflict. Separate amount/date/support scope is necessary even when original text
+matching, polarity and subject identity succeed.
+
+Source statements now distinguish outcome, value, date, support and unestablished
+aspects. A recorded expense can retain its stated amount and empty date, with a
+separate source-located date gap and missing invoice/receipt gap. Detail-only records
+do not establish occurrence or whole-kind coverage. Genuine conflicting amounts
+remain separate outcomes. Malformed aspects and definite facts put into gap facets
+are withheld with raw proposals retained. Aspect/label are bound to the captured
+statement; editing scope cannot reuse an earlier highlight/check.
+
+The same distinction must survive every projection: Claim Desk, standalone results,
+financial overview, analysis graph and source review. Missing support stays visible
+in the entitlement decision without erasing a reported expense or becoming zero.
+Historical gaps without an aspect remain unestablished; old arrays/review paths
+are retained instead of moving feedback to a different finding. Explicitly scoped
+gaps use concise labels and own evidence controls rather than redundant warning
+boxes; format, binding and unknown-scope problems retain review concerns.
+
+**Training implications:** label outcome occurrence, amount, accounting/statement
+date and documentary support independently. Include a known expense with unknown
+date, unavailable invoices for a reported amount, unspecified amounts, actual
+payment versus award, and contradictory amounts with distinct own scope. A field
+gap is not a negative whole-outcome label. Retain per-aspect quotation and subject
+association. Evaluate typed output, incomplete-entitlement survival and all consuming
+views, not just classification loss or sentence embedding similarity. These are
+candidate training-design lessons, not new acceptance labels or model weights.
+
+**Evidence limits:** two English development controls, 40 application calls (22 saved
+claim recheck, 18 fresh six-agent workflow), two native source-analysis jobs, 1,688
+backend and 1,044 frontend tests plus build. Claim profile stayed Gemini 3.5 Flash /
+low reasoning. Fresh graph had 28 nodes and 42 edges; one three-step neighborhood
+retrieved both originals with unestablished completeness. A source-path relocation
+harness error remained terminal before a distinct corrected-source recheck. C140's
+award-minus-expense recommendation, C141's related-notice time-right duplication,
+native entity candidates and event quotation coverage remain issues. Synthetic
+single draws are not independent legal gold, held-out/repeated-seed or causal
+accuracy evidence. No LayaGo/GLiNER/MLX architecture/training or speed gain occurred.

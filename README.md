@@ -12,9 +12,9 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L148 finding](docs/learning-log.md#l148--scope-quotation-location-preserve-row-identity-and-separate-awards-from-payment-2026-10-06)
-records scoped quotation recovery, heading context and row identity, plus retained
-award-versus-payment and unknown accounting-date failures for future training.
+The latest [L149 finding](docs/learning-log.md#l149--missing-details-must-not-erase-known-outcomes-2026-10-06)
+records separate outcome, amount, date and supporting-document scope, with known
+expenses preserved across extraction, review and graph/interface projections.
 
 ## Build and use
 
