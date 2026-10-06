@@ -1,0 +1,327 @@
+{
+  "protocol": "delaylama-activity-interval-validation-v1",
+  "checked_at_utc": "2026-10-06T20:07:30.902515+00:00",
+  "parent_commit": "60b086a2f13fadc6eb7315b4990993e21f4a7c36",
+  "scope": "One frozen synthetic development dossier; four iterative model draws and one manual retry. Not held-out accuracy or complete contract analysis.",
+  "fixture_sha256": "5d926e4c9961822106a47e78ee99d723bbce916899d51dff7e340854d36657c7",
+  "original_sha256": "57734863acae01eb00330b8bff78b2b8ac727d696ef5d06f1da779c814274575",
+  "original_chars": 2352,
+  "project_id": "dispersed-activity-d150-20261006-185934-c8d7f3",
+  "native_source_jobs": [
+    {
+      "document_id": "d150-agreement-and-schedules",
+      "job_id": "d3bb3400-114d-4b91-9227-fd77ba1e0dd4",
+      "status": "done"
+    },
+    {
+      "document_id": "work-start-record-w1",
+      "job_id": "0f41e625-5f46-439b-b079-02917ba00c89",
+      "status": "done"
+    },
+    {
+      "document_id": "work-completion-record-w4",
+      "job_id": "afaa6c89-9b7d-4caf-8e27-07f12dcbcc7b",
+      "status": "done"
+    },
+    {
+      "document_id": "invoice-and-notice-records",
+      "job_id": "5901999c-429f-4fcf-97d7-95e43cfa42eb",
+      "status": "done"
+    }
+  ],
+  "draws": [
+    {
+      "draw": 1,
+      "phase": "events",
+      "job_id": "6bffab4dcfd743718f78fe8363969f59",
+      "status": "done",
+      "report": "assets/activity-intervals/draw-1-events.json",
+      "calls": 5,
+      "phases": [
+        "extract",
+        "event_field_source_batch_0",
+        "event_field_source_batch_1",
+        "activity_interval_source_inventory",
+        "activity_interval_source_repair"
+      ],
+      "intervals": [
+        {
+          "role": "actual_execution",
+          "start": "5 September 2098",
+          "end": "12 September 2098",
+          "status": "unresolved",
+          "issues": [
+            "quote: The identity premise does not quote the own activity identity and label."
+          ]
+        }
+      ],
+      "graph_context_sha256": "54d97c7c5a3fa144a9f2edfc31b0a70724bf4afa1801b7e25ef18a981c049e30",
+      "original_inputs_partial": [
+        false
+      ]
+    },
+    {
+      "draw": 2,
+      "phase": "final-events",
+      "job_id": "4bc8f00c8e77463a97277ddbd6a6e20f",
+      "status": "done",
+      "report": "assets/activity-intervals/draw-2-events.json",
+      "calls": 5,
+      "phases": [
+        "extract",
+        "event_field_source_batch_0",
+        "event_field_source_batch_1",
+        "activity_interval_source_inventory",
+        "activity_interval_source_repair"
+      ],
+      "intervals": [
+        {
+          "role": "planned",
+          "start": "1 September 2098",
+          "end": "15 September 2098",
+          "status": "unresolved",
+          "issues": [
+            "quote: The identity premise does not quote the own activity identity and label."
+          ]
+        },
+        {
+          "role": "actual_execution",
+          "start": "5 September 2098",
+          "end": "12 September 2098",
+          "status": "unresolved",
+          "issues": [
+            "quote: activity_identity lacks its complete own original support.",
+            "quote: The identity premise does not quote the own activity identity and label."
+          ]
+        }
+      ],
+      "graph_context_sha256": "54d97c7c5a3fa144a9f2edfc31b0a70724bf4afa1801b7e25ef18a981c049e30",
+      "original_inputs_partial": [
+        false,
+        false
+      ]
+    },
+    {
+      "draw": 3,
+      "phase": "identity-guidance-events",
+      "job_id": "ec4b3648d48a4cb2a69a3f6af498ed0f",
+      "status": "done",
+      "report": "assets/activity-intervals/draw-3-events.json",
+      "calls": 5,
+      "phases": [
+        "extract",
+        "event_field_source_batch_0",
+        "event_field_source_batch_1",
+        "activity_interval_source_inventory",
+        "activity_interval_source_repair"
+      ],
+      "intervals": [
+        {
+          "role": "planned",
+          "start": "1 September 2098",
+          "end": "15 September 2098",
+          "status": "proposed",
+          "issues": []
+        },
+        {
+          "role": "actual_execution",
+          "start": "5 September 2098",
+          "end": "12 September 2098",
+          "status": "unresolved",
+          "issues": [
+            "quote: activity_identity lacks its complete own original support.",
+            "quote: The identity premise does not quote the own activity identity and label."
+          ]
+        }
+      ],
+      "graph_context_sha256": "54d97c7c5a3fa144a9f2edfc31b0a70724bf4afa1801b7e25ef18a981c049e30",
+      "original_inputs_partial": [
+        false,
+        false
+      ]
+    },
+    {
+      "draw": 4,
+      "phase": "full-identity-quote-events",
+      "job_id": "171fcc1aff10482cb7d5b7d19abde00b",
+      "status": "done",
+      "report": "assets/activity-intervals/draw-4-events.json",
+      "calls": 5,
+      "phases": [
+        "extract",
+        "event_field_source_batch_0",
+        "event_field_source_batch_1",
+        "activity_interval_source_inventory",
+        "activity_interval_source_repair"
+      ],
+      "intervals": [
+        {
+          "role": "planned",
+          "start": "1 September 2098",
+          "end": "15 September 2098",
+          "status": "proposed",
+          "issues": []
+        },
+        {
+          "role": "actual_execution",
+          "start": "5 September 2098",
+          "end": "12 September 2098",
+          "status": "proposed",
+          "issues": []
+        }
+      ],
+      "graph_context_sha256": "54d97c7c5a3fa144a9f2edfc31b0a70724bf4afa1801b7e25ef18a981c049e30",
+      "original_inputs_partial": [
+        false,
+        false
+      ]
+    }
+  ],
+  "notice": {
+    "job_id": "d74c10e9bdbc46e9a63daac1a738a25a",
+    "status": "done",
+    "calls": 3,
+    "estimated_due": "2098-09-23",
+    "service_and_forfeiture_certified": false
+  },
+  "manual_recheck": {
+    "report": "assets/activity-intervals/manual-recheck.json",
+    "status": "proposed",
+    "calls": 4,
+    "phases": [
+      "source_recheck",
+      "source_validation_repair",
+      "activity_interval_source_recheck",
+      "activity_interval_source_repair"
+    ],
+    "review_status": "flagged",
+    "accepted": false,
+    "raw_values_changed": false
+  },
+  "latest_graph": {
+    "counts": {
+      "nodes": 40,
+      "edges": 71,
+      "episodes": 22,
+      "timeline": 173
+    },
+    "foreign_project_ids": 0,
+    "pagination": {
+      "node_limit": 200,
+      "edge_limit": 400,
+      "nodes_more": false,
+      "edges_more": false
+    },
+    "original_sources": [
+      {
+        "document_id": "d150-agreement-and-schedules",
+        "document": "# Development contract D150\nSynthetic development fixture, not a real agreement.\nOwner: Garnet Labs SA. Builder: Harbor Systems Ltd.\n\n# Clause N8\nHarbor Systems Ltd must send a written handover notice that reaches Garnet Labs SA at least seven calendar days before the scheduled handover identified in Schedule S3. This notice requirement does not itself extinguish payment rights.\n\n# Schedule S1\nWork package K88 is equipment testing for the north laboratory. The plan schedules Harbor Systems Ltd to start Work package K88 on 1 September 2098 and finish Work package K88 on 15 September 2098. These are planned boundaries, not records of completed execution.\n\n# Schedule S3\nThe handover of the north laboratory is scheduled for 30 September 2098. This is a planned milestone; this schedule does not confirm that handover occurred.",
+        "source_sha256": "32c26c9da87f1a716b087a8d398605b88400c39c1197ca13cbb9208a065455af"
+      },
+      {
+        "document_id": "work-start-record-w1",
+        "document": "# Record W1\nHarbor Systems Ltd actually began Work package K88 equipment testing for the north laboratory on 5 September 2098. This record identifies the performed start, not the earlier planned start.",
+        "source_sha256": "fcf2b23f8430329f048eb7e53bd029b35f7425b2e9a0f21700b94cf16c22c9e9"
+      },
+      {
+        "document_id": "work-completion-record-w4",
+        "document": "# Record W4\nHarbor Systems Ltd actually completed Work package K88 equipment testing for the north laboratory on 12 September 2098. W4 records completion of the same Work package K88 that started in W1. This completion does not establish handover or acceptance of the laboratory.",
+        "source_sha256": "dbf4b67efe3e2e54006d7b2296935ec449e550fb37ecc44913308586aa6021af"
+      },
+      {
+        "document_id": "invoice-and-notice-records",
+        "document": "# Record I1\nHarbor Systems Ltd issued an invoice for Work package K88 equipment testing on 22 September 2098. The invoice date is an issuance date; it is not the work completion date. The invoice requests EUR 5400 and does not establish actual incurred expense or payment.\n\n# Record N1\nHarbor Systems Ltd dispatched written handover notice HN150 to Garnet Labs SA on 22 September 2098.\n\n# Record N2\nGarnet Labs SA received written handover notice HN150 from Harbor Systems Ltd on 24 September 2098. Receipt does not change the scheduled handover date.\n\n# Draft A1\nHarbor Systems Ltd circulated Draft A1 on 18 September 2098. Draft A1 proposes changing the handover date to 2 October 2098 only if both parties sign it. No signature by either party is recorded here. The circulated proposal is not an operative replacement of Schedule S3.",
+        "source_sha256": "d01150a63ff86469285e5a98de929b4ef5ef9e596e9ccbad5b72709a41e8a5b7"
+      }
+    ],
+    "context_only_quote_episodes": 18,
+    "native_excerpt_calendar_issue_remains": true
+  },
+  "checks": {
+    "backend_passed": 2126,
+    "frontend_passed": 1458,
+    "frontend_files": 109,
+    "build_passed": true,
+    "existing_bundle_warning": true,
+    "parity": {
+      "protocol": "activity-interval-reader-parity-v1",
+      "checked_at_utc": "2026-10-06T19:55:02.803815+00:00",
+      "report_cases": 42,
+      "saved_model_report_cases": 8,
+      "role_cases": 56,
+      "boundary_cases": 56,
+      "date_cases": 12,
+      "mismatches": 0,
+      "passed": true,
+      "examples": [],
+      "source_ts": {
+        "path": "frontend/src/activityIntervalEvidence.ts",
+        "sha256": "fa74e366e69de4f34bc13fa103040ab05d7dc5bead40f7015acb34134e98668a"
+      },
+      "source_python": {
+        "path": "delaylama/ai_core/activity_intervals.py",
+        "sha256": "e57e20ac1393177924cd565f31bcbfc0c1dee7fc91f1d4d617734cb6df37ca14"
+      },
+      "script_sha256": "01055c3f8782d92f74210795670b4d2faad11a5e0a7edf411ba5c2893a598fe8",
+      "scope": "Synthetic actual backend reports, source/input changes, exact boundary roles, own quotation failures, transaction-only dates and multi-date ownership; no model or runtime calls."
+    }
+  },
+  "preservation": {
+    "user_graph_nodes": 1444,
+    "user_graph_edges": 660,
+    "user_graph_episodes": 321,
+    "user_graph_timeline_events": 3437,
+    "protected_engine_sources": 14,
+    "user_artifacts": 32,
+    "original_studio_sessions": 2,
+    "main_journal_unchanged": true,
+    "main_journal": {
+      "count": 24,
+      "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+    },
+    "app_environment_unchanged": true,
+    "user_engine_restarted": false,
+    "user_prompt_and_layago_directory_excluded": true,
+    "main_api_refreshed": true
+  },
+  "cleanup": {
+    "owned_processes": [
+      {
+        "service": "engine",
+        "pid": 53561,
+        "port": 8097
+      },
+      {
+        "service": "frontend",
+        "pid": 53563,
+        "port": 5176
+      },
+      {
+        "service": "api",
+        "pid": 50928,
+        "port": 8081
+      }
+    ],
+    "owned_ports_closed": true,
+    "terminal_application_jobs": 90,
+    "native_jobs": {
+      "cancelled": 0,
+      "done": 4,
+      "failed": 0,
+      "queued": 0,
+      "running": 0
+    },
+    "temporary_browser_tabs": [
+      177,
+      178
+    ],
+    "temporary_browser_tab_closed": true
+  },
+  "learning": "L163",
+  "new_model_training_or_throughput_measurement": false,
+  "remaining_limits": [
+    "Semantic subject/role ownership is not certified by lexical guards or located quotes.",
+    "Native stored quotation calendars remain an engine issue isolated by client projection.",
+    "Multilingual recall, linked qualifiers, repeated identities, applicability, service, duration attribution and outcome reconciliation remain open."
+  ]
+}

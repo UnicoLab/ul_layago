@@ -6272,3 +6272,60 @@ navigation/restoration, and source-complete CSV rows. No new model-quality bench
 LayaGo/GLiNER/MLX training, weights, architecture or speed measurement was performed.
 Dispersed interval attribution, broader exception recall, calendar applicability,
 actual service and outcome reconciliation remain open beyond this UI increment.
+
+## L163 — Dispersed activity intervals and source-identity repair (2026-10-06)
+
+**Evidence:** [DelayLama report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-activity-intervals.md)
+and [receipt](validation/delaylama-activity-intervals-20261006.json).
+
+Treat the activity and its individual occurrences as separate representations. One
+original work-package identity may connect a planned start/finish, an actual-source
+start/completion, and an invoice, but those dates cannot substitute for one another.
+Keep plans/proposals and execution candidates separate; an interval does not establish
+actual duration, performance, delay attribution or entitlement. Bind current originals,
+raw interval fields and the owning current event register, rather than using captured
+metadata as current authority.
+
+The four-document D150 development case exposed a repeatable quotation problem.
+Normalized activity names could be literal in execution records but absent from the
+quoted definition, which contained connecting words such as “is”. Repeated bare labels
+also lacked a unique source location. Require identity labels and their supporting
+quotations to agree verbatim, preserve whole own paragraphs, and repair quotation
+structure using full located own passages. Do not change candidate values or persuade
+insufficient semantic support. Retain every failed check and every development draw.
+
+Four draws on the same frozen fixture progressed from an omitted plan/unresolved
+actual identity, through both intervals discovered but withheld, to a qualified plan
+with unresolved actual identity, then both qualified source proposals. A separate
+manual retry qualified the unchanged first actual proposal and retained its initial
+failure. These are development improvements, not independent recall/accuracy results.
+
+Potential future dataset distinctions include original activity versus record/notice
+identity, own start versus completion, planned versus performed-source wording, invoice
+issuance/payment request versus actual expense, and document date versus reported work
+date. Hard negatives should include all five model checks claiming support for an
+invoice/notice boundary, mixed calendar days, missing qualifiers, duplicate identities,
+and payment “completion” mistaken for work completion. Recognizable verbs and one
+matching date are necessary vetoes, not semantic subject-ownership certification.
+Human-reviewed role and predicate labels remain necessary for a reliable evaluation.
+
+Independent graph audit confirmed one K88 entity connecting nine separate source event
+nodes, with project/source hashes scoped correctly. Located quotations for 39/40 nodes
+and 71/71 edges did not certify their meanings; a duplicate regex monetary node stayed
+unsupported. Native first-date parsing also assigned September 1 to several indexed
+quotation containers. Preserve such dates as indexing/audit context, distinct from
+occurrence dates; DelayLama isolated them without mutating original nodes or native
+records. The native parser issue remains open.
+
+Review UX should expose both own boundaries, source premises, full context and repair
+history without vectors or repeated raw fields. Qualified source candidates should not
+remain in a missing-quotation queue, and accepting a generic quote should not qualify
+an interval. Exact source/candidate identity must survive graph inspection, timeline
+filters, manual retry and prompt iteration. Asynchronous source hashing needs explicit
+readiness in presentation tests, without weakening the production binding.
+
+Final DelayLama checks passed 2,126 backend and 1,458 frontend tests, a production build,
+and 166 Python/TypeScript comparisons including all eight saved interval reports.
+No new LayaGo/GLiNER/MLX training, weights, architecture or speed result was measured.
+Held-out multilingual recall, linked conditions, repeated identifiers, calendar rules,
+actual service, performance scope and outcome reconciliation remain separate targets.
