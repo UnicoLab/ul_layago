@@ -1,0 +1,111 @@
+{
+  "learning": "L166",
+  "date": "2026-10-07",
+  "status": "adopted application engineering safeguards and retained synthetic development observations",
+  "application": "DelayLama",
+  "source_validation": "docs/validation/2026-10-07-event-source-recall.json",
+  "source_validation_sha256": "afdd6c6662263b13330f796b6d4356831d652b893070885998db4a66d0623066",
+  "registered_original_sha256": "37655294a57d16eedd90d378bef07c101e848c1ffcedbe300fc52c4e8fc6bd23",
+  "expected_actions": 16,
+  "retained_draws": [
+    {
+      "draw": 1,
+      "primary_events": 12,
+      "final_events": 12,
+      "used_fallback": false,
+      "survey_present": true
+    },
+    {
+      "draw": 2,
+      "primary_events": 9,
+      "final_events": 14,
+      "used_fallback": false,
+      "survey_present": true
+    },
+    {
+      "draw": 3,
+      "primary_events": 9,
+      "final_events": 12,
+      "used_fallback": false,
+      "survey_present": true
+    },
+    {
+      "draw": 4,
+      "primary_events": null,
+      "final_events": 0,
+      "used_fallback": true,
+      "survey_present": false
+    },
+    {
+      "draw": 5,
+      "primary_events": 9,
+      "final_events": 16,
+      "used_fallback": false,
+      "survey_present": true
+    }
+  ],
+  "failure_replay": {
+    "mode": "recorded_primary_failure_with_new_independent_model_source_checks",
+    "events": 14,
+    "primary_calls": 2,
+    "new_primary_requests": 0,
+    "new_source_calls": 32,
+    "used_fallback": true,
+    "field_pass_present": true,
+    "interval_pass_present": true,
+    "limits": "Separately labeled replay of a recorded confirmed unreadable primary. New source models run; no primary request is resubmitted, no API journal result replaced, no graph nodes or project extraction file written. Engineering validation, not held-out performance or a successful original primary."
+  },
+  "independent_replay_qualification": {
+    "qualified_actions": 14,
+    "withheld_actions": [
+      "ROUND-B start",
+      "undated transmission"
+    ],
+    "supporting_field_checks": 28,
+    "insufficient_field_checks": 14,
+    "interval_proposals": 5,
+    "qualified_intervals": 0
+  },
+  "tests": {
+    "backend": 2508,
+    "frontend": 1709,
+    "frontend_files": 124,
+    "build_passed": true,
+    "reader_parity_comparisons": 83,
+    "reader_parity_mismatches": 0
+  },
+  "engineering": [
+    "bounded original-only nomination discovery before final all-event field checks",
+    "exact same-occurrence action/actor/date and complete qualification witnesses",
+    "literal output-field scaffolds, blank date separate from unknown occurrence role",
+    "bounded serialization/own-context repair with immutable assertions and failed histories",
+    "own record heading references; no neighboring/cross-record identity borrowing",
+    "confirmed unreadable primary can receive independent model source checks; original failure remains flagged",
+    "read-only graph type/predicate/direction concerns; located quote does not certify relationship",
+    "complete owning paragraphs in human-readable citation previews; raw context retained for iteration"
+  ],
+  "limits": [
+    "Final draw5 contains all16 expected source actions, but proposals/primary assertions and graph semantics still require review.",
+    "Earlier draws1–4, all failed source checks and bounded repairs remain preserved.",
+    "Recorded failure replay is new source model work over preserved draw4 failure, not a replaced primary run or new successful HTTP extraction job;14/16 acts and all5 unresolved interval proposals retained.",
+    "Native graph typing, relation predicates/direction, actor antecedents and6 native ActionCandidate groundings remain unresolved.",
+    "Source scan budget500KB/2000nonemptylines/8000linecharacters/512windows remains explicit; full source/world/legal completeness is never certified.",
+    "No LayaGo/GLiNER/MLX training, weights, architecture or speed result changed."
+  ],
+  "new_training_or_acceleration_results": false,
+  "code_sha256": {
+    "delaylama/agents/event_detector/agent.py": "182a1e54fb84dba2f1745ae3aba94b419788778a41ac36ad56af2697f4ae42a0",
+    "delaylama/ai_core/event_source_recall.py": "0fc8c715d91228f85b33bb6a66eb7070a6aec27287b1b5fa2267f3fba3e9c903",
+    "delaylama/ai_core/analysis_context.py": "75fec3c72183dc0339d6b4a5bc1f708df210ccc9f667eb0a0120230d63ff3247",
+    "delaylama/ai_core/claim_desk.py": "08789e2c6257f64b1f02af27dd2c60a1d8326a54212fc2357f5b61438bca377e",
+    "delaylama/ai_core/graph_review.py": "cae65edfe125027e02497b78be056da0af6b4a52332779a1b71b17445f3c2e9a",
+    "delaylama/ai_core/json_agent.py": "b3a10246ef8e17f95969f29bd713301c0353abc4bfc4d9381f93410dad50ebe0",
+    "frontend/src/App.tsx": "36918febd39c52f60ddf4fb2cdf864d7d118f7594d6301c3343194941abce4be",
+    "frontend/src/components/AnalysisCoverage.tsx": "211b870e5569f7ebe79ecfbdbb809f4fa793e9df35969fc84342bd300240d4b4",
+    "frontend/src/components/ResultPanel.tsx": "2db37b223349d160573b41e7606a117a2b5ef70b62ef1b6d2c9c8c4696e8da9c",
+    "frontend/src/components/SourceCitation.tsx": "fce3d21c5c193b61a0acde16ea725802b2452edb5c8fd45ddee19290d32cd9b2",
+    "frontend/src/components/EventSourceRecall.tsx": "d07f6b50af881747d211af37bfd48637a22aa55bf1c3b78ce914dc5b8d37c614",
+    "frontend/src/eventSourceRecall.ts": "86bb9f2ff49869175a1685cab23fc865810974f2fab46c3a943c33aba71a1f36",
+    "frontend/src/eventSourceRecallOwners.ts": "21d91801f5213f9b7bf05607966e00d3aaf10d9001ed2f7b7993cc954a2ba1e4"
+  }
+}
