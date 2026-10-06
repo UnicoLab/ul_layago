@@ -5366,3 +5366,50 @@ storage/API/UI checks passed; this is no LayaGo/GLiNER/MLX training or speed res
 Repeated registration refreshed merge candidate IDs and added indexing episodes;
 merge lineage, broader predicate correctness, long-dossier recall and durable
 native-job recovery remain open.
+
+
+## L144 — Outcome object, polarity and target scope need independent extraction (2026-10-06)
+
+**Evidence:** [DelayLama receipt](validation/delaylama-original-outcome-statements-20261006.json)
+retains two source-only probes, two production revisions, a fresh recorded-payment
+control, source-guard failures, full finalization tests and browser evidence.
+
+Combining entitlement judgments and recorded facts allowed a cost assessment to
+turn non-waiver into waiver and unsettled compensation into final settlement.
+A source-only statement ledger now extracts the record/subject, object, instrument,
+polarity, modality, dimension, scope and separate date evidence before entitlement.
+Decision units cannot supply the primary fact rows. Missing kinds stay coverage
+gaps; failed statement extraction does not fall back to a decision's invented facts.
+Scoped negative statements remain scoped denials, and proposed/conditional amounts
+stay distinct from operative outcomes. Literal presence and coherent schema remain
+candidate checks, not semantic or legal certification.
+
+The first fresh ledger correctly extracted a cost settlement and limited release,
+but the merger copied them into time outcomes because both lived in one instrument.
+Explicit time/cost dimension is now required for primary projection. Other or
+undetermined dimensions remain related context. The recheck kept the cost-only
+settlement/release separate from the completion grant; a draft zero stayed proposed.
+The source-only root remains inspectable when all entitlement calls fail.
+
+A display boundary also mattered: citation verification added match/source metadata
+and broke naive full-object equality. Binding now ignores additive verifier fields
+while retaining quotation/ref/coordinates identity. Actual quote/coordinate changes
+still fail. Source-view hashes gate exact trace highlights; repeated cards share a
+bounded four-view digest cache. These are behavior checks, not performance results.
+
+**Training implications:** separate literal outcome statement extraction from claim
+viability. Label object, record, subject, polarity, modality, dimension and scope;
+include own focused assertions, explicit associations and independent dates. Add
+cost-only releases in instruments that also grant time, qualified non-waivers,
+undocumented stages, undated expenses, requested/awarded/settled amount differences,
+unsigned zero proposals, and actual zero costs. Assess event recall separately from
+requested-row coverage: the event detector omitted a payment request which the
+ledger nevertheless extracted. Do not train confidence/source match as acceptance.
+
+**Evidence limits:** 14 probe and 106 production application calls, two native source
+analysis jobs, final 24 requested pairs across 12 reported events. Same synthetic
+development controls, not independent legal gold or causal/held-out/repeated-seed
+accuracy. Early date/object mistakes and rejected source rows remain retained.
+Generic lexical/date review hints still create false warnings; full date-role,
+subject/instrument applicability, long-dossier recall and native recovery remain
+open. No LayaGo/GLiNER/MLX training or speed gain was measured this turn.

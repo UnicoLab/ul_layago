@@ -1,0 +1,531 @@
+{
+  "learning": "L144",
+  "date": "2026-10-06",
+  "report": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-original-outcome-statements.md",
+  "source_receipt_sha256": "e86f52c3baaf31b4d9f432de6ef67c8ab16e7c40e48022f0ecd8b5f138f395a8",
+  "delaylama_receipt": {
+    "date": "2026-10-06",
+    "scope": "Independent original outcome extraction, target-specific projection, scoped denial/modality, inspectable source binding and preservation of standalone facts. Model/source failures retained; not exhaustive semantic correctness.",
+    "tests": {
+      "backend": 1651,
+      "frontend": 1015,
+      "frontend_files": 85,
+      "build_passed": true,
+      "go_changes": false,
+      "reused_engine_default": 67
+    },
+    "calls": {
+      "prototype_application": 14,
+      "production_application": 106,
+      "total_application": 120,
+      "native_source_analysis_jobs": 2,
+      "native_internal_model_calls_not_counted": true
+    },
+    "final_requested_coverage": {
+      "reported_events": 12,
+      "event_target_rows": 24
+    },
+    "final_units": [
+      {
+        "case": "dispersed-grant-en",
+        "units": [
+          {
+            "event_id": "E1",
+            "status": "candidate",
+            "missing_kinds": [],
+            "rejections": []
+          },
+          {
+            "event_id": "E2",
+            "status": "candidate",
+            "missing_kinds": [
+              "incurred_cost",
+              "payment_request",
+              "payment_award"
+            ],
+            "rejections": []
+          }
+        ]
+      },
+      {
+        "case": "permission-only-fr",
+        "units": [
+          {
+            "event_id": "E1",
+            "status": "candidate",
+            "missing_kinds": [
+              "incurred_cost",
+              "final_settlement",
+              "claims_waiver"
+            ],
+            "rejections": []
+          },
+          {
+            "event_id": "E2",
+            "status": "candidate",
+            "missing_kinds": [
+              "incurred_cost",
+              "final_settlement",
+              "claims_waiver"
+            ],
+            "rejections": []
+          }
+        ]
+      },
+      {
+        "case": "weather-grant-fr",
+        "units": [
+          {
+            "event_id": "E1",
+            "status": "candidate",
+            "missing_kinds": [
+              "final_settlement"
+            ],
+            "rejections": []
+          },
+          {
+            "event_id": "E2",
+            "status": "candidate",
+            "missing_kinds": [
+              "incurred_cost",
+              "payment_request",
+              "payment_award",
+              "extension_grant",
+              "final_settlement",
+              "claims_waiver"
+            ],
+            "rejections": []
+          },
+          {
+            "event_id": "E3",
+            "status": "candidate",
+            "missing_kinds": [
+              "incurred_cost",
+              "payment_request",
+              "payment_award",
+              "final_settlement"
+            ],
+            "rejections": []
+          }
+        ]
+      },
+      {
+        "case": "c136-recorded-payment-and-scoped-release-en",
+        "units": [
+          {
+            "event_id": "E1",
+            "status": "partial",
+            "missing_kinds": [],
+            "rejections": [
+              {
+                "row": 7,
+                "reason": "own_focused_statement_unavailable"
+              }
+            ]
+          },
+          {
+            "event_id": "E2",
+            "status": "candidate",
+            "missing_kinds": [
+              "incurred_cost",
+              "payment_request",
+              "payment_award",
+              "extension_grant",
+              "final_settlement",
+              "claims_waiver"
+            ],
+            "rejections": []
+          },
+          {
+            "event_id": "E3",
+            "status": "candidate",
+            "missing_kinds": [
+              "incurred_cost",
+              "payment_request",
+              "extension_grant"
+            ],
+            "rejections": []
+          },
+          {
+            "event_id": "E4",
+            "status": "candidate",
+            "missing_kinds": [
+              "incurred_cost",
+              "payment_request",
+              "payment_award"
+            ],
+            "rejections": []
+          },
+          {
+            "event_id": "E5",
+            "status": "candidate",
+            "missing_kinds": [
+              "incurred_cost",
+              "payment_request",
+              "extension_grant",
+              "final_settlement"
+            ],
+            "rejections": []
+          }
+        ]
+      }
+    ],
+    "protocol": "original-outcome-statements-v2",
+    "known_fixed_failures": [
+      "Initial isolated probe borrowed cost dates and misclassified a permission clause as a waiver; raw failure retained.",
+      "Initial production C136 ledger copied cost settlement/release into primary time outcomes; v2 dimension projection prevents that assignment in final recheck.",
+      "Full citation-object comparison was broken by additive verification metadata; core quotation/ref/coordinates identity now survives full finalization and rejects actual changes.",
+      "Source facts remain available independently when entitlement phases fail; no unsupported decision output fallback supplies primary facts."
+    ],
+    "remaining": [
+      "Rejected/incomplete focused statement quotations remain explicit gaps.",
+      "C136 event detector omits P136 as a separate event; outcome extraction found the payment request.",
+      "Generic vocabulary/date checks can produce false review warnings; date-role and instrument/subject associations remain unverified model interpretations.",
+      "No independent legal gold, held-out or repeated-seed/causal accuracy estimate; no exhaustive long-dossier guarantee.",
+      "No native durable recovery or LayaGo/GLiNER/MLX/training-quality measurement here.",
+      "Owned source/alias registration refreshes indexing metadata; no immutable owned-graph claim."
+    ],
+    "main_api_activation": {
+      "old_launcher_pid": 83597,
+      "new_launcher_pid": 96060,
+      "api_healthy": true,
+      "journal_unchanged": true,
+      "journal": {
+        "count": 24,
+        "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+      },
+      "app_env_unchanged": true,
+      "health": {
+        "status": "healthy",
+        "agents": {
+          "agent_critic": {
+            "status": "healthy"
+          },
+          "amendment_analyzer": {
+            "status": "healthy"
+          },
+          "claim_viability": {
+            "status": "healthy"
+          },
+          "contract_identity": {
+            "status": "healthy"
+          },
+          "contract_identity_base": {
+            "status": "healthy"
+          },
+          "event_detector": {
+            "status": "healthy"
+          },
+          "extractor": {
+            "status": "healthy"
+          },
+          "guarantee_analyzer": {
+            "status": "healthy"
+          },
+          "notification_register": {
+            "status": "healthy"
+          },
+          "penalty_analyzer": {
+            "status": "healthy"
+          },
+          "project_context": {
+            "status": "healthy"
+          },
+          "prompt_improver": {
+            "status": "healthy"
+          },
+          "risk_allocator": {
+            "status": "healthy"
+          }
+        },
+        "agent_count": 13,
+        "plugins": {},
+        "plugin_count": 0,
+        "endpoints": {
+          "project_workflow": {
+            "status": "healthy"
+          },
+          "prompt_editor": {
+            "status": "healthy"
+          },
+          "review_sessions": {
+            "status": "healthy"
+          },
+          "studio_sessions": {
+            "status": "healthy"
+          }
+        },
+        "endpoint_count": 4,
+        "ingestors": {
+          "markitdown": {
+            "status": "healthy"
+          }
+        },
+        "ingestor_count": 1,
+        "pipelines": [
+          "claim_prep",
+          "consolidate",
+          "contract_analysis",
+          "contract_analysis_sequential",
+          "contract_identity_base",
+          "contract_identity_critic",
+          "contract_identity_only",
+          "extract_batch",
+          "extractor_fanout",
+          "project_consolidate",
+          "prompt_improve"
+        ],
+        "pipeline_count": 11,
+        "tasks_enabled": true,
+        "storage": {
+          "status": "healthy"
+        }
+      }
+    },
+    "cleanup": {
+      "owned_processes": [
+        {
+          "service": "engine",
+          "pid": 89100,
+          "port": 8097
+        },
+        {
+          "service": "api",
+          "pid": 95093,
+          "port": 8081
+        },
+        {
+          "service": "frontend",
+          "pid": 89102,
+          "port": 5175
+        }
+      ],
+      "owned_ports_closed": true,
+      "terminal_application_jobs": 27,
+      "native_jobs": {
+        "cancelled": 0,
+        "done": 2,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "temporary_browser_tab": 153,
+      "temporary_browser_tab_closed": true
+    },
+    "user_preservation": {
+      "protected_engine_source_files_unchanged": true,
+      "protected_app_artifacts_unchanged": true,
+      "user_studio_unchanged": true,
+      "orchid_studio_unchanged": true,
+      "user_graph_all_tables_unchanged": true,
+      "recorded_replay_nodes_edges_unchanged_by_GUI": true,
+      "owned_jobs_terminal_verified_before_cleanup": true,
+      "replay_verified_before_cleanup": true,
+      "user_engine_health": {
+        "analysis_jobs": {
+          "cancelled": 0,
+          "done": 0,
+          "failed": 0,
+          "queued": 0,
+          "running": 0
+        },
+        "analysis_jobs_scope": "service",
+        "edge_count": 660,
+        "episode_count": 321,
+        "node_count": 1444,
+        "schema": "general",
+        "status": "ok"
+      },
+      "user_graph_fingerprints": {
+        "edges": {
+          "rows": 660,
+          "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+        },
+        "episodes": {
+          "rows": 321,
+          "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+        },
+        "nodes": {
+          "rows": 1444,
+          "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+        },
+        "schema_meta": {
+          "rows": 1,
+          "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+        },
+        "timeline_events": {
+          "rows": 3437,
+          "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+        }
+      }
+    },
+    "export_policy": "Vectors omitted, raw model failures retained, log display whitespace normalized; configured credential-value scan passed.",
+    "asset_manifest": [
+      {
+        "file": "docs/validation/assets/original-outcome-statements/api-activation.json",
+        "sha256": "9d330a448f76522f8dffe4419ba82009b330d1d0275d25d33341f5f2becc7636",
+        "bytes": 2081
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/backend-final6.log",
+        "sha256": "8a4e290730813d8b2a74141b3c281449618934e64d87a5fae0b58bbf62067f78",
+        "bytes": 1907
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/backend-final7.log",
+        "sha256": "bdac96314d709f2c6b97498acddf148b12408dec2ffef50d3bf301cb8d5a454c",
+        "bytes": 1907
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/backend-initial.log",
+        "sha256": "799fb9c6d2eeb1ddffe2a441d0510c4bae7747b9402bce4357a17ca8c0b4987b",
+        "bytes": 3287
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/build-final5.log",
+        "sha256": "da408009f72e4570f6a3972807b0e24b51054a0f7dd0d6b6f56bbed08d3b90cd",
+        "bytes": 137
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/build-final8.log",
+        "sha256": "06269ad7e4c958554b447fb24397af6ad520366b3a6b95082175b057079a87bb",
+        "bytes": 1274
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/build-initial.log",
+        "sha256": "591cd6eabd534a963707433ca461c1dde579de4afa408cf26e3ce7e7cf69d7f2",
+        "bytes": 286
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/cleanup.json",
+        "sha256": "de03855adbb37f3249eaa9d19c9c9a795ba05f8e376da251c8541395d0088960",
+        "bytes": 513
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/dimension-freeze.json",
+        "sha256": "8d076a67c4befdaa42f06b8f57096775064832f0961622c239c6c232054be852",
+        "bytes": 1187
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/dimension-runs.json",
+        "sha256": "84b3d4946cb806ac3e00857fba01e01fb1ebf0b37eda7d354d51aec42a469195",
+        "bytes": 1128383
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/freeze-v2.json",
+        "sha256": "a695efce85e1ac66d3e23d50345d7806dcd6a170edb755d3b90d3423716ae29c",
+        "bytes": 7691
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/freeze.json",
+        "sha256": "a695efce85e1ac66d3e23d50345d7806dcd6a170edb755d3b90d3423716ae29c",
+        "bytes": 7691
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/frontend-final8.log",
+        "sha256": "6c5274372470ce4b689d4f4dd6265161071720b80186ceee87adb988ba87133c",
+        "bytes": 335
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/guidance-v2.txt",
+        "sha256": "5b696e2bdcbc9ffdf30fa11c6fda9990fe03a5f16a79acb2beae6e828c6ef86d",
+        "bytes": 4127
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/guidance.txt",
+        "sha256": "0de0ab6dd13bbd3af9fc8d7782ffdcfb43d6a35f0a20eb643b0cf3fd7e58acab",
+        "bytes": 3390
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/initial-target-tests.log",
+        "sha256": "94593c6804c196987374b803cc69dc42d286565705ce242759b1afb90167bae5",
+        "bytes": 9701
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/new-control-freeze.json",
+        "sha256": "3f4069aee0550a2e72b0c77a9c7fcc9eae46be77b2bc05030b0ceab9951fad5f",
+        "bytes": 200
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/new-control-graph.json",
+        "sha256": "1f1b965b6355537eb0fa1d02f5c08a3cbff16de91dbd087c185b3d75692bf67f",
+        "bytes": 537865
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/new-control-run.json",
+        "sha256": "4d0abdd90892b0080e058c10864bf86556158142681a7616419246beb4cfa2a0",
+        "bytes": 114439
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/new-control.json",
+        "sha256": "a14894caca098b64cf8151c0daa594d312a4e1a761f9c8f4884504a70de21b5d",
+        "bytes": 3518
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/nonwaiver-dom.txt",
+        "sha256": "32bb991d90db1c77a43e5f3f3b4daa07b292e506d6005c1120aacc498ab3113e",
+        "bytes": 41480
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/nonwaiver.png",
+        "sha256": "fd62a9d04c938d9c3932da6125e3aea0af36ba4d546947c8e11f89b38393f05a",
+        "bytes": 1512804
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/owned-api-first-refresh.json",
+        "sha256": "b452cd81df2aefb228a437680ce318b556157a4bbfefeafb812be2d20caa9167",
+        "bytes": 670
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/owned-api-refresh.json",
+        "sha256": "885876a44394e0e6bf6961f749c2c1318db42349a7180e0cd34fab0840e2fb68",
+        "bytes": 670
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/probe-v2.json",
+        "sha256": "21a79fff280a66bd42529b98baac2dc518f95a35d57394fa4641b49585c126e7",
+        "bytes": 42133
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/probe.json",
+        "sha256": "edb87771d19fe7561f884e064edaa883f7635af768a726a17293966516cfc78b",
+        "bytes": 47960
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/prototype-v2-validation.json",
+        "sha256": "6d7bfa5a8f83a55e7937e025b0c084ef5a242cf29b648687e0c97c8b34fd09ce",
+        "bytes": 102890
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/prototype-v2-validation2.json",
+        "sha256": "92b40b056141cbe9357e540a6e39eebaf0a5d15255e9cac6451e44b67a5de1b3",
+        "bytes": 127024
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/settlement-scope-dom.txt",
+        "sha256": "872088f7be5918efe1d0fbee0ca9ae8d9e44daf7d04b5907550894ac2cfe98d4",
+        "bytes": 55766
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/settlement-scope.png",
+        "sha256": "2d71eca30b086715f4c680acb63e2e41ddb2838b7e152e2630c110826f53e515",
+        "bytes": 2028773
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/verification.json",
+        "sha256": "0d4201690dd3d17a565ae231bdb9c0e85c206f5250b4ce14b6de39f72fb3ae0d",
+        "bytes": 4703446
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/workflow-freeze.json",
+        "sha256": "8fd61d3236cf296cf010ed21fa4d6e1b55e6a1e072ed49456f0b405dfed8950e",
+        "bytes": 7060
+      },
+      {
+        "file": "docs/validation/assets/original-outcome-statements/workflow-runs.json",
+        "sha256": "18e196635ec7d59c3f6888961b7fb26d00f8de1f65f0de9bf57a36ced33da698",
+        "bytes": 646377
+      }
+    ]
+  }
+}
