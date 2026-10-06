@@ -12,9 +12,9 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L150 finding](docs/learning-log.md#l150--a-source-record-and-its-claim-subject-need-separate-identities-2026-10-06)
-records source-bound subject context, candidate graph evidence and the difference
-between notice contribution and the underlying claim’s substantive rights.
+The latest [L151 finding](docs/learning-log.md#l151--a-field-quote-must-establish-its-own-occurrence-and-source-kind-2026-10-06)
+records own-occurrence field evidence, repeated-quote disambiguation and actual
+expense/duration versus requested money or granted time.
 
 ## Build and use
 

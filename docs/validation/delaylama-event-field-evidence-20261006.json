@@ -1,0 +1,1803 @@
+{
+  "learning": "L151",
+  "date": "2026-10-06",
+  "report": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-event-field-evidence.md",
+  "delaylama_commit": "43de18e3bbfc96412f505c3f32d0968a5f3f50bc",
+  "source_receipt_sha256": "ba461996e2b93ddcc411c90b68ce0f64bc05af1f2b103125b27dbce45888a1a1",
+  "delaylama_receipt": {
+    "application_calls": 77,
+    "stages": [
+      {
+        "file": "saved-runs.json",
+        "calls": 20,
+        "rows": [
+          {
+            "case": "related-notice-c141",
+            "project_id": "separate-expense-date-and-support-gaps-c141-20261006-044922-d9b1a8",
+            "job_id": "b0d7dd9cea7d4097b2077f5e829c4a6d",
+            "calls": 12,
+            "output_paths": {
+              "event_detector": "/private/tmp/delaylama-event-fields-qa/runtime/processed/separate-expense-date-and-support-gaps-c141-20261006-044922-d9b1a8/extractions/event_detector_20261006_063453_550126.json",
+              "claim_viability": "/private/tmp/delaylama-event-fields-qa/runtime/processed/separate-expense-date-and-support-gaps-c141-20261006-044922-d9b1a8/extractions/claim_viability_20261006_063523_547886.json"
+            },
+            "event_runtime": {
+              "schema_version": 1,
+              "agent": "event_detector",
+              "reasoning_mode": "multi_step",
+              "context_chars": 1000000,
+              "sectioned_extract": false,
+              "driver_versions": {
+                "agentomatic": "1.15.0",
+                "langchain-core": "1.4.9",
+                "langchain-openai": "1.3.5",
+                "langchain-google-genai": null
+              },
+              "language": "en",
+              "calls": [
+                {
+                  "phase": "extract",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "655591b05f1d6451382f15203915c0e92a973f7d7fab5bb8ee0fa2ea0bf1395f",
+                  "input_sha256": "667a87e424e832724239c75b60a69f259693396e6b7f6d51fd4fe6c47024e8b3",
+                  "input_chars": 7305,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                }
+              ]
+            },
+            "source_sha256": "f4981ff78c36b5baf69ff0b02189b6c32c91d0029c7ace9fd9c9638d6974dd87",
+            "field_checks": []
+          },
+          {
+            "case": "dispersed-notice-subject-c142",
+            "project_id": "dispersed-notice-and-claim-subject-c142-20261006-052505-10ade1",
+            "job_id": "aaa5e030e2964504aa3824aa137d8535",
+            "calls": 8,
+            "output_paths": {
+              "event_detector": "/private/tmp/delaylama-event-fields-qa/runtime/processed/dispersed-notice-and-claim-subject-c142-20261006-052505-10ade1/extractions/event_detector_20261006_063453_046170.json",
+              "claim_viability": "/private/tmp/delaylama-event-fields-qa/runtime/processed/dispersed-notice-and-claim-subject-c142-20261006-052505-10ade1/extractions/claim_viability_20261006_063521_102720.json"
+            },
+            "event_runtime": {
+              "schema_version": 1,
+              "agent": "event_detector",
+              "reasoning_mode": "multi_step",
+              "context_chars": 1000000,
+              "sectioned_extract": false,
+              "driver_versions": {
+                "agentomatic": "1.15.0",
+                "langchain-core": "1.4.9",
+                "langchain-openai": "1.3.5",
+                "langchain-google-genai": null
+              },
+              "language": "en",
+              "calls": [
+                {
+                  "phase": "extract",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "655591b05f1d6451382f15203915c0e92a973f7d7fab5bb8ee0fa2ea0bf1395f",
+                  "input_sha256": "0c1f50634127fcc476d89e27a30c3fc1b7b6d11f3fad595a87a8fae7bc9a89ce",
+                  "input_chars": 7567,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                }
+              ]
+            },
+            "source_sha256": "cc580679dff70f59292219cc5ec65c83bbd82cb99c7728a7a925e56bad243778",
+            "field_checks": []
+          }
+        ]
+      },
+      {
+        "file": "wired-runs.json",
+        "calls": 22,
+        "rows": [
+          {
+            "case": "related-notice-c141",
+            "project_id": "separate-expense-date-and-support-gaps-c141-20261006-044922-d9b1a8",
+            "job_id": "9d57e6ddecbc4e6d82093feb9e60f1c6",
+            "calls": 12,
+            "output_paths": {
+              "event_detector": "/private/tmp/delaylama-event-fields-qa/runtime/processed/separate-expense-date-and-support-gaps-c141-20261006-044922-d9b1a8/extractions/event_detector_20261006_063823_431112.json",
+              "claim_viability": "/private/tmp/delaylama-event-fields-qa/runtime/processed/separate-expense-date-and-support-gaps-c141-20261006-044922-d9b1a8/extractions/claim_viability_20261006_063850_866595.json"
+            },
+            "event_runtime": {
+              "schema_version": 1,
+              "agent": "event_detector",
+              "reasoning_mode": "multi_step",
+              "context_chars": 1000000,
+              "sectioned_extract": false,
+              "driver_versions": {
+                "agentomatic": "1.15.0",
+                "langchain-core": "1.4.9",
+                "langchain-openai": "1.3.5",
+                "langchain-google-genai": null
+              },
+              "language": "en",
+              "calls": [
+                {
+                  "phase": "extract",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "655591b05f1d6451382f15203915c0e92a973f7d7fab5bb8ee0fa2ea0bf1395f",
+                  "input_sha256": "667a87e424e832724239c75b60a69f259693396e6b7f6d51fd4fe6c47024e8b3",
+                  "input_chars": 7305,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                },
+                {
+                  "phase": "event_field_source_batch_0",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "029e1bac4e00b1e88540e48c9757f0b23a4de404c60405db74aafc5aa7fc48c6",
+                  "input_sha256": "718be6786e09306538a6ce4f4d359d12860db37fc726854f9b7dfd7a632a2b50",
+                  "input_chars": 4156,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                },
+                {
+                  "phase": "event_field_source_batch_1",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "029e1bac4e00b1e88540e48c9757f0b23a4de404c60405db74aafc5aa7fc48c6",
+                  "input_sha256": "641f2a224aa828a9688777929255de454911d20ceeac27ac6e4ad7cf81ad0113",
+                  "input_chars": 2036,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                }
+              ]
+            },
+            "source_sha256": "f4981ff78c36b5baf69ff0b02189b6c32c91d0029c7ace9fd9c9638d6974dd87",
+            "field_checks": [
+              {
+                "event_id": "E1",
+                "reference": "R-141",
+                "field": "source_event_id",
+                "value": "R-141",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-141",
+                "field": "event_date",
+                "value": "1 August 2096",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-141",
+                "field": "responsible_party",
+                "value": "Rowan Owner Ltd",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-141",
+                "field": "cause",
+                "value": "Rowan Owner Ltd blocked Birch Build Ltd’s site access",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-141",
+                "field": "cost_impact",
+                "value": "EUR 2900",
+                "verdict": "insufficient",
+                "rejected_quotes": 1
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-141",
+                "field": "time_impact",
+                "value": "4 days",
+                "verdict": "insufficient",
+                "rejected_quotes": 1
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-141",
+                "field": "source_event_id",
+                "value": "N-141",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-141",
+                "field": "event_date",
+                "value": "2 August 2096",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-141",
+                "field": "responsible_party",
+                "value": "Birch Build Ltd",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-141",
+                "field": "cause",
+                "value": "Site access blockage (R-141)",
+                "verdict": "insufficient",
+                "rejected_quotes": 0
+              }
+            ]
+          },
+          {
+            "case": "dispersed-notice-subject-c142",
+            "project_id": "dispersed-notice-and-claim-subject-c142-20261006-052505-10ade1",
+            "job_id": "26f9e9d0874d4baa8ed2d4a7839c27e7",
+            "calls": 10,
+            "output_paths": {
+              "event_detector": "/private/tmp/delaylama-event-fields-qa/runtime/processed/dispersed-notice-and-claim-subject-c142-20261006-052505-10ade1/extractions/event_detector_20261006_063822_753905.json",
+              "claim_viability": "/private/tmp/delaylama-event-fields-qa/runtime/processed/dispersed-notice-and-claim-subject-c142-20261006-052505-10ade1/extractions/claim_viability_20261006_063844_244521.json"
+            },
+            "event_runtime": {
+              "schema_version": 1,
+              "agent": "event_detector",
+              "reasoning_mode": "multi_step",
+              "context_chars": 1000000,
+              "sectioned_extract": false,
+              "driver_versions": {
+                "agentomatic": "1.15.0",
+                "langchain-core": "1.4.9",
+                "langchain-openai": "1.3.5",
+                "langchain-google-genai": null
+              },
+              "language": "en",
+              "calls": [
+                {
+                  "phase": "extract",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "655591b05f1d6451382f15203915c0e92a973f7d7fab5bb8ee0fa2ea0bf1395f",
+                  "input_sha256": "0c1f50634127fcc476d89e27a30c3fc1b7b6d11f3fad595a87a8fae7bc9a89ce",
+                  "input_chars": 7567,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                },
+                {
+                  "phase": "event_field_source_batch_0",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "029e1bac4e00b1e88540e48c9757f0b23a4de404c60405db74aafc5aa7fc48c6",
+                  "input_sha256": "e25b850602158fec1bbbfa94bf1543319aca13c70c4b56222fed08a8f993dc3f",
+                  "input_chars": 4283,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                },
+                {
+                  "phase": "event_field_source_batch_1",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "029e1bac4e00b1e88540e48c9757f0b23a4de404c60405db74aafc5aa7fc48c6",
+                  "input_sha256": "04c24f4408d5c357cbc3a6337eee9d51607c5c6f7d08b8b37dc964982cfc77d6",
+                  "input_chars": 2130,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                }
+              ]
+            },
+            "source_sha256": "cc580679dff70f59292219cc5ec65c83bbd82cb99c7728a7a925e56bad243778",
+            "field_checks": [
+              {
+                "event_id": "E1",
+                "reference": "R-142",
+                "field": "source_event_id",
+                "value": "R-142",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-142",
+                "field": "event_date",
+                "value": "1 September 2097",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-142",
+                "field": "responsible_party",
+                "value": "Aster Owner Ltd",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-142",
+                "field": "cause",
+                "value": "Aster Owner Ltd blocked access",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-142",
+                "field": "cost_impact",
+                "value": "EUR 3400",
+                "verdict": "insufficient",
+                "rejected_quotes": 1
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-142",
+                "field": "time_impact",
+                "value": "6 days",
+                "verdict": "insufficient",
+                "rejected_quotes": 1
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-142",
+                "field": "source_event_id",
+                "value": "N-142",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-142",
+                "field": "event_date",
+                "value": "3 September 2097",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-142",
+                "field": "responsible_party",
+                "value": "Bracken Build Ltd",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-142",
+                "field": "cause",
+                "value": "Access delay R-142",
+                "verdict": "insufficient",
+                "rejected_quotes": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "file": "new-control-run.json",
+        "calls": 30,
+        "rows": [
+          {
+            "case": "expense-request-grant-field-scope-c143",
+            "project_id": "expense-request-and-grant-field-scope-c143-20261006-063948-17ec57",
+            "job_id": "95503fb7cf464052a9614661b08241cc",
+            "calls": 30,
+            "output_paths": {
+              "contract_identity": "/private/tmp/delaylama-event-fields-qa/runtime/processed/expense-request-and-grant-field-scope-c143-20261006-063948-17ec57/extractions/contract_identity_20261006_064015_410905.json",
+              "risk_allocator": "/private/tmp/delaylama-event-fields-qa/runtime/processed/expense-request-and-grant-field-scope-c143-20261006-063948-17ec57/extractions/risk_allocator_20261006_064018_727052.json",
+              "amendment_analyzer": "/private/tmp/delaylama-event-fields-qa/runtime/processed/expense-request-and-grant-field-scope-c143-20261006-063948-17ec57/extractions/amendment_analyzer_20261006_064019_959053.json",
+              "notification_register": "/private/tmp/delaylama-event-fields-qa/runtime/processed/expense-request-and-grant-field-scope-c143-20261006-063948-17ec57/extractions/notification_register_20261006_064021_337831.json",
+              "event_detector": "/private/tmp/delaylama-event-fields-qa/runtime/processed/expense-request-and-grant-field-scope-c143-20261006-063948-17ec57/extractions/event_detector_20261006_064031_045015.json",
+              "claim_viability": "/private/tmp/delaylama-event-fields-qa/runtime/processed/expense-request-and-grant-field-scope-c143-20261006-063948-17ec57/extractions/claim_viability_20261006_064119_323360.json"
+            },
+            "event_runtime": {
+              "schema_version": 1,
+              "agent": "event_detector",
+              "reasoning_mode": "multi_step",
+              "context_chars": 1000000,
+              "sectioned_extract": false,
+              "driver_versions": {
+                "agentomatic": "1.15.0",
+                "langchain-core": "1.4.9",
+                "langchain-openai": "1.3.5",
+                "langchain-google-genai": null
+              },
+              "language": "en",
+              "calls": [
+                {
+                  "phase": "extract",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "655591b05f1d6451382f15203915c0e92a973f7d7fab5bb8ee0fa2ea0bf1395f",
+                  "input_sha256": "123b370caed5c4a56932508519dad4fed00cc7b4ec8dac243283a894387f2535",
+                  "input_chars": 7741,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                },
+                {
+                  "phase": "event_field_source_batch_0",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "029e1bac4e00b1e88540e48c9757f0b23a4de404c60405db74aafc5aa7fc48c6",
+                  "input_sha256": "c5b892880b0667712f5368fc7f5e37a3d5c074932c780e799bbd93ab0dc36f21",
+                  "input_chars": 4437,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                },
+                {
+                  "phase": "event_field_source_batch_1",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "029e1bac4e00b1e88540e48c9757f0b23a4de404c60405db74aafc5aa7fc48c6",
+                  "input_sha256": "9b32707eb2d16d0387c24cccbe060a3ab23c2204e9a942f1987baa0e5d1257ee",
+                  "input_chars": 4473,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                },
+                {
+                  "phase": "event_field_source_batch_2",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "029e1bac4e00b1e88540e48c9757f0b23a4de404c60405db74aafc5aa7fc48c6",
+                  "input_sha256": "7c988ba88126c30f0a8e1dd37e3ae51d3e80705a9f561671e039dc922a8417b9",
+                  "input_chars": 2314,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                }
+              ]
+            },
+            "source_sha256": "49c864f74a04789af656f136f57ae39b52053581cbfc961a6b892fb0cd6f4472",
+            "field_checks": [
+              {
+                "event_id": "E1",
+                "reference": "R-143",
+                "field": "source_event_id",
+                "value": "R-143",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-143",
+                "field": "event_date",
+                "value": "1 July 2098",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-143",
+                "field": "responsible_party",
+                "value": "Aspen Owner Ltd",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-143",
+                "field": "cause",
+                "value": "Aspen Owner Ltd blocked Hazel Build Ltd’s access",
+                "verdict": "insufficient",
+                "rejected_quotes": 1
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-143",
+                "field": "cost_impact",
+                "value": "EUR 1700",
+                "verdict": "insufficient",
+                "rejected_quotes": 1
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-143",
+                "field": "time_impact",
+                "value": "2 days",
+                "verdict": "insufficient",
+                "rejected_quotes": 1
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-143",
+                "field": "source_event_id",
+                "value": "N-143",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-143",
+                "field": "event_date",
+                "value": "2 July 2098",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-143",
+                "field": "responsible_party",
+                "value": "Hazel Build Ltd",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-143",
+                "field": "cause",
+                "value": "Access delay R-143",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E3",
+                "reference": "Q-143",
+                "field": "source_event_id",
+                "value": "Q-143",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E3",
+                "reference": "Q-143",
+                "field": "event_date",
+                "value": "3 July 2098",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E3",
+                "reference": "Q-143",
+                "field": "responsible_party",
+                "value": "Hazel Build Ltd",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E3",
+                "reference": "Q-143",
+                "field": "cause",
+                "value": "Access delay R-143",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E4",
+                "reference": "G-143",
+                "field": "source_event_id",
+                "value": "G-143",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E4",
+                "reference": "G-143",
+                "field": "event_date",
+                "value": "4 July 2098",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E4",
+                "reference": "G-143",
+                "field": "responsible_party",
+                "value": "Aspen Owner Ltd",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E4",
+                "reference": "G-143",
+                "field": "cause",
+                "value": "Access delay R-143",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "file": "citation-recheck.json",
+        "calls": 4,
+        "rows": [
+          {
+            "case": "expense-request-grant-field-scope-c143",
+            "project_id": "expense-request-and-grant-field-scope-c143-20261006-063948-17ec57",
+            "job_id": "44ee7b692ca74101972271f22809abcf",
+            "calls": 4,
+            "output_paths": {
+              "event_detector": "/private/tmp/delaylama-event-fields-qa/runtime/processed/expense-request-and-grant-field-scope-c143-20261006-063948-17ec57/extractions/event_detector_20261006_064305_250648.json"
+            },
+            "event_runtime": {
+              "schema_version": 1,
+              "agent": "event_detector",
+              "reasoning_mode": "multi_step",
+              "context_chars": 1000000,
+              "sectioned_extract": false,
+              "driver_versions": {
+                "agentomatic": "1.15.0",
+                "langchain-core": "1.4.9",
+                "langchain-openai": "1.3.5",
+                "langchain-google-genai": null
+              },
+              "language": "en",
+              "calls": [
+                {
+                  "phase": "extract",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "655591b05f1d6451382f15203915c0e92a973f7d7fab5bb8ee0fa2ea0bf1395f",
+                  "input_sha256": "123b370caed5c4a56932508519dad4fed00cc7b4ec8dac243283a894387f2535",
+                  "input_chars": 7741,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                },
+                {
+                  "phase": "event_field_source_batch_0",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "f3e4703dafda0502434683e7c9a6fa01701748fa264914e9262f521edebf6246",
+                  "input_sha256": "c5b892880b0667712f5368fc7f5e37a3d5c074932c780e799bbd93ab0dc36f21",
+                  "input_chars": 4437,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                },
+                {
+                  "phase": "event_field_source_batch_1",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "f3e4703dafda0502434683e7c9a6fa01701748fa264914e9262f521edebf6246",
+                  "input_sha256": "9b32707eb2d16d0387c24cccbe060a3ab23c2204e9a942f1987baa0e5d1257ee",
+                  "input_chars": 4473,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                },
+                {
+                  "phase": "event_field_source_batch_2",
+                  "json_repair": false,
+                  "llm": {
+                    "class": "langchain_openai.chat_models.base.ChatOpenAI",
+                    "model": "gemini-3.1-flash-lite",
+                    "endpoint_origin": "https://generativelanguage.googleapis.com",
+                    "parameters": {
+                      "temperature": 0.1,
+                      "top_p": null,
+                      "top_k": null,
+                      "max_tokens": 4096,
+                      "max_completion_tokens": null,
+                      "seed": null,
+                      "reasoning_effort": null,
+                      "thinking_budget": null,
+                      "frequency_penalty": null,
+                      "presence_penalty": null,
+                      "stop": null,
+                      "enable_thinking": null
+                    }
+                  },
+                  "system_sha256": "f3e4703dafda0502434683e7c9a6fa01701748fa264914e9262f521edebf6246",
+                  "input_sha256": "7c988ba88126c30f0a8e1dd37e3ae51d3e80705a9f561671e039dc922a8417b9",
+                  "input_chars": 2314,
+                  "status": "parsed",
+                  "transport_retry_limit": 0,
+                  "output_contract_sha256": "d958debd05146b6c77119d1a8baf2cf581908b223d24fbb0a0b8a865e9e3067f",
+                  "finish_reason": "stop",
+                  "response_model": "gemini-3.1-flash-lite",
+                  "system_fingerprint": null
+                }
+              ]
+            },
+            "source_sha256": "49c864f74a04789af656f136f57ae39b52053581cbfc961a6b892fb0cd6f4472",
+            "field_checks": [
+              {
+                "event_id": "E1",
+                "reference": "R-143",
+                "field": "source_event_id",
+                "value": "R-143",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-143",
+                "field": "event_date",
+                "value": "1 July 2098",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-143",
+                "field": "responsible_party",
+                "value": "Aspen Owner Ltd",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-143",
+                "field": "cause",
+                "value": "Aspen Owner Ltd blocked Hazel Build Ltd’s access",
+                "verdict": "insufficient",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-143",
+                "field": "cost_impact",
+                "value": "EUR 1700",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E1",
+                "reference": "R-143",
+                "field": "time_impact",
+                "value": "2 days",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-143",
+                "field": "source_event_id",
+                "value": "N-143",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-143",
+                "field": "event_date",
+                "value": "2 July 2098",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-143",
+                "field": "responsible_party",
+                "value": "Hazel Build Ltd",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E2",
+                "reference": "N-143",
+                "field": "cause",
+                "value": "Access delay R-143",
+                "verdict": "insufficient",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E3",
+                "reference": "Q-143",
+                "field": "source_event_id",
+                "value": "Q-143",
+                "verdict": "insufficient",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E3",
+                "reference": "Q-143",
+                "field": "event_date",
+                "value": "3 July 2098",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E3",
+                "reference": "Q-143",
+                "field": "responsible_party",
+                "value": "Hazel Build Ltd",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E3",
+                "reference": "Q-143",
+                "field": "cause",
+                "value": "Access delay R-143",
+                "verdict": "insufficient",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E4",
+                "reference": "G-143",
+                "field": "source_event_id",
+                "value": "G-143",
+                "verdict": "insufficient",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E4",
+                "reference": "G-143",
+                "field": "event_date",
+                "value": "4 July 2098",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E4",
+                "reference": "G-143",
+                "field": "responsible_party",
+                "value": "Aspen Owner Ltd",
+                "verdict": "supports",
+                "rejected_quotes": 0
+              },
+              {
+                "event_id": "E4",
+                "reference": "G-143",
+                "field": "cause",
+                "value": "Access delay R-143",
+                "verdict": "insufficient",
+                "rejected_quotes": 0
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "native_source_jobs": 3,
+    "native_internal_model_calls_not_counted": true,
+    "diagnostic_calls": 1,
+    "deliberate_wrong_fields": [
+      {
+        "request_id": "event_0_cost_impact",
+        "event_index": 0,
+        "field": "cost_impact",
+        "value": "EUR 6200",
+        "field_kind": "actual_incurred_cost",
+        "field_scope": "own_event",
+        "verdict": "contradicts",
+        "explanation": "The record states the actual expense was EUR 1700, while the proposal claims EUR 6200 (which is the requested amount, not the actual incurred cost).",
+        "citations": [
+          {
+            "quote": "The actual access delay was two days and caused EUR 1700 of additional expense.",
+            "char_start": 717,
+            "char_end": 796,
+            "location_basis": "unique_original",
+            "clause_ref": "",
+            "source_matched": true
+          },
+          {
+            "quote": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098.",
+            "char_start": 613,
+            "char_end": 677,
+            "location_basis": "unique_original",
+            "clause_ref": "",
+            "source_matched": true
+          }
+        ],
+        "rejected_quotes": 0,
+        "requires_review": true,
+        "event_scope": {
+          "path": "events[0]",
+          "title": "Access blockage by Owner",
+          "responsible_party": "Aspen Owner Ltd",
+          "event_date": "1 July 2098",
+          "source_event_id": "R-143"
+        },
+        "event_checks": [
+          {
+            "premise": "occurrence_scope",
+            "association": "same_event",
+            "verdict": "supports",
+            "explanation": "The record identifies the event occurrence.",
+            "citations": [
+              {
+                "quote": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098.",
+                "char_start": 613,
+                "char_end": 677,
+                "location_basis": "unique_original",
+                "clause_ref": "",
+                "source_matched": true
+              }
+            ],
+            "rejected_quotes": 0,
+            "requires_review": true
+          },
+          {
+            "premise": "impact_attribution",
+            "association": "explicit",
+            "verdict": "supports",
+            "explanation": "The record explicitly attributes the expense to the blockage.",
+            "citations": [
+              {
+                "quote": "The actual access delay was two days and caused EUR 1700 of additional expense.",
+                "char_start": 717,
+                "char_end": 796,
+                "location_basis": "unique_original",
+                "clause_ref": "",
+                "source_matched": true
+              }
+            ],
+            "rejected_quotes": 0,
+            "requires_review": true
+          }
+        ]
+      },
+      {
+        "request_id": "event_0_time_impact",
+        "event_index": 0,
+        "field": "time_impact",
+        "value": "7 days",
+        "field_kind": "observed_duration",
+        "field_scope": "own_event",
+        "verdict": "contradicts",
+        "explanation": "The record states the actual access delay was two days, while the proposal claims seven days (which is the granted extension, not the actual delay).",
+        "citations": [
+          {
+            "quote": "The actual access delay was two days and caused EUR 1700 of additional expense.",
+            "char_start": 717,
+            "char_end": 796,
+            "location_basis": "unique_original",
+            "clause_ref": "",
+            "source_matched": true
+          },
+          {
+            "quote": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098.",
+            "char_start": 613,
+            "char_end": 677,
+            "location_basis": "unique_original",
+            "clause_ref": "",
+            "source_matched": true
+          }
+        ],
+        "rejected_quotes": 0,
+        "requires_review": true,
+        "event_scope": {
+          "path": "events[0]",
+          "title": "Access blockage by Owner",
+          "responsible_party": "Aspen Owner Ltd",
+          "event_date": "1 July 2098",
+          "source_event_id": "R-143"
+        },
+        "event_checks": [
+          {
+            "premise": "occurrence_scope",
+            "association": "same_event",
+            "verdict": "supports",
+            "explanation": "The record identifies the event occurrence.",
+            "citations": [
+              {
+                "quote": "Aspen Owner Ltd blocked Hazel Build Ltd’s access on 1 July 2098.",
+                "char_start": 613,
+                "char_end": 677,
+                "location_basis": "unique_original",
+                "clause_ref": "",
+                "source_matched": true
+              }
+            ],
+            "rejected_quotes": 0,
+            "requires_review": true
+          },
+          {
+            "premise": "impact_attribution",
+            "association": "explicit",
+            "verdict": "supports",
+            "explanation": "The record explicitly attributes the delay duration to the blockage.",
+            "citations": [
+              {
+                "quote": "The actual access delay was two days and caused EUR 1700 of additional expense.",
+                "char_start": 717,
+                "char_end": 796,
+                "location_basis": "unique_original",
+                "clause_ref": "",
+                "source_matched": true
+              }
+            ],
+            "rejected_quotes": 0,
+            "requires_review": true
+          }
+        ]
+      }
+    ],
+    "terminal_application_jobs": 56,
+    "terminal_counts": {
+      "done": 55,
+      "error": 1
+    },
+    "native_registry": {
+      "cancelled": 0,
+      "done": 3,
+      "failed": 0,
+      "queued": 0,
+      "running": 0
+    },
+    "graph": {
+      "nodes": 36,
+      "edges": 58,
+      "source_documents": 3,
+      "source_sections": 6
+    },
+    "neighborhood": {
+      "node_id": "7120a406-e854-4357-84a7-11ffb8dcfe94",
+      "node_count": 23,
+      "original_ids": [
+        "synthetic-contract-c143",
+        "occurrence-record-r143",
+        "notice-request-and-grant-c143"
+      ],
+      "completeness": "unestablished",
+      "model_called": false,
+      "connections": 42,
+      "coverage": {
+        "scope": "Loaded graph neighborhood, not the entire contract",
+        "connection_steps": 3,
+        "graph_snapshot_partial": false,
+        "omitted_connections_by_budget": 0,
+        "missing_endpoint_connections": 0,
+        "max_nodes": null,
+        "max_edges": null,
+        "completeness": "unestablished",
+        "entire_connected_component_requested": false,
+        "snapshot_atomic": false
+      }
+    },
+    "tests": {
+      "backend": 1705,
+      "frontend": 1051,
+      "frontend_files": 91,
+      "build_passed": true,
+      "bundle_warning_retained": true,
+      "go_changes": false,
+      "engine_default_reused": 68
+    },
+    "date": "2026-10-06",
+    "scope": "Automatic original-source field evidence candidates for execution events; strict repeated quote recovery; current-source/event binding and compact evidence UI. Not a claim of complete contract accuracy.",
+    "observations": [
+      "Normal extraction stores the original in document, so source selection must fall back from citation_document. The skipped initial runs are retained.",
+      "C141/C142 wired passes produced field evidence but expense/duration attribution remained incomplete. Their raw checks are retained.",
+      "Fresh C143 kept EUR1700 actual expense and two-day actual delay separate from EUR6200 requested payment and seven granted completion days.",
+      "Initial C143 used invented ellipses and incomplete actor/date impact premises; strict source validation withheld support.",
+      "One recheck after explicit contiguous-quote and per-impact premise instructions returned source-bound expense and duration candidates. Some cause and source-reference checks remain incomplete.",
+      "A separate deliberate EUR6200/7-day occurrence proposal was contradicted against actual expense/delay source premises in one six-field batch; saved outputs remained unchanged.",
+      "Claim Desk, evidence review and analysis-graph inspector expose the same field candidates with exact matches, bounded own-document excerpts and expandable details. No human feedback was accepted automatically.",
+      "The native graph still contains duplicate access-block candidates and an invoice-issuance candidate unsupported as issuance by its action sentence. These remain retained for qualification."
+    ],
+    "remaining": [
+      "Synthetic English development draws are not independent legal gold, held-out/repeated-seed, causal or exhaustive long-document evaluations.",
+      "Graph neighborhood retrieval and exact text matching do not prove relationship meaning, complete extraction or entitlement.",
+      "Native occurrence/entity duplication, action-versus-documentation classification, source recall, procedure/applicability and payment reconciliation remain open.",
+      "Each populated material field is checked; unknown or omitted fields are not discovered by this pass. Financial-record stage candidates are not independently rechecked here.",
+      "Bounded input and eight-field output batches may omit information; transport/parse failures and missing premises remain insufficient. Additional calls add latency/cost; no measured speed gain.",
+      "Earlier primary-quote warnings and nested historical metadata remain separately visible; no raw history was rewritten.",
+      "No new Go implementation, LayaGo/GLiNER/MLX training, architecture or weights."
+    ],
+    "graph_projection_policy": "Field checks remain application review metadata. They do not write native relations, change amounts/durations, sum related records or accept human reviews.",
+    "preservation": {
+      "protected_engine_source_files_unchanged": true,
+      "protected_app_artifacts_unchanged": true,
+      "user_studio_unchanged": true,
+      "orchid_studio_unchanged": true,
+      "user_graph_all_tables_unchanged": true,
+      "recorded_replay_nodes_edges_unchanged_by_GUI": true,
+      "owned_jobs_terminal_verified_before_cleanup": true,
+      "replay_verified_before_cleanup": true,
+      "user_engine_health": {
+        "analysis_jobs": {
+          "cancelled": 0,
+          "done": 0,
+          "failed": 0,
+          "queued": 0,
+          "running": 0
+        },
+        "analysis_jobs_scope": "service",
+        "edge_count": 660,
+        "episode_count": 321,
+        "node_count": 1444,
+        "schema": "general",
+        "status": "ok"
+      },
+      "user_graph_fingerprints": {
+        "edges": {
+          "rows": 660,
+          "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+        },
+        "episodes": {
+          "rows": 321,
+          "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+        },
+        "nodes": {
+          "rows": 1444,
+          "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+        },
+        "schema_meta": {
+          "rows": 1,
+          "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+        },
+        "timeline_events": {
+          "rows": 3437,
+          "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+        }
+      }
+    },
+    "activation": {
+      "old_launcher_pid": 84778,
+      "new_launcher_pid": 82549,
+      "api_healthy": true,
+      "journal_unchanged": true,
+      "journal": {
+        "count": 24,
+        "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+      },
+      "app_env_unchanged": true,
+      "health": {
+        "status": "healthy",
+        "agents": {
+          "agent_critic": {
+            "status": "healthy"
+          },
+          "amendment_analyzer": {
+            "status": "healthy"
+          },
+          "claim_viability": {
+            "status": "healthy"
+          },
+          "contract_identity": {
+            "status": "healthy"
+          },
+          "contract_identity_base": {
+            "status": "healthy"
+          },
+          "event_detector": {
+            "status": "healthy"
+          },
+          "extractor": {
+            "status": "healthy"
+          },
+          "guarantee_analyzer": {
+            "status": "healthy"
+          },
+          "notification_register": {
+            "status": "healthy"
+          },
+          "penalty_analyzer": {
+            "status": "healthy"
+          },
+          "project_context": {
+            "status": "healthy"
+          },
+          "prompt_improver": {
+            "status": "healthy"
+          },
+          "risk_allocator": {
+            "status": "healthy"
+          }
+        },
+        "agent_count": 13,
+        "plugins": {},
+        "plugin_count": 0,
+        "endpoints": {
+          "project_workflow": {
+            "status": "healthy"
+          },
+          "prompt_editor": {
+            "status": "healthy"
+          },
+          "review_sessions": {
+            "status": "healthy"
+          },
+          "studio_sessions": {
+            "status": "healthy"
+          }
+        },
+        "endpoint_count": 4,
+        "ingestors": {
+          "markitdown": {
+            "status": "healthy"
+          }
+        },
+        "ingestor_count": 1,
+        "pipelines": [
+          "claim_prep",
+          "consolidate",
+          "contract_analysis",
+          "contract_analysis_sequential",
+          "contract_identity_base",
+          "contract_identity_critic",
+          "contract_identity_only",
+          "extract_batch",
+          "extractor_fanout",
+          "project_consolidate",
+          "prompt_improve"
+        ],
+        "pipeline_count": 11,
+        "tasks_enabled": true,
+        "storage": {
+          "status": "healthy"
+        }
+      }
+    },
+    "cleanup": {
+      "owned_processes": [
+        {
+          "service": "engine",
+          "pid": 52611,
+          "port": 8097
+        },
+        {
+          "service": "api",
+          "pid": 82379,
+          "port": 8081
+        },
+        {
+          "service": "frontend",
+          "pid": 52614,
+          "port": 5175
+        }
+      ],
+      "owned_ports_closed": true,
+      "terminal_application_jobs": 56,
+      "native_jobs": {
+        "cancelled": 0,
+        "done": 3,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "temporary_browser_tabs": [
+        164
+      ],
+      "temporary_browser_tab_closed": true
+    },
+    "export_policy": "Vectors/embeddings omitted; intermediate failures and raw proposals retained; configured credential-value scan passed.",
+    "asset_manifest": [
+      {
+        "file": "docs/validation/assets/event-field-evidence/api-activation.json",
+        "sha256": "8f7db2e8a56b29cf96675da5669706f355de58197f950d84ffee6d85a1d5677d",
+        "bytes": 2081
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/backend.log",
+        "sha256": "0ecf9ed5b3db1b045447f5dab43460852f7ec35f7026ecda2148ac104f505d13",
+        "bytes": 1987
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/build.log",
+        "sha256": "20a5371d2153531beb84cbec7b3e8d94e9176a8928c341c6f275cde69fd73352",
+        "bytes": 1274
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/citation-recheck-outputs.json",
+        "sha256": "3b7f23127453a246dd34c264b5a1eafc26a8441f004ad67818f13356e014a53f",
+        "bytes": 91656
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/citation-recheck-process.log",
+        "sha256": "94df9b7ee1495044611687997b8f7d7e34643bc8036a8cd8f4606a5d0683854c",
+        "bytes": 139
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/citation-recheck.json",
+        "sha256": "f9662cd15a12a9ea846ac24e6f48fae2ab8f110435abf75797e8d02307730aeb",
+        "bytes": 151508
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/claim-field-dom.txt",
+        "sha256": "6b562b4488bfce6324ba5b83bed39dbcc624411f95f314880130e55528efb472",
+        "bytes": 54489
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/claim-field.png",
+        "sha256": "2f299184e5977f907e8f5e82fa863a82d1f1b148749fd6cd0743af89d131f586",
+        "bytes": 159852
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/cleanup.json",
+        "sha256": "6fae026739cbe5755c661a389245cfafb0b92167343f0b1bd6b07ff0a48caa80",
+        "bytes": 524
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/desk-dispersed-notice-subject-c142.json",
+        "sha256": "1ad06f529c62355183c04a27154ef71a266c4f94a7703adb4f7340499cf127cf",
+        "bytes": 256242
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/desk-expense-request-grant-field-scope-c143.json",
+        "sha256": "b3fc0105f62106a5ac18450a33ecdd1953ef64452136f03746f89b85f13fd10f",
+        "bytes": 516853
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/desk-related-notice-c141.json",
+        "sha256": "a4dfc470ba5f682174339b91b58633ca6bf9232c4c17c366cc4162ad2f6e550e",
+        "bytes": 322871
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/false-proposal-diagnostic.json",
+        "sha256": "14e5a7587f507261c09cdcc65eff37fea11dcdcf97e7deaa621bb0c5a2c28b4d",
+        "bytes": 36132
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/false-proposal-freeze.json",
+        "sha256": "4a7027a7f83b9a75d536acd030c9cb5458db0b46e71e6432a861b90477cf866c",
+        "bytes": 15799
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/false-proposal-process.log",
+        "sha256": "d1ed92816e262428e2f472987c326bd8f9c13c4664b465d3846ec8a5107f6cc6",
+        "bytes": 1574
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/frontend.log",
+        "sha256": "85c10bce5777c283d8580669e3cbf8e6f2cc961ff581176cbc4e817441327d77",
+        "bytes": 342
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/graph-c143.json",
+        "sha256": "610b74ffed3b4d62f2b0b6232a3fb8b6fbe37221a3d3ecbcef07ec088bd309bc",
+        "bytes": 421851
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/graph-field-dom.txt",
+        "sha256": "c6e45b5c0d9ffe57daa0ed4f15314928b86a6a639342812d0d30209bc1edfe99",
+        "bytes": 30874
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/graph-field.png",
+        "sha256": "60a0a3e5a8d4875a3a6d01e999edac68d2d2d2c0eaa7b083ec4e14dc37a70528",
+        "bytes": 177457
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/harness-notes.json",
+        "sha256": "cf40e6a1cda87ba001e19d75e23b65773c25f0e6b9808dd1306698e87888e593",
+        "bytes": 1304
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/initial-backend.log",
+        "sha256": "9127802b68b4559ae1dea861e9a70c1d5a39c7d5e91ee025c5905491b84e2751",
+        "bytes": 3761
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/initial-build.log",
+        "sha256": "7afc643f27b129234000684992ea50991d08fbdaed131ab49f640d74cac2d5db",
+        "bytes": 277
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/initial-frontend.log",
+        "sha256": "b2b4477ce25ed26d76f69bfae990982d1b4dd0574e1a3fe6438f53873ad6ef5c",
+        "bytes": 20720
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/native-event-review.json",
+        "sha256": "36b9411ec9ed4e667e90632d4a7ae9bc212a35abeabecd7419869e4cceb8f42d",
+        "bytes": 48187
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/neighborhood-c143.json",
+        "sha256": "3d166b8840024b860119868dbf427591724eb63647de2ad5a9ca8ba837ae62a2",
+        "bytes": 124914
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/new-control-freeze.json",
+        "sha256": "82e38317be8cd5bd6a583964769a31d62ad5ef5f502b719c365fa6e3a9d29958",
+        "bytes": 218
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/new-control-process.log",
+        "sha256": "522e944d721a1e9c8985be8a0203b538fb7e2bc66a08a8cd3991795a265b4c96",
+        "bytes": 254
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/new-control-run-outputs.json",
+        "sha256": "be8816d9a5ff14334882efb6129ce02c8b93a2f404a67c41585701ed5d779b3e",
+        "bytes": 440722
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/new-control-run.json",
+        "sha256": "98e7f7754d7e8a2289ef9509e4fbe96950811f67700fa1e066e753331aa4ffcc",
+        "bytes": 158225
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/new-control.json",
+        "sha256": "c0f0c9a76d646d9d4e5548ea92bc8db1d9ffc8e11840b9f8351d427249089eb3",
+        "bytes": 1810
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/owned-api-citation-refresh.json",
+        "sha256": "6184bd66e914c5c78dce9291630f6e349cff26d294f175982722c1a2b41b8799",
+        "bytes": 773
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/owned-api-display-refresh.json",
+        "sha256": "3991e5cb6c5976a9986cb880d82de1802de46e8ac2eddd3003d295f34a7e85f5",
+        "bytes": 773
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/owned-api-original-refresh.json",
+        "sha256": "81e1fc591263d96607d0d64440ebd642cb8b7ac17444657db6cee6bf34f2073a",
+        "bytes": 670
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/retained-controls.json",
+        "sha256": "a7c6e86ac0a751df91b58190d6ee2dee5e6b4ef3c67a0f448da01751ff00e841",
+        "bytes": 271
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/review-field-dom.txt",
+        "sha256": "110570daf39d5861377ca60b49487b5ddf8a32e488bec1876ddd86ed52290b1c",
+        "bytes": 32122
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/review-field.png",
+        "sha256": "9e5d942a5ba0d16bb3556a73f7f8601e557cbadafd1ccddb629503051863d934",
+        "bytes": 185782
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/saved-process.log",
+        "sha256": "966efbb6b72fada852df60cb6ffbe6dcb7f38f1663a98c89d658a95c918a2e54",
+        "bytes": 200
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/saved-runs-outputs.json",
+        "sha256": "9f969c4814d926be6a6d7d8f319b188f9cadc1c6072da66e6954c4b2d38fe4fc",
+        "bytes": 224952
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/saved-runs.json",
+        "sha256": "b99df5e7184582866988787897a2eda9302c8ff50a6edf841ec49a4ae1e28c5a",
+        "bytes": 66511
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/target-backend.log",
+        "sha256": "25f1f312ed649dc941e5fbc2e62d3556f117fda324a4d66797f9283a7b7ee0ea",
+        "bytes": 145
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/verification-process.log",
+        "sha256": "bedd37993be10f471e47426d27590dc0801be47766352f0717b8608653fd35bc",
+        "bytes": 903
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/verification.json",
+        "sha256": "2b887bb3d1b330ec651621dd11f7de8a8dfb4be273125841727f76baa1aad3a1",
+        "bytes": 53649
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/wired-process.log",
+        "sha256": "966efbb6b72fada852df60cb6ffbe6dcb7f38f1663a98c89d658a95c918a2e54",
+        "bytes": 200
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/wired-runs-outputs.json",
+        "sha256": "fb65eeb66ea80938cbbdf8a21f37ecef4eb574291649cc2135e05d9aa518db61",
+        "bytes": 199276
+      },
+      {
+        "file": "docs/validation/assets/event-field-evidence/wired-runs.json",
+        "sha256": "e4bc6da7b40b8fcfdf3aa1ff502b29af580152b216593283d8298647e65e7e44",
+        "bytes": 66514
+      }
+    ]
+  }
+}

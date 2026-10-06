@@ -5689,3 +5689,63 @@ long-contract accuracy. Semantic entity/occurrence duplication, event quotation
 coverage, related title/scope consistency, precise applicability/labels and payment
 reconciliation remain open. No LayaGo/GLiNER/MLX architecture, new training/weights or
 measured speed gain occurred.
+
+## L151 — A field quote must establish its own occurrence and source kind (2026-10-06)
+
+**Evidence:** [DelayLama event-field validation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-event-field-evidence.md)
+and [hashed receipt](validation/delaylama-event-field-evidence-20261006.json).
+
+Occurrence-only quotations can leave an otherwise correct amount or duration
+ungrounded. An independent source pass now checks populated event references,
+dates, actors, causes, actual costs and observed durations. A field needs its own
+source kind and occurrence scope; impacts additionally need the action's actor/date
+premise and explicit attribution. Requested money, awarded payments and granted
+extensions are distinct from incurred expense and actual elapsed delay. Matching
+text, shape or model agreement does not certify any of those interpretations.
+
+Short quotations repeated across requests, awards and expense records must not
+default to their first occurrence. Require exact, unique own surrounding context
+and one child match inside it. Invented ellipses and reconstructed passages remain
+insufficient. Preserve original scalar positions and convert to UTF-16 for browser
+highlights. Bind candidates to the complete original digest and captured event,
+including financial-stage semantics; verification metadata enrichment alone should
+not invalidate them. Never turn source-check candidates into human acceptance.
+
+Integration checks matter: normal extraction kept its original in `document`, not
+the separate `citation_document` field, initially skipping the new pass. Raw skipped
+stages are retained. An initial UI projection also exposed private metadata and
+changed legacy JSON expectations; protocol-gated selected fields restored those
+tests. Per-field expandable summaries avoid flooding the event register with
+repeated excerpts. Preview context stays within its own original document while
+validation still binds to the whole original. Existing review concerns remain
+separate from automatic candidates.
+
+The fresh three-source control preserved EUR 1700 actual expense/two days actual
+delay separately from a EUR 6200 request/seven granted completion days. Initial
+field checks used invented ellipses and omitted actor/date premises. Explicit
+contiguous-quote and occurrence instructions preceded one recheck that returned
+own cost/duration candidates, with cause/reference gaps still visible. A separate
+frozen deliberately wrong EUR 6200/seven-day occurrence proposal received
+contradictions in one six-field batch; saved output stayed unchanged. These are
+observed single development draws, not causal accuracy estimates.
+
+**Training implications:** supervise source span selection, occurrence identity,
+field kind, own-versus-related scope, actor/date anchors and explicit attribution
+as separate tasks. Generate hard negatives with identical amounts in requests,
+awards and incurred expense; granted versus observed days; headings separated
+from facts; invented ellipses; duplicate references; changed originals with intact
+local quotes; and ambiguous subquotes requiring own context. Distinguish an invoice
+documenting expense from the act of issuing or paying it. Use unknown/missing fields
+and incomplete premises as abstention examples, not false zero/absence labels.
+Keep all failed/intermediate proposals and UI binding failures in experiment records.
+
+**Evidence limits:** 77 application calls and three native source jobs, excluding
+native internal calls; 1,705 backend and 1,051 frontend tests plus build. Event checks
+retained Gemini 3.1 Flash Lite, temperature 0.1, 4096-token output budget and zero
+transport retries. The native graph had 36 nodes/58 edges; a three-step neighborhood
+retrieved all three originals, with unestablished completeness. Duplicate access
+blocks and an unsupported invoice-issuance action remain in the native candidates.
+This populated-field pass does not establish omitted-field recall, native entity
+resolution, legal applicability or payment reconciliation. Synthetic English cases
+are not independent legal gold, held-out/repeated-seed or long-contract accuracy.
+No LayaGo/GLiNER/MLX architecture, training, weights or measured speed gain occurred.
