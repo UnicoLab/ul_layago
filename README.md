@@ -12,10 +12,10 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L141 finding](docs/learning-log.md#l141--party-roles-are-not-relationship-witnesses-2026-10-06)
-records why party roles cannot establish contracts, missions or beneficiaries.
-Source-only nominations, explicit relationship witnesses and retained failures
-remain separate from semantic quality certificates.
+The latest [L142 finding](docs/learning-log.md#l142--occurrence-copies-and-acceptance-origins-are-separate-2026-10-06)
+records exact original-occurrence grouping and why automated nominations need
+a separate unreviewed creation route. Duplicate records and model confidence
+must not become independent evidence or human acceptance.
 
 ## Build and use
 

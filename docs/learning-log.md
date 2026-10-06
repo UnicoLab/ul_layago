@@ -5282,3 +5282,40 @@ reconciliation. Other heuristic/model predicates, long-dossier recall, precedenc
 causality/fulfillment and durable native job recovery still need evaluation. Previous
 claim abstention/omission/waiver failures are not resolved by this graph generation
 change. No LayaGo architecture, GLiNER integration, MLX or supervisor change occurred.
+
+
+## L142 — Occurrence copies and acceptance origins are separate (2026-10-06)
+
+**Evidence:** [DelayLama receipt](validation/delaylama-party-role-provenance-20261006.json)
+links source-offset tests, read-only retained graph replay, browser highlights,
+failed and corrected live storage probes and preserved-state activation.
+
+A full original and an extraction-indexed contiguous excerpt could contain the
+same role declaration. The verifier recognized the former but left the latter
+unchecked, falsely describing identical labels as competing. Exact excerpt lineage
+(document identity/hash/range, scoped episode, local UTF-8 quote coordinates)
+now projects to the same Unicode original occurrence. Only equal checked occurrence,
+role, polarity/qualification and basis are grouped. Historical records remain;
+missing verification is separate from a real recorded-label conflict.
+
+A live nomination probe also exposed implicit human acceptance: the manual-node API
+overwrote candidate properties with validated/human stamps. A dedicated unreviewed
+creation route now stores pending records, strips supplied review stamps and rejects
+scope overrides. The client refuses unsupported engines and never falls back to
+manual acceptance or replays an uncertain write. Two bad initial synthetic records
+remain as failure evidence; the corrected live probe has two pending nodes and zero
+edges. No model/native source analysis or training was run.
+
+**Training implications:** distinguish duplicate indexing from distinct source
+occurrences, and source verification from semantic qualification. Construct controls
+with identical role wording in separate instruments/versions, repeated Unicode
+passages, shifted/corrupt excerpt ranges and explicit contradictions. Do not count
+duplicate citations as independent support or an evidence-strength boost. A model
+or LayaGo confidence score cannot become a human-review status; keep nomination,
+source-location, interpretation and acceptance origins separate in datasets/UI.
+
+**Open:** qualified legal roles and unrecognized multilingual labels still need
+independent source review. Legacy implicit-human stamps require historical auditing;
+source and graph histories were not migrated. Earlier claim, recall, causality and
+native recovery errors remain open. This work introduced no LayaGo/GLiNER/MLX or
+training-supervisor quality/performance improvement.
