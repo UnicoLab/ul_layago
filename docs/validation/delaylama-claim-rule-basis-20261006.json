@@ -1,0 +1,577 @@
+{
+  "learning": "L143",
+  "date": "2026-10-06",
+  "report": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-claim-rule-basis.md",
+  "source_receipt_sha256": "e1c027ed0a1e9ee8d0678a55b3e4693b3e3d3afdfdb7e9e2ff7dc0e6d1c412f8",
+  "delaylama_receipt": {
+    "date": "2026-10-06",
+    "scope": "Per-event/target original-first claim reasoning, inspectable current-source-bound rule traces, and source-first directed operative replacement gate (default67). Specific failures retained; not complete semantic correctness.",
+    "tests": {
+      "backend": 1634,
+      "frontend": 1006,
+      "frontend_files": 84,
+      "build_passed": true,
+      "go_full_passed": true,
+      "go_relevant_race_passed": true,
+      "patch_arms": 12,
+      "optional_variant_suites": 11
+    },
+    "calls": {
+      "production_application": 66,
+      "prototype_application": 17,
+      "recorded_application_total": 83,
+      "native_source_analysis_jobs": 6,
+      "native_internal_model_calls_not_counted": true
+    },
+    "coverage": {
+      "reported_events": 15,
+      "returned_event_target_pairs": 30
+    },
+    "new_graph_initial_failure": {
+      "case": "C134",
+      "nodes": 56,
+      "edges": 87,
+      "negated_draft_supersedes_positive_edge_retained": "a84268eb-9ef6-4bcd-ae8c-515a86ef106d"
+    },
+    "replacement_recheck": {
+      "nodes": 61,
+      "edges": 92,
+      "replacements": [
+        {
+          "from": "AM-36",
+          "to": "AM-34",
+          "source_text": "AM-36 is operative and expressly supersedes AM-34 solely for the completion date, setting it to 15 June 2074.",
+          "audit": {
+            "pair_id": "concept:0",
+            "reason": "source_first_witness",
+            "relation_type": "SUPERSEDES",
+            "source_id": "d444e376-e81f-4494-9f8c-a5c5a2472fd7",
+            "statements": [
+              {
+                "citations": [
+                  {
+                    "original_citation": {
+                      "char_end": 848,
+                      "char_start": 739,
+                      "source_id": "source:signed-change-and-later-draft-c134",
+                      "source_text": "AM-36 is operative and expressly supersedes AM-34 solely for the completion date, setting it to 15 June 2074."
+                    },
+                    "quote": "AM-36 is operative and expressly supersedes AM-34 solely for the completion date, setting it to 15 June 2074."
+                  }
+                ],
+                "explanation": "AM-36 is stated to be operative and expressly supersedes AM-34 solely for the completion date.",
+                "kind": "instrument_replacement",
+                "modality": "actual",
+                "polarity": "positive",
+                "predicate_quote": "AM-36 is operative and expressly supersedes AM-34 solely for the completion date",
+                "source_id": "d444e376-e81f-4494-9f8c-a5c5a2472fd7",
+                "target_id": "a4eed66b-f7e3-4e6c-8901-affb36811290"
+              }
+            ],
+            "status": "candidate_support",
+            "target_id": "a4eed66b-f7e3-4e6c-8901-affb36811290",
+            "version": "source-first-predicate-v1"
+          }
+        }
+      ],
+      "pagination": {
+        "node_limit": 2000,
+        "edge_limit": 4000,
+        "nodes_more": false,
+        "edges_more": false
+      },
+      "source_checks": {
+        "nodes": {
+          "unavailable": 10,
+          "ambiguous": 2,
+          "located": 49
+        },
+        "edges": {
+          "located": 92
+        }
+      },
+      "detected_events": [
+        {
+          "id": "E1",
+          "source_event_id": "AD-34",
+          "title": "Withholding of south-platform access"
+        },
+        {
+          "id": "E2",
+          "source_event_id": "MN-34",
+          "title": "Service of notice MN-34"
+        },
+        {
+          "id": "E3",
+          "source_event_id": "AM-34",
+          "title": "Signature of AM-34"
+        },
+        {
+          "id": "E4",
+          "source_event_id": "AM-36",
+          "title": "Signature of AM-36"
+        }
+      ],
+      "source_event_coverage_limit": "AM-35 circulation is omitted from the four reported events in this draw, although source graph contains it. Unit coverage describes returned reported IDs, not exhaustive event extraction."
+    },
+    "saved_workflow_graph_mutations": {
+      "prior_edges_unchanged": true,
+      "nodes_before": 150,
+      "nodes_after": 150,
+      "additional_episodes": 6,
+      "note": "Source registration/alias dedup refreshed updated_at and merged_from candidate IDs on ten existing nodes, added six indexing episodes and 51 timeline entries. Whole DB is NOT unchanged; no native analyses were submitted on reused controls and edge rows remain identical. Repeated indexing/provenance histories require further audit."
+    },
+    "patch": {
+      "name": "instrument-replacement-predicate",
+      "default_count": 67,
+      "sha256": "3873fd80e6f90749d8e5939980f4ec1498d18158327e15923c79148a883e3a1c"
+    },
+    "source_equivalence": {
+      "non_test_go_files": 164,
+      "owned_development_matches_clean_default67": true
+    },
+    "main_engine_activation": {
+      "old_engine_pid": 52009,
+      "engine_pid": 83448,
+      "api_pid_unchanged": 72969,
+      "database_backup": "/private/tmp/delaylama-claim-basis-qa/activation-backup/graph.db",
+      "binary_backup": "/private/tmp/delaylama-claim-basis-qa/activation-backup/chronograph-previous",
+      "finished_jobs_archived": 0,
+      "graph_rows_unchanged": true,
+      "table_fingerprints": {
+        "edges": {
+          "rows": 660,
+          "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+        },
+        "episodes": {
+          "rows": 321,
+          "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+        },
+        "nodes": {
+          "rows": 1444,
+          "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+        },
+        "schema_meta": {
+          "rows": 1,
+          "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+        },
+        "timeline_events": {
+          "rows": 3437,
+          "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+        }
+      },
+      "config_unchanged": true,
+      "engine_sha256": "42f650cc4c0c91d4d6afede5822ec4a735c2985340db223c1c4515c71dbccfaa",
+      "health_before": {
+        "analysis_jobs": {
+          "cancelled": 0,
+          "done": 0,
+          "failed": 0,
+          "queued": 0,
+          "running": 0
+        },
+        "analysis_jobs_scope": "service",
+        "edge_count": 660,
+        "episode_count": 321,
+        "node_count": 1444,
+        "schema": "general",
+        "status": "ok"
+      },
+      "health_after": {
+        "analysis_jobs": {
+          "cancelled": 0,
+          "done": 0,
+          "failed": 0,
+          "queued": 0,
+          "running": 0
+        },
+        "analysis_jobs_scope": "service",
+        "edge_count": 660,
+        "episode_count": 321,
+        "node_count": 1444,
+        "schema": "general",
+        "status": "ok"
+      }
+    },
+    "main_api_activation": {
+      "old_launcher_pid": 72969,
+      "new_launcher_pid": 83597,
+      "api_healthy": true,
+      "journal_unchanged": true,
+      "journal": {
+        "count": 24,
+        "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+      },
+      "app_env_unchanged": true,
+      "health": {
+        "status": "healthy",
+        "agents": {
+          "agent_critic": {
+            "status": "healthy"
+          },
+          "amendment_analyzer": {
+            "status": "healthy"
+          },
+          "claim_viability": {
+            "status": "healthy"
+          },
+          "contract_identity": {
+            "status": "healthy"
+          },
+          "contract_identity_base": {
+            "status": "healthy"
+          },
+          "event_detector": {
+            "status": "healthy"
+          },
+          "extractor": {
+            "status": "healthy"
+          },
+          "guarantee_analyzer": {
+            "status": "healthy"
+          },
+          "notification_register": {
+            "status": "healthy"
+          },
+          "penalty_analyzer": {
+            "status": "healthy"
+          },
+          "project_context": {
+            "status": "healthy"
+          },
+          "prompt_improver": {
+            "status": "healthy"
+          },
+          "risk_allocator": {
+            "status": "healthy"
+          }
+        },
+        "agent_count": 13,
+        "plugins": {},
+        "plugin_count": 0,
+        "endpoints": {
+          "project_workflow": {
+            "status": "healthy"
+          },
+          "prompt_editor": {
+            "status": "healthy"
+          },
+          "review_sessions": {
+            "status": "healthy"
+          },
+          "studio_sessions": {
+            "status": "healthy"
+          }
+        },
+        "endpoint_count": 4,
+        "ingestors": {
+          "markitdown": {
+            "status": "healthy"
+          }
+        },
+        "ingestor_count": 1,
+        "pipelines": [
+          "claim_prep",
+          "consolidate",
+          "contract_analysis",
+          "contract_analysis_sequential",
+          "contract_identity_base",
+          "contract_identity_critic",
+          "contract_identity_only",
+          "extract_batch",
+          "extractor_fanout",
+          "project_consolidate",
+          "prompt_improve"
+        ],
+        "pipeline_count": 11,
+        "tasks_enabled": true,
+        "storage": {
+          "status": "healthy"
+        }
+      }
+    },
+    "cleanup": {
+      "owned_processes": [
+        {
+          "service": "engine",
+          "pid": 81355,
+          "port": 8097
+        },
+        {
+          "service": "api",
+          "pid": 81356,
+          "port": 8081
+        },
+        {
+          "service": "frontend",
+          "pid": 71404,
+          "port": 5175
+        }
+      ],
+      "owned_ports_closed": true,
+      "terminal_application_jobs": 19,
+      "native_jobs": {
+        "cancelled": 0,
+        "done": 3,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "temporary_browser_tab": 152,
+      "temporary_browser_tab_closed": true
+    },
+    "user_preservation": {
+      "protected_engine_source_files_unchanged": true,
+      "protected_app_artifacts_unchanged": true,
+      "user_studio_unchanged": true,
+      "orchid_studio_unchanged": true,
+      "user_graph_all_tables_unchanged": true,
+      "recorded_replay_nodes_edges_unchanged_by_GUI": true,
+      "owned_jobs_terminal_verified_before_cleanup": true,
+      "replay_verified_before_cleanup": true,
+      "user_engine_health": {
+        "analysis_jobs": {
+          "cancelled": 0,
+          "done": 0,
+          "failed": 0,
+          "queued": 0,
+          "running": 0
+        },
+        "analysis_jobs_scope": "service",
+        "edge_count": 660,
+        "episode_count": 321,
+        "node_count": 1444,
+        "schema": "general",
+        "status": "ok"
+      },
+      "user_graph_fingerprints": {
+        "edges": {
+          "rows": 660,
+          "sha256": "d9b45d11b367b316d59bed301f19f50e3969f33e60c1965a1bb122825a3e029d"
+        },
+        "episodes": {
+          "rows": 321,
+          "sha256": "f3c91aa46d877d2d6e73a78717d3f26a2f5f0e080c993e070ac424feaea7e8a4"
+        },
+        "nodes": {
+          "rows": 1444,
+          "sha256": "74e186b68befb6ff1d0d9216c764fccdc9c085fb706b995d9943defc161bed5f"
+        },
+        "schema_meta": {
+          "rows": 1,
+          "sha256": "5671d3a5a3cac33e59165d6348c81a560b12e46e59869a8f21ba65a1cbd7a46e"
+        },
+        "timeline_events": {
+          "rows": 3437,
+          "sha256": "c225e1a022539d2a9a7913a74c9ee2dc7ad6d0ae8499ab748bc7902c38e48673"
+        }
+      }
+    },
+    "remaining_failures": [
+      "C129 notice labeled claimable; cost row misreads non-waiver as waiver and undetermined indemnification as final settlement.",
+      "C134 notice labeled claimable; draft cost definitely rejected while its rule basis is undetermined.",
+      "C135 event detector omits AM-35 circulation despite source-graph presence; notice/subject/outcome associations need review.",
+      "Source/date/reference quotation gaps and bounded occurrence-recovery failures remain.",
+      "Repeated registration refreshes merge candidate IDs and adds indexing episodes/timeline rows; lineage/reingestion needs further audit.",
+      "Only SUPERSEDES added to high-risk native predicate gate here; other positive semantic labels and model interpretations can still be wrong.",
+      "No exhaustive long-dossier, independent legal gold, repeated-seed, durable native-job recovery or training/MLX quality result."
+    ],
+    "harness_failures": {
+      "library_build": "The first go build used package root and produced an ar archive, not the CLI. Owned engine/API refresh failed before either restarted. Main application and stored graph were unaffected. Corrected to ./cmd/chronograph with executable preflight.",
+      "control_early_readiness": "An empty replacement-control owner failed its initial health check before creating a project, submitting native jobs or making model calls; retained as replacement-control-first-attempt.json and process log."
+    },
+    "export_policy": "Embedding arrays omitted; source/model failures retained; text-log display whitespace normalized; configured credential-value scan passed.",
+    "asset_manifest": [
+      {
+        "file": "docs/validation/assets/claim-rule-basis/activation.json",
+        "sha256": "6285f506dd9c41af9461620e82e4e06f4ee1dd5f15e5ddc823b1bc8c8295539b",
+        "bytes": 1731
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/api-activation.json",
+        "sha256": "ca205a8923a6abd76dcbd825260adf210b2e156667869ef7e6197788806b2805",
+        "bytes": 2081
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/api-first-activation.json",
+        "sha256": "be8af6f0cb8f385a08968a24be061ba9b183d4307f87b3fff72315b744236fac",
+        "bytes": 2081
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/backend-final3.log",
+        "sha256": "23e57052cd94b06f750078bdb08ca93a5eadda1496fa4f26918b0e975587fe94",
+        "bytes": 1907
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/backend.log",
+        "sha256": "2eb776e7a1ee2b590aa0412d3eeced7497a9d2ce82ae2231801c6e0932a32f1f",
+        "bytes": 8876
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/build-final6.log",
+        "sha256": "73329ac699a277cbfbf8bbd7638174b8a44a55249cdd02302ba538f866e707c9",
+        "bytes": 1274
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/build.log",
+        "sha256": "2cde648219ac414abdebf1ef7e535c7823340acdecebfaab84b9c4db06184196",
+        "bytes": 353
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/cleanup.json",
+        "sha256": "03f1e745c020b2b8e99bb41955b6c752c4f06b06c176a50b8d202977fe02c116",
+        "bytes": 513
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/evaluation-final.json",
+        "sha256": "f49ecc272864de2c5b4be8e7a2542f0dd7aa1708284b4cd92982f053149c6ca2",
+        "bytes": 841882
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/focused-patch-arms.json",
+        "sha256": "8abbdac63770c7ed3dce468931be8426243ac4c882d197aa95fec1e7529bd9b8",
+        "bytes": 43289
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/freeze.json",
+        "sha256": "f78f3368bb69ced03fe6e9694a616465778a5acf628df0306b338a42e7cea61c",
+        "bytes": 7009
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/frontend-final6.log",
+        "sha256": "1887bc354a13d34dd7c159c6cf792612480e0941634af11f6e0690ecac92debc",
+        "bytes": 336
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/go-full.log",
+        "sha256": "330d2495aaa2c7efdf084bf147c1c3089220c9b30cf02ea77bd30b551aa4a27c",
+        "bytes": 2053
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/go-race.log",
+        "sha256": "80c3cbcd90c22d7b339e1fd87077a51f858c733da1e4b4bfc83ce18c61804dca",
+        "bytes": 126
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/graph-summary.json",
+        "sha256": "2d3d95526bf6f07cf725f465d22a450806faab91577fb9a28ac89b8ea6ee94bd",
+        "bytes": 273
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/harness-failures.json",
+        "sha256": "d26f2c56b28403907e4790ec7ddd8f68a70c049c63fe1d0ac7b1bf5756398953",
+        "bytes": 509
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/historical-replacement-dom.txt",
+        "sha256": "ce3bf97d1c3b7ed90ae7a5849f98087c759a452a940d249ed001430b18c1ba0d",
+        "bytes": 16482
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/historical-replacement.png",
+        "sha256": "2afab39c9fe0a87e9ba3a91625a70fc4a902cf517fd06d282bf43fb3826ebcd3",
+        "bytes": 616301
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/native-jobs-before-refresh.json",
+        "sha256": "f8d83d3390405a35415e6c4c13e81dfc1030fa355102f8a447148922e86dca6f",
+        "bytes": 257
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/new-control-freeze.json",
+        "sha256": "0e1b35095e0afbfbf85a620ca23dea31b8e951235c0a9dfb7daab4e55d088990",
+        "bytes": 217
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/new-control-graph.json",
+        "sha256": "21399746f59df9c208580457838ea5d1efb1211f857745abcc635e4f0bd1ab3f",
+        "bytes": 603225
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/new-control-run.json",
+        "sha256": "c3b07e4975de93f7a51828bb526b5732bd1f142b7f326919afc0ac5d44a47d8e",
+        "bytes": 153437
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/new-control.json",
+        "sha256": "4ed06fa9c4f8a5c81237c5e3b31356f26d492f74822aa1099eb3ce6fd175b6fa",
+        "bytes": 3495
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/owned-stack-refresh.json",
+        "sha256": "043ffea95ccf828ab489a7318e88a9a277b6e7717bdf98fc2f9c83e1e1c32fbf",
+        "bytes": 824
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/probe-guidance.txt",
+        "sha256": "3b7f33ff759b50278ebfa1c19eabe251426c60c458cf3cd28614671b24864338",
+        "bytes": 2055
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/probe.json",
+        "sha256": "55bba708811829a9ffc2fa67ea9e05eef932be4ad30f886dd713b8b0880be4a1",
+        "bytes": 136312
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/replacement-control-first-attempt.json",
+        "sha256": "7ec5054de034f7c38284d4766f397f77810bb8c5b404ccac7480d043ad688edf",
+        "bytes": 63
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/replacement-control-first-process.log",
+        "sha256": "8a3373b4619a2be055db50b58249736a448f65357e6bb4f8938c9f02926144ec",
+        "bytes": 4915
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/replacement-control-freeze.json",
+        "sha256": "04c6ca3e7dbb0dbf4550a7f8a791d0521aa949d73587f40a7f669cc99f188b89",
+        "bytes": 190
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/replacement-control-graph.json",
+        "sha256": "598c0885306efd5116f3c0cc1aec29f12c3fab4523353341a23b1363d1eb7885",
+        "bytes": 633616
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/replacement-control-run.json",
+        "sha256": "967623598fb63f23d0cf190cf67f501c41e4173a2b8a1ae95115787092ed026d",
+        "bytes": 153570
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/replacement-control.json",
+        "sha256": "ebbaad4994549011f8f7e448649cb43e56ecf579f293be79d10144dca1a09594",
+        "bytes": 4100
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/replacement-go.log",
+        "sha256": "bc0241018c1b356b734a014ffb6ae21f6c10a29b85516e95ec9fc7f0442beeee",
+        "bytes": 126
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/replacement-python.log",
+        "sha256": "639194d0ea057574471039dc6f314cb8b2c1d09345a241426f920430182e1317",
+        "bytes": 144
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/rule-basis-dom.txt",
+        "sha256": "6ad56192fa15360c222499f2025d6c9e3509654e6e1743461793ecf38949ab68",
+        "bytes": 34418
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/rule-basis.png",
+        "sha256": "1061b7a4f76ad9876a2e17dd89d3a5b9ab06b88c1a4fa05ec587590183f90311",
+        "bytes": 1310834
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/source-equivalence.json",
+        "sha256": "e3724336801a155e9a9060b930a9b6c781c7d325a9f6216e7e97a63a5289e7c6",
+        "bytes": 84
+      },
+      {
+        "file": "docs/validation/assets/claim-rule-basis/workflow-runs.json",
+        "sha256": "f9de336689f89b0c270918b550792337a24a74c94b6a67aa54aae32af813612c",
+        "bytes": 353178
+      }
+    ]
+  }
+}

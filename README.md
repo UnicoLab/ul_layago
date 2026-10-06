@@ -12,10 +12,11 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L142 finding](docs/learning-log.md#l142--occurrence-copies-and-acceptance-origins-are-separate-2026-10-06)
-records exact original-occurrence grouping and why automated nominations need
-a separate unreviewed creation route. Duplicate records and model confidence
-must not become independent evidence or human acceptance.
+The latest [L143 finding](docs/learning-log.md#l143--unit-coverage-rule-meaning-and-replacement-polarity-differ-2026-10-06)
+records focused claim-unit coverage, retained interpretation failures, and why a
+positive instrument replacement needs its own directed operative witness. Source
+matches and complete requested rows do not establish semantic correctness or
+exhaustive event recall.
 
 ## Build and use
 

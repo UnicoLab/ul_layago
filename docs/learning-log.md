@@ -5319,3 +5319,50 @@ independent source review. Legacy implicit-human stamps require historical audit
 source and graph histories were not migrated. Earlier claim, recall, causality and
 native recovery errors remain open. This work introduced no LayaGo/GLiNER/MLX or
 training-supervisor quality/performance improvement.
+
+
+## L143 — Unit coverage, rule meaning and replacement polarity differ (2026-10-06)
+
+**Evidence:** [DelayLama receipt](validation/delaylama-claim-rule-basis-20261006.json)
+links frozen development controls, actual model outputs (including errors), source
+traces, browser proof and a failed/corrected native replacement-generation control.
+
+Batch target calls omitted notices and decisions. One event/target per unit returned
+all 30 requested pairs across 15 reported events in five production workflows.
+Source-first shared premises and structured role/subject/rule/condition traces made
+an unsupported cost rejection unresolved in the permission control. This is measured
+unit coverage, not exhaustive source-event recall or a legal accuracy benchmark.
+The later event detector still omitted an unsigned draft found in the source graph.
+Notices remained incorrectly labelled claimable, and a weather cost row misread
+non-waiver language as a waiver and unsettled compensation as final settlement.
+Those raw failures stay retained; coherent schema and located quotations do not
+certify interpretation, polarity, related subject or condition fulfillment.
+
+The first fresh native graph stored a positive SUPERSEDES edge from an ineffective
+unsigned draft, even though its own exact quotation and fact denied replacement.
+Default compatibility patch67 requires a blind own-source instrument-replacement
+witness with matching direction, focused occurrence, positive polarity and actual
+modality before storing this positive predicate. Proposed/denied/reverse/borrowed
+witnesses are withheld with receipts. The live recheck had no draft replacement
+edge and retained an operative replacement solely for completion date, with its
+own model witness. Historical unqualified edges remain unresolved for inspection;
+their records were not silently deleted or recertified.
+
+**Training implications:** construct separate labels for reported event, supporting
+notice, request and recorded decision; annotate the related claim subject and the
+own association passage. Include exact rule/fulfillment evidence and unknown
+conditions. Sample non-waiver versus waiver, undocumented versus affirmatively
+absent, undated accounting facts, qualified replacement versus total supersession,
+unsigned drafts and operative replacements. Include another positive instrument
+near a negative candidate to test borrowed evidence, with direction-specific
+contrasts. Evaluate source-event recall separately from requested-row coverage.
+LayaGo can nominate passages or classes; its output must not become operative
+legal relationships or human acceptance by confidence alone.
+
+**Limits:** 66 production plus 17 prototype application calls and six native
+analysis jobs; native internal call count is separate. No held-out human gold,
+repeated-seed or causal model/prompt estimate. Relevant automated suites and
+storage/API/UI checks passed; this is no LayaGo/GLiNER/MLX training or speed result.
+Repeated registration refreshed merge candidate IDs and added indexing episodes;
+merge lineage, broader predicate correctness, long-dossier recall and durable
+native-job recovery remain open.
