@@ -1,0 +1,176 @@
+{
+  "project_id": "separate-dispatch-receipt-and-grant-c147-20261006-081408-cd344e",
+  "fixture_notice_filename": "notification_register_20261006_180000_000001.json",
+  "fixture_register_filename": "event_detector_20261006_180000_000001.json",
+  "cases": [
+    "bare event ID",
+    "reused event ID",
+    "stale status/annotation",
+    "explicit estimate",
+    "sent is not timely",
+    "conflicting dates",
+    "malformed secondary date",
+    "invalid timestamp",
+    "alternative windows",
+    "oversized window"
+  ],
+  "prior_files_preserved": true,
+  "native_jobs": {
+    "cancelled": 0,
+    "done": 0,
+    "failed": 0,
+    "queued": 0,
+    "running": 0
+  },
+  "model_calls": 0,
+  "new_application_jobs": 0,
+  "tests": {
+    "backend": 1754,
+    "frontend": 1106,
+    "frontend_files": 96,
+    "production_build_passed": true,
+    "bundle_warning_retained": true
+  },
+  "topic": {
+    "actual_registered_originals": 3,
+    "actual_source_passages": 4,
+    "exact_quotes_hashes_offsets_checked": true,
+    "graph_nodes": 22,
+    "graph_connections": 38,
+    "live_context_coverage": {
+      "graph_snapshot_partial": false,
+      "navigation_graph": "semantic_connections",
+      "source_containment_used_for_semantic_navigation": false,
+      "neighborhood_depth_limited": true,
+      "matching_fact_candidates_considered": 20,
+      "matching_anchors": 20,
+      "matching_relationships": 32,
+      "omitted_matching_anchors": 16,
+      "matched_original_blocks": 4,
+      "retained_matched_original_blocks": 4,
+      "omitted_matched_original_blocks": 0,
+      "omitted_adjacent_original_blocks": 0,
+      "passage_selection": "direct_matches_then_adjacent_round_robin_by_original_and_query",
+      "passage_budget_reached": false,
+      "neighborhoods": [
+        {
+          "node_id": "241fb98a-a2f9-48cd-91a8-0acaf70ba2a6",
+          "matched_queries": [
+            "access",
+            "notice",
+            "expense",
+            "completion days"
+          ],
+          "scope": "Loaded graph neighborhood, not the entire contract",
+          "connection_steps": 2,
+          "graph_snapshot_partial": false,
+          "omitted_connections_by_budget": 0,
+          "missing_endpoint_connections": 0,
+          "max_nodes": 60,
+          "max_edges": 120,
+          "completeness": "unestablished",
+          "entire_connected_component_requested": false,
+          "snapshot_atomic": false
+        },
+        {
+          "node_id": "2f7714c4-609f-4093-ba86-35c716e26bc3",
+          "matched_queries": [
+            "access",
+            "notice",
+            "expense",
+            "completion days"
+          ],
+          "scope": "Loaded graph neighborhood, not the entire contract",
+          "connection_steps": 2,
+          "graph_snapshot_partial": false,
+          "omitted_connections_by_budget": 0,
+          "missing_endpoint_connections": 0,
+          "max_nodes": 60,
+          "max_edges": 120,
+          "completeness": "unestablished",
+          "entire_connected_component_requested": false,
+          "snapshot_atomic": false
+        },
+        {
+          "node_id": "42b2a6e0-2bac-4218-a5e3-db8e7b19fbeb",
+          "matched_queries": [
+            "access",
+            "notice",
+            "expense",
+            "completion days"
+          ],
+          "scope": "Loaded graph neighborhood, not the entire contract",
+          "connection_steps": 2,
+          "graph_snapshot_partial": false,
+          "omitted_connections_by_budget": 0,
+          "missing_endpoint_connections": 0,
+          "max_nodes": 60,
+          "max_edges": 120,
+          "completeness": "unestablished",
+          "entire_connected_component_requested": false,
+          "snapshot_atomic": false
+        },
+        {
+          "node_id": "818e9e05-0194-4977-8917-ecc5f17b3373",
+          "matched_queries": [
+            "access",
+            "notice",
+            "expense",
+            "completion days"
+          ],
+          "scope": "Loaded graph neighborhood, not the entire contract",
+          "connection_steps": 2,
+          "graph_snapshot_partial": false,
+          "omitted_connections_by_budget": 0,
+          "missing_endpoint_connections": 0,
+          "max_nodes": 60,
+          "max_edges": 120,
+          "completeness": "unestablished",
+          "entire_connected_component_requested": false,
+          "snapshot_atomic": false
+        }
+      ],
+      "completeness": "unestablished",
+      "graph_character_budget_reached": false,
+      "omitted_nodes_by_character_budget": 0,
+      "omitted_connections_by_character_budget": 0
+    },
+    "adversarial_source_counts": {
+      "d0": 8,
+      "d1": 8,
+      "d2": 8
+    },
+    "adversarial_direct_omissions": 12,
+    "model_calls": 0,
+    "graph_updated": false
+  },
+  "ui": {
+    "node": "2391115a-b9b7-4698-ba8c-2acdaa96a86e",
+    "retrieved_nodes_including_structure": 18,
+    "retrieved_relationships_including_structure": 26,
+    "displayed_semantic_facts": 15,
+    "displayed_semantic_relationships": 18,
+    "registered_originals": 3,
+    "current_source_matches": 33,
+    "source_check_details_expandable": true,
+    "unsupported_notice_event_edge_absent": true
+  },
+  "parallel_work": true,
+  "qualified_engine_default": 69,
+  "terminal_journal": {
+    "total": 69,
+    "done": 68,
+    "inherited_error": 1
+  },
+  "fresh_model_quality_evaluation": false,
+  "main_activation": {
+    "api_healthy": true,
+    "journal_unchanged": true,
+    "journal": {
+      "count": 24,
+      "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+    },
+    "app_env_unchanged": true
+  },
+  "user_preservation_audit_passed": true
+}

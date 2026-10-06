@@ -6018,3 +6018,45 @@ This is one development workflow, not held-out, repeated-seed, multilingual or
 long-contract extraction accuracy. No LayaGo/GLiNER/MLX model, training, architecture,
 weights or measured speed improvement occurred. Semantic quality and broader graph
 qualification remain open.
+
+
+## L157 — Balance retrieval and separate obligations from occurrences (2026-10-06)
+
+**Evidence:** [DelayLama report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-graph-notice-correctness.md)
+and [receipt](validation/delaylama-graph-notice-correctness-20261006.json).
+
+A passage budget can create systematic omissions before a model sees its input.
+Direct topic matches now precede adjacent filler, with hierarchical rotation across
+originals and query queues. A three-original/twelve-query stress case retained eight
+passages per original in 24 slots and reported twelve direct omissions. Exact quotes,
+hashes and offsets remained intact. Numeric page limits must not be interpreted as
+continuation flags. Ranking and semantic relevance remain different questions.
+
+Graph context needs unique fact, connection and document identities before selecting
+witnesses. A source status must agree with its actual citations. The review panel now
+shows retrieved versus displayed counts, keeps older context explicitly labeled after
+failed refresh, and places human facts and quotations before expandable diagnostics.
+Live source context showed fifteen semantic facts, eighteen relationships and three
+originals with thirty-three current source matches; that verifies location and UI
+connectivity, not their interpretation or the completeness of the contract graph.
+
+A contractual obligation is not its triggering occurrence. An unbound event ID must
+not borrow a date from a later register generation. Notice rows now withhold that
+join and expose missing trigger support; explicitly supplied dates remain estimates.
+Sending does not establish timely service, and estimated lateness does not establish
+forfeiture. Conflicting/malformed dates, normalized invalid timestamps, alternative or
+negative windows and calendar overflow require abstention. Business-day arithmetic
+must not iterate millions of times on an erroneous model value.
+
+For LayaGo training/evaluation, candidate ordering, budgets, identity collisions and
+unit/date validity should be independently tested outside semantic model scoring.
+Build hard examples with dispersed conditions, reused display IDs, distinct awareness/
+dispatch/receipt, and missing or conflicting triggers. Group related variants before
+splitting. A fast head can nominate or challenge candidates; it cannot supply missing
+provenance, prove applicability or certify legal conclusions from shared words.
+
+The increment passed 1,754 backend and 1,106 frontend tests plus production build.
+One existing async assertion and an overly broad warning deduplication were corrected.
+No new model calls or training occurred; this is an adopted engineering increment,
+not evidence of improved LayaGo/GLiNER/MLX weights, speed, calibration or held-out
+contract quality. Lexical recall, temporal applicability and reconciliation remain open.

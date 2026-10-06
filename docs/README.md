@@ -89,6 +89,8 @@ is pinned in the acceleration receipt; its interpretation is attributed in the
 assessment. Model weights, caches, private contracts and the full external report
 are not required to read these findings.
 
+Latest contract engineering evidence: [graph context and notice correctness, 2026-10-06](validation/delaylama-graph-notice-correctness-20261006.json), discussed in learning **L157**. This records retrieval/UI safeguards, not a new model-quality experiment.
+
 ## Keeping this reference useful
 
 Record observations separately from explanations and proposed fixes. Link a
