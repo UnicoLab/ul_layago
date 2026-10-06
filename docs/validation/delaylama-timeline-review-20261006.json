@@ -1,0 +1,85 @@
+{
+  "protocol": "timeline-review-release-v1",
+  "date": "2026-10-06",
+  "backend_tests": 2048,
+  "frontend_tests": 1402,
+  "frontend_files": 107,
+  "production_build": "passed_with_existing_bundle_warning",
+  "new_analysis_model_calls": 0,
+  "new_training_runs": 0,
+  "fixtures": "Isolated copies of saved prior-notice EN/FR development dossiers and preceding model outputs; no new quality benchmark.",
+  "browser": {
+    "owned_tab": 176,
+    "empty_summary_cards_removed": true,
+    "notice_dates_visible": true,
+    "english_point_dates": [
+      "2098-07-13",
+      "2098-07-20"
+    ],
+    "french_point_dates": [
+      "2098-07-14",
+      "2098-07-21"
+    ],
+    "french_owning_notice_review_verified": true,
+    "embedded_reference_marker_restored_after_review": true,
+    "csv_own_date_and_rule_passages_retained": true,
+    "csv_notice_dates_not_joined_into_interval": true
+  },
+  "regressions": [
+    "Current source/capture and manual override gate notice dates",
+    "Planned references distinct from execution",
+    "Role conflicts remain unassessed",
+    "Disputed scalar dates/endpoints and conflicting aliases withheld; raw values retained",
+    "Filtered/missing selection explicit",
+    "Contract-only identity visible; missing context collapsed",
+    "Graph calendars retain years1..99 with strict bounds"
+  ],
+  "cleanup": {
+    "owned_processes": [
+      {
+        "service": "engine",
+        "pid": 8533,
+        "port": 8097
+      },
+      {
+        "service": "api",
+        "pid": 8534,
+        "port": 8081
+      },
+      {
+        "service": "frontend",
+        "pid": 8535,
+        "port": 5176
+      }
+    ],
+    "owned_ports_closed": true,
+    "terminal_application_jobs": 84,
+    "native_jobs": {
+      "cancelled": 0,
+      "done": 0,
+      "failed": 0,
+      "queued": 0,
+      "running": 0
+    },
+    "temporary_browser_tabs": [
+      176
+    ],
+    "temporary_browser_tab_closed": true
+  },
+  "main_runtime": "Frontend updates through existing dev server; no main API/engine restart.",
+  "user_preservation_audit": {
+    "passed": true,
+    "main_journal_snapshots": 24,
+    "protected_engine_sources": 14,
+    "original_artifacts": 32,
+    "original_studio_sessions": 2,
+    "original_user_graph_unchanged": true,
+    "user_prompt_and_layago_work_untouched": true
+  },
+  "limitations": [
+    "Development engineering/UI qualification, not held-out accuracy",
+    "Legacy intervals need independent semantic endpoint ownership",
+    "Dispersed exception recall, calendar applicability, actual service and outcome reconciliation remain open",
+    "No LayaGo/GLiNER/MLX training or throughput measurement"
+  ]
+}

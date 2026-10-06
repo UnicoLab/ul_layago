@@ -6235,3 +6235,40 @@ and abstention separately. Preserve failed attempts and graph/document-only pair
 No new LayaGo/GLiNER/MLX training, architecture, weights or throughput was measured.
 Broader dispersed-rule recall, calendar conventions and outcome reconciliation remain
 open beyond these regressions.
+
+## L162 — Reviewable temporal representations and missing contract context (2026-10-06)
+
+**Evidence:** [DelayLama report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-timeline-review.md)
+and [receipt](validation/delaylama-timeline-review-20261006.json).
+
+A qualified notice reference and its calculated due date are two distinct points,
+not the start/end of a performed action. Bind both to current originals and the
+unchanged notice; retain a missing-date review task when input identity, direction,
+reference selection or manual overrides are unresolved. Graph/event names alone
+cannot populate a clock. Preserve the exact owning finding and distinct marker key
+through review, filters and export.
+
+Temporal datasets should distinguish reported actions, plans/proposals, context,
+schedule dates and derived notice estimates. Conflicting classifications require
+abstention rather than choosing a familiar label. Known unrelated interval endpoints
+and disputed schedule dates should remain raw review candidates without being plotted
+as precise spans. Independent ownership of dispersed endpoints remains a separate
+learning/evaluation target; an explicit pair of extracted fields is not semantic proof.
+
+Exports need the checked own date and rule passages, not only a section's general
+citations. Location counts do not prove the computed date's meaning or applicability.
+Representation tests should include changed sources, stale captures, conflicting raw
+triggers, explicit null reviews, duplicate identities and missing selected entries.
+Strict UTC calendar construction is also needed when supporting years 1–99; the
+JavaScript Date constructor's 1900 offset can otherwise misrepresent a valid source.
+
+Missing identity values should not produce a wall of empty cards or erase a supplied
+identity when claims are absent. Keep useful values prominent and incomplete sections
+reviewable, without inferring that the underlying contract lacks those facts.
+
+Browser verification reused the prior synthetic English/French dossiers and their
+saved model outputs: separate July13/20 and July14/21 notice points, exact review
+navigation/restoration, and source-complete CSV rows. No new model-quality benchmark,
+LayaGo/GLiNER/MLX training, weights, architecture or speed measurement was performed.
+Dispersed interval attribution, broader exception recall, calendar applicability,
+actual service and outcome reconciliation remain open beyond this UI increment.
