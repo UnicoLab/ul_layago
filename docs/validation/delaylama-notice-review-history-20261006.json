@@ -1,0 +1,206 @@
+{
+  "protocol": "notice-review-history-release-v1",
+  "date": "2026-10-06",
+  "backend_tests": 1883,
+  "frontend_tests": 1240,
+  "frontend_files": 100,
+  "production_build": "passed_with_existing_bundle_warning",
+  "automatic": {
+    "job_id": "41a13011e794425183bfa6a55f4d9c4c",
+    "notification_filename": "notification_register_20261006_162325_262642.json",
+    "notifications": 1,
+    "automatic_statuses": [
+      "proposed"
+    ],
+    "source_dates": [
+      [
+        [
+          "awareness",
+          "1 July 2098",
+          "2098-07-08",
+          []
+        ]
+      ]
+    ],
+    "desk_deadlines": [
+      {
+        "due_date": "2098-07-08",
+        "days_remaining": 26208,
+        "status": "ok",
+        "label": "26208d left \u00b7 due 2098-07-08",
+        "window": {
+          "count": 7,
+          "unit": "calendar_days",
+          "raw": "within seven days"
+        },
+        "event_date": "2098-07-01",
+        "forfeiture": true,
+        "is_estimate": true
+      }
+    ],
+    "application_calls": 3,
+    "prior_files_changed": [],
+    "prior_source_and_extraction_files_preserved": true
+  },
+  "manual": {
+    "protocol": "notice-review-history-qa-v1",
+    "reviews": [
+      {
+        "revision": 2,
+        "scope_sha256": "5cc457ba711140c42634bc99d58e4357bf25a415928a406cbe6c59ff029fe19a",
+        "original_sha256": "90465babc6a4ab8d4d5d38265d4209c2d775448f98b644ab859b52c3c0ed8e20",
+        "status": "flagged",
+        "searches": 2,
+        "calls": [
+          3,
+          3
+        ],
+        "repair_attempts": [
+          1,
+          1
+        ],
+        "verdicts": [
+          "insufficient",
+          "insufficient"
+        ],
+        "source_candidate_status": "proposed",
+        "estimated_due": "2098-07-08",
+        "changed_source_withheld": true,
+        "forfeiture_checks": [
+          [
+            "insufficient"
+          ],
+          [
+            "insufficient"
+          ]
+        ]
+      },
+      {
+        "revision": 3,
+        "scope_sha256": "b2e67d806ace633c37959c1fc5b33c2a33001fdff96bba4a47bf6ab3d82c5ef9",
+        "original_sha256": "90465babc6a4ab8d4d5d38265d4209c2d775448f98b644ab859b52c3c0ed8e20",
+        "status": "flagged",
+        "searches": 2,
+        "calls": [
+          3,
+          3
+        ],
+        "repair_attempts": [
+          1,
+          1
+        ],
+        "verdicts": [
+          "supports",
+          "supports"
+        ],
+        "source_candidate_status": "proposed",
+        "estimated_due": "2098-07-08",
+        "changed_source_withheld": true,
+        "forfeiture_checks": [
+          [
+            "supports"
+          ],
+          [
+            "supports"
+          ]
+        ]
+      }
+    ],
+    "manual_application_calls": 12,
+    "automatic_application_calls": 3,
+    "user_files_not_part_of_qa": true
+  },
+  "parity": {
+    "protocol": "notice-number-parser-parity-v1",
+    "checked_at_utc": "2026-10-06T16:28:49.751924+00:00",
+    "number_forms": 252,
+    "cases": 3073,
+    "mismatches": 0,
+    "passed": true,
+    "coverage": "All generated English/French 0\u201399 forms \u00d7 4 separators \u00d7 ordinary/corroborated/negative expressions, plus 28 punctuation, range, malformed and compact-unit cases and 21 directional/context cases.",
+    "source_ts": {
+      "path": "frontend/src/deadlineMath.ts",
+      "sha256": "24596eae53321337b0cc675289bb4b2a0bd1fdd4a7e5e40a4f1e193865ee0549"
+    },
+    "source_python": {
+      "path": "delaylama/ai_core/deadlines.py",
+      "sha256": "fd63093058980e3a8160ee2ac55b6557be3f40de2149bf6078e38b4d2e43369a"
+    },
+    "script_sha256": "364a7e89edc0bee39f3dce2adf017bc834481c7c8b9e87d8588b784e91bdfa9b",
+    "input_cases_sha256": "3b98fcd927b64811738f4e358ee08b7d54404a1495eb6ce6dc98120d88644097",
+    "node_version": "v24.21.0",
+    "python_version": "3.12.11",
+    "examples": [],
+    "limits": "Parser equality over synthetic windows only; this does not establish trigger applicability, holidays, legal counting conventions or extraction recall."
+  },
+  "browser": {
+    "owned_tab": 173,
+    "notice_graph_source_premise_visible": true,
+    "previous_source_search_visible": true,
+    "rejected_notice_repair_visible": true,
+    "current_review_revision": 3,
+    "restored_after_reload": true,
+    "browser_storage_unavailable": true,
+    "imported_feedback_characters": 11523,
+    "imported_earlier_search_and_latest_and_rejected_repairs": true,
+    "assistant_optimization_called": false
+  },
+  "limitations": [
+    "Reused synthetic English C147 development dossier; no held-out quality measurement",
+    "Forfeiture model judgments differ across retained analysis contexts; all remain flagged",
+    "Backward notice arithmetic, broader semantic recall and applicability remain open",
+    "No new native source jobs or LayaGo/GLiNER/MLX training"
+  ],
+  "cleanup": {
+    "owned_processes": [
+      {
+        "service": "engine",
+        "pid": 23903,
+        "port": 8097
+      },
+      {
+        "service": "frontend",
+        "pid": 23905,
+        "port": 5176
+      },
+      {
+        "service": "api",
+        "pid": 25425,
+        "port": 8081
+      }
+    ],
+    "owned_ports_closed": true,
+    "terminal_application_jobs": 73,
+    "native_jobs": {
+      "cancelled": 0,
+      "done": 0,
+      "failed": 0,
+      "queued": 0,
+      "running": 0
+    },
+    "temporary_browser_tabs": [
+      173
+    ],
+    "temporary_browser_tab_closed": true
+  },
+  "main_api_activation": {
+    "api_healthy": true,
+    "journal_unchanged": true,
+    "journal": {
+      "count": 24,
+      "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+    },
+    "app_env_unchanged": true
+  },
+  "user_preservation_audit": {
+    "passed": true,
+    "main_journal_snapshots": 24,
+    "protected_engine_source_edits": 14,
+    "original_artifacts": 32,
+    "original_studio_sessions": 2,
+    "original_user_graph_unchanged": true,
+    "user_prompt_and_layago_work_untouched": true
+  },
+  "shared_learning": "L159",
+  "source_report": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-notice-review-history.md"
+}

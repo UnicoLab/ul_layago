@@ -6100,3 +6100,45 @@ corroboration. Score rule selection, occurrence identity, date ownership and lit
 quote validity separately. Preserve rejected/repaired draws rather than reporting only
 the final successful candidate. No new LayaGo/GLiNER/MLX training, architecture, weights,
 calibration or speed change was measured. Semantic recall/applicability remain open.
+
+## L159 — Bind finalized inputs and retain failed review history (2026-10-06)
+
+**Evidence:** [DelayLama report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-notice-review-history.md)
+and [receipt](validation/delaylama-notice-review-history-20261006.json).
+
+A proposal bound before extraction finalization can invalidate itself after harmless
+evidence defaults or original whitespace restoration. Capture the final canonical
+source fields, using the same deterministic normalization before and after the
+model pass. Preserve caller inputs and keep invalid extraction quotations unverified.
+Exercise the actual finalization pipeline, not only the source-check helper.
+
+Prior-notice durations need explicit direction: adding seven days to commencement
+cannot implement “seven days before commencement.” Unsupported EN/FR prior-notice
+forms now abstain. Check the qualifier attached to the duration, not unrelated later
+headings. Python/TypeScript equality passed 3,073 synthetic parser cases, including
+21 direction/context controls; this does not validate calendars or legal meaning.
+
+Review history is learning data. Retain initial rejected date quotations, later
+repairs, each explicit retry and the latest result separately. A dated antecedent
+must appear in the own date quotation; “that day” alone is insufficient. Surface
+this history in result/graph evidence and pass it into prompt feedback. Correction
+targets must still use actual current field names/values, rather than adopting
+model-supplied replacement values. Old result/source reviews cannot migrate merely
+because the displayed notice name is unchanged.
+
+The retained C147 workflow used 15 recorded application calls: one automatic
+extraction and four GUI retries across two saved analysis contexts. Current review
+revision 3 restored two searches while browser storage was unavailable; prompt
+iteration received the note, earlier search, latest search and rejected repairs.
+Forfeiture judgments differed between the two contexts (insufficient versus support
+inferred from a condition). Both remain flagged/unaccepted. A matching quotation and
+consistent date metadata do not settle semantic applicability.
+
+For LayaGo training examples, preserve such disagreements and unsuccessful draws;
+separate explicit forfeiture from notice conditions, and prior from subsequent
+windows. Split related variants by source family. Score normalization/binding,
+literal quote ownership and semantic judgment independently. This increment passes
+1,883 backend/1,240 frontend tests plus build; it measures engineering workflow,
+not held-out model accuracy. No new LayaGo/GLiNER/MLX training, architecture, weights
+or speed gain was measured. Broader recall, exceptions, temporal applicability and
+payment reconciliation remain open.
