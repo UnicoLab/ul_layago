@@ -91,6 +91,8 @@ are not required to read these findings.
 
 Latest contract engineering evidence: [graph context and notice correctness, 2026-10-06](validation/delaylama-graph-notice-correctness-20261006.json), discussed in learning **L157**. This records retrieval/UI safeguards, not a new model-quality experiment.
 
+Latest notice workflow evidence: [source-trigger resolution, 2026-10-06](validation/delaylama-notice-source-resolution-20261006.json), discussed in learning **L158**, includes rejected outputs, successful retries, persistence and parser parity.
+
 ## Keeping this reference useful
 
 Record observations separately from explanations and proposed fixes. Link a

@@ -6060,3 +6060,43 @@ One existing async assertion and an overly broad warning deduplication were corr
 No new model calls or training occurred; this is an adopted engineering increment,
 not evidence of improved LayaGo/GLiNER/MLX weights, speed, calibration or held-out
 contract quality. Lexical recall, temporal applicability and reconciliation remain open.
+
+
+## L158 — Locate the starting point before choosing a notice date (2026-10-06)
+
+**Evidence:** [DelayLama report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-notice-source-resolution.md)
+and [receipt](validation/delaylama-notice-source-resolution-20261006.json).
+
+A notice receipt is not the start of an awareness-based clock. Three retained
+synthetic C147 analyses exposed distinct failures: initial selection of receipt with
+placeholder/missing kind metadata, then correct awareness with a cropped “that day”
+date quotation, then a successful bounded quote repair. The final automatic output
+and real GUI retry both proposed awareness on 1 July 2098 and estimated 8 July using
+the original seven-day rule. They remain unaccepted model candidates; source location
+and coherent metadata are not semantic or legal certification.
+
+Every obligation now carries five independent source checks: obligation identity,
+starting-point rule, own occurrence, applicability and date. Capture source SHA plus
+unchanged notice inputs, preserve alternatives, and recompute estimates instead of
+trusting saved countdowns. Document slugs/display IDs are not occurrence references.
+The dated antecedent and anaphoric action must remain in the actual own quotation;
+merely putting “that day” into a date card cannot establish a complete calendar date.
+A single formatting/quotation repair preserves its first checked output and must not
+persuade insufficient or contradictory semantic judgments into support.
+
+Engineering results: ten recorded application LLM calls (three extraction jobs and
+one GUI retry), successful project-backed review restore while browser storage was
+unavailable, no altered originals/earlier extraction files and no native source jobs.
+1,859 backend and 1,210 frontend tests plus production build passed. Actual EN/FR
+window parser parity passed 3,052 synthetic cases. Nested financial evidence no longer
+inflates event counts or disrupts event-reference navigation. Those observations are
+workflow/representation qualification, not a fresh held-out model-quality benchmark.
+
+For LayaGo examples, vary awareness, drafting, dispatch and receipt dates independently;
+vary the contractual starting point while keeping surrounding entities/records similar.
+Group related variants before splitting. Include anaphora, incomplete dates, changed
+rules, multiple plausible occurrences, spelled-number windows and contradictory
+corroboration. Score rule selection, occurrence identity, date ownership and literal
+quote validity separately. Preserve rejected/repaired draws rather than reporting only
+the final successful candidate. No new LayaGo/GLiNER/MLX training, architecture, weights,
+calibration or speed change was measured. Semantic recall/applicability remain open.

@@ -1,0 +1,201 @@
+{
+  "date": "2026-10-06",
+  "project_id": "separate-dispatch-receipt-and-grant-c147-20261006-081408-cd344e",
+  "source_sha256": "90465babc6a4ab8d4d5d38265d4209c2d775448f98b644ab859b52c3c0ed8e20",
+  "first_automatic": {
+    "job_id": "781e326e178e4530b99aa41a7d711a6b",
+    "notification_filename": "notification_register_20261006_154737_301141.json",
+    "notifications": 1,
+    "automatic_statuses": [
+      "unresolved"
+    ],
+    "source_dates": [
+      [
+        [
+          "receipt",
+          "2 July 2098",
+          null,
+          [
+            "trigger_rule: action kind disagrees with this proposed trigger.",
+            "occurrence_scope: action kind disagrees with this proposed trigger.",
+            "trigger_applicability: action kind disagrees with this proposed trigger.",
+            "The occurrence or date quotation cannot be bound to the stated original record reference."
+          ]
+        ]
+      ]
+    ],
+    "desk_deadlines": [
+      {
+        "due_date": null,
+        "days_remaining": null,
+        "status": "unknown",
+        "label": "within seven days",
+        "window": {
+          "count": 7,
+          "unit": "calendar_days",
+          "raw": "within seven days"
+        },
+        "event_date": null,
+        "forfeiture": true,
+        "is_estimate": false
+      }
+    ],
+    "application_calls": 2,
+    "prior_files_changed": [],
+    "prior_source_and_extraction_files_preserved": true
+  },
+  "second_automatic": {
+    "job_id": "d54e87989c29493ea862f740f4168283",
+    "notification_filename": "notification_register_20261006_155116_816219.json",
+    "notifications": 1,
+    "automatic_statuses": [
+      "unresolved"
+    ],
+    "source_dates": [
+      [
+        [
+          "awareness",
+          "1 July 2098",
+          null,
+          [
+            "The verbatim date is not independently quoted in both the own occurrence and its date premise."
+          ]
+        ]
+      ]
+    ],
+    "desk_deadlines": [
+      {
+        "due_date": null,
+        "days_remaining": null,
+        "status": "unknown",
+        "label": "within seven days",
+        "window": {
+          "count": 7,
+          "unit": "calendar_days",
+          "raw": "within seven days"
+        },
+        "event_date": null,
+        "forfeiture": true,
+        "is_estimate": false
+      }
+    ],
+    "application_calls": 2,
+    "prior_files_changed": [],
+    "prior_source_and_extraction_files_preserved": true
+  },
+  "final_automatic": {
+    "job_id": "5f68c79f80144bb78354a6a0f12fcce0",
+    "notification_filename": "notification_register_20261006_160210_888290.json",
+    "notifications": 1,
+    "automatic_statuses": [
+      "proposed"
+    ],
+    "source_dates": [
+      [
+        [
+          "awareness",
+          "1 July 2098",
+          "2098-07-08",
+          []
+        ]
+      ]
+    ],
+    "desk_deadlines": [
+      {
+        "due_date": "2098-07-08",
+        "days_remaining": 26208,
+        "status": "ok",
+        "label": "26208d left \u00b7 due 2098-07-08",
+        "window": {
+          "count": 7,
+          "unit": "calendar_days",
+          "raw": "within seven days"
+        },
+        "event_date": "2098-07-01",
+        "forfeiture": true,
+        "is_estimate": true
+      }
+    ],
+    "application_calls": 3,
+    "prior_files_changed": [],
+    "prior_source_and_extraction_files_preserved": true
+  },
+  "gui_recovery": {
+    "review_revision": 1,
+    "review_status": "flagged",
+    "candidate_kind": "awareness",
+    "candidate_date": "2098-07-01",
+    "estimated_due": "2098-07-08",
+    "five_source_premises_supported": true,
+    "source_sha256": "90465babc6a4ab8d4d5d38265d4209c2d775448f98b644ab859b52c3c0ed8e20",
+    "model_calls": 3,
+    "phases": [
+      "source_recheck",
+      "notice_trigger_source_resolution",
+      "notice_trigger_source_repair"
+    ],
+    "all_quotes_offsets_checked": true,
+    "changed_source_withholds_proposal": true,
+    "source_and_notice_raw_values_unchanged": true
+  },
+  "recorded_application_calls": 10,
+  "source_jobs": 0,
+  "terminal_application_jobs": {
+    "total": 72,
+    "done": 71,
+    "inherited_error": 1
+  },
+  "tests": {
+    "backend": 1859,
+    "frontend": 1210,
+    "frontend_files": 99,
+    "production_build_passed": true,
+    "bundle_warning_retained": true
+  },
+  "parser_parity": {
+    "protocol": "notice-number-parser-parity-v1",
+    "checked_at_utc": "2026-10-06T16:06:51.937953+00:00",
+    "number_forms": 252,
+    "cases": 3052,
+    "mismatches": 0,
+    "passed": true,
+    "coverage": "All generated English/French 0\u201399 forms \u00d7 4 separators \u00d7 ordinary/corroborated/negative expressions, plus 28 punctuation, range, malformed and compact-unit cases.",
+    "source_ts": {
+      "path": "frontend/src/deadlineMath.ts",
+      "sha256": "d9add8ce4f310d0c1821563a9fd4c1f86dc719ac167f4a04a05faa3b42a30e02"
+    },
+    "source_python": {
+      "path": "delaylama/ai_core/deadlines.py",
+      "sha256": "f898f9d77512780f95a5a884143f1b6b5eab4604927603429c20c312fa41ba02"
+    },
+    "script_sha256": "75aa544a2300393e8516216ef404ffeaeb9a61eb6ba5feacd3b21944c31c3f55",
+    "input_cases_sha256": "5c3fedbf48a42e9980bc4bf1ea6dba01bf0ca6bdc2414e993663a88e81ac0f06",
+    "node_version": "v24.21.0",
+    "python_version": "3.12.11",
+    "examples": [],
+    "limits": "Parser equality over synthetic windows only; this does not establish trigger applicability, holidays, legal counting conventions or extraction recall."
+  },
+  "gui": {
+    "saved_event_count": 6,
+    "source_event_count": 7,
+    "retry_available": true,
+    "review_backup_revision": 1,
+    "reload_restored_estimate": true,
+    "automatic_saved_estimate_displayed": true,
+    "temporary_tabs_closed": [
+      171,
+      172
+    ]
+  },
+  "main_activation": {
+    "api_healthy": true,
+    "journal_unchanged": true,
+    "journal": {
+      "count": 24,
+      "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+    },
+    "app_env_unchanged": true
+  },
+  "user_preservation_audit_passed": true,
+  "new_training": false
+}
