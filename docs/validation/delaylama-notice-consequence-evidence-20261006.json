@@ -1,0 +1,273 @@
+{
+  "protocol": "notice-consequence-evidence-release-v1",
+  "date": "2026-10-06",
+  "backend_tests": 1988,
+  "frontend_tests": 1313,
+  "frontend_files": 102,
+  "production_build": "passed_with_existing_bundle_warning",
+  "actual_output_frontend_replays": 4,
+  "development_rounds": [
+    {
+      "receipt": "case-observations.json",
+      "cases": 4,
+      "qualified_expected_sets": 1,
+      "calls": 12
+    },
+    {
+      "receipt": "case-observations-repaired.json",
+      "cases": 4,
+      "qualified_expected_sets": 1,
+      "calls": 15
+    },
+    {
+      "receipt": "case-observations-final.json",
+      "cases": 4,
+      "qualified_expected_sets": 4,
+      "calls": 12
+    }
+  ],
+  "project_runs": [
+    {
+      "label": "final",
+      "job_id": "f00e56e3d67144a1a8e46884b4383ce5",
+      "filename": "notification_register_20261006_170033_763504.json",
+      "application_calls": 4,
+      "raw_forfeiture": false,
+      "consequence_status": "unresolved",
+      "kinds": [
+        [
+          "notice_condition",
+          "unresolved"
+        ]
+      ],
+      "consequence_repair_attempts": 0
+    },
+    {
+      "label": "repaired",
+      "job_id": "c131b99d7016435cb1d710697f8e2b7f",
+      "filename": "notification_register_20261006_171708_898944.json",
+      "application_calls": 5,
+      "raw_forfeiture": false,
+      "consequence_status": "unresolved",
+      "kinds": [
+        [
+          "notice_condition",
+          "unresolved"
+        ]
+      ],
+      "consequence_repair_attempts": 1
+    },
+    {
+      "label": "complete",
+      "job_id": "7e7391d9574849c0bafaabdcbc8c9a5d",
+      "filename": "notification_register_20261006_173035_766968.json",
+      "application_calls": 4,
+      "raw_forfeiture": false,
+      "consequence_status": "proposed",
+      "kinds": [
+        [
+          "notice_condition",
+          "proposed"
+        ]
+      ],
+      "consequence_repair_attempts": 0
+    }
+  ],
+  "automatic": {
+    "job_id": "7e7391d9574849c0bafaabdcbc8c9a5d",
+    "notification_filename": "notification_register_20261006_173035_766968.json",
+    "notifications": 1,
+    "automatic_statuses": [
+      "proposed"
+    ],
+    "source_dates": [
+      [
+        [
+          "awareness",
+          "1 July 2098",
+          "2098-07-08",
+          []
+        ]
+      ]
+    ],
+    "desk_deadlines": [
+      {
+        "due_date": "2098-07-08",
+        "days_remaining": 26208,
+        "status": "ok",
+        "label": "26208d left · due 2098-07-08",
+        "window": {
+          "count": 7,
+          "unit": "calendar_days",
+          "raw": "within seven days"
+        },
+        "event_date": "2098-07-01",
+        "forfeiture": false,
+        "is_estimate": true
+      }
+    ],
+    "application_calls": 4,
+    "prior_files_changed": [
+      "studio/sessions.db"
+    ],
+    "prior_source_and_extraction_files_preserved": true
+  },
+  "manual": {
+    "protocol": "notice-manual-qa-receipt-v1",
+    "checked_at_utc": "2026-10-06T17:51:26.251032+00:00",
+    "project_id": "separate-dispatch-receipt-and-grant-c147-20261006-081408-cd344e",
+    "review_scope": "agent:review_9509c83bb32479f7334f0e39ba854a1eab6c0ad73eda846d742f9bbc1bbb0d9e",
+    "review_revision": 2,
+    "review_created_at": "2026-10-06T17:48:16.538038+00:00",
+    "current_result": "complete-result.json",
+    "notification_filename": "notification_register_20261006_173035_766968.json",
+    "notice_path": "notifications[0]",
+    "current_notice_binding_exact": true,
+    "source_sha256": "90465babc6a4ab8d4d5d38265d4209c2d775448f98b644ab859b52c3c0ed8e20",
+    "runtime_source_sha_matches": true,
+    "captured_notice_matches_current_result": true,
+    "raw_forfeiture": false,
+    "manual_consequence_status": "proposed",
+    "manual_consequence_kinds": [
+      "notice_condition"
+    ],
+    "full_own_paragraphs": [
+      {
+        "quote": "If Aspen Owner Ltd blocks access, Hazel Build Ltd is entitled to documented actual additional expense and extra completion days equal to the actual access delay, provided written notice reaches Aspen Owner Ltd within seven days of awareness. Requests and granted days do not establish actual incurred expense or actual delay duration.",
+        "char_start": 178,
+        "char_end": 512,
+        "source_matched": true,
+        "location_basis": "own_effect_paragraph"
+      }
+    ],
+    "full_own_paragraph_spans_exact": true,
+    "qualification_completeness": "unestablished",
+    "manual_trigger_status": "proposed",
+    "manual_triggers": [
+      {
+        "kind": "awareness",
+        "date": "1 July 2098",
+        "date_iso": "2098-07-01",
+        "status": "proposed"
+      }
+    ],
+    "estimated_due": "2098-07-08",
+    "application_calls": 4,
+    "call_phases": [
+      "source_recheck",
+      "notice_trigger_source_resolution",
+      "notice_trigger_source_repair",
+      "notice_consequence_source_classification"
+    ],
+    "all_calls_parsed": true,
+    "general_verdict": "insufficient",
+    "review_status": "flagged",
+    "accepted": false,
+    "saved_note": "Keep the notice condition separate from an express loss-of-rights rule. Preserve the complete original paragraph, exceptions and signature requirements; do not infer actual forfeiture or timely service from an extracted flag. Use the independent consequence checks and prior source-search history when refining the prompt.",
+    "iteration_revision": 3,
+    "iteration_handoff_matches_note_and_current_notice": true,
+    "iteration_context_entry_ids": [
+      "92063de7-12fc-490b-974a-a430d33cf251"
+    ],
+    "read_only_database": "/private/tmp/delaylama-notice-consequence-qa/runtime/processed/separate-dispatch-receipt-and-grant-c147-20261006-081408-cd344e/studio/sessions.db",
+    "database_sha256_before": "f1186c7e655c5b7299bc6f840dedfc8e599cf5cc0ec700f3d8aeac5b6527c313",
+    "database_sha256_after": "f1186c7e655c5b7299bc6f840dedfc8e599cf5cc0ec700f3d8aeac5b6527c313",
+    "database_preserved": true,
+    "limits": "Source interpretation and calendar estimate only. No actual forfeiture, timely service, condition fulfillment or completeness of all linked clauses is established."
+  },
+  "recorded_application_calls": 56,
+  "calendar_parity": {
+    "protocol": "notice-calendar-estimate-parity-v1",
+    "checked_at_utc": "2026-10-06T17:51:47.898921+00:00",
+    "cases": 1200,
+    "mismatches": 0,
+    "passed": true,
+    "examples": [],
+    "coverage": "20 windows × 10 complete/incomplete/ambiguous trigger values × 2 reported loss flags × 3 sent flags; fixed comparison date 2026-06-20.",
+    "source_ts_sha256": "b6deb21e0a0cee8819347873bdaf68846fde5ff450ed89e2e933c93dc90160ad",
+    "source_python_sha256": "b9ae0ea078ed039d653e378d63bbb80b6c882837ccb5965ddbfae36b28be3bc6",
+    "script_sha256": "9026c79c03215fc35764af2dfab4b4165d2dd442dff02727467a9e877c7d91c4",
+    "input_sha256": "823e3db5937b9362ba6deeb974e23418eda6665cf07cfcb9cb928074d6eb10a6",
+    "node_version": "v24.21.0",
+    "python_version": "3.12.11",
+    "limits": "Calendar estimate parity only. It cannot establish receipt, service, forfeiture, holidays or legal applicability."
+  },
+  "loss_wording_parity": {
+    "protocol": "notice-loss-wording-parity-v1",
+    "cases": 48,
+    "mismatches": 0,
+    "input_sha256": "cf8b14ae4b9892e79105e7a02b8fa41399d0774251e5251a6a68fa1fdfa05c0d",
+    "source_python_sha256": "97b57883041a8d9f5d57a758bf7475a93411c604dfe314167de8c1d2b09c8b40",
+    "source_ts_sha256": "6eac36ab2a78c4e70ac629c341fcd9d8475a4a106f1c4dbddb10efb990d9ca45",
+    "limits": "Necessary lexical signals only, not semantic interpretation, recall or legal applicability."
+  },
+  "browser": {
+    "owned_tab": 174,
+    "notice_graph_consequence_visible": true,
+    "complete_highlighted_paragraph_visible": true,
+    "manual_retry_completed": true,
+    "current_review_revision": 2,
+    "restored_after_reload": true,
+    "browser_storage_unavailable": true,
+    "feedback_characters": 8131,
+    "feedback_includes_note_consequence_full_paragraph_and_rejected_trigger_history": true,
+    "assistant_optimization_called": false
+  },
+  "cleanup": {
+    "owned_processes": [
+      {
+        "service": "engine",
+        "pid": 37965,
+        "port": 8097
+      },
+      {
+        "service": "frontend",
+        "pid": 37967,
+        "port": 5176
+      },
+      {
+        "service": "api",
+        "pid": 61951,
+        "port": 8081
+      }
+    ],
+    "owned_ports_closed": true,
+    "terminal_application_jobs": 76,
+    "native_jobs": {
+      "cancelled": 0,
+      "done": 0,
+      "failed": 0,
+      "queued": 0,
+      "running": 0
+    },
+    "temporary_browser_tabs": [
+      174
+    ],
+    "temporary_browser_tab_closed": true
+  },
+  "main_api_activation": {
+    "api_healthy": true,
+    "journal_unchanged": true,
+    "journal": {
+      "count": 24,
+      "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+    },
+    "app_env_unchanged": true
+  },
+  "user_preservation_audit": {
+    "passed": true,
+    "main_journal_snapshots": 24,
+    "protected_engine_source_edits": 14,
+    "original_artifacts": 32,
+    "original_studio_sessions": 2,
+    "original_user_graph_unchanged": true,
+    "user_prompt_and_layago_work_untouched": true
+  },
+  "limits": [
+    "Synthetic development probes used to improve guidance, not held-out accuracy",
+    "Original paragraph preservation does not certify linked-rule or condition completeness",
+    "Graph neighborhoods remain bounded source navigation, not semantic proof",
+    "Actual service, fulfillment, forfeiture, calendar conventions and broader recall remain unestablished",
+    "No new native graph jobs or LayaGo/GLiNER/MLX training or speed measurements"
+  ]
+}

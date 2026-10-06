@@ -6142,3 +6142,48 @@ literal quote ownership and semantic judgment independently. This increment pass
 not held-out model accuracy. No new LayaGo/GLiNER/MLX training, architecture, weights
 or speed gain was measured. Broader recall, exceptions, temporal applicability and
 payment reconciliation remain open.
+
+## L160 — Separate notice effects and retain original qualifications (2026-10-06)
+
+**Evidence:** [DelayLama report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-notice-consequence-evidence.md)
+and [receipt](validation/delaylama-notice-consequence-evidence-20261006.json).
+
+A conditional entitlement is not automatically an express loss-of-rights provision.
+Likewise a penalty, negated loss wording, a future conditional bar and an actual lost
+claim are separate targets. Train effect kind, polarity, explicit/inferred basis,
+obligation scope and explicit association separately. Keep coexisting effects and
+unknown classes; a false extraction flag cannot prove whole-contract absence.
+
+Blind source checks should exclude earlier flags, consequences and rationale. Bind
+checked proposals to finalized scope fields and the original source digest. Graph
+neighbors may retrieve original passages; derived edges and display names cannot
+substitute for the effect's own supporting quotation.
+
+A correct short effect quote can omit a following waiver signature or document
+requirement. Preserve the complete own original paragraph and exact span, and score
+qualification inventory separately from literal quote coverage. Retaining that
+paragraph does not prove recall of all dispersed exceptions or that a condition was
+fulfilled. Keep oversized context whole and unresolved rather than silently clipping.
+
+One bounded repair can fix structural quotation gaps while holding the original
+proposition fixed. Do not let it rewrite a claim to match a new quote or turn a
+semantic insufficient result into support. Preserve initial rejected draws, repaired
+results, retries and transport failures in review feedback and training diagnostics.
+
+Four frozen synthetic EN/FR development families qualified expected effect categories
+in 1/4 initial, 1/4 intermediate and 4/4 final runs. Guidance changed in response to
+observed failures, so these are regression probes, not held-out model accuracy.
+Signed waiver/acceptance requirements were preserved in full paragraphs and final
+French condition lists. C147 retained its conditional notice rule, raw false flag,
+independent awareness trigger and date estimate; its false-flag support remained
+insufficient, flagged and unaccepted. All 56 recorded application calls across these
+runs and one manual retry are accounted for. Python/TypeScript parity passed 1,200
+calendar estimates and 48 lexical loss controls; lexical matches are not semantics.
+
+For LayaGo datasets, generate paraphrases, cross-references, conditional exceptions,
+negation, multiple coexisting effects, changed rules and independent service facts.
+Split related source families before synthetic expansion. Evaluate retrieval recall,
+effect classification, scope/link ownership, qualification recall, quote/span validity
+and calibrated abstention independently. UI engineering tests do not measure these
+model objectives. No new LayaGo/GLiNER/MLX training, weights, architecture, throughput
+or OOM supervision improvement was measured in this increment.
