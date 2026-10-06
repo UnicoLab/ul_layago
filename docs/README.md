@@ -105,3 +105,5 @@ accepted model-quality result. Update a superseded conclusion with a dated link
 instead of erasing the old evidence. Add new experiments to this index and cite
 their finding IDs in the learning log. Keep confidential source text and model
 weights outside Git; use reviewed, shareable aggregates where necessary.
+
+Latest scope-resolution learnings: [original cycles, bounded discovery and retained history, 2026-10-06](validation/delaylama-activity-scope-resolution-20261006.json), learning **L165**. Includes preserved provider failures and remaining event/graph recall gaps.

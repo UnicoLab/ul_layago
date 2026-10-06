@@ -1,0 +1,481 @@
+{
+  "protocol": "delaylama-activity-scope-resolution-validation-v1",
+  "checked_at_utc": "2026-10-06T22:16:21.235962+00:00",
+  "basis": "Synthetic development observations and specific engineering checks; no held-out accuracy or perfect-analysis claim.",
+  "parallel_tracks": [
+    "backend ownership/discovery/structural repair",
+    "frontend review/history/feedback/persistence",
+    "independent source and native graph audit"
+  ],
+  "source": {
+    "actual_original_chars": 4603,
+    "sha256": "9b181e3bf2e8bad4c00d148e34edd807454c8cbcd1619410cbd7095aecad5593",
+    "frozen_fixture": "assets/activity-scope-resolution/frozen-dossier.json"
+  },
+  "observed_draws": [
+    {
+      "file": "draw-1-events.json",
+      "events": 8,
+      "interval_proposals": 2,
+      "base_qualified": 2,
+      "scope_qualified": 0,
+      "six_expected_interval_proposals_omitted": true
+    },
+    {
+      "file": "draw-2-events.json",
+      "events": 8,
+      "interval_proposals": 8,
+      "base_qualified": 8,
+      "scope_qualified": 3,
+      "guidance_contained_development_identifiers": true
+    },
+    {
+      "file": "draw-3-events.json",
+      "events": 7,
+      "interval_proposals": 8,
+      "base_qualified": 6,
+      "scope_qualified": 4,
+      "generic_guidance_runtime_digests_verified": true,
+      "observed_artifact_unmodified": true
+    }
+  ],
+  "manual_checks": {
+    "first_repair_failed_exact_request_binding": true,
+    "one_request_repair": {
+      "qualified": 6,
+      "unresolved": 2,
+      "eligible_repairs": 3,
+      "raw_nine_fields_unchanged": true
+    },
+    "browser_check": {
+      "qualified": 6,
+      "unresolved": 2,
+      "flagged_reviews_saved": 8,
+      "accepted_reviews": 0
+    }
+  },
+  "counterfactual_replay": {
+    "file": "assets/activity-scope-resolution/draw-3-c2-exact-envelope-replay.json",
+    "basis": "Actual recorded response uniquely matching all nine original fields; real helper and validators, not a new live model draw.",
+    "own_C2_interval_and_scope_qualify": true,
+    "all_four_actual_K220_intervals_still_withheld": true
+  },
+  "frontend": {
+    "planned_versions_display_separately": true,
+    "whole_actual_group_unassigned_competitor_withholds_bars": true,
+    "failed_checks_retained": true,
+    "feedback_bytes_before": 13669473,
+    "feedback_bytes_after": 268670,
+    "lossless_reference_roundtrip_candidates": 8,
+    "editable_notes_chars": 811,
+    "raw_reference_table_hidden_by_default": true,
+    "source_history_and_full_export_preserved": true,
+    "quota_checkpoint_bug_reproduced": true,
+    "recovered_session_revision": 7,
+    "reload_divergence_pauses_automatic_save": true,
+    "project_version_recovered_with_browser_copy_archived": true,
+    "malformed_or_unretained_feedback_not_hidden": true
+  },
+  "tests": {
+    "backend_passed": 2399,
+    "frontend_passed": 1636,
+    "frontend_files_passed": 120,
+    "production_build_passed": true,
+    "existing_large_chunk_advisory": true
+  },
+  "parity": {
+    "interval": {
+      "protocol": "activity-interval-reader-parity-v1",
+      "checked_at_utc": "2026-10-06T22:15:09.272528+00:00",
+      "report_cases": 62,
+      "saved_model_report_cases": 18,
+      "saved_draw_files": [
+        "draw-1-events.json",
+        "draw-2-events.json",
+        "draw-3-events.json"
+      ],
+      "saved_manual_checks_present": false,
+      "role_cases": 56,
+      "boundary_cases": 56,
+      "date_cases": 12,
+      "administrative_cases": 23,
+      "mismatches": 0,
+      "passed": true,
+      "examples": [],
+      "source_ts": {
+        "path": "frontend/src/activityIntervalEvidence.ts",
+        "sha256": "564da7283b2cf11230be5cec9c6003318b85ce49dbe614fd36a492ba1d447f28"
+      },
+      "source_python": {
+        "path": "delaylama/ai_core/activity_intervals.py",
+        "sha256": "2b6f043f3fd9f7d83d4987a0927d83e2db900cfd7ba3b52f43166c7b2cd573e9"
+      },
+      "script_sha256": "8e501aa91575b4c970e9b1dea25223af4b5ab4304bbbfe03caa286d8c5083e64",
+      "scope": "Synthetic actual backend reports, source/input changes, exact boundary roles, own quotation failures, transaction-only dates, multi-date ownership and administrative subject/object actions; no model or runtime calls."
+    },
+    "collection": {
+      "protocol": "activity-interval-scope-parity-v1",
+      "cases": [
+        {
+          "name": "competing pairs",
+          "expected": [
+            false,
+            false,
+            true
+          ],
+          "actual": [
+            false,
+            false,
+            true
+          ],
+          "passed": true
+        },
+        {
+          "name": "duplicate pairs",
+          "expected": [
+            true,
+            true
+          ],
+          "actual": [
+            true,
+            true
+          ],
+          "passed": true
+        },
+        {
+          "name": "planned vs actual",
+          "expected": [
+            true,
+            true
+          ],
+          "actual": [
+            true,
+            true
+          ],
+          "passed": true
+        },
+        {
+          "name": "stale sibling",
+          "expected": [
+            true,
+            false,
+            true
+          ],
+          "actual": [
+            true,
+            false,
+            true
+          ],
+          "passed": true
+        },
+        {
+          "name": "unknown sibling",
+          "expected": [
+            true,
+            false,
+            true
+          ],
+          "actual": [
+            true,
+            false,
+            true
+          ],
+          "passed": true
+        },
+        {
+          "name": "changed events",
+          "expected": [
+            false,
+            false,
+            false
+          ],
+          "actual": [
+            false,
+            false,
+            false
+          ],
+          "passed": true
+        },
+        {
+          "name": "changed original",
+          "expected": [
+            false,
+            false,
+            false
+          ],
+          "actual": [
+            false,
+            false,
+            false
+          ],
+          "passed": true
+        },
+        {
+          "name": "no rows",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        },
+        {
+          "name": "saved live model inventory",
+          "expected": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          "actual": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "source_files": {
+        "delaylama/ai_core/activity_interval_scope.py": "bdbf4114e7666a9379be2248c729a79753ff10881f9c21bac0b9648d61a313fb",
+        "frontend/src/activityIntervalScope.ts": "a2794abb1ef95fc4f390975b448fe4598381ec7db46985971d4835247f27ec00"
+      },
+      "limits": "Current source proposals and display gates only; no contradiction, legal applicability, complete discovery or held-out accuracy established."
+    },
+    "payment_stage": {
+      "protocol": "completed-payment-award-warning-parity-v1",
+      "comparisons": 60,
+      "mismatches": [],
+      "passed": true,
+      "source_files": {
+        "delaylama/ai_core/payment_stage_review.py": "51b00ff03ed31ca1eda7b12acf94c852e2703282aae572cadfc54e23c997ba03",
+        "frontend/src/paymentStageReview.ts": "e489656d473f3f6440a70e2372f9a6d17b58457bc1b26d308a8800d0e8645c4a"
+      },
+      "limits": "Necessary recognized wording warnings only, not complete semantic financial-stage evaluation."
+    },
+    "scope_resolution": {
+      "protocol": "activity-scope-resolution-reader-parity-v1",
+      "checked_at_utc": "2026-10-06T22:06:13.924383+00:00",
+      "comparisons": 148,
+      "actual_report_cases": 28,
+      "label_cases": 48,
+      "identity_veto_cases": 72,
+      "mismatches": 0,
+      "passed": true,
+      "examples": [],
+      "source_files": {
+        "delaylama/ai_core/activity_scope_resolution.py": "4abf254632123faf1648d2daadafe02544f2166155b3177b5a733737ae2759d1",
+        "delaylama/ai_core/activity_intervals.py": "2b6f043f3fd9f7d83d4987a0927d83e2db900cfd7ba3b52f43166c7b2cd573e9",
+        "frontend/src/activityScopeResolution.ts": "ae33751f18634d5eb579fe45949565c5e065294d02489c137745f5028e882c10",
+        "frontend/src/activityIntervalEvidence.ts": "564da7283b2cf11230be5cec9c6003318b85ce49dbe614fd36a492ba1d447f28"
+      },
+      "script_sha256": "2c63e7c325930264b6c71a3cb1cc50d1f9ec4fea600e2a3457a642e9abedb740",
+      "limits": "Necessary exact-source ownership and named identity checks only; no semantic acceptance, operative version choice or legal applicability."
+    },
+    "total_comparisons": 426,
+    "mismatches": 0
+  },
+  "runtime": {
+    "primary_api_activation": {
+      "old_launcher_pid": 32147,
+      "new_launcher_pid": 37559,
+      "api_healthy": true,
+      "journal_unchanged": true,
+      "journal": {
+        "count": 24,
+        "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+      },
+      "app_env_unchanged": true,
+      "health": {
+        "status": "healthy",
+        "agents": {
+          "agent_critic": {
+            "status": "healthy"
+          },
+          "amendment_analyzer": {
+            "status": "healthy"
+          },
+          "claim_viability": {
+            "status": "healthy"
+          },
+          "contract_identity": {
+            "status": "healthy"
+          },
+          "contract_identity_base": {
+            "status": "healthy"
+          },
+          "event_detector": {
+            "status": "healthy"
+          },
+          "extractor": {
+            "status": "healthy"
+          },
+          "guarantee_analyzer": {
+            "status": "healthy"
+          },
+          "notification_register": {
+            "status": "healthy"
+          },
+          "penalty_analyzer": {
+            "status": "healthy"
+          },
+          "project_context": {
+            "status": "healthy"
+          },
+          "prompt_improver": {
+            "status": "healthy"
+          },
+          "risk_allocator": {
+            "status": "healthy"
+          }
+        },
+        "agent_count": 13,
+        "plugins": {},
+        "plugin_count": 0,
+        "endpoints": {
+          "project_workflow": {
+            "status": "healthy"
+          },
+          "prompt_editor": {
+            "status": "healthy"
+          },
+          "review_sessions": {
+            "status": "healthy"
+          },
+          "studio_sessions": {
+            "status": "healthy"
+          }
+        },
+        "endpoint_count": 4,
+        "ingestors": {
+          "markitdown": {
+            "status": "healthy"
+          }
+        },
+        "ingestor_count": 1,
+        "pipelines": [
+          "claim_prep",
+          "consolidate",
+          "contract_analysis",
+          "contract_analysis_sequential",
+          "contract_identity_base",
+          "contract_identity_critic",
+          "contract_identity_only",
+          "extract_batch",
+          "extractor_fanout",
+          "project_consolidate",
+          "prompt_improve"
+        ],
+        "pipeline_count": 11,
+        "tasks_enabled": true,
+        "storage": {
+          "status": "healthy"
+        }
+      }
+    },
+    "primary_protection_audit_passed": true,
+    "primary_engine_pid_unchanged": 75902,
+    "primary_graph_counts_preserved": {
+      "nodes": 1444,
+      "edges": 660,
+      "episodes": 321,
+      "timeline_events": 3437
+    },
+    "user_engine_sources_preserved": 14,
+    "user_artifacts_preserved": 32,
+    "user_studio_sessions_preserved": 2,
+    "owned_cleanup": {
+      "owned_processes": [
+        {
+          "service": "engine",
+          "pid": 18564,
+          "port": 8097
+        },
+        {
+          "service": "frontend",
+          "pid": 18566,
+          "port": 5176
+        },
+        {
+          "service": "api",
+          "pid": 34395,
+          "port": 8081
+        }
+      ],
+      "owned_ports_closed": true,
+      "terminal_application_jobs": 96,
+      "native_jobs": {
+        "cancelled": 0,
+        "done": 5,
+        "failed": 0,
+        "queued": 0,
+        "running": 0
+      },
+      "temporary_browser_tabs": [
+        180
+      ],
+      "temporary_browser_tab_absent_from_session_inventory": true
+    }
+  },
+  "remaining_gaps": [
+    "Source-only action discovery: generic draw omits C1E2 and K221 N1/N2.",
+    "SV1 full activity label quotation remains unresolved.",
+    "No original cycle identity for unnamed execution; no operative schedule or date winner established.",
+    "Native C1E2 direct cycle relation and P3 proposal nuance remain limited.",
+    "Held-out multilingual recall, dispersed conditions, graph predicate semantics, calendar rules and broad semantic accuracy remain unestablished."
+  ],
+  "no_new_model_training_or_speed_claim": true,
+  "source_files": {
+    "delaylama/agents/event_detector/agent.py": "d5659590946d885ba88dddb98db29302a0b33e6c1ea964677b58f5d17333918f",
+    "delaylama/ai_core/activity_interval_inventory.py": "8d82d4bcc3ae909c635b0b0c2ca4564ec8ec2268c2ff063f658d28eeb535ad3a",
+    "delaylama/ai_core/activity_scope_repair.py": "188ab52c4797ac780beeb990b4679ec59c363b5523f95ea117224a3fabb3b4e4",
+    "delaylama/ai_core/activity_scope_resolution.py": "4abf254632123faf1648d2daadafe02544f2166155b3177b5a733737ae2759d1",
+    "delaylama/ai_core/activity_scope_service.py": "917ae1a9f9f9cd2a3b807cdbe29562a64a229d76c9962ce1224f720eb06aed6f",
+    "delaylama/ai_core/analysis_context.py": "7ea8279e3a332a901dcaceb0ba1d1749e7658bf7b3d361302820e613d7fb57a8",
+    "delaylama/ai_core/claim_desk.py": "b80a7cc2bfab24b19d565913ff77209168eed6893fc4962638a9222469f07fbd",
+    "delaylama/endpoints/prompt_editor/endpoint.py": "eed4e803c00df70cd06df7c730b2e8ae069e76b77e4378d9c09c26ae5c24160e",
+    "delaylama/tests/test_activity_interval_inventory.py": "402f94208998de1b8fe49ab0c38bad20d3aefbf5512afeb56960d2765ba424a0",
+    "delaylama/tests/test_activity_intervals.py": "69e20e3adad96efc24f046107aca7afc5f6c06ae2020e38a632fa75ca395a087",
+    "delaylama/tests/test_activity_scope_automatic.py": "8c900a94548efd6c1b07cd87c09dc77ce6405c2dd3b4efe744487110246bf881",
+    "delaylama/tests/test_activity_scope_repair.py": "4a919dd58ab0475133092111d6d82b1d64015ce8693fbe4e56076193704f1e1e",
+    "delaylama/tests/test_activity_scope_resolution.py": "2402c410b6d1ecbef20fb2bf863de20e42c0f4edba34bc2f29c41590bf1308cf",
+    "delaylama/tests/test_activity_scope_service.py": "19cbb642ab608efba12ed427d70cb4b66ee2ab3f2c7f618e6ab9849bf6405040",
+    "delaylama/tests/test_claim_desk.py": "c37f1112d9f9ce36ae26b8d6e2c77c03b40f1a1309be4233963368c402d3a902",
+    "frontend/src/activityIntervalScope.ts": "a2794abb1ef95fc4f390975b448fe4598381ec7db46985971d4835247f27ec00",
+    "frontend/src/activityScopeFeedbackPresentation.ts": "0e0450232796f56969834c98df6290315a35edaf70fa57116a535a2a8d5499be",
+    "frontend/src/activityScopeResolution.ts": "ae33751f18634d5eb579fe45949565c5e065294d02489c137745f5028e882c10",
+    "frontend/src/analysisGraph.ts": "c5562a5b34095803f57d74c22951e4786d35d45995f2fe77464e93d9f0e02833",
+    "frontend/src/api.ts": "f4233ce61828dbb8782ad7e8ccc7cd9287c327b87bae3cbbeebd2f9492dc9d89",
+    "frontend/src/components/ActivityIntervalReview.tsx": "3ab1e2802ed471a047d4a98cc88160512931b455076a7d3ce30bee68876b4647",
+    "frontend/src/components/ActivityIntervalScope.tsx": "b77277f2a6f3c42cd4c9f85bd3e8b8177724544fd39f42d56b2202d9236c7df2",
+    "frontend/src/components/ActivityScopeResolution.tsx": "7f9de8b9693f2d354bb2ebd2aacf75b219f98c46bbbf84e6b098e74540264ce6",
+    "frontend/src/components/EvidenceBoard.tsx": "d42e9f4acbbe82dc680f830081c2413c4a15a88dfc61cc2638256fef00b8d5e4",
+    "frontend/src/components/GanttTimeline.tsx": "a35862dd7d3bc5b7e7ebb7da8134362cbe48f2e21cc8988e9c655496e1d40935",
+    "frontend/src/components/PromptStudio.tsx": "cbc12f68517d7f88b36e5af2fcfe9a1d4b59438cef0b4f0cd53127902e81ee41",
+    "frontend/src/contractTimeline.ts": "14a109418d6df93ea0a02371bea59c79765f9d90a0047cf6688c6f28b7279e66",
+    "frontend/src/evidenceRows.ts": "3478f19c16b984372e02abe174a9ceeb638366f3394517b4839f15c33c4c3a3c",
+    "frontend/src/review.ts": "d922562137000f890168f76f6ed8542a5d595b05ca294a7d539cfb93224560bd",
+    "frontend/src/useStudioPersistence.ts": "608a0b8fa2849efad97d8716bb34aa31ca855ca1165914b38f81c38728c5f792",
+    "frontend/tests/activity-scope-async-feedback.test.tsx": "09e9193ab14a73b4ae80cb5260b61d470aa17cdbd228e2f0141a04f5297b714c",
+    "frontend/tests/activity-scope-feedback-presentation.test.ts": "cf7be1edb6a041030baa00a80fe6aca1c4c5cb48d41ab8284764f2d9f184b5ba",
+    "frontend/tests/activity-scope-feedback-size.test.ts": "8ec7ac69835d9b4fc604d26c3bf1e3d35f5ea9e62e852feba9f04743322a5842",
+    "frontend/tests/activity-scope-feedback-studio.test.tsx": "6101e50771d93fb68db4df1f2739a796109212d36848ccf4213907187d956c32",
+    "frontend/tests/activity-scope-history.test.tsx": "bbc03e1ee41ab5a024cea485fcea3ea65a6affcdc2a9fb400aa204925da5de49",
+    "frontend/tests/activity-scope-queue.test.tsx": "0aa4e6241f39a29714d48d83f7f04ddcc81ad4ec678cd46227a789f7aa8b9d41",
+    "frontend/tests/activity-scope-resolution.test.tsx": "e847ca5d6afa776e4474ba2b0189718ad8d35f5e3e883159aa2af5b5cb6c7beb",
+    "frontend/tests/activity-scope-workflow.test.tsx": "6f5922f01166ee8594dd068b49fadf18d79dcae8f6c5473fad3f0f975c7d2045",
+    "frontend/tests/fixtures/activity-scope-ownership.json": "0b14baae03e11c75221359cc8b75252928443bc78959788b08a18ab4f1ee28a5",
+    "frontend/tests/fixtures/activity-scope-resolution-dossier.json": "2df0c94953a8a63ea7f69c5e38c696c8b058780ac8f13184b532fe6c8d0ffc2e",
+    "frontend/tests/fixtures/activity-scope-resolution.json": "9ea928eac9f6f3dcbdc97673d46d1eb99ff80be166f7a34d8027440e7c5d5d56",
+    "frontend/tests/studio-cache-recovery.test.tsx": "cc2abd43dca04c1de30289fba81d548ea83ceb62e4e60496a29bfea393b0b061",
+    "frontend/tests/studio-persistence.test.tsx": "0009fff9e78afe6e4e9795db6f5de43055c9f7bd739b610ef356904fabf98490",
+    "scripts/validate_activity_interval_parity.py": "8e501aa91575b4c970e9b1dea25223af4b5ab4304bbbfe03caa286d8c5083e64",
+    "scripts/validate_activity_scope_resolution_parity.py": "2c63e7c325930264b6c71a3cb1cc50d1f9ec4fea600e2a3457a642e9abedb740"
+  }
+}
