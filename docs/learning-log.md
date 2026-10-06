@@ -5457,3 +5457,46 @@ These are synthetic development controls, not independent legal gold, causal,
 held-out or repeated-seed accuracy. No LayaGo/GLiNER/MLX training or speed gain was
 measured. The final notice-status guidance had deterministic checks only, without
 a new model draw.
+
+
+## L146 — Document calendar and concept occurrence must remain separate (2026-10-06)
+
+**Evidence:** [DelayLama native-calendar validation](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-concept-calendar-context.md)
+and [hashed receipt](validation/delaylama-concept-calendar-context-20261006.json).
+
+A mentioned-delay concept inherited a payment-request date through document-anchor
+fallback. A second deterministic regression showed that reparsing a normalized
+inferred date could promote it to an exact occurrence timestamp. This happened in
+native concept storage, independently of the application's context-only display.
+Date provenance must survive every normalization, storage and retrieval boundary.
+
+Default engine compatibility patch 68 retains first-document-date and supplied
+inferred calendars as context metadata. They do not populate concept occurrence
+or validity. Repeated normalization and timeline reconstruction cannot recover an
+occurrence from a dated summary. Explicit own date text keeps its source precision;
+a parser or label does not certify its semantic role. Historical rows remain intact.
+The inspector distinguishes unestablished occurrence from document calendar context.
+
+Actual source-first runs retained an undated English mentioned delay and a separately
+reported undated French delay across two sources, while dated payment requests,
+awards and draft circulations kept their own dates. Actual expense remained distinct
+from requested/awarded amounts. Tentative entitlement from a standing request duty
+still appeared in the English control; date correction did not repair that verdict.
+A rejected source statement and normative deadline-role Event nodes remain explicit
+qualification problems.
+
+**Training implications:** label concept mention, actual action, statement modality,
+date role, precision, document context and source association separately. Include
+an undated subject discussed by several dated records; ensure transformations of
+cached date strings cannot turn an inferred anchor into observation. Evaluate the
+native store and timeline projection separately from application displays. Preserve
+source text, original unknowns and failed proposals. Do not turn a context date,
+connected path or exact text match into a domain-training acceptance label.
+
+**Evidence limits:** 51 application calls, three native source jobs, 16 requested
+pairs across eight reported events. Full Go and agents/intelligence/API race suites,
+12 patch arms, 1,662 backend and 1,031 frontend tests plus build passed. English
+control reused; French control frozen before submission. No independent legal gold,
+held-out, repeated-seed or causal accuracy result; explicit model date associations,
+semantic typing, source recall, applicability and native recovery remain open.
+No LayaGo/GLiNER/MLX training or speed gain was measured.

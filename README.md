@@ -12,10 +12,9 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L145 finding](docs/learning-log.md#l145--action-recall-financial-stages-and-tentative-rights-require-separate-checks-2026-10-06)
-records why action recall, financial stages and substantive rule coverage need
-separate evaluation, including tentative claim labels and mentioned-event dates.
-The retained model and graph failures inform domain-training controls.
+The latest [L146 finding](docs/learning-log.md#l146--document-calendar-and-concept-occurrence-must-remain-separate-2026-10-06)
+records two native calendar inference failures and their correction, with retained
+English/French workflow evidence and training controls for date provenance.
 
 ## Build and use
 
