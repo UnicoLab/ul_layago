@@ -1,0 +1,1362 @@
+{
+  "protocol": "notice-direction-release-v1",
+  "date": "2026-10-06",
+  "backend_tests": 2048,
+  "frontend_tests": 1341,
+  "frontend_files": 104,
+  "production_build": "passed_with_existing_bundle_warning",
+  "actual_final_output_frontend_replays": 2,
+  "dossiers": {
+    "protocol": "prior-notice-dossiers-v1",
+    "cases": [
+      {
+        "case_id": "en_named_planned_handover_before",
+        "project_id": "prior-notice-en_named_planned_handover_before-d148-20261006-180252-c00242",
+        "original_sha256": "d417f3c67fff7f35e6d582e96acf9e106bbd44c5b9740c60b87e102da9dfaff1",
+        "raw_forfeiture": false,
+        "source_checked_planned_reference_preserved": true,
+        "prior_files_preserved": true,
+        "rounds": [
+          {
+            "phase": "extract",
+            "job_id": "b1ed58bfebb04ad09b53c200b79c83f9",
+            "filename": "notification_register_20261006_180302_400092.json",
+            "calls": 3,
+            "phases": [
+              "extract",
+              "notice_trigger_source_resolution",
+              "notice_consequence_source_classification"
+            ],
+            "source_status": "proposed",
+            "dates": [
+              "20 July 2098"
+            ],
+            "estimated_due": "2098-07-13",
+            "candidate_issues": [
+              []
+            ],
+            "trigger_repair_attempted": [
+              false
+            ],
+            "graph_context_chars": 0,
+            "graph_retrieval": null,
+            "analysis_gaps": [
+              "Topic graph context was not refreshed because the source graph is not ready. Any retained supplied context remains an unverified candidate; compare current originals. Graph coverage is not established."
+            ],
+            "used_fallback": false
+          },
+          {
+            "phase": "ready-extract",
+            "job_id": "828eebbb978e42809f4176f92f43a6a1",
+            "filename": "notification_register_20261006_180540_860911.json",
+            "calls": 4,
+            "phases": [
+              "extract",
+              "notice_trigger_source_resolution",
+              "notice_trigger_source_repair_0",
+              "notice_consequence_source_classification"
+            ],
+            "source_status": "unresolved",
+            "dates": [
+              "2098-07-20"
+            ],
+            "estimated_due": null,
+            "candidate_issues": [
+              [
+                "The verbatim date is not independently quoted in both the own occurrence and its date premise.",
+                "The date and described action do not occur together in the same own occurrence quotation."
+              ]
+            ],
+            "trigger_repair_attempted": [
+              true
+            ],
+            "graph_context_chars": 23714,
+            "graph_retrieval": {
+              "protocol": "contract-topic-context-v1",
+              "project_id": "prior-notice-en_named_planned_handover_before-d148-20261006-180252-c00242",
+              "context_sha256": "ac61d175923c3c437984d0febf83b82705ee03094c3427ba5fc40893c22e04ae",
+              "sources": [
+                {
+                  "document_id": "en_named_planned_handover_before",
+                  "sha256": "80fce1201ac335e1edf152bac9a46b7d7f09e93c1459b3f15ff850c2c44c15f0"
+                }
+              ],
+              "queries": [
+                "Extract contractual notification obligations and formalisms",
+                "notifications event deadline starting point recipient required form",
+                "required content supporting documents late consequence forfeiture delay penalty link citations",
+                "notification deadline form forfeiture",
+                "notice time extension force majeure",
+                "Original source: en_named_planned_handover_before",
+                "Clause H14",
+                "Schedule H3"
+              ],
+              "coverage": {
+                "graph_snapshot_partial": false,
+                "navigation_graph": "semantic_connections",
+                "source_containment_used_for_semantic_navigation": false,
+                "neighborhood_depth_limited": true,
+                "matching_fact_candidates_considered": 6,
+                "matching_anchors": 6,
+                "matching_relationships": 4,
+                "omitted_matching_anchors": 2,
+                "matched_original_blocks": 2,
+                "retained_matched_original_blocks": 2,
+                "omitted_matched_original_blocks": 0,
+                "omitted_adjacent_original_blocks": 0,
+                "passage_selection": "direct_matches_then_adjacent_round_robin_by_original_and_query",
+                "passage_budget_reached": false,
+                "neighborhoods": [
+                  {
+                    "node_id": "2a74ee18-0ee2-47d0-93ae-2833e06ecbef",
+                    "matched_queries": [
+                      "Schedule H3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  },
+                  {
+                    "node_id": "2b3d8ed8-9251-455d-bb06-a3d9801f43d6",
+                    "matched_queries": [
+                      "Schedule H3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  },
+                  {
+                    "node_id": "32188fc5-d59b-4a24-9c1c-34e459c291de",
+                    "matched_queries": [
+                      "Schedule H3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  },
+                  {
+                    "node_id": "38e268e8-53af-4cdf-9afb-579323b24e24",
+                    "matched_queries": [
+                      "Schedule H3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  }
+                ],
+                "completeness": "unestablished",
+                "graph_character_budget_reached": false,
+                "omitted_nodes_by_character_budget": 0,
+                "omitted_connections_by_character_budget": 0
+              },
+              "requires_review": true
+            },
+            "analysis_gaps": [
+              "Graph context is bounded: some connections beyond the selected depth, expansion anchors or passages may be omitted or unavailable. Retained quotations are whole candidates; inspect the full originals and node context before relying on a conclusion."
+            ],
+            "used_fallback": false
+          },
+          {
+            "phase": "final-extract",
+            "job_id": "0c13448534f1451790211d56f30bc2b3",
+            "filename": "notification_register_20261006_181013_971362.json",
+            "calls": 4,
+            "phases": [
+              "extract",
+              "notice_trigger_source_resolution",
+              "notice_consequence_source_classification",
+              "notice_consequence_source_repair_0"
+            ],
+            "source_status": "proposed",
+            "dates": [
+              "20 July 2098"
+            ],
+            "estimated_due": "2098-07-13",
+            "candidate_issues": [
+              []
+            ],
+            "trigger_repair_attempted": [
+              false
+            ],
+            "graph_context_chars": 23714,
+            "graph_retrieval": {
+              "protocol": "contract-topic-context-v1",
+              "project_id": "prior-notice-en_named_planned_handover_before-d148-20261006-180252-c00242",
+              "context_sha256": "ac61d175923c3c437984d0febf83b82705ee03094c3427ba5fc40893c22e04ae",
+              "sources": [
+                {
+                  "document_id": "en_named_planned_handover_before",
+                  "sha256": "80fce1201ac335e1edf152bac9a46b7d7f09e93c1459b3f15ff850c2c44c15f0"
+                }
+              ],
+              "queries": [
+                "Extract contractual notification obligations and formalisms",
+                "notifications event deadline starting point recipient required form",
+                "required content supporting documents late consequence forfeiture delay penalty link citations",
+                "notification deadline form forfeiture",
+                "notice time extension force majeure",
+                "Original source: en_named_planned_handover_before",
+                "Clause H14",
+                "Schedule H3"
+              ],
+              "coverage": {
+                "graph_snapshot_partial": false,
+                "navigation_graph": "semantic_connections",
+                "source_containment_used_for_semantic_navigation": false,
+                "neighborhood_depth_limited": true,
+                "matching_fact_candidates_considered": 6,
+                "matching_anchors": 6,
+                "matching_relationships": 4,
+                "omitted_matching_anchors": 2,
+                "matched_original_blocks": 2,
+                "retained_matched_original_blocks": 2,
+                "omitted_matched_original_blocks": 0,
+                "omitted_adjacent_original_blocks": 0,
+                "passage_selection": "direct_matches_then_adjacent_round_robin_by_original_and_query",
+                "passage_budget_reached": false,
+                "neighborhoods": [
+                  {
+                    "node_id": "2a74ee18-0ee2-47d0-93ae-2833e06ecbef",
+                    "matched_queries": [
+                      "Schedule H3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  },
+                  {
+                    "node_id": "2b3d8ed8-9251-455d-bb06-a3d9801f43d6",
+                    "matched_queries": [
+                      "Schedule H3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  },
+                  {
+                    "node_id": "32188fc5-d59b-4a24-9c1c-34e459c291de",
+                    "matched_queries": [
+                      "Schedule H3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  },
+                  {
+                    "node_id": "38e268e8-53af-4cdf-9afb-579323b24e24",
+                    "matched_queries": [
+                      "Schedule H3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  }
+                ],
+                "completeness": "unestablished",
+                "graph_character_budget_reached": false,
+                "omitted_nodes_by_character_budget": 0,
+                "omitted_connections_by_character_budget": 0
+              },
+              "requires_review": true
+            },
+            "analysis_gaps": [
+              "Graph context is bounded: some connections beyond the selected depth, expansion anchors or passages may be omitted or unavailable. Retained quotations are whole candidates; inspect the full originals and node context before relying on a conclusion."
+            ],
+            "used_fallback": false
+          }
+        ]
+      },
+      {
+        "case_id": "fr_named_planned_delivery_before",
+        "project_id": "prior-notice-fr_named_planned_delivery_before-d148-20261006-180302-349e95",
+        "original_sha256": "99190f670461a38cb7be13ab2479b9feb1fbd2725cdc59c898d9476c9c616cdc",
+        "raw_forfeiture": false,
+        "source_checked_planned_reference_preserved": true,
+        "prior_files_preserved": true,
+        "rounds": [
+          {
+            "phase": "extract",
+            "job_id": "7d6a0d9c69f34f9a9af2ccf8255611b7",
+            "filename": "notification_register_20261006_180314_166172.json",
+            "calls": 4,
+            "phases": [
+              "extract",
+              "notice_trigger_source_resolution",
+              "notice_consequence_source_classification",
+              "notice_consequence_source_repair_0"
+            ],
+            "source_status": "proposed",
+            "dates": [
+              "21 juillet 2098"
+            ],
+            "estimated_due": "2098-07-14",
+            "candidate_issues": [
+              []
+            ],
+            "trigger_repair_attempted": [
+              false
+            ],
+            "graph_context_chars": 0,
+            "graph_retrieval": null,
+            "analysis_gaps": [
+              "Topic graph context was not refreshed because the source graph is not ready. Any retained supplied context remains an unverified candidate; compare current originals. Graph coverage is not established."
+            ],
+            "used_fallback": false
+          },
+          {
+            "phase": "ready-extract",
+            "job_id": "fdc67ed37fd645feb50cc81ea672b8c8",
+            "filename": "notification_register_20261006_180554_395016.json",
+            "calls": 5,
+            "phases": [
+              "extract",
+              "notice_trigger_source_resolution",
+              "notice_trigger_source_repair_0",
+              "notice_consequence_source_classification",
+              "notice_consequence_source_repair_0"
+            ],
+            "source_status": "unresolved",
+            "dates": [
+              "2098-07-21"
+            ],
+            "estimated_due": null,
+            "candidate_issues": [
+              [
+                "The verbatim date is not independently quoted in both the own occurrence and its date premise.",
+                "The date and described action do not occur together in the same own occurrence quotation."
+              ]
+            ],
+            "trigger_repair_attempted": [
+              true
+            ],
+            "graph_context_chars": 25230,
+            "graph_retrieval": {
+              "protocol": "contract-topic-context-v1",
+              "project_id": "prior-notice-fr_named_planned_delivery_before-d148-20261006-180302-349e95",
+              "context_sha256": "7e8d6c8eec01a069fd2b3e91626510edf9fe24e97744c86d3151ada0b19e2a08",
+              "sources": [
+                {
+                  "document_id": "fr_named_planned_delivery_before",
+                  "sha256": "6f4e075adea607e69fc3da07e0a06be3fe3d26ccc0caaaebac76bb381842273a"
+                }
+              ],
+              "queries": [
+                "Extract contractual notification obligations and formalisms",
+                "notifications event deadline starting point recipient required form",
+                "required content supporting documents late consequence forfeiture delay penalty link citations",
+                "notification deadline form forfeiture",
+                "notice time extension force majeure",
+                "Original source: fr_named_planned_delivery_before",
+                "Article V11",
+                "Calendrier V3"
+              ],
+              "coverage": {
+                "graph_snapshot_partial": false,
+                "navigation_graph": "semantic_connections",
+                "source_containment_used_for_semantic_navigation": false,
+                "neighborhood_depth_limited": true,
+                "matching_fact_candidates_considered": 5,
+                "matching_anchors": 5,
+                "matching_relationships": 4,
+                "omitted_matching_anchors": 1,
+                "matched_original_blocks": 2,
+                "retained_matched_original_blocks": 2,
+                "omitted_matched_original_blocks": 0,
+                "omitted_adjacent_original_blocks": 0,
+                "passage_selection": "direct_matches_then_adjacent_round_robin_by_original_and_query",
+                "passage_budget_reached": false,
+                "neighborhoods": [
+                  {
+                    "node_id": "11380b8d-b2da-4575-93e9-c9e2bf59a6bb",
+                    "matched_queries": [
+                      "Calendrier V3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  },
+                  {
+                    "node_id": "20761cd2-79d1-470a-800b-dd546ec7d1c7",
+                    "matched_queries": [
+                      "Calendrier V3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  },
+                  {
+                    "node_id": "3b70a084-6fcb-4944-b479-24e79dbcfe78",
+                    "matched_queries": [
+                      "Calendrier V3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  },
+                  {
+                    "node_id": "787d8fff-f2a6-458d-85a5-6a7caa3d46e5",
+                    "matched_queries": [
+                      "Calendrier V3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  }
+                ],
+                "completeness": "unestablished",
+                "graph_character_budget_reached": false,
+                "omitted_nodes_by_character_budget": 0,
+                "omitted_connections_by_character_budget": 0
+              },
+              "requires_review": true
+            },
+            "analysis_gaps": [
+              "Graph context is bounded: some connections beyond the selected depth, expansion anchors or passages may be omitted or unavailable. Retained quotations are whole candidates; inspect the full originals and node context before relying on a conclusion."
+            ],
+            "used_fallback": false
+          },
+          {
+            "phase": "final-extract",
+            "job_id": "8d4d3205c9ba4ae3ac823a6d6ee1c182",
+            "filename": "notification_register_20261006_181024_629561.json",
+            "calls": 4,
+            "phases": [
+              "extract",
+              "notice_trigger_source_resolution",
+              "notice_consequence_source_classification",
+              "notice_consequence_source_repair_0"
+            ],
+            "source_status": "proposed",
+            "dates": [
+              "21 juillet 2098"
+            ],
+            "estimated_due": "2098-07-14",
+            "candidate_issues": [
+              []
+            ],
+            "trigger_repair_attempted": [
+              false
+            ],
+            "graph_context_chars": 25230,
+            "graph_retrieval": {
+              "protocol": "contract-topic-context-v1",
+              "project_id": "prior-notice-fr_named_planned_delivery_before-d148-20261006-180302-349e95",
+              "context_sha256": "7e8d6c8eec01a069fd2b3e91626510edf9fe24e97744c86d3151ada0b19e2a08",
+              "sources": [
+                {
+                  "document_id": "fr_named_planned_delivery_before",
+                  "sha256": "6f4e075adea607e69fc3da07e0a06be3fe3d26ccc0caaaebac76bb381842273a"
+                }
+              ],
+              "queries": [
+                "Extract contractual notification obligations and formalisms",
+                "notifications event deadline starting point recipient required form",
+                "required content supporting documents late consequence forfeiture delay penalty link citations",
+                "notification deadline form forfeiture",
+                "notice time extension force majeure",
+                "Original source: fr_named_planned_delivery_before",
+                "Article V11",
+                "Calendrier V3"
+              ],
+              "coverage": {
+                "graph_snapshot_partial": false,
+                "navigation_graph": "semantic_connections",
+                "source_containment_used_for_semantic_navigation": false,
+                "neighborhood_depth_limited": true,
+                "matching_fact_candidates_considered": 5,
+                "matching_anchors": 5,
+                "matching_relationships": 4,
+                "omitted_matching_anchors": 1,
+                "matched_original_blocks": 2,
+                "retained_matched_original_blocks": 2,
+                "omitted_matched_original_blocks": 0,
+                "omitted_adjacent_original_blocks": 0,
+                "passage_selection": "direct_matches_then_adjacent_round_robin_by_original_and_query",
+                "passage_budget_reached": false,
+                "neighborhoods": [
+                  {
+                    "node_id": "11380b8d-b2da-4575-93e9-c9e2bf59a6bb",
+                    "matched_queries": [
+                      "Calendrier V3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  },
+                  {
+                    "node_id": "20761cd2-79d1-470a-800b-dd546ec7d1c7",
+                    "matched_queries": [
+                      "Calendrier V3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  },
+                  {
+                    "node_id": "3b70a084-6fcb-4944-b479-24e79dbcfe78",
+                    "matched_queries": [
+                      "Calendrier V3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  },
+                  {
+                    "node_id": "787d8fff-f2a6-458d-85a5-6a7caa3d46e5",
+                    "matched_queries": [
+                      "Calendrier V3"
+                    ],
+                    "scope": "Loaded graph neighborhood, not the entire contract",
+                    "connection_steps": 2,
+                    "graph_snapshot_partial": false,
+                    "omitted_connections_by_budget": 0,
+                    "missing_endpoint_connections": 0,
+                    "max_nodes": 60,
+                    "max_edges": 120,
+                    "completeness": "unestablished",
+                    "entire_connected_component_requested": false,
+                    "snapshot_atomic": false
+                  }
+                ],
+                "completeness": "unestablished",
+                "graph_character_budget_reached": false,
+                "omitted_nodes_by_character_budget": 0,
+                "omitted_connections_by_character_budget": 0
+              },
+              "requires_review": true
+            },
+            "analysis_gaps": [
+              "Graph context is bounded: some connections beyond the selected depth, expansion anchors or passages may be omitted or unavailable. Retained quotations are whole candidates; inspect the full originals and node context before relying on a conclusion."
+            ],
+            "used_fallback": false
+          }
+        ]
+      }
+    ],
+    "notification_application_calls": 24,
+    "count_scope": "Notification-register recorded application calls only; excludes consolidation and native graph model calls.",
+    "limitations": "Two synthetic development dossiers, not held-out accuracy. Weekdays exclude holidays; planned references are not actual occurrences, notice service or forfeiture."
+  },
+  "native_graph_audit": {
+    "protocol": "notice-direction-native-graph-audit-v1",
+    "checked_at_utc": "2026-10-06T18:12:47.386254+00:00",
+    "read_only_audit": true,
+    "manifest_sha256": "d2e13023304870b89f65c5cb7d3b209e9f1210307cf18edb06071e9be00e5b45",
+    "release_blockers": [],
+    "observations": [
+      {
+        "case_id": "en_named_planned_handover_before",
+        "project_id": "prior-notice-en_named_planned_handover_before-d148-20261006-180252-c00242",
+        "graph_snapshot_project_scope_verified": true,
+        "nodes": 11,
+        "edges": 14,
+        "dangling_endpoints": 0,
+        "native_citations_checked": 15,
+        "native_citation_mismatches": 0,
+        "native_source_sha256": {
+          "en_named_planned_handover_before": "80fce1201ac335e1edf152bac9a46b7d7f09e93c1459b3f15ff850c2c44c15f0"
+        },
+        "registered_source_matches_frozen_corpus": true,
+        "source_versions_match_graph_sync": true,
+        "sync_status": "done",
+        "meta_sync_status": "done",
+        "native_jobs": [
+          {
+            "job_id": "5f8adea1-b02e-4436-9aff-572b4a4167d2",
+            "status": "done"
+          }
+        ],
+        "service_job_counts_at_snapshot": {
+          "cancelled": 0,
+          "done": 2,
+          "failed": 0,
+          "queued": 0,
+          "running": 0
+        },
+        "planned_events": [
+          {
+            "id": "42ff2881-bdeb-4a5b-bebd-4d8033aaf2c1",
+            "name": "Handover of the north laboratory",
+            "statement_kind": "planned_action",
+            "date_role": "planned",
+            "date": "2098-07-20",
+            "source_sha256": "80fce1201ac335e1edf152bac9a46b7d7f09e93c1459b3f15ff850c2c44c15f0",
+            "source_text": "The handover of the north laboratory is scheduled for 20 July 2098. The schedule is a plan; this record does not confirm that handover occurred.",
+            "event_category_status": "model_disagreement",
+            "category": "handover",
+            "classification_review": "Source-inventory plan/deadline classification retained over an entity keyword. Review the original; this does not establish actual performance or an occurrence date."
+          }
+        ],
+        "actual_occurrence_events": 0,
+        "relationship_status_counts": {
+          "source_structure": 9,
+          "unverified_association": 2,
+          "model_suggestion": 3
+        },
+        "structural_containment_is_semantic_proof": false,
+        "native_entity_deadline_note": "The dated Deadline entity quotes the scheduled milestone date, not the earlier computed notice due date; source/entity types remain model proposals.",
+        "extraction_source_sha256": "d417f3c67fff7f35e6d582e96acf9e106bbd44c5b9740c60b87e102da9dfaff1",
+        "notice_draws": [
+          {
+            "filename": "notification_register_20261006_180302_400092.json",
+            "generated_at": "2026-10-06T18:03:02.000Z",
+            "source_sha256": "d417f3c67fff7f35e6d582e96acf9e106bbd44c5b9740c60b87e102da9dfaff1",
+            "source_binding_revalidated": true,
+            "trigger_status": "proposed",
+            "estimated_due": "2098-07-13",
+            "reference_candidates": [
+              {
+                "kind": "other_explicit",
+                "date": "20 July 2098",
+                "status": "proposed"
+              }
+            ],
+            "raw_forfeiture": false,
+            "consequence_status": "proposed",
+            "consequence_kinds": [
+              "other"
+            ],
+            "graph_context_chars": 0,
+            "graph_retrieval_scope_verified": false,
+            "coverage": null,
+            "analysis_gaps": [
+              "Topic graph context was not refreshed because the source graph is not ready. Any retained supplied context remains an unverified candidate; compare current originals. Graph coverage is not established."
+            ]
+          },
+          {
+            "filename": "notification_register_20261006_180540_860911.json",
+            "generated_at": "2026-10-06T18:05:40.000Z",
+            "source_sha256": "d417f3c67fff7f35e6d582e96acf9e106bbd44c5b9740c60b87e102da9dfaff1",
+            "source_binding_revalidated": true,
+            "trigger_status": "unresolved",
+            "estimated_due": null,
+            "reference_candidates": [
+              {
+                "kind": "other_explicit",
+                "date": "2098-07-20",
+                "status": "unresolved"
+              }
+            ],
+            "raw_forfeiture": false,
+            "consequence_status": "proposed",
+            "consequence_kinds": [
+              "other"
+            ],
+            "graph_context_chars": 23714,
+            "graph_retrieval_scope_verified": true,
+            "coverage": {
+              "graph_snapshot_partial": false,
+              "navigation_graph": "semantic_connections",
+              "source_containment_used_for_semantic_navigation": false,
+              "neighborhood_depth_limited": true,
+              "matching_fact_candidates_considered": 6,
+              "matching_anchors": 6,
+              "matching_relationships": 4,
+              "omitted_matching_anchors": 2,
+              "matched_original_blocks": 2,
+              "retained_matched_original_blocks": 2,
+              "omitted_matched_original_blocks": 0,
+              "omitted_adjacent_original_blocks": 0,
+              "passage_selection": "direct_matches_then_adjacent_round_robin_by_original_and_query",
+              "passage_budget_reached": false,
+              "neighborhoods": [
+                {
+                  "node_id": "2a74ee18-0ee2-47d0-93ae-2833e06ecbef",
+                  "matched_queries": [
+                    "Schedule H3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                },
+                {
+                  "node_id": "2b3d8ed8-9251-455d-bb06-a3d9801f43d6",
+                  "matched_queries": [
+                    "Schedule H3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                },
+                {
+                  "node_id": "32188fc5-d59b-4a24-9c1c-34e459c291de",
+                  "matched_queries": [
+                    "Schedule H3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                },
+                {
+                  "node_id": "38e268e8-53af-4cdf-9afb-579323b24e24",
+                  "matched_queries": [
+                    "Schedule H3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                }
+              ],
+              "completeness": "unestablished",
+              "graph_character_budget_reached": false,
+              "omitted_nodes_by_character_budget": 0,
+              "omitted_connections_by_character_budget": 0
+            },
+            "analysis_gaps": [
+              "Graph context is bounded: some connections beyond the selected depth, expansion anchors or passages may be omitted or unavailable. Retained quotations are whole candidates; inspect the full originals and node context before relying on a conclusion."
+            ]
+          },
+          {
+            "filename": "notification_register_20261006_181013_971362.json",
+            "generated_at": "2026-10-06T18:10:13.000Z",
+            "source_sha256": "d417f3c67fff7f35e6d582e96acf9e106bbd44c5b9740c60b87e102da9dfaff1",
+            "source_binding_revalidated": true,
+            "trigger_status": "proposed",
+            "estimated_due": "2098-07-13",
+            "reference_candidates": [
+              {
+                "kind": "other_explicit",
+                "date": "20 July 2098",
+                "status": "proposed"
+              }
+            ],
+            "raw_forfeiture": false,
+            "consequence_status": "proposed",
+            "consequence_kinds": [
+              "other"
+            ],
+            "graph_context_chars": 23714,
+            "graph_retrieval_scope_verified": true,
+            "coverage": {
+              "graph_snapshot_partial": false,
+              "navigation_graph": "semantic_connections",
+              "source_containment_used_for_semantic_navigation": false,
+              "neighborhood_depth_limited": true,
+              "matching_fact_candidates_considered": 6,
+              "matching_anchors": 6,
+              "matching_relationships": 4,
+              "omitted_matching_anchors": 2,
+              "matched_original_blocks": 2,
+              "retained_matched_original_blocks": 2,
+              "omitted_matched_original_blocks": 0,
+              "omitted_adjacent_original_blocks": 0,
+              "passage_selection": "direct_matches_then_adjacent_round_robin_by_original_and_query",
+              "passage_budget_reached": false,
+              "neighborhoods": [
+                {
+                  "node_id": "2a74ee18-0ee2-47d0-93ae-2833e06ecbef",
+                  "matched_queries": [
+                    "Schedule H3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                },
+                {
+                  "node_id": "2b3d8ed8-9251-455d-bb06-a3d9801f43d6",
+                  "matched_queries": [
+                    "Schedule H3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                },
+                {
+                  "node_id": "32188fc5-d59b-4a24-9c1c-34e459c291de",
+                  "matched_queries": [
+                    "Schedule H3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                },
+                {
+                  "node_id": "38e268e8-53af-4cdf-9afb-579323b24e24",
+                  "matched_queries": [
+                    "Schedule H3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                }
+              ],
+              "completeness": "unestablished",
+              "graph_character_budget_reached": false,
+              "omitted_nodes_by_character_budget": 0,
+              "omitted_connections_by_character_budget": 0
+            },
+            "analysis_gaps": [
+              "Graph context is bounded: some connections beyond the selected depth, expansion anchors or passages may be omitted or unavailable. Retained quotations are whole candidates; inspect the full originals and node context before relying on a conclusion."
+            ]
+          }
+        ],
+        "latest_correct_estimate": true,
+        "initial_graph_unavailable_reason": "Initial extraction was submitted while native graph consolidation was queued/running. Its documents-only fallback was recorded, not a failed final readiness state.",
+        "ready_graph_retrieval_confirmed_by_later_draw": true,
+        "intermediate_iso_draw_withheld": true,
+        "latest_verbatim_date_fixed": true
+      },
+      {
+        "case_id": "fr_named_planned_delivery_before",
+        "project_id": "prior-notice-fr_named_planned_delivery_before-d148-20261006-180302-349e95",
+        "graph_snapshot_project_scope_verified": true,
+        "nodes": 12,
+        "edges": 17,
+        "dangling_endpoints": 0,
+        "native_citations_checked": 16,
+        "native_citation_mismatches": 0,
+        "native_source_sha256": {
+          "fr_named_planned_delivery_before": "6f4e075adea607e69fc3da07e0a06be3fe3d26ccc0caaaebac76bb381842273a"
+        },
+        "registered_source_matches_frozen_corpus": true,
+        "source_versions_match_graph_sync": true,
+        "sync_status": "done",
+        "meta_sync_status": "done",
+        "native_jobs": [
+          {
+            "job_id": "4d469ad6-fc20-420b-8868-01c7e05d9d8c",
+            "status": "done"
+          }
+        ],
+        "service_job_counts_at_snapshot": {
+          "cancelled": 0,
+          "done": 2,
+          "failed": 0,
+          "queued": 0,
+          "running": 0
+        },
+        "planned_events": [
+          {
+            "id": "0fb6317f-b52f-4b09-a5f3-e72de94236c5",
+            "name": "Livraison prévue des équipements",
+            "statement_kind": "planned_action",
+            "date_role": "planned",
+            "date": "2098-07-21",
+            "source_sha256": "6f4e075adea607e69fc3da07e0a06be3fe3d26ccc0caaaebac76bb381842273a",
+            "source_text": "La livraison des équipements est prévue le 21 juillet 2098. Cette date est planifiée; ce texte ne confirme pas la réalisation de la livraison.",
+            "event_category_status": "model_disagreement",
+            "category": "delivery",
+            "classification_review": "Source-inventory plan/deadline classification retained over an entity keyword. Review the original; this does not establish actual performance or an occurrence date."
+          }
+        ],
+        "actual_occurrence_events": 0,
+        "relationship_status_counts": {
+          "source_structure": 11,
+          "unverified_association": 3,
+          "model_suggestion": 3
+        },
+        "structural_containment_is_semantic_proof": false,
+        "native_entity_deadline_note": "The dated Deadline entity quotes the scheduled milestone date, not the earlier computed notice due date; source/entity types remain model proposals.",
+        "extraction_source_sha256": "99190f670461a38cb7be13ab2479b9feb1fbd2725cdc59c898d9476c9c616cdc",
+        "notice_draws": [
+          {
+            "filename": "notification_register_20261006_180314_166172.json",
+            "generated_at": "2026-10-06T18:03:14.000Z",
+            "source_sha256": "99190f670461a38cb7be13ab2479b9feb1fbd2725cdc59c898d9476c9c616cdc",
+            "source_binding_revalidated": true,
+            "trigger_status": "proposed",
+            "estimated_due": "2098-07-14",
+            "reference_candidates": [
+              {
+                "kind": "other_explicit",
+                "date": "21 juillet 2098",
+                "status": "proposed"
+              }
+            ],
+            "raw_forfeiture": false,
+            "consequence_status": "proposed",
+            "consequence_kinds": [
+              "other"
+            ],
+            "graph_context_chars": 0,
+            "graph_retrieval_scope_verified": false,
+            "coverage": null,
+            "analysis_gaps": [
+              "Topic graph context was not refreshed because the source graph is not ready. Any retained supplied context remains an unverified candidate; compare current originals. Graph coverage is not established."
+            ]
+          },
+          {
+            "filename": "notification_register_20261006_180554_395016.json",
+            "generated_at": "2026-10-06T18:05:54.000Z",
+            "source_sha256": "99190f670461a38cb7be13ab2479b9feb1fbd2725cdc59c898d9476c9c616cdc",
+            "source_binding_revalidated": true,
+            "trigger_status": "unresolved",
+            "estimated_due": null,
+            "reference_candidates": [
+              {
+                "kind": "other_explicit",
+                "date": "2098-07-21",
+                "status": "unresolved"
+              }
+            ],
+            "raw_forfeiture": false,
+            "consequence_status": "proposed",
+            "consequence_kinds": [
+              "other"
+            ],
+            "graph_context_chars": 25230,
+            "graph_retrieval_scope_verified": true,
+            "coverage": {
+              "graph_snapshot_partial": false,
+              "navigation_graph": "semantic_connections",
+              "source_containment_used_for_semantic_navigation": false,
+              "neighborhood_depth_limited": true,
+              "matching_fact_candidates_considered": 5,
+              "matching_anchors": 5,
+              "matching_relationships": 4,
+              "omitted_matching_anchors": 1,
+              "matched_original_blocks": 2,
+              "retained_matched_original_blocks": 2,
+              "omitted_matched_original_blocks": 0,
+              "omitted_adjacent_original_blocks": 0,
+              "passage_selection": "direct_matches_then_adjacent_round_robin_by_original_and_query",
+              "passage_budget_reached": false,
+              "neighborhoods": [
+                {
+                  "node_id": "11380b8d-b2da-4575-93e9-c9e2bf59a6bb",
+                  "matched_queries": [
+                    "Calendrier V3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                },
+                {
+                  "node_id": "20761cd2-79d1-470a-800b-dd546ec7d1c7",
+                  "matched_queries": [
+                    "Calendrier V3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                },
+                {
+                  "node_id": "3b70a084-6fcb-4944-b479-24e79dbcfe78",
+                  "matched_queries": [
+                    "Calendrier V3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                },
+                {
+                  "node_id": "787d8fff-f2a6-458d-85a5-6a7caa3d46e5",
+                  "matched_queries": [
+                    "Calendrier V3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                }
+              ],
+              "completeness": "unestablished",
+              "graph_character_budget_reached": false,
+              "omitted_nodes_by_character_budget": 0,
+              "omitted_connections_by_character_budget": 0
+            },
+            "analysis_gaps": [
+              "Graph context is bounded: some connections beyond the selected depth, expansion anchors or passages may be omitted or unavailable. Retained quotations are whole candidates; inspect the full originals and node context before relying on a conclusion."
+            ]
+          },
+          {
+            "filename": "notification_register_20261006_181024_629561.json",
+            "generated_at": "2026-10-06T18:10:24.000Z",
+            "source_sha256": "99190f670461a38cb7be13ab2479b9feb1fbd2725cdc59c898d9476c9c616cdc",
+            "source_binding_revalidated": true,
+            "trigger_status": "proposed",
+            "estimated_due": "2098-07-14",
+            "reference_candidates": [
+              {
+                "kind": "other_explicit",
+                "date": "21 juillet 2098",
+                "status": "proposed"
+              }
+            ],
+            "raw_forfeiture": false,
+            "consequence_status": "proposed",
+            "consequence_kinds": [
+              "other"
+            ],
+            "graph_context_chars": 25230,
+            "graph_retrieval_scope_verified": true,
+            "coverage": {
+              "graph_snapshot_partial": false,
+              "navigation_graph": "semantic_connections",
+              "source_containment_used_for_semantic_navigation": false,
+              "neighborhood_depth_limited": true,
+              "matching_fact_candidates_considered": 5,
+              "matching_anchors": 5,
+              "matching_relationships": 4,
+              "omitted_matching_anchors": 1,
+              "matched_original_blocks": 2,
+              "retained_matched_original_blocks": 2,
+              "omitted_matched_original_blocks": 0,
+              "omitted_adjacent_original_blocks": 0,
+              "passage_selection": "direct_matches_then_adjacent_round_robin_by_original_and_query",
+              "passage_budget_reached": false,
+              "neighborhoods": [
+                {
+                  "node_id": "11380b8d-b2da-4575-93e9-c9e2bf59a6bb",
+                  "matched_queries": [
+                    "Calendrier V3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                },
+                {
+                  "node_id": "20761cd2-79d1-470a-800b-dd546ec7d1c7",
+                  "matched_queries": [
+                    "Calendrier V3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                },
+                {
+                  "node_id": "3b70a084-6fcb-4944-b479-24e79dbcfe78",
+                  "matched_queries": [
+                    "Calendrier V3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                },
+                {
+                  "node_id": "787d8fff-f2a6-458d-85a5-6a7caa3d46e5",
+                  "matched_queries": [
+                    "Calendrier V3"
+                  ],
+                  "scope": "Loaded graph neighborhood, not the entire contract",
+                  "connection_steps": 2,
+                  "graph_snapshot_partial": false,
+                  "omitted_connections_by_budget": 0,
+                  "missing_endpoint_connections": 0,
+                  "max_nodes": 60,
+                  "max_edges": 120,
+                  "completeness": "unestablished",
+                  "entire_connected_component_requested": false,
+                  "snapshot_atomic": false
+                }
+              ],
+              "completeness": "unestablished",
+              "graph_character_budget_reached": false,
+              "omitted_nodes_by_character_budget": 0,
+              "omitted_connections_by_character_budget": 0
+            },
+            "analysis_gaps": [
+              "Graph context is bounded: some connections beyond the selected depth, expansion anchors or passages may be omitted or unavailable. Retained quotations are whole candidates; inspect the full originals and node context before relying on a conclusion."
+            ]
+          }
+        ],
+        "latest_correct_estimate": true,
+        "initial_graph_unavailable_reason": "Initial extraction was submitted while native graph consolidation was queued/running. Its documents-only fallback was recorded, not a failed final readiness state.",
+        "ready_graph_retrieval_confirmed_by_later_draw": true,
+        "intermediate_iso_draw_withheld": true,
+        "latest_verbatim_date_fixed": true
+      }
+    ],
+    "limits": [
+      "Native source/date-role/entity/predicate classifications are model proposals, not actual performance or legal acceptance.",
+      "Graph paths/containment/named parties do not establish notice service, loss of rights or complete contract applicability.",
+      "Planned reference estimates remain conditional on that plan; real commencement or a revised plan may require reassessment.",
+      "Weekday estimates exclude weekends only and do not implement jurisdiction-specific holidays.",
+      "Topic neighborhoods/anchors remain bounded and explicitly disclose completeness as unestablished."
+    ]
+  },
+  "calendar_parity": {
+    "protocol": "notice-direction-calendar-parity-v1",
+    "checked_at_utc": "2026-10-06T18:01:35.464122+00:00",
+    "cases": 5292,
+    "mismatches": 0,
+    "passed": true,
+    "examples": [],
+    "coverage": "49 explicit/ambiguous/directional windows × 18 complete/incomplete/boundary trigger values × 2 reported loss flags × 3 sent flags; fixed comparison date 2026-06-20.",
+    "source_ts_sha256": "4d6d2606d4d5dc55bab5e22473e56eb3ba9b12d9f42975a0875a24694ca0a5dd",
+    "source_python_sha256": "8c51ce85a2b544b569233d691fbb1663e86acd0de37e3d4053d124d36eac775a",
+    "script_sha256": "b5d366eb5459d88608f44aba76da901d4fc9dbcdd006e13fb1fe518d563bd7b8",
+    "input_sha256": "7aba90b0d6aa97e1a82222c69d65fb1d811276494cdc9500f4b1cdfb27cad3bd",
+    "node_version": "v24.21.0",
+    "python_version": "3.12.11",
+    "limits": "Calendar estimate parity only. It cannot establish receipt, service, forfeiture, holidays or legal applicability."
+  },
+  "browser": {
+    "owned_tab": 175,
+    "search_preserves_same_notice": true,
+    "filtered_out_notice_remains_open_with_explanation": true,
+    "reveal_action_verified": true,
+    "english_before_reference_estimate_visible": "2098-07-13",
+    "french_before_reference_estimate_visible": "2098-07-14",
+    "planned_wording_preserved": true,
+    "reference_date_labels_visible": true,
+    "weekday_limit_visible": true,
+    "exact_french_notice_graph_preview_verified": true,
+    "model_retries_started_from_browser": false
+  },
+  "cleanup": {
+    "owned_processes": [
+      {
+        "service": "engine",
+        "pid": 95719,
+        "port": 8097
+      },
+      {
+        "service": "frontend",
+        "pid": 95723,
+        "port": 5176
+      },
+      {
+        "service": "api",
+        "pid": 6670,
+        "port": 8081
+      }
+    ],
+    "owned_ports_closed": true,
+    "terminal_application_jobs": 84,
+    "native_jobs": {
+      "cancelled": 0,
+      "done": 2,
+      "failed": 0,
+      "queued": 0,
+      "running": 0
+    },
+    "temporary_browser_tabs": [
+      175
+    ],
+    "temporary_browser_tab_closed": true
+  },
+  "main_api_activation": {
+    "api_healthy": true,
+    "journal_unchanged": true,
+    "journal": {
+      "count": 24,
+      "sha256": "276134bfc19794d23850f9df949bdf44df3fab2b2e337fda242dab0901ec322c"
+    },
+    "app_env_unchanged": true
+  },
+  "user_preservation_audit": {
+    "passed": true,
+    "main_journal_snapshots": 24,
+    "protected_engine_sources": 14,
+    "original_artifacts": 32,
+    "original_studio_sessions": 2,
+    "original_user_graph_unchanged": true,
+    "user_prompt_and_layago_work_untouched": true
+  },
+  "remaining_scope": [
+    "Two synthetic development dossiers, not held-out accuracy or contract-wide completeness",
+    "Weekdays exclude holidays; date-only hourly windows remain approximations",
+    "Dispersed exception recall, temporal applicability, service and outcome reconciliation remain open",
+    "No new LayaGo/GLiNER/MLX training, architecture or throughput measurement"
+  ]
+}

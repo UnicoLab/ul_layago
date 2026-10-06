@@ -6187,3 +6187,51 @@ effect classification, scope/link ownership, qualification recall, quote/span va
 and calibrated abstention independently. UI engineering tests do not measure these
 model objectives. No new LayaGo/GLiNER/MLX training, weights, architecture, throughput
 or OOM supervision improvement was measured in this increment.
+
+## L161 — Date representation, prior notice and stable review identity (2026-10-06)
+
+**Evidence:** [DelayLama report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-notice-direction.md)
+and [receipt](validation/delaylama-notice-direction-20261006.json).
+
+Retrieval can introduce a representation error even when the original date is
+correctly quoted. Two fresh EN/FR prior-notice dossiers qualified in document-only
+runs, but graph-ready runs copied normalized ISO graph dates into verbatim source
+fields. Literal source checks withheld both estimates. A graph value can guide
+navigation; it must not replace original wording or its supporting span. Keep
+verbatim date, normalized date, date role, reference identity and occurrence status
+as separate supervised targets. Test with and without derived navigation context.
+
+Independent notice-trigger checks now receive checked original navigation passages
+and explicit original-date instructions. Both final graph-aware runs qualified the
+same planned references: seven calendar days before July 20 gives a July 13 estimate;
+five weekdays before July 21 gives July 14. Original planned wording remains intact;
+these examples do not establish actual occurrence, service or lost rights. All six
+model draws, including failed ISO representations and repairs, remain available.
+
+Direction belongs to the own duration/reference, not a distant “before” heading.
+Match count, own unit and direction independently against original rule evidence.
+Separate latest boundaries from earliest/strict/alternative intervals, keeping
+unsupported forms unresolved. Calendar/month arithmetic and weekday counting are
+engineering estimates, not proof of an applicable counting convention. Hourly
+values based on dates alone need visible approximation labels.
+
+A review interface should preserve exact finding identity during search/filtering.
+Keeping the selected notice open prevents an identically named event from silently
+replacing its context. Filtered-out or unavailable IDs need explicit explanations
+and recovery controls, not guessed label matches. Otherwise feedback can target the
+wrong finding even when source validation is correct.
+
+5,292 actual Python/TypeScript calendar comparisons had zero mismatches. The scoped
+native graph audit checked 31 exact citations, no dangling/cross-project nodes, and
+planned action/date roles throughout these fixtures. Final suites passed 2,048
+backend/1,341 frontend tests, build, two actual-output frontend replays and browser
+checks. The 24 recorded notification-agent calls exclude consolidation/native graph
+model calls. Two synthetic development dossiers are not a held-out quality benchmark.
+
+For LayaGo evaluation, group date-format and temporal-direction variants by source
+family before splitting. Score literal representation, normalization, reference
+ownership, direction, planned/actual status, retrieval contamination, applicability
+and abstention separately. Preserve failed attempts and graph/document-only pairs.
+No new LayaGo/GLiNER/MLX training, architecture, weights or throughput was measured.
+Broader dispersed-rule recall, calendar conventions and outcome reconciliation remain
+open beyond these regressions.
