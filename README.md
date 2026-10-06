@@ -12,10 +12,10 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L144 finding](docs/learning-log.md#l144--outcome-object-polarity-and-target-scope-need-independent-extraction-2026-10-06)
-records why source outcomes should be extracted independently of entitlement,
-and why a cost-only release must not become a time waiver. It includes retained
-failures and training controls for object, polarity, modality, scope and dates.
+The latest [L145 finding](docs/learning-log.md#l145--action-recall-financial-stages-and-tentative-rights-require-separate-checks-2026-10-06)
+records why action recall, financial stages and substantive rule coverage need
+separate evaluation, including tentative claim labels and mentioned-event dates.
+The retained model and graph failures inform domain-training controls.
 
 ## Build and use
 

@@ -5413,3 +5413,47 @@ accuracy. Early date/object mistakes and rejected source rows remain retained.
 Generic lexical/date review hints still create false warnings; full date-role,
 subject/instrument applicability, long-dossier recall and native recovery remain
 open. No LayaGo/GLiNER/MLX training or speed gain was measured this turn.
+
+
+## L145 — Action recall, financial stages and tentative rights require separate checks (2026-10-06)
+
+**Evidence:** [DelayLama validation report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-review-wording-event-stages.md)
+and [hashed receipt](validation/delaylama-review-wording-event-stages-20261006.json).
+
+An initial event-extraction probe recovered an omitted payment request but copied
+requested/awarded/settled figures into actual incurred expense. Explicit financial
+stage fields and reported-action/context guidance separated those quantities in
+subsequent development probes and saved workflows. A delay mentioned as the subject
+of a request remained undated context in the isolated probe; the saved draw returned
+only the three expressly recorded actions. Circulation and proposed effect must be
+separate: their classification still varied across draws.
+
+Review precision needs own focused predicate, independently captured date and
+current field/record/target binding. Broad context can contain a non-waiver of other
+claims alongside an operative limited release. Apply wording hints to the own
+focused assertion, while preserving original context for human inspection. Location,
+metadata consistency and absence of a warning never certify semantic support.
+
+A fresh workflow still promoted a standing request procedure into a tentative cost
+entitlement. “Potentially claimable” must undergo substantive rule coverage and
+applicability checks too. The new review flagged the missing independent cost rule;
+it did not repair the verdict or prove exclusion. The native graph separately
+retained a mentioned delay with an anchor-inferred request date. Application context
+handling does not repair native graph metadata.
+
+**Training implications:** annotate action, normative duty, mention, negative fact
+and proposal separately. Label requested/awarded/settled/proposed amounts apart from
+incurred expense; distinguish action date from subject occurrence date and effect
+date. Train rule/procedure/outcome separation before viability, including tentative
+recovery labels. Evaluate event recall independently from requested-row coverage,
+and native graph validity independently from application display. Do not train
+inferred anchors, model confidence, source matches or review hints as acceptance.
+
+**Evidence limits:** six isolated and 46 saved application calls; one native source
+analysis job; 18 event-target rows across nine reported events in final saved runs.
+1,662 backend and 1,029 frontend tests plus build passed. Retained failed probes,
+semantic proposals, inferred native date and source-review false warnings remain.
+These are synthetic development controls, not independent legal gold, causal,
+held-out or repeated-seed accuracy. No LayaGo/GLiNER/MLX training or speed gain was
+measured. The final notice-status guidance had deterministic checks only, without
+a new model draw.
