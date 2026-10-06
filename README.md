@@ -12,9 +12,9 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L155 finding](docs/learning-log.md#l155--separate-display-numbering-from-unchanged-captured-inputs-2026-10-06)
-records exact unchanged-input navigation through event renumbering, original-check
-preservation, ambiguity/collapse controls and separate semantic evaluation limits.
+The latest [L156 finding](docs/learning-log.md#l156--make-reassessment-an-owned-recoverable-workflow-2026-10-06)
+records actionable reassessment, source-bound inputs, durable run recovery and
+separate execution, observation and result-refresh states.
 
 ## Build and use
 

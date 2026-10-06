@@ -5979,3 +5979,42 @@ draw are not held-out, repeated-seed, multilingual or long-contract accuracy. Ot
 notice/risk/amendment and event-field-check references, recall, applicability and
 payment reconciliation remain open. No new native source jobs, Go changes or LayaGo/
 GLiNER/MLX training, architecture, weights or measured speed gain occurred.
+
+
+## L156 — Make reassessment an owned, recoverable workflow (2026-10-06)
+
+**Evidence:** [DelayLama report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-claim-reassessment.md)
+with [receipt](validation/delaylama-claim-reassessment-20261006.json).
+
+A review gap needs an actionable next step. The contract workspace now reassesses
+claims directly using server originals and the latest source-bound event register.
+It verifies project/source provenance, rejects stale/unknown/fallback registers,
+uses the project's language and configured prompt, and preserves earlier results.
+Stale inputs offer a direct route to event detection rather than silently reusing
+an unrelated register or cached preview.
+
+A synchronous click lock, existing-run lookup and durable request receipt prevent
+unintended duplicate work. Unknown submission/progress recovers the same request or
+handle. A saved analysis whose refresh fails retries only the view refresh. Project
+changes suppress late UI writes and stop observation while server work remains
+recoverable. Foreign run history/progress and offline mode fail closed. These are
+orchestration guarantees, not guarantees about the model's semantic conclusions.
+
+One real UI click on retained synthetic English C147 created one terminal saved
+claim run with 28 application calls, 12 assessments and 12 current input bindings.
+The desk/map refreshed in place; the previous analysis, source and register were
+unchanged. The copied journal ended with 69 terminal jobs, 68 done and one inherited
+error. There were no new native source jobs. All 1,073 frontend tests across 95 files
+and production TypeScript/build passed, including nine new workflow tests. Backend
+code was unchanged from its prior 1,738-test qualification. Bundle warning remains.
+
+**Shared engineering lesson:** uncertainty about transport, observation or display
+refresh must not become a new training/analysis run. Keep run identity separate from
+result visibility, persist receipts before dispatch, distinguish terminal failures
+from unknown status, validate ownership at every observation and retain old outputs.
+These patterns also apply to training supervisors, evaluation jobs and GPU workers.
+
+This is one development workflow, not held-out, repeated-seed, multilingual or
+long-contract extraction accuracy. No LayaGo/GLiNER/MLX model, training, architecture,
+weights or measured speed improvement occurred. Semantic quality and broader graph
+qualification remain open.
