@@ -5921,3 +5921,61 @@ other notice/risk/amendment references, parent actor evidence, applicability, re
 and payment reconciliation remain open. This increment withholds stale links rather
 than solving semantic entity resolution. No LayaGo/GLiNER/MLX training, architecture,
 weights or measured speed improvement occurred.
+
+
+## L155 — Separate display numbering from unchanged captured inputs (2026-10-06)
+
+**Evidence:** [DelayLama report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-claim-numbering.md)
+with [hashed receipt](validation/delaylama-claim-numbering-20261006.json).
+
+**Problem:** L154 correctly withheld reused display IDs, but a pure numbering change
+also detached otherwise identical captured actions and could force unnecessary claim
+analysis. Current navigation needs a separate number while the original analysis
+retains its own references, source checks and reasoning.
+
+**Implementation:** compare the full stored proposal snapshot with current snapshots,
+excluding only the display ID, on unchanged original-source SHA. Require unique
+matches, full-register duplicate-proposal information and injective record/subject
+mapping. New compact bindings carry ambiguity markers; legacy rows can use their
+actually saved full roster only after exact captured-row agreement. A selected subset
+or today's roster cannot manufacture old uniqueness. Missing/duplicate records,
+material/source changes, malformed or non-finite values and identity collapse remain
+unresolved. Booleans are distinct from numbers; no title/alias/similarity matching is
+used. Read-only numbering metadata exposes both old and current IDs without changing
+saved fields or promoting semantic certainty.
+
+The desk, rule/source panels, outcome/detail/standalone labels, subject summaries and
+analysis-map record/subject edges now use current navigation while showing original
+analysis references. Quotes, check IDs and free-text reasoning stay original. Quote
+coherence is checked against the occurrence actually assessed, not an unrelated action
+that reused its display label. Input equality permits candidate navigation, not
+accepted meaning, attribution, applicability or entitlement.
+
+**Measured controls:** legacy C147 E1/E2 swapping preserved 12 correctly mapped claims
+using the real stored roster, with no model call. Changing the blockage actor proposal
+then withheld 10 affected assessments while two unrelated assessments stayed linked.
+One fresh claim run, submitted once with 31 application calls, recorded modern capture
+markers and returned 12 assessments plus seven standalone statements. Renumbering all
+six events to E101–E106 retained those connections without further model calls. Original
+source/raw claims/native graph rows stayed identical during navigation controls; direct
+numbering was restored as another owned version. The live rule panel retained its old
+check ID and showed current subject E102 beside analysis E2. The analysis map had 96
+items and 115 candidate references, with the renamed dispatch and blockage targets.
+
+**Training/evaluation:** do not make generated E-numbers semantic identity labels.
+Separate numbering-only positives, material-change negatives, old/current namespace
+collisions, identical repeated proposals, missing old-roster evidence and record/subject
+collapse. Preserve original IDs in evaluation artifacts. Measure correct connections,
+wrong relinks, abstentions, recall and semantic judgments separately. An unchanged
+snapshot is not a substitute for correct extraction or independent legal gold.
+
+**Limits:** 1,738 backend tests, 1,064 frontend tests across 94 files and production
+TypeScript/build passed; bundle warning remains. Captured citation identity covers
+quote/clause/section; location-check metadata is excluded. Unknown/incomplete captures,
+changed wording or aliases require reassessment; this is not general semantic entity
+resolution. The fresh model also returned a malformed/unreadable rule-basis candidate,
+whose concern remains visible. One reused synthetic English dossier and one new claim
+draw are not held-out, repeated-seed, multilingual or long-contract accuracy. Other
+notice/risk/amendment and event-field-check references, recall, applicability and
+payment reconciliation remain open. No new native source jobs, Go changes or LayaGo/
+GLiNER/MLX training, architecture, weights or measured speed gain occurred.

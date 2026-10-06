@@ -12,9 +12,9 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L154 finding](docs/learning-log.md#l154--capture-event-inputs-before-joining-claims-across-reruns-2026-10-06)
-records event-input lineage, reused display IDs, historical claim connections and
-separate evaluation targets for identity, abstention and extraction recall.
+The latest [L155 finding](docs/learning-log.md#l155--separate-display-numbering-from-unchanged-captured-inputs-2026-10-06)
+records exact unchanged-input navigation through event renumbering, original-check
+preservation, ambiguity/collapse controls and separate semantic evaluation limits.
 
 ## Build and use
 
