@@ -12,9 +12,9 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L153 finding](docs/learning-log.md#l153--actor-ownership-follows-the-own-predicate-not-a-party-label-2026-10-06)
-records predicate-specific actor ownership, own-record evidence, time grants versus
-money, and separate quality targets for extraction and source checks.
+The latest [L154 finding](docs/learning-log.md#l154--capture-event-inputs-before-joining-claims-across-reruns-2026-10-06)
+records event-input lineage, reused display IDs, historical claim connections and
+separate evaluation targets for identity, abstention and extraction recall.
 
 ## Build and use
 

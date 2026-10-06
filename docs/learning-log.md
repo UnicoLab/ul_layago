@@ -5866,3 +5866,58 @@ applicability, payment reconciliation and long-contract recall remain open. Reus
 synthetic English development originals are not independent gold, repeated-seed,
 held-out or multilingual accuracy. No LayaGo/GLiNER/MLX training, architecture,
 weights or measured speed improvement occurred.
+
+
+## L154 — Capture event inputs before joining claims across reruns (2026-10-06)
+
+**Evidence:** [DelayLama report](https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-06-claim-event-inputs.md)
+with [hashed receipt](validation/delaylama-claim-event-inputs-20261006.json).
+
+**Failure:** a detector rerun reused E1 for drafting instead of blockage. Reading an
+older claim against the latest register joined it by that reused display ID or title
+overlap. A shared original-source hash did not detect this namespace change. The
+claim's own record and its declared underlying subject both need input binding.
+
+**Implementation:** claim analysis captures the normalized event proposals actually
+supplied and the original-source SHA. Each assessment and standalone fact/detail
+records only its referenced record/subject inputs, with full-roster ambiguity markers;
+the full roster is retained once. Material action/type, actor, date, original reference,
+status, impact, financial-stage and citation text changes withhold current navigation.
+Evidence-check/location metadata and unrelated added events alone do not detach an
+unchanged proposal. Old references, verdicts, values and quotes remain unchanged.
+Legacy uncaptured results require reassessment; no title-based migration or automatic
+alias relink is inferred. The desk, subject summaries, analysis map and common evidence
+review expose connection gaps. Snapshot diagnostics stay out of ordinary facts and
+model analysis context. Matching proposals permit candidate navigation, not accepted
+identity, legal support or complete source understanding.
+
+**Persisted qualification:** 12 legacy assessments remained separate. One fresh
+claim workflow, submitted once, made 29 application calls and captured 12 assessments
+plus six standalone statements. All current captures matched. A controlled saved
+output swapped only the first two detector display IDs; this was not another model
+extraction. All 12 affected assessments detached, with visible earlier-version
+warnings and no current claim record/subject edges in the analysis map. Raw claim
+values, original documents and every native graph table stayed identical. Restoring
+the old event inputs as another owned version restored all 12 links without a model
+call. Tests also protect unrelated additions and check-only metadata changes.
+
+**Training/evaluation implications:** separate semantic/action identity from generated
+display IDs and version lineage. Include reordered registers, reused E-numbers,
+changed related subjects, renamed or missing actions, ambiguous original references,
+changed actor/date/impact/stage/quotation, stale source versions and absent captures.
+Use unchanged metadata-only updates and unrelated new actions as positive controls.
+A consistent source quote or original hash alone cannot label a cross-generation
+join correct. Evaluation must detect wrong joins, withheld valid joins, ID instability
+and source recall separately; guardrail abstention is not improved semantic extraction.
+An empty-list subject initially bypassed the optional-subject check and now fails
+closed. Preserve malformed/failed examples instead of coercing them into identity.
+
+**Limits:** 1,733 backend tests, 1,062 frontend tests across 94 files and production
+TypeScript/build passed; bundle warning remains. One reused synthetic English C147
+case and one fresh claim draw are not independent gold, held-out, repeated-seed,
+multilingual or long-contract accuracy. No new native source jobs or Go changes;
+the graph reused qualified default69. Stable cross-generation identity resolution,
+other notice/risk/amendment references, parent actor evidence, applicability, recall
+and payment reconciliation remain open. This increment withholds stale links rather
+than solving semantic entity resolution. No LayaGo/GLiNER/MLX training, architecture,
+weights or measured speed improvement occurred.
