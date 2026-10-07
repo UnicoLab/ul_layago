@@ -1,0 +1,192 @@
+{
+  "protocol": "delaylama-source-slot-learning-evidence-v1",
+  "learning_id": "L169",
+  "date": "2026-10-07",
+  "status": "verified_increment_broader_goal_active_final_release_fields_pending",
+  "source_release_report": {
+    "url": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-07-graph-entity-source-slots.md",
+    "status": "root_finalizing"
+  },
+  "source_aggregate_receipt": {
+    "repository": "UnicoLab/delaylama",
+    "path": "docs/validation/assets/entity-slot-eval/live-receipt.json",
+    "status": "root_finalizing"
+  },
+  "artifacts": [
+    {
+      "repository": "UnicoLab/delaylama",
+      "path": "docs/validation/assets/entity-slot-eval/seal.json",
+      "sha256": "113f2467b169b196d1a65fbd6181b69c11b9c1e883b6ab3b877108a8bcb0ecfe"
+    },
+    {
+      "repository": "UnicoLab/delaylama",
+      "path": "docs/validation/assets/entity-slot-eval/retry-independent-audit.json",
+      "sha256": "4bb88027b578aba338e2ff0855b34d25e8b4701d73aea1b169ed19e892c4b1c9"
+    },
+    {
+      "repository": "UnicoLab/delaylama",
+      "path": "docs/validation/assets/entity-slot-eval/retry-independent-audit.md",
+      "sha256": "ab2c9a3d8da2318f6e96a0d8cd9c33faaeebc27077d7f97a1b17433d266f0782"
+    },
+    {
+      "repository": "UnicoLab/delaylama",
+      "path": "docs/validation/assets/entity-slot-eval/first-harness-failure-independent-audit.json",
+      "sha256": "df2ab1bad07081683d68ee61d42f0b1945bb43cdd49dd686130f4e7854152851"
+    },
+    {
+      "repository": "UnicoLab/delaylama",
+      "path": "docs/validation/assets/entity-slot-eval/preexecution-independent-audit.json",
+      "sha256": "11cc709dd2f97e96964980d8bbf6fa6b1e0c3a6985e7b59d167b255e52dfaa25"
+    },
+    {
+      "repository": "UnicoLab/delaylama",
+      "path": "docs/validation/assets/graph-entity-identity/live-entity-draw1-independent-audit.json",
+      "sha256": "71e33d033980e1ad4aab7c8734257d7cb6e38c626c2556f5effc26223818d3dd"
+    }
+  ],
+  "corpus": {
+    "id": "I513",
+    "source_first_manual_synthetic": true,
+    "languages": [
+      "en",
+      "fr",
+      "de"
+    ],
+    "originals": 8,
+    "targets": 36,
+    "known_kind_targets": 32,
+    "unknown_kind_targets": 4,
+    "source_sha256": "cc2e239e9d3c24ea8cbbd2b990ad0fcdae8c86a7d5fc304ee923c48f6744fa59",
+    "corpus_file_sha256": "379f0eca662fd4946b185ef931de94e27e8133fa3f80f8411d46d65ccd18a6dc",
+    "sealed_at_utc": "2026-10-07T01:25:37.760061+00:00",
+    "labels_excluded_from_model_requests_and_training": true,
+    "target_inventory_not_exhaustive": true,
+    "representative_contract_accuracy_claim": false
+  },
+  "initial_attempt": {
+    "recoveries_failed_in_harness": 8,
+    "running_progress_events_preserved": 8,
+    "terminal_bodies_retained": 0,
+    "initial_zero_score_preserved": true,
+    "quality_not_measurable": true,
+    "failure": "Runner assumed one receipt per window; production emits running before dispatch and terminal afterwards. The second immutable save collided before retaining terminal body."
+  },
+  "retained_retry": {
+    "original_recoveries_retained": 8,
+    "recorded_source_window_invocations": 13,
+    "parsed_windows": 13,
+    "blank_source_slots_retained": 5,
+    "meaningful_failed_windows": 0,
+    "progress_events": 31,
+    "progress_running_events": 13,
+    "progress_parsed_events": 13,
+    "progress_unscanned_separator_events": 5,
+    "exact_targeted_nominations": 31,
+    "exact_name_kind_boundary_interpretations": 26,
+    "correct_source_qualified_known_kind_targets": 24,
+    "correct_unknowns_withheld": 2,
+    "raw_nominations": 34,
+    "mechanically_source_located_raw_nominations": 32,
+    "graph_association_proposals": 0,
+    "automatic_graph_mutations": 0,
+    "all_source_input_guidance_hashes_verified": true,
+    "all_qualified_quotes_same_original_slot_and_own_name_verified": true,
+    "all_terminal_progress_events_match_returned_batches": true,
+    "semantic_coverage_certified": false,
+    "native_graph_accuracy_measured": false
+  },
+  "retained_interpretation_failures": {
+    "honorific_titles_in_person_names": 2,
+    "omitted_record_identifiers": 3,
+    "conditional_narrow_operator_boundary_omissions": 3,
+    "required_wide_conditional_spans_absent": 3,
+    "unknown_recipient_forced_to_source_record_reference": 1,
+    "unsupported_physical_device_forced_to_concept": 1,
+    "unknown_policy_note": "Physical object existence can be explicit while specialized kind remains outside the frozen finite inventory repertoire. This is not source absence.",
+    "extra_nomination_policy": "An additional same-label foreign-register assertion is a distinct literal mention outside targeted gold; it requires source/modality review and cannot automatically be counted as a false positive or merged identity."
+  },
+  "prior_R740_development_observation": {
+    "checked_nodes": 5,
+    "semantic_matches": 4,
+    "semantic_failures": 1,
+    "all_three_supporting_quotes_located_in_wrong_conditional_name": true,
+    "incorrect_proposal_unaccepted": true,
+    "held_out_accuracy_claim": false,
+    "same_name_scope_and_current_graph_context_not_semantic_truth": true
+  },
+  "adopted_mechanics": [
+    "Explicit opaque source_slot binds every name/kind/boundary quotation to one supplied original occurrence.",
+    "Canonical windows preserve all source text; oversized whole slots or call-budget regions remain visibly unscanned.",
+    "Window request JSON hash, versioned guidance hash, status, runtime calls and raw ordered aggregates are revalidated.",
+    "Known output truncation cannot qualify as parsed; failed receipts remain visible.",
+    "Whole original context is attached by the server; fake model context cannot replace its qualifications.",
+    "Progress is an append-only sequence of immutable running/terminal/skipped events; no event overwrites another.",
+    "Source-only nomination and graph association/type correction remain separate, with explicit review and no automatic rename/merge/date/event promotion."
+  ],
+  "test_verification": {
+    "independent_slot_adversarial_tests": 19,
+    "independent_runner_tests": 7,
+    "focused_browser_slot_and_legacy_inventory_tests": 107,
+    "note": "Deterministic/fake-provider mechanics tests, not empirical model accuracy."
+  },
+  "primary_engine_activation_verified": {
+    "activation_receipt_sha256": "f0b72f22da3b5c72919f409bd977315f0a1b5625eb35a52d3bf1a3196a3729b6",
+    "shadow_receipt_sha256": "133a580d051f00490240824016b2b22d2a87c43c9850dbe35feced20492d1a03",
+    "binary_sha256": "342084701c246be1fa4e83102ccb01044e94cc1a25a1ec003c383d90316c5f21",
+    "source_baseline_bit_identical": true,
+    "only_reviewed_entity_type_patch_added": true,
+    "graph_rows_unchanged": true,
+    "config_unchanged": true,
+    "invalid_native_type_preview_http_status": 400,
+    "shadow_scopes": 37,
+    "shadow_collections_compared": 111,
+    "shadow_mismatch_count": 0,
+    "qualification": "Verified local engine binary/route activation and unchanged graph fingerprints. This is not semantic graph correctness or complete contract accuracy."
+  },
+  "proposed_research": [
+    "Separate original name-span, entity-kind, title/operator boundary, same-occurrence association and abstention targets.",
+    "Use independent multilingual training examples and paired hard negatives for record IDs versus parties, proper legal prefixes versus grammatical operators, and people titles versus literal company names.",
+    "Treat unsupported-kind policy separately from unclear source meaning; version an expanded equipment ontology in a future experiment rather than rewrite this gold.",
+    "Measure false support and selective risk after source-grounding; retain unknowns and operative-role ambiguity.",
+    "Keep this frozen evaluation corpus excluded from future training and prompt selection; any feedback-informed subsequent run is development evaluation."
+  ],
+  "new_layago_training_weights_or_architecture": false,
+  "new_mlx_acceleration_or_speed_result": false,
+  "calibration_or_representative_accuracy_measured": false,
+  "final_app_release_validation": {
+    "status": "verified_engineering_increment_broader_goal_active",
+    "full_backend_tests": 2805,
+    "final_backend_metadata_and_integration_tests": 182,
+    "full_frontend_tests": 1955,
+    "final_frontend_wording_tests": 86,
+    "build_passed": true,
+    "large_bundle_warning": true,
+    "parity": {
+      "source_cases": 53,
+      "nomination_cases": 70,
+      "comparison_cases": 53,
+      "mismatches": 0
+    },
+    "primary_API_refresh": {
+      "healthy": true,
+      "job_snapshots": 24,
+      "journal_unchanged": true,
+      "environment_unchanged": true
+    },
+    "owned_cleanup": {
+      "terminal_app_jobs": 117,
+      "services_stopped": 4,
+      "test_browser_tab_closed": true
+    },
+    "protected_user_graph_source_and_sessions_preserved": true,
+    "root_live_receipt_sha256": "31c5c5c7417556c03a4045553385f1590ccdd079c0b7773972947ff4fff7995b"
+  },
+  "limits": [
+    "This is the separately retained retry after a failed retention harness, not original first-pass workflow success.",
+    "Source-slot mechanical qualification does not certify semantics, operative actions, dates, predicates or native entity identity.",
+    "Eight synthetic originals and 36 targeted expectations are not representative legal-contract accuracy or an exhaustive entity inventory.",
+    "Recorded source invocations may include provider transport retries; separate HTTP-attempt counts were not measured.",
+    "No paired same-corpus model comparison establishes a quality improvement over H512/R740.",
+    "No new training or acceleration claim; only integration mechanics and measured source-only error categories."
+  ]
+}
