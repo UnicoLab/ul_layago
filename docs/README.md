@@ -109,3 +109,5 @@ weights outside Git; use reviewed, shareable aggregates where necessary.
 Latest scope-resolution learnings: [original cycles, bounded discovery and retained history, 2026-10-06](validation/delaylama-activity-scope-resolution-20261006.json), learning **L165**. Includes preserved provider failures and remaining event/graph recall gaps.
 
 Latest original-source recall learnings: [bounded action discovery and retained primary failures, 2026-10-07](validation/delaylama-event-source-recall-20261007.json), learning **L166**. Includes all five development draws, the partial failure replay, exact citation context and remaining graph semantics.
+
+Latest entity-review learnings: [original-local identity, qualification guards and graph-label anchoring, 2026-10-07](validation/delaylama-graph-entity-identity-20261007.json), learning **L167**. Includes the retained conditional-name model failure and the proposed blind-inventory experiment; no new model training is claimed.

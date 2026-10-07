@@ -1,0 +1,31 @@
+{
+  "protocol": "graph-entity-review-development-validation-v1",
+  "backend_tests_passed": 2580,
+  "frontend_tests_passed": 1777,
+  "frontend_test_files": 125,
+  "production_build_passed": true,
+  "parity_comparisons": 80,
+  "parity_mismatches": 0,
+  "selected_live_model_calls": 5,
+  "selected_semantic_outcomes_matching": 4,
+  "unaccepted_semantic_failures": [
+    "Si Opal Research SA interpreted as literal Organization despite conditional own paragraph"
+  ],
+  "automatic_graph_mutations": false,
+  "source_record_reference_proposals_unaccepted": true,
+  "blind_source_inventory": "proposed, not implemented",
+  "atomic_entity_type_correction": "engine patch implemented and independently tested; not activated or connected to application review",
+  "broader_goal_complete": false,
+  "laya_training_or_weights_changed": false,
+  "browser_entity_queue_routing_verified": true,
+  "browser_selectable_backup_verified": true,
+  "browser_download_completion_verified": false,
+  "raw_history_api_hydrated": true,
+  "terminal_owned_jobs": 107,
+  "owned_stack_stopped": true,
+  "owned_browser_closed": true,
+  "plain_and_indented_unit_boundaries_checked": true,
+  "engine_race_passing_entries": 82,
+  "engine_race_entity_entries": 59,
+  "engine_patch_series_preflight_passed": true
+}
