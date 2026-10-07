@@ -72,8 +72,9 @@ type Agent struct {
 	Encoder   *model.Encoder
 	Head      *Head
 
-	temps      [3]float64
-	tempsByOpt map[string]float64
+	artifactBase *VerifiedBase
+	temps        [3]float64
+	tempsByOpt   map[string]float64
 }
 
 // LoadCheckpoint reads a Laya checkpoint directory in the published layout:
@@ -249,7 +250,13 @@ func (a *Agent) Predict(ctx context.Context, state string, qs []Question, opt mo
 		pred.InputTokens += len(ids)
 		qtypes[i] = q.Type
 	}
-	res, err := a.Encoder.Forward(ctx, pred.Sequences, opt)
+	var res *model.Result
+	var err error
+	if a.artifactBase != nil {
+		res, err = a.artifactBase.forward(ctx, pred.Sequences, opt)
+	} else {
+		res, err = a.Encoder.Forward(ctx, pred.Sequences, opt)
+	}
 	if err != nil {
 		return nil, err
 	}

@@ -19,6 +19,18 @@ type Predictor interface {
 
 // Serve emits one response or structured error per JSON line and keeps stdout machine-readable.
 func Serve(ctx context.Context, input io.Reader, output io.Writer, predictor Predictor, timeout time.Duration) error {
+	return serveRequests(ctx, input, output, predictor.Predict, func(r layago.Request) string { return r.ID }, timeout)
+}
+
+// ServeAdapters requires an explicit adapter_id on every line. Unknown selectors
+// are errors; no head is selected by arrival order or a hidden default.
+func ServeAdapters(ctx context.Context, input io.Reader, output io.Writer, set *layago.AdapterSet, timeout time.Duration) error {
+	return serveRequests(ctx, input, output, func(ctx context.Context, r layago.AdapterRequest) (*layago.Response, error) {
+		return set.Predict(ctx, r.AdapterID, r.Request)
+	}, func(r layago.AdapterRequest) string { return r.ID }, timeout)
+}
+
+func serveRequests[T any](ctx context.Context, input io.Reader, output io.Writer, predict func(context.Context, T) (*layago.Response, error), id func(T) string, timeout time.Duration) error {
 	if timeout <= 0 {
 		return errors.New("request timeout must be positive")
 	}
@@ -32,7 +44,7 @@ func Serve(ctx context.Context, input io.Reader, output io.Writer, predictor Pre
 		if len(bytes.TrimSpace(scanner.Bytes())) == 0 {
 			continue
 		}
-		var request layago.Request
+		var request T
 		decoder := json.NewDecoder(bytes.NewReader(scanner.Bytes()))
 		decoder.DisallowUnknownFields()
 		err := decoder.Decode(&request)
@@ -46,13 +58,13 @@ func Serve(ctx context.Context, input io.Reader, output io.Writer, predictor Pre
 			}
 		}
 		if err != nil {
-			if err := encoder.Encode(map[string]any{"contract": layago.PredictionContract, "id": request.ID, "error": map[string]string{"code": "invalid_request", "message": err.Error()}}); err != nil {
+			if err := encoder.Encode(map[string]any{"contract": layago.PredictionContract, "id": id(request), "error": map[string]string{"code": "invalid_request", "message": err.Error()}}); err != nil {
 				return err
 			}
 			continue
 		}
 		requestCtx, cancel := context.WithTimeout(ctx, timeout)
-		response, err := predictor.Predict(requestCtx, request)
+		response, err := predict(requestCtx, request)
 		cancel()
 		if err != nil {
 			code := "prediction_failed"
@@ -62,7 +74,7 @@ func Serve(ctx context.Context, input io.Reader, output io.Writer, predictor Pre
 			if errors.Is(err, layago.ErrTruncation) {
 				code = "input_truncated"
 			}
-			if err := encoder.Encode(map[string]any{"contract": layago.PredictionContract, "id": request.ID, "error": map[string]string{"code": code, "message": err.Error()}}); err != nil {
+			if err := encoder.Encode(map[string]any{"contract": layago.PredictionContract, "id": id(request), "error": map[string]string{"code": code, "message": err.Error()}}); err != nil {
 				return err
 			}
 		} else if err := encoder.Encode(response); err != nil {

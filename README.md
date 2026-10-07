@@ -53,6 +53,55 @@ Fixed choices come from the manifest when omitted; incompatible options/instruct
 
 Inputs exceeding state, instruction or option budgets fail explicitly. `allow_truncation: true` reports the clipping and forces escalation. Uncalibrated checkpoints always escalate. Calibrated artifact `act` decisions apply only to their calibration distribution; **model nominations never establish source evidence or legal facts**. Responses always report `requires_domain_validation: true`. Checkpoint `model.sha256` hashes its weights file; artifact metadata hashes the manifest, whose pins cover the base and head.
 
+## Shared base and explicit head adapters
+
+Several existing artifact heads can share one verified frozen encoder and
+immutable tokenizer. Every head retains its own trained instructions, options,
+calibration and act thresholds. This is head selection, not encoder LoRA.
+
+```go
+set, err := layago.OpenAdapters(layago.AdapterSetOptions{
+    Base: "/models/laya-multilingual",
+    Artifacts: map[string]string{
+        "topics": "/models/topic-head/float32",
+        "support": "/models/support-head/float32",
+    },
+    Workers: 4,
+    CacheBytes: 64 << 20, // optional; zero disables retained encoder states
+})
+if err != nil { /* handle load/compatibility error */ }
+response, err := set.Predict(ctx, "support", layago.Request{
+    State: state,
+    Questions: []layago.Question{{ID: "evidence", Task: "r_contract_support"}},
+})
+```
+
+Selection is explicit per request; unknown IDs fail and there is no mutable
+active head. Base configuration/weights, tokenizer/special-token IDs, encoder
+depth and input format must match exactly; each head enforces its own pinned
+sequence/head budgets. A non-null artifact `adapter`
+configuration is unsupported and rejected rather than ignored.
+
+JSONL exposes the same lifecycle without changing single-model requests:
+
+```sh
+bin/layago --base /models/laya-multilingual \
+  --adapter topics=/models/topic-head/float32 \
+  --adapter support=/models/support-head/float32 --cache-bytes 67108864
+# stdin: {"adapter_id":"support","state":"...","questions":[{"id":"check","task":"r_contract_support"}]}
+```
+
+`--adapter` is exclusive with `--checkpoint`/`--artifact`; duplicate IDs fail.
+Adapter mode requires `adapter_id` on every request and returns it as
+`model.adapter_id`. Single-model mode rejects `adapter_id`. The optional cache
+reuses only **identical complete token sequences** on the same loaded base and
+numeric kernel. Changed inputs/options/instructions recompute their distinct
+sequences; bidirectional attention cannot reuse a causal prefix. Head decisions
+are always recomputed with the selected head. `set.CacheStats()` reports retained
+payload plus conservative per-entry overhead, not total process/RSS memory.
+All requests share a cancellation-aware compute gate. See
+[the adapter contract and tests](docs/shared-head-adapters.md).
+
 ## Train, calibrate, evaluate
 
 Read [the training recipe](docs/training.md) first. The trainer reuses an existing frozen ModernBERT/mmBERT encoder, including the trained encoder inside a public multilingual Laya checkpoint. It fits the lightweight zero-transformer-layer marker scorer and act head; it does **not** retrain the encoder or reproduce upstream RLCD/CLM InfoNCE training.

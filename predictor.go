@@ -70,11 +70,12 @@ type Decision struct {
 }
 
 type Metadata struct {
-	Kind    string `json:"kind"`
-	SHA256  string `json:"sha256"`
-	Kernel  string `json:"kernel"`
-	Workers int    `json:"workers"`
-	MaxLen  int    `json:"max_len"`
+	AdapterID string `json:"adapter_id,omitempty"`
+	Kind      string `json:"kind"`
+	SHA256    string `json:"sha256"`
+	Kernel    string `json:"kernel"`
+	Workers   int    `json:"workers"`
+	MaxLen    int    `json:"max_len"`
 }
 
 type Response struct {

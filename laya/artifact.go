@@ -1,6 +1,7 @@
 package laya
 
 import (
+	"bytes"
 	"context"
 	"crypto/sha256"
 	"encoding/hex"
@@ -56,6 +57,7 @@ type ArtifactManifest struct {
 	Sequence    ArtifactSequenceSpec    `json:"sequence"`
 	Head        ArtifactHeadSpec        `json:"head"`
 	Weights     ArtifactWeights         `json:"weights"`
+	Adapter     json.RawMessage         `json:"adapter"`
 	Tasks       map[string]ArtifactTask `json:"tasks"`
 	Calibration ArtifactCalibration     `json:"calibration"`
 	Act         ArtifactAct             `json:"act"`
@@ -158,6 +160,9 @@ type ArtifactAct struct {
 type ArtifactOptions struct {
 	// Int8Encoder quantizes the base encoder to per-row int8 at load.
 	Int8Encoder bool
+	// FeatureCacheBytes bounds optional shared full-sequence encoder-state storage.
+	// Zero disables it. This is not a process/RSS memory limit.
+	FeatureCacheBytes int64
 }
 
 // Artifact is a loaded, digest-verified trained head over its frozen trunk.
@@ -194,7 +199,19 @@ const (
 // in-place rewrite of the open base weights file could be, so the base
 // directory should be read-only.
 func LoadArtifact(dir, baseDir string, opts ArtifactOptions) (*Artifact, error) {
-	raw, err := os.ReadFile(filepath.Join(dir, "manifest.json")) //nolint:gosec // G304: artifact directory chosen by the caller
+	art, err := readArtifactManifest(dir)
+	if err != nil {
+		return nil, err
+	}
+	base, err := loadArtifactBase(art.Manifest, baseDir, opts)
+	if err != nil {
+		return nil, err
+	}
+	return attachArtifact(dir, art, base)
+}
+
+func readArtifactManifest(dir string) (*Artifact, error) {
+	raw, err := readPinnedManifest(dir)
 	if err != nil {
 		return nil, err
 	}
@@ -214,46 +231,19 @@ func LoadArtifact(dir, baseDir string, opts ArtifactOptions) (*Artifact, error) 
 		}
 		art.tasks[name] = at
 	}
+	return art, nil
+}
 
+func readPinnedManifest(dir string) ([]byte, error) {
+	return os.ReadFile(filepath.Join(dir, "manifest.json"))
+}
+
+func attachArtifact(dir string, art *Artifact, base *VerifiedBase) (*Artifact, error) {
+	if err := base.compatible(art.Manifest); err != nil {
+		return nil, err
+	}
+	m := art.Manifest
 	headRaw, err := readPinned(dir, m.Weights.File, m.Weights.SHA256, maxArtifactHeadBytes)
-	if err != nil {
-		return nil, err
-	}
-	cfgRaw, err := readPinned(baseDir, m.Base.ConfigFile, m.Base.ConfigSHA256, maxArtifactConfigBytes)
-	if err != nil {
-		return nil, err
-	}
-	tokRaw, err := readPinned(baseDir, m.Tokenizer.File, m.Tokenizer.SHA256, maxArtifactTokenizerBytes)
-	if err != nil {
-		return nil, err
-	}
-	baseFile, baseSize, err := openPinned(baseDir, m.Base.WeightsFile, m.Base.WeightsSHA256)
-	if err != nil {
-		return nil, err
-	}
-	defer func() { _ = baseFile.Close() }()
-
-	full, err := model.ParseHFConfig(cfgRaw)
-	if err != nil {
-		return nil, err
-	}
-	if full.NumLayers != m.Base.LayersTotal || full.HiddenSize != m.Base.HiddenSize {
-		return nil, fmt.Errorf("laya: base config has %d layers of %d, manifest says %d of %d",
-			full.NumLayers, full.HiddenSize, m.Base.LayersTotal, m.Base.HiddenSize)
-	}
-	cfg, err := full.Truncate(m.Base.LayersUsed)
-	if err != nil {
-		return nil, err
-	}
-	enc, err := loadArtifactEncoder(baseFile, baseSize, cfg, m.Base.TensorPrefix, opts.Int8Encoder)
-	if err != nil {
-		return nil, err
-	}
-	tok, err := tokenizer.Load(tokRaw)
-	if err != nil {
-		return nil, err
-	}
-	sp, err := m.Tokenizer.special(tok)
 	if err != nil {
 		return nil, err
 	}
@@ -261,16 +251,16 @@ func LoadArtifact(dir, baseDir string, opts ArtifactOptions) (*Artifact, error) 
 	if err != nil {
 		return nil, err
 	}
-	head, err := loadHead(hf, cfg.HiddenSize, m.Head.Layers, len(m.Head.ActOutputs), "")
+	head, err := loadHead(hf, base.encoder.Config.HiddenSize, m.Head.Layers, len(m.Head.ActOutputs), "")
 	if err != nil {
 		return nil, err
 	}
 	layers := m.Head.Layers
-	agent, err := NewAgent(AgentConfig{Encoder: m.Base.ModelID, HeadLayers: &layers, MaxLen: m.Sequence.MaxLen,
-		HeadMaxLen: m.Sequence.HeadMaxLen}, tok, sp, enc, head)
+	agent, err := NewAgent(AgentConfig{Encoder: m.Base.ModelID, HeadLayers: &layers, MaxLen: m.Sequence.MaxLen, HeadMaxLen: m.Sequence.HeadMaxLen}, base.tokenizer, base.special, base.encoder, head)
 	if err != nil {
 		return nil, err
 	}
+	agent.artifactBase = base
 	art.Agent = agent
 	return art, nil
 }
@@ -289,6 +279,8 @@ func loadArtifactEncoder(r io.ReaderAt, size int64, cfg model.Config, prefix str
 
 func (m *ArtifactManifest) validate() error {
 	switch {
+	case len(bytes.TrimSpace(m.Adapter)) > 0 && string(bytes.TrimSpace(m.Adapter)) != "null":
+		return errors.New("laya: unsupported non-null encoder adapter; this artifact runs over its frozen base only")
 	case m.Contract != ArtifactContract:
 		return fmt.Errorf("laya: manifest contract %q is not %s", m.Contract, ArtifactContract)
 	case m.Instance != "Q" && m.Instance != "R" && m.Instance != "A":
