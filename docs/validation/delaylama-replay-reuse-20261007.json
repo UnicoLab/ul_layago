@@ -1,0 +1,54 @@
+{
+  "protocol": "delaylama-replay-reuse-learning-v1",
+  "learning": "L173",
+  "date": "2026-10-07",
+  "application_report": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-07-review-replay-and-health-ux.md",
+  "models_called": 0,
+  "training_or_weights_changed": false,
+  "semantics_or_old_evaluation_scores_changed": false,
+  "replay": {
+    "scope": "fresh invocation-local primary validation and quote indexes only",
+    "persistent_cache": false,
+    "guidance_protocol_public_apis_changed": false,
+    "independent_frozen_cases": 65,
+    "exact_matching_candidate_passes": 2,
+    "independent_stale_cache_isolation_controls": 17,
+    "existing_driver_controls": 39,
+    "baseline_helper_sha256": "8005273d99229a5160c602e1af7ab60a2f5dc1a4d113fa371d56c160f44f3b87",
+    "candidate_helper_sha256": "ca1e9edec7f8c931e34badb053b608e87888a9427ff5830fb64a022c0c91b414",
+    "independent_total_ms_before": [
+      8684.274797444232,
+      8883.998250355944
+    ],
+    "independent_total_ms_after": [
+      1352.9632107820362,
+      1407.392836874351
+    ],
+    "separate_native40_public_envelope_median_seconds_before": 2.0704,
+    "separate_native40_public_envelope_median_seconds_after": 0.1308,
+    "model_gpu_memory_billing_or_general_throughput_claim": false
+  },
+  "retention": {
+    "initial_invalid_unicode_harness_digest_failure_preserved": true,
+    "candidate_misnamed_baseline_file_preserved_and_excluded_from_baseline_claim": true,
+    "actual_old_baseline_file": "baseline-v1-public-replay.json",
+    "raw_inputs_outputs_proposal_ids_and_withholding_unchanged": true
+  },
+  "ux": {
+    "terminal_progress_collapsed_live_phase_visible": true,
+    "failures_unscanned_unknown_pending_stay_visible": true,
+    "model_config_distinct_from_catalog_and_inference": true,
+    "unrelated_local_catalog_failure_not_default_remote_failure": true,
+    "other_model_profiles_not_assumed_unused": true,
+    "health_hides_unrelated_contract_result_and_keeps_it_for_return": true,
+    "technical_diagnostics_collapsed": true
+  },
+  "validation": {
+    "backend_tests": 3608,
+    "frontend_tests": 2791,
+    "frontend_files": 161,
+    "production_build": true,
+    "python_browser_parity_cases": 64,
+    "parity_mismatches": 0
+  }
+}
