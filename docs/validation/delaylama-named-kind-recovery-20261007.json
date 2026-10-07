@@ -1,0 +1,104 @@
+{
+  "protocol": "delaylama-named-kind-recovery-learning-v1",
+  "learning": "L172",
+  "date": "2026-10-07",
+  "application_report": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-07-named-kind-quotation-recovery.md",
+  "training_or_weights_changed": false,
+  "heldout_accuracy_or_causal_or_speed_claim": false,
+  "evaluation_stage": "development",
+  "sources_previously_observed": true,
+  "primary_stages_rerun": false,
+  "before_after": {
+    "discoveries": [
+      70,
+      70
+    ],
+    "exact_names": [
+      72,
+      72
+    ],
+    "exact_semantics": [
+      68,
+      68
+    ],
+    "correct_known_source_qualified": [
+      21,
+      37
+    ],
+    "known_denominator": 76,
+    "unknown_withheld": [
+      3,
+      3
+    ],
+    "unknown_denominator": 3,
+    "dense_source_qualified": [
+      3,
+      19
+    ],
+    "dense_denominator": 40,
+    "long_source_qualified": [
+      3,
+      3
+    ],
+    "long_denominator": 6
+  },
+  "fresh_stage": {
+    "model_calls": 14,
+    "input_tokens": 17865,
+    "output_tokens": 6888,
+    "total_reported_tokens_counted_once": 24753,
+    "parsed_stop_returns": 14,
+    "actually_truncated_returns": 0,
+    "progress_events": 36,
+    "pre_dispatch_python_source_seals": 173,
+    "framework_retry_limit": 0,
+    "sdk_http_retries": "unobserved"
+  },
+  "remaining": {
+    "invented_ellipsis_quotes_withheld": 18,
+    "competing_title_boundaries_withheld": 2,
+    "finite_subject_grammar_gaps_withheld": 3,
+    "source_matching_does_not_certify_meaning": true
+  },
+  "design": {
+    "primary_raw_unchanged": true,
+    "three_own_name_covering_premises_required": true,
+    "fresh_same_occurrence_kind_quote": true,
+    "model_subject_assertion_facets_unaccepted": true,
+    "independent_python_browser_replay": true,
+    "new_binary64_proposal_id_protocol": "graph-entity-kind-comparison-id-v1",
+    "cached_positives_ignored": true,
+    "unknown_or_downgraded_markers_withheld": true,
+    "selected_mention_ui_filter": true,
+    "native_raw_outer_whitespace_preserved": true,
+    "no_inner_normalization_or_source_crossing": true
+  },
+  "native_integration": {
+    "controlled_owned_graph_only": true,
+    "actual_ui_preview_apply_undo": true,
+    "only_node_type_changed": true,
+    "undo_exact_before_node_restored": true,
+    "original_episode_unchanged": true,
+    "incident_edges_before_after": 0,
+    "native_quote_chars": 979,
+    "unbound_original_candidate_rejected": true,
+    "engine_guards_weakened": false
+  },
+  "validation": {
+    "backend_tests": 3583,
+    "frontend_tests": 2764,
+    "frontend_files": 158,
+    "build_passed": true,
+    "python_browser_parity_checks": 64,
+    "parity_mismatches": 0,
+    "independent_driver_controls": 39
+  },
+  "training_ideas": [
+    "Separate span location from affirmative same-subject entailment.",
+    "Use hard negatives for employees, hired actors, company offices, negations and hypotheses.",
+    "Preserve long contiguous typed-list quotations without generated ellipses.",
+    "Train competing titled/plain boundaries as unresolved alternatives.",
+    "Include native outer whitespace and cross-language numeric sealing in integration fixtures.",
+    "Keep these observed development originals excluded from training and final held-out claims."
+  ]
+}
