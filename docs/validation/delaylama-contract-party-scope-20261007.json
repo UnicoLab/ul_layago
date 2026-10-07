@@ -1,0 +1,44 @@
+{
+  "learning": "L176",
+  "application_report": "docs/validation/2026-10-07-contract-role-scope-and-reviewed-prompt-comparisons.md",
+  "changes": [
+    "source-bound unaccepted contract-role candidates distinct from register entries",
+    "global absence input-scope concerns with exact narrative warning paths",
+    "hypothetical appointment approval applicability warning",
+    "retained human comparison required for prompt nomination",
+    "numeric/source/agent/version boundaries preserved",
+    "JSON-safe rejected nonfinite HTTP request diagnostics"
+  ],
+  "validation": {
+    "backend_passed": 4251,
+    "frontend_passed": 3108,
+    "frontend_files": 183,
+    "role_reader_parity_cases": 82,
+    "role_reader_parity_mismatches": 0,
+    "production_build_passed": true,
+    "http_handler_focused_passed": 25,
+    "http_invalid_rejected_422": 18,
+    "http_valid_zero_accepted": 3
+  },
+  "actual": {
+    "source_chars": 946,
+    "source_utf8_bytes": 948,
+    "section_calls_per_fresh_run": 5,
+    "comparison_outcome": "inconclusive",
+    "saved_candidate": "v019",
+    "active_default_unchanged": "v018",
+    "nomination_refused": true,
+    "baseline_tokens_once": 24778,
+    "candidate_tokens_once": 25144,
+    "final_repeat_tokens_once": 25162
+  },
+  "limits": [
+    "synthetic development fixture, not held-out benchmark",
+    "actual comparison remains inconclusive with retained interpretation errors",
+    "finite guard candidates remain unaccepted",
+    "client comparison human-reported, not provider-authenticated or semantically certified",
+    "full input does not establish completeness or absence",
+    "earlier observed55/76 and21gaps unchanged",
+    "no new LayaGo training, acceleration or extraction-quality gain"
+  ]
+}

@@ -127,3 +127,5 @@ Latest validation-performance learnings: [fresh invocation replay reuse and serv
 - [Exact citation selector development and prompt iteration](validation/delaylama-exact-kind-spans-20261007.json) — L174, including the retained weaker first draw and bounded-source review.
 
 - [Lossless evidence history and measured extraction input](validation/delaylama-evidence-dossiers-20261007.json) — L175, including the preserved failed framework attempt, actual input limits and remaining semantic gaps.
+
+- [Contract-role witnesses and reviewed prompt comparisons](validation/delaylama-contract-party-scope-20261007.json) — L176, with actual inconclusive model results, source-scope warnings and training-data lessons.
