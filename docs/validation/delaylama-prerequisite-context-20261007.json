@@ -1,0 +1,126 @@
+{
+  "protocol": "delaylama-prerequisite-context-learning-receipt-v1",
+  "status": "observed_development_evidence_final_independent_audit_release_pending",
+  "learning": "L178",
+  "prior_L177_and_prefix_unchanged": true,
+  "learning_log_prefix_sha256": "ba02428d8789ba14563705049f508be6949f55fb2ea3f5212c9bd72db9c1ea59",
+  "developer_document": "https://github.com/UnicoLab/delaylama/blob/main/docs/condition-source-and-critic-context.md",
+  "application_independent_assets": "https://github.com/UnicoLab/delaylama/tree/main/docs/validation/assets/contract-prerequisite-reference-independent",
+  "actual_initial": {
+    "primary_calls": 12,
+    "reported_tokens_once": 101344,
+    "separate_manual_retry_calls": 6,
+    "manual_retry_tokens_once": 50622,
+    "total_calls": 18,
+    "total_tokens_once": 151966
+  },
+  "actual_modifier_variant2": {
+    "calls": 6,
+    "reported_tokens_once": 50656,
+    "original_code_points": 719,
+    "critic_packet_code_points": 33208,
+    "criterion": "located",
+    "status": "unestablished"
+  },
+  "actual_first_character_variant3": {
+    "calls": 6,
+    "reported_tokens_once": 52300,
+    "criterion": "located",
+    "status": "explicit_reported_met",
+    "usage_audit": "independently_verified",
+    "original_code_points": 719,
+    "critic_packet_code_points": 35014
+  },
+  "actual_total_calls": 30,
+  "known_first24_reported_tokens_once": 202622,
+  "critic_initial_packet_code_points": [
+    32542,
+    29609,
+    31493
+  ],
+  "critic_initial_original_code_points": [
+    831,
+    719,
+    719
+  ],
+  "source_controls": {
+    "exact_main": 38,
+    "precision_total": 6,
+    "precision_expectation_matches": 4,
+    "precision_policy_discrepancies_preserved": 2
+  },
+  "v1_exact_compatibility_cases": 27,
+  "backend_tests_root_reported": 4736,
+  "full_raw_history_supplied_to_critic": false,
+  "model_attention_established": false,
+  "causal_or_heldout_quality_claim": false,
+  "new_weights_training_mlx_or_architecture": false,
+  "graph_reference_seed_origin": "deterministic_test_seed_not_model_extraction",
+  "original_runs_failures_and_intermediate_sources_preserved": true,
+  "actual_total_reported_tokens_once": 254922,
+  "actual_total_input_tokens_once": 239128,
+  "actual_total_output_tokens_once": 15794,
+  "independent_mechanics_tests": 146,
+  "application_independent_audit": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/contract-prerequisite-reference-independent/independent-final-audit.md",
+  "application_modifier_variant2_audit": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/contract-prerequisite-reference-independent/modifier-variant2-independent-addendum.md",
+  "application_modifier_variant3_audit": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/contract-prerequisite-reference-independent/modifier-variant3-independent-addendum.md",
+  "source_helper_variants": [
+    "e549133893954ed7bfea921d230b3c67bd514d30c2e9ed10b33601ef5f4b993b",
+    "0dbf78363fbc020061f7f1ecd2c60a5389d612d6faa5e2449338ba26ea6433a0",
+    "549428768a8df7cf9031e1c2fd82132937514e634f567e84efc6953fb6ed8663",
+    "4ffa3f63d1361982cf9942bf4b112493fdf50d3dafd77c40ddf3b69d5b1cbd22",
+    "bfa41df88c89ca246d300f3deb575e2cb20eb4a0c2b4b6c4437645e42b178b03"
+  ],
+  "negative_subject_observation_intermediate_sha256": "dc000b31160bf18fc96d312ccf6b0c415bb44134e10812d1f8d7804093bf779a",
+  "remaining_findings": [
+    "Raw contradictory condition descriptions retain unestablished support even when an independent source criterion is located; two precision-policy discrepancies remain explicit.",
+    "The latest critic administrative categorization is unsupported; corrected condition without own quotation/instrument remains unresolved.",
+    "Current source evidence does not certify applicability, legal fulfillment, model attention or exhaustive review."
+  ],
+  "earlier_source_freeze_checkpoint": {
+    "independent_mechanics_tests": 112,
+    "backend_tests_root_reported": 4648
+  },
+  "post_freeze_fallback_guard": {
+    "new_model_calls": 0,
+    "missing_id_controls": 26,
+    "initial_independent_passes": 20,
+    "initial_independent_discrepancies": 6,
+    "final_expectation_matches": 26,
+    "negative_subject_status": "retained_unbound_not_inverted",
+    "declared_id_status": "explicit_current_statement_IDs_equal_declared_singleton",
+    "anonymous_status": "unique_exact_raw_criterion_own_rule_all_claims_located_direct_own_cited_subject_and_instrument",
+    "proof_origin": "exact_reported_criterion_status",
+    "actual_public_collections_exact_variant3_replay": 10,
+    "v1_default_unchanged": true,
+    "invalid_extra_claim_no_favorable_upgrade": true
+  },
+  "application_fallback_guard_audit": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/contract-prerequisite-reference-independent/missing-id-fallback-independent-addendum.md",
+  "post_anonymous_guard": {
+    "source_sha256": "bfa41df88c89ca246d300f3deb575e2cb20eb4a0c2b4b6c4437645e42b178b03",
+    "previous_4ffa_checkpoint_preserved": true,
+    "change": "same_status_sanitizer_reapplied_after_anonymous_supplementation",
+    "prior_current_fixture_outputs_exact": 50,
+    "own_focused_passes": 394,
+    "browser_parity_passes": 170,
+    "frontend_full_passes": 3360,
+    "independent_postrepair_control_count": 8,
+    "literal_expectation_matches": 6,
+    "conservative_record_gap_undercoverage": 2,
+    "unsafe_status_positives": 0,
+    "new_model_calls": 0,
+    "release_ci_final_count_status": "final_root_verified",
+    "known_gap_strict_xfails": 2,
+    "known_gap_unmarked_safety_checks": 2,
+    "backend_authored_known_reproduction_controls": 8,
+    "known_reproduction_comparison": "independently replayed old4ffa unsafe -> currentbfa withheld; not new independent gold or model outcome"
+  },
+  "earlier_fallback_guard_checkpoint": {
+    "independent_mechanics_tests": 138,
+    "backend_tests_root_reported": 4720
+  },
+  "independent_mechanics_strict_known_gap_xfails": 2,
+  "backend_strict_known_gap_xfails": 2,
+  "backend_existing_warnings": 1,
+  "application_post_anonymous_audit": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/contract-prerequisite-reference-independent/post-anonymous-resanitization-independent-addendum.md"
+}
