@@ -1,0 +1,106 @@
+{
+  "protocol": "delaylama-supplied-context-and-contract-scope-learning-v1",
+  "learning": "L171",
+  "date": "2026-10-07",
+  "application_report": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-07-qualification-contexts-and-contract-scope.md",
+  "training_or_weights_changed": false,
+  "heldout_accuracy_or_causal_or_speed_claim": false,
+  "evaluation_stage": "development",
+  "sources_previously_observed": true,
+  "observed_v4": {
+    "targets": 79,
+    "known": 76,
+    "unknown": 3,
+    "discovery_exact": 70,
+    "name_exact": 72,
+    "semantic_exact": 68,
+    "correct_qualified_known": 21,
+    "correct_unknown_withheld": 3,
+    "client_invocations_and_returns": 116,
+    "reported_tokens_counted_once": 366430,
+    "sdk_internal_retries_unobserved": true,
+    "client_invocations_are_not_wire_attempts": true,
+    "correct_known_withheld_for_missing_own_kind_name_quote": 44,
+    "qualified_wrong_operator_boundaries": 2,
+    "extras_require_adjudication": 165
+  },
+  "prior_v4_development": {
+    "semantic_exact": 67,
+    "correct_qualified_known": 11,
+    "reported_tokens": 332808
+  },
+  "counterfactual_not_model_rerun": {
+    "original_qualified_interpretations": 183,
+    "current_qualified_interpretations": 180,
+    "correct_qualified_known_unchanged": 21,
+    "raw_annotations_and_metrics_unchanged": true,
+    "incorrect_outside_operator_targets_newly_withheld": 2
+  },
+  "contract_identity": {
+    "same_original_and_intent_across_runs": true,
+    "run4_reported_tokens": 36335,
+    "run5_reported_tokens": 36686,
+    "run5_conditions_empty": true,
+    "run5_local_deadline_candidate": "2076-04-20",
+    "signature_and_operative_agreement_unestablished": true,
+    "retained_unsigned_reasoning_overclaim": true,
+    "run4_and_run5_content_capture_stage": "after_framework_normalization",
+    "earlier_provider_returns_not_reconstructed": true
+  },
+  "reasoning_source_rechecks": {
+    "retained_searches": 3,
+    "initial_raw_body_and_usage_unavailable": true,
+    "second_raw_chars": 1636,
+    "second_tokens_once": 2790,
+    "third_raw_chars": 1284,
+    "third_tokens_once": 2768,
+    "new_content_stage": "provider_return_before_framework_normalization",
+    "both_new_raw_whole_and_field_votes": "supports",
+    "current_validated_verdict": "insufficient",
+    "explicit_source_task_guidance_did_not_fix_support_vote": true,
+    "old_raw_source_and_extraction_unchanged": true
+  },
+  "safeguards": [
+    "explicit own/related source registry",
+    "independent canonical browser retrieval",
+    "null quotation list rejection",
+    "same-occurrence conditional and literal registered-name safeguards",
+    "signature gap and field applicability triage",
+    "known incomplete/unreadable source replies withheld with raw retained",
+    "phase-specific request/schema and original response capture",
+    "raw traces outside readable finding rows"
+  ],
+  "mechanics": {
+    "native_preview_graph_tables_unchanged": 7,
+    "no_type_apply_or_undo_this_increment": true
+  },
+  "evidence": {
+    "context-development-independent-audit.json": "ba8001891576991db6f54e5ffc0e6a873cf71604464fc78b0c2010e24f4015dc",
+    "contract-scope-run4-independent-audit.json": "af1dbe57b9938dae96439434bf3d528b7838919dfbaba1c96b12a21c5b2d6a44",
+    "contract-scope-run5-independent-audit.json": "b7cb4806ac4f2a8cc9f40641e8fc41663b93b5ded0b7629971e24b66b4bd71a2",
+    "contract-run5-reasoning-rechecks-independent-audit.json": "5811ea5e5ea3e11eb802553113bc10f8dc4d959bd0c39a4ac8a7ab90a936797a",
+    "signature-and-provider-capture-independent-final.json": "ddd7e8d37bd0dd0fc51b91a2c3b12d32227d2c89fbac6a539540156b689059ec"
+  },
+  "limits": [
+    "Originals are already observed development data, excluded from training/final held-out claims.",
+    "Three located premises in one response are not independent model judgments.",
+    "Quotation integrity does not establish subject association, role, operative applicability, truth or complete retrieval.",
+    "All44 missing own named-kind premises still require a separate tested subject-association design.",
+    "No new LayaGo or GLiNER training, MLX, architecture, calibration or performance benchmark."
+  ],
+  "final_engineering_checks": {
+    "backend_tests": 3456,
+    "frontend_tests": 2667,
+    "frontend_test_files": 154,
+    "production_build": "passed",
+    "existing_bundle_advisory": true,
+    "source_parity_cases": 215,
+    "semantic_parity_cases": 361,
+    "direct_boundary_controls": 151,
+    "mismatches": 0,
+    "owned_jobs_terminal": 120,
+    "primary_journal_snapshots_unchanged": 24,
+    "primary_user_graph_and_sources_preserved": true,
+    "owned_services_stopped": 3
+  }
+}
