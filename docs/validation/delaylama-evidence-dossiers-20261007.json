@@ -1,0 +1,37 @@
+{
+  "learning": "L175",
+  "application_report": "docs/validation/2026-10-07-graph-prompt-dossiers-and-input-coverage.md",
+  "changes": [
+    "lossless scoped graph evidence dossiers v2 with v1 compatibility",
+    "explicit one-original baseline picker",
+    "per-call document-agent-input-v1 actual windows",
+    "failed kind-stage views retained noncurrent",
+    "framework state-copy transport repaired"
+  ],
+  "validation": {
+    "backend_passed": 3838,
+    "frontend_passed": 2993,
+    "frontend_files": 177,
+    "independent_checks": 67,
+    "old_kind_reader_checks": 64,
+    "old_kind_reader_mismatches": 0
+  },
+  "observed": {
+    "compact_dossier_bytes": 6920899,
+    "pretty_export_bytes": 7555272,
+    "session_revision2_bytes": 6975923,
+    "successful_session_revision5_bytes": 7154344,
+    "live_section_calls": 5,
+    "source_chars": 979,
+    "supplied_unique_prefix_chars": 250,
+    "omitted_chars": 729,
+    "usage_reported_tokens_once": 32113
+  },
+  "limits": [
+    "earlier failed live attempt has no reconstructed call captures",
+    "no real large-history assistant request",
+    "no updated extraction-quality score",
+    "input coverage does not establish analysis completeness or instrument/role applicability",
+    "no new LayaGo training or acceleration"
+  ]
+}

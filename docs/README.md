@@ -125,3 +125,5 @@ Latest named-kind recovery learnings: [fresh own quotations, comparison identity
 Latest validation-performance learnings: [fresh invocation replay reuse and service/result isolation, 2026-10-07](validation/delaylama-replay-reuse-20261007.json), learning **L173**. Includes preserved benchmark-harness errors, exact frozen-output parity and truthful model health UX. Timings measure local source-proof processing; extraction scores and model training are unchanged.
 
 - [Exact citation selector development and prompt iteration](validation/delaylama-exact-kind-spans-20261007.json) — L174, including the retained weaker first draw and bounded-source review.
+
+- [Lossless evidence history and measured extraction input](validation/delaylama-evidence-dossiers-20261007.json) — L175, including the preserved failed framework attempt, actual input limits and remaining semantic gaps.
