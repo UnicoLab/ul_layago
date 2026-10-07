@@ -12,9 +12,10 @@ questions from Hive and DelayLama. Its evidence links distinguish implementation
 checks from model quality. Use the [experiment template](docs/experiments/TEMPLATE.md)
 to record new investigations and add their findings to the log.
 
-The latest [L156 finding](docs/learning-log.md#l156--make-reassessment-an-owned-recoverable-workflow-2026-10-06)
-records actionable reassessment, source-bound inputs, durable run recovery and
-separate execution, observation and result-refresh states.
+The latest [L168 finding](docs/learning-log.md#l168--blind-name-inventory-occurrence-association-and-reviewed-type-only-writes-2026-10-07)
+records source-only name discovery, exact occurrence association, retained failed
+model outputs and explicit type-only graph review. Its release receipt is a draft
+pending final validation and deployment; it makes no new training claim.
 
 ## Build and use
 

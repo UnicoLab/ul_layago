@@ -111,3 +111,5 @@ Latest scope-resolution learnings: [original cycles, bounded discovery and retai
 Latest original-source recall learnings: [bounded action discovery and retained primary failures, 2026-10-07](validation/delaylama-event-source-recall-20261007.json), learning **L166**. Includes all five development draws, the partial failure replay, exact citation context and remaining graph semantics.
 
 Latest entity-review learnings: [original-local identity, qualification guards and graph-label anchoring, 2026-10-07](validation/delaylama-graph-entity-identity-20261007.json), learning **L167**. Includes the retained conditional-name model failure and the proposed blind-inventory experiment; no new model training is claimed.
+
+Latest blind-inventory learnings: [source-only names, occurrence association and reviewed type-only writes, 2026-10-07](validation/delaylama-graph-entity-blind-inventory-20261007.json), learning **L168**. Draft pending final release validation/deployment; preserves the first H512 failure and separates raw interpretations from source qualification. No new model training or acceleration result.

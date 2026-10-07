@@ -1,0 +1,73 @@
+{
+  "protocol": "graph-entity-blind-inventory-development-validation-v1",
+  "status": "verified_engineering_increment_broader_goal_active",
+  "learning_id": "L168",
+  "date": "2026-10-07",
+  "source_release_report": {
+    "url": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-07-graph-entity-blind-inventory.md",
+    "status": "finalized"
+  },
+  "first_run": {
+    "fixture_id": "H512",
+    "source_qualified": 0,
+    "evaluated_cases": 30,
+    "independently_audited_exact_raw_nominations": 26,
+    "independently_audited_name_kind_boundary_interpretations": 22,
+    "calls": 10,
+    "original_run_preserved": true,
+    "representative_accuracy_claim": false,
+    "heldout_labels_used_in_prompts_or_training": false,
+    "counts_attribution": "Root release coordinator supplied retained independent first-run aggregates; this documentation pass did not inspect frozen expected labels."
+  },
+  "artifacts": [
+    {
+      "repository": "UnicoLab/delaylama",
+      "path": "docs/validation/assets/entity-blind-inventory-eval/first-run-independent-audit.json",
+      "sha256": "dd02b8ecd4bf15bebd34a2649a77b2a4d469b80ce16e97eca9e4f31d2f204b6d"
+    },
+    {
+      "repository": "UnicoLab/delaylama",
+      "path": "docs/validation/assets/entity-blind-inventory-eval/first-run-independent-audit.md",
+      "sha256": "524a09abe10f6cb2d8ba73917190cde78cd91dea8cb6613e36e66cdc86e1fa18"
+    },
+    {
+      "repository": "UnicoLab/delaylama",
+      "path": "docs/validation/2026-10-07-graph-entity-blind-inventory.json",
+      "sha256": "03b432299da9dbf1585eabcde1074656e800dd1a4c401321de8303e1e1823fe5"
+    }
+  ],
+  "implemented_safeguards": [
+    "Original-only opaque source slots; no graph label/type/alias/verdict in discovery prompt",
+    "Three same-occurrence name/kind/boundary quotes and exact condition operator coverage",
+    "Literal If/Si/Falls name counterevidence, overlapping nominations retained unresolved",
+    "Headed original paragraph chunks preserve all text and Unicode offsets",
+    "Raw claims replayed with strict source/capture/review metadata; graph association separately withheld for repeated labels",
+    "Explicit same-name type-only human review with sealed semantic preimage and native source/incident seals",
+    "Unknown transport outcomes separated from confirmed atomic rejection; no blind operation retry",
+    "Historical receipt explicitly not current-state proof"
+  ],
+  "scoped_backend_tests_passed": 213,
+  "full_backend_tests_passed": 2732,
+  "full_frontend_tests_passed": 1866,
+  "production_build_passed": true,
+  "final_browser_verification": true,
+  "deployment_verified": {
+    "primary_api_refreshed_and_healthy": true,
+    "primary_engine_replaced": false,
+    "atomic_capability_tested_on_owned_engine": true
+  },
+  "cleanup_verified": true,
+  "laya_training_or_weights_changed": false,
+  "mlx_or_architecture_changed": false,
+  "new_speed_or_accuracy_claim": false,
+  "automatic_graph_mutations": false,
+  "remaining_limits": [
+    "Structured model support and located quotes do not certify semantic interpretation",
+    "Zero-qualified first H512 run retained; no repaired result substituted",
+    "Selected-node association and broader graph semantic correctness remain separate tasks",
+    "Paragraph partition does not establish dispersed applicability or completeness",
+    "Primary engine remains protected; the new atomic capability requires a binary built with the maintained review patch. Wider semantic extraction, source-context output reliability and long-source discovery remain open."
+  ],
+  "final_focused_frontend_tests_passed": 90,
+  "browser_parity_mismatches": 0
+}
