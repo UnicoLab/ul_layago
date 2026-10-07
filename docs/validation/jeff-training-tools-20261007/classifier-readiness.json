@@ -1,0 +1,41 @@
+{
+  "contract": "ul.layago-calibration-plan/v1",
+  "alpha": 0.05,
+  "delta": 0.1,
+  "score_family_delta": 0.05,
+  "certification_start": 176,
+  "certification_start_lower_bound": false,
+  "dev_cal": {
+    "examples": 118,
+    "stories": 59,
+    "by_task": {
+      "r_contract_agreement_type": 52,
+      "r_contract_clause_topic": 66
+    },
+    "stories_by_task": {
+      "r_contract_agreement_type": 26,
+      "r_contract_clause_topic": 33
+    }
+  },
+  "dev_conf": {
+    "examples": 122,
+    "stories": 61,
+    "by_task": {
+      "r_contract_agreement_type": 60,
+      "r_contract_clause_topic": 62
+    },
+    "stories_by_task": {
+      "r_contract_agreement_type": 30,
+      "r_contract_clause_topic": 31
+    }
+  },
+  "warnings": [
+    "r_contract_agreement_type: 60 dev_conf rows below certification start 176; sample size cannot certify automatic decisions.",
+    "r_contract_agreement_type: 60 dev_conf rows share 30 stories; correlation requires an independently justified certification design.",
+    "r_contract_clause_topic: 62 dev_conf rows below certification start 176; sample size cannot certify automatic decisions.",
+    "r_contract_clause_topic: 62 dev_conf rows share 31 stories; correlation requires an independently justified certification design.",
+    "Metadata counts do not prove label quality, token retention, independence, calibration or domain validity. Do not lower risk targets to make an undersized dataset pass."
+  ],
+  "token_retention_checked": false,
+  "requires_domain_validation": true
+}

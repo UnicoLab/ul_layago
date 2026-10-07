@@ -1,0 +1,71 @@
+{
+  "contract": "ul.layago-jeff-data-tools-release/v1",
+  "date": "2026-10-07\u201308",
+  "scope": "Data-tool mechanics and metadata readiness; no model training, benchmark gain or deployment",
+  "checks": {
+    "normal_go_packages_passed": 13,
+    "purego_packages_passed": 13,
+    "race_packages_passed": 13,
+    "vet": "passed",
+    "cgo_free_builds": 2,
+    "python_tests_passed": 64,
+    "independent_controls_passed": 31,
+    "fresh_preparation_rows": 43,
+    "fresh_native_dataset_validation": "passed"
+  },
+  "source_sha256": {
+    "cmd/laya-train/main.go": "568d6c5ac3f1ca4649929e03bb375b99d488c08cb8d17d64b090ba24ae13628e",
+    "cmd/laya-train/main_test.go": "c437858d63a7debf35db779a4915bff9eff4ac768ae5bec929ee1b35d9fcd220",
+    "train/readiness.go": "b15f8f878c1c44cb90b139c5cfe96fcf8740283c08f9b714ade061e3eb4fe9dc",
+    "train/readiness_test.go": "8013847906050f6d686c16eae0438c4c7c9a217e1e5911ccb5f9cb3e4ecce78f",
+    "train/calibration_overlap.go": "b9cb36d7d207a4d368ecea0c84d02fe800f1c3c830e4b2550123270a5afee396",
+    "train/calibration_overlap_test.go": "ba878ba312c733f981b29032a68f7ac819db5ac4804a4f77a5daa5a96f26deb4",
+    "train/seqreport.go": "b6e6992f16f8f4f04d0872310bf53d02f39aca53c07ea4dc803c6cc78a350c2d",
+    "scripts/audit_training_data.py": "c628c531f9d2535470742192b4190341e79396e7cc82c7ac601e2aa3dc19d57a",
+    "scripts/test_audit_training_data.py": "7a2eb9f1c6c7cfdc543801feab15abe16cbe623b9d9106d298e7c6fadfe7bd90",
+    "scripts/prepare_training_data.py": "10869ce540bfe3eb16dd439440e88b93640c7b66b3d4d773c9936536661c2469",
+    "scripts/test_prepare_training_data.py": "b0bbf5c3b6ef46e0414f275c6b94669064dc23ad3de0459db3169d9954b3a250"
+  },
+  "binaries_sha256": {
+    "bin/layago": "038290186c0ff7585d389e68629cc46bec15b4312c9dff02dd79b8caf1261f1e",
+    "bin/laya-train": "5ecaa7d57b78f98fefa3742de34ad3d89b944c6c137254ef6b695f7270bb6780"
+  },
+  "retained_assets_sha256": {
+    "README.md": "88f5af5b7695a28720601c787ef36d41c2ac51a470b124b8a34e968fef6eb205",
+    "build.log": "cc5557e9752c46e7382685d282e3050a101a097b20ea6b053aace702c17c174f",
+    "classifier-readiness.json": "3c0ea69c342cf7a168dfe9878e79487f6997e6c6c854ab38da7b825be5d4daa2",
+    "copied-calibration-blocked.log": "d8e3215d77e7630c02adb9aead8d18e4bde666b6499203539dd476ea88f35eae",
+    "independent-access-10.log": "f2d8b62f8fbd9ad9c03d85b3acf27ddf011891b4d05a4ff23ad1df09835f274a",
+    "independent-controls-21.log": "146f6b98cea6d9b619d9f999ab3581378054d829e231c7859a5b3c6cad1c78a4",
+    "package-check-concurrent-failure.log": "9caf879872ee26b84a16894e5eb7eed8d6ef8a7b4591cf3aa7dafd1d3b461dca",
+    "package-check.log": "c216326262cb4be840d0adb26c393720e0bbb7641392520b8999ca6df5b2f5ac",
+    "pilot-audit.json": "5ebe791c26da394114387822c6558f8e995b053a94c96639b442faaaa5233c6d",
+    "pilot-audit.md": "27c82c189217f72b21e1ac9b05108e64089f4175963bab95fa7c48c8cc192914",
+    "preparation-smoke-final.json": "f6ca8e7eb1565f4c880eef238b20c7bacf8a47084421306f22d0ebe1b3d01c16",
+    "preparation-smoke.json": "d28f945d78325c4457f31c7bd305a89eb41783bc9e8ff9e5f7af6fef965290fc",
+    "prepared-go-validation-final.json": "625452fd0c83bc3c5677bcb57bad058f47f5a0fef0860c7eac62436e7d61a6fd",
+    "prepared-go-validation.json": "1d032d9b72eb5f46331e7ae22805945297e8edb270e1ae5937abd61b549693e7",
+    "protected-access-final.jsonl": "67139bf7e8bd97427bc2862a2d3c00f2557fc55c8353a37fc60083de1595f960",
+    "race.log": "34d5d5d1b5c24a8c91735cd4539a1981bfe5d3a65c4f5ac0bfac39c67f78ff91",
+    "source-freeze.json": "ec9718b2a5f7abc825f1b386c4c11ca10664103edf0fe4bd14d0151adf5bf2c0"
+  },
+  "findings": {
+    "pilot_exact_source_copy_pairs": 14,
+    "pilot_rendered_copy_pairs": 14,
+    "pilot_bounded_near_copy_findings": 2,
+    "native_affected_dev_conf_rows": 16,
+    "actual_default_two_score_start": 176,
+    "training_promotion": false
+  },
+  "prior_failures_retained": [
+    "package-check-concurrent-failure.log",
+    "initial unlogged preparation smoke",
+    "independent initial diagnostic omissions/draft import failure/expectation correction"
+  ],
+  "qualifications": [
+    "CLI default skips logical locked source after envelope decoding, not byte secrecy",
+    "Explicit preparation logs authorize source protection, not fitting/evaluation",
+    "Current shuffled catalogs require explicit serving options before DelayLama deployment",
+    "No public datasets downloaded; no new model trained or accuracy claimed"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "contract": "hive.laya-dataset/v1",
+  "examples": 12,
+  "files": [
+    {
+      "name": "permuted-fixture-final.jsonl",
+      "sha256": "69cb49ecf40edb2712456546036b0df829a9d02655e93ba40b61b06b70db3f81",
+      "examples": 43
+    }
+  ],
+  "instance": "R",
+  "valid": true
+}

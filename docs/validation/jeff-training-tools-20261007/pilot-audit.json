@@ -1,0 +1,745 @@
+{
+  "protocol": "layago-training-data-audit-v1",
+  "dataset_contract": "hive.laya-dataset/v1",
+  "status": "blocked",
+  "blocking_findings": {
+    "exact_source_copy": 14,
+    "exact_rendered_state_copy": 14
+  },
+  "valid_rows": 525,
+  "invalid_rows": 0,
+  "locked_test": {
+    "access": "sealed_skipped",
+    "skipped_rows": 90,
+    "input_or_gold_transformed": false,
+    "byte_level_secrecy": false
+  },
+  "counts": {
+    "split": {
+      "dev": 240,
+      "heldout_language": 45,
+      "train": 240
+    },
+    "lang": {
+      "en": 240,
+      "es": 45,
+      "fr": 240
+    },
+    "domain_id": {
+      "contract_classifier_synthetic": 525
+    },
+    "task": {
+      "r_contract_agreement_type": 245,
+      "r_contract_clause_topic": 280
+    },
+    "label_source": {
+      "template": 525
+    },
+    "generator_version": {
+      "delaylama-classifier/1": 525
+    },
+    "role": {
+      "dev_cal": 118,
+      "dev_conf": 122,
+      "heldout_language": 45,
+      "train": 240
+    },
+    "task_labels": {
+      "r_contract_agreement_type": {
+        "construction": 35,
+        "framework": 35,
+        "lease": 35,
+        "mixed": 35,
+        "services": 35,
+        "supply": 35,
+        "unknown": 35
+      },
+      "r_contract_clause_topic": {
+        "authorization_and_prerequisite": 35,
+        "confidentiality_ip_data": 35,
+        "liability_warranty_insurance": 35,
+        "mixed_or_unclear": 35,
+        "parties_and_scope": 35,
+        "price_and_payment": 35,
+        "termination_and_disputes": 35,
+        "time_and_delivery": 35
+      }
+    }
+  },
+  "findings": {
+    "counts": {
+      "exact_rendered_state_copy": 14,
+      "exact_source_copy": 14,
+      "near_source_copy": 2
+    },
+    "items": [
+      {
+        "kind": "exact_source_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-parties_and_scope-0-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-parties_and_scope-6-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "fa43043b61ae896d04f44054df6c4ebede77d8ec872a576e181855764ac17c07"
+      },
+      {
+        "kind": "exact_rendered_state_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-parties_and_scope-0-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-parties_and_scope-6-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "ece1003e6327d7835b683987803945001726181b12673df05ab1e779c09e62d7"
+      },
+      {
+        "kind": "exact_source_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-parties_and_scope-0-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-parties_and_scope-6-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "de16101288c9e9310f66f88bca84e5d7863a32a1ed1891a9907cb812b5684d71"
+      },
+      {
+        "kind": "exact_rendered_state_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-parties_and_scope-0-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-parties_and_scope-6-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "fee2b05d784239042059312246fc67bbbd4d243d9d71f53c076f1bc67afe18b4"
+      },
+      {
+        "kind": "exact_source_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-2-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-5-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "sha256": "ccb20980cd50bc72c5d2e10ef53101c4f0b3fb58e6dc0c72ead47fabd3565c61"
+      },
+      {
+        "kind": "exact_rendered_state_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-2-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-5-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "sha256": "25edd089e17424bd715d9eb496eb4d200551274f7843a43f8218bfeaaac6b701"
+      },
+      {
+        "kind": "exact_source_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-2-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-5-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "sha256": "5022bff599fa0c3e96ef8318076317012c01128104862fa0dadfac3d095fe7e0"
+      },
+      {
+        "kind": "exact_rendered_state_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-2-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-5-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "sha256": "b1de6cbbdc43e407f00aa3dec73125c4c0055b510b4a4d6ba281e9f68a68016d"
+      },
+      {
+        "kind": "exact_source_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-4-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-7-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "sha256": "e792f092ee3e391a2d3cd21fc1403c9fa9029839bcd6e8dc3509afb9d1bdf68b"
+      },
+      {
+        "kind": "exact_rendered_state_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-4-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-7-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "sha256": "a19ecabf6edee714f961c9217a515498628e9706737cabeddd45058e3fff90fc"
+      },
+      {
+        "kind": "exact_source_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-4-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-7-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "sha256": "c9571392a210ad5f6e4602546f7bc95f25e4ad96494c23274df04ab60061af54"
+      },
+      {
+        "kind": "exact_rendered_state_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-4-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-price_and_payment-7-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "sha256": "0cb97b89e0d2995b65d95434825ac31de9d9c892d16a0ee44c37c5909aa4d324"
+      },
+      {
+        "kind": "exact_source_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-authorization_and_prerequisite-3-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-authorization_and_prerequisite-6-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "de4c70f171a6a0d8a1646cff5d6a333d30880ec9e47b49a66fc9fcbe1c2a690b"
+      },
+      {
+        "kind": "exact_rendered_state_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-authorization_and_prerequisite-3-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-authorization_and_prerequisite-6-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "35b727104ba2ab3e0f5d1041e2f83c63f0acde2df8a3ddd8fa40e03468481095"
+      },
+      {
+        "kind": "exact_source_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-authorization_and_prerequisite-3-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-authorization_and_prerequisite-6-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "99afaea4524793582915793fc97538a936571e87ffc4d4aff8498bc7528f9f21"
+      },
+      {
+        "kind": "exact_rendered_state_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-authorization_and_prerequisite-3-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-authorization_and_prerequisite-6-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "03dd386ea3c155ffcab839084cfd050b81e47262a80b332b4a1131c0e4e39cf7"
+      },
+      {
+        "kind": "exact_source_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-1-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-4-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "46f985fce75f0c0afa623a6c42b24f87be947a90d6769fadf9f44d43f52594ff"
+      },
+      {
+        "kind": "exact_rendered_state_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-1-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-4-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "1de22ac558a2cf8fe0d09a649d4f48f5f708ef543254030f77c29eacc8c0c92b"
+      },
+      {
+        "kind": "exact_source_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-1-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-4-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "010df9f02b3d57b45c1ebbacff8a1a16bb17c16393fcfe10caa59b86661c9e1d"
+      },
+      {
+        "kind": "exact_rendered_state_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-1-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-4-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "1e6a5bcf4a5f881c640ffb2096e9fc356383b4c5efffd04a1746346565562758"
+      },
+      {
+        "kind": "exact_source_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-3-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-6-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "e56f9eaac43d88bddd6c41400c7aeacfe06790ae343eb5f3d4d04b4a3e954812"
+      },
+      {
+        "kind": "exact_rendered_state_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-3-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-6-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "6b021f2a1ccaf2e7f3b2db64ae36aed1d54da6095c0825338bbf672d5e2e8654"
+      },
+      {
+        "kind": "exact_source_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-3-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-6-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "e4f897cccf54e29eaaee281c4a96bf0df554e54d332211f30d315096f35026cf"
+      },
+      {
+        "kind": "exact_rendered_state_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-3-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-liability_warranty_insurance-6-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "0c667a220292d4d5e952c0c13417ab3f36d4d058b4de418fecdb9da004fbab40"
+      },
+      {
+        "kind": "exact_source_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-termination_and_disputes-0-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-termination_and_disputes-3-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "5260d54aac849a98ba3a73b92372f2da0a2a4e7975d2d6e58b94cad3a60eb92f"
+      },
+      {
+        "kind": "exact_rendered_state_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-termination_and_disputes-0-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-termination_and_disputes-3-en",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "e0efa651fa249035ae9790f676b29f44ae1c39084532bb7b677d5ff9b905ffd7"
+      },
+      {
+        "kind": "exact_source_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-termination_and_disputes-0-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-termination_and_disputes-3-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "157aa27ee1639761d40a13cc2a1ff2ebcea1aa33dbea1272b6291867b0fcac19"
+      },
+      {
+        "kind": "exact_rendered_state_copy",
+        "left": {
+          "id": "r_contract_clause_topic-dev-termination_and_disputes-0-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "right": {
+          "id": "r_contract_clause_topic-dev-termination_and_disputes-3-fr",
+          "task": "r_contract_clause_topic",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "sha256": "6151f9065d8eea7f0e371d5b16aad61657b06b73af324ca05b89d7f1c141797d"
+      },
+      {
+        "kind": "near_source_copy",
+        "left": {
+          "id": "r_contract_agreement_type-dev-mixed-0-en",
+          "task": "r_contract_agreement_type",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "right": {
+          "id": "r_contract_agreement_type-dev-mixed-7-en",
+          "task": "r_contract_agreement_type",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "sampled_jaccard": 0.956522
+      },
+      {
+        "kind": "near_source_copy",
+        "left": {
+          "id": "r_contract_agreement_type-dev-mixed-0-fr",
+          "task": "r_contract_agreement_type",
+          "split": "dev",
+          "role": "dev_conf"
+        },
+        "right": {
+          "id": "r_contract_agreement_type-dev-mixed-7-fr",
+          "task": "r_contract_agreement_type",
+          "split": "dev",
+          "role": "dev_cal"
+        },
+        "sampled_jaccard": 0.961538
+      }
+    ],
+    "retained": 30,
+    "omitted": 0
+  },
+  "near_copy": {
+    "config": {
+      "min_words": 20,
+      "max_words": 20000,
+      "max_shingles": 256,
+      "anchors": 8,
+      "max_posting": 128,
+      "max_comparisons": 20000,
+      "max_parts": 2000,
+      "threshold": 0.85
+    },
+    "comparisons": 1122,
+    "sampled_parts": 0,
+    "skipped": {
+      "short_exact_only": 301
+    },
+    "coverage": "heuristic_bounded_not_exhaustive"
+  },
+  "metadata_shortcuts": [],
+  "surface_probe": {
+    "status": "evaluated",
+    "fit_split": "train",
+    "evaluation_role": "dev_conf",
+    "method": "train_standardized_nearest_label_position_centroid",
+    "features": [
+      "source_length",
+      "word_count",
+      "line_count",
+      "digit_fraction",
+      "option_count",
+      "first_eight_ordered_option_lengths"
+    ],
+    "evaluation_budget": 5000,
+    "evaluation_rows_omitted": 0,
+    "task_budget": 128,
+    "tasks_omitted": 0,
+    "interpretation": "Surface shortcut diagnostic only, not model quality, calibration or certification; dev reuse can bias later decisions.",
+    "tasks": [
+      {
+        "task": "r_contract_agreement_type",
+        "status": "evaluated",
+        "train": 112,
+        "evaluation": 60,
+        "correct": 15,
+        "accuracy": 0.25,
+        "train_majority_accuracy": 0.16666666666666666,
+        "target": "option_index",
+        "shortcut_warning": false,
+        "training_label_positions": {
+          "0": 16,
+          "1": 16,
+          "2": 16,
+          "3": 16,
+          "4": 16,
+          "5": 16,
+          "6": 16
+        },
+        "train_feature_means": [
+          4.979417710881519,
+          3.187402670397194,
+          0.0,
+          0.013235548283305183,
+          7.0,
+          3.091042453358316,
+          2.94443897916644,
+          2.833213344056216,
+          1.791759469228055,
+          2.995732273553991,
+          3.58351893845611,
+          3.4339872044851463
+        ],
+        "train_feature_scales": [
+          0.17414867159320496,
+          0.16568028409191363,
+          1e-09,
+          0.014013073442771534,
+          1e-09,
+          1e-09,
+          1e-09,
+          1e-09,
+          1e-09,
+          1e-09,
+          1e-09,
+          1e-09
+        ]
+      },
+      {
+        "task": "r_contract_clause_topic",
+        "status": "evaluated",
+        "train": 128,
+        "evaluation": 62,
+        "correct": 4,
+        "accuracy": 0.06451612903225806,
+        "train_majority_accuracy": 0.12903225806451613,
+        "target": "option_index",
+        "shortcut_warning": false,
+        "training_label_positions": {
+          "0": 16,
+          "1": 16,
+          "2": 16,
+          "3": 16,
+          "4": 16,
+          "5": 16,
+          "6": 16,
+          "7": 16
+        },
+        "train_feature_means": [
+          4.500653957080171,
+          2.69505477878605,
+          0.0,
+          0.020372764293087698,
+          8.0,
+          2.8903717578961645,
+          2.8903717578961645,
+          2.8903717578961645,
+          3.4657359027997265,
+          3.58351893845611,
+          3.2188758248682006,
+          3.871201010907891,
+          2.833213344056216
+        ],
+        "train_feature_scales": [
+          0.14878145983268462,
+          0.1328404862995982,
+          1e-09,
+          0.02537690523864632,
+          1e-09,
+          1e-09,
+          1e-09,
+          1e-09,
+          1e-09,
+          1e-09,
+          1e-09,
+          1e-09,
+          1e-09
+        ]
+      }
+    ]
+  },
+  "calibration_readiness": {
+    "alpha": 0.05,
+    "delta_family": 0.1,
+    "score_delta": 0.05,
+    "n_min": 20,
+    "start_errors": 0,
+    "tasks": [
+      {
+        "task": "r_contract_agreement_type",
+        "dev_cal": 52,
+        "dev_conf": 60,
+        "dev_cal_unique_stories": 26,
+        "dev_conf_unique_stories": 30,
+        "configured_start": 176,
+        "shortfall": 116,
+        "certified": false
+      },
+      {
+        "task": "r_contract_clause_topic",
+        "dev_cal": 66,
+        "dev_conf": 62,
+        "dev_cal_unique_stories": 33,
+        "dev_conf_unique_stories": 31,
+        "configured_start": 176,
+        "shortfall": 114,
+        "certified": false
+      }
+    ],
+    "meaning": "count lower bound only; no threshold certification or model metrics",
+    "row_correlation_warning": "Several paraphrases/translations from one story are correlated; example counts do not establish independent acted items or domain validity."
+  },
+  "limitations": [
+    "Default locked rows are envelope-decoded then discarded; never rendered or used for audits/labels/metrics.",
+    "Locked split isolation/duplicates are unexamined while sealed; group isolation covers only explicit id/story_id/group_id/meta family identifiers.",
+    "Source duplication excludes fixed options/catalog/question instructions; complete rendered-state equality remains separately checked.",
+    "Near-copy work is capped and sampled; no claim of exhaustive leakage detection.",
+    "No source text is emitted; identifiers/digests/counts may still be sensitive.",
+    "Preflight does not certify dataset correctness, model quality, domain validation or local routing certainty."
+  ],
+  "files": [
+    {
+      "name": "dataset.jsonl",
+      "sha256": "a2107767b1c0826966b7358326a5b9e327a4745a9b74bbfc99682799685acb13",
+      "rows": 615
+    }
+  ]
+}

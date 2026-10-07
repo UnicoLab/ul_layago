@@ -34,10 +34,10 @@ func main() {
 
 func run(ctx context.Context, args []string, output io.Writer) error {
 	if len(args) == 0 {
-		return errors.New("usage: laya-train validate|inspect|train|evaluate --dataset FILE [flags]")
+		return errors.New("usage: laya-train validate|readiness|inspect|train|evaluate --dataset FILE [flags]")
 	}
 	action := args[0]
-	if action != "validate" && action != "inspect" && action != "train" && action != "evaluate" {
+	if action != "validate" && action != "readiness" && action != "inspect" && action != "train" && action != "evaluate" {
 		return fmt.Errorf("unknown action %q", action)
 	}
 	fs := flag.NewFlagSet(action, flag.ContinueOnError)
@@ -84,6 +84,16 @@ func run(ctx context.Context, args []string, output io.Writer) error {
 	}
 	if *backend == "mlx" && (action != "train" || *mlxScript == "" || *mlxLimit <= 0) {
 		return errors.New("mlx requires train, mlx-script and a positive mlx-memory-limit")
+	}
+	cfg := train.DefaultConfig()
+	cfg.Int8 = false
+	if *configFile != "" {
+		if err := readJSON(*configFile, &cfg); err != nil {
+			return err
+		}
+	}
+	if err := cfg.Validate(); err != nil {
+		return err
 	}
 	previousLimit := debug.SetMemoryLimit(*memoryLimit)
 	defer debug.SetMemoryLimit(previousLimit)
@@ -137,6 +147,27 @@ func run(ctx context.Context, args []string, output io.Writer) error {
 	if action == "validate" {
 		return encode(map[string]any{"contract": train.DatasetContract, "valid": true, "examples": len(ds.Examples), "instance": ds.Instance, "files": ds.Files})
 	}
+	if action == "readiness" {
+		plan, err := train.PlanCalibration(ds, cfg)
+		if err != nil {
+			return err
+		}
+		return encode(plan)
+	}
+	if action == "train" {
+		overlaps, err := train.CalibrationOverlap(ds)
+		if err != nil {
+			return err
+		}
+		if len(overlaps) > 0 {
+			return fmt.Errorf("train: copied development inputs cross dev_cal/dev_conf: %v; repair source-family grouping before encoding", overlaps)
+		}
+		plan, err := train.PlanCalibration(ds, cfg)
+		if err != nil {
+			return err
+		}
+		fmt.Fprintf(os.Stderr, "calibration_preflight certification_start=%d dev_cal=%d dev_conf=%d warnings=%d; counts do not establish independence or model quality\n", plan.CertificationStart, plan.DevCal.Examples, plan.DevConf.Examples, len(plan.Warnings))
+	}
 	if *instance == "" || *base == "" {
 		return errors.New("instance and base are required")
 	}
@@ -179,6 +210,11 @@ func run(ctx context.Context, args []string, output io.Writer) error {
 		return err
 	}
 	if action == "inspect" {
+		plan, err := train.PlanCalibration(ds, cfg)
+		if err != nil {
+			return err
+		}
+		sequence.CalibrationPlan = plan
 		return encode(sequence)
 	}
 	if loaded != nil {
@@ -232,13 +268,6 @@ func run(ctx context.Context, args []string, output io.Writer) error {
 			rows[i] = item.Row
 		}
 		return encode(map[string]any{"metrics": train.Evaluate(rows), "sequence_report": sequence, "requires_domain_validation": true})
-	}
-	cfg := train.DefaultConfig()
-	cfg.Int8 = false
-	if *configFile != "" {
-		if err := readJSON(*configFile, &cfg); err != nil {
-			return err
-		}
 	}
 	if *initArtifact != "" {
 		init, err := train.LoadArtifact(*initArtifact)

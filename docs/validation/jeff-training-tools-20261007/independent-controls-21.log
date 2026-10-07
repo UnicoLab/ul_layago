@@ -1,0 +1,26 @@
+test_changed_labels_source_copy (__main__.Independent.test_changed_labels_source_copy) ... ok
+test_changed_question_and_evidence_id (__main__.Independent.test_changed_question_and_evidence_id) ... ok
+test_choice_permutation_soft_by_key (__main__.Independent.test_choice_permutation_soft_by_key) ... ok
+test_cli_byte_prefix_and_no_overwrite (__main__.Independent.test_cli_byte_prefix_and_no_overwrite) ... ok
+test_cli_locked_logical_skip (__main__.Independent.test_cli_locked_logical_skip) ... ok
+test_conflicting_hard_labels_separate_diagnostic (__main__.Independent.test_conflicting_hard_labels_separate_diagnostic) ... ok
+test_cross_split_family (__main__.Independent.test_cross_split_family) ... ok
+test_different_question_not_label_conflict (__main__.Independent.test_different_question_not_label_conflict) ... ok
+test_duplicate_id (__main__.Independent.test_duplicate_id) ... ok
+test_fixed_descriptions_not_source (__main__.Independent.test_fixed_descriptions_not_source) ... ok
+test_length_shortcut (__main__.Independent.test_length_shortcut) ... ok
+test_locked_invalid_logical_input (__main__.Independent.test_locked_invalid_logical_input) ... ok
+test_locked_poison_branch (__main__.Independent.test_locked_poison_branch) ... ok
+test_minimum_is176_not135 (__main__.Independent.test_minimum_is176_not135) ... ok
+test_ordinal_unchanged (__main__.Independent.test_ordinal_unchanged) ... ok
+test_replay_adjudication_stale_and_foreign (__main__.Independent.test_replay_adjudication_stale_and_foreign) ... ok
+test_replay_positive_budget_branch (__main__.Independent.test_replay_positive_budget_branch) ... ok
+test_replay_protected_cases (__main__.Independent.test_replay_protected_cases) ... ok
+test_same_split_story (__main__.Independent.test_same_split_story) ... ok
+test_short_copy (__main__.Independent.test_short_copy) ... ok
+test_shortcut_status_requires_review (__main__.Independent.test_shortcut_status_requires_review) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.212s
+
+OK

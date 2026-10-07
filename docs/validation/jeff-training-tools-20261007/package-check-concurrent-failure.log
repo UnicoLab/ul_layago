@@ -1,0 +1,133 @@
+go test ./...
+ok  	github.com/UnicoLab/ul_layago	0.441s
+ok  	github.com/UnicoLab/ul_layago/cmd/laya-train	(cached)
+ok  	github.com/UnicoLab/ul_layago/cmd/layago	(cached)
+ok  	github.com/UnicoLab/ul_layago/evalreport	(cached)
+ok  	github.com/UnicoLab/ul_layago/internal/cli	(cached)
+ok  	github.com/UnicoLab/ul_layago/internal/progress	(cached)
+ok  	github.com/UnicoLab/ul_layago/laya	(cached)
+ok  	github.com/UnicoLab/ul_layago/model	(cached)
+ok  	github.com/UnicoLab/ul_layago/safetensors	(cached)
+ok  	github.com/UnicoLab/ul_layago/tensor	(cached)
+ok  	github.com/UnicoLab/ul_layago/tensor/asmgen	(cached)
+ok  	github.com/UnicoLab/ul_layago/tokenizer	(cached)
+ok  	github.com/UnicoLab/ul_layago/train	(cached)
+go test -tags purego ./...
+ok  	github.com/UnicoLab/ul_layago	0.414s
+ok  	github.com/UnicoLab/ul_layago/cmd/laya-train	(cached)
+ok  	github.com/UnicoLab/ul_layago/cmd/layago	(cached)
+ok  	github.com/UnicoLab/ul_layago/evalreport	(cached)
+ok  	github.com/UnicoLab/ul_layago/internal/cli	(cached)
+ok  	github.com/UnicoLab/ul_layago/internal/progress	(cached)
+ok  	github.com/UnicoLab/ul_layago/laya	(cached)
+ok  	github.com/UnicoLab/ul_layago/model	(cached)
+ok  	github.com/UnicoLab/ul_layago/safetensors	(cached)
+ok  	github.com/UnicoLab/ul_layago/tensor	(cached)
+ok  	github.com/UnicoLab/ul_layago/tensor/asmgen	(cached)
+ok  	github.com/UnicoLab/ul_layago/tokenizer	(cached)
+ok  	github.com/UnicoLab/ul_layago/train	(cached)
+go vet ./...
+python3 -m unittest discover -s scripts -p 'test_*.py'
+.................usage: python3.14 -m unittest [-h] --json-out JSON_OUT
+                              --markdown-out MARKDOWN_OUT [--catalog CATALOG]
+                              [--surface-eval {dev,dev_conf}]
+                              [--unseal-locked] [--access-log ACCESS_LOG]
+                              [--alpha ALPHA] [--delta DELTA] [--n-min N_MIN]
+                              [--start-errors START_ERRORS]
+                              paths [paths ...]
+python3.14 -m unittest: error: outputs must be distinct from input
+usage: python3.14 -m unittest [-h] --json-out JSON_OUT
+                              --markdown-out MARKDOWN_OUT [--catalog CATALOG]
+                              [--surface-eval {dev,dev_conf}]
+                              [--unseal-locked] [--access-log ACCESS_LOG]
+                              [--alpha ALPHA] [--delta DELTA] [--n-min N_MIN]
+                              [--start-errors START_ERRORS]
+                              paths [paths ...]
+python3.14 -m unittest: error: refusing to replace an existing report
+........FFFF.....F.......E.................
+======================================================================
+ERROR: test_score_boolean_and_every_protected_split_remain_untouched (test_prepare_training_data.PreparationTests.test_score_boolean_and_every_protected_split_remain_untouched)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/piotrlaczkowski/Desktop/PROJECT/UnicoLab/Repositories/ul_layago/scripts/test_prepare_training_data.py", line 84, in test_score_boolean_and_every_protected_split_remain_untouched
+    result, report = prepare(originals, seed=44, permutations=3)
+                     ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/piotrlaczkowski/Desktop/PROJECT/UnicoLab/Repositories/ul_layago/scripts/prepare_training_data.py", line 471, in prepare
+    raise ValueError("locked_test processing requires an explicit protected_access_log")
+ValueError: locked_test processing requires an explicit protected_access_log
+
+======================================================================
+FAIL: test_all_supplied_replay_rejected_if_protected_even_outside_budget (test_prepare_training_data.PreparationTests.test_all_supplied_replay_rejected_if_protected_even_outside_budget) (split='dev')
+----------------------------------------------------------------------
+ValueError: locked_test processing requires an explicit protected_access_log
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/piotrlaczkowski/Desktop/PROJECT/UnicoLab/Repositories/ul_layago/scripts/test_prepare_training_data.py", line 178, in test_all_supplied_replay_rejected_if_protected_even_outside_budget
+    with self.subTest(split=split), self.assertRaisesRegex(ValueError, "only.*train"):
+                                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "only.*train" does not match "locked_test processing requires an explicit protected_access_log"
+
+======================================================================
+FAIL: test_all_supplied_replay_rejected_if_protected_even_outside_budget (test_prepare_training_data.PreparationTests.test_all_supplied_replay_rejected_if_protected_even_outside_budget) (split='locked_test')
+----------------------------------------------------------------------
+ValueError: locked_test processing requires an explicit protected_access_log
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/piotrlaczkowski/Desktop/PROJECT/UnicoLab/Repositories/ul_layago/scripts/test_prepare_training_data.py", line 178, in test_all_supplied_replay_rejected_if_protected_even_outside_budget
+    with self.subTest(split=split), self.assertRaisesRegex(ValueError, "only.*train"):
+                                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "only.*train" does not match "locked_test processing requires an explicit protected_access_log"
+
+======================================================================
+FAIL: test_all_supplied_replay_rejected_if_protected_even_outside_budget (test_prepare_training_data.PreparationTests.test_all_supplied_replay_rejected_if_protected_even_outside_budget) (split='heldout_domain')
+----------------------------------------------------------------------
+ValueError: locked_test processing requires an explicit protected_access_log
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/piotrlaczkowski/Desktop/PROJECT/UnicoLab/Repositories/ul_layago/scripts/test_prepare_training_data.py", line 178, in test_all_supplied_replay_rejected_if_protected_even_outside_budget
+    with self.subTest(split=split), self.assertRaisesRegex(ValueError, "only.*train"):
+                                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "only.*train" does not match "locked_test processing requires an explicit protected_access_log"
+
+======================================================================
+FAIL: test_all_supplied_replay_rejected_if_protected_even_outside_budget (test_prepare_training_data.PreparationTests.test_all_supplied_replay_rejected_if_protected_even_outside_budget) (split='heldout_language')
+----------------------------------------------------------------------
+ValueError: locked_test processing requires an explicit protected_access_log
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/piotrlaczkowski/Desktop/PROJECT/UnicoLab/Repositories/ul_layago/scripts/test_prepare_training_data.py", line 178, in test_all_supplied_replay_rejected_if_protected_even_outside_budget
+    with self.subTest(split=split), self.assertRaisesRegex(ValueError, "only.*train"):
+                                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "only.*train" does not match "locked_test processing requires an explicit protected_access_log"
+
+======================================================================
+FAIL: test_cli_preserves_byte_prefix_and_refuses_overwrite (test_prepare_training_data.PreparationTests.test_cli_preserves_byte_prefix_and_refuses_overwrite)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/piotrlaczkowski/Desktop/PROJECT/UnicoLab/Repositories/ul_layago/scripts/test_prepare_training_data.py", line 269, in test_cli_preserves_byte_prefix_and_refuses_overwrite
+    self.assertEqual(process.returncode, 0, process.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : usage: prepare_training_data.py [-h] --dataset DATASET --out OUT [--seed SEED]
+                                [--permutations PERMUTATIONS]
+                                [--max-rows MAX_ROWS] [--replay REPLAY]
+                                [--replay-owner REPLAY_OWNER]
+                                [--protected-access-log PROTECTED_ACCESS_LOG]
+                                [--replay-fraction REPLAY_FRACTION]
+prepare_training_data.py: error: /var/folders/v8/4l9cyywn1x970gdc1v67r5480000gn/T/tmpi8vmt_1s/baseline.jsonl:4: locked_test source protection requires --protected-access-log; no logical locked-row processing was performed
+
+
+----------------------------------------------------------------------
+Ran 57 tests in 2.994s
+
+FAILED (failures=5, errors=1)
+{"findings":{},"json_out":"/var/folders/v8/4l9cyywn1x970gdc1v67r5480000gn/T/tmp0ingdy0g/out.json","markdown_out":"/var/folders/v8/4l9cyywn1x970gdc1v67r5480000gn/T/tmp0ingdy0g/out.md","protocol":"layago-training-data-audit-v1","valid_rows":1}
+{"findings":{},"json_out":"/var/folders/v8/4l9cyywn1x970gdc1v67r5480000gn/T/tmpmkzwb5i6/report.json","markdown_out":"/var/folders/v8/4l9cyywn1x970gdc1v67r5480000gn/T/tmpmkzwb5i6/report.md","protocol":"layago-training-data-audit-v1","valid_rows":1}
+make: *** [check] Error 1

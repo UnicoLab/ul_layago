@@ -50,10 +50,11 @@ type ShortlistCell struct {
 // role ("<role>"), role and language ("<role>/<lang>"), role and task
 // ("<role>/<task>") and role, language and task ("<role>/<lang>/<task>").
 type SeqReport struct {
-	MaxLen     int                `json:"max_len"`
-	HeadMaxLen int                `json:"head_max_len"`
-	Shortlist  *ShortlistSpec     `json:"shortlist"`
-	Cells      map[string]SeqCell `json:"cells"`
+	CalibrationPlan *CalibrationPlan   `json:"calibration_plan,omitempty"`
+	MaxLen          int                `json:"max_len"`
+	HeadMaxLen      int                `json:"head_max_len"`
+	Shortlist       *ShortlistSpec     `json:"shortlist"`
+	Cells           map[string]SeqCell `json:"cells"`
 }
 
 type seqObs struct {

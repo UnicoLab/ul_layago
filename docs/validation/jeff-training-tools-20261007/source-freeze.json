@@ -1,0 +1,13 @@
+{
+  "cmd/laya-train/main.go": "568d6c5ac3f1ca4649929e03bb375b99d488c08cb8d17d64b090ba24ae13628e",
+  "cmd/laya-train/main_test.go": "c437858d63a7debf35db779a4915bff9eff4ac768ae5bec929ee1b35d9fcd220",
+  "train/readiness.go": "b15f8f878c1c44cb90b139c5cfe96fcf8740283c08f9b714ade061e3eb4fe9dc",
+  "train/readiness_test.go": "8013847906050f6d686c16eae0438c4c7c9a217e1e5911ccb5f9cb3e4ecce78f",
+  "train/calibration_overlap.go": "b9cb36d7d207a4d368ecea0c84d02fe800f1c3c830e4b2550123270a5afee396",
+  "train/calibration_overlap_test.go": "ba878ba312c733f981b29032a68f7ac819db5ac4804a4f77a5daa5a96f26deb4",
+  "train/seqreport.go": "b6e6992f16f8f4f04d0872310bf53d02f39aca53c07ea4dc803c6cc78a350c2d",
+  "scripts/audit_training_data.py": "c628c531f9d2535470742192b4190341e79396e7cc82c7ac601e2aa3dc19d57a",
+  "scripts/test_audit_training_data.py": "7a2eb9f1c6c7cfdc543801feab15abe16cbe623b9d9106d298e7c6fadfe7bd90",
+  "scripts/prepare_training_data.py": "10869ce540bfe3eb16dd439440e88b93640c7b66b3d4d773c9936536661c2469",
+  "scripts/test_prepare_training_data.py": "b0bbf5c3b6ef46e0414f275c6b94669064dc23ad3de0459db3169d9954b3a250"
+}

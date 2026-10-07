@@ -1,0 +1,53 @@
+go test ./...
+ok  	github.com/UnicoLab/ul_layago	0.396s
+ok  	github.com/UnicoLab/ul_layago/cmd/laya-train	0.474s
+ok  	github.com/UnicoLab/ul_layago/cmd/layago	(cached)
+ok  	github.com/UnicoLab/ul_layago/evalreport	(cached)
+ok  	github.com/UnicoLab/ul_layago/internal/cli	(cached)
+ok  	github.com/UnicoLab/ul_layago/internal/progress	(cached)
+ok  	github.com/UnicoLab/ul_layago/laya	(cached)
+ok  	github.com/UnicoLab/ul_layago/model	(cached)
+ok  	github.com/UnicoLab/ul_layago/safetensors	(cached)
+ok  	github.com/UnicoLab/ul_layago/tensor	(cached)
+ok  	github.com/UnicoLab/ul_layago/tensor/asmgen	(cached)
+ok  	github.com/UnicoLab/ul_layago/tokenizer	(cached)
+ok  	github.com/UnicoLab/ul_layago/train	15.954s
+go test -tags purego ./...
+ok  	github.com/UnicoLab/ul_layago	0.404s
+ok  	github.com/UnicoLab/ul_layago/cmd/laya-train	0.344s
+ok  	github.com/UnicoLab/ul_layago/cmd/layago	(cached)
+ok  	github.com/UnicoLab/ul_layago/evalreport	(cached)
+ok  	github.com/UnicoLab/ul_layago/internal/cli	(cached)
+ok  	github.com/UnicoLab/ul_layago/internal/progress	(cached)
+ok  	github.com/UnicoLab/ul_layago/laya	(cached)
+ok  	github.com/UnicoLab/ul_layago/model	(cached)
+ok  	github.com/UnicoLab/ul_layago/safetensors	(cached)
+ok  	github.com/UnicoLab/ul_layago/tensor	(cached)
+ok  	github.com/UnicoLab/ul_layago/tensor/asmgen	(cached)
+ok  	github.com/UnicoLab/ul_layago/tokenizer	(cached)
+ok  	github.com/UnicoLab/ul_layago/train	18.776s
+go vet ./...
+python3 -m unittest discover -s scripts -p 'test_*.py'
+.................usage: python3.14 -m unittest [-h] --json-out JSON_OUT
+                              --markdown-out MARKDOWN_OUT [--catalog CATALOG]
+                              [--surface-eval {dev,dev_conf}]
+                              [--unseal-locked] [--access-log ACCESS_LOG]
+                              [--alpha ALPHA] [--delta DELTA] [--n-min N_MIN]
+                              [--start-errors START_ERRORS]
+                              paths [paths ...]
+python3.14 -m unittest: error: outputs must be distinct from input
+usage: python3.14 -m unittest [-h] --json-out JSON_OUT
+                              --markdown-out MARKDOWN_OUT [--catalog CATALOG]
+                              [--surface-eval {dev,dev_conf}]
+                              [--unseal-locked] [--access-log ACCESS_LOG]
+                              [--alpha ALPHA] [--delta DELTA] [--n-min N_MIN]
+                              [--start-errors START_ERRORS]
+                              paths [paths ...]
+python3.14 -m unittest: error: refusing to replace an existing report
+...............................................
+----------------------------------------------------------------------
+Ran 64 tests in 3.125s
+
+OK
+{"findings":{},"json_out":"/var/folders/v8/4l9cyywn1x970gdc1v67r5480000gn/T/tmpyggpsnmp/out.json","markdown_out":"/var/folders/v8/4l9cyywn1x970gdc1v67r5480000gn/T/tmpyggpsnmp/out.md","protocol":"layago-training-data-audit-v1","valid_rows":1}
+{"findings":{},"json_out":"/var/folders/v8/4l9cyywn1x970gdc1v67r5480000gn/T/tmppt2qzcer/report.json","markdown_out":"/var/folders/v8/4l9cyywn1x970gdc1v67r5480000gn/T/tmppt2qzcer/report.md","protocol":"layago-training-data-audit-v1","valid_rows":1}

@@ -1,0 +1,14 @@
+go test -race ./...
+ok  	github.com/UnicoLab/ul_layago	3.031s
+ok  	github.com/UnicoLab/ul_layago/cmd/laya-train	1.359s
+ok  	github.com/UnicoLab/ul_layago/cmd/layago	(cached)
+ok  	github.com/UnicoLab/ul_layago/evalreport	(cached)
+ok  	github.com/UnicoLab/ul_layago/internal/cli	(cached)
+ok  	github.com/UnicoLab/ul_layago/internal/progress	(cached)
+ok  	github.com/UnicoLab/ul_layago/laya	(cached)
+ok  	github.com/UnicoLab/ul_layago/model	(cached)
+ok  	github.com/UnicoLab/ul_layago/safetensors	(cached)
+ok  	github.com/UnicoLab/ul_layago/tensor	(cached)
+ok  	github.com/UnicoLab/ul_layago/tensor/asmgen	(cached)
+ok  	github.com/UnicoLab/ul_layago/tokenizer	(cached)
+ok  	github.com/UnicoLab/ul_layago/train	209.731s

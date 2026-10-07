@@ -38,6 +38,12 @@ Tasks are prefixed `q_`, `r_`, `a_` for Q/R/A. Input requires a string `question
 
 Train only on `train`. Hash-separated `dev_cal` controls early stopping, temperature fitting and the act head; `dev_conf` certifies thresholds. A tiny dev split cannot certify safe coverage. `locked_test` remains sealed; only `evaluate --unseal-locked-test --access-log PATH` opens it and records the access. Holding out data does not prove its labels are correct.
 
+## Preflight before expensive encoding
+
+Use the [data toolkit](data-preflight.md) for declared-family isolation, exact/bounded-near leakage, conflicting labels and train-fitted shortcut diagnostics. `laya-train readiness` reports counts without a base; `inspect` also checks token retention. Configuration errors and exact dev_cal/dev_conf copies now stop the CLI before cache construction. The [prospective curriculum](research/jeff-training-experiments.md) and [public/owned data strategy](research/contract-training-data.md) distinguish relevance, presence and evidence truth. Choice augmentation and replay are explicit fresh-output transformations, with protected source access logged.
+
+**Count correction:** the trainer splits its failure budget over two candidate scores (`delta/2`). Default start is176, not the generic single-budget135 previously quoted. Existing artifact metadata was already correct. Multiple translations/windows from one story remain correlated and cannot manufacture independent certification support.
+
 ## Run and compare
 
 1. Record code revision, base/tokenizer digests, dataset digest, generation seed, fixed configuration and a baseline before changing architecture or objectives.

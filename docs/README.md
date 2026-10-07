@@ -11,6 +11,8 @@ do not confer accuracy or calibration on another application's tasks.
 | [Learning log](learning-log.md) | Cross-project findings, failure modes, evidence and next experiments |
 | [Jeff architecture research](research/jeff-architecture-review.md) | Pinned adapters, training, serving and evaluation lessons with transfer limits |
 | [Shared head adapters](shared-head-adapters.md) | One verified frozen base, independent calibrated heads and exact-sequence cache |
+| [Data preflight and preparation](data-preflight.md) | Leakage/shortcut checks, protected option augmentation/replay and count readiness |
+| [Contract data sources](research/contract-training-data.md) | Source-specific uses, label boundaries and next curriculum |
 | [Training recipe](training.md) | Data construction, fitting, calibration, evaluation and operations |
 | [Hive report assessment](hive-report-insights.md) | Interpretation of the final Hive model comparisons and what transfers |
 | [Package usage](../README.md) | Supported APIs, commands, GPU training and supervision |

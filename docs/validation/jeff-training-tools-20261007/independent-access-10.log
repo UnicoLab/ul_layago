@@ -1,0 +1,15 @@
+test_api_default_refuses_before_locked_logical_validation (__main__.ProtectedAccess.test_api_default_refuses_before_locked_logical_validation) ... ok
+test_cli_default_refuses_and_does_not_publish (__main__.ProtectedAccess.test_cli_default_refuses_and_does_not_publish) ... ok
+test_cli_logged_positive_hashes_no_text_and_byte_prefix (__main__.ProtectedAccess.test_cli_logged_positive_hashes_no_text_and_byte_prefix) ... ok
+test_existing_log_is_not_overwritten (__main__.ProtectedAccess.test_existing_log_is_not_overwritten) ... ok
+test_explicit_new_log_records_current_api_snapshot (__main__.ProtectedAccess.test_explicit_new_log_records_current_api_snapshot) ... ok
+test_forged_unbound_log_cannot_authorize_api (__main__.ProtectedAccess.test_forged_unbound_log_cannot_authorize_api) ... ok
+test_log_input_alias_is_refused_without_mutation (__main__.ProtectedAccess.test_log_input_alias_is_refused_without_mutation) ... ok
+test_log_output_alias_is_refused_without_publication (__main__.ProtectedAccess.test_log_output_alias_is_refused_without_publication) ... ok
+test_logical_invalid_retains_file_hash (__main__.ProtectedAccess.test_logical_invalid_retains_file_hash) ... ok
+test_malformed_outer_retains_pre_read_intent (__main__.ProtectedAccess.test_malformed_outer_retains_pre_read_intent) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.455s
+
+OK
