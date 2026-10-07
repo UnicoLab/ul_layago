@@ -1,0 +1,33 @@
+{
+  "protocol": "delaylama-condition-learning-receipt-v1",
+  "application_report": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/2026-10-07-contract-condition-source-review.md",
+  "application_retained_manifest": "https://github.com/UnicoLab/delaylama/blob/main/docs/validation/assets/contract-condition-source-review/retained/manifest.json",
+  "source_helper_sha256": "8dae4bc0b939095a880286834c061c36c0a4ba9d04dedefa6d475150262beb05",
+  "scripted_parity_groups": [
+    27,
+    36,
+    12
+  ],
+  "scripted_parity_mismatches": 0,
+  "initial_independent_mechanics_tests": 95,
+  "independent_pipeline_transport_tests": 11,
+  "actual_observed_model_calls": 31,
+  "reported_tokens_counted_once": 180354,
+  "causal_or_heldout_quality_claim": false,
+  "full_contract_correctness_established": false,
+  "critic_entire_raw_identity_history_supplied": false,
+  "actual_critic_rendered_context_chars": 6055,
+  "actual_critic_raw_prior_identity_chars": 227203,
+  "remaining_findings": [
+    "A17 proposal instrument remains a heading.",
+    "F77 direct criterion/source status proof unresolved.",
+    "F77 pipeline located record gap remains an unbound fulfillment witness.",
+    "Real critic history is bounded/transformed and proposes no correction.",
+    "French draft effectivity and earlier21entity source-proof gaps remain."
+  ],
+  "backend_tests": 4457,
+  "frontend_tests": 3159,
+  "new_weights_training_mlx_or_architecture": false,
+  "initial_failures_retained": true,
+  "primary_user_state_preserved": true
+}
