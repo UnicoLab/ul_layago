@@ -1,0 +1,113 @@
+{
+  "protocol": "delaylama-fragment-scope-learning-v1",
+  "status": "verified_engineering_increment_broader_goal_active",
+  "learning": "L170",
+  "source_application": "DeleyLama",
+  "date": "2026-10-07",
+  "paired_first_run": {
+    "originals": 8,
+    "targets": 79,
+    "known": 76,
+    "unknown": 3,
+    "v3": {
+      "discovery": 25,
+      "semantic": 19,
+      "qualified_known": 17,
+      "withheld_unknown": 2,
+      "attempts": 14,
+      "reported_tokens": 16206
+    },
+    "v4": {
+      "discovery": 70,
+      "semantic": 44,
+      "qualified_known": 14,
+      "withheld_unknown": 3,
+      "attempts": 65,
+      "reported_tokens": 231736
+    }
+  },
+  "post_repair_development": {
+    "same_corpus_now_development": true,
+    "v4": {
+      "discovery": 70,
+      "semantic": 67,
+      "qualified_known": 11,
+      "withheld_unknown": 3,
+      "attempts": 116,
+      "reported_tokens": 332808,
+      "semantic_truncations": 0
+    },
+    "baseline_unchanged": true,
+    "usable_grounding_improvement_established": false,
+    "efficiency_improvement_established": false
+  },
+  "scope_development": {
+    "same_original_before_after": true,
+    "source_sha256": "bd26dfd80bcb935390ce2c8e5b7c40b20a28eded27bb730ff65285d0b18042cb",
+    "invoice_price_removed_run2": true,
+    "six_observed_milestones_removed_run2": true,
+    "run2_deliverable_deadline_omission_retained": true,
+    "run2_binding_scope_summary_overclaim_retained": true,
+    "general_accuracy_claim": false,
+    "run3_deliverable_deadline_returned": true,
+    "run3_binding_summary_overclaim_retained": true,
+    "remaining_run3_concerns": [
+      "LOT-58 contract scope borrowed from execution quotation",
+      "Summary binding claim unestablished",
+      "Signature absence/Non r\u00e9alis\u00e9 stronger than not recorded",
+      "PD-9 applicability and risk allocation unestablished"
+    ]
+  },
+  "next_context_registry": {
+    "implemented": false,
+    "silent_identifier_remapping_allowed": false,
+    "subject_association_separate_unproven_premise": true
+  },
+  "training": {
+    "new_weights": false,
+    "architecture_changed": false,
+    "new_mlx_or_gliner_claim": false,
+    "frozen_corpus_excluded": true
+  },
+  "limits": [
+    "Source qualification is not semantic, graph-predicate or legal applicability certification.",
+    "One small synthetic paired evaluation and feedback-informed development reruns do not establish representative contract accuracy.",
+    "Passing engineering tests do not establish complete extraction."
+  ],
+  "final_validation": {
+    "tests": {
+      "backend": 3007,
+      "frontend": 2155,
+      "frontend_files": 140,
+      "production_build_passed": true,
+      "large_bundle_advisory": true
+    },
+    "parity": {
+      "source_cases": 62,
+      "nomination_cases": 168,
+      "semantic_cases": 140,
+      "comparison_cases": 42,
+      "mismatches": 0
+    },
+    "owned_cleanup": {
+      "services_stopped": 3,
+      "terminal_app_jobs": 119,
+      "status_counts": {
+        "done": 118,
+        "error": 1
+      },
+      "test_browser_tab_closed": true,
+      "primary_services_touched_by_cleanup": false
+    },
+    "protected_user_state_preserved": true,
+    "primary_api_healthy": true,
+    "primary_frontend_restored_healthy": true,
+    "root_live_receipt_sha256": "3cce7fc8848cb36ebe8e2f3456226a5cbc0a3fec6ad8272c30655357075a2435"
+  },
+  "independent_scope_audit": {
+    "contract-identity-scope-final-independent-audit.json": "88b18204a9730e41951ea17104a424d0eedfda9cb59ffb247bd2f1c6db8718ca",
+    "contract-identity-scope-final-independent-audit.md": "5b1b2200af927cbb51ffdc3fb27e41c68c67947364c2022b7e47e53a41f7facd",
+    "contract-identity-scope-guard-final-probes.json": "dcf5b5625f477cd177dee6c5d19bfe9c8d5980841cdb6eae4402971b85836747",
+    "contract-scope-final-audit-build.py": "d42fa4a0364f2948d36910178ac12fb81d87522dd0272ba93508166b1ab3114a"
+  }
+}
