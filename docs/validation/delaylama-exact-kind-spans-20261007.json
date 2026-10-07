@@ -1,0 +1,84 @@
+{
+  "learning": "L174",
+  "application": "DelayLama",
+  "scope": "observed-source development, source-proof and interface integration",
+  "new_training": false,
+  "new_weights": false,
+  "new_acceleration": false,
+  "run1": {
+    "known_targets": 76,
+    "unknown_targets": 3,
+    "model_calls": 14,
+    "call_statuses": {
+      "parsed": 14
+    },
+    "reported_usage_counted_once": {
+      "input_tokens": 19097,
+      "output_tokens": 5874,
+      "total_tokens": 24971
+    }
+  },
+  "run2": {
+    "known_targets": 76,
+    "unknown_targets": 3,
+    "model_calls": 14,
+    "call_statuses": {
+      "parsed": 14
+    },
+    "reported_usage_counted_once": {
+      "input_tokens": 21155,
+      "output_tokens": 5768,
+      "total_tokens": 26923
+    }
+  },
+  "scores": {
+    "original_known_qualified": 21,
+    "prior_copied_quotation_draw": 37,
+    "span_guidance1": 28,
+    "span_guidance2": 55,
+    "known_denominator": 76,
+    "discovery_exact": 70,
+    "names_exact": 72,
+    "semantics_exact": 68,
+    "all_target_denominator": 79,
+    "unknown_withheld": 3
+  },
+  "limits": [
+    "Separate fresh protocol/guidance draws on previously observed originals; no held-out or causal superiority claim.",
+    "Source addressing does not prove meaning, role, acceptance, legal effect or completeness.",
+    "Raw previous model replies and source evidence remain unchanged."
+  ],
+  "independent_audit_sha256": {
+    "span-development-independent-audit.json": "ce22ac09678a37c85821ae148f82f6a24d66a46f76f8125bd03c6f07e5753aa7",
+    "span-development-independent-audit-2.json": "7a6de3c17ac79924f86c831cfe3597da7b98398ff19fbdabd783bc243f84e954"
+  },
+  "final_checks": {
+    "backend": 3777,
+    "frontend": 2915,
+    "frontend_files": 167,
+    "build": "passed",
+    "old_public_replays_exact": 65,
+    "old_browser_parity_exact": 64,
+    "actual_source_cases": 41,
+    "actual_comparison_cases": 41,
+    "documented_legacy_budget_refusals": 2,
+    "unexpected_actual_mismatches": 0
+  },
+  "context_accounting": {
+    "protocol": "fresh-group-bytes-v1",
+    "max_source_context_bytes": 24000,
+    "historical_overages": [
+      28428,
+      28428,
+      28451,
+      28451
+    ],
+    "history_not_rewritten": true
+  },
+  "native_roundtrip": {
+    "only_type_changed": true,
+    "exact_before_node_restored": true,
+    "original_episode_unchanged": true,
+    "raw_job_events": 77
+  }
+}
