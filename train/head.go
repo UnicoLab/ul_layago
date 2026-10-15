@@ -244,6 +244,118 @@ func (h *Head) Logits(markers []float32, k int, qt laya.QType) []float32 {
 	return out
 }
 
+// PoolChoiceSpans mean-pools token hidden states (seqLen x d) across each
+// option's token span [start, end) into a K x d slice of option representations.
+// When end == start+1, the pooled state is identical to the single-token marker
+// representation at start.
+func PoolChoiceSpans(hidden []float32, d int, spans [][2]int) []float32 {
+	if d <= 0 || len(spans) == 0 {
+		return nil
+	}
+	seqLen := len(hidden) / d
+	out := make([]float32, len(spans)*d)
+	for k, sp := range spans {
+		start, end := max(0, sp[0]), min(seqLen, sp[1])
+		if end <= start {
+			continue
+		}
+		dst := out[k*d : (k+1)*d]
+		if end == start+1 {
+			copy(dst, hidden[start*d:(start+1)*d])
+			continue
+		}
+		inv := 1.0 / float64(end-start)
+		for i := 0; i < d; i++ {
+			var sum float64
+			for t := start; t < end; t++ {
+				sum += float64(hidden[t*d+i])
+			}
+			dst[i] = float32(sum * inv)
+		}
+	}
+	return out
+}
+
+// ScoresChoiceSpan computes option scores in float64 by mean-pooling each
+// option's token span [start, end) from hidden (seqLen x D) before running the
+// scorer. If qt is omitted, laya.Choice is used.
+func (h *Head) ScoresChoiceSpan(hidden []float32, spans [][2]int, qt ...laya.QType) []float64 {
+	qtype := laya.Choice
+	if len(qt) > 0 {
+		qtype = qt[0]
+	}
+	pooled := PoolChoiceSpans(hidden, h.Config.D, spans)
+	return h.Scores(pooled, len(spans), qtype)
+}
+
+// ForwardChoiceSpan computes option logits in float32 by mean-pooling each
+// option's token span [start, end) from hidden (seqLen x D) before running the
+// scorer. For single-token spans [p, p+1), the output is identical to Logits
+// on the marker slice at p. If qt is omitted, laya.Choice is used.
+func (h *Head) ForwardChoiceSpan(hidden []float32, spans [][2]int, qt ...laya.QType) []float32 {
+	s := h.ScoresChoiceSpan(hidden, spans, qt...)
+	out := make([]float32, len(s))
+	for i, v := range s {
+		out[i] = float32(v)
+	}
+	return out
+}
+
+// BackwardChoiceSpan backpropagates dLogits (length K) through the scorer and
+// the mean-pooled span readout [start, end), accumulating gradients wrt token
+// hidden states into dHidden (seqLen x D). Each token t in [start, end)
+// receives 1/(end-start) of its option's input gradient.
+func (h *Head) BackwardChoiceSpan(hidden []float32, spans [][2]int, dLogits []float32, dHidden []float32, qt ...laya.QType) {
+	c := h.Config
+	d := c.D
+	if d <= 0 || len(spans) == 0 {
+		return
+	}
+	qtype := laya.Choice
+	if len(qt) > 0 {
+		qtype = qt[0]
+	}
+	seqLen := len(hidden) / d
+	pooled := PoolChoiceSpans(hidden, d, spans)
+	te := h.TypeEmb[int(qtype)*d : (int(qtype)+1)*d]
+	sc := newScorerScratch(c)
+	g := newGrads(c, false)
+	du := make([]float64, d)
+	dHid64 := make([]float64, len(dHidden))
+
+	for k, sp := range spans {
+		if k >= len(dLogits) {
+			break
+		}
+		ds := float64(dLogits[k])
+		if ds == 0 {
+			continue
+		}
+		start, end := max(0, sp[0]), min(seqLen, sp[1])
+		if end <= start {
+			continue
+		}
+		_ = h.score(pooled[k*d:(k+1)*d], te, sc)
+		clear(g.typeEmb)
+		h.backwardScore(ds, qtype, sc, g, du)
+		// g.typeEmb[int(qtype)*d : (int(qtype)+1)*d] holds d(score_k)/d(pooled_k)
+		// because z = pooled_k + te.
+		dz := g.typeEmb[int(qtype)*d : (int(qtype)+1)*d]
+		inv := 1.0 / float64(end-start)
+		for t := start; t < end; t++ {
+			base := t * d
+			for i := 0; i < d; i++ {
+				if base+i < len(dHid64) {
+					dHid64[base+i] += dz[i] * inv
+				}
+			}
+		}
+	}
+	for i, v := range dHid64 {
+		dHidden[i] += float32(v)
+	}
+}
+
 // actScratch holds the act head's intermediates.
 type actScratch struct {
 	in, pre, g []float64

@@ -34,12 +34,18 @@ type Config struct {
 	NormBias         bool
 	AttentionBias    bool
 	MLPBias          bool
+	HiddenActivation string
 	PadTokenID       int
 	Layers           []LayerSpec
 }
 
 // HeadDim returns HiddenSize / NumHeads.
 func (c Config) HeadDim() int { return c.HiddenSize / c.NumHeads }
+
+// IsGlobalLayer reports whether layer l (0-indexed) uses global full attention.
+func (c Config) IsGlobalLayer(l int) bool {
+	return l >= 0 && l < len(c.Layers) && c.Layers[l].Global
+}
 
 // Truncate returns the config of the first n layers: a student that keeps
 // the checkpoint's first layers with their own attention types and rope
@@ -53,6 +59,29 @@ func (c Config) Truncate(n int) (Config, error) {
 	out.NumLayers = n
 	out.Layers = append([]LayerSpec(nil), c.Layers[:n]...)
 	return out, nil
+}
+
+// TruncateToGlobalBoundary returns a truncated Config with the largest layer
+// count <= targetLayers whose final layer (count - 1) is a global attention
+// layer (UltraBERT Appendix A.2), falling back to Truncate(targetLayers) when
+// no global layer exists at or below targetLayers.
+func (c Config) TruncateToGlobalBoundary(targetLayers int) Config {
+	if c.NumLayers <= 0 || targetLayers <= 0 || targetLayers >= c.NumLayers {
+		return c
+	}
+	for count := targetLayers; count >= 1; count-- {
+		if c.IsGlobalLayer(count - 1) {
+			out, err := c.Truncate(count)
+			if err == nil {
+				return out
+			}
+		}
+	}
+	out, err := c.Truncate(targetLayers)
+	if err != nil {
+		return c
+	}
+	return out
 }
 
 type hfConfig struct {
@@ -80,7 +109,7 @@ type hfConfig struct {
 	PadTokenID int `json:"pad_token_id"`
 }
 
-// ParseHFConfig reads a ModernBERT config.json in either the transformers 4
+// ParseHFConfig reads a ModernBERT/UltraBERT config.json in either the transformers 4
 // layout (global_attn_every_n_layers, global/local_rope_theta) or the
 // transformers 5 layout (layer_types, rope_parameters). Anything the forward
 // pass cannot reproduce exactly is rejected.
@@ -89,16 +118,23 @@ func ParseHFConfig(data []byte) (Config, error) {
 	if err := json.Unmarshal(data, &h); err != nil {
 		return Config{}, fmt.Errorf("model: parse config: %w", err)
 	}
-	if h.ModelType != "modernbert" {
-		return Config{}, fmt.Errorf("model: model_type %q is not modernbert", h.ModelType)
+	if h.ModelType != "modernbert" && h.ModelType != "ultrabert" {
+		return Config{}, fmt.Errorf("model: model_type %q is not modernbert or ultrabert", h.ModelType)
 	}
-	if h.HiddenActivation != "gelu" {
-		return Config{}, fmt.Errorf("model: hidden_activation %q is not supported (want exact-erf gelu)", h.HiddenActivation)
+	var hiddenAct string
+	switch h.HiddenActivation {
+	case "", "gelu":
+		hiddenAct = "gelu"
+	case "silu", "swiglu":
+		hiddenAct = h.HiddenActivation
+	default:
+		return Config{}, fmt.Errorf("model: hidden_activation %q is not supported (want exact-erf gelu or silu/swiglu)", h.HiddenActivation)
 	}
 	c := Config{
 		VocabSize: h.VocabSize, HiddenSize: h.HiddenSize, IntermediateSize: h.IntermediateSize,
 		NumLayers: h.NumHiddenLayers, NumHeads: h.NumAttentionHeads,
-		NormBias: h.NormBias, AttentionBias: h.AttentionBias, MLPBias: h.MLPBias, PadTokenID: h.PadTokenID,
+		NormBias: h.NormBias, AttentionBias: h.AttentionBias, MLPBias: h.MLPBias,
+		HiddenActivation: hiddenAct, PadTokenID: h.PadTokenID,
 	}
 	switch {
 	case h.NormEps != nil:

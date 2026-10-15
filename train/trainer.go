@@ -43,6 +43,14 @@ type Config struct {
 	// ScoreRegWeight weights the expected-level squared error added to the
 	// cross-entropy of score tasks (0 disables it).
 	ScoreRegWeight float64 `json:"score_regression_weight"`
+	// DistillWeight and DistillTemp configure teacher KL distillation.
+	// DistillTasks, DisableDistillTasks, and DistillWeightByTask control
+	// task-selective distillation.
+	DistillWeight       float64            `json:"distill_weight,omitempty"`
+	DistillTemp         float64            `json:"distill_temperature,omitempty"`
+	DistillTasks        []string           `json:"distill_tasks,omitempty"`
+	DisableDistillTasks []string           `json:"disable_distill_tasks,omitempty"`
+	DistillWeightByTask map[string]float64 `json:"distill_weight_by_task,omitempty"`
 	// ActEpochs and ActLR train the act head on dev_cal.
 	ActEpochs int     `json:"act_epochs"`
 	ActLR     float64 `json:"act_learning_rate"`
@@ -80,6 +88,46 @@ type Config struct {
 	Log func(format string, args ...any) `json:"-"`
 }
 
+// DefaultQADistillTasks returns the Q and A tasks that benefit from teacher
+// KL distillation while excluding q_scope so high-cardinality dimension-value
+// logits are not smoothed by teacher soft distributions.
+func DefaultQADistillTasks() []string {
+	return []string{
+		"q_intent",
+		"q_operation",
+		"q_metric",
+		"a_entailment",
+		"a_scope_preserved",
+		"a_limits_preserved",
+		"a_no_new_claims",
+	}
+}
+
+// TaskDistillWeight returns the effective KL-distillation weight for task.
+// DisableDistillTasks always forces 0. DistillWeightByTask overrides the
+// scalar DistillWeight for tasks present in the map. When DistillTasks is
+// non-empty, only tasks listed in DistillTasks receive DistillWeight.
+func (c Config) TaskDistillWeight(task string) float64 {
+	if slices.Contains(c.DisableDistillTasks, task) {
+		return 0
+	}
+	if c.DistillWeightByTask != nil {
+		if w, ok := c.DistillWeightByTask[task]; ok {
+			if w <= 0 {
+				return 0
+			}
+			return w
+		}
+	}
+	if c.DistillWeight <= 0 {
+		return 0
+	}
+	if len(c.DistillTasks) > 0 && !slices.Contains(c.DistillTasks, task) {
+		return 0
+	}
+	return c.DistillWeight
+}
+
 // DefaultConfig is the configuration laya-train's flags default to.
 func DefaultConfig() Config {
 	return Config{Seed: 1, Epochs: 30, Patience: 4, BatchSize: 32, LR: 1e-3, WeightDecay: 0.01, WarmupFrac: 0.06,
@@ -87,7 +135,7 @@ func DefaultConfig() Config {
 }
 
 func (c Config) validate() error {
-	for _, v := range []float64{c.LR, c.ActLR, c.WeightDecay, c.WarmupFrac, c.ScoreRegWeight, c.Alpha, c.Delta} {
+	for _, v := range []float64{c.LR, c.ActLR, c.WeightDecay, c.WarmupFrac, c.ScoreRegWeight, c.Alpha, c.Delta, c.DistillWeight, c.DistillTemp} {
 		if math.IsNaN(v) || math.IsInf(v, 0) {
 			return fmt.Errorf("train: configuration values must be finite")
 		}
@@ -109,6 +157,8 @@ func (c Config) validate() error {
 		return fmt.Errorf("train: alpha %v and delta %v must be in (0, 1)", c.Alpha, c.Delta)
 	case c.LTTStartErrors < 0:
 		return fmt.Errorf("train: ltt start errors %d must not be negative", c.LTTStartErrors)
+	case c.DistillWeight < 0:
+		return fmt.Errorf("train: distill weight %v must not be negative", c.DistillWeight)
 	}
 	return nil
 }

@@ -219,7 +219,11 @@ func (e *Encoder) Forward(ctx context.Context, seqs [][]int32, opt Options) (*Re
 		lap(OpNorm)
 		layer.Wi.Forward(up, h, total, par)
 		lap(OpMLPIn)
-		tensor.GeGLU(act, up, total, inter, par)
+		if cfg.HiddenActivation == "silu" || cfg.HiddenActivation == "swiglu" {
+			tensor.SwiGLU(act, up, total, inter, par)
+		} else {
+			tensor.GeGLU(act, up, total, inter, par)
+		}
 		lap(OpGeGLU)
 		layer.WoM.Forward(tmp, act, total, par)
 		tensor.AddInPlace(x, tmp)
