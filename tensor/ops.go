@@ -110,6 +110,42 @@ func SiLUInPlace(x []float32, par Parallel) {
 	})
 }
 
+// Swish evaluates the parameterized self-gated activation
+// Swish_β(x) = x · σ(β·x) = x / (1 + exp(-β·x)) in float64.
+// For β = 1, Swish(x, 1) coincides with SiLU(x); as β → 0 it approaches x/2,
+// and as β → ∞ it approaches ReLU(x) without a hard kink for finite β.
+func Swish(x, beta float32) float32 {
+	v := float64(x)
+	b := float64(beta)
+	return float32(v / (1 + math.Exp(-b*v)))
+}
+
+// SwishInPlace applies Swish(x, beta) to every element.
+func SwishInPlace(x []float32, beta float32, par Parallel) {
+	chunks := (len(x) + 4095) / 4096
+	par.Run(chunks, func(task int) {
+		part := x[task*4096 : min((task+1)*4096, len(x))]
+		for i, v := range part {
+			part[i] = Swish(v, beta)
+		}
+	})
+}
+
+// SwishGrad computes the exact smooth analytical derivative
+// d/dx [x · σ(β·x)] = σ(β·x) · (1 + β·x · (1 - σ(β·x))) in float64.
+func SwishGrad(x, beta float32) float32 {
+	v := float64(x)
+	b := float64(beta)
+	s := 1 / (1 + math.Exp(-b*v))
+	return float32(s * (1 + b*v*(1-s)))
+}
+
+// SiLUGrad computes the exact smooth analytical derivative
+// d/dx [x · σ(x)] = σ(x) · (1 + x · (1 - σ(x))) in float64.
+func SiLUGrad(x float32) float32 {
+	return SwishGrad(x, 1)
+}
+
 // SwiGLU implements UltraBERT/ModernBertMLP's SiLU gating: the Wi projection
 // (rows x 2·inter) is split into input and gate halves, and dst (rows x inter)
 // receives SiLU(input) · gate.
@@ -122,6 +158,31 @@ func SwiGLU(dst, src []float32, rows, inter int, par Parallel) {
 			out := dst[r*inter : (r+1)*inter]
 			for i := range out {
 				out[i] = SiLU(in[i]) * gate[i]
+			}
+		}
+	})
+}
+
+// SwiGLUBackward computes the analytical gradients dSrc (rows x 2·inter) with
+// respect to the input and gate halves of src given upstream gradient dDst
+// (rows x inter) for dst = SiLU(in) · gate:
+//
+//	dIn[i]   = dDst[i] · gate[i] · SiLUGrad(in[i])
+//	dGate[i] = dDst[i] · SiLU(in[i])
+func SwiGLUBackward(dSrc, dDst, src []float32, rows, inter int, par Parallel) {
+	par.Run(rowTasks(rows), func(task int) {
+		r0, r1 := rowRange(task, rows)
+		for r := r0; r < r1; r++ {
+			in := src[r*2*inter : r*2*inter+inter]
+			gate := src[r*2*inter+inter : (r+1)*2*inter]
+			dy := dDst[r*inter : (r+1)*inter]
+			dIn := dSrc[r*2*inter : r*2*inter+inter]
+			dGate := dSrc[r*2*inter+inter : (r+1)*2*inter]
+			for i := 0; i < inter; i++ {
+				u := in[i]
+				dyi := dy[i]
+				dIn[i] = dyi * gate[i] * SiLUGrad(u)
+				dGate[i] = dyi * SiLU(u)
 			}
 		}
 	})

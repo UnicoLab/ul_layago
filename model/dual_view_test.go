@@ -389,6 +389,134 @@ func TestUltraBERTDualViewVsSharedHeadBenchmark(t *testing.T) {
 	}
 }
 
+func TestProjectClassificationSwiGLUDynamicRouting(t *testing.T) {
+	const (
+		hiddenDim = 16
+		classDim  = 8
+		retrDim   = 12
+	)
+	baseProj := NewDualViewProjector(DualViewConfig{
+		HiddenSize:        hiddenDim,
+		ClassificationDim: classDim,
+		RetrievalDim:      retrDim,
+	}, 77)
+	gatedProj := NewDualViewProjector(DualViewConfig{
+		HiddenSize:        hiddenDim,
+		ClassificationDim: classDim,
+		RetrievalDim:      retrDim,
+		UseSwiGLUGate:     true,
+		SwishBeta:         1.5,
+	}, 77)
+
+	// 1. Seed compatibility: ClassWeight and RetrWeight are bit-for-bit identical.
+	for i := range baseProj.ClassWeight {
+		if math.Float32bits(baseProj.ClassWeight[i]) != math.Float32bits(gatedProj.ClassWeight[i]) {
+			t.Fatalf("ClassWeight[%d] changed when UseSwiGLUGate=true", i)
+		}
+	}
+	for i := range baseProj.RetrWeight {
+		if math.Float32bits(baseProj.RetrWeight[i]) != math.Float32bits(gatedProj.RetrWeight[i]) {
+			t.Fatalf("RetrWeight[%d] changed when UseSwiGLUGate=true", i)
+		}
+	}
+	for i, b := range gatedProj.ClassGateBias {
+		if b != 1.0 {
+			t.Fatalf("ClassGateBias[%d] = %g, want 1.0", i, b)
+		}
+	}
+
+	// 2. Dynamic routing under noisy distractor tokens:
+	// Set up an orthonormal basis where axes 0..classDim-1 carry the class
+	// value signals, axis classDim is a context validity indicator (+2 on valid
+	// evidence tokens, -4 on noisy distractor tokens), and remaining axes carry
+	// high-amplitude distractors.
+	rng := rand.New(rand.NewPCG(1234, 5678)) //nolint:gosec // deterministic test
+	basis := semiOrthogonalMatrix(rng, hiddenDim, hiddenDim)
+	axis := func(i int) []float32 { return basis[i*hiddenDim : (i+1)*hiddenDim] }
+
+	for c := 0; c < classDim; c++ {
+		wVal := gatedProj.ClassWeight[c*hiddenDim : (c+1)*hiddenDim]
+		wGate := gatedProj.ClassGateWeight[c*hiddenDim : (c+1)*hiddenDim]
+		// Value path reads class axis c plus a corrupting distractor axis.
+		distractor := classDim + 1 + (c % (hiddenDim - classDim - 1))
+		for k := 0; k < hiddenDim; k++ {
+			wVal[k] = axis(c)[k] + 0.9*axis(distractor)[k]
+			// Gate path attends to the context validity axis (axis(classDim)).
+			wGate[k] = 1.5 * axis(classDim)[k]
+		}
+		gatedProj.ClassGateBias[c] = 0.0
+	}
+	copy(baseProj.ClassWeight, gatedProj.ClassWeight)
+
+	// Construct a 6-token sequence: tokens 0..1 are valid evidence for class 0
+	// (with signed negative contrast on class 1), while tokens 2..5 are noisy
+	// distractors with negative validity indicator and strong false class-1 spikes.
+	seq := NewTensor2D(6, hiddenDim, nil)
+	for r := 0; r < 6; r++ {
+		row := seq.Row(r)
+		if r < 2 {
+			// Valid evidence token: strong +class0, signed -class1, +validity
+			for k := 0; k < hiddenDim; k++ {
+				row[k] = 1.6*axis(0)[k] - 1.1*axis(1)[k] + 2.0*axis(classDim)[k]
+			}
+		} else {
+			// Distractor token: false spike on distractor for class 1, negative validity (-4.0)
+			distractor1 := classDim + 1 + (1 % (hiddenDim - classDim - 1))
+			for k := 0; k < hiddenDim; k++ {
+				row[k] = 7.0*axis(distractor1)[k] - 4.0*axis(classDim)[k]
+			}
+		}
+	}
+
+	linToks := baseProj.ProjectClassificationTokens(seq)
+	swiToks := gatedProj.ProjectClassificationTokens(seq)
+
+	// Verify SwiGLU suppresses the distractor tokens (rows 2..5) by >20x relative to linear.
+	var linNoiseEnergy, swiNoiseEnergy float64
+	for r := 2; r < 6; r++ {
+		linNoiseEnergy += float64(tensor.Dot(linToks.Row(r), linToks.Row(r)))
+		swiNoiseEnergy += float64(tensor.Dot(swiToks.Row(r), swiToks.Row(r)))
+	}
+	if !(swiNoiseEnergy < linNoiseEnergy*0.02) {
+		t.Fatalf("expected SwiGLU gate to suppress distractor energy: swi=%g vs lin=%g", swiNoiseEnergy, linNoiseEnergy)
+	}
+
+	// Verify signed negative representation is preserved on valid tokens (class 1 < 0)
+	// and pooled classification recovers class 0 with a strong positive margin, whereas
+	// the ungated linear projection is fooled by the distractor spikes into picking class 1.
+	if !(swiToks.Row(0)[0] > 1.0 && swiToks.Row(0)[1] < -0.5) {
+		t.Fatalf("expected SwiGLU token 0 to preserve positive class 0 (%g) and negative class 1 (%g)",
+			swiToks.Row(0)[0], swiToks.Row(0)[1])
+	}
+	linPooled := baseProj.ProjectClassificationPooled(seq)
+	swiPooled := gatedProj.ProjectClassificationPooled(seq)
+	if !(linPooled[1] > linPooled[0]) {
+		t.Fatalf("expected ungated linear pooled readout to be corrupted by distractors (got c0=%g, c1=%g)",
+			linPooled[0], linPooled[1])
+	}
+	if !(swiPooled[0] > swiPooled[1]+1.0) {
+		t.Fatalf("expected SwiGLU pooled readout to route valid signal and select class 0 (got c0=%g, c1=%g)",
+			swiPooled[0], swiPooled[1])
+	}
+
+	// 3. Verify high spectral EffectiveRank across diverse multi-concept inputs.
+	freshGated := NewDualViewProjector(DualViewConfig{
+		HiddenSize:        hiddenDim,
+		ClassificationDim: classDim,
+		RetrievalDim:      retrDim,
+		UseSwiGLUGate:     true,
+		SwishBeta:         1.0,
+	}, 99)
+	multiSeq := NewTensor2D(classDim, hiddenDim, nil)
+	for r := 0; r < classDim; r++ {
+		copy(multiSeq.Row(r), axis(r))
+	}
+	outMat := freshGated.ProjectClassificationSwiGLU(multiSeq)
+	if er := tensor.EffectiveRank(outMat.ToRows()); er < float64(classDim)*0.65 {
+		t.Fatalf("expected high EffectiveRank from SwiGLU projector, got %g (classDim=%d)", er, classDim)
+	}
+}
+
 func BenchmarkDualViewColBERTMaxSim(b *testing.B) {
 	proj := NewDualViewProjector(DualViewConfig{
 		HiddenSize:        128,

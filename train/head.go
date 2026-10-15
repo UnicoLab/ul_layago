@@ -15,6 +15,14 @@ type HeadConfig struct {
 	Hidden    int `json:"scorer_hidden"`
 	ActHidden int `json:"act_hidden"`
 	NAct      int `json:"act_outputs"`
+	// Activation selects the hidden nonlinearity in the scorer and act heads:
+	// "" or "gelu" (default) uses exact erf GELU; "swish" or "silu" uses
+	// smooth self-gated Swish_1 / SiLU (x · σ(x)).
+	Activation string `json:"activation,omitempty"`
+}
+
+func (c HeadConfig) useSwish() bool {
+	return c.Activation == "swish" || c.Activation == "silu"
 }
 
 // Head is Laya's decision head with zero head transformer layers, over a
@@ -172,6 +180,16 @@ func geluGrad64(x float64) float64 {
 	return 0.5*(1+math.Erf(x/math.Sqrt2)) + x*math.Exp(-0.5*x*x)/math.Sqrt(2*math.Pi)
 }
 
+func silu64(x float64) float64 {
+	return x / (1 + math.Exp(-x))
+}
+
+// siluGrad64 is d/dx of SiLU / Swish_1: σ(x)·(1 + x·(1 - σ(x))).
+func siluGrad64(x float64) float64 {
+	s := 1 / (1 + math.Exp(-x))
+	return s * (1 + x*(1-s))
+}
+
 // dot64 accumulates a float32 row times a float64 vector in float64.
 func dot64(w []float32, x []float64) float64 {
 	x = x[:len(w)]
@@ -212,10 +230,15 @@ func (h *Head) score(m, te []float32, sc *scorerScratch) float64 {
 		sc.u[i] = sc.xhat[i]*float64(h.LNW[i]) + float64(h.LNB[i])
 	}
 	s := float64(h.B2[0])
+	swish := h.Config.useSwish()
 	for j := 0; j < h.Config.Hidden; j++ {
 		p := float64(h.B1[j]) + dot64(h.W1[j*d:(j+1)*d], sc.u)
 		sc.pre[j] = p
-		sc.g[j] = gelu64(p)
+		if swish {
+			sc.g[j] = silu64(p)
+		} else {
+			sc.g[j] = gelu64(p)
+		}
 	}
 	s += dot64(h.W2, sc.g)
 	return s
@@ -377,10 +400,15 @@ func (h *Head) actForward(pooled []float32, qt laya.QType, logits []float32, sc 
 	for i, v := range f {
 		sc.in[c.D+i] = float64(v)
 	}
+	swish := c.useSwish()
 	for j := 0; j < c.ActHidden; j++ {
 		p := float64(h.A1B[j]) + dot64(h.A1[j*(c.D+4):(j+1)*(c.D+4)], sc.in)
 		sc.pre[j] = p
-		sc.g[j] = gelu64(p)
+		if swish {
+			sc.g[j] = silu64(p)
+		} else {
+			sc.g[j] = gelu64(p)
+		}
 	}
 	out := make([]float64, c.NAct)
 	for k := 0; k < c.NAct; k++ {
@@ -451,11 +479,18 @@ func (g *grads) addScaled(o *grads, s float64) {
 func (h *Head) backwardScore(ds float64, qt laya.QType, sc *scorerScratch, g *grads, du []float64) {
 	c := h.Config
 	d := c.D
+	swish := c.useSwish()
 	g.b2[0] += ds
 	clear(du)
 	for j := 0; j < c.Hidden; j++ {
 		g.w2[j] += ds * sc.g[j]
-		dpre := ds * float64(h.W2[j]) * geluGrad64(sc.pre[j])
+		var actGrad float64
+		if swish {
+			actGrad = siluGrad64(sc.pre[j])
+		} else {
+			actGrad = geluGrad64(sc.pre[j])
+		}
+		dpre := ds * float64(h.W2[j]) * actGrad
 		if dpre == 0 {
 			continue
 		}
@@ -501,6 +536,7 @@ func (h *Head) actExampleGrad(pooled []float32, qt laya.QType, logits []float32,
 func (h *Head) backwardAct(dout []float64, sc *actScratch, g *grads) {
 	c := h.Config
 	w := c.D + 4
+	swish := c.useSwish()
 	for k := 0; k < c.NAct; k++ {
 		g.a2b[k] += dout[k]
 		row := g.a2[k*c.ActHidden : (k+1)*c.ActHidden]
@@ -513,7 +549,13 @@ func (h *Head) backwardAct(dout []float64, sc *actScratch, g *grads) {
 		for k := 0; k < c.NAct; k++ {
 			dg += dout[k] * float64(h.A2[k*c.ActHidden+j])
 		}
-		dpre := dg * geluGrad64(sc.pre[j])
+		var actGrad float64
+		if swish {
+			actGrad = siluGrad64(sc.pre[j])
+		} else {
+			actGrad = geluGrad64(sc.pre[j])
+		}
+		dpre := dg * actGrad
 		if dpre == 0 {
 			continue
 		}

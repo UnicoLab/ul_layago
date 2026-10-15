@@ -127,6 +127,14 @@ type DualViewConfig struct {
 	HiddenSize        int
 	ClassificationDim int
 	RetrievalDim      int
+	// UseSwiGLUGate enables dynamic SwiGLU multiplicative routing on the
+	// classification token projection (ProjectClassificationTokens /
+	// ProjectClassificationPooled). When false, the projection remains a pure
+	// linear readout so default callers and tests are bit-for-bit unchanged.
+	UseSwiGLUGate bool
+	// SwishBeta controls the steepness β of Swish_β(x) = x · σ(β·x) in the
+	// classification SwiGLU gate. Defaults to 1.0 (SiLU) when <= 0.
+	SwishBeta float32
 }
 
 func (c DualViewConfig) withDefaults() DualViewConfig {
@@ -139,23 +147,29 @@ func (c DualViewConfig) withDefaults() DualViewConfig {
 	if c.RetrievalDim <= 0 {
 		c.RetrievalDim = c.HiddenSize
 	}
+	if c.SwishBeta <= 0 {
+		c.SwishBeta = 1.0
+	}
 	return c
 }
 
-// DualViewProjector holds two decoupled linear readout projections over a
-// shared encoder trunk:
-//   - Classification view (ClassWeight, ClassBias): preserves unnormalized
-//     activation magnitudes and sharp token/span decision boundaries for 5%-view
-//     classification, SpanChoiceReadout, and NER tagging.
+// DualViewProjector holds two decoupled readout projections over a shared
+// encoder trunk:
+//   - Classification view (ClassWeight, ClassBias, and optional SwiGLU dynamic
+//     routing gate ClassGateWeight, ClassGateBias): preserves unnormalized
+//     activation magnitudes, signed negative contrast, and sharp token/span
+//     decision boundaries for 5%-view classification, SpanChoiceReadout, and NER.
 //   - Retrieval view (RetrWeight, RetrBias): semi-orthogonal isotropic
 //     projection followed by per-token L2 normalization for ColBERT late-
 //     interaction multi-vector retrieval and mean-pooled dense cosine search.
 type DualViewProjector struct {
-	Config      DualViewConfig
-	ClassWeight []float32 // [ClassificationDim, HiddenSize] row-major
-	ClassBias   []float32 // [ClassificationDim]
-	RetrWeight  []float32 // [RetrievalDim, HiddenSize] row-major
-	RetrBias    []float32 // [RetrievalDim]
+	Config          DualViewConfig
+	ClassWeight     []float32 // [ClassificationDim, HiddenSize] row-major
+	ClassBias       []float32 // [ClassificationDim]
+	ClassGateWeight []float32 // [ClassificationDim, HiddenSize] row-major (SwiGLU gate)
+	ClassGateBias   []float32 // [ClassificationDim] (initialized to 1.0 open gate)
+	RetrWeight      []float32 // [RetrievalDim, HiddenSize] row-major
+	RetrBias        []float32 // [RetrievalDim]
 }
 
 // NewDualViewProjector constructs a deterministic DualViewProjector using
@@ -164,12 +178,21 @@ func NewDualViewProjector(cfg DualViewConfig, seed int64) *DualViewProjector {
 	cfg = cfg.withDefaults()
 	u := uint64(seed)                                                        // #nosec G115 -- deterministic hash mixing of signed seed bits
 	rng := rand.New(rand.NewPCG(u^0x6a09e667f3bcc908, u^0xbb67ae8584caa73b)) //nolint:gosec // deterministic model init
+	classWeight := semiOrthogonalMatrix(rng, cfg.ClassificationDim, cfg.HiddenSize)
+	retrWeight := semiOrthogonalMatrix(rng, cfg.RetrievalDim, cfg.HiddenSize)
+	classGateWeight := semiOrthogonalMatrix(rng, cfg.ClassificationDim, cfg.HiddenSize)
+	classGateBias := make([]float32, cfg.ClassificationDim)
+	for i := range classGateBias {
+		classGateBias[i] = 1.0
+	}
 	return &DualViewProjector{
-		Config:      cfg,
-		ClassWeight: semiOrthogonalMatrix(rng, cfg.ClassificationDim, cfg.HiddenSize),
-		ClassBias:   make([]float32, cfg.ClassificationDim),
-		RetrWeight:  semiOrthogonalMatrix(rng, cfg.RetrievalDim, cfg.HiddenSize),
-		RetrBias:    make([]float32, cfg.RetrievalDim),
+		Config:          cfg,
+		ClassWeight:     classWeight,
+		ClassBias:       make([]float32, cfg.ClassificationDim),
+		ClassGateWeight: classGateWeight,
+		ClassGateBias:   classGateBias,
+		RetrWeight:      retrWeight,
+		RetrBias:        make([]float32, cfg.RetrievalDim),
 	}
 }
 
@@ -254,10 +277,19 @@ func semiOrthogonalMatrix(rng *rand.Rand, rows, cols int) []float32 {
 // ProjectClassificationTokens projects encoder token states [seqLen, HiddenSize]
 // into [seqLen, ClassificationDim], preserving activation magnitude and sharp
 // token-level boundaries for 5%-view classification, SpanChoiceReadout, and NER.
+// When Config.UseSwiGLUGate is true, it routes tokens through
+// ProjectClassificationSwiGLU.
 func (p *DualViewProjector) ProjectClassificationTokens(seq *Tensor2D) *Tensor2D {
 	if p == nil || seq == nil || seq.Rows <= 0 || seq.Cols != p.Config.HiddenSize {
 		return &Tensor2D{}
 	}
+	if p.Config.UseSwiGLUGate {
+		return p.ProjectClassificationSwiGLU(seq)
+	}
+	return p.projectClassificationLinear(seq)
+}
+
+func (p *DualViewProjector) projectClassificationLinear(seq *Tensor2D) *Tensor2D {
 	inDim := p.Config.HiddenSize
 	outDim := p.Config.ClassificationDim
 	out := NewTensor2D(seq.Rows, outDim, nil)
@@ -271,6 +303,53 @@ func (p *DualViewProjector) ProjectClassificationTokens(seq *Tensor2D) *Tensor2D
 				b = p.ClassBias[c]
 			}
 			dst[c] = b + tensor.Dot(x, w)
+		}
+	}
+	return out
+}
+
+// ProjectClassificationSwiGLU projects encoder token states [seqLen, HiddenSize]
+// into [seqLen, ClassificationDim] using SwiGLU dynamic multiplicative routing:
+//
+//	v_{r,c} = b_{val,c} + <w_{val,c}, x_r>
+//	g_{r,c} = Swish(b_{gate,c} + <w_{gate,c}, x_r>, beta)
+//	y_{r,c} = g_{r,c} * v_{r,c}
+//
+// Unlike static element-wise activations, the learned Swish gate dynamically
+// suppresses noisy or off-topic token dimensions while preserving signed
+// negative representations and high effective rank.
+func (p *DualViewProjector) ProjectClassificationSwiGLU(seq *Tensor2D) *Tensor2D {
+	if p == nil || seq == nil || seq.Rows <= 0 || seq.Cols != p.Config.HiddenSize {
+		return &Tensor2D{}
+	}
+	inDim := p.Config.HiddenSize
+	outDim := p.Config.ClassificationDim
+	if len(p.ClassGateWeight) < outDim*inDim {
+		return p.projectClassificationLinear(seq)
+	}
+	beta := p.Config.SwishBeta
+	if beta <= 0 {
+		beta = 1.0
+	}
+	out := NewTensor2D(seq.Rows, outDim, nil)
+	for r := 0; r < seq.Rows; r++ {
+		x := seq.Data[r*inDim : (r+1)*inDim]
+		dst := out.Data[r*outDim : (r+1)*outDim]
+		for c := 0; c < outDim; c++ {
+			wVal := p.ClassWeight[c*inDim : (c+1)*inDim]
+			var bVal float32
+			if c < len(p.ClassBias) {
+				bVal = p.ClassBias[c]
+			}
+			val := bVal + tensor.Dot(x, wVal)
+
+			wGate := p.ClassGateWeight[c*inDim : (c+1)*inDim]
+			var bGate float32
+			if c < len(p.ClassGateBias) {
+				bGate = p.ClassGateBias[c]
+			}
+			gate := tensor.Swish(bGate+tensor.Dot(x, wGate), beta)
+			dst[c] = gate * val
 		}
 	}
 	return out
