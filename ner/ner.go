@@ -27,6 +27,7 @@ import (
 // EntityCategory identifies one of the 8 enterprise domain entity classes.
 type EntityCategory string
 
+// Enterprise domain entity categories recognized by the NER tagger.
 const (
 	CategoryMetric           EntityCategory = "metric"
 	CategoryScopeSite        EntityCategory = "scope_site"
@@ -53,6 +54,7 @@ var AllCategories = []EntityCategory{
 // RelationType identifies a typed binary relation between two recognized entity spans.
 type RelationType string
 
+// Supported binary relation types extracted between recognized entity spans.
 const (
 	RelationComparesWith   RelationType = "compares_with"
 	RelationScopedTo       RelationType = "scoped_to"
@@ -687,9 +689,10 @@ var (
 		"门店": true, "仓库": true, "工厂": true, "站点": true,
 	}
 
+	//nolint:misspell // multilingual supplier headwords (FR "transporteur" is valid French)
 	supplierHeadwords = map[string]bool{
 		"fournisseur": true, "fournisseurs": true, "partenaire": true, "partenaires": true,
-		"prestataire": true, "transporteur": true, "sous-traitant": true,
+		"prestataire": true, "transporteur": true, "sous-traitant": true, //nolint:misspell
 		"supplier": true, "suppliers": true, "vendor": true, "vendors": true,
 		"partner": true, "partners": true, "carrier": true, "distributor": true, "contractor": true,
 		"lieferant": true, "lieferanten": true, "spediteur": true, "hersteller": true,
