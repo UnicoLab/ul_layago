@@ -162,7 +162,7 @@ type DualViewProjector struct {
 // Gram-Schmidt semi-orthogonal initialization seeded by seed.
 func NewDualViewProjector(cfg DualViewConfig, seed int64) *DualViewProjector {
 	cfg = cfg.withDefaults()
-	u := uint64(seed)                                                           // #nosec G115 -- deterministic hash mixing of signed seed bits
+	u := uint64(seed)                                                        // #nosec G115 -- deterministic hash mixing of signed seed bits
 	rng := rand.New(rand.NewPCG(u^0x6a09e667f3bcc908, u^0xbb67ae8584caa73b)) //nolint:gosec // deterministic model init
 	return &DualViewProjector{
 		Config:      cfg,
